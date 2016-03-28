@@ -1,0 +1,182 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 字符实体</h1>
+
+<div id="intro">
+<p><strong>HTML 中的预留字符必须被替换为字符实体。</strong></p>
+</div>
+
+<div>
+<h2>HTML 实体</h2>
+
+<p>在 HTML 中，某些字符是预留的。</p>
+
+<p>在 HTML 中不能使用小于号（&lt;）和大于号（&gt;），这是因为浏览器会误认为它们是标签。</p>
+
+<p>如果希望正确地显示预留字符，我们必须在 HTML 源代码中使用字符实体（character entities）。</p>
+
+<p>字符实体类似这样：</p>
+
+<pre>
+&amp;<i>entity_name</i>;
+
+或者
+
+&amp;#<i>entity_number</i>;
+</pre>
+
+<p>如需显示小于号，我们必须这样写：&amp;lt; 或 &amp;#60;</p>
+
+<p class="tip"><span>提示：</span>使用实体名而不是数字的好处是，名称易于记忆。不过坏处是，浏览器也许并不支持所有实体名称（对实体数字的支持却很好）。</p>
+</div>
+
+<div>
+<h2>不间断空格（non-breaking space）</h2>
+
+<p>HTML 中的常用字符实体是不间断空格(&amp;nbsp;)。</p>
+
+<p>浏览器总是会截短 HTML 页面中的空格。如果您在文本中写 10 个空格，在显示该页面之前，浏览器会删除它们中的 9 个。如需在页面中增加空格的数量，您需要使用 &amp;nbsp; 字符实体。</p>
+</div>
+
+<div>
+<h2>HTML 实例示例</h2>
+
+<p>用 HTML 实体符号做实验：<a href="javascript:tiy.run('html_entities')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>HTML 中有用的字符实体</h2>
+
+<p class="note"><span>注释：</span>实体名称对大小写敏感！</p>
+
+<table class="dataintable">
+    <tr>
+      <th style="width:20%">显示结果</th>
+      <th style="width:20%">描述</th>
+      <th style="width:30%">实体名称</th>
+      <th style="width:30%">实体编号</th>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+      <td>空格</td>
+      <td>&amp;nbsp;</td>
+      <td>&amp;#160;</td>
+    </tr>
+
+    <tr>
+      <td>&#60;</td>
+      <td>小于号</td>
+      <td>&amp;lt;</td>
+      <td>&amp;#60;</td>
+    </tr>
+
+    <tr>
+      <td>&gt;</td>
+      <td>大于号</td>
+      <td>&amp;gt;</td>
+      <td>&amp;#62;</td>
+    </tr>
+
+    <tr>
+      <td>&amp;</td>
+      <td>和号</td>
+      <td>&amp;amp;</td>
+      <td>&amp;#38;</td>
+    </tr>
+
+    <tr>
+      <td>&quot;</td>
+      <td>引号</td>
+      <td>&amp;quot;</td>
+      <td>&amp;#34;</td>
+    </tr>
+
+    <tr>
+      <td>'</td>
+      <td>撇号&nbsp;</td>
+      <td>&amp;apos; (IE不支持)</td>
+      <td>&amp;#39;</td>
+    </tr>
+
+    <tr>
+      <td>￠</td>
+      <td>分</td>
+      <td>&amp;cent;</td>
+      <td>&amp;#162;</td>
+    </tr>
+
+    <tr>
+      <td>&pound;</td>
+      <td>镑</td>
+      <td>&amp;pound;</td>
+      <td>&amp;#163;</td>
+    </tr>
+
+    <tr>
+      <td>&yen;</td>
+      <td>日圆</td>
+      <td>&amp;yen;</td>
+      <td>&amp;#165;</td>
+    </tr>
+
+    <tr>
+      <td>&euro;</td>
+      <td>欧元</td>
+      <td>&amp;euro;</td>
+      <td>&amp;#8364;</td>
+    </tr>
+
+    <tr>
+      <td>§</td>
+      <td>小节</td>
+      <td>&amp;sect;</td>
+      <td>&amp;#167;</td>
+    </tr>
+
+    <tr>
+      <td>&copy;</td>
+      <td>版权</td>
+      <td>&amp;copy;</td>
+      <td>&amp;#169;</td>
+    </tr>
+
+    <tr>
+      <td>&#174;</td>
+      <td>注册商标</td>
+      <td>&amp;reg;</td>
+      <td>&amp;#174;</td>
+    </tr>
+
+    <tr>
+      <td>&trade;</td>
+      <td>商标</td>
+      <td>&amp;trade;</td>
+      <td>&amp;#8482;</td>
+    </tr>
+
+    <tr>
+      <td>×</td>
+      <td>乘号</td>
+      <td>&amp;times;</td>
+      <td>&amp;#215;</td>
+    </tr>
+
+    <tr>
+      <td>÷</td>
+      <td>除号</td>
+      <td>&amp;divide;</td>
+      <td>&amp;#247;</td>
+    </tr>
+</table>
+
+<p>如需完整的实体符号参考，请访问我们的 <a href="../tags/html_ref_entities.html"  title="HTML ISO-8859-1 参考手册">HTML 实体符号参考手册</a>。</p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

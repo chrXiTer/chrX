@@ -1,0 +1,129 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS3 nav-down 属性</h1>
+
+<div class="backtoreference">
+<p><a href="index.htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>规定在使用方向键时向何处导航：</p>
+<pre>
+button#b1
+{
+top:20%;left:25%;
+nav-index:1;
+nav-right:#b2;nav-left:#b4;
+nav-down:#b2;nav-up:#b4;
+}
+
+button#b2
+{
+top:40%;left:50%;
+nav-index:2;
+nav-right:#b3;nav-left:#b1;
+nav-down:#b3;nav-up:#b1;
+}
+
+button#b3
+{
+top:70%;left:25%;
+nav-index:3;
+nav-right:#b4;nav-left:#b2;
+nav-down:#b4;nav-up:#b2;
+}
+
+button#b4
+{
+top:40%;left:0%;
+nav-index:4;
+nav-right:#b1;nav-left:#b3;
+nav-down:#b1;nav-up:#b3;
+}
+</pre>
+
+<p><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/t.asp?f=css3_nav  \n\n'))window.location='/chrX/nofile/123tiy/t.asp?f=css3_nav'" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+
+<p>目前只有 Opera 支持 nav-down 属性。</p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>nav-down 属性规定当使用 nav-down 导航键时，向何处进行导航。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">auto</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS3</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.navDown=&quot;#div2&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>nav-down: auto|<i>id</i>|<i>target-name</i>|inherit;</pre>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>auto</td>
+<td>浏览器决定导航到哪个元素。</td>
+</tr>
+
+<tr>
+<td><i>id</i></td>
+<td>规定被导航元素的 id。</td>
+</tr>
+
+<tr>
+<td><i>target-name</i></td>
+<td>规定被导航的目标框架。</td>
+</tr>
+
+<tr>
+<td>inherit</td>
+<td>规定应从父元素继承 nav-down 属性的值。</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="index.htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+<!-- maincontent end -->
+
+</div>
+<!-- wrapper end -->
+
+<script src="../chrX.js"></script>
+
+

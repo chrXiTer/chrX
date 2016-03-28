@@ -1,0 +1,62 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript ignoreCase 属性</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_regexp.htm"  title="JavaScript RegExp 对象">JavaScript RegExp 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>ignoreCase 属性规定是否设置 <a href="jsref_regexp_i.htm"  title="JavaScript RegExp i 修饰符">&quot;i&quot; 标志</a>。</p>
+
+<p>如果设置了 &quot;i&quot; 标志，则返回 true，否则返回 false。</p>
+
+<h3>语法</h3>
+
+<pre>RegExpObject.ignoreCase</pre>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在下面的例子中，我们将查看正则表达式是否具有标志 i：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+var str = &quot;Visit W3School&quot;;
+var patt1 = new RegExp(&quot;W3&quot;);
+
+if(<code>patt1.ignoreCase</code>)
+  {
+  alert(&quot;ignoreCase property is set&quot;);
+  }
+else
+  {
+  alert(&quot;ignoreCase property is NOT set.&quot;);
+  }
+&lt;/script&gt;
+</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_ignorecase_regexp')" >ignoreCase</a></dt>
+<dd>如何使用 ignoreCase 属性来检测正则表达式是否具有标志 i。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_regexp.htm"  title="JavaScript RegExp 对象">JavaScript RegExp 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

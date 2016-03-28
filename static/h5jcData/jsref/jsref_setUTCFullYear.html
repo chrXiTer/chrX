@@ -1,0 +1,130 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript setUTCFullYear() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>setUTCFullYear() 方法用于根据世界时 (UTC) 设置年份。</p>
+
+<h3>语法</h3>
+
+<pre>dateObject.setUTCFullYear(year,month,day)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>year</td>
+    <td>
+	<p>必需。要给 dateObject 设置的年份字段的值。</p>
+	<p>该参数应该是含有世纪值的完整年份，如 1999，而不只是缩写的年份值，比如 99。</p>
+	</td>
+  </tr>
+  <tr>
+    <td>month</td>
+    <td>
+	<p>可选。要给 dateObject 设置的月份字段的值。使用世界时表示。</p>
+	<p>该参数是 0 ~ 11 之间的整数。</p>
+	</td>
+  </tr>
+  <tr>
+    <td>day</td>
+    <td>
+	<p>可选。要给 dateObject 设置的天字段的值。使用世界时表示。</p>
+	<p>该参数是 1 ~ 31 之间的整数。</p>
+	</td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+
+<p>调整过的日期的毫秒表示。</p>
+</div>
+
+<div>
+<h2>提示和注释：</h2>
+
+<p class="note"><span>注释：</span>该方法总是结合一个 Date 对象来使用。</p>
+
+<p class="tip"><span>提示：</span>有关通用协调时间 (UTC) 的更多资料，请参阅<a href="http://baike.baidu.com/view/1187856.htm" vvll="my"  title="协调世界时_百度百科">百度百科</a>。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<h3>例子 1</h3>
+
+<p>在本例中，我们将通过 setUTCFullYear() 方法把年份设置为 1992：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var d = new Date()
+d.setUTCFullYear(1992)
+document.write(d)
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>
+<script type="text/javascript">
+var d = new Date()
+d.setUTCFullYear(1992)
+document.write(d)
+</script>
+</pre>
+
+<h3>例子 2</h3>
+
+<p>在本例中，我将通过 setUTCFullYear() 方法把日期设置为 November 3, 1992：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var d = new Date()
+d.setUTCFullYear(1992,10,3)
+document.write(d)
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>
+<script type="text/javascript">
+var d = new Date()
+d.setUTCFullYear(1992,10,3)
+document.write(d)
+</script>
+</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_setutcfullyear')" >setUTCFullYear()</a></dt>
+<dd>如何使用 setUTCFullYear() 来设置年份。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

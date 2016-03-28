@@ -1,0 +1,298 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript 条件语句</h1>
+
+<h2>条件语句</h2>
+<p>通常在写代码时，您总是需要为不同的决定来执行不同的动作。您可以在代码中使用条件语句来完成该任务。</p>
+<p>在 JavaScript 中，我们可使用以下条件语句：</p>
+
+<ul>
+<li><em>if 语句</em> - 只有当指定条件为 true 时，使用该语句来执行代码</li>
+<li><em>if...else 语句</em> - 当条件为 true 时执行代码，当条件为 false 时执行其他代码</li>
+<li><em>if...else if....else 语句</em> - 使用该语句来选择多个代码块之一来执行,其中else if块可多次出现</li>
+<li><em>switch 语句</em> - 使用该语句来选择多个代码块之一来执行</li>
+</ul>
+
+<h3>if 语句</h3>
+<p>只有当指定条件为 true 时，该语句才会执行代码。</p>
+<pre>
+if (条件) {
+	只有当条件为 true 时执行的代码
+}
+</pre>
+<p class="important"><span>注意：</span>请使用小写的 if。使用大写字母（IF、If、iF等）会生成 JavaScript 错误！</p>
+<p>当时间小于 20:00 时，生成一个“Good day”问候：</p>
+<pre>
+if (time&lt;20){
+  x=&quot;Good day&quot;;
+}
+</pre>
+
+<p>x 的结果是：</p>
+<pre>
+<script>
+var d=new Date();
+var time=d.getHours();
+if (time<20){
+  document.write("Good day");
+}
+</script>
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('js_ifthen')" >亲自试一试</a></p>
+<p>请注意，在这个语法中，没有 ..else..。您已经告诉浏览器只有在指定条件为 true 时才执行代码。</p>
+
+<h3>if...else 语句</h3>
+<p>if....else 语句在条件为 true 时执行一块代码，在条件为 false 时执行另一块代码。</p>
+
+<pre>
+if (条件){
+  当条件为 true 时执行的代码
+}else{
+  当条件不为 true 时执行的代码
+}
+</pre>
+
+<p>当时间小于 20:00 时，将得到问候 &quot;Good day&quot;，否则将得到问候 &quot;Good evening&quot;。</p>
+
+<pre>
+if (time&lt;20){
+  x=&quot;Good day&quot;;
+}else{
+  x=&quot;Good evening&quot;;
+}
+</pre>
+<p>x 的结果是：</p>
+<pre>
+<script>
+var d=new Date();
+var time=d.getHours();
+if (time<20)
+  {
+  document.write("Good day");
+  }
+else
+  {
+  document.write("Good evening");
+  }
+</script>
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('js_ifthenelse')" >试一试</a></p>
+<h3>if...else if...else 语句</h3>
+<p>使用 if....else if...else 语句来选择多个代码块之一来执行。</p>
+
+<pre>
+if (条件 1){
+  当条件 1 为 true 时执行的代码
+}else if (条件 2){
+  当条件 2 为 true 时执行的代码
+}else{
+  当条件 1 和 条件 2 都不为 true 时执行的代码
+}
+</pre>
+
+<p>如果时间小于 10:00，则将发送问候 &quot;Good morning&quot;，否则如果时间小于 20:00，则发送问候 &quot;Good day&quot;，否则发送问候 &quot;Good evening&quot;：</p>
+
+<pre>
+if (time&lt;10){
+  x=&quot;Good morning&quot;;
+}else if (time&lt;20){
+  x=&quot;Good day&quot;;
+}else{
+  x=&quot;Good evening&quot;;
+}
+</pre>
+
+<p>x 的结果是：</p>
+
+<pre>
+<script>
+var d=new Date();
+var time=d.getHours();
+if (time<10){
+  document.write("Good morning");
+}else if (time<20){
+  document.write("Good day");
+}else{
+  document.write("Good evening");
+}
+</script>
+</pre>
+<p class="tiy"><a href="javascript:tiy.run('js_elseif')" >试一试</a></p>
+
+<h2>JavaScript Switch 语句</h2>
+<p>switch 语句用于基于不同的条件来执行不同的动作。</p>
+<p>请使用 switch 语句来选择要执行的多个代码块之一。</p>
+
+<pre>
+switch(n)
+{
+case 1:
+  执行代码块 1
+  break;
+case 2:
+  执行代码块 2
+  break;
+default:
+  n 与 case 1 和 case 2 不同时执行的代码
+}
+</pre>
+<p>工作原理：首先设置表达式 n（通常是一个变量）。随后表达式的值会与结构中的每个 case 的值做比较。如果存在匹配，则与该 case 关联的代码块会被执行。请使用 <em>break</em> 来阻止代码自动地向下一个 case 运行。</p>
+<p>显示今日的周名称。请注意 Sunday=0, Monday=1, Tuesday=2, 等等：</p>
+<pre>
+var day=new Date().getDay();
+switch (day)
+{
+case 0:
+  x=&quot;Today it's Sunday&quot;;
+  break;
+case 1:
+  x=&quot;Today it's Monday&quot;;
+  break;
+case 2:
+  x=&quot;Today it's Tuesday&quot;;
+  break;
+case 3:
+  x=&quot;Today it's Wednesday&quot;;
+  break;
+case 4:
+  x=&quot;Today it's Thursday&quot;;
+  break;
+case 5:
+  x=&quot;Today it's Friday&quot;;
+  break;
+case 6:
+  x=&quot;Today it's Saturday&quot;;
+  break;
+}
+</pre>
+<p>x 的结果：</p>
+<pre>
+<script>
+var d=new Date().getDay();
+switch (d)
+{
+case 0:
+  x="Today it's Sunday";
+  break;
+case 1:
+  x="Today it's Monday";
+  break;
+case 2:
+  x="Today it's Tuesday";
+  break;
+case 3:
+  x="Today it's Wednesday";
+  break;
+case 4:
+  x="Today it's Thursday";
+  break;
+case 5:
+  x="Today it's Friday";
+  break;
+case 6:
+  x="Today it's Saturday";
+  break;
+}
+document.write(x);
+</script>
+</pre>
+<p class="tiy"><a href="javascript:tiy.run('js_switch')" >试一试</a></p>
+
+<p>switch 语句是 if 语句的兄弟语句。</p>
+<p>开发者可以用 switch 语句为表达式提供一系列的情况（case）。</p>
+<p>switch 语句的语法：</p>
+<pre>switch (<i>expression</i>)
+  case <i>value</i>: <i>statement</i>;
+    break;
+  case <i>value</i>: <i>statement</i>;
+    break;
+  case <i>value</i>: <i>statement</i>;
+    break;
+...
+  case <i>value</i>: <i>statement</i>;
+    break;
+  default: <i>statement</i>;
+</pre>
+<p>每个情况（case）都是表示“如果 <i>expression</i> 等于 <i>value</i>，就执行 <i>statement</i>”。</p>
+<p>关键字 break 会使代码跳出 switch 语句。如果没有关键字 break，代码执行就会继续进入下一个 case。</p>
+<p>关键字 default 说明了表达式的结果不等于任何一种情况时的操作（事实上，它相对于 else 从句）。</p>
+<p>switch 语句主要是为避免让开发者编写下面的代码：</p>
+<pre>
+if (i == 20)
+  alert(&quot;20&quot;);
+else if (i == 30)
+  alert(&quot;30&quot;);
+else if (i == 40)
+  alert(&quot;40&quot;);
+else
+  alert(&quot;other&quot;);
+</pre>
+<p>等价的 switch 语句是这样的：</p>
+<pre>
+switch (i) {
+  case 20: alert(&quot;20&quot;);
+    break;
+  case 30: alert(&quot;30&quot;);
+    break;
+  case 40: alert(&quot;40&quot;);
+    break;
+  default: alert(&quot;other&quot;);
+}
+</pre>
+
+<p>ECMAScript 和 C/C++、Java 中的 switch 语句有两点不同。在 ECMAScript 中，switch 语句可以用于字符串，而且能用不是常量的值。</p>
+
+<h3>default 关键词</h3>
+
+<p>请使用 default 关键词来规定匹配不存在时做的事情：</p>
+
+<h3>实例</h3>
+
+<p>如果今天不是周六或周日，则会输出默认的消息：</p>
+
+<pre>
+var day=new Date().getDay();
+switch (day)
+{
+case 6:
+  x=&quot;Today it's Saturday&quot;;
+  break;
+case 0:
+  x=&quot;Today it's Sunday&quot;;
+  break;
+<code>default:
+  x=&quot;Looking forward to the Weekend&quot;;</code>
+}
+</pre>
+
+<p>x 的结果：</p>
+
+<pre>
+<script>
+var d=new Date().getDay();
+switch (d)
+{
+case 6:
+  x="Today it's Saturday";
+  break;
+case 0:
+  x="Today it's Sunday";
+  break;
+default:
+  x="Looking forward to the Weekend";
+}
+document.write(x);
+</script>
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('js_switch2')" >试一试</a></p>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

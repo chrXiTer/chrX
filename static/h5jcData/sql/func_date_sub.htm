@@ -1,0 +1,98 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>MySQL DATE_SUB() 函数</h1>
+
+<div class="backtoreference">
+<p><a href="sql_dates.htm"  title="MySQL Date 函数">MySQL Date 函数</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>DATE_SUB() 函数从日期减去指定的时间间隔。</p>
+
+<h3>语法</h3>
+<pre>DATE_SUB(date,INTERVAL expr type)</pre>
+
+<p><i>date</i> 参数是合法的日期表达式。<i>expr</i> 参数是您希望添加的时间间隔。</p>
+
+<p>type 参数可以是下列值：</p>
+
+<table class="dataintable" style="width:40%">
+<tr><th>Type 值</th></tr>
+<tr><td>MICROSECOND</td></tr>
+<tr><td>SECOND</td></tr>
+<tr><td>MINUTE</td></tr>
+<tr><td>HOUR</td></tr>
+<tr><td>DAY</td></tr>
+<tr><td>WEEK</td></tr>
+<tr><td>MONTH</td></tr>
+<tr><td>QUARTER</td></tr>
+<tr><td>YEAR</td></tr>
+<tr><td>SECOND_MICROSECOND</td></tr>
+<tr><td>MINUTE_MICROSECOND</td></tr>
+<tr><td>MINUTE_SECOND</td></tr>
+<tr><td>HOUR_MICROSECOND</td></tr>
+<tr><td>HOUR_SECOND</td></tr>
+<tr><td>HOUR_MINUTE</td></tr>
+<tr><td>DAY_MICROSECOND</td></tr>
+<tr><td>DAY_SECOND</td></tr>
+<tr><td>DAY_MINUTE</td></tr>
+<tr><td>DAY_HOUR</td></tr>
+<tr><td>YEAR_MONTH</td></tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>假设我们有如下的表：</p>
+
+<table class="dataintable">
+<tr>
+<th>OrderId</th>
+<th>ProductName</th>
+<th>OrderDate</th>
+</tr>
+<tr>
+<td>1</td>
+<td>'Computer'</td>
+<td>2008-12-29 16:25:46.635</td>
+</tr>
+</table>
+
+<p>现在，我们希望从 &quot;OrderDate&quot; 减去 2 天。</p>
+
+<p>我们使用下面的 SELECT 语句：</p>
+
+<pre>
+SELECT OrderId,<code>DATE_SUB(OrderDate,INTERVAL 2 DAY)</code> AS OrderPayDate
+FROM Orders
+</pre>
+
+<p>结果：</p>
+
+<table class="dataintable">
+<tr>
+<th>OrderId</th>
+<th>OrderPayDate</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>2008-12-27 16:25:46.635</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="sql_dates.htm"  title="MySQL Date 函数">MySQL Date 函数</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

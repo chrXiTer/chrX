@@ -1,0 +1,117 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS outline-width 属性</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>outline-width 属性设置元素整个轮廓的宽度，只有当轮廓样式不是 none 时，这个宽度才会起作用。如果样式为 none，宽度实际上会重置为 0。不允许设置负长度值。</p>
+<p>outline（轮廓）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。outline 属性设置元素周围的轮廓线。</p>
+<p class="note"><span>注释：</span>请始终在 outline-width 属性之前声明 outline-style 属性。元素只有获得轮廓以后才能改变其轮廓的颜色。</p>
+<p class="note"><span>注释：</span>轮廓线不会占据空间，也不一定是矩形。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">medium</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS2</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.outlineWidth=&quot;thin&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>设置点状轮廓的颜色：</p>
+<pre>
+p
+  {
+  outline-style:dotted;
+  <code>outline-width:5px;</code>
+  }
+</pre>
+
+<p><a href="../tiy/t.asp-f=csse_outline-width.htm" >TIY</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有主流浏览器都支持 outline-width 属性。</p>
+<p>只有在规定了 !DOCTYPE 时，Internet Explorer 才支持 outline-width 属性。</p>
+</div>
+
+<div>
+<h2>可能的值</h2>
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>thin</td>
+<td>规定细轮廓。</td>
+</tr>
+
+<tr>
+<td>medium</td>
+<td>默认。规定中等的轮廓。</td>
+</tr>
+
+<tr>
+<td>thick</td>
+<td>规定粗的轮廓。</td>
+</tr>
+
+<tr>
+<td><i>length</i></td>
+<td>允许您规定轮廓粗细的值。</td>
+</tr>
+
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承轮廓宽度的设置。</td>
+</tr>
+</table>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="../tiy/t.asp-f=csse_outline-width.htm" >设置轮廓的宽度</a></dt>
+<dd>本例演示如何设置轮廓的宽度。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+<p>CSS 参考手册：<a href="pr_outline.htm" title="CSS outline 属性">outline 属性</a></p>
+<p>HTML DOM 参考手册：<a href="../htmldom/prop_style_outlinewidth.htm" title="HTML DOM outlineWidth 属性">outlineWidth 属性</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

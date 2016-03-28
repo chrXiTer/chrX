@@ -1,0 +1,81 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL LEN() 函数</h1>
+
+<div>
+<h2>LEN() 函数</h2>
+
+<p>LEN 函数返回文本字段中值的长度。</p>
+
+<h3>SQL LEN() 语法</h3>
+<pre>SELECT LEN(column_name) FROM table_name</pre>
+</div>
+
+<div>
+<h2>SQL LEN() 实例</h2>
+
+<p>我们拥有下面这个 &quot;Persons&quot; 表：</p>
+
+<table class="dataintable">
+  <tr>
+    <th>Id</th>
+	<th>LastName</th>
+	<th>FirstName</th>
+	<th>Address</th>
+	<th>City</th>
+  </tr>
+  <tr>
+	<td>1</td>
+	<td>Adams</td>
+	<td>John</td>
+	<td>Oxford Street</td>
+	<td>London</td>
+  </tr>
+  <tr>
+	<td>2</td>
+	<td>Bush</td>
+	<td>George</td>
+	<td>Fifth Avenue</td>
+	<td>New York</td>
+  </tr>
+  <tr>
+	<td>3</td>
+	<td>Carter</td>
+	<td>Thomas</td>
+	<td>Changan Street</td>
+	<td>Beijing</td>
+  </tr>
+</table>
+
+<p>现在，我们希望取得 &quot;City&quot; 列中值的长度。</p>
+
+<p>我们使用如下 SQL 语句：</p>
+
+<pre>SELECT LEN(City) as LengthOfCity FROM Persons</pre>
+
+<p>结果集类似这样：</p>
+
+<table class="dataintable" style="width:30%">
+<tr>
+<th>LengthOfCity</th>
+</tr>
+
+<tr>
+  <td>6</td>
+</tr>
+<tr>
+  <td>8</td>
+</tr>
+<tr>
+  <td>7</td>
+</tr>
+</table>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

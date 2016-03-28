@@ -1,0 +1,85 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 Audio/Video DOM audioTracks 属性</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>获得可用音轨的数量：</p>
+
+<pre>
+myVid=document.getElementById(&quot;video1&quot;);
+alert(<code>myVid.audioTracks</code>.length);
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_av_prop_audiotracks')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>audioTracks 属性返回 AudioTrackList 对象。</p>
+
+<p>AudioTrackList 对象表示音视频的可用音轨。</p>
+
+<p>每个可用的音轨由一个 AudioTrack 对象表示。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+<pre>audio|video.audioTracks</pre>
+
+<h3>返回值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">类型</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>AudioTrackList 对象</td>
+<td>
+	<p>表示音视频的可用音轨。</p>
+	<p>AudioTrackList 对象：</p>
+	<ul class="listintable">	
+	<li>audioTracks.length - 或者可用音轨的数量</li>
+	<li>audioTracks.getTrackById(id) - 通过 id 来获得 AudioTrack 对象</li>
+	<li>audioTracks[index] - 通过 index 来获得 AudioTrack 对象</li>
+	</ul>
+	<p class="note"><span>注释：</span>首个可用的 AudioTrack 对象的下标是 0。</p>
+</td>
+</tr>
+
+<tr>
+<td>AudioTrack 对象</td>
+<td>
+	<p>表示音轨。</p>	
+	<p>AudioTrack 对象的属性：</p>
+	<ul class="listintable">	
+	<li>id - 获得音轨的 id</li>
+	<li>kind - 获得音轨的类型（可以是 &quot;alternative&quot;, &quot;description&quot;, &quot;main&quot;, &quot;translation&quot;, &quot;commentary&quot;, 或者 &quot;&quot; （空字符串））</li>
+	<li>label - 获得音轨的标签</li>
+	<li>language - 获得音轨的语言</li>
+	<li>enabled - 获得或设置音轨是否是活动的 (true|false)</li>
+	</ul>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

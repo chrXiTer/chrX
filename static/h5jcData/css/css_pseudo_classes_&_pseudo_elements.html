@@ -1,0 +1,206 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS 伪类 (Pseudo-classes)、CSS 伪元素 (Pseudo-elements)</h1> 
+
+<p>伪类和伪元素是选择器的补充，能够以更加灵活的方式匹配普通选择器无法匹配的特色场景和内容。
+<br />伪类相比普通选择器，增加了特殊的类型。
+<br />普通选择器只能匹配元素，利用伪元素可以匹配元素中更加精细的内容。
+</p>
+
+<h2>语法</h2>
+<pre>
+    selector:pseudo-class {property: value}
+    selector:pseudo-element {property:value;}
+</pre>
+
+<h2>锚伪类</h2>
+
+<p>链接的不同状态都可以用不同的方式显示，这些状态包括：活动状态，已被访问状态，未被访问状态，和鼠标悬停状态。</p>
+<pre>
+    <code>a:link</code> {color: #FF0000}	<span>/* 未访问的链接 */</span>
+    <code>a:visited</code> {color: #00FF00}	<span>/* 已访问的链接 */</span>
+    <code>a:hover</code> {color: #FF00FF}	<span>/* 鼠标移动到链接上 */</span>
+    <code>a:active</code> {color: #0000FF}	<span>/* 选定的链接 */</span>
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_link')">试一试</a></p>
+<h3>锚伪类的顺序</h3>
+<p>由于鼠标悬停状态一定处在活动状态或未被访问状态，因此a:hover 不能放在 a:link 和 a:visited 之前，否则其样式会被a:link 或 a:visited 的样式覆盖。
+	同样的，活动状态一定处在鼠标悬停状态，因此a:active 不能放在 a:hover 之前，否则其样式会被a:hover 的样式覆盖。
+</p>
+
+<h2>:first-child 伪类</h2>
+
+<p>:first-child 伪类选择这样的元素：该元素是父节点中第一个子元素的元素。</p>
+<p class="tip"><span>提示：</span> p:first-child 选择器选择的不是p的子元素，而是符合前面要求的p元素。</p>
+<p>下面举例说明举例来说明。考虑以下标记：</p>
+<pre>
+&lt;div&gt;
+<code>&lt;p&gt;These are the necessary steps:&lt;/p&gt;</code>
+&lt;ul&gt;
+<code>&lt;li&gt;Intert Key&lt;/li&gt;</code>
+&lt;li&gt;Turn key <code>&lt;strong&gt;clockwise&lt;/strong&gt;</code>&lt;/li&gt;
+&lt;li&gt;Push accelerator&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Do <code>&lt;em&gt;not&lt;/em&gt;</code> push the brake at the same time as the accelerator.&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+
+<p>给定以下规则：</p>
+<pre>
+p:first-child {font-weight: bold;}
+li:first-child {text-transform:uppercase;}
+</pre>
+
+<p>第一个规则选择所有 p 元素中是父元素中第一个元素的哪些p元素。第一个规则选择所有 li 元素中是父元素中第一个元素的哪些li元素。<a href="javascript:tiy.run('css_first-child')">试一试</a></p>
+<p>为了使您更透彻地理解 :first-child 伪类，可以试一试以下3个实例：
+	<a href="javascript:tiy.run('css_first-child_1')">例子 1</a>
+	<a href="javascript:tiy.run('css_first-child_2')">例子 2</a>
+	<a href="javascript:tiy.run('css_first-child_3')">例子 3</a>
+</p>
+
+<h2>:lang 伪类</h2>
+
+<p>:lang 伪类使你有能力为不同的语言定义特殊的规则。在下面的例子中，:lang 类为属性值为 no 的 q 元素定义引号的类型：</p>
+<pre>&lt;html&gt;
+&lt;head&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+<code>q:lang(no)
+   {
+   quotes: &quot;~&quot; &quot;~&quot;
+   }</code>
+&lt;/style&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;p&gt;文字&lt;q <code>lang=&quot;no&quot;</code>&gt;段落中的引用的文字&lt;/q&gt;文字&lt;/p&gt;
+&lt;/body&gt;&lt;/html&gt;</pre>
+
+<h2>:first-line 伪元素</h2>
+<p>&quot;first-line&quot; 伪元素用于向文本的首行设置特殊样式。</p>
+<p>在下面的例子中，浏览器会根据 &quot;first-line&quot; 伪元素中的样式对 p 元素的第一行文本进行格式化：</p>
+<pre>
+p:first-line{
+  color:#ff0000;
+  font-variant:small-caps;
+}
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_firstline')">试一试</a></p>
+<p class="note"><span>注释：</span>&quot;first-line&quot; 伪元素只能用于块级元素。</p>
+<p class="note"><span>注释：</span>下面的属性可应用于 &quot;first-line&quot; 伪元素：</p>
+<ul>
+    <li>font</li>
+    <li>color</li>
+    <li>background</li>
+    <li>word-spacing</li>
+    <li>letter-spacing</li>
+    <li>text-decoration</li>
+    <li>vertical-align</li>
+    <li>text-transform</li>
+    <li>line-height</li>
+    <li>clear</li>
+</ul>
+
+<h2>:first-letter 伪元素</h2>
+
+<p>&quot;first-letter&quot; 伪元素用于向文本的首字母设置特殊样式：</p>
+<pre>
+p:first-letter{
+  color:#ff0000;
+  font-size:xx-large;
+}
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_firstletter')">试一试</a></p>
+<p class="note"><span>注释：</span>&quot;first-letter&quot; 伪元素只能用于块级元素。</p>
+<p class="note"><span>注释：</span>下面的属性可应用于 &quot;first-letter&quot; 伪元素：</p>
+<ul>
+    <li>font</li>
+    <li>color</li>
+    <li>background</li>
+    <li>margin</li>
+    <li>padding</li>
+    <li>border</li>
+    <li>text-decoration</li>
+    <li>vertical-align (仅当 float 为 none 时)</li>
+    <li>text-transform</li>
+    <li>line-height</li>
+    <li>float</li>
+    <li>clear</li>
+</ul>
+
+<h2>伪元素的优先级</h2>
+<p>伪元素选择的内容越精细，优先级越高。在下面的例子中，段落的第一个字母将显示为红色，其字体大小为 xx-large。第一行中的其余文本显示为蓝色，并以小型大写字母呈现。段落中的其余文本将以默认字体大小和颜色来显示：</p>
+<pre>
+p:first-letter{
+  color:#ff0000;
+  font-size:xx-large;
+}
+
+p:first-line{
+  color:#0000ff;
+  font-variant:small-caps;
+}
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_firstletter_firstline')">试一试</a></p>
+
+<h2>:before 伪元素</h2>
+
+<p>&quot;:before&quot; 伪元素可以在元素的内容前面插入新内容。</p>
+<p>下面的例子在每个 &lt;h1&gt; 元素前面插入一幅图片：</p>
+<pre>
+h1:before
+  {
+  content:url(logo.gif);
+  }
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_before')">试一试</a></p>
+
+<h2>:after 伪元素</h2>
+
+<p>&quot;:after&quot; 伪元素可以在元素的内容之后插入新内容。</p>
+<p>下面的例子在每个 &lt;h1&gt; 元素后面插入一幅图片：</p>
+<pre>
+h1:after
+  {
+  content:url(logo.gif);
+  }
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_after')">试一试</a></p>
+
+<h2>伪类、伪元素可以与 CSS 类配合使用：</h2>
+<pre>selector.class:pseudo-class {property: value}</pre>
+<pre>selector.class:pseudo-element {property:value;}</pre>
+
+<pre>
+a<code>.red</code> : visited {color: #FF0000}
+&lt;a class=&quot;<code>red</code>&quot; href=&quot;css_syntax.asp&quot;&gt;CSS Syntax&lt;/a&gt;
+</pre>
+
+<p>假如上面的例子中的链接被访问过，那么它将显示为红色。</p>
+
+<pre>
+<code>p.article:first-letter</code>{
+  color: #FF0000;
+}
+&lt;p <span class="marked">class=&quot;article&quot;</span>&gt;This is a paragraph in an article。&lt;/p&gt;
+</pre>
+<p>上面的例子会使所有 class 为 article 的段落的首字母变为红色。</p>
+
+</div>
+</div>
+<script src="../chrX.js"></script>
+
+

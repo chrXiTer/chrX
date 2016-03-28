@@ -1,0 +1,117 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS outline-color 属性</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>outline （轮廓）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。outline 属性可设置元素周围的轮廓线。</p>
+<p class="note"><span>注释：</span>请始终在 outline-color 属性之前声明 outline-style 属性。元素只有获得轮廓以后才能改变其轮廓的颜色。</p>
+<p class="note"><span>注释：</span>轮廓线不会占据空间，也不一定是矩形。</p>
+<p>outline-color 属性设置一个元素整个轮廓中可见部分的颜色。要记住，轮廓的样式不能是 none，否则轮廓不会出现。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">invert</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS2</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.outlineColor=&quot;#0000FF&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>设置点状轮廓的颜色：</p>
+<pre>
+p
+  {
+  outline-style:dotted;
+  <code>outline-color:#00ff00;</code>
+  }
+</pre>
+
+<p><a href="../tiy/t.asp-f=csse_outline-color.htm" >TIY</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有主流浏览器都支持 outline-color 属性。</p>
+<p>只有在规定了 !DOCTYPE 时，Internet Explorer 才支持 outline-color 属性。</p>
+</div>
+
+<div>
+<h2>可能的值</h2>
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>color_name</i></td>
+<td>规定颜色值为颜色名称的轮廓颜色（比如 red）。</td>
+</tr>
+
+<tr>
+<td><i>hex_number</i></td>
+<td>规定颜色值为十六进制值的轮廓颜色（比如 #ff0000）。</td>
+</tr>
+
+<tr>
+<td><i>rgb_number</i></td>
+<td>规定颜色值为 rgb 代码的轮廓颜色（比如 rgb(255,0,0)）。</td>
+</tr>
+
+<tr>
+<td>invert</td>
+<td>默认。执行颜色反转（逆向的颜色）。可使轮廓在不同的背景颜色中都是可见。</td>
+</tr>
+
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承轮廓颜色的设置。</td>
+</tr>
+</table>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="../tiy/t.asp-f=csse_outline-color.htm" >设置轮廓的颜色</a></dt>
+<dd>本例演示如何设置轮廓的颜色。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+<p>CSS 参考手册：<a href="pr_outline.htm" title="CSS outline 属性">outline 属性</a></p>
+<p>HTML DOM 参考手册：<a href="../htmldom/prop_style_outlinecolor.htm" title="HTML DOM outlineColor 属性">outlineColor 属性</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

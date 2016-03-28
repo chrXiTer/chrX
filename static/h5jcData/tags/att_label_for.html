@@ -1,0 +1,77 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;label&gt; 标签的 for 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_label.htm" >HTML &lt;label&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>带有两个输入字段和相关标记的简单 HTML 表单：</p>
+
+<pre>
+&lt;form&gt;
+  &lt;label <code>for=&quot;male&quot;</code>&gt;Male&lt;/label&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;sex&quot; id=&quot;male&quot; /&gt;
+  &lt;br /&gt;
+  &lt;label <code>for=&quot;female&quot;</code>&gt;Female&lt;/label&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;sex&quot; id=&quot;female&quot; /&gt;
+&lt;/form&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_label')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>for 属性规定 label 与哪个表单元素绑定。</p>
+
+<h3>隐式和显式的联系</h3>
+
+<p>标记通常以下面两种方式中的一种来和表单控件相联系：将表单控件作为标记标签的内容，这样的就是隐式形式，或者为 &lt;label&gt; 标签下的 for 属性命名一个目标表单 id，这样就是显式形式。</p>
+
+<p>例如，在 XHTML 中：</p>
+
+<pre>
+<span>显式的联系：</span>
+<code>&lt;label for=&quot;SSN&quot;&gt;</code>Social Security Number:<code>&lt;/label&gt;</code>
+&lt;input type=&quot;text&quot; name=&quot;SocSecNum&quot; <code>id=&quot;SSn&quot;</code> /&gt;
+
+<span>隐式的联系：</span>
+<code>&lt;label&gt;</code>Date of Birth: &lt;input type=&quot;text&quot; name=&quot;DofB&quot; /&gt;<code>&lt;/label&gt;</code>
+</pre>
+
+<p>第一个标记是以显式形式将文本 &quot;Social Security Number:&quot; 和表单的社会安全号码的文本输入控件 (&quot;SocSecNum&quot;) 联系起来，它的 for 属性的值和控件的 id 一样，都是 SSN。第二个标记 (&quot;Date of Birth:&quot;) 不需要 for 属性，它的相关控件也不需要 id 属性，它们是通过在 &lt;label&gt; 标签中放入 &lt;input&gt; 标签来隐式地连接起来的。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;label for=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td><i>element_id</i></td>
+    <td>label 要绑定的元素的 id。</td>
+  </tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_label.htm" >HTML &lt;label&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

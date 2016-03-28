@@ -1,0 +1,107 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 全局 id 属性</h1>
+
+<div class="backtoreference">
+<p><a href="html5_ref_globalattributes.htm" >HTML 5 全局属性</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>通过 JavaScript 利用 id 属性来改变一段文本：</p>
+
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+function change_header()
+{
+document<span class="marked">.getElementById(&quot;myHeader&quot;)</span>.innerHTML=&quot;Nice day!&quot;;
+}
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;h1 <code>id=&quot;myHeader&quot;</code>&gt;Hello World!&lt;/h1&gt;
+&lt;button onclick=&quot;change_header()&quot;&gt;改变文本&lt;/button&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_global_id_js')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>id 属性规定 HTML 元素的唯一的 id。</p>
+
+<p>id 在 HTML 文档中必须是唯一的。</p>
+
+<p>id 属性可用作链接锚（link anchor），通过 JavaScript（HTML DOM）或通过 CSS 为带有指定 id 的元素改变或添加样式。</p>
+</div>
+
+<div>
+<h2>HTML 4.01 与 HTML 5 之间的差异</h2>
+
+<p>None.</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;<i>element</i> <code>id=&quot;<i>value</i>&quot;</code>&gt;</pre>
+
+<h3>属性值</h3>
+
+<table class="dataintable">
+<tr>
+
+<th style="width:10%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>id</i></td>
+<td>
+  <p>规定元素的唯一 id。</p>
+  <p>命名规则：</p>
+  <ul class="listintable">
+  <li>必须以字母 A-Z 或 a-z 开头</li>
+  <li>其后的字符：字母(A-Za-z)、数字(0-9)、连字符("-")、下划线("_")、冒号(":") 以及点号(".")</li>
+  <li>值对大小写敏感</li>
+  </ul>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="example">
+
+<h2>亲自试一试 - 实例</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('html5_global_id.htm')" >向 HTML 元素添加唯一的 id</a></dt>
+<dd>如何向 HTML 元素添加 id 属性。</dd>
+
+<dt><a href="javascript:tiy.run('html5_global_id_css.htm')" >在 CSS 中使用 id 属性</a></dt>
+<dd>如何在 CSS 中使用 id 属性为元素添加样式 </dd>
+
+<dt><a href="javascript:tiy.run('html5_global_id_anchor.htm')" >使用 id 属性来创建链接锚</a></dt>
+<dd>如何使用 id 属性来创建链接锚。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="html5_ref_globalattributes.htm" >HTML 5 全局属性</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

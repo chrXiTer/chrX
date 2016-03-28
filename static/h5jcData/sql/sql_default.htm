@@ -1,0 +1,90 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL DEFAULT 约束</h1>
+
+<div>
+<h2>SQL DEFAULT 约束</h2>
+
+<p>DEFAULT 约束用于向列中插入默认值。</p>
+
+<p>如果没有规定其他的值，那么会将默认值添加到所有的新记录。</p>
+</div>
+
+<div>
+<h2>SQL DEFAULT Constraint on CREATE TABLE</h2>
+
+<p>下面的 SQL 在 &quot;Persons&quot; 表创建时为 &quot;City&quot; 列创建 DEFAULT 约束：</p>
+
+<h3>My SQL / SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+CREATE TABLE Persons
+(
+Id_P int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255) DEFAULT 'Sandnes'
+)
+</pre>
+
+<p>通过使用类似 GETDATE() 这样的函数，DEFAULT 约束也可以用于插入系统值：</p>
+
+<pre>
+CREATE TABLE Orders
+(
+Id_O int NOT NULL,
+OrderNo int NOT NULL,
+Id_P int,
+OrderDate date DEFAULT GETDATE()
+)
+</pre>
+</div>
+
+<div>
+<h2>SQL DEFAULT Constraint on ALTER TABLE</h2>
+
+<p>如果在表已存在的情况下为 &quot;City&quot; 列创建 DEFAULT 约束，请使用下面的 SQL：</p>
+
+<h3>MySQL:</h3>
+
+<pre>
+ALTER TABLE Persons
+ALTER City SET DEFAULT 'SANDNES'
+</pre>
+
+<h3>SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+ALTER TABLE Persons
+ALTER COLUMN City SET DEFAULT 'SANDNES'
+</pre>
+</div>
+
+<div>
+<h2>撤销 DEFAULT 约束</h2>
+
+<p>如需撤销 DEFAULT 约束，请使用下面的 SQL：</p>
+
+<h3>MySQL:</h3>
+
+<pre>
+ALTER TABLE Persons
+ALTER City DROP DEFAULT
+</pre>
+
+<h3>SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+ALTER TABLE Persons
+ALTER COLUMN City DROP DEFAULT
+</pre>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

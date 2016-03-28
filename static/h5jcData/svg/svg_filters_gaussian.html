@@ -1,0 +1,65 @@
+
+<link rel="stylesheet" type="text/css" href="../c3.css"  />
+
+<body>
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>高斯模糊（Gaussian Blur）</h1>
+<p>请把下面的代码拷贝到记事本，然后把文件保存为 &quot;filter1.svg&quot;。把此文件放入您的 web 目录：</p>
+<pre>&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;
+&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot;
+&quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;
+
+&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; version=&quot;1.1&quot;
+xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+
+&lt;defs&gt;
+&lt;filter id=&quot;Gaussian_Blur&quot;&gt;
+&lt;feGaussianBlur in=&quot;SourceGraphic&quot; stdDeviation=&quot;3&quot; /&gt;
+&lt;/filter&gt;
+&lt;/defs&gt;
+
+&lt;ellipse cx=&quot;200&quot; cy=&quot;150&quot; rx=&quot;70&quot; ry=&quot;40&quot;
+style=&quot;fill:#ff0000;stroke:#000000;
+stroke-width:2;filter:url(#Gaussian_Blur)&quot;/&gt;
+
+&lt;/svg&gt;</pre>
+
+<h3>代码解释：</h3>
+<ul>
+<li>&lt;filter&gt; 标签的 id 属性可为滤镜定义一个唯一的名称（同一滤镜可被文档中的多个元素使用）</li>
+<li>filter:url 属性用来把元素链接到滤镜。当链接滤镜 id 时，必须使用 # 字符</li>
+<li>滤镜效果是通过 &lt;feGaussianBlur&gt; 标签进行定义的。fe 后缀可用于所有的滤镜</li>
+<li>&lt;feGaussianBlur&gt; 标签的 stdDeviation 属性可定义模糊的程度</li>
+<li>in=&quot;SourceGraphic&quot; 这个部分定义了由整个图像创建效果</li>
+</ul>
+<p><a href="filter1.svg" >查看例子</a></p>
+
+<p>另一个 stdDeviation 值不同的例子</p>
+<pre>&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;
+&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot;
+&quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;
+
+&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; version=&quot;1.1&quot;
+xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+
+&lt;defs&gt;
+&lt;filter id=&quot;Gaussian_Blur&quot;&gt;
+&lt;feGaussianBlur in=&quot;SourceGraphic&quot; stdDeviation=&quot;20&quot;/&gt;
+&lt;/filter&gt;
+&lt;/defs&gt;
+
+&lt;ellipse cx=&quot;200&quot; cy=&quot;150&quot; rx=&quot;70&quot; ry=&quot;40&quot;
+style=&quot;fill:#ff0000;stroke:#000000;
+stroke-width:2;filter:url(#Gaussian_Blur)&quot;/&gt;
+
+&lt;/svg&gt;</pre>
+<p><a href="filter2.svg" >查看例子</a></p>
+
+
+
+</div>
+</div>
+<script src="../chrX.js"></script>
+</body>

@@ -1,0 +1,22 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 File</h1>
+File api 使得javascript可以直接获取本地文件信息，读取本地文件内容。由于安全性的考虑，这些功能的实现，必须要<input type="file" />元素的配合。
+
+<h2>FileReader</h2>
+<pre>
+	var fileReader = new FileReader();
+	fileReader.onload = function () {
+		fileContentStr = encodeURIComponent(fileReader.result);
+		xhr.send(fileContentStr); //将文件内容通过ajax发送到服务器端
+	}
+	fileReader.readAsText(file);
+</pre>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

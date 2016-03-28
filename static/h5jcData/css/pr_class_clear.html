@@ -1,0 +1,113 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS clear 属性</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>clear 属性规定元素的哪一侧不允许其他浮动元素。</p>
+<h3>说明</h3>
+<p>clear 属性定义了元素的哪边上不允许出现浮动元素。在 CSS1 和 CSS2 中，这是通过自动为清除元素（即设置了 clear 属性的元素）增加上外边距实现的。在 CSS2.1 中，会在元素上外边距之上增加清除空间，而外边距本身并不改变。不论哪一种改变，最终结果都一样，如果声明为左边或右边清除，会使元素的上外边框边界刚好在该边上浮动元素的下外边距边界之下。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">none</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS1</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.clear=&quot;left&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+<p>图像的左侧和右侧均不允许出现浮动元素：</p>
+<pre>
+img
+  {
+  float:left;
+  <code>clear:both;</code>
+  }
+</pre>
+<p><a href="../tiy/t.asp-f=csse_class-clear.htm" >TIY</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有主流浏览器都支持 clear 属性。</p>
+<p class="note"><span>注释：</span>任何版本的 Internet Explorer （包括 IE8）都不支持属性值 &quot;inherit&quot;。</p>
+</div>
+
+<div>
+<h2>可能的值</h2>
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>left</td>
+<td>在左侧不允许浮动元素。</td>
+</tr>
+
+<tr>
+<td>right</td>
+<td>在右侧不允许浮动元素。</td>
+</tr>
+
+<tr>
+<td>both</td>
+<td>在左右两侧均不允许浮动元素。</td>
+</tr>
+
+<tr>
+<td>none</td>
+<td>默认值。允许浮动元素出现在两侧。</td>
+</tr>
+
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 clear 属性的值。</td>
+</tr>
+</table>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="../tiy/t.asp-f=csse_class-clear.htm" >清除元素的侧面</a></dt>
+<dd>本例演示如何使用清除元素侧面的浮动元素。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+<p>CSS 教程：<a href="css_positioning.htm" title="CSS 定位 (Positioning)">CSS 定位</a></p>
+<p>HTML DOM 参考手册：<a href="../htmldom/prop_style_clear.htm" title="HTML DOM clear 属性">clear 属性</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>

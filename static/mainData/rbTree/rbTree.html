@@ -1,0 +1,161 @@
+<h2>红黑树</h2>
+	<script src="./tree.js"></script>
+	<div id="chrXInfo"></div>
+
+<style type="text/css">
+.group{
+        width: 95%;
+    }
+
+.group canvas {
+    float:left;
+}
+
+div[id^="content_"]{
+    width:98%;
+    max-width:700px; 
+    float:left
+}
+</style>
+	<h3>插入后的平衡</h3>
+	<p>U: 新插入的节点，统一设为红色，如果是根节点，改为黑色。</p>
+	<P>P: U 的父节点。<p>
+	<p>新插入节点影响平衡只有一种情况：出现两个红节点（U和P均为red）</p>
+	<p>G: P的父节点。Q: P的兄弟节点</p>
+	<p>根据P是G的左孩子还是右孩子、U是P的孩子还是右还、Q的颜色，将需要调整的树分层LLr, LRr, LLb, LRb和RLr, RRr, RLb, RRb八种类型。
+		<br/>其中前四种类型（P为G的左孩子）和后四种类型（P为G的右孩子）对称，调整方式对称。
+	<div id="content_rt_iL">
+		<h4>P为G的左孩子</h4>
+		<h5>只需改变颜色--如果G的父节点也为red节点，需要继续进行插入平衡调整。</h5>
+        <div class="group">
+            <canvas id="LLr" width="300px" height="300px"></canvas>
+            <canvas id="LLr_result" width="300px" height="300px"></canvas>
+        </div>
+        
+        <div class="group">
+            <canvas id="LRr" width="300px" height="300px"></canvas>
+            <canvas id="LRr_result" width="300px" height="300px"></canvas>
+        </div>
+
+		<h5 style="clear:left">一次旋转</h5>
+        <div class="group">
+            <canvas id="LLb" width="300px" height="300px"></canvas>
+            <canvas id="LLb_result" width="300px" height="300px"></canvas>
+        </div>
+
+		<h5 style="clear:left">两次旋转</h5>
+        <div class="group">
+            <canvas id="LRb" width="300px" height="300px"></canvas>
+            <canvas id="LRb_result" width="300px" height="300px"></canvas>
+        </div>
+	</div>
+	<div id="content_rt_iR">
+		<h4>P为G的右孩子</h4>
+		<h5>只需改变颜色--如果G的父节点也为red节点，需要继续进行插入平衡调整。</h5>
+        <div class="group">
+            <canvas id="RLr" width="300px" height="300px"></canvas>
+            <canvas id="RLr_result" width="300px" height="300px"></canvas>
+        </div>
+        
+        <div class="group">
+            <canvas id="RRr" width="300px" height="300px"></canvas>
+            <canvas id="RRr_result" width="300px" height="300px"></canvas>
+        </div>
+
+		<h5 style="clear:left">一次旋转</h5>
+        <div class="group">
+            <canvas id="RRb" width="300px" height="300px"></canvas>
+            <canvas id="RRb_result" width="300px" height="300px"></canvas>
+        </div>
+
+		<h5 style="clear:left">两次旋转</h5>
+        <div class="group">
+            <canvas id="RLb" width="300px" height="300px"></canvas>
+            <canvas id="RLb_result" width="300px" height="300px"></canvas>
+        </div>
+	</div>
+
+	<script src="./rt_iL.js"></script>
+	<script src="./rt_iR.js"></script>
+    <script src="./rt_lb.js"></script>
+	<script src="./rt_rb.js"></script>
+
+	<h3 style="clear:left; padding-top:60px">删除后的平衡</h3>
+	<p>删除节点时:<br/>
+		如果替代被删除节点为red，不影响平衡无需处理；<br/>
+		如果替代被删除节点为黑节点，其子树节点所在路径将少一个黑节点，需要进行调整
+	<p>U: 删除节点后，替代被删除节点位置的当前节点</p>
+	<p>V: U的兄弟节点</p>
+	<p>绿色节点：该节点可以为red也可以为black当影响有差别</p>
+	<p>蓝色节点：该节点可以为red也可以为black都没关系。
+	<br/>
+
+	<div id="content_rt_Lb">
+	<h4>U为P的右孩子</h4>
+		<p>（1）U的兄弟节点（V节点）为黑色</p>
+		<h5>只需改变颜色</h5>
+		<p>G用绿色表示可能为red也可能为black，如果G为black，需要继续进行删除平衡调整。</p>
+        <div class="group">
+            <canvas id="Rb_bb" width="300px" height="300px"></canvas>
+            <canvas id="Rb_bb_result" width="300px" height="300px"></canvas>
+        </div>
+
+		<h5 style="clear:left">一次旋转</h5>
+        <div class="group">
+		<canvas id="Rb_rb" width="300px" height="300px"></canvas>
+		<canvas id="Rb_rb_result" width="300px" height="300px"></canvas>
+        </div>
+
+		<h5 style="clear:left">两次旋转</h5>
+        <div class="group">
+            <canvas id="Rb_br" width="300px" height="300px"></canvas>
+            <canvas id="Rb_br_result" width="300px" height="300px"></canvas>
+        </div>
+        
+        <div class="group">
+            <canvas id="Rb_rr" width="300px" height="300px"></canvas>
+            <canvas id="Rb_rr_result" width="300px" height="300px"></canvas>
+        </div>
+        
+		<p style="clear:left">（2）U的兄弟节点（V节点）为红色，可转换成（1）的形式</p>
+        <div class="group">
+            <canvas id="Rb" width="300px" height="300px"></canvas>
+            <canvas id="Rb_result" width="300px" height="300px"></canvas>
+        </div>
+	</div>
+
+	<div id="content_rt_Rb" style="clear:right">
+		<h4>U为P的右孩子</h4>
+		<p style="clear:left">（1）U的兄弟节点（V节点）为黑色</p>
+		<h5>只需改变颜色</h5>
+		<p>G用绿色表示可能为red也可能为black，如果G为black，需要继续进行删除平衡调整。</p>
+        <div class="group">
+            <canvas id="Lb_bb" width="300px" height="300px"></canvas>
+            <canvas id="Lb_bb_result" width="300px" height="300px"></canvas>
+        </div>
+
+		<h5 style="clear:left">一次旋转</h5>
+        <div class="group">
+            <canvas id="Lb_br" width="300px" height="300px"></canvas>
+            <canvas id="Lb_br_result" width="300px" height="300px"></canvas>
+        </div>
+
+
+		<h5 style="clear:left">两次旋转</h5>
+        <div class="group">
+            <canvas id="Lb_rb" width="300px" height="300px"></canvas>
+            <canvas id="Lb_rb_result" width="300px" height="300px"></canvas>
+        </div>
+        
+        <div class="group">
+            <canvas id="Lb_rr" width="300px" height="300px"></canvas>
+            <canvas id="Lb_rr_result" width="300px" height="300px"></canvas>
+        </div>
+        
+		<p style="clear:left">（2）U的兄弟节点（V节点）为红色，可转换成（1）的形式</p>
+        <div class="group">
+            <canvas id="Lb" width="300px" height="300px"></canvas>
+            <canvas id="Lb_result" width="300px" height="300px"></canvas>
+        </div>
+	</div>
+    <script src="./rbTreeHtml.js"></script>

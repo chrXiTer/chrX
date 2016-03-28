@@ -1,0 +1,38 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML xmlns 属性</h1>
+
+<div>
+<h2>xmlns 属性</h2>
+<p>xmlns 属性可以在文档中定义一个或多个可供选择的命名空间。该属性可以放置在文档内任何元素的开始标签中。该属性的值类似于 URL，它定义了一个命名空间，浏览器会将此命名空间用于该属性所在元素内的所有内容。</p>
+
+<p>例如，如果需要使用符合 XML 规范的 XHTML 文档，则应该在文档中的&lt;html&gt; 标签中至少使用一个 xmlns 属性，以指定整个文档所使用的主要命名空间：</p>
+<pre>&lt;html <code>xmlns=&quot;http://www.w3.org/1999/xhtml&quot;</code>&gt;</pre>
+
+<p>如果需要在一个 div 元素中显示一串数学公式，则可以为该 div 元素定义一个数学命名空间。比如这样：</p>
+<pre>&lt;div <code>xmlns=&quot;http://www.w3.org/1999/Math/MathMl&quot;</code>&gt;x3/x&lt;/div&gt;</pre>
+
+<p>如果您不希望在每次显示除法公式时都在 div 元素中定义 xmlns 属性，那么更好的办法是在文档的开头处定义具有前缀的命名空间：</p>
+<pre>
+&lt;html <code>xmlns=&quot;http://www.w3.org/1999/xhtml&quot;</code>&gt;
+<code>xmlns:math=&quot;http://www.w3.org/1999/Math/MathMl&quot;</code>&gt;</pre>
+<p>然后，您就可以在 div 中使用该前缀了，就像这样：</p>
+<pre>&lt;<code>math</code>:div&gt;x3/X&lt;div&gt;</pre>
+
+<p>虽然在大多数情况下，绝大多数 XHTML 作者都不需要定义多个命名空间，但是您仍然有必要理解存在着多个命名空间，以便在需要选择将基于某个 DTD 的内容嵌入其他 DTD 定义的内容中时，可以管理多个命名空间。</p>
+</div>
+
+<div>
+<h2>参阅</h2>
+<p>如果需要了解更多有关<em>命名空间</em>的信息，请阅读的 <a href="../xml/index.htm" >XML 教程</a>的 <a href="../xml/xml_namespaces.htm" >XML 命名空间</a>一章。</p>
+<p>返回<a href="tag_html.htm" >HTML &lt;html&gt; 标签</a>参考手册。</p>
+<p class="note"><span>注释：</span>在某些文献中，命名空间（Namespace）被译为名称空间。</p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

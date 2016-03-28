@@ -1,0 +1,86 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript fromCharCode() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_string.htm"  title="JavaScript String 对象">JavaScript String 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>fromCharCode() 可接受一个指定的 Unicode 值，然后返回一个字符串。</p>
+
+<h3>语法</h3>
+
+<pre>String.fromCharCode(numX,numX,...,numX)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>numX</td>
+    <td>必需。一个或多个 Unicode 值，即要创建的字符串中的字符的 Unicode 编码。</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>提示和注释</h2>
+
+<p class="note"><span>注释：</span>该方法是 String 的静态方法，字符串中的每个字符都由单独的数字 Unicode 编码指定。</p>
+
+<p>它不能作为您已创建的 String 对象的方法来使用。因此它的语法应该是 String.fromCharCode()，而不是 myStringObject.fromCharCode()。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在本例中，我们将根据 Unicode 来输出 &quot;HELLO&quot; 和 &quot;ABC&quot;：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+document.write(String.fromCharCode(72,69,76,76,79))
+document.write(&quot;&lt;br /&gt;&quot;)
+document.write(String.fromCharCode(65,66,67))
+
+&lt;/script&gt;
+</pre>
+
+<p>以上代码的输出：</p>
+
+<pre>
+HELLO
+ABC
+</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_fromcharcode')" >fromCharCode()</a></dt>
+<dd>如何使用 fromCharCode() 来根据 Unicode 值显示字符串。</dd>
+</dl>
+</div>
+
+<div>
+<h3>参阅</h3>
+
+<p><a href="jsref_charCodeAt.htm" >charCodeAt() 方法</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_string.htm"  title="JavaScript String 对象">JavaScript String 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,150 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL COUNT() 函数</h1>
+
+<div>
+<p><strong>COUNT() 函数返回匹配指定条件的行数。</strong></p>
+</div>
+
+<div>
+<h2>SQL COUNT() 语法</h2>
+
+<h3>SQL COUNT(column_name) 语法</h3>
+
+<p>COUNT(column_name) 函数返回指定列的值的数目（NULL 不计入）：</p>
+
+<pre>SELECT COUNT(column_name) FROM table_name</pre>
+
+<h3>SQL COUNT(*) 语法</h3>
+
+<p>COUNT(*) 函数返回表中的记录数：</p>
+
+<pre>SELECT COUNT(*) FROM table_name</pre>
+
+<h3>SQL COUNT(DISTINCT column_name) 语法</h3>
+
+<p>COUNT(DISTINCT column_name) 函数返回指定列的不同值的数目：</p>
+
+<pre>SELECT COUNT(DISTINCT column_name) FROM table_name</pre>
+
+<p class="note"><span>注释：</span>COUNT(DISTINCT) 适用于 ORACLE 和 Microsoft SQL Server，但是无法用于 Microsoft Access。</p>
+</div>
+
+<div>
+<h2>SQL COUNT(column_name) 实例</h2>
+
+<p>我们拥有下列 &quot;Orders&quot; 表：</p>
+
+<table class="dataintable">
+  <tr>
+    <th>O_Id</th>
+    <th>OrderDate</th>
+    <th>OrderPrice</th>
+    <th>Customer</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>2008/12/29</td>
+    <td>1000</td>
+    <td>Bush</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>2008/11/23</td>
+    <td>1600</td>
+    <td>Carter</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>2008/10/05</td>
+    <td>700</td>
+    <td>Bush</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>2008/09/28</td>
+    <td>300</td>
+    <td>Bush</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>2008/08/06</td>
+    <td>2000</td>
+    <td>Adams</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>2008/07/21</td>
+    <td>100</td>
+    <td>Carter</td>
+  </tr>
+</table>
+
+<p>现在，我们希望计算客户 &quot;Carter&quot; 的订单数。
+<p>我们使用如下 SQL 语句：
+
+<pre>SELECT COUNT(Customer) AS CustomerNilsen FROM Orders
+WHERE Customer='Carter'</pre>
+
+<p>以上 SQL 语句的结果是 2，因为客户 Carter 共有 2 个订单：
+<table class="dataintable" style="width:30%">
+  <tr>
+    <th>CustomerNilsen</th>
+  </tr>
+  <tr>
+    <td>2</td>
+  </tr>
+</table>
+</div>
+
+<div>
+SQL COUNT(*) 实例
+
+<p>如果我们省略 WHERE 子句，比如这样：
+
+<pre>SELECT COUNT(*) AS NumberOfOrders FROM Orders</pre>
+
+<p>结果集类似这样：
+
+<table class="dataintable" style="width:30%">
+  <tr>
+    <th>NumberOfOrders</th>
+  </tr>
+  <tr>
+    <td>6</td>
+  </tr>
+</table>
+
+<p>这是表中的总行数。
+</div>
+
+<div>
+<h2>SQL COUNT(DISTINCT column_name) 实例</h2>
+
+<p>现在，我们希望计算 &quot;Orders&quot; 表中不同客户的数目。</p>
+
+<p>我们使用如下 SQL 语句：</p>
+
+<pre>SELECT COUNT(DISTINCT Customer) AS NumberOfCustomers FROM Orders</pre>
+
+<p>结果集类似这样：</p>
+
+<table class="dataintable" style="width:30%">
+  <tr>
+    <th>NumberOfCustomers</th>
+  </tr>
+  <tr>
+    <td>3</td>
+  </tr>
+</table>
+
+<p>这是 &quot;Orders&quot; 表中不同客户（Bush, Carter 和 Adams）的数目。</p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

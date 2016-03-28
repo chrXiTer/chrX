@@ -1,0 +1,84 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 Audio/Video DOM src 属性</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>改变视频的来源：</p>
+
+<pre>
+myVid=document.getElementById(&quot;video1&quot;);
+<code>myVid.src=&quot;movie.ogg&quot;</code>;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_av_prop_src')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>src 属性设置或返回音频/视频的当前来源。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<p>设置 src 属性：</p>
+<pre><i>audio</i>|<i>video</i>.src=<i>URL</i></pre>
+
+<p>返回 src 属性：</p>
+<pre><i>audio</i>|<i>video</i>.src</pre>
+
+<h3>属性值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>URL</i></td>
+<td>
+	<p>规定音频/视频来源的 URL。</p>
+	<p>可能的值：</p>
+	<ul class="listintable">
+	<li>绝对 URL - 指向另一个网站（比如 src=&quot;http://example.com/movie.ogg&quot;）</li>
+	<li>相对 URL - 指向网站内的某个文件（比如 src=&quot;/data/movie.ogg&quot;）</li>
+	</ul>
+</td>
+</tr>
+</table>
+
+<h3>返回值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">类型</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>字符串值</td>
+<td>当前的音频/视频来源。</td>
+</tr>
+</table>
+
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

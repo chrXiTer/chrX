@@ -1,0 +1,257 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;source&gt; media 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_source.htm" >HTML &lt;source&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>使用 media 属性：</p>
+
+<pre>
+&lt;source src=&quot;movie.ogg&quot; type=&quot;video/ogg&quot; <code>media=&quot;screen and (min-width:320px)&quot;</code>&gt; 
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_source_media')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>media 属性规定媒体资源的类型（文件是为何种媒体/设备进行了优化）。</p>
+
+<p>浏览器可使用该属性来判断它是否能播放这个文件。如果不能播放，则可以选择不进行下载。</p>
+
+<p class="note"><span>注释：</span>该属性可接受多个值。</p>
+</div>
+
+<div>
+<h2>HTML 4.01 与 HTML 5 之间的差异</h2>
+
+<p>&lt;source&gt; 标签是 HTML 5 中的新标签。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;source media=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>可能的运算符</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:20%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>and</td>
+<td>规定 AND 运算符。</td>
+</tr>
+
+<tr>
+<td>not</td>
+<td>规定 NOT 运算符。</td>
+</tr>
+
+<tr>
+<td>,</td>
+<td>规定 OR 运算符。</td>
+</tr>
+</table>
+
+<h3>设备</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:20%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>all</td>
+<td>默认。适用于所有设备。</td>
+</tr>
+
+<tr>
+<td>aural</td>
+<td>语音合成器。</td>
+</tr>
+
+<tr>
+<td>braille</td>
+<td>盲文点字反馈设备。</td>
+</tr>
+
+<tr>
+<td>handheld</td>
+<td>手持设备（小型屏幕、有限带宽）</td>
+</tr>
+
+<tr>
+<td>projection</td>
+<td>投影仪</td>
+</tr>
+
+<tr>
+<td>print</td>
+<td>打印预览模式/打印页面</td>
+</tr>
+
+<tr>
+<td>screen</td>
+<td>计算机屏幕</td>
+</tr>
+
+<tr>
+<td>tty</td>
+<td>电传打字机以及类似的使用等宽字符网格的媒体。</td>
+</tr>
+
+<tr>
+<td>tv</td>
+<td>电视机类型设备（低分辨率、有限的滚屏能力）。</td>
+</tr>
+</table>
+
+<h3>值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:20%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>width</td>
+<td>
+<p>规定目标显示区域的宽度。</p>
+<p>可使用 &quot;min-&quot; 和 &quot;max-&quot; 前缀。</p>
+<p>例子：media=&quot;screen and (min-width:500px)&quot;</p>
+</td>
+</tr>
+
+<tr>
+<td>height</td>
+<td>
+<p>规定目标显示区域的高度。</p>
+<p>可使用 &quot;min-&quot; 和 &quot;max-&quot; 前缀。</p>
+<p>例子：media=&quot;screen and (max-height:600px)&quot;</p>
+</td>
+</tr>
+
+<tr>
+<td>device-width</td>
+<td>
+<p>规定目标显示器/纸张的宽度。</p>
+<p>可使用 &quot;min-&quot; 和 &quot;max-&quot; 前缀。</p>
+<p>例子：media=&quot;screen and (device-width:500px)&quot;</p>
+</td>
+</tr>
+
+<tr>
+<td>device-height</td>
+<td>
+<p>规定目标显示器/纸张的高度。</p>
+<p>可使用 &quot;min-&quot; 和 &quot;max-&quot; 前缀。</p>
+<p>例子：media=&quot;screen and (device-height:600px)&quot;</p>
+</td>
+</tr>
+
+<tr>
+<td>orientation</td>
+<td>
+<p>规定目标显示器/纸张的方向。</p>
+<p>可能的值：&quot;portrait&quot; 或 &quot;landscape&quot;。</p>
+<p>例子：media=&quot;all and (orientation: landscape)&quot;</p>
+</td>
+</tr>
+
+<tr>
+<td>aspect-ratio</td>
+<td>
+<p>规定目标显示区域的宽度/高度比。</p>
+<p>可使用 &quot;min-&quot; 和 &quot;max-&quot; 前缀。</p>
+<p>例子：media=&quot;screen and (aspect-ratio:16/10)&quot;</p>
+</td>
+</tr>
+
+<tr>
+<td>device-aspect-ratio</td>
+<td>
+<p>规定目标显示器/纸张的 device-width/device-height 比率。</p>
+<p>可使用 &quot;min-&quot; 和 &quot;max-&quot; 前缀。</p>
+<p>例子：media=&quot;screen and (aspect-ratio:16/10)&quot;</p>
+</td>
+</tr>
+
+<tr>
+<td>color</td>
+<td>
+<p>规定目标显示器的 bits/color（每色位）。</p>
+<p>可使用 &quot;min-&quot; 和 &quot;max-&quot; 前缀。</p>
+<p>例子：media=&quot;screen and (color:10)&quot;</p>
+</td>
+</tr>
+
+<tr>
+<td>color-index</td>
+<td>
+<p>规定目标显示器可以处理的颜色数。</p>
+<p>可使用 &quot;min-&quot; 和 &quot;max-&quot; 前缀。</p>
+<p>例子：media=&quot;screen and (min-color-index:16777216)&quot;</p>
+</td>
+</tr>
+
+<tr>
+<td>monochrome</td>
+<td>
+<p>规定单色帧缓冲中的 bits/pixel（位/像素）。</p>
+<p>可使用 &quot;min-&quot; 和 &quot;max-&quot; 前缀。</p>
+<p>例子：media=&quot;screen and (monochrome:2)&quot;</p>
+</td>
+</tr>
+
+<tr>
+<td>resolution</td>
+<td>
+<p>规定目标显示器/纸张的像素密度 (dpi 或 dpcm)。</p>
+<p>可使用 &quot;min-&quot; 和 &quot;max-&quot; 前缀。</p>
+<p>例子：media=&quot;print and (resolution:326dpi)&quot;</p>
+</td>
+</tr>
+
+<tr>
+<td>scan</td>
+<td>
+<p>规定电视显示器的扫描方式。</p>
+<p>可能的值：&quot;progressive&quot; 和 &quot;interlace&quot;。</p>
+<p>例子：media=&quot;tv and (scan:interlace)&quot;</p>
+</td>
+</tr>
+
+<tr>
+<td>grid</td>
+<td>
+<p>规定输出设备是网格还是位图。</p>
+<p>可能的值：&quot;1&quot; 为网格，否则为 &quot;0&quot;。</p>
+<p>例子：media=&quot;handheld and (grid:0)&quot;</p>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_source.htm" >HTML &lt;source&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

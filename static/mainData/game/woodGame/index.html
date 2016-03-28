@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width = 320,initial-scale=1,user-scalable=no" />
+    <link rel="apple-touch-icon-precomposed" href="icon.png"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon-precomposed" href="icon.png"/>
+    <link rel="apple-touch-startup-image" href="i/loader.png">
+    <title>HTML5堆木头游戏</title>
+    <style type="text/css">
+        body { font-size:90%; font-family: helvetica, arial; background-color: #000000; color: #a3b3c3;
+            border:0; padding:0; margin: auto; overflow: hidden; width: 320px;
+        }
+        h1 {margin:.4em;}
+        h3 { font-size:120%; margin:12px; padding-left:0;margin-bottom:.5em; color: #ffffff;}
+        p {margin:0; margin:12px; margin-top:.5em; margin-bottom:.5em; font-size:84%;}
+        img {border:0;}
+
+        #container {width:320px; height:315px; overflow:hidden; background-color: #000000; margin:auto;}
+        #ibox_game {width:320px; height:315px; float:left; overflow:hidden;}
+        #info_bar {width:237px; height:25px; overflow:hidden;margin-left: 13px;padding-top:10px; font-size:90%; position:absolute; z-index:20;}
+
+        #alertbox {display:none;position:absolute; z-index:200;}
+        #alertbox_flekk {position:absolute; width:320px; height: 356px; background-color:#000000; opacity: .8;}
+        #alertbox_content {position:absolute; width:320px; height:286px; margin-top:70px; text-align:center; color:#ffffff;}
+        #alertbox a {margin:10px; width:114px; height:54px; }
+        #score,#combo,#level {color:#ffffff;}
+        #preload {width:320px;position:absolute; visibility:hidden; overflow:hidden;}
+    </style>
+</head>
+
+<body>
+<div style="width:320px; height: 370px;">
+	<div id="alertbox">
+		<div id="alertbox_flekk"></div>
+		<div id="alertbox_content"></div>
+	</div>
+
+	<div id="container">
+		<div id="container_scroller" style="width:10000px;">
+			<div id="ibox_game" style="position: relative;">
+				<div id="info_bar>
+					<div style="float:left">
+						<div id="score_title" style="float:left">得分:&nbsp;</div>
+						<div id="score" style="float:left;  width:2em;">0</div>
+					</div>
+					<div style="float:right">
+						<div style="float:left">连击:&nbsp;</div>
+						<div id="combo" style="float:left; width:1.5em;">0</div>
+					</div>
+					<div style="text-align:center">等级: <span id="level">1</span></div>
+				</div>
+				<div  id="st_outerarea" style="visibility:hidden">
+                    
+                   <div id="buttonStackLog" style="position:absolute; cursor:pointer; background-image:url(i/stackthelog.png);
+                   background-position:center center;background-repeat:no-repeat; width:298px; height:55px;
+                   padding:17px 11px 0 11px;z-index:30;margin:243px 0 0 0;"></div>
+                   
+                   <div id = "st_scrollarea" style="backgroundPosition:bottom;center;width:320px; 
+                   height:315px;position:absolute;"></div>
+                    
+                </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./stack.js"  charset="utf-8"></script>
+</div>
+
+</body>
+</html>

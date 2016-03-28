@@ -1,0 +1,116 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML5 canvas arc() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>创建一个圆形：</p>
+
+<canvas id="myCanvas" class="canvas_example">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+var c=document.getElementById("myCanvas");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+	var ctx=c.getContext("2d");
+	ctx.beginPath();
+	ctx.arc(100,75,50,0,2*Math.PI);
+	ctx.stroke();
+	}
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+ctx.beginPath();
+<code>ctx.arc(100,75,50,0,2*Math.PI);</code>
+ctx.stroke();
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_arc')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>arc() 方法创建弧/曲线（用于创建圆或部分圆）。</p>
+
+<p class="tip"><span>提示：</span>如需通过 arc() 来创建圆，请把起始角设置为 0，结束角设置为 2*Math.PI。</p>
+
+<p class="tip"><span>提示：</span>请使用 <a href="canvas_stroke.htm"  title="HTML5 canvas stroke() 方法">stroke()</a> 或 <a href="canvas_fill.htm"  title="HTML5 canvas fill() 方法">fill()</a> 方法在画布上绘制实际的弧。</p>
+
+<img src="../i/arc.gif"  alt="弧/曲线" />
+
+<ul>
+<li>中心：arc(<span class="marked">100</span>,<span class="marked">75</span>,50,0*Math.PI,1.5*Math.PI)</li>
+<li>起始角：arc(100,75,50,<span class="marked">0</span>,1.5*Math.PI)</li>
+<li>结束角：arc(100,75,50,0*Math.PI,<span class="marked">1.5*Math.PI</span>)</li>
+</ul>
+
+<h3>JavaScript 语法：</h3>
+
+<pre>context.arc(<i>x</i>,<i>y</i>,<i>r</i>,<i>sAngle</i>,<i>eAngle</i>,<i>counterclockwise</i>);</pre>
+
+<h3>参数值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">参数</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>x</i></td>
+<td>圆的中心的 x 坐标。</td>
+</tr>
+
+<tr>
+<td><i>y</i></td>
+<td>圆的中心的 y 坐标。</td>
+</tr>
+
+<tr>
+<td><i>r</i></td>
+<td>圆的半径。</td>
+</tr>
+
+<tr>
+<td><i>sAngle</i></td>
+<td>起始角，以弧度计。（弧的圆形的三点钟位置是 0 度）。</td>
+</tr>
+
+<tr>
+<td><i>eAngle</i></td>
+<td>结束角，以弧度计。</td>
+</tr>
+
+<tr>
+<td><i>counterclockwise</i></td>
+<td>可选。规定应该逆时针还是顺时针绘图。False = 顺时针，true = 逆时针。</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

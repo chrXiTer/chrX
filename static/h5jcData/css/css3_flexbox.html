@@ -1,0 +1,278 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+<div id="wrapper">
+    <div id="maincontent">
+        <h1>CSS3 弹性盒子（Flexbox）</h1>
+        <h2>简介</h2>
+        <p>Flexbox布局官方称为CSS Flexible Box Layout Module是一个CSS3新的布局模块，用于实现容器里项目的对齐、方向、排序（即使在项目大小位置、动态生成的情况）。flex容器最大的特性在于，能够修改子元素的宽度和高度，以满足在不同尺寸屏幕下的如意分布。
+        许多设计人员、开发人员发现flexbox布局方式使用简单，定位元素更加简单、复杂的布局更容易用较少的代码实现，大大地简化了开发流程。不像块状布局、内联布局那样基于竖直方向、水平方向，flexbox的布局算法基于方向。flexbox布局适用于小的应用组件、新的CSS Grid布局模块更适用于大量的布局。
+        本指南不解释flex属性如何工作，我们只是用可视化的方式展示flex属性如何影响布局。</p>
+        <h3>基础-flexbox模型</h3>
+        <p>flex布局由父容器（我们叫做flex container）和它的子元素（我们叫做flex items）组成。 </p>
+        <img src=""/>
+        <p>在上图所示的盒子里，你可以看到用来描述flex container和flex items的属性和术语.</p>
+        <p>您也可以到can i use了解浏览器兼容情况详情。</p>
+        <p>用到的一些术语的表达约定如下:</p>
+        <p>
+        flex-container-弹性容器<br />
+        flex-item-弹性子元素<br />
+        main axis-主轴<br/>
+        cross axis-侧轴<br/>
+        </p>
+
+        <h2>使用</h2>
+        <p>使用flexbox只需要在父元素上设置display属性即可。</p>
+        <pre>
+        .flex-container {
+        display: flex;
+        }
+        </pre>
+        <p>此时父元素对外将表现为快级元素，对内将采用flexbox布局。</p>
+
+        <p>如果您想让父亲元素以内联方式显示，则</p>
+        <pre>
+            .flex-container {
+            display: inline-flex;
+            }
+        </pre>
+        <p>此时父元素对外将表现为行内块元素，对内采用flexbox布局。</p>
+        <p>注意：仅仅需要在父元素上设置这一个属性即可，它的子元素会自动变成flex items。</p>
+        <p>有很多方式分组flexbox的所有属性，我发现最容易理解的方式是分成两组，一组为弹性容器的属性，另一组为弹性子元素的属性，接下来我们按这种方式来一一解析。</p>
+        <h2>弹性容器（Flex container）属性</h2>
+        <h3>flex-direction</h3>
+        <p>该属性通过设置flex container主坐标轴方向影响子元素(flex item)如何在容器中排布。我们可以设置两个主要的方向水平和垂直方向。</p>
+        <p>可以接受的值有四个row、row-reverse、column、column-reverse，如下所示。</p>
+        <pre>
+            .flex-container {
+            flex-direction:         row;
+            }
+        </pre>
+        <p>弹性子元素将会按照自左向右的水平排列。</p> 
+        <pre>
+            .flex-container {
+            flex-direction:         row-reverse;
+            }
+        </pre>
+        <p>弹性子元素将会自右向左水平排列。 </p>
+        <pre>
+            .flex-container {
+            flex-direction:         column;
+            }
+        </pre>
+        <p>弹性子元素将自上而下竖直排列 </p>
+        <pre>
+            .flex-container {
+            flex-direction:         column-reverse;
+            }
+        </pre>
+        <p>弹性子元素将自下而上竖直排列</p>
+        默认值为row. 
+        注意，row和row-reverse是基于书写顺序的，所以在rtl环境下将会反置。
+        <h3>flex-wrap</h3>
+        flexbox最初的理念是保持弹性容器的子元素在一行中。flex-wrap属性控制当子元素items超出弹性容器范围是是否换行，以及新行的方向。
+        本属性可以接受一下几个值：no-wrap、wrap、wrap-reverse，分别如下所示。
+        <pre>
+            .flex-container {
+            flex-wrap:         nowrap;
+            }
+        </pre>
+        <p>弹性子元素将会在一行显示，默认的子元素items将会缩减以适应弹性容器的宽度。 </p>
+        <pre>
+            .flex-container {
+            flex-wrap:         wrap;
+            }
+        </pre>
+        <p>如果需要的话，弹性子元素将会自左向右、自上而下地多行显示。</p>
+        <pre>
+            .flex-container {
+            flex-wrap:         wrap-reverse;
+            }
+        </pre>
+        <p>如果需要的话，弹性子元素将会自左向右、自下而上地多行显示。</p>
+        <p>默认值为no-wrap. </p>
+        <p>注意，这些属性也是基于书写顺序的，所以在rtl环境下将会反置。</p>
+        <h3>flex-flow</h3>
+        <p>flex-flow属性是flex-direction和flex-wrap属性的快捷方式，复合属性。</p>
+        <pre>
+            .flex-container {
+            flex-flow:         <flex-direction> || <flex-wrap>;
+            }
+        </pre>
+        <p>默认值为row nowrap.<p>
+        <h3>justify-content</h3>
+        <p>justify-content设置弹性子元素在弹性容器中当前行主坐标的对齐方式，当弹性容器里一行上的所有子元素都不能伸缩或已经达到其最大值时，该属性可协助对多余的空间进行分配。
+        可以接受的值为flex-start、flex-end、center、space-between、space-around等五个值，默认值为flex-start。详细如下所示。</p>
+        <pre>
+            .flex-container {
+            justify-content:         flex-start;
+            }
+        </pre>
+        <p>在ltr环境下，弹性子元素flex items将会弹性容器中左对齐。 </p>
+        <pre>
+            .flex-container {
+            justify-content:         flex-end;
+            }
+        </pre>
+        <p>在ltr环境下，弹性子元素flex items将会弹性容器中右对齐。 </p>
+        <pre>
+            .flex-container {
+            justify-content:         center;
+            }
+        </pre>
+        <p>弹性子元素flex items将会弹性容器中居中对齐。</p>
+        <pre>
+            .flex-container {
+            justify-content:         space-between;
+            }
+        </pre>
+        <p>弹性子元素flex items中的第一个、最后一个对齐弹性容器的边缘，其余均匀分布。 </p>
+        <pre>
+            .flex-container {
+            justify-content:         space-around;
+            }
+        </pre>
+        <p>弹性子元素flex items中的任何一个都参与均匀分布，即使是第一个和最后一个。 </p>
+        <h3>align-items</h3>
+        </p>
+        align-items设置弹性子元素在弹性容器中当前行侧轴上的对齐方式，跟justify-content类似但是作用于侧轴（flex-direction为row和row-reverse时为纵轴，flex为column和column-reverse时为横轴）。该属性设置所有flex items(包含匿名的item)的默认对齐方式。
+        可以接受的值为flex-start、flex-end、center、baseline、stretch等五个值，默认值为stretch。详细如下所示。</p>
+        <pre>
+            .flex-container {
+            align-items:         stretch;
+            }
+        </pre>
+        </p>弹性子元素将会从侧轴开始到侧轴结束铺满整个高度（宽度）。 </p>
+        <pre>
+            .flex-container {
+            align-items:         flex-start;
+            }
+        </pre>
+        </p>弹性子元素将会堆栈在弹性容器的侧轴开始位置。 </p>
+        <pre>
+            .flex-container {
+            align-items:         flex-end;
+            }
+        </pre>
+        </p>弹性子元素将会堆栈在弹性容器的侧轴结束位置。 </p>
+        <pre>
+            .flex-container {
+            align-items:         center;
+            }
+        </pre>
+        </p>弹性子元素将会堆栈在弹性容器的侧轴中间位置。 </p>
+        <pre>
+            .flex-container {
+            align-items:         baseline;
+            }
+        </pre>
+        </p>弹性子元素将会以文字基线的方式对齐。</p>
+        </p>注意，通过这里了解基线计算的更多细节。</p>
+        <h3>align-content</h3>
+        <p>当弹性容器侧轴中有空白时，align-content属性设置伸缩行的对齐方式，正如justify-content在主轴上设置对齐方式一样。
+        可以接受的值为：stretch、flex-start、flex-end、center、space-between、space-around等, 默认值为stretch。</p>
+        <pre>
+            .flex-container {
+            align-content:         stretch;
+            }
+        </pre>
+        <p>各行平分剩余空间。 </p>
+        <pre>
+            .flex-container {
+            align-content:         flex-start;
+            }
+        </pre>
+        <p>各行堆栈紧靠侧轴起始边界。 </p>
+        <pre>
+            .flex-container {
+            align-content:         flex-end;
+            }
+        </pre>
+        <p>各行堆栈紧靠侧轴结束边界。 </p>
+        <pre>
+            .flex-container {
+            align-content:         center;
+            }
+        </pre>
+        <p>各行堆栈位于侧轴居中位置。 </p>
+        <pre>
+            .flex-container {
+            align-content:         space-between;
+            }
+        </pre>
+        <p>各行之间空白均匀分布，第一行和最后一行紧靠侧轴边缘。 </p>
+        <pre>
+            .flex-container {
+            align-content:         space-around;
+            }
+        </pre>
+        <p>各行在弹性盒子中均匀分布，两端保留子元素与子元素之间间距大小的一半。 </p>
+        <p>注意:该属性只作用于弹性容器里拥有多行的情况，如果只有单行该属性无效。另外。</p>
+        <p>上面所说的“行”指的是主轴方向的平行的数据，例如flex-direction值为row、row-reverse时指数据行，值为column、column-reverse时指数据列。</p>
+        <h2>注意事项</h2>
+        <p>所有的column-属性对弹性容器无效。
+            ::first-line和::first-letter伪对象对弹性容器无效
+        </p>
+        <h2>弹性子元素（Flex item）属性</h2>
+        <h3>order</h3>
+        <p>order属性控制弹性容器里子元素的顺序，默认情况下按照弹性容器里添加的顺序排列。</p>
+        <p>可以接受的值为整型数字，默认值为0.</p>
+        <pre>
+            .flex-item {
+            order:         <integer>;
+            }
+        </pre>
+        <p>弹性子元素将按照给定的数字进行排列，如下图所示。</p> 
+
+        <h3>flex-grow</h3>
+        该属性设置弹性子元素的扩展比率（flex-grow），该值决定某个子元素相对于其他普通子元素的扩展大小。
+        可接受值为数字，默认值为0，负数无效。
+        <pre>
+            .flex-item {
+            flex-grow:         <number>;
+            }
+        </pre>
+        <p>如果所有的弹性子元素具有相等的flex-grow值，那么所有的子元素将具有相同的大小。 </p>
+        <p>第二个元素可以相对比较大，如下图所示。 </p>
+
+        <h3>flex-shrink<h3>
+        <h3>该属性设置弹性子元素的收缩比率（flex-shrink），该值决定某个子元素相对于其他普通子元素的收缩大小。</h3>
+        <pre>
+            .flex-item {
+            flex-shrink:         <number>;
+            }
+        </pre>
+        <h3>默认情况下所有子元素都可以被收缩，如果设置为0，则不收缩。 </h3>
+        <h3>flex-basis</h3>
+        <p>该属性指定弹性子元素伸缩前的默认大小值，相当于width和height属性。</p>
+        <pre>
+            .flex-item {
+            flex-basis:         auto | <width>;
+            }
+        </pre>
+        <p>可接受值为数字、百分比和auto，默认值为auto（ 无特定宽度值，取决于其它属性）。如下图所示，我们设置第四个子元素的宽度值。 </p>
+        <p>注意，未来可能将会引入新的关键字。</p>
+        <h3>flex</h3>
+        <p>该属性为flex-grow, flex-shrink和flex-basis属性的复合属性，一个简写的方式。</p>
+        <pre>
+            .flex-item {
+            flex:         none | auto | [ <flex-grow> <flex-shrink>? || <flex-basis> ];
+            }
+        </pre>
+        <p>默认值为：0 1 auto。</p>
+        <p>注意， W3C推荐使用复合属性的方式，因为复合属性的方式可以方便地重置没有指定具体值的属性以适应大部分的常规应用。</p>
+        <h3>align-self</h3>
+        <p>align-self允许独立的弹性子元素覆盖弹性容器的默认对齐设置(align-items)。大家到align-items部分获取不同值得不同表现方式。</p>
+        <pre>
+            .flex-item {
+            align-self:         auto | flex-start | flex-end | center | baseline | stretch;
+            }
+        </pre>
+        <p>默认值为auto。</p>
+        <p>第三个和第四个弹性子元素将使用align-self属性覆盖默认对齐方式。 </p>
+        <p>Note: The value of auto for align-self computes to the value of align-items on the element’s parent, or stretch if the element has no parent.
+        注意，指定algin-self为auto时，将使用弹性容器的align-items属性或者如果没有父对象时使用stretch属性。</p>
+        <h2>注意</h2>
+        <p>float、clear、vertical-align对flex item无效。</p>
+    </div>
+</dic>
+
+<script src="../chrX.js"></script>

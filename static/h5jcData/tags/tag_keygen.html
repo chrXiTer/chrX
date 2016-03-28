@@ -1,0 +1,112 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;keygen&gt; 标签</h1>
+
+<div>
+<h2>实例</h2>
+
+<p>带有 keygen 字段的表单：</p>
+
+<pre>
+&lt;form action=&quot;demo_keygen.asp&quot; method=&quot;get&quot;&gt;
+Username: &lt;input type=&quot;text&quot; name=&quot;usr_name&quot; /&gt;
+Encryption: <code>&lt;keygen name=&quot;security&quot; /&gt;</code>
+&lt;input type=&quot;submit&quot; /&gt;
+&lt;/form&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_keygen')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>&lt;keygen&gt; 标签规定用于表单的密钥对生成器字段。</p>
+
+<p>当提交表单时，私钥存储在本地，公钥发送到服务器。</p>
+</div>
+
+<div>
+<h2>HTML 4.01 与 HTML 5 之间的差异</h2>
+
+<p>keygen 是 HTML 中的新元素。</p>
+</div>
+
+<div>
+<h2>属性</h2>
+
+<p class="html5_new_note"><span>new</span> : HTML5 中的新属性。</p>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">属性</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td class="html5_new"><a href="att_keygen_autofocus.htm"  title="HTML5 &lt;keygen&gt; autofocus 属性">autofocus</a></td>
+<td>autofocus</td>
+<td>使 keygen 字段在页面加载时获得焦点。</td>
+</tr>
+
+<tr>
+<td class="html5_new">challenge</td>
+<td>challenge</td>
+<td>如果使用，则将 keygen 的值设置为在提交时询问。</td>
+</tr>
+
+<tr>
+<td class="html5_new"><a href="att_keygen_disabled.htm"  title="HTML5 &lt;keygen&gt; disabled 属性">disabled</a></td>
+<td>disabled</td>
+<td>禁用 keytag 字段。</td>
+</tr>
+
+<tr>
+<td class="html5_new"><a href="att_keygen_form.htm"  title="HTML5 &lt;keygen&gt; form 属性">form</a></td>
+<td><i>formname</i></td>
+<td>定义该 keygen 字段所属的一个或多个表单。</td>
+</tr>
+
+<tr>
+<td class="html5_new"><a href="att_keygen_keytype.htm"  title="HTML5 &lt;keygen&gt; keytype 属性">keytype</a></td>
+<td>rsa</td>
+<td>定义 keytype。rsa 生成 RSA 密钥。</td>
+</tr>
+
+<tr>
+<td class="html5_new"><a href="att_keygen_name.htm"  title="HTML5 &lt;keygen&gt; name 属性">name</a></td>
+<td><i>fieldname</i></td>
+<td>
+  <p>定义 keygen 元素的唯一名称。</p>
+  <p>name 属性用于在提交表单时搜集字段的值。</p>
+</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>全局属性</h2>
+
+<p>&lt;keygen&gt; 标签支持 <a href="html_ref_standardattributes.htm" >HTML 中的全局属性</a>。</p>
+</div>
+
+<div>
+<h2>事件属性</h2>
+
+<p>&lt;keygen&gt; 标签支持 <a href="html_ref_eventattributes.htm" >HTML 中的事件属性</a>。</p>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>HTML DOM 参考手册：<a href="../jsref/dom_obj_keygen.htm"  title="HTML DOM Keygen 对象">Keygen 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

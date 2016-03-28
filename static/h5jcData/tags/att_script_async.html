@@ -1,0 +1,72 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 &lt;script&gt; async 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_script.htm" >HTML &lt;script&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>脚本将会异步运行：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot; src=&quot;demo_async.js&quot; <code>async=&quot;async&quot;</code>&gt;&lt;/script&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_script_async')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>async 属性规定一旦脚本可用，则会异步执行。</p>
+
+<p class="note"><span>注释：</span>async 属性仅适用于外部脚本（只有在使用 src 属性时）。</p>
+
+<p class="note"><span>注释：</span>有多种执行外部脚本的方法：</p>
+
+<ul>
+<li>如果 async=&quot;async&quot;：脚本相对于页面的其余部分异步地执行（当页面继续进行解析时，脚本将被执行）</li>
+<li>如果不使用 async 且 defer=&quot;defer&quot;：脚本将在页面完成解析时执行</li>
+<li>如果既不使用 async 也不使用 defer：在浏览器继续解析页面之前，立即读取并执行脚本</li>
+</ul>
+</div>
+
+<div>
+<h2>HTML 4.01 与 HTML 5 之间的差异</h2>
+
+<p>async 属性是 HTML5 中的新属性。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;script async=&quot;async&quot;&gt;</pre>
+
+<h3>属性值</h3>
+
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>async</td>
+    <td>规定脚本将被异步执行。</td>
+  </tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_script.htm" >HTML &lt;script&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,72 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 Audio/Video DOM buffered 属性</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>获得视频的第一段缓冲范围（部分），以秒计：</p>
+
+<pre>
+myVid=document.getElementById(&quot;video1&quot;);
+alert(&quot;Start: &quot; + <code>myVid.buffered</code>.start(0)
++ &quot; End: &quot; + myVid.buffered.end(0));
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_av_prop_buffered')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>buffered 属性返回 TimeRanges 对象。</p>
+
+<p>TimeRanges 对象表示用户的音视频缓冲范围。</p>
+
+<p>缓冲范围指的是已缓冲音视频的时间范围。如果用户在音视频中跳跃播放，会得到多个缓冲范围。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>audio|video.buffered</pre>
+
+<h3>返回值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>TimeRanges 对象</td>
+<td>
+	<p>表示音视频的已缓冲部分。</p>
+	<p>TimeRanges 对象属性：</p>
+	<ul class="listintable">
+	<li>length - 获得音视频中已缓冲范围的数量</li>
+	<li>start(index) - 获得某个已缓冲范围的开始位置</li>
+	<li>end(index) - 获得某个已缓冲范围的结束位置</li>
+	</ul>
+	<p class="note"><span>注释：</span>首个缓冲范围的下表是 0。</p>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

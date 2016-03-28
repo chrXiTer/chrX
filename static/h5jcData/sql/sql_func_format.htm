@@ -1,0 +1,100 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL FORMAT() 函数</h1>
+
+<div>
+<h2>FORMAT() 函数</h2>
+
+<p>FORMAT 函数用于对字段的显示进行格式化。</p>
+
+<h3>SQL FORMAT() 语法</h3>
+<pre>SELECT FORMAT(column_name,format) FROM table_name</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th style="width:30%">参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>column_name</td>
+    <td>必需。要格式化的字段。</td>
+  </tr>
+  <tr>
+    <td>format</td>
+    <td>必需。规定格式。</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>SQL FORMAT() 实例</h2>
+
+<p>我们拥有下面这个 &quot;Products&quot; 表：</p>
+
+<table class="dataintable">
+  <tr>
+    <th>Prod_Id</th>
+    <th>ProductName</th>
+    <th>Unit</th>
+    <th>UnitPrice</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>gold</td>
+    <td>1000 g</td>
+    <td>32.35</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>silver</td>
+    <td>1000 g</td>
+    <td>11.56</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>copper</td>
+    <td>1000 g</td>
+    <td>6.85</td>
+  </tr>
+</table>
+
+<p>现在，我们希望显示每天日期所对应的名称和价格（日期的显示格式是 &quot;YYYY-MM-DD&quot;）。</p>
+
+<p>我们使用如下 SQL 语句：</p>
+
+<pre>SELECT ProductName, UnitPrice, FORMAT(Now(),'YYYY-MM-DD') as PerDate
+FROM Products</pre>
+
+<p>结果集类似这样：</p>
+
+<table class="dataintable">
+  <tr>
+    <th>ProductName</th>
+    <th>UnitPrice</th>
+    <th>PerDate</th>
+  </tr>
+  <tr>
+    <td>gold</td>
+    <td>32.35</td>
+    <td>12/29/2008</td>
+  </tr>
+  <tr>
+    <td>silver</td>
+    <td>11.56</td>
+    <td>12/29/2008</td>
+  </tr>
+  <tr>
+    <td>copper</td>
+    <td>6.85</td>
+    <td>12/29/2008</td>
+  </tr>
+</table>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

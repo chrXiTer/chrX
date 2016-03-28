@@ -1,0 +1,62 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript toSource() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_array.htm"  title="JavaScript Array 对象">JavaScript Array 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>toSource() 方法表示对象的源代码。</p>
+<p>该原始值由 Array 对象派生的所有对象继承。</p>
+<p>toSource() 方法通常由 JavaScript 在后台自动调用，并不显式地出现在代码中。</p>
+
+<h3>语法</h3>
+<pre>object.toSource()</pre>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>只有 Gecko 核心的浏览器（比如 Firefox）支持该方法，也就是说 IE、Safari、Chrome、Opera 等浏览器均不支持该方法。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>下面的例子向您展示 toSource() 方法的用法：</p>
+
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+
+function employee(name,job,born)
+{
+this.name=name;
+this.job=job;
+this.born=born;
+}
+
+var bill=new employee(&quot;Bill Gates&quot;,&quot;Engineer&quot;,1985);
+
+document.write(<code>bill.toSource()</code>);
+
+&lt;/script&gt;</pre>
+
+<p>输出：</p>
+
+<pre>({name:"Bill Gates", job:"Engineer", born:1985}) </pre>
+
+<p class="tiy"><a href="javascript:tiy.run('jseg_tosource')" >TIY</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_array.htm"  title="JavaScript Array 对象">JavaScript Array 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,105 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS clip 属性</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>clip 属性剪裁绝对定位元素。</p>
+<p>当一幅图像的尺寸大于包含它的元素时会发生什么呢？&quot;clip&quot; 属性允许您规定一个元素的可见尺寸，这样此元素就会被修剪并显示为这个形状。</p>
+<h3>说明</h3>
+<p>这个属性用于定义一个剪裁矩形。对于一个绝对定义元素，在这个矩形内的内容才可见。出了这个剪裁区域的内容会根据 overflow 的值来处理。剪裁区域可能比元素的内容区大，也可能比内容区小。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">auto</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS2</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.clip=&quot;rect(0px,50px,50px,0px)&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+<p>剪裁图像：</p>
+<pre>
+img
+  {
+  position:absolute;
+  <code>clip:rect(0px,60px,200px,0px);</code>
+  }
+</pre>
+<p><a href="../tiy/t.asp-f=csse_clip.htm" >TIY</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有主流浏览器都支持 clip 属性。</p>
+<p class="note"><span>注释：</span>任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 &quot;inherit&quot;。</p>
+</div>
+
+<div>
+<h2>可能的值</h2>
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>shape</i></td>
+<td>设置元素的形状。唯一合法的形状值是：rect (<i>top</i>, <i>right</i>, <i>bottom</i>, <i>left</i>)</td>
+</tr>
+
+<tr>
+<td>auto</td>
+<td>默认值。不应用任何剪裁。</td>
+</tr>
+
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 clip 属性的值。</td>
+</tr>
+</table>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="../tiy/t.asp-f=csse_clip.htm" >设置元素的形状</a></dt>
+<dd>本例演示如何设置元素的形状。此元素被剪入形状中，然后显示出来。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+<p>CSS 教程：<a href="css_positioning.htm" title="CSS 定位 (Positioning)">CSS 定位</a></p>
+<p>HTML DOM 参考手册：<a href="../htmldom/prop_style_clip.htm" title="HTML DOM clip 属性">clip 属性</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

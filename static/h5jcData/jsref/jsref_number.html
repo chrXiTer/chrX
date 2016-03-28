@@ -1,0 +1,87 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript Number() 函数</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_global.htm"  title="JavaScript 全局对象">JavaScript 全局对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>Number() 函数把对象的值转换为数字。</p>
+
+<h3>语法</h3>
+
+<pre>Number(object)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>object</td>
+    <td>必需。JavaScript 对象。</td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+
+<p>如果参数是 Date 对象，Number() 返回从 1970 年 1 月 1 日至今的毫秒数。</p>
+
+<p>如果对象的值无法转换为数字，那么 Number() 函数返回 NaN。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在本例中，我们将尝试把不同的对象转换为数字：</p>
+
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+
+var test1= new Boolean(true);
+var test2= new Boolean(false);
+var test3= new Date();
+var test4= new String(&quot;999&quot;);
+var test5= new String(&quot;999 888&quot;);
+
+document.write(<code>Number(test1)</code>+ &quot;&lt;br /&gt;&quot;);
+document.write(<code>Number(test2)</code>+ &quot;&lt;br /&gt;&quot;);
+document.write(<code>Number(test3)</code>+ &quot;&lt;br /&gt;&quot;);
+document.write(<code>Number(test4)</code>+ &quot;&lt;br /&gt;&quot;);
+document.write(<code>Number(test5)</code>+ &quot;&lt;br /&gt;&quot;);
+
+&lt;/script&gt;</pre>
+
+<p>输出：</p>
+
+<pre>
+1
+0
+1256657776588
+999
+NaN
+</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_number')" >Number()</a></dt>
+<dd>如何使用 Number() 把对象的值转换为数字。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_global.htm"  title="JavaScript 全局对象">JavaScript 全局对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

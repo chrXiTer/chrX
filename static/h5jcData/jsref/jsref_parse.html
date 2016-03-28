@@ -1,0 +1,123 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript parse() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>parse() 方法可解析一个日期时间字符串，并返回 1970/1/1 午夜距离该日期时间的毫秒数。</p>
+
+<h3>语法</h3>
+
+<pre>Date.parse(datestring)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>datestring</td>
+    <td>必需。表示日期和时间的字符串。</td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+
+<p>指定的日期和时间据 1970/1/1 午夜（GMT 时间）之间的毫秒数。</p>
+
+<h3>说明</h3>
+
+<p>该方法是 Date 对象的静态方法。一般采用 Date.parse() 的形式来调用，而不是通过 dateobject.parse() 调用该方法。</p>
+</div>
+
+<div>
+<h2>提示和注释：</h2>
+
+<p class="note"><span>注释：</span>Date.parse() 是 Date 对象的静态方法。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<h3>例子 1</h3>
+
+<p>在本例中，我们将取得从 1970/01/01 到 2005/07/08 的毫秒数：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var d = Date.parse(&quot;Jul 8, 2005&quot;)
+document.write(d)
+
+&lt;/script&gt;</pre>
+<p>输出：</p>
+<pre><script type="text/javascript">
+
+var d = Date.parse("Jul 8, 2005")
+document.write(d)
+
+</script>
+</pre>
+
+<h3>例子 2</h3>
+
+<p>现在，我们将把上面的例子所输出的结果转换成年：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var minutes = 1000 * 60
+var hours = minutes * 60
+var days = hours * 24
+var years = days * 365
+var t = Date.parse(&quot;Jul 8, 2005&quot;)
+var y = t/years
+document.write(&quot;It's been: &quot; + y + &quot; years from 1970/01/01&quot;)
+document.write(&quot; to 2005/07/08!&quot;)
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>
+<script type="text/javascript">
+
+var minutes = 1000 * 60
+var hours = minutes * 60
+var days = hours * 24
+var years = days * 365
+var t = Date.parse("Jul 8, 2005")
+var y = t/years
+document.write("It's been: " + y + " years from 1970/01/01")
+document.write(" to 2005/07/08!")
+
+</script>
+</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_parse')" >parse()</a></dt>
+<dd>使用 parse() 来输出从 1970/01/01 到一个具体日期的毫秒数。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

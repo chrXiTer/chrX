@@ -1,0 +1,5245 @@
+﻿<script>
+var f = function(){
+	var href = location.href;
+	var index = href.indexOf("#")
+	if(index == -1) return;
+	var varg = href.substring(index + 1)
+	var strid = "tiyiframe_" + varg
+	var iframeSource = document.getElementById(strid)
+	var iframeTarget = document.getElementById("tiyiframe_iframe")
+	var textareaE = document.getElementById('tiyiframe_textarea')
+	if(!iframeSource){
+		textareaE.innerText("示例代码不存在")
+		return
+	}
+
+	var htmlStr = iframeSource.textContent;
+	var newDoc=iframeTarget.contentDocument.open("text/html","replace");
+	newDoc.write(htmlStr)
+	newDoc.close()
+
+	textareaE.innerText = htmlStr
+
+	var buttonE = document.getElementById("tiyiframe_button")
+	buttonE.onclick = function(){
+			var textareaE = document.getElementById('tiyiframe_textarea')
+			var eIframe = document.getElementById('tiyiframe_iframe')
+			var newDoc=eIframe.contentDocument.open("text/html","replace")
+			newDoc.write(textareaE.value)
+			newDoc.close()
+	}
+}
+window.onload = f;
+window.onresize = f;
+
+</script>
+
+<div style="width:100%; height:13px; background-color:yellow">实验<span style="float:right; background-color:red">X</span></div>
+<iframe id="tiyiframe_iframe" style="width:100%;height:40%;background-color:#ffffff">
+</iframe>
+<p style="height:8%;margin:0px; padding:0px">编辑代码：
+    <input id="tiyiframe_button" type="button" value="查看效果" style="float:right; margin-right:20px"></input>
+</p>
+<textarea id="tiyiframe_textarea" style="width:90%; height:35%;"></textarea>
+</br>
+
+
+<div style="visibility:hidden;display:none">
+<iframe id="tiyiframe_html5_a" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<a href="javascript:if" >Visit h5.com.cn!</a>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_abbr" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+The <abbr title="People's Republic of China">PRC</abbr> was founded in 1949.
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_address" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<address>
+Written by W3School.com.cn<br />
+<a href="mailto:us@example.org">Email us</a><br />
+Address: Box 564, Disneyland<br />
+Phone: +12 34 56 78
+</address>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_area" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<p>请点击图像上的星球，把它们放大。</p>
+
+<img src="../i/eg_planets.jpg" usemap="#planetmap" alt="Planets" />
+
+<map name="planetmap" id="planetmap">
+<area shape="rect" coords="0,0,110,260" href ="../example/html/sun.html" alt="Sun" />
+<area shape="circle" coords="129,161,10" href ="../example/html/mercur.html" alt="Mercury" />
+<area shape="circle" coords="180,139,14" href ="../example/html/venus.html" alt="Venus" />
+</map>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_article" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<article>
+<a href="javascript:if">Safari 5 released</a><br />
+7 Jun 2010. Just after the announcement of the new iPhone 4 at WWDC,
+Apple announced the release of Safari 5 for Windows and Mac......
+</article>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_aside" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<p>Me and my family visited The Epcot center this summer.</p>
+<aside>
+<h4>Epcot Center</h4>
+The Epcot Center is a theme park in Disney World, Florida.
+</aside>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_audio" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<audio src="../i/horse.ogg" controls="controls">
+Your browser does not support the audio element.
+</audio>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_audio_all" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<audio controls="controls">
+  <source src="../i/song.ogg.htm" type="audio/ogg">
+  <source src="../i/song.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_audio_simple" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<audio src="../i/song.ogg.htm" controls="controls">
+Your browser does not support the audio element.
+</audio>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_event_canplay" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+myVid.oncanplay=alert("Can start playing video");
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_event_canplaythrough" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+myVid.oncanplaythrough=alert("Can play through video without stopping");
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_event_canplaythrough_addeventlistener" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+myVid.addEventListener("canplaythrough", function()
+  {
+  alert("Can play through video without stopping");
+  }
+);
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_event_canplaythrough_html" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="video1" controls="controls" oncanplaythrough="alert('Can play through video without stopping')">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_event_canplay_addeventlistener" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="video1" controls="controls">
+  <source src="../example/html5/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+myVid.addEventListener("canplay", function()
+  {
+  alert("Can start playing video");
+  }
+);
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_event_canplay_html" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="video1" controls="controls" oncanplay="alert('Can start playing video')">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_event_durationchange" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+myVid.ondurationchange=alert("The video duration has changed");
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_event_durationchange_addeventlistener" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+myVid.addEventListener("durationchange", function()
+  {
+  alert("The video duration has changed");
+  }
+);
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_event_durationchange_html" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="video1" controls="controls" ondurationchange="alert('The video duration has changed')">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_event_loadeddata" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+myVid.onloadeddata=alert("Browser has loaded the current frame");
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_event_loadeddata_addeventlistener" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+myVid.addEventListener("loadeddata", function()
+  {
+  alert("Browser has loaded the current frame");
+  }
+);
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_event_loadeddata_html" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="video1" controls="controls" onloadeddata="alert('Browser has loaded the current frame')">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_event_loadedmetadata" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+myVid.onloadedmetadata=alert("Meta data for video loaded");
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_event_loadedmetadata_addeventlistener" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+myVid.addEventListener("loadedmetadata", function()
+  {
+  alert("Meta data for video loaded");
+  }
+);
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_event_loadedmetadata_html" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="video1" controls="controls" onloadedmetadata="alert('Meta data for video loaded')">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_event_loadstart" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+myVid.onloadstart=alert("Starting to load video");
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_event_loadstart_addeventlistener" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+myVid.addEventListener("loadstart", function()
+  {
+  alert("Starting to load video");
+  }
+);
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_event_loadstart_html" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="video1" controls="controls" onloadstart="alert('Starting to load video')">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_event_progress" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+myVid.onprogress=alert("Downloading video");
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_event_progress_addeventlistener" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+myVid.addEventListener("progress", function()
+  {
+  alert("Downloading video");
+  }
+);
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_event_progress_html" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id="video1" controls="controls" onprogress="alert('Downloading video')">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_met_addtexttrack" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="addNewTextTrack()" type="button">添加一个新的文本轨道</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function addNewTextTrack()
+  {
+  text1=myVid.addTextTrack("caption");
+  text1.addCue(new TextTrackCue("Test text", 01.000, 04.000,"","","",true));
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_met_canplaytype" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>我的浏览器能够播放 MP4 视频吗？<span>
+<button onclick="supportType(event,'video/mp4','avc1.42E01E, mp4a.40.2')" type="button">测试</button>
+</span></p>
+
+<p>我的浏览器能够播放 OGG 视频吗？<span>
+<button onclick="supportType(event,'video/ogg','theora, vorbis')" type="button">测试</button>
+</span></p>
+
+<script>
+function supportType(e,vidType,codType)
+  {
+  myVid=document.createElement('video');
+  isSupp=myVid.canPlayType(vidType+';codecs="'+codType+'"');
+  if (isSupp=="")
+    {
+    isSupp="No";
+    }
+  e.target.parentNode.innerHTML="Answer: " + isSupp;
+  }
+</script>
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_met_load" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="changeSource()" type="button">更改视频</button>
+<br />
+<br />
+<video id="video1" controls="controls" autoplay="autoplay">
+  <source id="mp4_src" src="../i/mov_bbb.mp4" type="video/mp4">
+  <source id="ogg_src" src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+function changeSource()
+  {
+  document.getElementById("mp4_src").src="movie.mp4";
+  document.getElementById("ogg_src").src="movie.ogg";
+  document.getElementById("video1").load();
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_met_play_pause" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="playVid()" type="button">播放视频</button>
+<button onclick="pauseVid()" type="button">暂停视频</button>
+<br />
+<br />
+<video id="video1">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+var myVideo=document.getElementById("video1");
+
+function playVid()
+  {
+  myVideo.play();
+  }
+
+function pauseVid()
+  {
+  myVideo.pause();
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_audiotracks" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="getAudioTracks()" type="button">获得可用音轨的数量</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getAudioTracks()
+  {
+  alert(myVid.audioTracks.length);
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_autoplay" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="enableAutoplay()" type="button">启用自动播放</button>
+<button onclick="disableAutoplay()" type="button">禁用自动播放</button>
+<button onclick="checkAutoplay()" type="button">检查自动播放状态</button>
+<br>
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function enableAutoplay()
+  {
+  myVid.autoplay=true;
+  myVid.load();
+  }
+function disableAutoplay()
+  {
+  myVid.autoplay=false;
+  myVid.load();
+  }
+function checkAutoplay()
+  {
+  alert(myVid.autoplay);
+  }
+</script>
+
+<p>Video courtesy of <a href="javascript:if" target="_blank">Big Buck Bunny</a>.</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_buffered" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="getFirstBuffRange()" type="button">获得首个已缓冲范围</button>
+<br>
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getFirstBuffRange()
+  {
+  alert("Start: " + myVid.buffered.start(0) + " End: "  + myVid.buffered.end(0));
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_controller" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="checkMedCont()" type="button">检查视频是否拥有媒体控制器</button>
+<br>
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../example/html5/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function checkMedCont()
+  {
+  alert("Controller: " + myVid.controller);
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_controls" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="enableControls()" type="button">启动控件</button>
+<button onclick="disableControls()" type="button">禁用控件</button>
+<button onclick="checkControls()" type="button">检查控件的状态</button>
+<br/>
+<video id="video1">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+var myVid=document.getElementById("video1");
+function enableControls()
+  {
+  myVid.controls=true;
+  myVid.load();
+  }
+function disableControls()
+  {
+  myVid.controls=false;
+  myVid.load();
+  }
+function checkControls()
+  {
+  alert(myVid.controls);
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_currentsrc" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="getVid()" type="button">获得当前视频的 URL</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getVid()
+  {
+  alert(myVid.currentSrc);
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_currenttime" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="getCurTime()" type="button">获得当前时间的位置</button>
+<button onclick="setCurTime()" type="button">把时间位置设置为 5 秒</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getCurTime()
+  {
+  alert(myVid.currentTime);
+  }
+function setCurTime()
+  {
+  myVid.currentTime=5;
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_defaultmuted" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="getMuted()" type="button">该视频默认是静音的吗？</button>
+<button onclick="setToMuted()" type="button">把视频设置为默认静音，并重载视频</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getMuted()
+  {
+  alert(myVid.defaultMuted);
+  }
+function setToMuted()
+  {
+  myVid.defaultMuted=true;
+  myVid.load()
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_defaultplaybackrate" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="getPlaySpeed()" type="button">默认的播放速度是多少？</button>
+<button onclick="setPlaySpeed()" type="button">把视频设置为慢速播放</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getPlaySpeed()
+  {
+  alert(myVid.defaultPlaybackRate);
+  }
+function setPlaySpeed()
+  {
+  myVid.defaultPlaybackRate=0.5;
+  myVid.load();
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_duration" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="getVidDur()" type="button">获得视频的长度</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getVidDur()
+  {
+  alert(myVid.duration);
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_ended" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="hasVidEnded()" type="button">该视频播放是否已结束？</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function hasVidEnded()
+  {
+  alert(myVid.ended);
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_error" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="getError()" type="button">获得错误状态</button>
+<br />
+<br />
+<video id="video1" controls="controls" autoplay="autoplay">
+  <source src="../example/html5/mov_broken.mp4.htm" type="video/mp4">
+  <source src="../example/html5/mov_broken.ogg.htm" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getError()
+  {
+  alert(myVid.error.code);
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_loop" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="enableLoop()" type="button">启用循环</button>
+<button onclick="disableLoop()" type="button">禁用循环</button>
+<button onclick="checkLoop()" type="button">检查循环的状态</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function enableLoop()
+  {
+  myVid.loop=true;
+  myVid.load();
+  }
+function disableLoop()
+  {
+  myVid.loop=false;
+  myVid.load();
+  }
+function checkLoop()
+  {
+  alert(myVid.loop);
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_mediagroup" >
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="getMedGroup()" type="button">获得视频的媒体组合</button>
+<button onclick="setMedGroup()" type="button">设置视频的媒体组合</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+<video id="video2" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid1=document.getElementById("video1");
+myVid2=document.getElementById("video2");
+function getMedGroup()
+  {
+  alert("Video 1 media group: " + myVid1.mediaGroup +
+ ". Video 2 media group: " + myVid2.mediaGroup);
+  }
+function setMedGroup()
+  {
+  myVid1.mediaGroup="test";
+  myVid2.mediaGroup="test";
+  }
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_muted" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="enableMute()" type="button">关闭声音</button>
+<button onclick="disableMute()" type="button">打开声音</button>
+<button onclick="checkMute()" type="button">检查静音状态</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function enableMute()
+  {
+  myVid.muted=true;
+  }
+function disableMute()
+  {
+  myVid.muted=false;
+  }
+function checkMute()
+  {
+  alert(myVid.muted);
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_networkstate" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="getNWState()" type="button">获得网络状态</button>
+<br />
+<br />
+<video id="video1" controls="controls" autoplay="autoplay">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getNWState()
+  {
+  alert(myVid.networkState);
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_paused" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="isVidPaused()" type="button">该视频是否已暂停</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function isVidPaused()
+  {
+  alert(myVid.paused);
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_playbackrate" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="getPlaySpeed()" type="button">播放速度是多少？</button>
+<button onclick="setPlaySpeed()" type="button">将视频设置为以慢速播放</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getPlaySpeed()
+  {
+  alert(myVid.playbackRate);
+  }
+function setPlaySpeed()
+  {
+  myVid.playbackRate=0.5;
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_played" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="getFirstPlayedRange()" type="button">获得首段已播范围</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getFirstPlayedRange()
+  {
+  alert("Start: " + myVid.played.start(0) + " End: "  + myVid.played.end(0));
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_preload" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="enablePreload()" type="button">启用预加载</button>
+<button onclick="disablePreload()" type="button">禁用预加载</button>
+<button onclick="checkPreload()" type="button">检查预加载状态</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function enablePreload()
+  {
+  myVid.preload="auto";
+  }
+function disablePreload()
+  {
+  myVid.preload="none";
+  }
+function checkPreload()
+  {
+  alert(myVid.preload);
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_readystate" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="getReadyState()" type="button">获得就绪状态</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getReadyState()
+  {
+  alert(myVid.readyState);
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_seekable" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="getFirstSeekableRange()" type="button">获得首个可寻址范围</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getFirstSeekableRange()
+  {
+  alert("Start: " + myVid.seekable.start(0) + " End: "  + myVid.seekable.end(0));
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_seeking" >
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function isSeeking()
+  {
+  myVid=document.getElementById("video1");
+  document.getElementById("span1").innerHTML=("Seeking: " + myVid.seeking);
+  }
+</script>
+</head>
+<body>
+<video id="video1" controls="controls" onseeking="isSeeking()" onseeked="isSeeking()">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+<p>试着在视频中寻址：<span id="span1"></span></p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_src" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="changeSource()" type="button">改变视频</button>
+<br />
+<br />
+<video id="video1" controls="controls" autoplay="autoplay">
+  <source id="mp4_src" src="../i/mov_bbb.mp4" type="video/mp4">
+  <source id="ogg_src" src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function changeSource()
+  {
+  isSupp=myVid.canPlayType("video/mp4");
+  if (isSupp=="")
+    {
+    myVid.src="movie.ogg"/*tpa=http://w3school.com.cn/tiy/movie.ogg*/;
+    }
+  else
+    {
+    myVid.src="movie.mp4"/*tpa=http://w3school.com.cn/tiy/movie.mp4*/;
+    }
+  myVid.load();
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_startdate" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="getTimeOffset()" type="button">获得时间线偏移</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getTimeOffset()
+  {
+  alert(myVid.startDate);
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_texttracks" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="getTextTracks()" type="button">获得可用文本轨道的数量</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4" />
+  <source src="../i/mov_bbb.ogg" type="video/ogg" />
+  <track src="demo_sub.vtt.htm" >
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getTextTracks()
+  {
+  alert(myVid.textTracks.length);
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_videotracks" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="getVideoTracks()" type="button">获得可用视频轨道的数量</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getVideoTracks()
+  {
+  alert(myVid.videoTracks.length);
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_av_prop_volume" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="getVolume()" type="button">音量是多少？</button>
+<button onclick="setHalfVolume()" type="button">把音量设置为 0.2</button>
+<button onclick="setFullVolume()" type="button">把音量设置为 1.0</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+  <source src="../i/mov_bbb.mp4" type="video/mp4">
+  <source src="../i/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+myVid=document.getElementById("video1");
+function getVolume()
+  {
+  alert(myVid.volume);
+  }
+function setHalfVolume()
+  {
+  myVid.volume=0.2;
+  }
+function setFullVolume()
+  {
+  myVid.volume=1.0;
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_b" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<p>It was a <b>red</b> house with a <b>blue</b> door.</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_base" >
+<!DOCTYPE HTML>
+<html>
+<head>
+<xbasehref="/chrX/nofile/123css/" target="_blank" />
+</head>
+
+<body>
+
+<a href="javascript:if" > CSS Tutorial</a>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_bdi" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<ul>
+<li>Username <bdi>Bill</bdi>:80 points</li>
+<li>Username <bdi>Steve</bdi>: 78 points</li>
+</ul>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_bdo" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<bdo dir="rtl">
+Here is some Hebrew text that should be written from right-to-left.
+</bdo>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_blockquote" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<p>Here is a quote from WWF's website:
+<blockquote cite="http://www.wwf.org">
+WWF's ultimate goal is to build a future where people live in harmony with nature.
+</blockquote>
+We hope that they succeed.
+</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_body" >
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Title of the document</title>
+</head>
+
+<body>
+The content of the document......
+</body>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_br" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+This text contains<br />a line break.
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_button" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<button type="button">点击这里</button>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<canvas id="myCanvas">your browser does not support the canvas tag </canvas>
+
+<script type="text/javascript">
+
+var canvas=document.getElementById('myCanvas');
+var ctx=canvas.getContext('2d');
+ctx.fillStyle='#FF0000';
+ctx.fillRect(0,0,80,100);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_addcolorstop_multiple" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+var grd=ctx.createLinearGradient(0,0,170,0);
+grd.addColorStop(0,"black");
+grd.addColorStop("0.3","magenta");
+grd.addColorStop("0.5","blue");
+grd.addColorStop("0.6","green");
+grd.addColorStop("0.8","yellow");
+grd.addColorStop(1,"red");
+
+ctx.fillStyle=grd;
+ctx.fillRect(20,20,150,100);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_arc" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.arc(100,75,50,0,2*Math.PI);
+ctx.stroke();
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_arcto" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(20,20);             // 创建开始点
+ctx.lineTo(100,20);            // 创建水平线
+ctx.arcTo(150,20,150,70,50);   // 创建弧
+ctx.lineTo(150,120);           // 创建垂直线
+ctx.stroke();                  // 进行绘制
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_beginpath" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+ctx.beginPath();
+ctx.lineWidth="5";
+ctx.strokeStyle="red";  // 绿色路径
+ctx.moveTo(0,75);
+ctx.lineTo(250,75);
+ctx.stroke();  // 进行绘制
+
+ctx.beginPath();
+ctx.strokeStyle="blue";  // 紫色路径
+ctx.moveTo(50,0);
+ctx.lineTo(150,130);
+ctx.stroke();  // 进行绘制
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_beziercurveto" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(20,20);
+ctx.bezierCurveTo(20,100,200,100,200,20);
+ctx.stroke();
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_circle" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+Your browser does not support the canvas element.
+</canvas>
+
+<script type="text/javascript">
+
+var c=document.getElementById("myCanvas");
+var cxt=c.getContext("2d");
+cxt.fillStyle="#FF0000";
+cxt.beginPath();
+cxt.arc(70,18,15,0,Math.PI*2,true);
+cxt.closePath();
+cxt.fill();
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_clearrect" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.fillStyle="red";
+ctx.fillRect(0,0,300,150);
+ctx.clearRect(20,20,100,50);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_clip" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>不使用 clip()：</p>
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+// Draw a rectangle
+ctx.rect(50,20,200,120);
+ctx.stroke();
+// Draw red rectangle
+ctx.fillStyle="green";
+ctx.fillRect(0,0,150,100);
+</script>
+
+<br />
+
+<p>使用 clip()：</p>
+<canvas id="myCanvas2" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+var c=document.getElementById("myCanvas2");
+var ctx=c.getContext("2d");
+// Clip a rectangular area
+ctx.rect(50,20,200,120);
+ctx.stroke();
+ctx.clip();
+// Draw red rectangle after clip()
+ctx.fillStyle="green";
+ctx.fillRect(0,0,150,100);
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_closepath" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(20,20);
+ctx.lineTo(20,100);
+ctx.lineTo(70,100);
+ctx.closePath();
+ctx.stroke();
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_closepath2" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(20,20);
+ctx.lineTo(20,100);
+ctx.lineTo(70,100);
+ctx.closePath();
+ctx.stroke();
+ctx.fillStyle="green";
+ctx.fill();
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_coordinates" >
+<!DOCTYPE HTML>
+<html>
+<head>
+<style type="text/css">
+body
+{
+font-size:70%;
+font-family:verdana,helvetica,arial,sans-serif;
+}
+</style>
+
+<script type="text/javascript">
+function cnvs_getCoordinates(e)
+{
+x=e.clientX;
+y=e.clientY;
+document.getElementById("xycoordinates").innerHTML="Coordinates: (" + x + "," + y + ")";
+}
+
+function cnvs_clearCoordinates()
+{
+document.getElementById("xycoordinates").innerHTML="";
+}
+</script>
+</head>
+
+<body style="margin:0px;">
+
+<p>把鼠标悬停在下面的矩形上可以看到坐标：</p>
+
+<div id="coordiv" style="float:left;width:199px;height:99px;border:1px solid #c3c3c3" onmousemove="cnvs_getCoordinates(event)" onmouseout="cnvs_clearCoordinates()"></div>
+<br />
+<br />
+<br />
+<div id="xycoordinates"></div>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_createimagedata" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var imgData=ctx.createImageData(100,100);
+for (var i=0;i<imgData.data.length;i+=4)
+  {
+  imgData.data[i+0]=0;
+  imgData.data[i+1]=255;
+  imgData.data[i+2]=0;
+  imgData.data[i+3]=255;
+  }
+ctx.putImageData(imgData,10,10);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_createlineargradient" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+var grd=ctx.createLinearGradient(0,0,170,0);
+grd.addColorStop(0,"black");
+grd.addColorStop(1,"white");
+
+ctx.fillStyle=grd;
+ctx.fillRect(20,20,150,100);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_createpattern" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>要用到的图片：</p>
+<img src="../i/lamp.gif" id="lamp" />
+<p>Canvas:</p>
+
+<button onclick="draw('repeat')">Repeat</button>
+<button onclick="draw('repeat-x')">Repeat-x</button>
+<button onclick="draw('repeat-y')">Repeat-y</button>
+<button onclick="draw('no-repeat')">No-repeat</button>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script type="text/javascript">
+function draw(direction)
+{
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.clearRect(0,0,c.width,c.height);
+var img=document.getElementById("lamp")
+var pat=ctx.createPattern(img,direction);
+ctx.rect(0,0,150,100);
+ctx.fillStyle=pat;
+ctx.fill();
+}
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_createradialgradient" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var grd=ctx.createRadialGradient(75,50,5,90,60,100);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"white");
+ctx.fillStyle=grd;
+ctx.fillRect(10,10,150,100);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_drawimage" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>要使用的图像：</p>
+<img id="tulip" src="../i/eg_tulip.jpg" alt="The Tulip" />
+
+<p>画布：</p>
+<canvas id="myCanvas" width="500" height="300" style="border:1px solid #d3d3d3;background:#ffffff;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var img=document.getElementById("tulip");
+ctx.drawImage(img,10,10);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_drawimage3" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>要使用的图片：</p>
+
+<img src="../i/eg_tulip.jpg" alt="tulip" id="tulip" style="margin-left:0px;" />
+
+<p>Canvas:</p>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+document.getElementById("tulip").onload=function(){
+  var c=document.getElementById("myCanvas");
+  var ctx=c.getContext("2d");
+  var img=document.getElementById("tulip");
+  ctx.drawImage(img,90,130,90,80,20,20,90,80);
+};
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_drawimage_video" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>要使用的视频：</p>
+
+<video id="video1" controls width="270" autoplay>
+  <source src="../i/mov_bbb.mp4" type='video/mp4'>
+  <source src="../i/mov_bbb.ogg" type='video/ogg'>
+  <source src="../example/html5/mov_bbb.webm.htm" type='video/webm'>
+</video>
+
+<p>画布（每 20 毫秒，代码就会绘制视频的当前帧）：</p>
+
+<canvas id="myCanvas" width="270" height="135" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var v=document.getElementById("video1");
+var c=document.getElementById("myCanvas");
+ctx=c.getContext('2d');
+
+v.addEventListener('play', function() {var i=window.setInterval(function() {ctx.drawImage(v,0,0,270,135)},20);},false);
+v.addEventListener('pause',function() {window.clearInterval(i);},false);
+v.addEventListener('ended',function() {clearInterval(i);},false);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_fill" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.rect(20,20,150,100);
+ctx.fillStyle="green";
+ctx.fill();
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_fillrect" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.fillRect(20,20,150,100);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_fillstyle" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script type="text/javascript">
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.fillStyle="#0000ff";
+ctx.fillRect(20,20,150,100);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_fillstyle_gradient" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script type="text/javascript">
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var my_gradient=ctx.createLinearGradient(0,0,0,170);
+my_gradient.addColorStop(0,"black");
+my_gradient.addColorStop(1,"white");
+ctx.fillStyle=my_gradient;
+ctx.fillRect(20,20,150,100);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_fillstyle_gradient2" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script type="text/javascript">
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var my_gradient=ctx.createLinearGradient(0,0,170,0);
+my_gradient.addColorStop(0,"black");
+my_gradient.addColorStop(1,"white");
+ctx.fillStyle=my_gradient;
+ctx.fillRect(20,20,150,100);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_fillstyle_gradient3" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script type="text/javascript">
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var grd=ctx.createLinearGradient(0,0,170,0);
+grd.addColorStop(0,"black");
+grd.addColorStop(0.5,"red");
+grd.addColorStop(1,"white");
+ctx.fillStyle=grd;
+ctx.fillRect(20,20,150,100);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_filltext" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+ctx.font="20px Georgia";
+ctx.fillText("Hello World!",10,50);
+
+ctx.font="30px Verdana";
+// Create gradient
+var gradient=ctx.createLinearGradient(0,0,c.width,0);
+gradient.addColorStop("0","magenta");
+gradient.addColorStop("0.5","blue");
+gradient.addColorStop("1.0","red");
+// Fill with gradient
+ctx.fillStyle=gradient;
+ctx.fillText("w3school.com.cn",10,90);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_font" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.font="40px Arial";
+ctx.fillText("Hello World",10,50);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_getimagedata" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.fillStyle="green";
+ctx.fillRect(10,10,50,50);
+
+function copy()
+{
+var imgData=ctx.getImageData(10,10,50,50);
+ctx.putImageData(imgData,10,70);
+}
+</script>
+
+<button onclick="copy()">复制</button>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_getimagedata_firstpx" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.fillStyle="green";
+ctx.fillRect(10,10,50,50);
+
+var imgData=ctx.getImageData(30,30,50,50);
+red=imgData.data[0];
+green=imgData.data[1];
+blue=imgData.data[2];
+alpha=imgData.data[3];
+alert(red + " " + green + " " + blue + " " + alpha);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_globalalpha" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.fillStyle="red";
+ctx.fillRect(20,20,75,50);
+
+//Turn transparency on
+ctx.globalAlpha=0.2;
+ctx.fillStyle="green";
+ctx.fillRect(50,50,75,50);
+ctx.fillStyle="blue";
+ctx.fillRect(80,80,75,50);
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_globalcompop" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.fillStyle="red";
+ctx.fillRect(20,20,75,50);
+ctx.fillStyle="blue";
+ctx.globalCompositeOperation="source-over";
+ctx.fillRect(50,50,75,50);
+ctx.fillStyle="red";
+ctx.fillRect(150,20,75,50);
+ctx.fillStyle="blue";
+ctx.globalCompositeOperation="destination-over";
+ctx.fillRect(180,50,75,50);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_globalcompop_all" >
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+canvas
+{
+border:1px solid #d3d3d3;
+margin-right:10px;
+margin-bottom:20px;
+}
+</style>
+</head>
+<body>
+
+<script>
+
+var gco=new Array();
+gco.push("source-atop");
+gco.push("source-in");
+gco.push("source-out");
+gco.push("source-over");
+gco.push("destination-atop");
+gco.push("destination-in");
+gco.push("destination-out");
+gco.push("destination-over");
+gco.push("lighter");
+gco.push("copy");
+gco.push("xor");
+for (n=0;n<gco.length;n++)
+	{
+	document.write("<div id='p_" + n + "' style='float:left;'>" + gco[n] + ":<br>");
+	var c=document.createElement("canvas");
+	c.width=120;
+	c.height=100;
+	document.getElementById("p_" + n).appendChild(c);
+	var ctx=c.getContext("2d");
+	ctx.fillStyle="blue";
+	ctx.fillRect(10,10,50,50);
+	ctx.globalCompositeOperation=gco[n];
+	ctx.beginPath();
+	ctx.fillStyle="red";
+	ctx.arc(50,50,30,0,2*Math.PI);
+	ctx.fill();
+	document.write("</div>");
+	}
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_gradient" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+Your browser does not support the canvas element.
+</canvas>
+
+<script type="text/javascript">
+
+var c=document.getElementById("myCanvas");
+var cxt=c.getContext("2d");
+var grd=cxt.createLinearGradient(0,0,175,50);
+grd.addColorStop(0,"#FF0000");
+grd.addColorStop(1,"#00FF00");
+cxt.fillStyle=grd;
+cxt.fillRect(0,0,175,50);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_image" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+Your browser does not support the canvas element.
+</canvas>
+
+<script type="text/javascript">
+
+var c=document.getElementById("myCanvas");
+var cxt=c.getContext("2d");
+var img=new Image()
+img.src="../i/eg_flower.png"
+cxt.drawImage(img,0,0);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_imagedata_height" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var imgData=ctx.createImageData(100,100);
+alert("Height of imgData is: " + imgData.height);
+for (var i=0;i<imgData.data.length;i+=4)
+  {
+  imgData.data[i+0]=255;
+  imgData.data[i+1]=0;
+  imgData.data[i+2]=0;
+  imgData.data[i+3]=255;
+  }
+ctx.putImageData(imgData,10,10);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_imagedata_width" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var imgData=ctx.createImageData(100,100);
+alert("Width of imgData is: " + imgData.width);
+for (var i=0;i<imgData.data.length;i+=4)
+  {
+  imgData.data[i+0]=255;
+  imgData.data[i+1]=0;
+  imgData.data[i+2]=0;
+  imgData.data[i+3]=255;
+  }
+ctx.putImageData(imgData,10,10);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_ispointinpath" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.rect(20,20,150,100);
+if (ctx.isPointInPath(20,50))
+	{
+	ctx.stroke();
+	};
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_line" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+Your browser does not support the canvas element.
+</canvas>
+
+<script type="text/javascript">
+
+var c=document.getElementById("myCanvas");
+var cxt=c.getContext("2d");
+cxt.moveTo(10,10);
+cxt.lineTo(150,50);
+cxt.lineTo(10,50);
+cxt.stroke();
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_linecap" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>三种不同的线帽：</p>
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+ctx.beginPath();
+ctx.lineWidth=10;
+ctx.lineCap="butt";
+ctx.moveTo(20,20);
+ctx.lineTo(200,20);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.lineCap="round";
+ctx.moveTo(20,40);
+ctx.lineTo(200,40);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.lineCap="square";
+ctx.moveTo(20,60);
+ctx.lineTo(200,60);
+ctx.stroke();
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_linejoin" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.lineWidth=10;
+ctx.lineJoin="round";
+ctx.moveTo(20,20);
+ctx.lineTo(100,50);
+ctx.lineTo(20,100);
+ctx.stroke();
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_lineto" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(0,0);
+ctx.lineTo(300,150);
+ctx.stroke();
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_lineto2" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(20,20);
+ctx.lineTo(20,100);
+ctx.lineTo(70,100);
+ctx.stroke();
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_linewidth" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.lineWidth=10;
+ctx.strokeRect(20,20,80,100);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_measuretext" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.font="30px Arial";
+var txt="Hello World"
+ctx.fillText("width:" + ctx.measureText(txt).width,10,50);
+ctx.fillText(txt,10,100);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_miterlimit" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<p>请试着把 miterLimit 设置为 4。如果斜接长度超过 miterLimit 的值，边角会以 lineJoin 的 "bevel" 类型来显示。</p>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.lineWidth=10;
+ctx.lineJoin="miter";
+ctx.miterLimit=5;
+ctx.moveTo(20,20);
+ctx.lineTo(50,27);
+ctx.lineTo(20,34);
+ctx.stroke();
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_moveto" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(0,0);
+ctx.lineTo(300,150);
+ctx.stroke();
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_quadraticcurveto" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(20,20);
+ctx.quadraticCurveTo(20,100,200,20);
+ctx.stroke();
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_rect" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.rect(20,20,150,100);
+ctx.stroke();
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_rect2" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+// 红色矩形
+ctx.beginPath();
+ctx.lineWidth="6";
+ctx.strokeStyle="red";
+ctx.rect(5,5,290,140);
+ctx.stroke();
+
+// 绿色矩形
+ctx.beginPath();
+ctx.lineWidth="4";
+ctx.strokeStyle="green";
+ctx.rect(30,30,50,50);
+ctx.stroke();
+
+// 蓝色矩形
+ctx.beginPath();
+ctx.lineWidth="10";
+ctx.strokeStyle="blue";
+ctx.rect(50,50,150,80);
+ctx.stroke();
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_rotate" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.rotate(20*Math.PI/180);
+ctx.fillRect(50,20,100,50);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_scale" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+ctx.strokeRect(5,5,25,15);
+ctx.scale(2,2);
+ctx.strokeRect(5,5,25,15);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_scale2" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="170" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.strokeRect(5,5,25,15);
+ctx.scale(2,2);
+ctx.strokeRect(5,5,25,15);
+ctx.scale(2,2);
+ctx.strokeRect(5,5,25,15);
+ctx.scale(2,2);
+ctx.strokeRect(5,5,25,15);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_setTransform" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+ctx.fillStyle="yellow";
+ctx.fillRect(0,0,250,100)
+
+ctx.setTransform(1,0.5,-0.5,1,30,10);
+ctx.fillStyle="red";
+ctx.fillRect(0,0,250,100);
+
+ctx.setTransform(1,0.5,-0.5,1,30,10);
+ctx.fillStyle="blue";
+ctx.fillRect(0,0,250,100);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_shadowblur" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script type="text/javascript">
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.shadowBlur=20;
+ctx.shadowColor="black";
+ctx.fillStyle="blue";
+ctx.fillRect(20,20,100,80);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_shadowcolor" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script type="text/javascript">
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.shadowBlur=20;
+ctx.fillStyle="blue";
+
+ctx.shadowColor="black";
+ctx.fillRect(20,20,100,80);
+
+ctx.shadowColor="red";
+ctx.fillRect(140,20,100,80);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_shadowoffsetx" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script type="text/javascript">
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.shadowBlur=10;
+ctx.shadowOffsetX=20;
+ctx.shadowColor="black";
+ctx.fillStyle="blue";
+ctx.fillRect(20,20,100,80);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_shadowoffsety" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script type="text/javascript">
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.shadowBlur=10;
+ctx.shadowOffsetY=20;
+ctx.shadowColor="black";
+ctx.fillStyle="blue";
+ctx.fillRect(20,20,100,80);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_stroke" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(20,20);
+ctx.lineTo(20,100);
+ctx.lineTo(70,100);
+ctx.strokeStyle="green";
+ctx.stroke();
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_strokerect" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.strokeRect(20,20,150,100);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_strokestyle" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script type="text/javascript">
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.strokeStyle="#0000ff";
+ctx.strokeRect(20,20,150,100);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_strokestyle2" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script type="text/javascript">
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+var gradient=ctx.createLinearGradient(0,0,170,0);
+gradient.addColorStop("0","magenta");
+gradient.addColorStop("0.5","blue");
+gradient.addColorStop("1.0","red");
+
+// Fill with gradient
+ctx.strokeStyle=gradient;
+ctx.lineWidth=5;
+ctx.strokeRect(20,20,150,100);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_strokestyle3" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script type="text/javascript">
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+ctx.font="30px Verdana";
+// Create gradient
+var gradient=ctx.createLinearGradient(0,0,c.width,0);
+gradient.addColorStop("0","magenta");
+gradient.addColorStop("0.5","blue");
+gradient.addColorStop("1.0","red");
+// Fill with gradient
+ctx.strokeStyle=gradient;
+ctx.strokeText("w3school.com.cn",10,50);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_stroketext" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+ctx.font="20px Georgia";
+ctx.strokeText("Hello World!",10,50);
+
+ctx.font="30px Verdana";
+// Create gradient
+var gradient=ctx.createLinearGradient(0,0,c.width,0);
+gradient.addColorStop("0","magenta");
+gradient.addColorStop("0.5","blue");
+gradient.addColorStop("1.0","red");
+// Fill with gradient
+ctx.strokeStyle=gradient;
+ctx.strokeText("w3school.com.cn",10,90);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_textalign" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="200" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+// Create a red line in position 150
+ctx.strokeStyle="blue";
+ctx.moveTo(150,20);
+ctx.lineTo(150,170);
+ctx.stroke();
+
+ctx.font="15px Arial";
+
+// Show the different textAlign values
+ctx.textAlign="start";
+ctx.fillText("textAlign=start",150,60);
+ctx.textAlign="end";
+ctx.fillText("textAlign=end",150,80);
+ctx.textAlign="left";
+ctx.fillText("textAlign=left",150,100);
+ctx.textAlign="center";
+ctx.fillText("textAlign=center",150,120);
+ctx.textAlign="right";
+ctx.fillText("textAlign=right",150,140);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_textbaseline" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="400" height="200" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+//Draw a red line at y=100
+ctx.strokeStyle="blue";
+ctx.moveTo(5,100);
+ctx.lineTo(395,100);
+ctx.stroke();
+
+ctx.font="20px Arial"
+
+//Place each word at y=100 with different textBaseline values
+ctx.textBaseline="top";
+ctx.fillText("Top",5,100);
+ctx.textBaseline="bottom";
+ctx.fillText("Bottom",50,100);
+ctx.textBaseline="middle";
+ctx.fillText("Middle",120,100);
+ctx.textBaseline="alphabetic";
+ctx.fillText("Alphabetic",190,100);
+ctx.textBaseline="hanging";
+ctx.fillText("Hanging",290,100);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_transform" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+ctx.fillStyle="yellow";
+ctx.fillRect(0,0,250,100)
+
+ctx.transform(1,0.5,-0.5,1,30,10);
+ctx.fillStyle="red";
+ctx.fillRect(0,0,250,100);
+
+ctx.transform(1,0.5,-0.5,1,30,10);
+ctx.fillStyle="blue";
+ctx.fillRect(0,0,250,100);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_canvas_translate" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.fillRect(10,10,100,50);
+ctx.translate(70,70);
+ctx.fillRect(10,10,100,50);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_caption" >
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+table{border-collapse:collapse;}
+table, td, th{border:1px solid black;}
+</style>
+</head>
+<body>
+
+<table>
+  <caption>每月的存款</caption>
+  <tr>
+    <th>月份</th>
+    <th>存款</th>
+  </tr>
+  <tr>
+    <td>一月</td>
+    <td>1000 元</td>
+  </tr>
+  <tr>
+    <td>二月</td>
+    <td>1500 元</td>
+  </tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_cite" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<img src="../i/ct_fcsz.jpg" alt="富春山居图" />
+
+<p>
+<cite>《富春山居图》</cite>由黄公望始画于至正七年(1347)，于至正十年完成。
+</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_col" >
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+table{border-collapse:collapse;width:100%}
+table, td, th{border:1px solid black;}
+</style>
+</head>
+<body>
+
+<table>
+  <col span="2" style="background-color:red" />
+  <tr>
+    <th>ISBN</th>
+    <th>Title</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>3476896</td>
+    <td>My first HTML</td>
+    <td>$53</td>
+  </tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_command" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<menu>
+<command type="command">Click Me!</command>
+</menu>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_datalist" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<input list="cars" />
+<datalist id="cars">
+	<option value="BMW" />
+	<option value="Ford" />
+	<option value="Volvo" />
+</datalist>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_dd" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<dl>
+<dt>Coffee</dt>
+<dd>Black hot drink</dd>
+<dt>Milk</dt>
+<dd>White cold drink</dd>
+</dl>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_del" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<p>a dozen is <del>21</del> 12 pieces</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_details" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<details>
+<summary>Copyright 2011.</summary>
+<p>All pages and graphics on this web site are the property of W3School.</p>
+</details>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_div" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<div style="color:#00FF00">
+  <h3>This is a header</h3>
+  <p>This is a paragraph.</p>
+</div>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_dl" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<dl>
+<dt>Coffee</dt>
+<dd>Black hot drink</dd>
+<dt>Milk</dt>
+<dd>White cold drink</dd>
+</dl>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_doctype" >
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Title of the document</title>
+</head>
+
+<body>
+The content of the document......
+</body>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_draganddrop" >
+<!DOCTYPE HTML>
+<html>
+<head>
+<style type="text/css">
+#div1 {width:488px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+</style>
+<script type="text/javascript">
+function allowDrop(ev)
+{
+ev.preventDefault();
+}
+
+function drag(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<p>请把 W3School 的图片拖放到矩形中：</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br />
+<img id="drag1" src="../i/w3school_banner.gif" draggable="true" ondragstart="drag(event)" />
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_draganddrop2" >
+<!DOCTYPE HTML>
+<html>
+<head>
+<style type="text/css">
+#div1, #div2
+{float:left; width:100px; height:35px; margin:10px;padding:10px;border:1px solid #aaaaaa;}
+</style>
+<script type="text/javascript">
+function allowDrop(ev)
+{
+ev.preventDefault();
+}
+
+function drag(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="../i/w3school_logo_black.gif" draggable="true" ondragstart="drag(event)" id="drag1" />
+</div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_embed" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<embed src="../i/helloworld.swf" />
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_fieldset" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+  <fieldset>
+    <legend>Personalia:</legend>
+    Name: <input type="text" /><br />
+    Email: <input type="text" /><br />
+    Date of birth: <input type="text" />
+  </fieldset>
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_figcaption" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<p>上海卢浦大桥是当今世界第一钢结构拱桥，是世界上跨度最大的拱形桥。它也是世界上首座完全采用焊接工艺连接的大型拱桥（除合拢接口采用栓接外），现场焊接焊缝总长度达4万多米，接近上海市内环高架路的总长度。卢浦大桥像澳大利亚悉尼的海湾大桥一样具有旅游观光的功能。</p>
+
+<figure>
+  <figcaption>黄浦江上的的卢浦大桥</figcaption>
+  <img src="../i/shanghai_lupu_bridge.jpg" width="350" height="234" />
+</figure>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_figure" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<p>上海卢浦大桥是当今世界第一钢结构拱桥，是世界上跨度最大的拱形桥。它也是世界上首座完全采用焊接工艺连接的大型拱桥（除合拢接口采用栓接外），现场焊接焊缝总长度达4万多米，接近上海市内环高架路的总长度。卢浦大桥像澳大利亚悉尼的海湾大桥一样具有旅游观光的功能。</p>
+
+<figure>
+  <p>黄浦江上的的卢浦大桥</p>
+  <p>拍摄者：W3School 项目组，拍摄时间：2010 年 10 月</p>
+  <img src="../i/shanghai_lupu_bridge.jpg" width="350" height="234" />
+</figure>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_footer" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<footer>This document was written in 2010.</footer>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/html5/form_action.asp">
+First name: <input type="text" name="fname" value="Mickey" /><br />
+Last name:<input type="text" name="lname" value="Mouse" /><br />
+<input type="submit" value="Submit" />
+</form>
+
+<p>点击"提交"按钮，输入的数据会发送到服务器上名为 "form_action.asp" 的页面。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form_autocomplete" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/html5/demo_form.asp" method="get" autocomplete="on">
+First name:<input type="text" name="fname" /><br />
+Last name: <input type="text" name="lname" /><br />
+E-mail: <input type="email" name="email" autocomplete="off" /><br />
+<input type="submit" />
+</form>
+
+<p>请填写并提交此表单，然后重载页面，来查看自动完成功能是如何工作的。</p>
+<p>请注意，表单的自动完成功能是打开的，而 e-mail 域是关闭的。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form_autofocus" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get">
+User name: <input type="text" name="user_name" autofocus="autofocus" />
+<input type="submit" />
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form_datalist" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/html5/demo_form.asp" method="get">
+Webpage: <input type="url" list="url_list" name="link" />
+<datalist id="url_list">
+	<option label="Google" value="http://www.google.com" />
+	<option label="Microsoft" value="http://www.microsoft.com" />
+</datalist>
+<input type="submit" />
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form_date" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="http://w3school.com.cn/example/html5/demo_form.asp" method="get">
+Date: <input type="date" name="user_date" />
+<input type="submit" />
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form_datetime-local" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="http://w3school.com.cn/example/html5/demo_form.asp" method="get">
+Date and time: <input type="datetime-local" name="user_date" />
+<input type="submit" />
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form_datetime" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/html5/demo_form.asp" method="get">
+Date and time: <input type="datetime" name="user_date" />
+<input type="submit" />
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form_email" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get">
+E-mail: <input type="email" name="user_email" /><br />
+<input type="submit" />
+</form>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_html5_form_form" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get" id="user_form">
+First name:<input type="text" name="fname" />
+<input type="submit" />
+</form>
+
+<p>下面的输入域在 form 元素之外，但仍然是表单的一部分。</p>
+
+Last name: <input type="text" name="lname" form="user_form" />
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form_height_width" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get">
+User name: <input type="text" name="user_name" /><br />
+<input type="image" src="../i/eg_submit.jpg" width="99" height="99" />
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form_keygen" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get">
+Username: <input type="text" name="usr_name" />
+Encryption: <keygen name="security" />
+<input type="submit" />
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form_min_max_step" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get">
+Points: <input type="number" name="points" min="0" max="10" step="3"/>
+<input type="submit" />
+</form>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_html5_form_month" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get">
+Month: <input type="month" name="user_date" />
+<input type="submit" />
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form_multiple" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get">
+Select images: <input type="file" name="img" multiple="multiple" />
+<input type="submit" />
+</form>
+
+<p>当您浏览文件时，请试着选择多个文件。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form_novalidate" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get" novalidate="novalidate">
+E-mail: <input type="email" name="user_email" />
+<input type="submit" />
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form_number" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get">
+Points: <input type="number" name="points" min="1" max="10" />
+<input type="submit" />
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form_number_adv" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get">
+<input type="number" name="points" min="0" max="10" step="3" value="6" />
+<input type="submit" />
+</form>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_html5_form_output" >
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript">
+function resCalc()
+{
+numA=document.getElementById("num_a").value;
+numB=document.getElementById("num_b").value;
+document.getElementById("result").value=Number(numA)+Number(numB);
+}
+</script>
+</head>
+<body>
+<p>使用 output 元素的简易计算器：</p>
+<form onsubmit="return false">
+ <input id="num_a" /> +
+ <input id="num_b" /> =
+ <output id="result" onforminput="resCalc()"></output>
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form_override" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get" id="user_form">
+E-mail: <input type="email" name="userid" /><br />
+<input type="submit" value="Submit" /><br />
+<input type="submit" formaction="/example/html5/demo_admin.asp" value="Submit as admin" /><br />
+<input type="submit" formnovalidate="true" value="Submit without validation" /><br />
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form_pattern" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get">
+Country code: <input type="text" name="country_code" pattern="[A-z]{3}"
+title="Three letter country code" />
+<input type="submit" />
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form_placeholder" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get">
+<input type="search" name="user_search" placeholder="Search W3School" />
+<input type="submit" />
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form_range" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get">
+Points: <input type="range" name="points" min="1" max="10" />
+<input type="submit" />
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form_required" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get">
+Name: <input type="text" name="usr_name" required="required" />
+<input type="submit" />
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form_time" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get">
+Time: <input type="time" name="user_date" />
+<input type="submit" />
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form_url" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get">
+Homepage: <input type="url" name="user_url" /><br />
+<input type="submit" />
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_form_week" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get">
+Week: <input type="week" name="user_date" />
+<input type="submit" />
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_geolocation" >
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo">点击这个按钮，获得您的坐标：</p>
+<button onclick="getLocation()">试一下</button>
+<script>
+var x=document.getElementById("demo");
+function getLocation()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition);
+    }
+  else{x.innerHTML="Geolocation is not supported by this browser.";}
+  }
+function showPosition(position)
+  {
+  x.innerHTML="Latitude: " + position.coords.latitude +
+  "<br />Longitude: " + position.coords.longitude;
+  }
+</script>
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_geolocation_error" >
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo">点击这个按钮，获得您的坐标：</p>
+<button onclick="getLocation()">试一下</button>
+<script>
+var x=document.getElementById("demo");
+function getLocation(){
+	if (navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(showPosition,showError);
+	}else{
+		x.innerHTML="Geolocation is not supported by this browser.";
+	}
+}
+function showPosition(position){
+  x.innerHTML="Latitude: " + position.coords.latitude +
+  "<br />Longitude: " + position.coords.longitude;
+}
+function showError(error){
+	switch(error.code)
+	{
+		case error.PERMISSION_DENIED:
+		  x.innerHTML="User denied the request for Geolocation."
+		  break;
+		case error.POSITION_UNAVAILABLE:
+		  x.innerHTML="Location information is unavailable."
+		  break;
+		case error.TIMEOUT:
+		  x.innerHTML="The request to get user location timed out."
+		  break;
+		case error.UNKNOWN_ERROR:
+		  x.innerHTML="An unknown error occurred."
+		  break;
+	}
+}
+</script>
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_geolocation_map" >
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo">点击这个按钮，获得您的位置：</p>
+<button onclick="getLocation()">试一下</button>
+<div id="mapholder"></div>
+<script>
+var x=document.getElementById("demo");
+function getLocation()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition,showError);
+    }
+  else{x.innerHTML="Geolocation is not supported by this browser.";}
+  }
+
+function showPosition(position)
+  {
+  var latlon=position.coords.latitude+","+position.coords.longitude;
+
+  var img_url="http://maps.googleapis.com/maps/api/staticmap?center="
+  +latlon+"&zoom=14&size=400x300&sensor=false";
+  document.getElementById("mapholder").innerHTML="<img src='"+img_url+"' />";
+  }
+
+function showError(error)
+  {
+  switch(error.code)
+    {
+    case error.PERMISSION_DENIED:
+      x.innerHTML="User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML="Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML="The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML="An unknown error occurred."
+      break;
+    }
+  }
+</script>
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_geolocation_map_script" >
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo">点击这个按钮，获得您的位置：</p>
+<button onclick="getLocation()">试一下</button>
+<div id="mapholder"></div>
+<script src="../../maps.google.com/maps/api/js-sensor=false" ></script>
+<script>
+var x=document.getElementById("demo");
+function getLocation()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition,showError);
+    }
+  else{x.innerHTML="Geolocation is not supported by this browser.";}
+  }
+
+function showPosition(position)
+  {
+  lat=position.coords.latitude;
+  lon=position.coords.longitude;
+  latlon=new google.maps.LatLng(lat, lon)
+  mapholder=document.getElementById('mapholder')
+  mapholder.style.height='250px';
+  mapholder.style.width='500px';
+
+  var myOptions={
+  center:latlon,zoom:14,
+  mapTypeId:google.maps.MapTypeId.ROADMAP,
+  mapTypeControl:false,
+  navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+  };
+  var map=new google.maps.Map(document.getElementById("mapholder"),myOptions);
+  var marker=new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
+  }
+
+function showError(error)
+  {
+  switch(error.code)
+    {
+    case error.PERMISSION_DENIED:
+      x.innerHTML="User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML="Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML="The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML="An unknown error occurred."
+      break;
+    }
+  }
+</script>
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_geolocation_watchposition" >
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo">点击这个按钮，获得您的坐标：</p>
+<button onclick="getLocation()">试一下</button>
+<script>
+var x=document.getElementById("demo");
+function getLocation()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.watchPosition(showPosition);
+    }
+  else{x.innerHTML="Geolocation is not supported by this browser.";}
+  }
+function showPosition(position)
+  {
+  x.innerHTML="Latitude: " + position.coords.latitude +
+  "<br />Longitude: " + position.coords.longitude;
+  }
+</script>
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_head" >
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>文档的标题</title>
+</head>
+
+<body>
+文档的内容 ......
+</body>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_header" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<header>
+<h1>Welcome to my homepage</h1>
+<p>My name is Donald Duck</p>
+</header>
+
+<p>The rest of my home page...</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_hgroup" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<hgroup>
+<h1>Welcome to my WWF</h1>
+<h2>For a living planet</h2>
+</hgroup>
+
+<p>The rest of the content...</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_hn" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<h1>This is header 1</h1>
+<h2>This is header 2</h2>
+<h3>This is header 3</h3>
+<h4>This is header 4</h4>
+<h5>This is header 5</h5>
+<h6>This is header 6</h6>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_html" >
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Title of the document</title>
+</head>
+
+<body>
+The content of the document......
+</body>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_html_manifest" >
+<!DOCTYPE html>
+<html manifest="/example/html5/demo_html.appcache">
+<body>
+<script type="text/javascript" src="../example/html5/demo_time.js" >
+</script>
+<p id="timePara"><button onclick="getDateTime()">获得日期和事件</button></p>
+<p><img src="../i/w3school_banner.gif" /></p>
+<p>请打开<a href="javascript:" target="_blank">这个页面</a>，然后脱机浏览，重新加载页面。页面中的脚本和图像依然可用。</p>
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_img" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<img src="../i/eg_tulip.jpg"  alt="上海鲜花港 - 郁金香" width="400" height="266" />
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_input" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get">
+First name: <input type="text" name="fname" /><br />
+Last name: <input type="text" name="lname" /><br />
+<input type="submit" value="提交" />
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_keygen" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form action="/example/html5/demo_form.asp" method="get">
+用户名：<input type="text" name="usr_name" />
+加密：<keygen name="security" />
+<input type="submit" />
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_label" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<form>
+  <label for="male">Male</label>
+  <input type="radio" name="sex" id="male" />
+  <br />
+  <label for="female">Female</label>
+  <input type="radio" name="sex" id="female" />
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_legend" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<fieldset>
+  <legend>健康信息：</legend>
+  <form>
+    <label>身高：<input type="text" /></label>
+    <label>体重：<input type="text" /></label>
+  </form>
+</fieldset>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_link" >
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../example/html5/styles.css" />
+</head>
+<body>
+
+<body>
+<h1>一个外部样式表对我进行了格式化</h1>
+<p>我也是！</p>
+</body>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_map" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<p>请点击图像上的星球，把它们放大。</p>
+
+<img src="../i/eg_planets.jpg" usemap="#planetmap" alt="Planets" />
+
+<map name="planetmap" id="planetmap">
+<area shape="rect" coords="0,0,110,260" href ="../example/html/sun.html" alt="Sun" />
+<area shape="circle" coords="129,161,10" href ="../example/html/mercur.html" alt="Mercury" />
+<area shape="circle" coords="180,139,14" href ="../example/html/venus.html" alt="Venus" />
+</map>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_mark" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<p>Do not forget to buy <mark>milk</mark> today.</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_meter" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<meter min="0" max="10">2</meter><br />
+<meter>2 out of 10</meter><br />
+<meter>20%</meter>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_nav" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<nav>
+<a href="../html5/index.asp.htm" >Home</a>
+<a href="../html5/tag_meter.asp.htm" >Previous</a>
+<a href="../html5/tag_noscript.asp.htm" >Next</a>
+</nav>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_output" >
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript">
+function write_sum()
+{
+x=5
+y=3
+document.forms["sumform"]["sum"].value=x+y
+}
+</script>
+</head>
+
+<body onload="write_sum()">
+
+<form action="javascript:if" method="get" name="sumform">
+<output name="sum"></output>
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_phrase_test" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<em>Emphasized text</em><br />
+<strong>Strong text</strong><br />
+<dfn>Definition term</dfn><br />
+<code>Computer code text</code><br />
+<samp>Sample computer code text</samp><br />
+<kbd>Keyboard text</kbd><br />
+<var>Variable</var><br />
+<cite>Citation</cite>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_progress" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+The object's downloading progress:
+<progress>
+<span id="objprogress">76</span>%
+</progress>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_q" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<p>WWF's goal is to:
+<q cite="http://www.wwf.org">
+build a future where people live in harmony with nature
+</q> we hope they succeed.</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_rp" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<ruby>
+漢 <rt><rp>(</rp>ㄏㄢˋ<rp>)</rp></rt>
+</ruby>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_ruby" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<ruby>
+ 漢 <rt> ㄏㄢˋ </rt>
+</ruby>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_script" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<script type="text/javascript">
+document.write("Hello World!")
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_section" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<section>
+  <h1>PRC</h1>
+  <p>The People's Republic of China was born in 1949...</p>
+</section>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_small" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<dl>
+ <dt>单人间</dt>
+ <dd>399 元 <small>含早餐，不含税</small></dd>
+ <dt>双人间</dt>
+ <dd>599 元 <small>含早餐，不含税</small></dd>
+</dl>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_sse" >
+<!DOCTYPE html>
+<html>
+<body>
+<h1>获得服务器更新</h1>
+<div id="result"></div>
+
+<script>
+if(typeof(EventSource)!=="undefined")
+  {
+  var source=new EventSource("/example/html5/demo_sse.php");
+  source.onmessage=function(event)
+    {
+    document.getElementById("result").innerHTML+=event.data + "<br />";
+    };
+  }
+else
+  {
+  document.getElementById("result").innerHTML="Sorry, your browser does not support server-sent events...";
+  }
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_style" >
+<!DOCTYPE HTML>
+<html>
+<head>
+<style type="text/css">
+h1 {color:red}
+p {color:blue}
+</style>
+</head>
+
+<body>
+<h1>Header-1</h1>
+<p>This is a paragraph.</p>
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_summary" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<details>
+<summary>HTML 5</summary>
+This document teaches you everything you have to learn about HTML 5.
+</details>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_svg_ex" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+   <polygon points="100,10 40,180 190,60 10,60 160,180"
+   style="fill:red;stroke:blue;stroke-width:3;fill-rule:evenodd;" />
+</svg>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_table" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<table border="1">
+  <tr>
+    <th>月份</th>
+    <th>存款</th>
+  </tr>
+  <tr>
+    <td>一月</td>
+    <td>1000 元</td>
+  </tr>
+  <tr>
+    <td>二月</td>
+    <td>1500 元</td>
+  </tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_td" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<table border="1">
+  <tr>
+    <td>Cell A</td>
+    <td>Cell B</td>
+  </tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_th" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<table border="1">
+  <tr>
+    <th>月份</th>
+    <th>存款</th>
+  </tr>
+  <tr>
+    <td>一月</td>
+    <td>3000 元</td>
+  </tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_time" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<p>
+我们在每天早上 <time>9:00</time> 开始营业。
+</p>
+
+<p>
+我在 <time datetime="2010-02-14">情人节</time> 有个约会。
+</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_title" >
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>HTML5 Tag Reference</title>
+</head>
+
+<body>
+
+<a href="javascript:if" target="_blank">
+请点击这里，查看标题是如何在浏览器中显示的。
+</a>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_html5_tr" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<table border="1">
+  <tr>
+    <th>月份</th>
+    <th>存款</th>
+  </tr>
+  <tr>
+    <td>一月</td>
+    <td>1000 元</td>
+  </tr>
+  <tr>
+    <td>二月</td>
+    <td>1500 元</td>
+  </tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_video" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<video src="../i/movie.ogg" controls="controls">
+your browser does not support the video tag
+</video>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_video_all" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<video width="320" height="240" controls="controls">
+  <source src="../i/movie.ogg" type="video/ogg">
+  <source src="../i/movie.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_video_dom" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<div style="text-align:center;">
+  <button onclick="playPause()">播放/暂停</button>
+  <button onclick="makeBig()">大</button>
+  <button onclick="makeNormal()">中</button>
+  <button onclick="makeSmall()">小</button>
+  <br />
+  <video id="video1" width="420" style="margin-top:15px;">
+    <source src="../i/mov_bbb.mp4" type="video/mp4" />
+    <source src="../i/mov_bbb.ogg" type="video/ogg" />
+    Your browser does not support HTML5 video.
+  </video>
+</div>
+
+<script type="text/javascript">
+var myVideo=document.getElementById("video1");
+
+function playPause()
+{
+if (myVideo.paused)
+  myVideo.play();
+else
+  myVideo.pause();
+}
+
+function makeBig()
+{
+myVideo.width=560;
+}
+
+function makeSmall()
+{
+myVideo.width=320;
+}
+
+function makeNormal()
+{
+myVideo.width=420;
+}
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_video_simple" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<video src="../i/movie.ogg"  width="320" height="240" controls="controls">
+Your browser does not support the video tag.
+</video>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_wbr" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>
+如果想学习 AJAX，那么您必须熟悉 XML<wbr>Http<wbr>Request 对象。
+</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_webstorage_local" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<script type="text/javascript">
+
+localStorage.lastname="Smith";
+document.write("Last name: " + localStorage.lastname);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_webstorage_local_pagecount" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<script type="text/javascript">
+
+if (localStorage.pagecount)
+	{
+	localStorage.pagecount=Number(localStorage.pagecount) +1;
+	}
+else
+	{
+	localStorage.pagecount=1;
+	}
+document.write("Visits: " + localStorage.pagecount + " time(s).");
+
+</script>
+
+<p>刷新页面会看到计数器在增长。</p>
+
+<p>请关闭浏览器窗口，然后再试一次，计数器会继续计数。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_webstorage_session" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<script type="text/javascript">
+
+sessionStorage.lastname="Smith";
+document.write(sessionStorage.lastname);
+
+</script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_webstorage_session_pagecount" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<script type="text/javascript">
+
+if (sessionStorage.pagecount)
+	{
+	sessionStorage.pagecount=Number(sessionStorage.pagecount) +1;
+	}
+else
+	{
+	sessionStorage.pagecount=1;
+	}
+document.write("Visits " + sessionStorage.pagecount + " time(s) this session.");
+
+</script>
+
+<p>刷新页面会看到计数器在增长。</p>
+
+<p>请关闭浏览器窗口，然后再试一次，计数器已经重置了。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html5_webworker" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>计数: <output id="result"></output></p>
+<button onclick="startWorker()">开始 Worker</button>
+<button onclick="stopWorker()">停止 Worker</button>
+<br /><br />
+
+<script>
+var w;
+
+function startWorker()
+{
+if(typeof(Worker)!=="undefined")
+  {
+  if(typeof(w)=="undefined")
+  {
+  w=new Worker("/example/html5/demo_workers.js");
+  }
+  w.onmessage = function (event) {
+    document.getElementById("result").innerHTML=event.data;
+    };
+  }
+else
+  {
+  document.getElementById("result").innerHTML="Sorry, your browser does not support Web Workers...";
+  }
+}
+
+function stopWorker()
+{
+w.terminate();
+}
+</script>
+
+</body>
+</html>
+</iframe>
+</div>

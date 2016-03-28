@@ -1,0 +1,127 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL 语法</h1>
+
+<div  id="tpn">
+<ul class="prenext">
+<li class="pre"><a href="sql_intro.htm"  title="SQL 简介">SQL 简介</a></li>
+<li class="next"><a href="sql_select.htm"  title="SQL SELECT 语句">SQL select</a></li>
+</ul>
+</div>
+
+<div>
+<h2>数据库表</h2>
+
+<p>一个数据库通常包含一个或多个表。每个表由一个名字标识（例如“客户”或者“订单”）。表包含带有数据的记录（行）。</p>
+
+<p>下面的例子是一个名为 &quot;Persons&quot; 的表：</p>
+
+<table class="dataintable">
+<tr>
+<th>Id</th>
+<th>LastName</th>
+<th>FirstName</th>
+<th>Address</th>
+<th>City</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Adams</td>
+<td>John</td>
+<td>Oxford Street</td>
+<td>London</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Bush</td>
+<td>George</td>
+<td>Fifth Avenue</td>
+<td>New York </td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Carter</td>
+<td>Thomas</td>
+<td>Changan Street</td>
+<td>Beijing</td>
+</tr>
+</table>
+
+<p>上面的表包含三条记录（每一条对应一个人）和五个列（Id、姓、名、地址和城市）。</p>
+</div>
+
+<div>
+<h2>SQL 语句</h2>
+
+<p>您需要在数据库上执行的大部分工作都由 SQL 语句完成。</p>
+
+<p>下面的语句从表中选取 LastName 列的数据：</p>
+
+<pre>SELECT LastName FROM Persons</pre>
+
+<p>结果集类似这样：</p>
+
+<table class="dataintable" style="width:100px;">
+<tr><th>LastName</th></tr>
+<tr><td>Adams</td></tr>
+<tr><td>Bush</td></tr>
+<tr><td>Carter</td></tr>
+</table>
+
+<p>在本教程中，我们将为您讲解各种不同的 SQL 语句。</p>
+</div>
+
+<div>
+<h2>重要事项</h2>
+
+<p>一定要记住，<em>SQL 对大小写不敏感</em>！</p>
+</div>
+
+<div>
+<h2>SQL 语句后面的分号？</h2>
+
+<p>某些数据库系统要求在每条 SQL 命令的末端使用分号。在我们的教程中不使用分号。</p>
+
+<p>分号是在数据库系统中分隔每条 SQL 语句的标准方法，这样就可以在对服务器的相同请求中执行一条以上的语句。</p>
+
+<p>如果您使用的是 MS Access 和 SQL Server 2000，则不必在每条 SQL 语句之后使用分号，不过某些数据库软件要求必须使用分号。</p>
+</div>
+
+<div>
+<h2>SQL DML 和 DDL</h2>
+
+可以把 SQL 分为两个部分：数据操作语言 (DML) 和 数据定义语言 (DDL)。
+
+<p>SQL (结构化查询语言)是用于执行查询的语法。但是 SQL 语言也包含用于更新、插入和删除记录的语法。</p>
+
+<p>查询和更新指令构成了 SQL 的 DML 部分：</p>
+<ul>
+<li><em>SELECT</em> - 从数据库表中获取数据</li>
+<li><em>UPDATE</em> - 更新数据库表中的数据</li>
+<li><em>DELETE</em> - 从数据库表中删除数据</li>
+<li><em>INSERT INTO</em> - 向数据库表中插入数据</li>
+</ul>
+
+<p>SQL 的数据定义语言 (DDL) 部分使我们有能力创建或删除表格。我们也可以定义索引（键），规定表之间的链接，以及施加表间的约束。</p>
+<p>SQL 中最重要的 DDL 语句: </p>
+<ul>
+<li><em>CREATE DATABASE</em> - 创建新数据库</li>
+<li><em>ALTER DATABASE</em> - 修改数据库</li>
+<li><em>CREATE TABLE</em> - 创建新表</li>
+<li><em>ALTER TABLE</em> - 变更（改变）数据库表</li>
+<li><em>DROP TABLE</em> - 删除表</li>
+<li><em>CREATE INDEX</em> - 创建索引（搜索键）</li>
+<li><em>DROP INDEX</em> - 删除索引</li>
+</ul>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

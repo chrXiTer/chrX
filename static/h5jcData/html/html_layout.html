@@ -1,0 +1,134 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 布局</h1>
+
+<div>
+<h2>网站布局</h2>
+
+<p>大多数网站会把内容安排到多个列中（就像杂志或报纸那样）。</p>
+
+<p>可以使用 &lt;div&gt; 或者 &lt;table&gt; 元素来创建多列。CSS 用于对元素进行定位，或者为页面创建背景以及色彩丰富的外观。</p>
+
+<p class="tip"><span>提示：</span>即使可以使用 HTML 表格来创建漂亮的布局，但设计表格的目的是呈现表格化数据 - 表格不是布局工具！</p>
+</div>
+
+<div>
+<h2>HTML 布局 - 使用 &lt;div&gt; 元素</h2>
+
+<p>div 元素是用于分组 HTML 元素的块级元素。</p>
+
+<p>下面的例子使用五个 div 元素来创建多列布局：</p>
+
+<h3>实例</h3>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+div#container{width:500px}
+div#header {background-color:#99bbbb;}
+div#menu {background-color:#ffff99; height:200px; width:100px; float:left;}
+div#content {background-color:#EEEEEE; height:200px; width:400px; float:left;}
+div#footer {background-color:#99bbbb; clear:both; text-align:center;}
+h1 {margin-bottom:0;}
+h2 {margin-bottom:0; font-size:14px;}
+ul {margin:0;}
+li {list-style:none;}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;div id=&quot;container&quot;&gt;
+
+&lt;div id=&quot;header&quot;&gt;
+&lt;h1&gt;Main Title of Web Page&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;menu&quot;&gt;
+&lt;h2&gt;Menu&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;HTML&lt;/li&gt;
+&lt;li&gt;CSS&lt;/li&gt;
+&lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;content&quot;&gt;Content goes here&lt;/div&gt;
+
+&lt;div id=&quot;footer&quot;&gt;Copyright W3School.com.cn&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_layout_divs')" >亲自试一试</a></p>
+
+<p>上面的 HTML 代码会产生如下结果：</p>
+
+<img src="../i/html_layout_div.gif"  alt="使用 div 和 CSS 进行布局" />
+</div>
+
+<div>
+<h2>HTML 布局 - 使用表格</h2>
+
+<p>使用 HTML &lt;table&gt; 标签是创建布局的一种简单的方式。</p>
+
+<p>可以使用 &lt;div&gt; 或者 &lt;table&gt; 元素来创建多列。CSS 用于对元素进行定位，或者为页面创建背景以及色彩丰富的外观。</p>
+
+<p class="tip"><span>提示：</span>即使可以使用 HTML 表格来创建漂亮的布局，但设计表格的目的是呈现表格化数据 - 表格不是布局工具！</p>
+
+<p>下面的例子使用三行两列的表格 - 第一和最后一行使用 colspan 属性来横跨两列：</p>
+
+<h3>实例</h3>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;table width=&quot;500&quot; border=&quot;0&quot;&gt;
+&lt;tr&gt;
+&lt;td colspan=&quot;2&quot; style=&quot;background-color:#99bbbb;&quot;&gt;
+&lt;h1&gt;Main Title of Web Page&lt;/h1&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr valign=&quot;top&quot;&gt;
+&lt;td style=&quot;background-color:#ffff99;width:100px;text-align:top;&quot;&gt;
+&lt;b&gt;Menu&lt;/b&gt;&lt;br /&gt;
+HTML&lt;br /&gt;
+CSS&lt;br /&gt;
+JavaScript
+&lt;/td&gt;
+&lt;td style=&quot;background-color:#EEEEEE;height:200px;width:400px;text-align:top;&quot;&gt;
+Content goes here&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td colspan=&quot;2&quot; style=&quot;background-color:#99bbbb;text-align:center;&quot;&gt;
+Copyright W3School.com.cn&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_layout_tables')" >亲自试一试</a></p>
+
+<p>上面的 HTML 代码会产生以下结果：</p>
+
+<img src="../i/html_layout_table.gif"  alt="使用表格进行布局" />
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

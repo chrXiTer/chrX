@@ -1,0 +1,167 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;frame&gt; 标签</h1>
+
+<div>
+<h2>实例</h2>
+
+<p>简单的三框架页面：</p>
+
+<pre>
+&lt;html&gt;
+
+&lt;frameset cols=&quot;25%,50%,25%&quot;&gt;
+  <code>&lt;frame src=&quot;frame_a.htm&quot; /&gt;
+  &lt;frame src=&quot;frame_b.htm&quot; /&gt;
+  &lt;frame src=&quot;frame_c.htm&quot; /&gt;</code>
+&lt;/frameset&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_frame_cols')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>&lt;frame&gt; 标签定义 frameset 中的一个特定的窗口（框架）。</p>
+
+<p>frameset 中的每个框架都可以设置不同的属性，比如 border、scrolling、noresize 等等。</p>
+</div>
+
+<div>
+<h2>HTML 与 XHTML 之间的差异</h2>
+
+<p>在 HTML 中，&lt;frame&gt; 标签没有结束标签。</p>
+
+<p>在 XHTML 中，&lt;frame&gt; 标签必须被正确地关闭。</p>
+</div>
+
+<div>
+<h2>提示和注释：</h2>
+
+<p class="note"><span>注释：</span>如果您希望验证包含框架的页面，请确保 doctype 被设置为 &quot;Frameset DTD&quot;。阅读更多有关 <a href="tag_doctype.htm"  title="HTML &lt;!DOCTYPE&gt; 标签">DOCTYPE</a> 的内容。</p>
+
+<p class="important"><span>重要事项：</span>您不能与 &lt;frameset&gt;&lt;/frameset&gt; 标签一起使用 &lt;body&gt;&lt;/body&gt; 标签。不过，如果您需要为不支持框架的浏览器添加一个 &lt;noframes&gt; 标签，请务必将此标签放置在 &lt;body&gt;&lt;/body&gt; 标签中！</p>
+</div>
+
+<div>
+<h2>可选的属性</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:20%;">属性</th>
+<th style="width:20%;">值</th>
+<th style="width:60%;">描述</th>
+</tr>
+
+<tr>
+<td><a href="att_frame_frameborder.htm"  title="HTML &lt;frame&gt; 标签的 frameborder 属性">frameborder</a></td>
+<td>
+<ul>
+<li>0</li>
+<li>1</li>
+</ul>
+</td>
+<td>规定是否显示框架周围的边框。</td>
+</tr>
+
+<tr>
+<td><a href="att_frame_longdesc.htm"  title="HTML &lt;frame&gt; 标签的 longdesc 属性">longdesc</a></td>
+<td><i>URL</i></td>
+<td>规定一个包含有关框架内容的长描述的页面。</td>
+</tr>
+
+<tr>
+<td><a href="att_frame_marginheight.htm"  title="HTML &lt;frame&gt; 标签的 marginheight 属性">marginheight</a></td>
+<td><i>pixels</i></td>
+<td>定义框架的上方和下方的边距。</td>
+</tr>
+
+<tr>
+<td><a href="att_frame_marginwidth.htm"  title="HTML &lt;frame&gt; 标签的 marginwidth 属性">marginwidth</a></td>
+<td><i>pixels</i></td>
+<td>定义框架的左侧和右侧的边距。</td>
+</tr>
+
+<tr>
+<td><a href="att_frame_name.htm"  title="HTML &lt;frame&gt; 标签的 name 属性">name</a></td>
+<td><i>name</i></td>
+<td>规定框架的名称。</td>
+</tr>
+
+<tr>
+<td><a href="att_frame_noresize.htm"  title="HTML &lt;frame&gt; 标签的 noresize 属性">noresize</a></td>
+<td>noresize</td>
+<td>规定无法调整框架的大小。</td>
+</tr>
+
+<tr>
+<td><a href="att_frame_scrolling.htm"  title="HTML &lt;frame&gt; 标签的 scrolling 属性">scrolling</a></td>
+<td>
+<ul>
+<li>yes</li>
+<li>no</li>
+<li>auto</li>
+</ul>
+</td>
+<td>规定是否在框架中显示滚动条。</td>
+</tr>
+
+<tr>
+<td><a href="att_frame_src.htm"  title="HTML &lt;frame&gt; 标签的 src 属性">src</a></td>
+<td><i>URL</i></td>
+<td>规定在框架中显示的文档的 URL。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>标准属性</h2>
+<pre>id, class, title, style</pre>
+<p>如需完整的描述，请访问<a href="html_ref_standardattributes.htm" >标准属性</a>。</p>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('html_frame_cols')" >垂直框架</a></dt>
+<dd>本例演示：如何使用三份不同的文档制作一个垂直框架。</dd>
+
+<dt><a href="javascript:tiy.run('html_frame_rows')" >水平框架</a></dt>
+<dd>本例演示：如何使用三份不同的文档制作一个水平框架。</dd>
+
+<dt><a href="javascript:tiy.run('html_noframes')" >如何使用 &lt;noframes&gt; 标签</a></dt>
+<dd>本例演示：如何使用 &lt;noframes&gt; 标签。</dd>
+
+<dt><a href="javascript:tiy.run('html_frame_mix')" >混合框架结构</a></dt>
+<dd>本例演示如何制作含有三份文档的框架结构，同时将他们混合置于行和列之中。</dd>
+
+<dt><a href="javascript:tiy.run('html_frame_noresize')" >含有 noresize=&#34;noresize&#34; 属性的框架结构</a></dt>
+<dd>本例演示 noresize 属性。在本例中，框架是不可调整尺寸的。在框架间的边框上拖动鼠标，你会发现边框是无法移动的。</dd>
+
+<dt><a href="javascript:tiy.run('html_frame_navigation')" >导航框架</a></dt>
+<dd>本例演示如何制作导航框架。导航框架包含一个将第二个框架作为目标的链接列表。名为 &quot;contents.htm&quot; 的文件包含三个链接。</dd>
+
+<dt><a href="javascript:tiy.run('html_iframe')" >内联框架</a></dt>
+<dd>本例演示如何创建内联框架（HTML 页中的框架）。</dd>
+
+<dt><a href="javascript:tiy.run('html_frame_jump')" >跳转至框架内的一个指定的节</a></dt>
+<dd>本例演示两个框架。其中的一个框架设置了指向另一个文件内指定的节的链接。这个 &quot;link.htm&quot; 文件内指定的节使用 &lt;a name=&quot;C10&quot;&gt; 进行标识。</dd>
+
+<dt><a href="javascript:tiy.run('html_frame_navigation2')" >使用框架导航跳转至指定的节</a></dt>
+<dd>
+本利演示两个框架。左侧的导航框架包含了一个链接列表，这些链接将第二个框架作为目标。第二个框架显示被链接的文档。导航框架其中的链接指向目标文件中指定的节。
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

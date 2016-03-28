@@ -1,0 +1,283 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>CSS 背景</h1> 
+
+<div id="intro">
+<p><strong>CSS 允许应用纯色作为背景，也允许使用背景图像创建相当复杂的效果。</strong></p>
+</div>
+
+<div>
+<h2>背景色</h2>
+
+<p>可以使用 <a href="../cssref/pr_background-color.htm" title="CSS background-color 属性">background-color 属性</a>为元素设置背景色。这个属性接受任何合法的颜色值。</p>
+<p>这条规则把元素的背景设置为灰色：</p>
+<pre>p {background-color: gray;}</pre>
+
+<p>如果您希望背景色从元素中的文本向外少有延伸，只需增加一些内边距：</p>
+<pre>p {background-color: gray; padding: 20px;}</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_background-color')">试一试</a>！</p>
+<p>可以为所有元素设置背景色，这包括 body 一直到 em 和 a 等行内元素。</p>
+<p>background-color 不能继承，其默认值是 transparent。transparent 有“透明”之意。也就是说，如果一个元素没有指定背景色，那么背景就是透明的，这样其祖先元素的背景才能可见。</p>
+</div>
+
+<div>
+<h2>背景图像</h2>
+
+<p>要把图像放入背景，需要使用 <a href="../cssref/pr_background-image.htm" title="CSS background-image 属性">background-image 属性</a>。background-image 属性的默认值是 none，表示背景上没有放置任何图像。</p>
+<p>如果需要设置一个背景图像，必须为这个属性设置一个 URL 值：</p>
+<pre>body {background-image: url(/i/eg_bg_04.gif);}</pre>
+
+<p>大多数背景都应用到 body 元素，不过并不仅限于此。</p>
+<p>下面例子为一个段落应用了一个背景，而不会对文档的其他部分应用背景：</p>
+<pre>p.flower {background-image: url(/i/eg_bg_03.gif);}</pre>
+
+<p>您甚至可以为行内元素设置背景图像，下面的例子为一个链接设置了背景图像：</p>
+<pre>a.radio {background-image: url(/i/eg_bg_07.gif);}</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_background-image_2')">试一试</a>！</p>
+<p>理论上讲，甚至可以向 textareas 和 select 等替换元素的背景应用图像，不过并不是所有用户代理都能很好地处理这种情况。</p>
+<p>另外还要补充一点，background-image 也不能继承。事实上，所有背景属性都不能继承。</p>
+</div>
+
+<div>
+<h2>背景重复</h2>
+
+<p>如果需要在页面上对背景图像进行平铺，可以使用 <a href="../cssref/pr_background-repeat.htm" title="CSS background-repeat 属性">background-repeat 属性</a>。</p>
+<p>属性值 repeat 导致图像在水平垂直方向上都平铺，就像以往背景图像的通常做法一样。repeat-x 和 repeat-y 分别导致图像只在水平或垂直方向上重复，no-repeat 则不允许图像在任何方向上平铺。</p>
+<p>默认地，背景图像将从一个元素的左上角开始。请看下面的例子：</p>
+<pre>
+body
+  { 
+  background-image: url(/i/eg_bg_03.gif);
+  <code>background-repeat: repeat-y;</code>
+  }
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_background-repeaty')">试一试</a>。</p>
+</div>
+
+<div>
+<h2>背景定位</h2>
+
+<p>可以利用 <a href="../cssref/pr_background-position.htm" >background-position 属性</a>改变图像在背景中的位置。</p>
+<p>下面的例子在 body 元素中将一个背景图像居中放置：</p>
+<pre>
+body
+  { 
+    background-image:url('/i/eg_bg_03.gif');
+    background-repeat:no-repeat;
+    <code>background-position:center;</code>
+  }
+</pre>
+
+<p>为 background-position 属性提供值有很多方法。首先，可以使用一些关键字：top、bottom、left、right 和 center。通常，这些关键字会成对出现，不过也不总是这样。还可以使用长度值，如 100px 或 5cm，最后也可以使用百分数值。不同类型的值对于背景图像的放置稍有差异。</p>
+
+<h3>关键字</h3>
+
+<p>图像放置关键字最容易理解，其作用如其名称所表明的。例如，top right 使图像放置在元素内边距区的右上角。</p>
+<p>根据规范，位置关键字可以按任何顺序出现，只要保证不超过两个关键字 - 一个对应水平方向，另一个对象垂直方向。</p>
+<p>如果只出现一个关键字，则认为另一个关键字是 center。</p>
+<p>所以，如果希望每个段落的中部上方出现一个图像，只需声明如下：</p>
+<pre>
+p
+  { 
+    background-image:url('bgimg.gif');
+    background-repeat:no-repeat;
+    <code>background-position:top;</code>
+  }
+</pre>
+
+<p>下面是等价的位置关键字：</p>
+<table class="dataintable">
+<tr>
+<th>单一关键字</th>
+<th>等价的关键字</th>
+</tr>
+
+<tr>
+<td>center</td>
+<td>center center</td>
+</tr>
+
+<tr>
+<td>top</td>
+<td>top center 或 center top</td>
+</tr>
+
+<tr>
+<td>bottom</td>
+<td>bottom center 或 center bottom</td>
+</tr>
+
+<tr>
+<td>right</td>
+<td>right center 或 center right</td>
+</tr>
+
+<tr>
+<td>left</td>
+<td>left center 或 center left</td>
+</tr>
+</table>
+
+<h3>百分数值</h3>
+
+<p>百分数值的表现方式更为复杂。假设你希望用百分数值将图像在其元素中居中，这很容易：</p>
+<pre>
+body
+  { 
+    background-image:url('/i/eg_bg_03.gif');
+    background-repeat:no-repeat;
+    <code>background-position:50% 50%;</code>
+  }
+</pre>
+
+<p>这会导致图像适当放置，其中心与其元素的中心对齐。<strong>换句话说，百分数值同时应用于元素和图像。</strong>也就是说，图像中描述为 50% 50% 的点（中心点）与元素中描述为 50% 50% 的点（中心点）对齐。</p>
+<p>如果图像位于 0% 0%，其左上角将放在元素内边距区的左上角。如果图像位置是 100% 100%，会使图像的右下角放在右边距的右下角。</p>
+<p>因此，如果你想把一个图像放在水平方向 2/3、垂直方向 1/3 处，可以这样声明：</p>
+<pre>
+body
+  { 
+    background-image:url('/i/eg_bg_03.gif');
+    background-repeat:no-repeat;
+    <code>background-position:66% 33%;</code>
+  }
+</pre>
+
+<p>如果只提供一个百分数值，所提供的这个值将用作水平值，垂直值将假设为 50%。这一点与关键字类似。</p>
+<p>background-position 的默认值是 0% 0%，在功能上相当于 top left。这就解释了背景图像为什么总是从元素内边距区的左上角开始平铺，除非您设置了不同的位置值。</p>
+
+<h3>长度值</h3>
+
+<p>长度值解释的是元素内边距区左上角的偏移。偏移点是图像的左上角。</p>
+<p>比如，如果设置值为 50px 100px，图像的左上角将在元素内边距区左上角向右 50 像素、向下 100 像素的位置上：</p>
+<pre>
+body
+  { 
+    background-image:url('/i/eg_bg_03.gif');
+    background-repeat:no-repeat;
+    <code>background-position:50px 100px;</code>
+  }
+</pre>
+
+<p>注意，这一点与百分数值不同，因为偏移只是从一个左上角到另一个左上角。也就是说，图像的左上角与 background-position 声明中的指定的点对齐。</p>
+</div>
+
+<div>
+<h2>背景关联</h2>
+
+<p>如果文档比较长，那么当文档向下滚动时，背景图像也会随之滚动。当文档滚动到超过图像的位置时，图像就会消失。</p>
+<p>您可以通过 <a href="../cssref/pr_background-attachment.htm" title="CSS background-attachment 属性">background-attachment 属性</a>防止这种滚动。通过这个属性，可以声明图像相对于可视区是固定的（fixed），因此不会受到滚动的影响：</p>
+<pre>
+body 
+  {
+  background-image:url(/i/eg_bg_02.gif);
+  background-repeat:no-repeat;
+  <code>background-attachment:fixed</code>
+  }
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_background-attachment')">试一试</a>。</p>
+<p>background-attachment 属性的默认值是 scroll，也就是说，在默认的情况下，背景会随文档滚动。</p>
+</div>
+
+<h1>CSS3 背景</h1> 
+
+<div style="background:url('../i/bg_flower.gif') no-repeat bottom right;background-origin: content-box;">
+<h2>CSS3 背景</h2>
+
+<p>CSS3 包含多个新的背景属性，它们提供了对背景更强大的控制。</p>
+<p>在本章，您将学到以下背景属性：</p>
+<ul>
+<li>background-size</li>
+<li>background-origin</li>
+</ul>
+
+<p>您也将学到如何使用多重背景图片。</p>
+</div>
+
+<div style="background:url('../i/bg_flower_2.gif') no-repeat top left;background-origin: content-box;">
+<h2>CSS3 background-size 属性</h2>
+
+<p style="margin-top:120px;">background-size 属性规定背景图片的尺寸。</p>
+<p>在 CSS3 之前，背景图片的尺寸是由图片的实际尺寸决定的。在 CSS3 中，可以规定背景图片的尺寸，这就允许我们在不同的环境中重复使用背景图片。</p>
+<p>您能够以像素或百分比规定尺寸。如果以百分比规定尺寸，那么尺寸相对于父元素的宽度和高度。</p>
+<h3>例子 1</h3>
+
+<p>调整背景图片的大小：</p>
+<pre>
+div
+{
+background:url(bg_flower.gif);
+-moz-background-size:63px 100px; <span class="code_comment">/* 老版本的 Firefox */</span>
+background-size:63px 100px;
+background-repeat:no-repeat;
+}
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_background-size')">试一试</a></p>
+<h3>例子 2</h3>
+
+<p>对背景图片进行拉伸，使其完成填充内容区域：</p>
+<pre>
+div
+{
+background:url(bg_flower.gif);
+-moz-background-size:40% 100%; <span class="code_comment">/* 老版本的 Firefox */</span>
+background-size:40% 100%;
+background-repeat:no-repeat;
+}
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_background-size2')">试一试</a></p>
+</div>
+
+<div>
+<h2>CSS3 background-origin 属性</h2>
+
+<p>background-origin 属性规定背景图片的定位区域。</p>
+<p>背景图片可以放置于 content-box、padding-box 或 border-box 区域。</p>
+<img src="../i/background-origin.gif" alt="背景图片的定位区域" />
+
+<h3>实例</h3>
+
+<p>在 content-box 中定位背景图片：</p>
+<pre>
+div
+{
+background:url(bg_flower.gif);
+background-repeat:no-repeat;
+background-size:100% 100%;
+-webkit-background-origin:content-box; <span class="code_comment">/* Safari */</span>
+background-origin:content-box;
+}
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_background-origin')">试一试</a></p>
+</div>
+
+<div style="background:url('../i/bg_flower_multi.gif') no-repeat top left;background-origin: content-box;">
+<h2>CSS3 多重背景图片</h2>
+
+<p style="margin-top:180px;">CSS3 允许您为元素使用多个背景图像。</p>
+<h3>实例</h3>
+
+<p>为 body 元素设置两幅背景图片：</p>
+<pre>
+body
+{ 
+background-image:url(bg_flower.gif),url(bg_flower_2.gif);
+}
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_background_multiple')">试一试</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>
+

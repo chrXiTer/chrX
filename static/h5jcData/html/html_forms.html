@@ -1,0 +1,128 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 表单和输入</h1>
+
+<div id="intro">
+<p><strong>HTML 表单用于搜集用户的输入。</strong></p>
+</div>
+
+<div>
+<h2>表单</h2>
+
+<p>表单是一个包含表单元素的区域。</p>
+
+<p>表单元素是允许用户在表单中（比如：文本域、下拉列表、单选框、复选框等等）输入信息的元素。</p>
+
+<p>表单使用表单标签（&lt;form&gt;）定义。</p>
+
+<pre>
+&lt;form&gt;
+...
+  <span>input 元素</span>
+...
+&lt;/form&gt;
+</pre>
+</div>
+
+<div>
+<h2>输入</h2>
+
+<p>多数情况下被用到的表单标签是输入标签（&lt;input&gt;）。输入类型是由类型属性（type）定义的。大多数经常被用到的输入类型如下：</p>
+
+<h3>文本域（Text Fields）</h3>
+
+<p>当用户要在表单中键入字母、数字等内容时，就会用到文本域。</p>
+
+<pre>
+&lt;form&gt;
+First name: 
+<code>&lt;input type=&quot;text&quot; name=&quot;firstname&quot; /&gt;</code>
+&lt;br /&gt;
+Last name: 
+<code>&lt;input type=&quot;text&quot; name=&quot;lastname&quot; /&gt;</code>
+&lt;/form&gt;
+</pre>
+
+<p>浏览器显示如下：</p>
+
+<form action="" style="margin:10px 0 0 0;">
+First name: 
+<input type="text" name="firstname" size="20" />
+<br />
+Last name: 
+<input type="text" name="lastname" size="20" />
+</form>
+
+<p>注意，表单本身并不可见。同时，在大多数浏览器中，文本域的缺省宽度是20个字符。</p>
+
+<h3>单选按钮（Radio Buttons）</h3>
+
+<p>当用户从若干给定的的选择中选取其一时，就会用到单选框。</p>
+
+<pre>
+&lt;form&gt;
+<code>&lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;male&quot; /&gt;</code> Male
+&lt;br /&gt;
+<code>&lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;female&quot; /&gt;</code> Female
+&lt;/form&gt;
+</pre>
+
+<p>浏览器显示如下：</p>
+
+<form action="" style="margin:10px 0 0 0;">
+<input type="radio" name="sex" value="male" /> Male
+<br />
+<input type="radio" name="sex" value="female" /> Female
+</form>
+
+<p>注意，只能从中选取其一。</p>
+
+<h3>复选框（Checkboxes）</h3>
+
+<p>当用户需要从若干给定的选择中选取一个或若干选项时，就会用到复选框。</p>
+<pre>&lt;form&gt;
+<code>&lt;input type=&quot;checkbox&quot; name=&quot;bike&quot; /&gt;</code>
+I have a bike
+&lt;br /&gt;
+<code>&lt;input type=&quot;checkbox&quot; name=&quot;car&quot; /&gt;</code>
+I have a car
+&lt;/form&gt;</pre>
+
+<p>浏览器显示如下：</p>
+
+<form action="" style="margin:10px 0 0 0;">
+<input type="checkbox" name="bike" value="ON" /> I have a bike
+<br />
+<input type="checkbox" name="car" value="ON" /> I have a car
+</form>
+</div>
+
+<div>
+<h2>表单的动作属性（Action）和确认按钮</h2>
+
+<p>当用户单击确认按钮时，表单的内容会被传送到另一个文件。表单的动作属性定义了目的文件的文件名。由动作属性定义的这个文件通常会对接收到的输入数据进行相关的处理。</p>
+
+<pre>&lt;form name=&quot;input&quot; <code>action=&quot;html_form_action.asp&quot; method=&quot;get&quot;&gt;</code>
+Username: 
+&lt;input type=&quot;text&quot; name=&quot;user&quot; /&gt;
+<code>&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;</code>
+&lt;/form&gt;</pre>
+
+<p>浏览器显示如下：</p>
+
+<form name="input" action="http://w3school.com.cn/html/html_form_action.asp" method="get" style="margin:10px 0 0 0;">
+Username: 
+<input type="text" name="user" size="20" />
+<input type="submit" value="Submit" />
+</form>
+
+<p>假如您在上面的文本框内键入几个字母，然后点击确认按钮，那么输入数据会传送到 &quot;html_form_action.asp&quot; 的页面。该页面将显示出输入的结果。</p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,87 @@
+
+<link rel="stylesheet" type="text/css" href="../c3.css"  />
+
+<body>
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SVG 简介</h1>
+<p>SVG 意为可缩放矢量图形（Scalable Vector Graphics），是使用 XML 来描述二维图形的一种格式标准。</p>
+<p>SVG 于 2003 年 1 月 14 日成为 W3C 推荐标准。</p>
+<p>在 2003 年一月，SVG 1.1 被确立为 W3C 标准。参与定义 SVG 的组织有：太阳微系统、Adobe、苹果公司、IBM 以及柯达。</p>
+
+<h2>SVG的特点</h2>
+<ul>
+<li>SVG 指可伸缩矢量图形 (Scalable Vector Graphics)</li>
+<li>SVG 用来定义用于网络的基于矢量的图形</li>
+<li>SVG 使用 XML 格式定义图形</li>
+<li>SVG 图像在放大或改变尺寸的情况下其图形质量不会有所损失</li>
+<li>SVG 是万维网联盟（W3C）的标准</li>
+<li>SVG 与诸如 DOM 和 XSL 之类的 W3C 标准是一个整体</li>
+<li>SVG 是可伸缩的,其图像可在任何的分辨率下被高质量地显示</li>
+<li>SVG 图像中的文本是可选的，同时也是可搜索的（很适合制作地图）</li>
+<li>SVG 在HTML5标准中可以直接嵌入到浏览器中使用</li>
+</ul>
+
+
+<h2>SVG 实例</h2>
+<p>下面的例子是一个简单的 SVG 文件的例子。SVG 文件必须使用 .svg 后缀来保存：</p>
+<pre>
+&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;
+
+&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot;
+&quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;
+
+&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; version=&quot;1.1&quot;
+xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+
+&lt;circle cx=&quot;100&quot; cy=&quot;50&quot; r=&quot;40&quot; stroke=&quot;black&quot;
+stroke-width=&quot;2&quot; fill=&quot;red&quot;/&gt;
+
+&lt;/svg&gt;
+</pre>
+<p><a href="circle1.svg" >查看例子（仅用于支持 SVG 的浏览器）</a></p>
+<p>（如需查看 SVG 源代码，请打开此例，然后在窗口中右击。选择“查看源代码”。）</p>
+
+<h3>代码解释：</h3>
+<p>第一行包含了 XML 声明。请注意 standalone 属性！该属性规定此 SVG 文件是否是“独立的”，或含有对外部文件的引用。</p>
+<p>standalone=&quot;no&quot; 意味着 SVG 文档会引用一个外部文件 - 在这里，是 DTD 文件。</p>
+<p>第二和第三行引用了这个外部的 SVG DTD。该 DTD 位于 “http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd”。该 DTD 位于 W3C，含有所有允许的 SVG 元素。</p>
+<p>SVG 代码以 &lt;svg&gt; 元素开始，包括开启标签 &lt;svg&gt; 和关闭标签 &lt;/svg&gt; 。这是根元素。width 和 height 属性可设置此 SVG 文档的宽度和高度。version 属性可定义所使用的 SVG 版本，xmlns 属性可定义 SVG 命名空间。</p>
+<p>SVG 的 &lt;circle&gt; 用来创建一个圆。cx 和 cy 属性定义圆中心的 x 和 y 坐标。如果忽略这两个属性，那么圆点会被设置为 (0, 0)。r 属性定义圆的半径。</p>
+<p>stroke 和 stroke-width 属性控制如何显示形状的轮廓。我们把圆的轮廓设置为 2px 宽，黑边框。</p>
+<p>fill 属性设置形状内的颜色。我们把填充颜色设置为红色。</p>
+<p>关闭标签的作用是关闭 SVG 元素和文档本身。</p>
+<p class="note"><span>注释：</span>所有的开启标签必须有关闭标签！</p>
+
+
+    <h2>在HTML中使用SVG</h2>
+    <p>在HTML5之前已经主流浏览器有很多就已经支持SVG文件，可以直接打开SVG文件或者通过iframe嵌入SVG文件。</p>
+    <p>HTML5中定义了一个新标签&lt;svg&gt;，可以直接将SVG图形的定义写在&lt;svg&gt;标签中。
+        通过这种方式嵌入SVG图形，只需要将SVG文件定义的部分之间写到HTML文件中即可，不需要再像SVG文件一样写&lt;?xml&gt;标签和&lt;!DOCTYPE&gt;标签，
+        而且可以很方便地在网页中用Javascript操作SVG图形。
+    </p>
+
+<h2>SVG 形状</h2>
+<p>SVG 有一些预定义的形状元素，可被开发者使用和操作：</p>
+<ul>
+<li>矩形 &lt;rect&gt;</li>
+<li>圆形 &lt;circle&gt;</li>
+<li>椭圆 &lt;ellipse&gt;</li>
+<li>线 &lt;line&gt;</li>
+<li>折线 &lt;polyline&gt;</li>
+<li>多边形 &lt;polygon&gt;</li>
+<li>路径 &lt;path&gt;</li>
+</ul>
+
+    <h2>SVG滤镜</h2>
+    <p>SVG支持很多滤镜效果其中最常用的是高斯滤镜</p>
+
+<h2>SVG渐变</h2>
+    <p>SVG支持渐变效果，比如线性渐变和放射渐变</p>
+
+
+</div>
+</div>
+<script src="../chrX.js"></script>
+</body>

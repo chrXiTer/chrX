@@ -1,0 +1,75 @@
+<html>
+<head>
+</head>
+
+<body>
+
+	<canvas id="chrXCanvasBg" width="1800" height="1800" style="position:absolute; top: 0px; left: 0px;">chrX canvas background</canvas>
+	<canvas id="chrXCanvas_0" width="800" height="800" style="position:absolute; top: 0px; left: 0px;">chrX canvas</canvas>
+	<canvas id="chrXCanvas_1" width="800" height="800" style="position:absolute; top: 0px; left: 0px;">chrX canvas 1</canvas>
+
+
+	<script type = "text/javascript">
+	
+		function f(){
+		}f.prototype.s = 0;
+		f.prototype.s1 = {t:1, d:2};
+		f1 = new f();
+		f2 = new f();	
+		f2.s1.t = 5;
+		console.log(f1.s1.t);
+		
+	
+		if(chrXCanvas_0.getContext){
+			drawBg();
+			draw_0();
+		}
+		
+		function drawBg(){
+			var contextBg = chrXCanvasBg.getContext("2d");
+			contextBg.strokeStyle = "red";
+			contextBg.fillStyle = "#0000ff";
+			contextBg.strokeRect(2, 2, 796, 796);
+			contextBg.fillRect(4, 4, 4, 4);
+			contextBg.strokeStyle = "rgba(0, 0, 225, 0.5)";
+			contextBg.strokeRect(12, 12, 776, 776);
+			contextBg.clearRect(15, 15, 770, 770);
+			
+			contextBg.beginPath();
+			contextBg.arc(300, 200, 120, 0, 2 * Math.PI, true);
+			contextBg.arc(300, 200, 100, 0, 2 * Math.PI, false);
+			contextBg.moveTo(380, 200);
+			contextBg.arc(300, 200, 80, 0, 2 * Math.PI, false);
+			contextBg.lineTo(300,200);
+			contextBg.stroke();
+			
+			contextBg.fillRect(800,0, 20, 20)
+			contextBg.fillStyle = "#00ff00";
+			contextBg.fillRect(800-433.822632, 65.891540,480,320)
+			contextBg.fillStyle = "#ff0000";
+			contextBg.fillRect(800-218.904892,209.170029,50.1645355,33.443023)
+
+			
+		}
+		function draw_0(){
+			var context_0 = chrXCanvas_0.getContext("2d");
+			var mA = 0; 
+			var mR = 50;
+			var mX = 300 + Math.cos(mA)*mR;
+			var mY = 200 + Math.sin(mA)*mR;
+			setInterval(function(){
+				context_0.clearRect(0,0,800,800);
+				context_0.beginPath();
+				context_0.fillStyle = "rgba(0, 255, 0, 0.5)";
+				context_0.arc(mX, mY, 5, 0, 2 * Math.PI, false);
+				context_0.fill();
+				mA += Math.PI/(mR-30);
+				mR+= 0.2;
+				mX = 300 + Math.cos(mA)*mR;
+				mY = 200 + Math.sin(mA)*mR;
+			}, 200);
+		}
+	</script>
+</body>
+
+</html>

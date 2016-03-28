@@ -1,0 +1,144 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL Server DATEDIFF() 函数</h1>
+
+<div class="backtoreference">
+<p><a href="sql_dates.htm"  title="SQL Server Date 函数">SQL Server Date 函数</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>DATEDIFF() 函数返回两个日期之间的天数。</p>
+
+<h3>语法</h3>
+<pre>DATEDIFF(<i>datepart</i>,<i>startdate</i>,<i>enddate</i>)</pre>
+
+<p><i>startdate</i> 和 <i>enddate</i> 参数是合法的日期表达式。</p>
+
+<p><i>datepart</i> 参数可以是下列的值：</p>
+
+<table class="dataintable" style="width:60%;">
+<tr>
+<th>datepart</th>
+<th>缩写</th>
+</tr>
+
+<tr>
+<td>年</td>
+<td>yy, yyyy</td>
+</tr>
+
+<tr>
+<td>季度</td>
+<td>qq, q</td>
+</tr>
+
+<tr>
+<td>月</td>
+<td>mm, m</td>
+</tr>
+
+<tr>
+<td>年中的日</td>
+<td>dy, y</td>
+</tr>
+
+<tr>
+<td>日</td>
+<td>dd, d</td>
+</tr>
+
+<tr>
+<td>周</td>
+<td>wk, ww</td>
+</tr>
+
+<tr>
+<td>星期</td>
+<td>dw, w</td>
+</tr>
+
+<tr>
+<td>小时</td>
+<td>hh</td>
+</tr>
+
+<tr>
+<td>分钟</td>
+<td>mi, n</td>
+</tr>
+
+<tr>
+<td>秒</td>
+<td>ss, s</td>
+</tr>
+
+<tr>
+<td>毫秒</td>
+<td>ms</td>
+</tr>
+
+<tr>
+<td>微妙</td>
+<td>mcs</td>
+</tr>
+
+<tr>
+<td>纳秒</td>
+<td>ns</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<h3>例子 1</h3>
+
+<p>使用如下 SELECT 语句：</p>
+
+<pre>SELECT DATEDIFF(day,'2008-12-29','2008-12-30') AS DiffDate</pre>
+
+<p>结果：</p>
+
+<table class="dataintable" style="width:30%">
+<tr>
+<th>DiffDate</th>
+</tr>
+
+<tr>
+<td>1</td>
+</tr>
+</table>
+
+<h3>例子 2</h3>
+
+<p>使用如下 SELECT 语句：</p>
+
+<pre>SELECT DATEDIFF(day,'2008-12-30','2008-12-29') AS DiffDate</pre>
+
+<p>结果：</p>
+
+<table class="dataintable" style="width:30%">
+<tr>
+<th>DiffDate</th>
+</tr>
+
+<tr>
+<td>-1</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="sql_dates.htm"  title="SQL Server Date 函数">SQL Server Date 函数</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

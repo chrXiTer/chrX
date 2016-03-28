@@ -1,0 +1,122 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML5 canvas lineTo() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>开始一条路径，移动到位置 0,0。创建到达位置 300,150 的一条线：</p>
+
+<canvas id="myCanvas" class="canvas_example">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+var c=document.getElementById("myCanvas");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+	var ctx=c.getContext("2d");
+    ctx.beginPath();
+    ctx.moveTo(0,0);
+    ctx.lineTo(300,150);
+    ctx.stroke();
+	}
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+ctx.beginPath();
+ctx.moveTo(0,0);
+<code>ctx.lineTo(300,150);</code>
+ctx.stroke();
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_lineto')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>lineTo() 方法添加一个新点，然后创建从该点到画布中最后指定点的线条（该方法并不会创建线条）。</p>
+
+<p class="tip"><span>提示：</span>请使用 <a href="canvas_stroke.htm"  title="HTML5 canvas stroke() 方法">stroke()</a> 方法在画布上绘制确切的路径。</p>
+
+<h3>JavaScript 语法：</h3>
+
+<pre>context.lineTo(<i>x</i>,<i>y</i>);</pre>
+
+<h3>参数值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">参数</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>x</i></td>
+<td>路径的目标位置的 x 坐标</td>
+</tr>
+
+<tr>
+<td><i>y</i></td>
+<td>路径的目标位置的 x 坐标</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>更多实例</h2>
+
+<p>绘制一条路径，形状是字母 L：</p>
+
+<canvas id="myCanvas2" class="canvas_example">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+var c=document.getElementById("myCanvas2");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(20,20);
+ctx.lineTo(20,100);
+ctx.lineTo(70,100);
+ctx.stroke();
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+ctx.beginPath();
+ctx.moveTo(20,20);
+<code>ctx.lineTo(20,100);</code>
+<code>ctx.lineTo(70,100);</code>
+ctx.stroke();
+</pre>
+
+<p><a href="javascript:tiy.run('html5_canvas_lineto2')" >亲自试一试</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

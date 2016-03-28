@@ -1,0 +1,59 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;script&gt; 标签的 defer 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_script.htm" >HTML &lt;script&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>defer 属性的使用：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot; <code>defer=&quot;defer&quot;</code>&gt;
+alert(document.getElementById(&quot;p1&quot;).firstChild.nodeValue);
+&lt;/script&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_script_defer')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>defer 属性规定是否对脚本执行进行延迟，直到页面加载为止。</p>
+<p>有的 javascript 脚本 document.write 方法来创建当前的文档内容，其他脚本就不一定是了。</p>
+<p>如果您的脚本不会改变文档的内容，可将 defer 属性加入到 &lt;script&gt; 标签中，以便加快处理文档的速度。因为浏览器知道它将能够安全地读取文档的剩余部分而不用执行脚本，它将推迟对脚本的解释，直到文档已经显示给用户为止。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;script defer=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td><i>defer</i></td>
+    <td>延迟脚本的执行。</td>
+  </tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_script.htm" >HTML &lt;script&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

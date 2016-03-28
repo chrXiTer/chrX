@@ -1,0 +1,89 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;th&gt; 标签的 scope 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_th.htm" >HTML &lt;th&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>下面的例子把两个 th 元素标识为列的表头，把两个 td 元素标识为行的表头：</p>
+
+<pre>
+&lt;table border=&quot;1&quot;&gt;
+  &lt;tr&gt;
+    &lt;th <code>scope=&quot;col&quot;</code>&gt;Month&lt;/th&gt;
+    &lt;th <code>scope=&quot;col&quot;</code>&gt;Savings&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td <code>scope=&quot;row&quot;</code>&gt;1&lt;/td&gt;
+    &lt;td&gt;January&lt;/td&gt;
+    &lt;td&gt;$100.00&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td <code>scope=&quot;row&quot;</code>&gt;2&lt;/td&gt;
+    &lt;td&gt;February&lt;/td&gt;
+    &lt;td&gt;$10.00&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_th_scope')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>scope 属性定义将表头单元与数据单元相关联的方法。</p>
+<p>scope 属性标识某个单元是否是列、行、列组或行组的表头。</p>
+<p>scope 属性不会在普通浏览器中产生任何视觉变化。</p>
+<p>屏幕阅读器可以利用该属性。</p>
+
+<h3>详细解释</h3>
+<p>使用 scope 属性，可以将数据单元格与表头单元格联系起来。</p>
+<p>通过属性值 row，表头行包括的所有表格都将和表头单元格联系起来。指定 col，会将当前列的所有单元格和表头单元格绑定起来。</p>
+<p>使用 rowgroup 和 colgroup 会将单元格的行组（由 &lt;thead&gt;、&lt;tbody&gt; 或 &lt;tfoot&gt; 标签定义）或列组中的所有单元格和表头单元格绑定起来（由 &lt;col&gt; 或 &lt;colgroup&gt; 标签定义）。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;th scope=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable"> 
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>col</td>
+    <td>规定单元格是列的表头。</td>
+  </tr>
+	<tr>
+    <td>row</td>
+    <td>规定单元格是行的表头。</td>
+  </tr>
+	<tr>
+    <td>colgroup</td>
+    <td>规定单元格是列组的表头。</td>
+  </tr>
+  <tr>
+    <td>rowgroup</td>
+    <td>规定单元格是行组的表头。</td>
+  </tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_th.htm" >HTML &lt;th&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

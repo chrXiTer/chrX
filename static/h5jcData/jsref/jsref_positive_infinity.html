@@ -1,0 +1,80 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript POSITIVE_INFINITY 属性</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_number.htm"  title="JavaScript Number 对象">JavaScript Number 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>POSITIVE_INFINITY 属性表示大于 Number.MAX_VALUE 的值。</p>
+
+<p>该值代表正无穷大。</p>
+
+<h3>语法</h3>
+
+<pre>Number.POSITIVE_INFINITY</pre>
+
+<h3>说明</h3>
+
+<p>Number.POSITIVE_INFINITY 是一个特殊值，它在算术运算或函数生成一个比 JavaScript 能表示的最大的数还大的数（也就是比 Number.MAX_VALUE 还大的数）时返回。</p>
+
+<p>JavaScript 显示 POSITIVE_INFINITY 时使用的是 Infinity。这个值的算术行为和无穷大非常相似。例如，任何数乘无穷大结果仍为无穷大，任何数被无穷大除的结果为 0。</p>
+
+<p>在 ECMAScript v1 和其后的版本中，还可以用 Infinity 代替 Number.POSITIVE_INFINITY。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在本例中，我们将使用 POSITIVE_INFINITY：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var x=(Number.MAX_VALUE)*2
+if (x==<code>Number.POSITIVE_INFINITY</code>)
+  {
+  document.write(&quot;Value of x: &quot; + x);
+  }
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>Value of x: Infinity</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('jseg_positive_infinity')" >TIY</a></p>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_positive_infinity')" >POSITIVE_INFINITY</a></dt>
+<dd>如何通过 POSITIVE_INFINITY 来判断一个值是否是正无穷大。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>JavaScript 全局对象参考手册：<a href="jsref_infinity.htm"  title="JavaScript Infinity 属性">Infinity 属性</a></p>
+
+<p>JavaScript 全局对象参考手册：<a href="jsref_isFinite.htm"  title="JavaScript isFinite() 函数">isFinite() 函数</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_number.htm"  title="JavaScript Number 对象">JavaScript Number 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

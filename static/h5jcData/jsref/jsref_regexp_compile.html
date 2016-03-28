@@ -1,0 +1,87 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript compile() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_regexp.htm"  title="JavaScript RegExp 对象">JavaScript RegExp 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>compile() 方法用于在脚本执行过程中编译正则表达式。</p>
+
+<p>compile() 方法也可用于改变和重新编译正则表达式。</p>
+
+<h3>语法</h3>
+
+<pre>RegExpObject.compile(<i>regexp</i>,<i>modifier</i>)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>regexp</td>
+    <td>正则表达式。</td>
+  </tr>
+  <tr>
+    <td>modifier</td>
+    <td>规定匹配的类型。&quot;g&quot; 用于全局匹配，&quot;i&quot; 用于区分大小写，&quot;gi&quot; 用于全局区分大小写的匹配。</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在字符串中全局搜索 &quot;man&quot;，并用 &quot;person&quot; 替换。然后通过 compile() 方法，改变正则表达式，用 &quot;person&quot; 替换 &quot;man&quot; 或 &quot;woman&quot;，：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var str=&quot;Every man in the world! Every woman on earth!&quot;;
+
+patt=/man/g;
+str2=str.replace(patt,&quot;person&quot;);
+document.write(str2+&quot;&lt;br /&gt;&quot;);
+
+<span style="color:red;">patt=/(wo)?man/g;</span>
+<code>patt.compile(patt);</code>
+str2=str.replace(patt,&quot;person&quot;);
+document.write(str2);
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>
+Every person in the world! Every woperson on earth!
+Every person in the world! Every person on earth!
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('jseg_regexp_compile_ref')" >TIY</a></p>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_regexp_compile_ref')" >compile()</a></dt>
+<dd>如何使用 compile() 来改变正则表达式。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_regexp.htm"  title="JavaScript RegExp 对象">JavaScript RegExp 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

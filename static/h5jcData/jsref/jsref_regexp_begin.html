@@ -1,0 +1,72 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript RegExp \b 元字符</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_regexp.htm"  title="JavaScript RegExp 对象">JavaScript RegExp 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>\b 元字符匹配单词边界。</p>
+
+<p>在单词边界匹配的位置，单词字符后面或前面不与另一个单词字符直接相邻。请注意，匹配的单词边界并不包含在匹配中。换句话说，匹配的单词边界的长度为零。（不要与 [\b] 混淆。）</p>
+
+<p>如果未找到匹配，则返回 null。</p>
+
+<p class="tip"><span>提示：</span>\b 元字符通常用于查找位于单词的开头或结尾的匹配。</p>
+
+<h3>例子：</h3>
+
+<p>/\bm/ 匹配 &quot;moon&quot; 中的 'm'；</p>
+<p>/oo\b/ 不匹配 &quot;moon&quot; 中的 'oo'，因为 'oo' 后面的 'n' 是一个单词字符；</p>
+<p>/oon\b/ 匹配 &quot;moon&quot; 中的 'oon'，因为 'oon' 位于字符串的末端，后面没有单词字符；</p>
+<p>/\w\b\w/ 不匹配任何字符，因为单词字符之后绝不会同时紧跟着非单词字符和单词字符。</p>
+
+<p class="tiy"><a href="javascript:tiy.run('jseg_regexp_boundary2')" >亲自试一试</a></p>
+
+<h3>语法</h3>
+
+<pre>new RegExp(&quot;\b<i>regexp</i>&quot;)</pre>
+
+<p>直接量语法：</p>
+
+<pre>/\b<i>regexp</i>/</pre>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+
+<p>所有主流浏览器都支持 \b 元字符。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>对字符串中的单词的开头或结尾进行 &quot;W3&quot; 的全局搜索：</p>
+
+<pre>
+var str=&quot;Visit W3School&quot;;
+var patt1=<code>/\bW3/g</code>;
+</pre>
+
+<p>下面被标记的文本显示了表达式获得匹配的位置：</p>
+
+<pre>Visit <span class="marked">W3</span>School</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('jseg_regexp_boundary')" >亲自试一试</a></p>
+
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_regexp.htm"  title="JavaScript RegExp 对象">JavaScript RegExp 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

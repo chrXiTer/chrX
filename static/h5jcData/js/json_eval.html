@@ -1,0 +1,49 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JSON 使用</h1>
+
+<h2>把 JSON 文本转换为 JavaScript 对象</h2>
+<p>JSON 最常见的用法之一，是从 web 服务器上读取 JSON 数据（作为文件或作为 HttpRequest），将 JSON 数据转换为 JavaScript 对象，然后在网页中使用该数据。</p>
+<p>为了更简单地为您讲解，我们使用字符串作为输入进行演示（而不是文件）。</p>
+
+<h2>JSON 实例 - 来自字符串的对象</h2>
+<p>创建包含 JSON 语法的 JavaScript 字符串：</p>
+<pre>
+var txt = '{ &quot;employees&quot; : [' +
+'{ &quot;firstName&quot;:&quot;Bill&quot; , &quot;lastName&quot;:&quot;Gates&quot; },' +
+'{ &quot;firstName&quot;:&quot;George&quot; , &quot;lastName&quot;:&quot;Bush&quot; },' +
+'{ &quot;firstName&quot;:&quot;Thomas&quot; , &quot;lastName&quot;:&quot;Carter&quot; } ]}';
+</pre>
+<p>由于 JSON 语法是 JavaScript 语法的子集，JavaScript 函数 eval() 可用于将 JSON 文本转换为 JavaScript 对象。</p>
+<p>eval() 函数使用的是 JavaScript 编译器，可解析 JSON 文本，然后生成 JavaScript 对象。必须把文本包围在括号中，这样才能避免语法错误：</p>
+<pre>var obj = eval (&quot;(&quot; + txt + &quot;)&quot;);</pre>
+<p>在网页中使用 JavaScript 对象：</p>
+
+<h3>例子</h3>
+<pre>
+&lt;p&gt;
+First Name: &lt;span id=&quot;fname&quot;&gt;&lt;/span&gt;&lt;br /&gt;
+Last Name: &lt;span id=&quot;lname&quot;&gt;&lt;/span&gt;&lt;br /&gt;
+&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+document.getElementById(&quot;fname&quot;).innerHTML = obj.employees[1].firstName
+document.getElementById(&quot;lname&quot;).innerHTML = obj.employees[1].lastName
+&lt;/script&gt;
+</pre>
+<p class="tiy"><a href="javascript:tiy.run('json_eval')" >亲自试一试</a></p>
+
+<h2>JSON 解析器</h2>
+<p class="tip"><span>提示：</span>eval() 函数可编译并执行任何 JavaScript 代码。这隐藏了一个潜在的安全问题。</p>
+<p>使用 JSON 解析器将 JSON 转换为 JavaScript 对象是更安全的做法。JSON 解析器只能识别 JSON 文本，而不会编译脚本。</p>
+<p>在浏览器中，这提供了原生的 JSON 支持，而且 JSON 解析器的速度更快。</p>
+<p>较新的浏览器和最新的 ECMAScript (JavaScript) 标准中均包含了原生的对 JSON 的支持。</p>
+<p class="tiy"><a href="javascript:tiy.run('json_parse')" >亲自试一试</a></p>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

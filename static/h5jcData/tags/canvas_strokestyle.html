@@ -1,0 +1,192 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 canvas strokeStyle 属性</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>绘制一个矩形。请用蓝色的笔触颜色：</p>
+
+<canvas id="myCanvas" class="canvas_example">
+Your browser does not support the canvas tag.
+</canvas>
+
+<script type="text/javascript">
+var c=document.getElementById("myCanvas");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+	var ctx=c.getContext("2d");
+	ctx.strokeStyle="#0000ff";
+	ctx.strokeRect(20,20,150,100);
+	}
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+<code>ctx.strokeStyle=&quot;#0000ff&quot;;</code>
+ctx.strokeRect(20,20,150,100);
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_strokestyle')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>strokeStyle 属性设置或返回用于笔触的颜色、渐变或模式。</p>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">默认值：</th>
+<td>#000000</td>
+</tr>
+
+<tr>
+<th>JavaScript 语法：</th>
+<td>context.strokeStyle=<i>color</i>|<i>gradient</i>|<i>pattern</i>;</td>
+</tr>
+</table>
+
+<h3>属性值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>color</i></td>
+<td>指示绘图笔触颜色的 <a href="/chrX/nofile/123cssref/css_colors_legal.asp" vvll="my"  title="CSS 合法颜色值">CSS 颜色值</a>。默认值是 #000000。</td>
+</tr>
+
+<tr>
+<td><i>gradient</i></td>
+<td>用于填充绘图的渐变对象（<a href="canvas_createlineargradient.htm"  title="HTML5 canvas createLinearGradient() 方法">线性</a>或<a href="canvas_createradialgradient.htm"  title="HTML5 canvas createRadialGradient() 方法">放射性</a>）</td>
+</tr>
+
+<tr>
+<td><i>pattern</i></td>
+<td>用于创建 pattern 笔触的 pattern 对象</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>更多实例</h2>
+
+<h3>实例 1</h3>
+
+<p>绘制一个矩形。使用渐变笔触：</p>
+
+<canvas id="myCanvas2" class="canvas_example">
+Your browser does not support the canvas tag.
+</canvas>
+
+<script type="text/javascript">
+var c=document.getElementById("myCanvas2");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+var ctx=c.getContext("2d");
+var gradient=ctx.createLinearGradient(0,0,170,0);
+gradient.addColorStop("0","magenta");
+gradient.addColorStop("0.5","blue");
+gradient.addColorStop("1.0","red");
+// 用渐变进行填充
+ctx.lineWidth=5;
+ctx.strokeStyle=gradient;
+ctx.strokeRect(20,20,150,100);
+	}
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+
+var gradient=ctx.createLinearGradient(0,0,170,0);
+gradient.addColorStop(&quot;0&quot;,&quot;magenta&quot;);
+gradient.addColorStop(&quot;0.5&quot;,&quot;blue&quot;);
+gradient.addColorStop(&quot;1.0&quot;,&quot;red&quot;);
+
+<span>// 用渐变进行填充</span>
+<code>ctx.strokeStyle=gradient;</code>
+ctx.lineWidth=5;
+ctx.strokeRect(20,20,150,100);
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_strokestyle2')" >亲自试一试</a></p>
+
+<h3>实例 2</h3>
+
+<p>用一个渐变笔触来写文本 &quot;w3school.com.cn&quot;：</p>
+
+<canvas id="myCanvas3" class="canvas_example">
+Your browser does not support the canvas tag.
+</canvas>
+
+<script type="text/javascript">
+var c=document.getElementById("myCanvas3");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+var ctx=c.getContext("2d");
+ctx.font="30px Verdana";
+// 创建渐变
+var gradient=ctx.createLinearGradient(0,0,c.width,0);
+gradient.addColorStop("0","magenta");
+gradient.addColorStop("0.5","blue");
+gradient.addColorStop("1.0","red");
+// 用渐变进行填充
+ctx.strokeStyle=gradient;
+ctx.strokeText("w3school.com.cn.htm",10,50);
+	}
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+
+ctx.font=&quot;30px Verdana&quot;;
+<span>// 创建渐变</span>
+var gradient=ctx.createLinearGradient(0,0,c.width,0);
+gradient.addColorStop(&quot;0&quot;,&quot;magenta&quot;);
+gradient.addColorStop(&quot;0.5&quot;,&quot;blue&quot;);
+gradient.addColorStop(&quot;1.0&quot;,&quot;red&quot;);
+<span>// 用渐变进行填充</span>
+ctx.strokeStyle=gradient;
+ctx.strokeText(&quot;Big smile!&quot;,10,50);
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_strokestyle3')" >亲自试一试</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

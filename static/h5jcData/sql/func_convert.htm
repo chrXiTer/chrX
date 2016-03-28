@@ -1,0 +1,163 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL Server CONVERT() 函数</h1>
+
+<div class="backtoreference">
+<p><a href="sql_dates.htm"  title="SQL Server Date 函数">SQL Server Date 函数</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>CONVERT() 函数是把日期转换为新数据类型的通用函数。</p>
+
+<p>CONVERT() 函数可以用不同的格式显示日期/时间数据。</p>
+
+<h3>语法</h3>
+<pre>CONVERT(<i>data_type(length)</i>,<i>data_to_be_converted</i>,<i>style</i>)</pre>
+
+<p><i>data_type(length)</i> 规定目标数据类型（带有可选的长度）。<i>data_to_be_converted</i> 含有需要转换的值。<i>style</i> 规定日期/时间的输出格式。</p>
+
+<p>可以使用的 <i>style</i> 值：</p>
+
+<table class="dataintable">
+<tr>
+<th>Style ID</th>
+<th>Style 格式</th>
+</tr>
+
+<tr>
+<td>100 或者 0</td>
+<td>mon dd yyyy hh:miAM （或者 PM）</td>
+</tr>
+
+<tr>
+<td>101</td>
+<td>mm/dd/yy</td>
+</tr>
+
+<tr>
+<td>102</td>
+<td>yy.mm.dd</td>
+</tr>
+
+<tr>
+<td>103</td>
+<td>dd/mm/yy</td>
+</tr>
+
+<tr>
+<td>104</td>
+<td>dd.mm.yy</td>
+</tr>
+
+<tr>
+<td>105</td>
+<td>dd-mm-yy</td>
+</tr>
+
+<tr>
+<td>106</td>
+<td>dd mon yy</td>
+</tr>
+
+<tr>
+<td>107</td>
+<td>Mon dd, yy</td>
+</tr>
+
+<tr>
+<td>108</td>
+<td>hh:mm:ss</td>
+</tr>
+
+<tr>
+<td>109 或者 9</td>
+<td>mon dd yyyy hh:mi:ss:mmmAM（或者 PM）</td>
+</tr>
+
+<tr>
+<td>110</td>
+<td>mm-dd-yy</td>
+</tr>
+
+<tr>
+<td>111</td>
+<td>yy/mm/dd</td>
+</tr>
+
+<tr>
+<td>112</td>
+<td>yymmdd</td
+></tr>
+
+<tr>
+<td>113 或者 13</td>
+<td>dd mon yyyy hh:mm:ss:mmm(24h)</td>
+</tr>
+
+<tr>
+<td>114</td>
+<td>hh:mi:ss:mmm(24h)</td>
+</tr>
+
+<tr>
+<td>120 或者 20</td>
+<td>yyyy-mm-dd hh:mi:ss(24h)</td>
+</tr>
+
+<tr>
+<td>121 或者 21</td>
+<td>yyyy-mm-dd hh:mi:ss.mmm(24h)</td>
+</tr>
+
+<tr>
+<td>126</td>
+<td>yyyy-mm-ddThh:mm:ss.mmm（没有空格）</td>
+</tr>
+
+<tr>
+<td>130</td>
+<td>dd mon yyyy hh:mi:ss:mmmAM</td>
+</tr>
+
+<tr>
+<td>131</td>
+<td>dd/mm/yy hh:mi:ss:mmmAM</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>下面的脚本使用 CONVERT() 函数来显示不同的格式。我们将使用 GETDATE() 函数来获得当前的日期/时间：</p>
+
+<pre>
+CONVERT(VARCHAR(19),GETDATE())
+CONVERT(VARCHAR(10),GETDATE(),110) 
+CONVERT(VARCHAR(11),GETDATE(),106)
+CONVERT(VARCHAR(24),GETDATE(),113)
+</pre>
+
+<p>结果类似：</p>
+
+<pre>
+Dec 29 2008 11:45 PM
+12-29-2008
+29 Dec 08
+29 Dec 2008 16:25:46.635
+</pre>
+</div>
+
+<div class="backtoreference">
+<p><a href="sql_dates.htm"  title="SQL Server Date 函数">SQL Server Date 函数</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,40 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript window screen</h1>
+<p>window.screen 对象包含有关用户屏幕的信息。</p>
+<p><em>window.screen</em> 对象在编写时可以不使用 window 这个前缀。</p>
+<p>每个 window 对象的 screen 属性都引用一个 screen 对象。screen 对象中存放着有关显示浏览器屏幕的信息。一个 JavaScript 程序可以根据显示器的尺寸选择使用大图像还是使用小图像，根据屏幕尺寸信息将新的浏览器窗口定位在屏幕中间等。</p>
+
+<h2>screen 可用宽度</h2>
+<p>screen.availWidth 属性返回访问者屏幕的宽度，以像素计，减去界面特性，比如窗口任务栏。</p>
+<p>返回您的屏幕的可用宽度：</p>
+<pre>
+&lt;script&gt;
+document.write(&quot;可用宽度：&quot; + <code>screen.availWidth</code>);
+&lt;/script&gt;
+</pre>
+
+<p>以上代码输出为：</p>
+<pre><script>document.write("可用宽度：" + screen.availWidth);</script></pre>
+<p class="tiy"><a href="javascript:tiy.run('js_window_screen_availwidth')" >亲自试一试</a></p>
+
+<h2>screen 可用高度</h2>
+<p>screen.availHeight 属性返回访问者屏幕的高度，以像素计，减去界面特性，比如窗口任务栏。</p>
+<p>返回您的屏幕的可用高度：</p>
+<pre>
+&lt;script&gt;
+document.write(&quot;可用高度：&quot; + <code>screen.availHeight</code>);
+&lt;/script&gt;
+</pre>
+
+<p>以上代码输出为：</p>
+<pre><script>document.write("可用高度：" + screen.availHeight);</script></pre>
+<p class="tiy"><a href="javascript:tiy.run('js_window_screen_availheight')" >亲自试一试</a></p>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

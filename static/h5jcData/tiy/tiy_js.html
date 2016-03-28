@@ -1,0 +1,2184 @@
+﻿<script>
+var f = function(){
+	var href = location.href;
+	var index = href.indexOf("#")
+	if(index == -1) return;
+	var varg = href.substring(index + 1)
+	var strid = "tiyiframe_" + varg
+	var iframeSource = document.getElementById(strid)
+	var iframeTarget = document.getElementById("tiyiframe_iframe")
+	var textareaE = document.getElementById('tiyiframe_textarea')
+	if(!iframeSource){
+		textareaE.innerText("示例代码不存在")
+		return
+	}
+		
+	var htmlStr = iframeSource.textContent;
+	var newDoc=iframeTarget.contentDocument.open("text/html","replace");
+	newDoc.write(htmlStr)
+	newDoc.close()
+	
+	textareaE.innerText = htmlStr
+	
+	var buttonE = document.getElementById("tiyiframe_button")
+	buttonE.onclick = function(){
+			var textareaE = document.getElementById('tiyiframe_textarea')
+			var eIframe = document.getElementById('tiyiframe_iframe')
+			var newDoc=eIframe.contentDocument.open("text/html","replace")
+			newDoc.write(textareaE.value)
+			newDoc.close()
+	}
+}
+window.onload = f;
+window.onresize = f;
+
+</script>
+
+<div style="width:100%; height:13px; background-color:yellow">实验<span style="float:right; background-color:red">X</span></div>
+<iframe id="tiyiframe_iframe" style="width:100%;height:40%;background-color:#ffffff">
+</iframe>
+<p style="height:8%;margin:0px; padding:0px">编辑代码：
+    <input id="tiyiframe_button" type="button" value="查看效果" style="float:right; margin-right:20px"></input>
+</p>
+<textarea id="tiyiframe_textarea" style="width:90%; height:35%;"></textarea>
+</br>
+
+<div style="visibility:hidden;display:none">
+<iframe id="tiyiframe_js_blocks">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My Web Page</h1>
+
+<p id="myPar">I am a paragraph.</p>
+<div id="myDiv">I am a div.</div>
+
+<p>
+<button type="button" onclick="myFunction()">点击这里</button>
+</p>
+
+<script>
+function myFunction()
+{
+document.getElementById("myPar").innerHTML="Hello World";
+document.getElementById("myDiv").innerHTML="How are you?";
+}
+</script>
+
+<p>当您点击上面的按钮时，两个元素会改变。</p>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_break">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>点击按钮，测试带有 break 语句的循环。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var x="",i=0;
+for (i=0;i<10;i++)
+  {
+  if (i==3)
+    {
+    break;
+    }
+  x=x + "The number is " + i + "<br>";
+  }
+document.getElementById("demo").innerHTML=x;
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_break_label">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+cars=["BMW","Volvo","Saab","Ford"];
+list:
+{
+document.write(cars[0] + "<br>"); 
+document.write(cars[1] + "<br>"); 
+document.write(cars[2] + "<br>"); 
+break list;
+document.write(cars[3] + "<br>"); 
+document.write(cars[4] + "<br>"); 
+document.write(cars[5] + "<br>"); 
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_change_style">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="p1">Hello World!</p>
+<p id="p2">Hello World!</p>
+
+<script>
+document.getElementById("p2").style.color="blue";
+document.getElementById("p2").style.fontFamily="Arial";
+document.getElementById("p2").style.fontSize="larger";
+</script>
+
+<p>上面的段落已被一段脚本修改。</p>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_change_style2">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="id1">My Heading 1</h1>
+<button type="button" 
+onclick="document.getElementById('id1').style.color='red'">
+点击这里！</button>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_change_style_visibility">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="p1">这是一段文本。</p>
+
+<input type="button" value="隐藏文本" onclick="document.getElementById('p1').style.visibility='hidden'" />
+<input type="button" value="显示文本" onclick="document.getElementById('p1').style.visibility='visible'" />
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_comments1">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="myH1"></h1>
+
+<p id="myP"></p>
+
+<script>
+// 输出标题：
+document.getElementById("myH1").innerHTML="Welcome to my Homepage";
+// 输出段落：
+document.getElementById("myP").innerHTML="This is my first paragraph.";
+</script>
+
+<p><b>注释：</b>注释不会被执行。</p>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_comments2">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="myH1"></h1>
+
+<p id="myP"></p>
+
+<script>
+/*
+下面的这些代码会输出
+一个标题和一个段落
+并将代表主页的开始
+*/
+document.getElementById("myH1").innerHTML="Welcome to my Homepage";
+document.getElementById("myP").innerHTML="This is my first paragraph.";
+</script>
+
+<p><b>注释：</b>注释块不会被执行。</p>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_comments3">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="myH1"></h1>
+
+<p id="myP"></p>
+
+<script>
+//document.getElementById("myH1").innerHTML="Welcome to my Homepage";
+document.getElementById("myP").innerHTML="This is my first paragraph.";
+</script>
+
+<p><b>注释：</b>注释不会被执行。</p>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_comments4">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="myH1"></h1>
+
+<p id="myP"></p>
+
+<script>
+/*
+document.getElementById("myH1").innerHTML="Welcome to my Homepage";
+document.getElementById("myP").innerHTML="This is my first paragraph.";
+*/
+</script>
+
+<p><b>注释：</b>注释块不会被执行。</p>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_comments5">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="myP"></p>
+
+<script>
+var x=5;   // 声明 x 并把 5 赋值给它
+var y=x+2; // 声明 y 并把 x+2 赋值给它
+document.getElementById("myP").innerHTML=y // 把 y 的值写到 myP
+</script>
+
+<p><b>注释：</b>注释不会被执行。</p>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_continue">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>点击下面的按钮来执行循环，该循环会跳过 i=3 的步进。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var x="",i=0;
+for (i=0;i<10;i++)
+  {
+  if (i==3)
+    {
+    continue;
+    }
+  x=x + "The number is " + i + "<br>";
+  }
+document.getElementById("demo").innerHTML=x;
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_create_object">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+person=new Object();
+person.firstname="Bill";
+person.lastname="Gates";
+person.age=56;
+person.eyecolor="blue";
+document.write(person.firstname + " is " + person.age + " years old.");
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_create_object1">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+person={firstname:"Bill",lastname:"gates",age:56,eyecolor:"blue"}
+
+document.write(person.firstname + " is " + person.age + " years old.");
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_create_object2">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function person(firstname,lastname,age,eyecolor)
+{
+this.firstname=firstname;
+this.lastname=lastname;
+this.age=age;
+this.eyecolor=eyecolor;
+}
+
+myFather=new person("Bill","Gates",56,"blue");
+
+document.write(myFather.firstname + " is " + myFather.age + " years old.");
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_create_object3">
+
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function person(firstname,lastname,age,eyecolor)
+{
+this.firstname=firstname;
+this.lastname=lastname;
+this.age=age;
+this.eyecolor=eyecolor;
+ 
+this.changeName=changeName;
+function changeName(name)
+{
+this.lastname=name;
+}
+}
+myMother=new person("Steve","Jobs",56,"green");
+myMother.changeName("Ballmer");
+document.write(myMother.lastname);
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_data1">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+var x=2;
+var y=3;
+var z=2+3;
+
+document.write(x + "<br>");
+document.write(y + "<br>");
+document.write(z + "<br>");
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_data2">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+var pi=3.14;
+var name="Bill Gates";
+var answer='Yes I am!';
+
+document.write(pi + "<br>");
+document.write(name + "<br>");
+document.write(answer + "<br>");
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_datatypes_array">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+var i;
+var cars = new Array();
+cars[0] = "Audi";
+cars[1] = "BMW";
+cars[2] = "Volvo";
+
+for (i=0;i<cars.length;i++)
+{
+document.write(cars[i] + "<br>");
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_datatypes_object">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+var person={
+firstname : "Bill",
+lastname  : "Gates",
+id        :  5566
+};
+document.write(person.lastname + "<br />");
+document.write(person["lastname"] + "<br />");
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_datatypes_string">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+var carname1="Bill Gates";
+var carname2='Bill Gates';
+var answer1="Nice to meet you!";
+var answer2="He is called 'Bill'";
+var answer3='He is called "Bill"';
+
+document.write(carname1 + "<br>")
+document.write(carname2 + "<br>")
+document.write(answer1 + "<br>")
+document.write(answer2 + "<br>")
+document.write(answer3 + "<br>")
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_dom">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+
+<p id="demo">My First Paragraph.</p>
+
+<script>
+document.getElementById("demo").innerHTML="My First JavaScript";
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_dom_change_html_attribute">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<img id="image" src="../i/eg_tulip.jpg" />
+
+<script>
+document.getElementById("image").src="../i/shanghai_lupu_bridge.jpg"/*tpa=http://w3school.com.cn/i/shanghai_lupu_bridge.jpg*/;
+</script>
+
+<p>原始图片是郁金香（eg_tulip.jpg），但是已被修改为卢浦大桥（shanghai_lupu_bridge.jpg）。</p>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_dom_change_html_innerhtml">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="p1">Hello World!</p>
+
+<script>
+document.getElementById("p1").innerHTML="New text!";
+</script>
+
+<p>上面的段落被一条 JavaScript 脚本修改了。</p>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_dom_change_html_innerhtml2">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="header">Old Header</h1>
+
+<script>
+var element=document.getElementById("header");
+element.innerHTML="New Header";
+</script>
+
+<p>"Old Header" 已被修改为 "New Header"。</p>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_dom_change_html_output_stream">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+document.write(Date());
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_dom_elementcreate">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="div1">
+<p id="p1">这是一个段落。</p>
+<p id="p2">这是另一个段落。</p>
+</div>
+
+<script>
+var para=document.createElement("p");
+var node=document.createTextNode("这是新段落。");
+para.appendChild(node);
+
+var element=document.getElementById("div1");
+element.appendChild(para);
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_dom_elementremove">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="div1">
+<p id="p1">这是一个段落。</p>
+<p id="p2">这是另一个段落。</p>
+</div>
+
+<script>
+var parent=document.getElementById("div1");
+var child=document.getElementById("p1");
+parent.removeChild(child);
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_dom_event_onchange">
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction()
+{
+var x=document.getElementById("fname");
+x.value=x.value.toUpperCase();
+}
+</script>
+</head>
+<body>
+
+请输入英文字符：<input type="text" id="fname" onchange="myFunction()">
+<p>当您离开输入字段时，会触发将输入文本转换为大写的函数。</p>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_dom_event_onclick1">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 onclick="this.innerHTML='谢谢!'">请点击该文本</h1>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_dom_event_onclick2">
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function changetext(id)
+{
+id.innerHTML="谢谢!";
+}
+</script>
+</head>
+<body>
+
+<h1 onclick="changetext(this)">请点击该文本</h1>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_dom_event_onclick3">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>点击按钮就可以执行 <em>displayDate()</em> 函数。</p>
+
+<button onclick="displayDate()">点击这里</button>
+
+<script>
+function displayDate()
+{
+document.getElementById("demo").innerHTML=Date();
+}
+</script>
+
+<p id="demo"></p>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_dom_event_onclick4">
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<p>点击按钮就可以执行 <em>displayDate()</em> 函数。</p>
+
+<button id="myBtn">点击这里</button>
+
+<script>
+document.getElementById("myBtn").onclick=function(){displayDate()};
+function displayDate()
+{
+document.getElementById("demo").innerHTML=Date();
+}
+</script>
+
+<p id="demo"></p>
+
+</body>
+</html> 
+
+</iframe>
+
+<iframe id="tiyiframe_js_dom_event_onfocus">
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction(x)
+{
+x.style.background="yellow";
+}
+</script>
+</head>
+<body>
+
+请输入英文字符：<input type="text" onfocus="myFunction(this)">
+
+<p>当输入字段获得焦点时，会触发改变背景颜色的函数。</p>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_dom_event_onload2">
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+function mymessage()
+{
+alert("这段消息由 onload 事件触发");
+}
+</script>
+</head>
+
+<body onload="mymessage()">
+</body>
+
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_dom_event_onload_onunload">
+
+<!DOCTYPE html>
+<html>
+<body onload="checkCookies()">
+
+<script>
+function checkCookies()
+{
+if (navigator.cookieEnabled==true)
+	{
+	alert("已启用 cookie")
+	}
+else
+	{
+	alert("未启用 cookie")
+	}
+}
+</script>
+
+<p>提示框会告诉你，浏览器是否已启用 cookie。</p>
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_dom_event_onmouse">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 onmouseover="style.color='red'" onmouseout="style.color='blue'">
+请把鼠标移到这段文本上
+</h1>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_dom_event_onmousedown_onmouseup">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color:green;color:#ffffff;width:90px;height:20px;padding:40px;font-size:12px;">请点击这里</div>
+
+<script>
+function mDown(obj)
+{
+obj.style.backgroundColor="#1ec5e5";
+obj.innerHTML="请释放鼠标按钮"
+}
+
+function mUp(obj)
+{
+obj.style.backgroundColor="green";
+obj.innerHTML="请按下鼠标按钮"
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_dom_event_onmousedown_onmouseup2">
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function lighton()
+{
+document.getElementById('myimage').src="../i/eg_bulbon.gif"/*tpa=http://w3school.com.cn/i/eg_bulbon.gif*/;
+}
+function lightoff()
+{
+document.getElementById('myimage').src="../i/eg_bulboff.gif"/*tpa=http://w3school.com.cn/i/eg_bulboff.gif*/;
+}
+</script>
+</head>
+
+<body>
+<img id="myimage" onmousedown="lighton()" onmouseup="lightoff()" src="../i/eg_bulboff.gif" />
+<p>按住鼠标不放可以点亮这盏灯！</p>
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_dom_event_onmouseover_onmouseout">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:green;width:120px;height:20px;padding:40px;color:#ffffff;">把鼠标移到上面</div>
+
+<script>
+function mOver(obj)
+{
+obj.innerHTML="谢谢"
+}
+
+function mOut(obj)
+{
+obj.innerHTML="把鼠标移到上面"
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_dom_getelementbyid">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="intro">Hello World!</p>
+<p>本例演示 <b>getElementById</b> 方法！</p>
+
+<script>
+x=document.getElementById("intro");
+document.write('<p>id=&quot;intro&quot; 的段落中的文本是：' + x.innerHTML + '</p>');
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_dom_getelementsbytagname">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Hello World!</p>
+
+<div id="main">
+<p>The DOM is very useful.</p>
+<p>本例演示 <b>getElementsByTagName</b> 方法。</p>
+</div>
+
+<script>
+var x=document.getElementById("main");
+var y=x.getElementsByTagName("p");
+document.write('id 为 "main" 的 div 中的第一段文本是：' + y[0].innerHTML);
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_dowhile">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>点击下面的按钮，只要 i 小于 5 就一直循环代码块。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var x="",i=0;
+do
+  {
+  x=x + "The number is " + i + "<br>";
+  i++;
+  }
+while (i<5)  
+document.getElementById("demo").innerHTML=x;
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_elseif">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>点击这个按钮，获得基于时间的问候。</p>
+
+<button onclick="myFunction()">点击这里</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var x="";
+var time=new Date().getHours();
+if (time<10)
+  {
+  x="Good morning";
+  }
+else if (time<20)
+  {
+  x="Good day";
+  }
+else
+  {
+  x="Good evening";
+  }
+document.getElementById("demo").innerHTML=x;
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_externalexample">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My Web Page</h1>
+
+<p id="demo">A Paragraph.</p>
+
+<button type="button" onclick="myFunction()">点击这里</button>
+
+<p><b>注释：</b>myFunction 保存在名为 "myScript.js" 的外部文件中。</p>
+
+<script type="text/javascript" src="../js/myScript.js" ></script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_function1">
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction()
+{
+alert("Hello World!");
+}
+</script>
+</head>
+
+<body>
+<button onclick="myFunction()">点击这里</button>
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_function2">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>点击这个按钮，来调用带参数的函数。</p>
+
+<button onclick="myFunction('Bill Gates','CEO')">点击这里</button>
+
+<script>
+function myFunction(name,job)
+{
+alert("Welcome " + name + ", the " + job);
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_function3">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>请点击其中的一个按钮，来调用带参数的函数。</p>
+
+<button onclick="myFunction('Harry Potter','Wizard')">点击这里</button>
+<button onclick="myFunction('Bob','Builder')">点击这里</button>
+
+<script>
+function myFunction(name,job)
+{
+alert("Welcome " + name + ", the " + job);
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_function_return">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>本例调用的函数会执行一个计算，然后返回结果：</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(a,b)
+{
+return a*b;
+}
+
+document.getElementById("demo").innerHTML=myFunction(4,3);
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_ifthen">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>如果时间早于 20:00，会获得问候 "Good day"。</p>
+
+<button onclick="myFunction()">点击这里</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var x="";
+var time=new Date().getHours();
+if (time<20)
+  {
+  x="Good day";
+  }
+document.getElementById("demo").innerHTML=x;
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_ifthenelse">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>点击这个按钮，获得基于时间的问候。</p>
+
+<button onclick="myFunction()">点击这里</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var x="";
+var time=new Date().getHours();
+if (time<20)
+  {
+  x="Good day";
+  }
+else
+  {
+  x="Good evening";
+  }
+document.getElementById("demo").innerHTML=x;
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_inaccurate">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+var x;
+document.write("<p>只有 17 位: ");
+x=12345678901234567890;
+document.write(x + "</p>");
+
+document.write("<p>0.2 + 0.1 = ");
+x=0.2+0.1;
+document.write(x + "</p>");
+
+document.write("<p>可分别乘以 10 并除以 10 : ");
+x=(0.2*10+0.1*10)/10;
+document.write(x +"</p>");
+
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_intro_alert">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>我的第一段 JavaScript</h1>
+
+<p>
+JavaScript 能够对事件作出反应。比如对按钮的点击：
+</p>
+
+<button type="button" onclick="alert('Welcome!')">点击这里</button>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_intro_document_write">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>
+JavaScript 能够直接写入 HTML 输出流中：
+</p>
+
+<script>
+document.write("<h1>This is a heading</h1>");
+document.write("<p>This is a paragraph.</p>");
+</script>
+
+<p>
+您只能在 HTML 输出流中使用 <strong>document.write</strong>。
+如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档。
+</p>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_intro_inner_html">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>我的第一段 JavaScript</h1>
+
+<p id="demo">
+JavaScript 能改变 HTML 元素的内容。
+</p>
+
+<script>
+function myFunction()
+{
+x=document.getElementById("demo");  // 找到元素
+x.innerHTML="Hello JavaScript!";    // 改变内容
+}
+</script>
+
+<button type="button" onclick="myFunction()">点击这里</button>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_intro_style">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>我的第一段 JavaScript</h1>
+
+<p id="demo">
+JavaScript 能改变 HTML 元素的样式。
+</p>
+
+<script>
+function myFunction()
+{
+x=document.getElementById("demo") // 找到元素
+x.style.color="#ff0000";          // 改变样式
+}
+</script>
+
+<button type="button" onclick="myFunction()">点击这里</button>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_intro_validate">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>我的第一段 JavaScript</h1>
+
+<p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+
+<input id="demo" type="text">
+
+<script>
+function myFunction()
+{
+var x=document.getElementById("demo").value;
+if(x==""||isNaN(x))
+	{
+	alert("Not Numeric");
+	}
+}
+</script>
+
+<button type="button" onclick="myFunction()">点击这里</button>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_library_jquery">
+
+<!DOCTYPE html>
+<html>
+<head>
+<script
+src="../../ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min-1.js" tppabs="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+</script>
+<script>
+function myFunction()
+{
+$("#h01").html("Hello jQuery")
+}
+$(document).ready(myFunction);
+</script>
+</head>
+
+<body>
+<h1 id="h01"></h1>
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_library_jquery2">
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="../../ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min-1.js" tppabs="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+</script>
+<script>
+function myFunction()
+{
+$("#h01").attr("style","color:red").html("Hello jQuery")
+}
+$(document).ready(myFunction);
+</script>
+</head>
+
+<body>
+<h1 id="h01"></h1>
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_library_prototype">
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="../../ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js" tppabs="https://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js">
+</script>
+<script>
+function myFunction()
+{
+$("h01").insert("Hello Prototype!");
+}
+Event.observe(window,"load",myFunction);
+</script>
+</head>
+
+<body>
+<h1 id="h01"></h1>
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_library_prototype2">
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="../../ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js" tppabs="https://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js">
+</script>
+<script>
+function myFunction()
+{
+$("h01").writeAttribute("style","color:red").insert("Hello Prototype!");
+}
+Event.observe(window,"load",myFunction);
+</script>
+</head>
+
+<body>
+<h1 id="h01"></h1>
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_lightbulb">
+
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function changeImage()
+{
+element=document.getElementById('myimage')
+if (element.src.match("bulbon"))
+  {
+  element.src="../i/eg_bulboff.gif"/*tpa=http://w3school.com.cn/i/eg_bulboff.gif*/;
+  }
+else
+  {
+  element.src="../i/eg_bulbon.gif"/*tpa=http://w3school.com.cn/i/eg_bulbon.gif*/;
+  }
+}
+</script>
+
+<img id="myimage" onclick="changeImage()" src="../i/eg_bulboff.gif" >
+
+<p>点击灯泡来点亮或熄灭这盏灯</p>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_location_assign">
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function newDoc()
+ {
+ window.location.assign("/chrX/nofile/123")
+ }
+</script>
+</head>
+<body>
+
+<input type="button" value="加载新文档" onclick="newDoc()">
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_loop_for">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+cars=["BMW","Volvo","Saab","Ford"];
+for (var i=0;i<cars.length;i++)
+{
+document.write(cars[i] + "<br>");
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_loop_for2">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>点击下面的按钮，将代码块循环五次：</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var x="";
+for (var i=0;i<5;i++)
+  {
+  x=x + "The number is " + i + "<br>";
+  }
+document.getElementById("demo").innerHTML=x;
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_loop_for_cars">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+cars=["BMW","Volvo","Saab","Ford"];
+var i=0;
+for (;cars[i];)
+{
+document.write(cars[i] + "<br>");
+i++;
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_loop_for_s1">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+cars=["BMW","Volvo","Saab","Ford"];
+for (var i=0,l=cars.length; i<l; i++)
+{
+document.write(cars[i] + "<br>");
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_loop_for_s1_2">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+cars=["BMW","Volvo","Saab","Ford"];
+var i=2,len=cars.length;
+for (; i<len; i++)
+{
+document.write(cars[i] + "<br>");
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_loop_for_s3">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+cars=["BMW","Volvo","Saab","Ford"];
+var i=0,len=cars.length;
+for (; i<len; )
+{
+document.write(cars[i] + "<br>");
+i++;
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_loop_while_cars">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+cars=["BMW","Volvo","Saab","Ford"];
+var i=0;
+while (cars[i])
+{
+document.write(cars[i] + "<br>");
+i++;
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_navigator_all">
+
+<!DOCTYPE html>
+<html>
+<body>
+<div id="example"></div>
+
+<script>
+
+txt = "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
+txt+= "<p>Browser Name: " + navigator.appName + "</p>";
+txt+= "<p>Browser Version: " + navigator.appVersion + "</p>";
+txt+= "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+txt+= "<p>Platform: " + navigator.platform + "</p>";
+txt+= "<p>User-agent header: " + navigator.userAgent + "</p>";
+txt+= "<p>User-agent language: " + navigator.systemLanguage + "</p>";
+
+document.getElementById("example").innerHTML=txt;
+
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_numbers">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+var x1=36.00;
+var x2=36;
+var y=123e5;
+var z=123e-5;
+
+document.write(x1 + "<br />")
+document.write(x2 + "<br />")
+document.write(y + "<br />")
+document.write(z + "<br />")
+
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_object_for_in">
+
+<!DOCTYPE html>
+<html>
+<body>
+<p>点击下面的按钮，循环遍历对象 "person" 的属性。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var x;
+var txt="";
+var person={fname:"Bill",lname:"Gates",age:56}; 
+
+for (x in person)
+{
+txt=txt + person[x];
+}
+
+document.getElementById("demo").innerHTML=txt;
+}
+</script>
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_oper_add">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>假设 y=5，计算 x=y+2，并显示结果。</p>
+<button onclick="myFunction()">点击这里</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var y=5;
+var x=y+2;
+var demoP=document.getElementById("demo")
+demoP.innerHTML="x=" + x;
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_statements">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My Web Page</h1>
+
+<p id="demo">A Paragraph.</p>
+
+<div id="myDIV">A DIV.</div>
+
+<script>
+document.getElementById("demo").innerHTML="Hello World";
+document.getElementById("myDIV").innerHTML="How are you?";
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_switch">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>点击下面的按钮来显示今天是周几：</p>
+
+<button onclick="myFunction()">点击这里</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var x;
+var d=new Date().getDay();
+switch (d)
+  {
+  case 0:
+    x="Today it's Sunday";
+    break;
+  case 1:
+    x="Today it's Monday";
+    break;
+  case 2:
+    x="Today it's Tuesday";
+    break;
+  case 3:
+    x="Today it's Wednesday";
+    break;
+  case 4:
+    x="Today it's Thursday";
+    break;
+  case 5:
+    x="Today it's Friday";
+    break;
+  case 6:
+    x="Today it's Saturday";
+    break;
+  }
+document.getElementById("demo").innerHTML=x;
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_switch2">
+
+<html>
+<body>
+
+<p>点击下面的按钮，会显示出基于今日日期的消息：</p>
+
+<button onclick="myFunction()">点击这里</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var x;
+var d=new Date().getDay();
+switch (d)
+  {
+  case 6:
+    x="Today it's Saturday";
+    break;
+  case 0:
+    x="Today it's Sunday";
+    break;
+  default:
+    x="Looking forward to the Weekend";
+  }
+document.getElementById("demo").innerHTML=x;
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_throw_error">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function myFunction()
+{
+try
+{ 
+var x=document.getElementById("demo").value;
+if(x=="")    throw "值为空";
+if(isNaN(x)) throw "不是数字";
+if(x>10)     throw "太大";
+if(x<5)      throw "太小";
+}
+catch(err)
+{
+var y=document.getElementById("mess");
+y.innerHTML="错误：" + err + "。";
+}
+}
+</script>
+
+<h1>我的第一个 JavaScript 程序</h1>
+<p>请输入 5 到 10 之间的数字：</p>
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">测试输入值</button>
+<p id="mess"></p>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_try_catch">
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var txt="";
+function message()
+{
+try
+  {
+  adddlert("Welcome guest!");
+  }
+catch(err)
+  {
+  txt="本页有一个错误。\n\n";
+  txt+="错误描述：" + err.message + "\n\n";
+  txt+="点击确定继续。\n\n";
+  alert(txt);
+  }
+}
+</script>
+</head>
+
+<body>
+<input type="button" value="查看消息" onclick="message()" />
+</body>
+
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_undefined">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+var person;
+var car="Volvo";
+document.write(person + "<br />");
+document.write(car + "<br />");
+var car=null
+document.write(car + "<br />");
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_variables1">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>点击这里来创建变量，并显示结果。</p>
+
+<button onclick="myFunction()">点击这里</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var carname="Volvo";
+document.getElementById("demo").innerHTML=carname;
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_whereto_body">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+
+<p id="demo">A Paragraph.</p>
+
+<button type="button" onclick="myFunction()">点击这里</button>
+
+<script>
+function myFunction()
+{
+document.getElementById("demo").innerHTML="My First JavaScript Function";
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_whereto_head">
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction()
+{
+document.getElementById("demo").innerHTML="My First JavaScript Function";
+}
+</script>
+</head>
+
+<body>
+
+<h1>My Web Page</h1>
+
+<p id="demo">A Paragraph.</p>
+
+<button type="button" onclick="myFunction()">点击这里</button>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_while">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>点击下面的按钮，只要 i 小于 5 就一直循环代码块。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var x="",i=0;
+while (i<5)
+  {
+  x=x + "The number is " + i + "<br>";
+  i++;
+  }
+document.getElementById("demo").innerHTML=x;
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_window_innerwidth_innerheight">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var w=window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+
+var h=window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+
+x=document.getElementById("demo");
+x.innerHTML="浏览器的内部窗口宽度：" + w + "，高度：" + h + "。"
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_window_screen_availheight">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+document.write("可用高度：" + screen.availHeight);
+
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_window_screen_availwidth">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+document.write("可用宽度：" + screen.availWidth);
+
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_write">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+
+<script>
+document.write("<p>My First JavaScript</p>");
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_js_write_over">
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+
+<p>My First Paragraph.</p>
+
+<button onclick="myFunction()">点击这里</button>
+
+<script>
+function myFunction()
+{
+document.write("糟糕！文档消失了。");
+}
+</script>
+
+</body>
+</html>
+
+</iframe>
+</div>

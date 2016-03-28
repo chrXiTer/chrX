@@ -1,0 +1,148 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL INNER JOIN 关键字</h1>
+
+<div>
+<h2>SQL INNER JOIN 关键字</h2>
+
+<p>在表中存在至少一个匹配时，INNER JOIN 关键字返回行。</p>
+
+<h3>INNER JOIN 关键字语法</h3>
+
+<pre>
+SELECT column_name(s)
+FROM table_name1
+INNER JOIN table_name2 
+ON table_name1.column_name=table_name2.column_name
+</pre>
+
+<p class="note"><span>注释：</span>INNER JOIN 与 JOIN 是相同的。</p>
+</div>
+
+<div>
+<h2>原始的表 (用在例子中的)：</h2>
+
+<p>&quot;Persons&quot; 表：</p>
+
+<table class="dataintable">
+  <tr>
+    <th>Id_P</th>
+	<th>LastName</th>
+    <th>FirstName</th>
+    <th>Address</th>
+    <th>City</th>
+  </tr>
+  <tr>
+    <td>1</td>
+	<td>Adams</td>
+    <td>John</td>
+    <td>Oxford Street</td>
+    <td>London</td>
+  </tr>
+  <tr>
+    <td>2</td>
+	<td>Bush</td>
+    <td>George</td>
+    <td>Fifth Avenue</td>
+    <td>New York</td>
+  </tr>
+  <tr>
+    <td>3</td>
+	<td>Carter</td>
+    <td>Thomas</td>
+    <td>Changan Street</td>
+    <td>Beijing</td>
+  </tr>
+</table>
+
+<p>&quot;Orders&quot; 表：</p>
+
+<table class="dataintable">
+  <tr>
+    <th>Id_O</th>
+    <th>OrderNo</th>
+    <th>Id_P</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>77895</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>44678</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>22456</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>24562</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>34764</td>
+    <td>65</td>
+  </tr>
+  </table>
+</div>
+
+<div>
+<h2>内连接（INNER JOIN）实例</h2>
+
+<p>现在，我们希望列出所有人的定购。</p>
+
+<p>您可以使用下面的 SELECT 语句：</p>
+
+<pre>
+SELECT Persons.LastName, Persons.FirstName, Orders.OrderNo
+FROM Persons
+INNER JOIN Orders
+ON Persons.Id_P=Orders.Id_P
+ORDER BY Persons.LastName
+</pre>
+
+<p>结果集：</p>
+
+<table class="dataintable">
+  <tr>
+    <th>LastName</th>
+    <th>FirstName</th>
+    <th>OrderNo</th>
+  </tr>
+  <tr>
+    <td>Adams</td>
+    <td>John</td>
+    <td>22456</td>
+  </tr>
+  <tr>
+    <td>Adams</td>
+    <td>John</td>
+    <td>24562</td>
+  </tr>
+  <tr>
+    <td>Carter</td>
+    <td>Thomas</td>
+    <td>77895</td>
+  </tr>
+  <tr>
+    <td>Carter</td>
+    <td>Thomas</td>
+    <td>44678</td>
+  </tr>
+</table>
+
+<p>INNER JOIN 关键字在表中存在至少一个匹配时返回行。如果 &quot;Persons&quot; 中的行在 &quot;Orders&quot; 中没有匹配，就不会列出这些行。</p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

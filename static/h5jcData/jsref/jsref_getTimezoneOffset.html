@@ -1,0 +1,108 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript getTimezoneOffset() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>getTimezoneOffset() 方法可返回格林威治时间和本地时间之间的时差，以分钟为单位。</p>
+
+<h3>语法</h3>
+
+<pre>dateObject.getTimezoneOffset()</pre>
+
+<h3>返回值</h3>
+
+<p>本地时间与 GMT 时间之间的时间差，以分钟为单位。</p>
+
+<h3>说明</h3>
+
+<p>getTimezoneOffset() 方法返回的是本地时间与 GMT 时间或 UTC 时间之间相差的分钟数。实际上，该函数告诉我们运行 JavaScript 代码的时区，以及指定的时间是否是夏令时。</p>
+
+<p>返回之所以以分钟计，而不是以小时计，原因是某些国家所占有的时区甚至不到一个小时的间隔。</p>
+</div>
+
+<div>
+<h2>提示和注释：</h2>
+
+<p class="note"><span>注释：</span>由于使用夏令时的惯例，该方法的返回值不是一个常量。</p>
+
+<p class="note"><span>注释：</span>该方法总是结合一个 Date 对象来使用。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<h3>例子 1</h3>
+
+<p>在下面的例子中，我们将取得 GMT 时间与本地时间以分钟计的时间差：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var d = new Date()
+document.write(<code>d.getTimezoneOffset()</code>)
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>
+<script type="text/javascript">
+	var d = new Date()
+	document.write(d.getTimezoneOffset())
+</script>
+</pre>
+
+<h3>例子 2</h3>
+
+<p>现在，我们将把上面的例子转换为 GMT +/- 小时：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var d = new Date()
+var gmtHours = <code>d.getTimezoneOffset()</code>/60
+document.write(&quot;The local time zone is: GMT &quot; + gmtHours)
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>
+<script type="text/javascript">
+
+var d = new Date()
+var gmtHours = d.getTimezoneOffset()/60
+document.write("The local time zone is: GMT " + gmtHours)
+
+</script>
+</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_gettimezoneoffset')" >getTimezoneOffset()</a></dt>
+<dd>如何使用 getTimezoneOffset() 根据 GMT 来取得本地时区。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

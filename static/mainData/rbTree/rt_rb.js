@@ -1,0 +1,376 @@
+//右子树少一个黑节点
+var rt_rb={}
+rt_rb.Rb_bb = {
+	treeName:"Rb0",
+	treeRoot:{
+		color: "green",
+		text:"P",
+		leftChild:{
+			color:"black",
+			text:"V",
+			leftChild:{
+				isNull:true,
+				color:"black",
+				text:"vL",
+				leftChild:null,
+				rightChild:null,
+			},
+			rightChild:{
+				isNull:true,
+				color:"black",
+				text:"vR",
+				leftChild:null,
+				rightChild:null
+			}
+		},
+		rightChild:{
+			isNull:true,
+			color:"black",
+			text:"U",
+			leftChild:null,
+			rightChild:null
+		}
+	}
+};
+
+rt_rb.Rb_bb_result = {
+	treeName:"Rb0(result) ++++",
+	treeRoot:{
+		color: "black",
+		text:"P",
+		leftChild:{
+			color:"red",
+			text:"V",
+			leftChild:{
+				isNull:true,
+				color:"black",
+				text:"vL",
+				leftChild:null,
+				rightChild:null,
+			},
+			rightChild:{
+				isNull:true,
+				color:"black",
+				text:"vR",
+				leftChild:null,
+				rightChild:null
+			}
+		},
+		rightChild:{
+			isNull:true,
+			color:"black",
+			text:"U",
+			leftChild:null,
+			rightChild:null
+		}
+	}
+};
+
+rt_rb.Rb_rb = {
+	treeName:"Rb_rb",
+	treeRoot:{
+		color: "blue",
+		text:"P",
+		leftChild:{
+			color:"black",
+			text:"V",
+			leftChild:{
+				color:"red",
+				text:"vL",
+				leftChild:null,
+				rightChild:null,
+			},
+			rightChild:{
+				color:"black",
+				text:"vR",
+				leftChild:null,
+				rightChild:null
+			}
+		},
+		rightChild:{
+			color:"black",
+			text:"U",
+			leftChild:null,
+			rightChild:null
+		}
+	}
+};
+
+rt_rb.Rb_rb_result = {
+	treeName:"Rb_rb(result)",
+	treeRoot:{
+		color: "blue",
+		text:"V",
+		leftChild:{
+			color:"black",
+			text:"vL",
+			leftChild:null,
+			rightChild:null
+		},
+		rightChild:{
+			color:"black",
+			text:"P",
+			leftChild:{
+				color:"black",
+				text:"vR",
+				leftChild:null,
+				rightChild:null,
+			},
+			rightChild:{
+				color:"black",
+				text:"U",
+				leftChild:null,
+				rightChild:null
+			}
+		}
+	}
+};
+
+rt_rb.Rb_br = {
+	treeName:"Rb_br",
+	treeRoot:{
+		color: "blue",
+		text:"P",
+		leftChild:{
+			color:"black",
+			text:"V",
+			leftChild:{
+				isNull:true,
+				color:"black",
+				text:"vL",
+				leftChild:null,
+				rightChild:null,
+			},
+			rightChild:{
+				color:"red",
+				text:"w",
+				leftChild:{
+					isNull:true,
+					color:"black",
+					text:"wL",
+					leftChild:null,
+					rightChild:null,
+				},
+				rightChild:{
+					isNull:true,
+					color:"black",
+					text:"wR",
+					leftChild:null,
+					rightChild:null
+				}
+			},
+		},
+		rightChild:{
+			isNull:true,
+			color:"black",
+			text:"U",
+			leftChild:null,
+			rightChild:null
+		}
+	}
+};
+
+rt_rb.Rb_br_result = {
+	treeName:"Rb_br(result)",
+	treeRoot:{
+		color: "blue",
+		text:"w",
+		leftChild:{
+			color:"black",
+			text:"V",
+			leftChild:{
+				isNull:true,
+				color:"black",
+				text:"vL",
+				leftChild:null,
+				rightChild:null,
+			},
+			rightChild:{
+				isNull:true,
+				color:"black",
+				text:"wL",
+				leftChild:null,
+				rightChild:null
+			}
+		},
+		rightChild:{
+			color:"black",
+			text:"P",
+			leftChild:{
+				isNull:true,
+				color:"black",
+				text:"wR",
+				leftChild:null,
+				rightChild:null,
+			},
+			rightChild:{
+				isNull:true,
+				color:"black",
+				text:"U",
+				leftChild:null,
+				rightChild:null
+			}
+		}
+	}
+};
+
+
+rt_rb.Rb_rr = {
+	treeName:"Rb_rr",
+	treeRoot:{
+		color: "blue",
+		text:"P",
+		leftChild:{
+			color:"black",
+			text:"V",
+			leftChild:{
+				color:"red",
+				text:"vL",
+				leftChild:null,
+				rightChild:null,
+			},
+			rightChild:{
+				color:"red",
+				text:"w",
+				leftChild:{
+					color:"black",
+					text:"wL",
+					leftChild:null,
+					rightChild:null,
+				},
+				rightChild:{
+					color:"black",
+					text:"wR",
+					leftChild:null,
+					rightChild:null
+				}
+			},
+		},
+		rightChild:{
+			color:"black",
+			text:"U",
+			leftChild:null,
+			rightChild:null
+		}
+	}
+};
+
+rt_rb.Rb_rr_result = {
+	treeName:"Rb_rr(result)",
+	treeRoot:{
+		color: "blue",
+		text:"w",
+		leftChild:{
+			color:"black",
+			text:"V",
+			leftChild:{
+				color:"red",
+				text:"vL",
+				leftChild:null,
+				rightChild:null,
+			},
+			rightChild:{
+				color:"black",
+				text:"wL",
+				leftChild:null,
+				rightChild:null
+			}
+		},
+		rightChild:{
+			color:"black",
+			text:"P",
+			leftChild:{
+				color:"black",
+				text:"wR",
+				leftChild:null,
+				rightChild:null,
+			},
+			rightChild:{
+				color:"black",
+				text:"U",
+				leftChild:null,
+				rightChild:null
+			}
+		}
+	}
+}
+
+rt_rb.Rb = {
+	treeName:"Rb",
+	treeRoot:{
+		color: "black",
+		text:"P",
+		leftChild:{
+			color:"red",
+			text:"V",
+			leftChild:{
+				color:"black",
+				text:"vL",
+				leftChild:null,
+				rightChild:null,
+			},
+			rightChild:{
+				color:"black",
+				text:"w",
+				leftChild:{
+					color:"blue",
+					text:"wL",
+					leftChild:null,
+					rightChild:null,
+				},
+				rightChild:{
+					color:"blue",
+					text:"wR",
+					leftChild:null,
+					rightChild:null
+				}
+			},
+		},
+		rightChild:{
+			color:"black",
+			text:"U",
+			leftChild:null,
+			rightChild:null
+		}
+	}
+};
+
+rt_rb.Rb_result = {
+	treeName:"Rb_result",
+	treeRoot:{
+		color:"red",
+		text:"V",
+		leftChild:{
+			color:"black",
+			text:"vL",
+			leftChild:null,
+			rightChild:null,
+		},
+		rightChild:{
+			color: "black",
+			text:"P",
+			leftChild:{
+				color:"black",
+				text:"w",
+				leftChild:{
+					color:"blue",
+					text:"wL",
+					leftChild:null,
+					rightChild:null,
+				},
+				rightChild:{
+					color:"blue",
+					text:"wR",
+					leftChild:null,
+					rightChild:null
+				}
+			},
+			rightChild:{
+				color:"black",
+				text:"U",
+				leftChild:null,
+				rightChild:null
+			}
+		}
+	}
+};

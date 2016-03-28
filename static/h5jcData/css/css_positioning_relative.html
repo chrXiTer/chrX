@@ -1,0 +1,37 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS 相对定位</h1> 
+
+<div id="intro">
+<p><strong>设置为相对定位的元素框会偏移某个距离。元素仍然保持其未定位前的形状，它原本所占的空间仍保留。</strong></p>
+</div>
+
+<div>
+<h2>CSS 相对定位</h2>
+
+<p>相对定位是一个非常容易掌握的概念。如果对一个元素进行相对定位，它将出现在它所在的位置上。然后，可以通过设置垂直或水平位置，让这个元素“相对于”它的起点进行移动。</p>
+<p>如果将 top 设置为 20px，那么框将在原位置顶部下面 20 像素的地方。如果 left 设置为 30 像素，那么会在元素左边创建 30 像素的空间，也就是将元素向右移动。</p>
+<pre>
+#box_relative {
+  position: relative;
+  left: 30px;
+  top: 20px;
+}
+</pre>
+
+<p>如下图所示：</p>
+<img src="../i/ct_css_positioning_relative_example.gif" alt="CSS 相对定位实例" />
+
+<p>注意，在使用相对定位时，无论是否进行移动，元素仍然占据原来的空间。因此，移动元素会导致它覆盖其它框。</p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

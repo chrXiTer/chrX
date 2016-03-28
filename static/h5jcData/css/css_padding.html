@@ -1,0 +1,100 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS 内边距</h1> 
+
+<div id="intro">
+<p><strong>元素的内边距在边框和内容区之间。控制该区域最简单的属性是 padding 属性。</strong></p>
+<p><strong>CSS padding 属性定义元素边框与元素内容之间的空白区域。</strong></p>
+</div>
+
+<div>
+<h2>CSS padding 属性</h2>
+
+<p>CSS padding 属性定义元素的内边距。padding 属性接受长度值或百分比值，但不允许使用负值。</p>
+<p>例如，如果您希望所有 h1 元素的各边都有 10 像素的内边距，只需要这样：</p>
+<pre>h1 {padding: 10px;}</pre>
+
+<p>您还可以按照上、右、下、左的顺序分别设置各边的内边距，各边均可以使用不同的单位或百分比值：</p>
+<pre>h1 {padding: 10px 0.25em 2ex 20%;}</pre>
+</div>
+
+<div>
+<h2>单边内边距属性</h2>
+
+<p>也通过使用下面四个单独的属性，分别设置上、右、下、左内边距：</p>
+<ul>
+<li><a href="../cssref/pr_padding-top.htm" >padding-top</a></li>
+<li><a href="../cssref/pr_padding-right.htm" >padding-right</a></li>
+<li><a href="../cssref/pr_padding-bottom.htm" >padding-bottom</a></li>
+<li><a href="../cssref/pr_padding-left.htm" >padding-left</a></li>
+</ul>
+
+<p>您也许已经想到了，下面的规则实现的效果与上面的简写规则是完全相同的：</p>
+<pre>
+h1 {
+  padding-top: 10px;
+  padding-right: 0.25em;
+  padding-bottom: 2ex;
+  padding-left: 20%;
+  }
+</pre>
+</div>
+
+<div>
+<h2>内边距的百分比数值</h2>
+
+<p>前面提到过，可以为元素的内边距设置百分数值。百分数值是相对于其父元素的 width 计算的，这一点与外边距一样。所以，如果父元素的 width 改变，它们也会改变。</p>
+<p>下面这条规则把段落的内边距设置为父元素 width 的 10%：</p>
+<pre>p {padding: 10%;}</pre>
+
+<p>例如：如果一个段落的父元素是 div 元素，那么它的内边距要根据 div 的 width 计算。</p>
+<pre>
+&lt;div style=&quot;width: 200px;&quot;&gt;
+&lt;p&gt;This paragragh is contained within a DIV that has a width of 200 pixels.&lt;/p&gt;
+&lt;/div&gt; 
+</pre>
+
+<p class="important"><span>注意：</span>上下内边距与左右内边距一致；即上下内边距的百分数会相对于父元素宽度设置，而不是相对于高度。</p>
+</div>
+
+<div>
+<h2>CSS 内边距属性</h2>
+
+<table class="dataintable">
+  <tr>
+    <th>属性</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td><a href="../cssref/pr_padding.htm" title="CSS padding 属性">padding</a></td>
+    <td>简写属性。作用是在一个声明中设置元素的所内边距属性。</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/pr_padding-bottom.htm" title="CSS padding-bottom 属性">padding-bottom</a></td>
+    <td>设置元素的下内边距。</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/pr_padding-left.htm" title="CSS padding-left 属性">padding-left</a></td>
+    <td>设置元素的左内边距。</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/pr_padding-right.htm" title="CSS padding-right 属性">padding-right</a></td>
+    <td>设置元素的右内边距。</td>
+  </tr>
+  <tr>
+    <td><a href="../cssref/pr_padding-top.htm" title="CSS padding-top 属性">padding-top</a></td>
+    <td>设置元素的上内边距。</td>
+  </tr>
+</table>
+</div> 
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

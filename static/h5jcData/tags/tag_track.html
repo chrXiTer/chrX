@@ -1,0 +1,105 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;track&gt; 标签</h1>
+
+<div>
+<h2>实例</h2>
+
+<p>播放带有字幕的视频：</p>
+
+<pre>
+&lt;video width=&quot;320&quot; height=&quot;240&quot; controls=&quot;controls&quot;&gt;
+  &lt;source src=&quot;forrest_gump.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+  &lt;source src=&quot;forrest_gump.ogg&quot; type=&quot;video/ogg&quot; /&gt;
+  &lt;track kind=&quot;subtitles&quot; src=&quot;subs_chi.srt&quot; srclang=&quot;zh&quot; label=&quot;Chinese&quot;&gt;
+  &lt;track kind=&quot;subtitles&quot; src=&quot;subs_eng.srt&quot; srclang=&quot;en&quot; label=&quot;English&quot;&gt;
+&lt;/video&gt;
+</pre>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>&lt;track&gt; 标签为诸如 video 元素之类的媒介规定外部文本轨道。</p>
+
+<p>用于规定字幕文件或其他包含文本的文件，当媒介播放时，这些文件是可见的。</p>
+</div>
+
+<div>
+<h2>HTML 4.01 与 HTML 5 之间的差异</h2>
+
+<p>&lt;track&gt; 标签是 HTML 5 中的新标签。</p>
+</div>
+
+<div>
+<h2>属性</h2>
+
+<p class="html5_new_note"><span>new</span> : HTML5 中的新属性。</p>
+
+<table class="dataintable"> 
+  <tr>
+    <th style="width:20%;">属性</th>
+    <th style="width:20%;">值</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td class="html5_new"><a href="att_track_default.htm"  title="HTML5 &lt;track&gt; default 属性">default</a></td>
+    <td>default</td>
+    <td>规定该轨道是默认的，假如没有选择任何轨道。</td>
+  </tr>
+  <tr>
+    <td class="html5_new"><a href="att_track_kind.htm"  title="HTML5 &lt;track&gt; kind 属性">kind</a></td>
+    <td>
+	<ul>
+	<li>captions</li>
+	<li>chapters</li>
+	<li>descriptions</li>
+	<li>metadata</li>
+	<li>subtitles</li>
+	</ul>
+	</td>
+    <td>表示轨道属于什么文本类型。</td>
+  </tr>
+  <tr>
+    <td class="html5_new"><a href="att_track_label.htm"  title="HTML5 &lt;track&gt; label 属性">label</a></td>
+    <td><i>label</i></td>
+    <td>轨道的标签或标题。</td>
+  </tr>
+    <tr>
+    <td class="html5_new"><a href="att_track_src.htm"  title="HTML5 &lt;track&gt; src 属性">src</a></td>
+    <td><i>url</i></td>
+    <td>轨道的 URL。</td>
+  </tr>
+  <tr>
+    <td class="html5_new"><a href="att_track_srclang.htm"  title="HTML5 &lt;track&gt; srclang 属性">srclang</a></td>
+    <td><i>language_code</i></td>
+    <td>轨道的语言，若 kind 属性值是 &quot;subtitles&quot;，则该属性必需的。</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>全局属性</h2>
+
+<p>&lt;track&gt; 标签支持 <a href="html_ref_standardattributes.htm" >HTML 中的全局属性</a>。</p>
+</div>
+
+<div>
+<h2>事件属性</h2>
+
+<p>&lt;track&gt; 标签支持 <a href="html_ref_eventattributes.htm" >HTML 中的事件属性</a>。</p>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>HTML DOM 参考手册：<a href="../jsref/dom_obj_track.htm"  title="HTML DOM Track 对象">Track 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

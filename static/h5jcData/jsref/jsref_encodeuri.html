@@ -1,0 +1,90 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript encodeURI() 函数</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_global.htm"  title="JavaScript 全局对象">JavaScript 全局对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>encodeURI() 函数可把字符串作为 URI 进行编码。</p>
+
+<h3>语法</h3>
+
+<pre>encodeURI(<i>URIstring</i>)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>URIstring</td>
+    <td>必需。一个字符串，含有 URI 或其他要编码的文本。</td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+
+<p>URIstring 的副本，其中的某些字符将被十六进制的转义序列进行替换。</p>
+
+<h3>说明</h3>
+
+<p>该方法不会对 ASCII 字母和数字进行编码，也不会对这些 ASCII 标点符号进行编码： - _ . ! ~ * ' ( ) 。</p>
+
+<p>该方法的目的是对 URI 进行完整的编码，因此对以下在 URI 中具有特殊含义的 ASCII 标点符号，encodeURI() 函数是不会进行转义的：;/?:@&amp;=+$,#</p>
+</div>
+
+<div>
+<h2>提示和注释</h2>
+
+<p class="tip"><span>提示：</span>如果 URI 组件中含有分隔符，比如 ? 和 #，则应当使用 encodeURIComponent() 方法分别对各组件进行编码。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在本例中，我们将使用 encodeURI() 对 URI 进行编码：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+document.write(<code>encodeURI(&quot;http://www.w3school.com.cn&quot;)</code>+ &quot;&lt;br /&gt;&quot;)
+document.write(<code>encodeURI(&quot;/chrX/nofile/123My first/&quot;)</code>)
+document.write(<code>encodeURI(&quot;,/?:@&amp;=+$#&quot;)</code>)
+
+&lt;/script&gt;</pre>
+
+<p>输出：</p>
+
+<pre>
+http://www.w3school.com.cn
+/chrX/nofile/123My%20first/
+,/?:@&amp;=+$#
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('jseg_encodeURI')" >亲自试一试</a></p>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_encodeURI')" >encodeURI()</a></dt>
+<dd>如何使用 encodeURI() 来编码不同的 URI。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_global.htm"  title="JavaScript 全局对象">JavaScript 全局对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

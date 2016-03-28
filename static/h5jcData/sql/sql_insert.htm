@@ -1,0 +1,135 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL INSERT INTO 语句</h1>
+
+<div  id="tpn">
+<ul class="prenext">
+<li class="pre"><a href="sql_orderby.htm"  title="SQL ORDER BY 语句">SQL Order By</a></li>
+<li class="next"><a href="sql_update.htm"  title="SQL UPDATE 语句">SQL update</a></li>
+</ul>
+</div>
+
+<div>
+<h2>INSERT INTO 语句</h2>
+<p>INSERT INTO 语句用于向表格中插入新的行。</p>
+
+<h3>语法</h3>
+<pre>INSERT INTO 表名称 VALUES (值1, 值2,....)</pre>
+<p>我们也可以指定所要插入数据的列：</p>
+<pre>INSERT INTO table_name (列1, 列2,...) VALUES (值1, 值2,....)</pre>
+</div>
+
+<div>
+<h2>插入新的行</h2>
+<h3>&quot;Persons&quot; 表：</h3>
+<table class="dataintable">
+    <tr>
+      <th>LastName</th>
+      <th>FirstName</th>
+      <th>Address</th>
+      <th>City</th>
+    </tr>
+    <tr>
+      <td>Carter</td>
+      <td>Thomas</td>
+      <td>Changan Street</td>
+      <td>Beijing</td>
+    </tr>
+</table>
+
+<h3>SQL 语句：</h3>
+<pre>INSERT INTO Persons VALUES ('Gates', 'Bill', 'Xuanwumen 10', 'Beijing')</pre>
+<h3>结果：</h3>
+<table class="dataintable">
+    <tr>
+      <th>LastName</th>
+      <th>FirstName</th>
+      <th>Address</th>
+      <th>City</th>
+    </tr>
+    <tr>
+      <td>Carter</td>
+      <td>Thomas</td>
+      <td>Changan Street</td>
+      <td>Beijing</td>
+    </tr>
+    <tr>
+      <td>Gates</td>
+      <td>Bill</td>
+      <td>Xuanwumen 10</td>
+      <td>Beijing</td>
+    </tr>
+</table>
+</div>
+
+<div>
+<h2>在指定的列中插入数据</h2>
+<h3>&quot;Persons&quot; 表：</h3>
+
+<table class="dataintable">
+    <tr>
+      <th>LastName</th>
+      <th>FirstName</th>
+      <th>Address</th>
+      <th>City</th>
+    </tr>
+    <tr>
+      <td>Carter</td>
+      <td>Thomas</td>
+      <td>Changan Street</td>
+      <td>Beijing</td>
+    </tr>
+    <tr>
+      <td>Gates</td>
+      <td>Bill</td>
+      <td>Xuanwumen 10</td>
+      <td>Beijing</td>
+    </tr>
+</table>
+
+<h3>SQL 语句：</h3>
+<pre>INSERT INTO Persons (LastName, Address) VALUES ('Wilson', 'Champs-Elysees')</pre>
+<h3>结果：</h3>
+
+<table class="dataintable">
+    <tr>
+      <th>LastName</th>
+      <th>FirstName</th>
+      <th>Address</th>
+      <th>City</th>
+    </tr>
+    <tr>
+      <td>Carter</td>
+      <td>Thomas</td>
+      <td>Changan Street</td>
+      <td>Beijing</td>
+    </tr>
+    <tr>
+      <td>Gates</td>
+      <td>Bill</td>
+      <td>Xuanwumen 10</td>
+      <td>Beijing</td>
+    </tr>
+    
+    <tr>
+      <td>Wilson</td>
+      <td>&nbsp;</td>
+      <td>Champs-Elysees</td>
+      <td>&nbsp;</td>
+    </tr>
+</table>
+</div>
+
+<div  id="bpn">
+<ul class="prenext">
+<li class="pre"><a href="sql_orderby.htm"  title="SQL ORDER BY 语句">SQL Order By</a></li>
+<li class="next"><a href="sql_update.htm"  title="SQL UPDATE 语句">SQL update</a></li>
+</ul>
+</div>
+</div>
+</div>
+<script src="../chrX.js"></script>

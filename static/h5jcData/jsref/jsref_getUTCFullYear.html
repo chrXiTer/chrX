@@ -1,0 +1,91 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript getUTCFullYear() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>getUTCFullYear() 方法可返回根据世界时 (UTC) 表示的年份的四位数字。</p>
+
+<h3>语法</h3>
+
+<pre>dateObject.getUTCFullYear()</pre>
+
+<h3>返回值</h3>
+
+<p>返回 dateObject 用世界时表示时的年份，该值是一个四位的整数，而不是两位数的缩写。</p>
+</div>
+
+<div>
+<h2>提示和注释：</h2>
+
+<p class="note"><span>注释：</span>该方法总是结合一个 Date 对象来使用。</p>
+
+<p class="tip"><span>提示：</span>有关通用协调时间 (UTC) 的更多资料，请参阅<a href="http://baike.baidu.com/view/1187856.htm" vvll="my"  title="协调世界时_百度百科">百度百科</a>。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<h3>例子 1</h3>
+
+<p>在本例中我们获得并输出当前年份：</p>
+
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+
+var d = new Date()
+document.write(d.getUTCFullYear())
+
+&lt;/script&gt;</pre>
+
+<p>输出：</p>
+
+<pre>
+<script type="text/javascript">
+	var d = new Date()
+	document.write(d.getUTCFullYear())
+</script>
+</pre>
+
+<h3>例子 2</h3>
+
+<p>在本例中我们从具体的日期中提取年份：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var born = new Date(&quot;July 21, 1983 01:15:00&quot;)
+document.write(&quot;I was born in &quot; + born.getUTCFullYear())
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>I was born in 1983</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_datedate_UTC')" >以不同的格式显示 UTC 日期</a></dt>
+<dd>如何使用 getUTCDate(), getUTCMonth() 以及 getUTCFullYear() 来使用不同的格式显示 UTC 日期。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

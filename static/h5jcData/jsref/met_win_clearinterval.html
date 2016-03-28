@@ -1,0 +1,69 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML DOM clearInterval() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="dom_obj_window.htm" >HTML DOM Window 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>clearInterval() 方法可取消由 setInterval() 设置的 timeout。</p>
+<p>clearInterval() 方法的参数必须是由 setInterval() 返回的 ID 值。</p>
+
+<h3>语法</h3>
+<pre>clearInterval(id_of_setinterval)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>id_of_setinterval</td>
+    <td>由 setInterval() 返回的 ID 值。</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+<p>下面这个例子将每隔 50 毫秒调用 clock() 函数。您也可以使用一个按钮来停止这个 clock：</p>
+<pre>&lt;html&gt;
+&lt;body&gt;
+
+&lt;input type=&quot;text&quot; id=&quot;clock&quot; size=&quot;35&quot; /&gt;
+&lt;script language=javascript&gt;
+var int=self.setInterval(&quot;clock()&quot;,50)
+function clock()
+  {
+  var t=new Date()
+  document.getElementById(&quot;clock&quot;).value=t
+  }
+&lt;/script&gt;
+&lt;/form&gt;
+&lt;button onclick=&quot;int=window.clearInterval(int)&quot;&gt;
+Stop interval&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+<dl>
+<dt><a href="javascript:tiy.run('hdom_setinterval')" >使用 setInterval() 和 clearInterval()</a></dt>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="dom_obj_window.htm" >HTML DOM Window 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

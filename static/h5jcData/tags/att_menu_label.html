@@ -1,0 +1,80 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;menu&gt; label 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_menu.htm" >HTML &lt;menu&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>带有两个菜单按钮（&quot;File&quot; 和 &quot;Edit&quot;）的工具栏，每个按钮都有一个带有一系列选项的下拉菜单：</p>
+
+<pre>
+&lt;menu type=&quot;toolbar&quot;&gt;
+ &lt;li&gt;
+ &lt;menu label=&quot;File&quot;&gt;
+ &lt;button type=&quot;button&quot; onclick=&quot;file_new()&quot;&gt;New...&lt;/button&gt;
+ &lt;button type=&quot;button&quot; onclick=&quot;file_open()&quot;&gt;Open...&lt;/button&gt;
+ &lt;button type=&quot;button&quot; onclick=&quot;file_save()&quot;&gt;Save&lt;/button&gt;
+ &lt;/menu&gt;
+ &lt;/li&gt;
+ &lt;li&gt;
+ &lt;menu <code>label=&quot;Edit&quot;</code>&gt;
+ &lt;button type=&quot;button&quot; onclick=&quot;edit_cut()&quot;&gt;Cut&lt;/button&gt;
+ &lt;button type=&quot;button&quot; onclick=&quot;edit_copy()&quot;&gt;Copy&lt;/button&gt;
+ &lt;button type=&quot;button&quot; onclick=&quot;edit_paste()&quot;&gt;Paste&lt;/button&gt;
+ &lt;/menu&gt;
+ &lt;/li&gt;
+&lt;/menu&gt; 
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_menu')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>label 属性规定菜单的可见标签。</p>
+
+<p>label 属性常用于标记菜单内的嵌套菜单。</p>
+</div>
+
+<div>
+<h2>HTML 4.01 与 HTML 5 之间的差异</h2>
+
+<p>在 HTML5 中重新定义了 &lt;menu&gt; 元素，而 label 则是新的属性。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;menu label=&quot;<i>text</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>text</i></td>
+<td>为菜单规定可见的标签。</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_menu.htm" >HTML &lt;menu&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

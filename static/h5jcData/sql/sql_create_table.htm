@@ -1,0 +1,126 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL CREATE TABLE 语句</h1>
+
+<div>
+<h2>CREATE TABLE 语句</h2>
+
+<p>CREATE TABLE 语句用于创建数据库中的表。</p>
+
+<h3>SQL CREATE TABLE 语法</h3>
+
+<pre>
+CREATE TABLE 表名称
+(
+列名称1 数据类型,
+列名称2 数据类型,
+列名称3 数据类型,
+....
+)
+</pre>
+
+<p>数据类型（data_type）规定了列可容纳何种数据类型。下面的表格包含了SQL中最常用的数据类型：</p>
+
+<table class="dataintable">
+<tr>
+<th>数据类型</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>
+<ul>
+<li>integer(size)</li>
+<li>int(size)</li>
+<li>smallint(size)</li>
+<li>tinyint(size)</li>
+</ul>
+</td>
+<td>仅容纳整数。在括号内规定数字的最大位数。</td>
+</tr>
+
+<tr>
+<td>
+<ul>
+<li>decimal(size,d)</li>
+<li>numeric(size,d)</li>
+</ul>
+</td>
+<td>
+<p>容纳带有小数的数字。</p>
+<p>&quot;size&quot; 规定数字的最大位数。&quot;d&quot; 规定小数点右侧的最大位数。</p>
+</td>
+</tr>
+
+<tr>
+<td>char(size)</td>
+<td>
+<p>容纳固定长度的字符串（可容纳字母、数字以及特殊字符）。</p>
+<p>在括号中规定字符串的长度。</p>
+</td>
+</tr>
+
+<tr>
+<td>varchar(size)</td>
+<td>
+<p>容纳可变长度的字符串（可容纳字母、数字以及特殊的字符）。</p>
+<p>在括号中规定字符串的最大长度。</p>
+</td>
+</tr>
+
+<tr>
+<td>date(yyyymmdd)</td>
+<td>容纳日期。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>SQL CREATE TABLE 实例</h2>
+
+<p>本例演示如何创建名为 &quot;Person&quot; 的表。</p>
+
+<p>该表包含 5 个列，列名分别是：&quot;Id_P&quot;、&quot;LastName&quot;、&quot;FirstName&quot;、&quot;Address&quot; 以及 &quot;City&quot;：</p>
+
+<pre>
+CREATE TABLE Persons
+(
+Id_P int,
+LastName varchar(255),
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255)
+)
+</pre>
+
+<p>Id_P 列的数据类型是 int，包含整数。其余 4 列的数据类型是 varchar，最大长度为 255 个字符。</p>
+
+<p>空的 &quot;Persons&quot; 表类似这样：</p>
+
+<table class="dataintable">
+  <tr>
+    <th>Id_P</th>
+    <th>LastName</th>
+    <th>FirstName</th>
+    <th>Address</th>
+    <th>City</th>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+
+<p>可使用 INSERT INTO 语句向空表写入数据。</p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

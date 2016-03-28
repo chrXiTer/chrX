@@ -1,0 +1,819 @@
+﻿<iframe id="tiyiframe_xmle_app" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("GET","/example/xmle/cd_catalog.xml",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML; 
+x=xmlDoc.getElementsByTagName("CD");
+
+function displayCDInfo(i)
+{
+artist=(x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue);
+title=(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue);
+year=(x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue);
+country=(x[i].getElementsByTagName("COUNTRY")[0].childNodes[0].nodeValue);
+company=(x[i].getElementsByTagName("COMPANY")[0].childNodes[0].nodeValue);
+price=(x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue);
+txt="Artist: "+artist+"<br />Title: "+title+"<br />Year: "+year+"<br />Country: "+country+"<br />Company: "+company+"<br />Price: "+price  ;
+document.getElementById("showCD").innerHTML=txt;
+}
+</script>
+</head>
+
+<body>
+<div id='showCD'>点击某个 CD 就可显示专辑信息：</div><br />
+<script type="text/javascript">
+document.write("<table border='1'>");
+for (var i=0;i<x.length;i++)
+  { 
+  document.write("<tr onclick='displayCDInfo(" + i + ")'>");
+  document.write("<td>");
+  document.write(x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue);
+  document.write("</td><td>");
+  document.write(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue);
+  document.write("</td></tr>");
+  }
+document.write("</table>");
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_xmle_app_first" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+
+<script type="text/javascript">
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("GET","/example/xmle/cd_catalog.xml",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML; 
+
+x=xmlDoc.getElementsByTagName("CD");
+i=0;
+
+function displayCD()
+{
+artist=(x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue);
+title=(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue);
+year=(x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue);
+txt="Artist: " + artist + "<br />Title: " + title + "<br />Year: "+ year;
+document.getElementById("showCD").innerHTML=txt;
+}
+</script>
+</head>
+<body onload="displayCD()">
+
+<div id='showCD'></div>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_xmle_app_navigate" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+
+<script type="text/javascript">
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("GET","/example/xmle/cd_catalog.xml",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML; 
+
+x=xmlDoc.getElementsByTagName("CD");
+i=0;
+
+function displayCD()
+{
+artist=(x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue);
+title=(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue);
+year=(x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue);
+txt="Artist: " + artist + "<br />Title: " + title + "<br />Year: "+ year;
+document.getElementById("showCD").innerHTML=txt;
+}
+
+function next()
+{
+if (i<x.length-1)
+  {
+  i++;
+  displayCD();
+  }
+}
+
+function previous()
+{
+if (i>0)
+  {
+  i--;
+  displayCD();
+  }
+}
+</script>
+</head>
+<body onload="displayCD()">
+
+<div id='showCD'></div><br />
+<input type="button" onclick="previous()" value="<<" />
+<input type="button" onclick="next()" value=">>" />
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_xmle_behave" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style type="text/css">
+h1 {behavior:url(/example/xmle/xmle_behave.htc)}
+</style>
+</head>
+<body>
+<h1>Mouse over me!!!</h1>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_xmle_behave_typing" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style type="text/css">
+#typing
+{
+behavior:url(/example/xmle/xmle_typing.htc);
+font-family:'courier new';
+}
+</style>
+</head>
+
+<body>
+<span id="typing" speed="100">IE5 introduced DHTML behaviors. Behaviors are a way to add DHTML functionality to HTML elements with the ease of CSS.<br /><br />How does behaviors work?<br />By using XML we can link behaviors to any element in a web page and manipulate that element.</p>
+</span>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_xmle_cdcatalog" style="visibility:hidden">
+<textarea name="c">
+<html>
+<body>
+
+<script type="text/javascript">
+// Load XML 
+var xml = new ActiveXObject("Microsoft.XMLDOM")
+xml.async = false
+xml.load("/example/xmle/cd_catalog.xml")
+
+// Load the XSL
+var xsl = new ActiveXObject("Microsoft.XMLDOM")
+xsl.async = false
+xsl.load("/example/xmle/cd_catalog.xsl")
+
+// Transform
+document.write(xml.transformNode(xsl))
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_xmle_cd_catalog_island" style="visibility:hidden">
+<textarea name="c">
+<html>
+<body>
+
+<xml id="cdcat" src="../example/xmle/cd_catalog.xml.htm" ></xml>
+
+<table border="1" datasrc="#cdcat">
+
+<tr>
+<td><span datafld="ARTIST"></span></td>
+<td><span datafld="TITLE"></span></td>
+</tr>
+
+</table>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_xmle_cd_catalog_island_thead" style="visibility:hidden">
+<textarea name="c">
+<html>
+<body>
+
+<xml id="cdcat" src="../example/xmle/cd_catalog.xml.htm" ></xml>
+
+<table border="1" datasrc="#cdcat">
+
+<thead>
+<tr><th>Artist</th><th>Title</th></tr>
+</thead>
+
+<tfoot>
+<tr><th colspan="2">This is my CD collection</th></tr>
+</tfoot>
+
+<tbody>
+<tr>
+<td><span datafld="artist"></span></td>
+<td><span datafld="title"></span></td>
+</tr>
+</tbody>
+
+</table>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_xmle_display_table_1" style="visibility:hidden">
+<textarea name="c">
+<html>
+<body>
+
+<script type="text/javascript">
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("GET","/example/xmle/cd_catalog.xml",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML;
+
+document.write("<table border='1'>");
+var x=xmlDoc.getElementsByTagName("CD");
+for (i=0;i<x.length;i++)
+  {
+  document.write("<tr><td>");
+  document.write(x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue);
+  document.write("</td><td>");
+  document.write(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue);
+  document.write("</td></tr>");
+  }
+document.write("</table>");
+</script>
+
+</body>
+</html>
+
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_xmle_node_parsertest_1" style="visibility:hidden">
+<textarea name="c">
+<html>
+
+<body>
+<h1>W3School.com.cn Internal Note</h1>
+<p>
+<b>To:</b> <span id="to"></span><br />
+<b>From:</b> <span id="from"></span><br />
+<b>Message:</b> <span id="message"></span>
+</p>
+
+<script type="text/javascript">
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("GET","/example/xmle/note.xml",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML;
+
+document.getElementById("to").innerHTML=
+xmlDoc.getElementsByTagName("to")[0].childNodes[0].nodeValue;
+document.getElementById("from").innerHTML=
+xmlDoc.getElementsByTagName("from")[0].childNodes[0].nodeValue;
+document.getElementById("message").innerHTML=
+xmlDoc.getElementsByTagName("body")[0].childNodes[0].nodeValue;
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_xmle_node_parsertest_2" style="visibility:hidden">
+<textarea name="c">
+<html>
+<body>
+<h1>W3School.com.cn Internal Note</h1>
+<p>
+<b>To:</b> <span id="to"></span><br />
+<b>From:</b> <span id="from"></span><br />
+<b>Message:</b> <span id="message"></span>
+</p>
+
+<script>
+txt="<note>";
+txt=txt+"<to>George</to>";
+txt=txt+"<from>John</from>";
+txt=txt+"<heading>Reminder</heading>";
+txt=txt+"<body>Don't forget the meeting!</body>";
+txt=txt+"</note>";
+
+if (window.DOMParser)
+  {
+  parser=new DOMParser();
+  xmlDoc=parser.parseFromString(txt,"text/xml");
+  }
+else // Internet Explorer
+  {
+  xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+  xmlDoc.async="false";
+  xmlDoc.loadXML(txt);
+  }
+
+document.getElementById("to").innerHTML=xmlDoc.getElementsByTagName("to")[0].childNodes[0].nodeValue;
+document.getElementById("from").innerHTML=xmlDoc.getElementsByTagName("from")[0].childNodes[0].nodeValue;
+document.getElementById("message").innerHTML=xmlDoc.getElementsByTagName("body")[0].childNodes[0].nodeValue;
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_xmle_note_traverse_crossbrowser" style="visibility:hidden">
+<textarea name="c">
+<html>
+<body>
+<script type="text/javascript">
+var xmlDoc;
+// code for IE
+if (window.ActiveXObject)
+{
+xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+}
+// code for Mozilla, Firefox, Opera, etc.
+else if (document.implementation.createDocument)
+{
+xmlDoc=document.implementation.createDocument("","",null);
+}
+else
+{
+alert('Your browser cannot handle this script');
+}
+xmlDoc.async=false;
+xmlDoc.load("/example/xmle/note.xml");
+
+var x=xmlDoc.documentElement.childNodes;
+
+for (var i=0;i<x.length;i++)
+{ 
+if (x[i].nodeType==1)
+  { 
+  //Process only element (nodeType 1) nodes
+  document.write(x[i].nodeName + ": ");
+  document.write(x[i].childNodes[0].nodeValue);
+  document.write("<br />");
+  } 
+}
+</script>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_xmle_xmlhttprequest_js" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+var xmlhttp
+
+function loadXMLDoc(url)
+{
+xmlhttp=null
+// code for Mozilla, etc.
+if (window.XMLHttpRequest)
+  {
+  xmlhttp=new XMLHttpRequest()
+  }
+// code for IE
+else if (window.ActiveXObject)
+  {
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")
+  }
+if (xmlhttp!=null)
+  {
+  xmlhttp.onreadystatechange=state_Change
+  xmlhttp.open("GET",url,true)
+  xmlhttp.send(null)
+  }
+else
+  {
+  alert("Your browser does not support XMLHTTP.")
+  }
+}
+
+function state_Change()
+{
+// if xmlhttp shows "loaded"
+if (xmlhttp.readyState==4)
+  {
+  // if "OK"
+  if (xmlhttp.status==200)
+  {
+  alert("XML data OK")
+  document.getElementById('A1').innerHTML=xmlhttp.status
+  document.getElementById('A2').innerHTML=xmlhttp.statusText
+  document.getElementById('A3').innerHTML=xmlhttp.responseText
+  }
+  else
+  {
+  alert("Problem retrieving XML data:" + xmlhttp.statusText)
+  }
+  }
+}
+
+</script>
+</head>
+
+<body onload="loadXMLDoc('/example/xmle/note.xml')">
+<h2>Using the HttpRequest Object</h2>
+
+<p><b>status:</b>
+<span id="A1"></span>
+</p>
+
+<p><b>status text:</b>
+<span id="A2"></span>
+</p>
+
+<p><b>response:</b>
+<br /><span id="A3"></span>
+</p>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_xmle_xmlhttprequest_js1" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+var xmlhttp
+
+function loadXMLDoc(url)
+{
+xmlhttp=null
+// code for Mozilla, etc.
+if (window.XMLHttpRequest)
+  {
+  xmlhttp=new XMLHttpRequest()
+  }
+// code for IE
+else if (window.ActiveXObject)
+  {
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")
+  }
+if (xmlhttp!=null)
+  {
+  xmlhttp.onreadystatechange=state_Change
+  xmlhttp.open("GET",url,true)
+  xmlhttp.send(null)
+  }
+else
+  {
+  alert("Your browser does not support XMLHTTP.")
+  }
+}
+
+function state_Change()
+{
+// if xmlhttp shows "loaded"
+if (xmlhttp.readyState==4)
+  {
+  // if "OK"
+  if (xmlhttp.status==200)
+  {
+  document.getElementById('T1').innerHTML=xmlhttp.responseText
+  }
+  else
+  {
+  alert("Problem retrieving data:" + xmlhttp.statusText)
+  }
+  }
+}
+
+</script>
+</head>
+
+<body onload="loadXMLDoc('/example/xmle/xmle_test_xmlhttp.txt')">
+<div id="T1" style="border:1px solid black;height:40;width:300"></div><br />
+<button onclick="loadXMLDoc('/example/xmle/xmle_test_xmlhttp2.txt')">Click</button>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_xmle_xmlhttprequest_js2" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+var xmlhttp
+
+function loadXMLDoc(url)
+{
+xmlhttp=null
+// code for Mozilla, etc.
+if (window.XMLHttpRequest)
+  {
+  xmlhttp=new XMLHttpRequest()
+  }
+// code for IE
+else if (window.ActiveXObject)
+  {
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")
+  }
+if (xmlhttp!=null)
+  {
+  xmlhttp.onreadystatechange=state_Change
+  xmlhttp.open("GET",url,true)
+  xmlhttp.send(null)
+  }
+else
+  {
+  alert("Your browser does not support XMLHTTP.")
+  }
+}
+
+function state_Change()
+{
+// if xmlhttp shows "loaded"
+if (xmlhttp.readyState==4)
+  {
+  // if "OK"
+  if (xmlhttp.status==200)
+  {
+  document.getElementById('T1').innerHTML=xmlhttp.getAllResponseHeaders()
+  }
+  else
+  {
+  alert("Problem retrieving data:" + xmlhttp.statusText)
+  }
+  }
+}
+
+</script>
+</head>
+
+<body onload="loadXMLDoc('/example/xmle/xmle_test_xmlhttp.txt')">
+<p>
+With a HEAD request, a server will return the headers of a resource (not the resource itself). This means you can find out the Content-Type or Last-Modified of a document, without downloading it itself.
+</p>
+<div id="T1" style="border:1px solid black;height:100;width:300"></div>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_xmle_xmlhttprequest_js3" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+var xmlhttp
+
+function loadXMLDoc(url)
+{
+xmlhttp=null
+// code for Mozilla, etc.
+if (window.XMLHttpRequest)
+  {
+  xmlhttp=new XMLHttpRequest()
+  }
+// code for IE
+else if (window.ActiveXObject)
+  {
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")
+  }
+if (xmlhttp!=null)
+  {
+  xmlhttp.onreadystatechange=state_Change
+  xmlhttp.open("GET",url,true)
+  xmlhttp.send(null)
+  }
+else
+  {
+  alert("Your browser does not support XMLHTTP.")
+  }
+}
+
+function state_Change()
+{
+// if xmlhttp shows "loaded"
+if (xmlhttp.readyState==4)
+  {
+  // if "OK"
+  if (xmlhttp.status==200)
+  {
+  document.getElementById('T1').innerHTML="This file was last modified on: " + xmlhttp.getResponseHeader('Last-Modified')
+  }
+  else
+  {
+  alert("Problem retrieving data:" + xmlhttp.statusText)
+  }
+  }
+}
+
+</script>
+</head>
+
+<body onload="loadXMLDoc('/example/xmle/xmle_test_xmlhttp.txt')">
+<p>
+With a HEAD request, a server will return the headers of a resource (not the resource itself). This means you can find out the Content-Type or Last-Modified of a document, without downloading it itself.
+</p>
+<div id="T1" style="border:1px solid black;height:100;width:300"></div>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_xmle_xmlhttprequest_js4" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+var xmlhttp;
+
+function loadXMLDoc(url)
+{
+xmlhttp=null;
+if (window.XMLHttpRequest)
+  {// code for IE7, Firefox, Mozilla, etc.
+  xmlhttp=new XMLHttpRequest();
+  }
+else if (window.ActiveXObject)
+  {// code for IE5, IE6
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+if (xmlhttp!=null)
+  {
+  xmlhttp.onreadystatechange=onResponse;
+  xmlhttp.open("GET",url,true);
+  xmlhttp.send(null);
+  }
+else
+  {
+  alert("Your browser does not support XMLHTTP.");
+  }
+}
+
+function onResponse()
+{
+if(xmlhttp.readyState!=4) return;
+if(xmlhttp.status!=200)
+  {
+  alert("Problem retrieving XML data");
+  return;
+  }
+
+txt="<table border='1'>";
+x=xmlhttp.responseXML.documentElement.getElementsByTagName("CD");
+for (i=0;i<x.length;i++)
+  {
+  txt=txt + "<tr>";
+  xx=x[i].getElementsByTagName("TITLE");
+    {
+    try
+      {
+      txt=txt + "<td>" + xx[0].firstChild.nodeValue + "</td>";
+      }
+    catch (er)
+      {
+      txt=txt + "<td> </td>";
+      }
+    }
+  xx=x[i].getElementsByTagName("ARTIST");
+    {
+    try
+      {
+      txt=txt + "<td>" + xx[0].firstChild.nodeValue + "</td>";
+      }
+    catch (er)
+      {
+      txt=txt + "<td> </td>";
+      }
+    }
+  txt=txt + "</tr>";
+  }
+txt=txt + "</table>";
+document.getElementById('copy').innerHTML=txt;
+}
+
+</script>
+</head>
+
+<body>
+<div id="copy">
+<button onclick="loadXMLDoc('/example/xmle/cd_catalog.xml')">Get CD info</button>
+</div>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_xmle_xmlhttprequest_vb" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/vbscript">
+dim xmlhttp
+
+function loadXMLDoc(url)
+set xmlhttp=createObject("Microsoft.XMLHTTP")
+xmlhttp.onreadystatechange=getRef("state_Change")
+call xmlhttp.open("GET",url,true)
+call xmlhttp.send()
+end function
+
+function state_Change()
+if xmlhttp.readyState=4 then
+  if xmlhttp.status=200 then
+    alert("XML data OK")
+    document.getElementById("A1").innerText=xmlhttp.status
+    document.getElementById("A2").innerText=xmlhttp.statusText
+    document.getElementById("A3").innerText=xmlhttp.responseText
+  else
+    alert("Problem retrieving XML data:" & xmlhttp.statusText)
+  end if
+end if
+end function
+
+</script>
+</head>
+
+<body onload="loadXMLDoc('/example/xmle/note.xml')">
+<h2>Using the HttpRequest Object</h2>
+
+<p><b>status:</b>
+<span id="A1"></span>
+</p>
+
+<p><b>status text:</b>
+<span id="A2"></span>
+</p>
+
+<p><b>response:</b>
+<br /><span id="A3"></span>
+</p>
+
+</body>
+</html>
+</textarea>
+</iframe>
+

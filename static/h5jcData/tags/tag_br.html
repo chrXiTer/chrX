@@ -1,0 +1,41 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;br&gt; 标签</h1>
+
+<p>&lt;br&gt; 可插入一个简单的换行符。<a href="javascript:tiy.run('html_paragraphs')" >试一试</a></p>
+<p>&lt;br&gt; 标签是空标签（意味着它没有结束标签，因此这是错误的：&lt;br&gt;&lt;/br&gt;）。在 XHTML 中，把结束标签放在开始标签中，也就是 &lt;br /&gt;。</p>
+<p>请注意，&lt;br&gt; 标签只是简单地开始新的一行，而当浏览器遇到 <a href="tag_p.htm"  title="HTML &lt;p&gt; 标签">&lt;p&gt; 标签</a>时，通常会在相邻的段落之间插入一些垂直的间距。</p>
+
+<p>在 HTML 中，&lt;br&gt; 标签没有结束标签。</p>
+<p>在 XHTML 中，&lt;br&gt; 标签必须被正确地关闭，比如这样：&lt;br /&gt;。</p>
+
+<h2>clear 属性</h2>
+<p>如果您希望文本流在内联表格或图像的下一行继续输出，请使用 clear 属性，该属性有三个可选的值：left、right 或者 all，每个值都代表一个边界或两边的边界。</p>
+<p>通常情况下，&lt;br&gt; 标签会告诉浏览器立即停止当前的文本流，并在下一行的左边，或者在左对齐的内联图形或表格的右边开始继续输出文本流。</p>
+<p>但是有时候，您也许希望当前的文本流在当前左边或右边的内联表格或图像的下面一行继续输出。</p>
+<p>HTML 4 和 XHTML 通过 &lt;br&gt; 标签提供了这样的功能。它可以具有三个值：left、right 或者 all，每个值都代表一个边界或两边的边界。当指定的边界没有图像时，浏览器才会继续输出文本。</p>
+<p class="tip"><span>提示：</span>一般情况下，文本流中的其他行会在内联图像的底部显示，除非图形的 &lt;img&gt; 标签被设置为左对齐或右对齐（对于 &lt;table&gt; 标签也一样）。因此，&lt;br&gt; 标签的 clear 属性只对这些左对齐或右对齐的图像或表格起作用。</p>
+<p class="note"><span>注释：</span>请使用 &lt;br&gt; 来输入空行，而不是分割段落。</p>
+
+<h2>实例</h2>
+<dl>
+<dt><a href="javascript:tiy.run('html_br_prop_clear_1')" >不带有 align 属性的 &lt;img&gt; 标签与带有 clear 属性的 &lt;br&gt; 标签</a></dt>
+<dt><a href="javascript:tiy.run('html_br_prop_clear_2')" >带有 align 属性的 &lt;img&gt; 标签与不带有 clear 属性的 &lt;br&gt; 标签</a></dt>
+<dt><a href="javascript:tiy.run('html_br_prop_clear_3')" >带有 align 属性的 &lt;img&gt; 标签与带有 clear 属性的 &lt;br&gt; 标签</a></dt>
+<dt><a href="javascript:tiy.run('html_br_prop_clear_4')" >align 属性为 absmiddle 的 &lt;img&gt; 标签与clear 属性为 left 的 &lt;br&gt; 标签</a></dt>
+</dl>
+
+<h2>全局属性</h2>
+<p>&lt;br&gt; 标签支持 <a href="html_ref_standardattributes.htm" >HTML 中的全局属性</a>。</p>
+
+<h2>事件属性</h2>
+<p>&lt;br&gt; 标签支持 <a href="html_ref_eventattributes.htm" >HTML 中的事件属性</a>。</p>
+
+
+</div>
+</div>
+<script src="../chrX.js"></script>

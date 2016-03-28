@@ -1,0 +1,87 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 Audio/Video DOM videoTracks 属性</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>获得可用视频轨道的数量：</p>
+
+<pre>
+myVid=document.getElementById(&quot;video1&quot;);
+alert(<code>myVid.videoTracks.length</code>);
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_av_prop_videotracks')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>videoTracks 属性返回 VideoTrackList 对象。</p>
+
+<p>VideoTrackList 对象表示视频的可用视频轨道。</p>
+
+<p>VideoTrack 对象表示每一条可用的视频轨道。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre><i>video</i>.videoTracks</pre>
+
+<h3>返回值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">类型</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>TextTrackList 对象</td>
+<td>
+	<p>表示视频的可用视频轨道。</p>
+	<p>VideoTrackList 对象：</p>
+	<ul class="listintable">
+	<li>videoTracks.length - 获得视频中可用视频轨道的数量</li>
+	<li>videoTracks.getTrackById(<i>id</i>) - 通过 id 获得 VideoTrack 对象</li>
+	<li>videoTracks[<i>index</i>] - 通过下标获得 VideoTrack 对象</li>
+	<li>videoTracks.selectedIndex - 获得当前 VideoTrack 对象的下标</li>
+	</ul>
+	<p class="note"><span>注释：</span>第一个可用 VideoTrack 对象的下标是 0。</p>
+</td>
+</tr>
+
+<tr>
+<td>TextTrack 对象</td>
+<td>
+	<p>表示一条视频轨道。</p>
+	<p>VideoTrack 对象的属性：</p>
+	<ul class="listintable">
+	<li>id - 获得视频轨道的 id</li>
+	<li>kind - 获得视频轨道的类型（可以是 &quot;alternative&quot;, &quot;captions&quot;, &quot;main&quot;, &quot;sign&quot;, &quot;subtitles&quot;, &quot;commentary&quot;, 或 &quot;&quot; （空字符串））</li>
+	<li>label - 获得视频轨道的标签</li>
+	<li>language - 获得视频轨道的语言</li>
+	<li>selected - 获得或设置视频轨道是否是活动的 (true|false)</li>
+	</ul>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,149 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS3 transform-origin 属性</h1>
+
+<div class="backtoreference">
+<p><a href="index.htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>设置旋转元素的基点位置：</p>
+<pre>
+div
+{
+transform: rotate(45deg);
+transform-origin:20% 40%;
+
+-ms-transform: rotate(45deg); 		<span class="code_comment">/* IE 9 */</span>
+-ms-transform-origin:20% 40%; 		<span class="code_comment">/* IE 9 */</span>
+
+-webkit-transform: rotate(45deg);	<span class="code_comment">/* Safari 和 Chrome */</span>
+-webkit-transform-origin:20% 40%;	<span class="code_comment">/* Safari 和 Chrome */</span>
+
+-moz-transform: rotate(45deg);		<span class="code_comment">/* Firefox */</span>
+-moz-transform-origin:20% 40%;		<span class="code_comment">/* Firefox */</span>
+
+-o-transform: rotate(45deg);		<span class="code_comment">/* Opera */</span>
+-o-transform-origin:20% 40%;		<span class="code_comment">/* Opera */</span>
+}
+</pre>
+
+<p><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/t.asp?f=css3_transform-origin  \n\n'))window.location='/chrX/nofile/123tiy/t.asp?f=css3_transform-origin'" >亲自试一试</a></p>
+<p>页面底部有更多实例。</p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+
+<p>Internet Explorer 支持 -ms-transform-origin 属性，但仅限于 2D 转换。</p>
+<p>Firefox 支持 -moz-transform-origin 属性，但仅限于 2D 转换。</p>
+<p>Opera 支持 -o-transform-origin 属性，但仅限于 2D 转换。</p>
+<p>Safari 和 Chrome 支持 -webkit-transform-origin 属性，同时适用于 2D 和 3D 转换。</p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>transform-origin 属性允许您改变被转换元素的位置。</p>
+<p>2D 转换元素能够改变元素 x 和 y 轴。3D 转换元素还能改变其 Y 轴。</p>
+<p>为了更好地理解 transform-origin 属性，请查看这个<a target="_blank" href="javascript:if(confirm('/chrX/nofile/123example/css3/demo_css3_transform-origin.html  \n\n'))window.location='/chrX/nofile/123example/css3/demo_css3_transform-origin.html'" >演示</a>。</p>
+<p>Safari/Chrome 用户：为了更好地理解 transform-origin 属性用于 3D 转换的情况，请查看这个<a target="_blank" href="javascript:if(confirm('/chrX/nofile/123example/css3/demo_css3_transform-origin_3D.html  \n\n'))window.location='/chrX/nofile/123example/css3/demo_css3_transform-origin_3D.html'" >演示</a>。</p>
+<p class="note"><span>注释：</span>该属性必须与 <a href="pr_transform.htm" title="CSS3 transform 属性">transform</a> 属性一同使用。</p>
+<p>为了更好地理解 transform 属性，请查看这个<a target="_blank" href="javascript:if(confirm('/chrX/nofile/123example/css3/demo_css3_transform.html  \n\n'))window.location='/chrX/nofile/123example/css3/demo_css3_transform.html'" >演示</a>。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">50% 50% 0</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS3</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.transformOrigin=&quot;20% 40%&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>transform-origin: <i>x-axis</i> <i>y-axis</i> <i>z-axis</i>;</pre>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>x-axis</td>
+<td>
+	<p>定义视图被置于 X 轴的何处。可能的值：</p>
+	<ul class="listintable">
+	<li>left</li>
+	<li>center</li>
+	<li>right</li>
+	<li><i>length</i></li>
+	<li><i>%</i></li>
+	</ul>
+</td>
+</tr>
+
+<tr>
+<td>y-axis</td>
+<td>
+<p>定义视图被置于 Y 轴的何处。可能的值：</p>
+	<ul class="listintable">
+	<li>top</li>
+	<li>center</li>
+	<li>bottom</li>
+	<li><i>length</i></li>
+	<li><i>%</i></li>
+	</ul>
+</td>
+</tr>
+
+<tr>
+<td>z-axis</td>
+<td>
+	<p>定义视图被置于 Z 轴的何处。可能的值：</p>
+	<ul class="listintable">
+	<li><i>length</i></li>
+	</ul>
+</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>CSS3 教程：<a href="../css3/css3_2dtransform.htm" title="CSS3 2D 转换">CSS3 2D 转换</a></p>
+<p>CSS3 教程：<a href="../css3/css3_3dtransform.htm" title="CSS3 3D 转换">CSS3 3D 转换</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href="index.htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+<!-- maincontent end -->
+
+</div>
+<!-- wrapper end -->
+
+<script src="../chrX.js"></script>
+
+

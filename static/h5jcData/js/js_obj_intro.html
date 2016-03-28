@@ -1,0 +1,106 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript 对象</h1>
+<h2>面向对象术语</h2>
+
+<h3>对象</h3>
+
+<p>ECMA-262 把对象（object）定义为“属性的无序集合，每个属性存放一个原始值、对象或函数”。严格来说，这意味着对象是无特定顺序的值的数组。</p>
+<p>在 ECMAScript 中，对象由特性（attribute）构成，特性可以是原始值，也可以是引用值。如果特性存放的是函数，它将被看作对象的方法（method），否则该特性被看作对象的属性（property）。</p>
+
+<h2>JavaScript 中的对象</h2>
+<h2>属性和方法</h2>
+<p>在面向对象的语境中，对象有属性和方法组成，它们常被称为对象的成员。在JavaScript中，方法（函数）也是一种属性，但由于方法的特殊性，一般仍然将属性和方法分开描述。</p>
+<p>属性是与对象相关的数据。</p>
+<p>方法是能够在对象上执行的动作。</p>
+<p>举例：汽车就是现实生活中的对象。</p>
+<p>汽车的属性包括：名称、型号、重量、颜色等。所有汽车都有这些属性，但是对于每款车，这些属性的值不同。</p>
+<pre>
+car.name=Fiat
+car.model=500
+car.weight=850kg
+car.color=white 
+</pre>
+
+<p>汽车的方法包括：启动、驾驶、刹车等。所有汽车都拥有这些方法，但是它们被执行的效果不尽相同。</p>
+<pre>
+car.start()
+car.drive()
+car.brake()
+</pre>
+
+<h2>创建 JavaScript 对象</h2>
+<p>JavaScript 中的几乎所有事务都是对象：字符串、数字、数组、日期、函数，等等。</p>
+<p>你也可以创建自己的对象。</p>
+<p>本例创建名为 &quot;person&quot; 的对象，并为其添加了四个属性：</p>
+<pre>
+person=new Object();
+person.firstname=&quot;Bill&quot;;
+person.lastname=&quot;Gates&quot;;
+person.age=56;
+person.eyecolor=&quot;blue&quot;;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('js_create_object')" >亲自试一试</a></p>
+<p>创建新 JavaScript 对象有很多不同的方法，并且您还可以向已存在的对象添加属性和方法。</p>
+
+<h2>访问对象的属性</h2>
+<p>访问对象属性的语法是：</p>
+<pre><i>objectName</i>.<i>propertyName</i></pre>
+<p>本例使用 String 对象的 length 属性来查找字符串的长度：</p>
+<pre>
+var message=&quot;Hello World!&quot;;
+var x=message.length;  //在以上代码执行后，x 的值是：12
+</pre>
+
+<h2>访问对象的方法</h2>
+<p>您可以通过下面的语法调用方法：</p>
+<pre><i>objectName</i>.<i>methodName</i>()</pre>
+<p>这个例子使用 String 对象的 toUpperCase() 方法来把文本转换为大写：</p>
+
+<pre>
+var message=&quot;Hello world!&quot;;
+var x=message.toUpperCase();  //在以上代码执行后，x 的值是：HELLO WORLD!
+</pre>
+
+<h2>类</h2>
+
+<p>类是面向对象语言中的一个重要概念，利用类可以创建类型相同的大量对象。JavaScript中没有类（保留字class 到目前为止EcmaScript v5 还没有被启用）。JavaScript是基于原型的语言，利用特殊的函数和new关键字可以达到相同的目的。</p>
+
+<h3>实例</h3>
+
+<p>程序使用类创建对象时，生成的对象叫作类的实例（instance）。对类生成的对象的个数的唯一限制来自于运行代码的机器的物理内存。每个实例的行为相同，但实例处理一组独立的数据。由类创建对象实例的过程叫做实例化（instantiation）。</p>
+
+<p>在前面的章节我们提到过，ECMAScript 并没有正式的类。相反，ECMA-262 把对象定义描述为对象的配方。这是 ECMAScript 逻辑上的一种折中方案，因为对象定义实际上是对象自身。</p>
+
+
+<div id="toc">
+<h2>课外书</h2>
+
+<p>如需更多有关 <em>JavaScript 对象</em>的知识，请阅读 JavaScript 高级教程中的相关内容：</p>
+
+<dl>
+<dt><a href="pro_js_object_working_with.htm"  title="ECMAScript 对象应用">ECMAScript 对象应用</a></dt>
+<dd>本节讲解了如何声明和实例化对象，如何引用和废除对象，以及绑定的概念。</dd>
+
+<dt><a href="pro_js_object_types.htm"  title="ECMAScript 对象类型">ECMAScript 对象类型</a></dt>
+<dd>本节介绍了 ECMAScript 的三种类型：本地对象、内置对象和宿主对象，并提供了指向相关参考手册的链接。</dd>
+
+<dt><a href="pro_js_object_scope.htm"  title="ECMAScript 对象作用域">ECMAScript 对象作用域</a></dt>
+<dd>本节讲解了 ECMAScript 作用域以及 this 关键字。</dd>
+
+<dt><a href="pro_js_object_defining.htm"  title="ECMAScript 定义类或对象">ECMAScript 定义类或对象</a></dt>
+<dd>本节详细讲解了创建 ECMAScript 对象或类的各种方式。</dd>
+
+<dt><a href="pro_js_object_modifying.htm"  title="ECMAScript 修改对象">ECMAScript 修改对象</a></dt>
+<dd>本节讲解了如何通过创建新方法或重定义已有方法来修改对象。</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

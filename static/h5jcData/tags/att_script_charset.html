@@ -1,0 +1,75 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;script&gt; 标签的 charset 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_script.htm" >HTML &lt;script&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>定义外部脚本文件中所使用的字符编码：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot; src=&quot;myscripts.js&quot; <code>charset=&quot;UTF-8&quot;</code>&gt;&lt;/script&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_script')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>charset 属性规定在外部脚本文件中使用的字符编码。</p>
+<p>如果外部文件中的字符编码与主文件中的编码方式不同，就要用到 charset 属性。</p>
+<p>默认的字符编码是 ISO-8859-1。</p>
+</div>
+
+<div>
+<h2><a id="src_charset">src 和 charset 属性</a></h2>
+<p>对特别长的 JavaScript 程序或者经常重复使用的程序来说，你可以希望将这些代码存放到一个单独的文件中。在这样的情况下，让浏览器通过 src 属性来载入那个单独的文件。</p>
+<p>src 的值是包含这个 JavaScript 程序的文件的 URL。保存的文件的 MIME 类型应是 application/x-javascript，但如果文件名的后缀为 .js，也能够被正确配置了的服务器进行恰当的处理。</p>
+<p>例如下面的语句：</p>
+<pre>&lt;script type=&quot;text/javascript&quot; <code>src=&quot;/w3school.com.cn/abc.js&quot;</code>&gt;....&lt;/script&gt;</pre>
+<p>上面的例子告诉支持 &lt;script&gt; 的浏览器从服务器上下载名为 abc.js 的 JavaScript 程序。</p>
+<p class="important"><span>重要事项：</span>请注意，尽管&lt;script&gt; 标签没有内容，结束的 &lt;/script&gt; 标签也是必需的。</p>
+<p>charset 属性与 src 属性一起使用，告诉浏览器用来编码这个 javascript 程序的字符集。它的值是任何一个 ISO 标准字符集编码的名称。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;script charset=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td><i>character_encoding</i></td>
+    <td>
+	<p>外部脚本文件的字符编码方式。常用的字符集有：</p>
+	<ul class="listintable">
+		<li>UTF-8 - Unicode 字符编码</li>
+		<li>ISO-8859-1 - 拉丁字母表的字符编码</li>
+    </ul>
+	<p>如需查看所有可用的字符集，请访问我们的 <a href="html_ref_charactersets.htm" >字符集参考手册</a>。</p>
+	</td>
+  </tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_script.htm" >HTML &lt;script&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

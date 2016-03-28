@@ -1,0 +1,121 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS overflow 属性</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>overflow 属性规定当内容溢出元素框时发生的事情。</p>
+<h3>说明</h3>
+<p>这个属性定义溢出元素内容区的内容会如何处理。如果值为 scroll，不论是否需要，用户代理都会提供一种滚动机制。因此，有可能即使元素框中可以放下所有内容也会出现滚动条。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">auto</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS2</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.overflow=&quot;scroll&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+<p>设置 overflow 属性：</p>
+<pre>
+div
+  {
+  width:150px;
+  height:150px;
+  <code>overflow:scroll;</code>
+  }
+</pre>
+<p><a href="../tiy/t.asp-f=csse_overflow.htm" >TIY</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有主流浏览器都支持 overflow 属性。</p>
+<p class="note"><span>注释：</span>任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 &quot;inherit&quot;。</p>
+</div>
+
+<div>
+<h2>可能的值</h2>
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>visible</td>
+<td>默认值。内容不会被修剪，会呈现在元素框之外。</td>
+</tr>
+
+<tr>
+<td>hidden</td>
+<td>内容会被修剪，并且其余内容是不可见的。</td>
+</tr>
+
+<tr>
+<td>scroll</td>
+<td>内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。</td>
+</tr>
+
+<tr>
+<td>auto</td>
+<td>如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。</td>
+</tr>
+
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 overflow 属性的值。</td>
+</tr>
+</table>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="../tiy/t.asp-f=csse_overflow.htm" >如何使用滚动条来显示元素内溢出的内容</a></dt>
+<dd>本例演示当元素内容太大而超出规定区域时，如何设置溢出属性来规定相应的动作。</dd>
+
+<dt><a href="../tiy/t.asp-f=csse_pos_overflow_hidden.htm" >如何隐藏溢出元素中溢出的内容</a></dt>
+<dd>本例演示在元素中的内容太大以至于无法适应指定的区域时，如何设置 overflow 属性来隐藏其内容。</dd>
+
+<dt><a href="../tiy/t.asp-f=csse_pos_overflow_auto.htm" >如何设置浏览器来自动地处理溢出</a></dt>
+<dd>本例演示如何设置浏览器来自动地处理溢出。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+<p>CSS 教程：<a href="css_positioning.htm" title="CSS 定位 (Positioning)">CSS 定位</a></p>
+<p>HTML DOM 参考手册：<a href="../htmldom/prop_style_overflow.htm" title="HTML DOM overflow 属性">overflow 属性</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

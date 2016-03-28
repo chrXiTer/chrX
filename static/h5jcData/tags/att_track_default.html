@@ -1,0 +1,66 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;track&gt; default 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_track.htm" >HTML &lt;track&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>下面是一个 video 元素，其中的两个字幕之一是默认的：</p>
+
+<pre>
+&lt;video width=&quot;320&quot; height=&quot;240&quot; controls=&quot;controls&quot;&gt;
+  &lt;source src=&quot;forrest_gump.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+  &lt;source src=&quot;forrest_gump.ogg&quot; type=&quot;video/ogg&quot; /&gt;
+  &lt;track kind=&quot;subtitles&quot; src=&quot;subschi.srt&quot; srclang=&quot;zh&quot; label=&quot;Chinese&quot;&gt;
+  &lt;track kind=&quot;subtitles&quot; <code>default</code> src=&quot;subseng.srt&quot; srclang=&quot;en&quot; label=&quot;English&quot;&gt;
+&lt;/video&gt;
+</pre>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>如果使用 default 属性，则规定应该使用该轨道，假如用户没有选择其他轨道的话。</p>
+</div>
+
+<div>
+<h2>HTML 4.01 与 HTML 5 之间的差异</h2>
+
+<p>&lt;command&gt; 标签是 HTML5 中的新标签。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;track kind=&quot;subtitles&quot; default src=&quot;chisubs.srt&quot; srclang=&quot;zh&quot;&gt;</pre>
+
+<h3>属性值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>default</td>
+<td>规定该轨道是默认轨道，假如用户未选择其他，则使用这个轨道。</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_track.htm" >HTML &lt;track&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

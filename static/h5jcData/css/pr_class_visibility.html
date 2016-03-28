@@ -1,0 +1,112 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS visibility 属性</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>visibility 属性规定元素是否可见。</p>
+<p class="tip"><span>提示：</span>即使不可见的元素也会占据页面上的空间。请使用 &quot;display&quot; 属性来创建不占据页面空间的不可见元素。</p>
+<h3>说明</h3>
+<p>这个属性指定是否显示一个元素生成的元素框。这意味着元素仍占据其本来的空间，不过可以完全不可见。值 collapse 在表中用于从表布局中删除列或行。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">visible</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>yes</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS2</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.visibility=&quot;hidden&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+<p>使 h2 元素不可见：</p>
+<pre>
+h2
+  {
+  <code>visibility:hidden;</code>
+  }
+</pre>
+<p><a href="../tiy/t.asp-f=csse_visibility.htm" >TIY</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有主流浏览器都支持 visibility 属性。</p>
+<p class="note"><span>注释：</span>任何的版本的 Internet Explorer （包括 IE8）都不支持 &quot;inherit&quot; 和 &quot;collapse&quot; 属性值。</p>
+</div>
+
+<div>
+<h2>可能的值</h2>
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>visible</td>
+<td>默认值。元素是可见的。</td>
+</tr>
+
+<tr>
+<td>hidden</td>
+<td>元素是不可见的。</td>
+</tr>
+
+<tr>
+<td>collapse</td>
+<td>当在表格元素中使用时，此值可删除一行或一列，但是它不会影响表格的布局。被行或列占据的空间会留给其他内容使用。如果此值被用在其他的元素上，会呈现为 &quot;hidden&quot;。</td>
+</tr>
+
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 visibility 属性的值。</td>
+</tr>
+</table>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="../tiy/t.asp-f=csse_visibility.htm" >如何使元素不可见</a></dt>
+<dd>本例演示如何使元素不可见。你希望元素被显示出来，还是不呢？</dd>
+
+<dt><a href="../tiy/t.asp-f=csse_visibility_collapse.htm" >把表格元素设置为 collapse</a></dt>
+<dd>本例演示如何使表格元素叠加？</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+<p>CSS 教程：<a href="css_positioning.htm" title="CSS 定位 (Positioning)">CSS 定位</a></p>
+<p>HTML DOM 参考手册：<a href="../htmldom/prop_style_visibility.htm" title="HTML DOM visibility 属性">visibility 属性</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

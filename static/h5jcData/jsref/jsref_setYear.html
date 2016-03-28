@@ -1,0 +1,88 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript setYear() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>setYear() 方法用于设置年份。</p>
+
+<h3>语法</h3>
+
+<pre>dateObject.setYear(year)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>year</td>
+    <td>必需。表示年份的两位或四位数字。</td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+
+<p>调整过的日期的毫秒表示。在 ECMAScript 标准化之前，该方法什么都不返回。</p>
+</div>
+
+<div>
+<h2>提示和注释：</h2>
+
+<p class="note"><span>注释：</span>如果 year 参数是两位的数字，比如 setYear(91)，则该方法会理解为 1991。如果要规定 1990 年之前或 1999 年之后的年份，请使用四位数字。</p>
+
+<p class="note"><span>注释：</span>该方法总是结合一个 Date 对象来使用。</p>
+
+<p class="important"><span>重要事项：</span>从 ECMAScript v3 起，JavaScript 实现不再要求使用该函数，而使用 setFullYear() 函数代替它。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在本例中，我们将通过 setYear() 方法把年份设置为 1891：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var d = new Date()
+d.setYear(1891)
+document.write(d)
+
+&lt;/script&gt;</pre>
+
+<p>输出：</p>
+
+<pre>
+<script type="text/javascript">
+var d = new Date()
+d.setYear(1891)
+document.write(d)
+</script>
+</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_setyear')" >setYear()</a></dt>
+<dd>如何使用 setYear() 来设置年份。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

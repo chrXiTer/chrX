@@ -1,0 +1,105 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;area&gt; 标签</h1>
+
+<p>&lt;area&gt; 标签定义图像映射中的区域（注：图像映射指得是带有可点击区域的图像）。</p>
+<p>area 元素总是嵌套在 &lt;map&gt; 标签中。</p>
+<p class="note"><span>注释：</span><a href="tag_img.htm" >&lt;img&gt;</a> 标签中的 usemap 属性与 <a href="tag_map.htm" >map</a> 元素 name 属性相关联，创建图像与映射之间的联系。</p>
+<p class="note"><span>注释：</span>&lt;img&gt; 中的 <em>usemap</em> 属性可引用 &lt;map&gt; 中的 <em>id</em> 或 <em>name</em> 属性（由浏览器决定），所以我们需要同时向 &lt;map&gt; 添加 id 和 name 两个属性。</p>
+
+<h2>实例：带有可点击区域的图像映射：</h2>
+<pre>
+&lt;img src=&quot;planets.jpg&quot; border=&quot;0&quot; usemap=&quot;#planetmap&quot; alt=&quot;Planets&quot; /&gt;
+
+&lt;map name=&quot;planetmap&quot; id=&quot;planetmap&quot;&gt;
+  <code>&lt;area shape=&quot;circle&quot; coords=&quot;180,139,14&quot; href =&quot;venus.html&quot; alt=&quot;Venus&quot; /&gt;</code>
+  <code>&lt;area shape=&quot;circle&quot; coords=&quot;129,161,10&quot; href =&quot;mercur.html&quot; alt=&quot;Mercury&quot; /&gt;</code>
+  <code>&lt;area shape=&quot;rect&quot; coords=&quot;0,0,110,260&quot; href =&quot;sun.html&quot; alt=&quot;Sun&quot; /&gt;</code>
+&lt;/map&gt;
+</pre>
+<p class="tiy"><a href="javascript:tiy.run('html_areamap')" >试一试</a></p>
+
+<h2>必需的属性</h2>
+<table class="dataintable">
+<tr>
+<th style="width:20%;">属性</th>
+<th style="width:20%;">值</th>
+<th style="width:60%;">描述</th>
+</tr>
+
+<tr>
+<td><a href="att_area_alt.htm"  title="HTML &lt;area&gt; 标签的 alt 属性">alt</a></td>
+<td><i>text</i></td>
+<td>定义此区域的替换文本。</td>
+</tr>
+</table>
+
+<h2>可选的属性</h2>
+<table class="dataintable">
+<tr>
+<th style="width:20%;">属性</th>
+<th style="width:20%;">值</th>
+<th style="width:60%;">描述</th>
+</tr>
+
+<tr>
+<td><a href="att_area_coords.htm"  title="HTML &lt;area&gt; 标签的 coords 属性">coords</a></td>
+<td>坐标值</td>
+<td>定义可点击区域（对鼠标敏感的区域）的坐标。</td>
+</tr>
+
+<tr>
+<td><a href="att_area_href.htm"  title="HTML &lt;area&gt; 标签的 href 属性">href</a></td>
+<td><i>URL</i></td>
+<td>定义此区域的目标 URL。</td>
+</tr>
+
+<tr>
+<td><a href="att_area_nohref.htm"  title="HTML &lt;area&gt; 标签的 nohref 属性">nohref</a></td>
+<td>nohref</td>
+<td>从图像映射排除某个区域。</td>
+</tr>
+
+<tr>
+<td><a href="att_area_shape.htm"  title="HTML &lt;area&gt; 标签的 shape 属性">shape</a></td>
+<td>
+	<ul>
+	<li>default</li>
+	<li>rect</li>
+	<li>circ</li>
+	<li>poly</li>
+	</ul>
+</td>
+<td>定义区域的形状。</td>
+</tr>
+
+<tr>
+<td><a href="att_area_target.htm"  title="HTML &lt;area&gt; 标签的 target 属性">target</a></td>
+<td>
+	<ul>
+	<li>_blank</li>
+	<li>_parent</li>
+	<li>_self</li>
+	<li>_top</li>
+	</ul>
+</td>
+<td>规定在何处打开 href 属性指定的目标 URL。</td>
+</tr>
+</table>
+
+<h2>全局属性</h2>
+<p>&lt;area&gt; 标签支持 <a href="html_ref_standardattributes.htm" >HTML 中的全局属性</a>。</p>
+
+<h2>事件属性</h2>
+<p>&lt;area&gt; 标签支持 <a href="html_ref_eventattributes.htm" >HTML 中的事件属性</a>。</p>
+
+<h2>相关页面</h2>
+<p>HTML DOM 参考手册：<a href="../jsref/dom_obj_area.htm"  title="HTML DOM Area 对象">Area 对象</a></p>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

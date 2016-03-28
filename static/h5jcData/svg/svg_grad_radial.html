@@ -1,0 +1,77 @@
+﻿
+<link rel="stylesheet" type="text/css" href="../c3.css"  />
+
+<body>
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>SVG 放射性渐变</h1>
+
+<div class="intro">
+<p><strong>SVG 渐变必须在 &lt;defs&gt; 标签中进行定义。</strong></p>
+</div>
+
+<div>
+<h2>放射性渐变</h2>
+<p>&lt;radialGradient&gt; 用来定义放射性渐变。</p>
+<p>&lt;radialGradient&gt; 标签必须嵌套在 &lt;defs&gt; 中。&lt;defs&gt; 标签是 definitions 的缩写，它允许对诸如渐变等特殊元素进行定义。</p>
+<p>请把下面的代码拷贝到记事本，然后把文件保存为 &quot;radial1.svg&quot;。把此文件放入您的 web 目录：</p>
+<pre>&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;
+&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot; 
+&quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;
+
+&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; version=&quot;1.1&quot;
+xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+
+&lt;defs&gt;
+&lt;radialGradient id=&quot;grey_blue&quot; cx=&quot;50%&quot; cy=&quot;50%&quot; r=&quot;50%&quot;
+fx=&quot;50%&quot; fy=&quot;50%&quot;&gt;
+&lt;stop offset=&quot;0%&quot; style=&quot;stop-color:rgb(200,200,200);
+stop-opacity:0&quot;/&gt;
+&lt;stop offset=&quot;100%&quot; style=&quot;stop-color:rgb(0,0,255);
+stop-opacity:1&quot;/&gt;
+&lt;/radialGradient&gt;
+&lt;/defs&gt;
+
+&lt;ellipse cx=&quot;230&quot; cy=&quot;200&quot; rx=&quot;110&quot; ry=&quot;100&quot;
+style=&quot;fill:url(#grey_blue)&quot;/&gt;
+
+&lt;/svg&gt;</pre>
+
+<h3>代码解释：</h3>
+&lt;radialGradient&gt; 标签的 id 属性可为渐变定义一个唯一的名称，fill:url(#grey_blue) 属性把 ellipse 元素链接到此渐变，cx、cy 和 r 属性定义外圈，而 fx 和 fy 定义内圈
+渐变的颜色范围可由两种或多种颜色组成。每种颜色通过一个 &lt;stop&gt; 标签来规定。offset 属性用来定义渐变的开始和结束位置。
+<p><a href="radial1.svg" >查看例子</a></p>
+
+<h3>另一个例子：</h3>
+<pre>&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;
+&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot; 
+&quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;
+
+&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; version=&quot;1.1&quot;
+xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+
+&lt;defs&gt;
+&lt;radialGradient id=&quot;grey_blue&quot; cx=&quot;20%&quot; cy=&quot;40%&quot; r=&quot;50%&quot;
+fx=&quot;50%&quot; fy=&quot;50%&quot;&gt;
+&lt;stop offset=&quot;0%&quot; style=&quot;stop-color:rgb(200,200,200);
+stop-opacity:0&quot;/&gt;
+&lt;stop offset=&quot;100%&quot; style=&quot;stop-color:rgb(0,0,255);
+stop-opacity:1&quot;/&gt;
+&lt;/radialGradient&gt;
+&lt;/defs&gt;
+
+&lt;ellipse cx=&quot;230&quot; cy=&quot;200&quot; rx=&quot;110&quot; ry=&quot;100&quot;
+style=&quot;fill:url(#grey_blue)&quot;/&gt;
+
+&lt;/svg&gt;</pre>
+
+<p><a href="radial2.svg" >查看例子</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+</body>

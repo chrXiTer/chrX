@@ -1,0 +1,96 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;html&gt; 标签</h1>
+
+<div>
+<h2>实例</h2>
+
+<pre>
+<code>&lt;html&gt;</code>
+
+&lt;head&gt;
+  这里是文档的头部 ... ...
+  ...
+&lt;/head&gt;
+
+&lt;body&gt;
+  这里是文档的主体 ... ...
+  ...
+&lt;/body&gt;
+
+<code>&lt;/html&gt;</code>
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_basic')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>此元素可告知浏览器其自身是一个 HTML 文档。</p>
+
+<p>&lt;html&gt; 与 &lt;/html&gt; 标签限定了文档的开始点和结束点，在它们之间是文档的头部和主体。正如您所了解的那样，文档的头部由 <a href="tag_head.htm"  title="HTML &lt;head&gt; 标签">&lt;head&gt; 标签</a>定义，而主体由 <a href="tag_body.htm"  title="HTML &lt;body&gt; 标签">&lt;body&gt; 标签</a>定义。</p>
+</div>
+
+<div>
+<h2>HTML 与 XHTML 之间的差异</h2>
+
+<p>xmlns 属性在 XHTML 中是必需的，但在 HTML 中不是。不过，即使 XHTML 文档中的 &lt;html&gt; 没有使用此属性，W3C 的验证器也不会报错。这是因为 &quot;xmlns=http://www.w3.org/1999/xhtml&quot; 是一个固定值，即使您没有包含它，此值也会被添加到 &lt;html&gt; 标签中。</p>
+
+<p><a href="tag_prop_xmlns.htm" >有关 xmlns 属性的更多信息</a>。</p>
+</div>
+
+<div>
+<h2>提示和注释</h2>
+
+<p class="note"><span>注释：</span>即使 html 元素是文档的根元素，它也不包含 doctype 元素。doctype 元素必须位于 html 元素之前。</p>
+</div>
+
+<div>
+<h2>属性</h2>
+
+<p class="html5_new_note"><span>new</span> : HTML5 中的新属性。</p>
+
+<table class="dataintable">
+<tr>
+<th style="width:20%;">属性</th>
+<th style="width:20%;">值</th>
+<th style="width:60%;">描述</th>
+</tr>
+
+<tr>
+<td class="html5_new">manifest</td>
+<td><i>url</i></td>
+<td>定义一个 URL，在这个 URL 上描述了文档的缓存信息。</td>
+</tr>
+
+<tr>
+<td><a href="tag_prop_xmlns.htm" >xmlns</a></td>
+<td>http://www.w3.org/1999/xhtml</td>
+<td>定义 XML namespace 属性。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>全局属性</h2>
+
+<p>&lt;html&gt; 标签支持 <a href="html_ref_standardattributes.htm" >HTML 中的全局属性</a>。</p>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('html_basic')" >一个简单的 HTML 文件</a></dt>
+<dd>这个例子是一个很简单的 HTML 文件，使用了尽量少的 HTML 标签。它向您演示了 body 元素中的内容是如何被浏览器显示的。</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

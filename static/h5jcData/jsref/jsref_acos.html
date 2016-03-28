@@ -1,0 +1,87 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript acos() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_math.htm"  title="JavaScript Math 对象">JavaScript Math 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>acos() 方法可返回一个数的反余弦。</p>
+
+<h3>语法</h3>
+
+<pre>Math.acos(x)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>x</td>
+    <td>必需。必须是 -1.0 ~ 1.0 之间的数。</td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+
+<p>x 的反余弦值。返回的值是 0 到 PI 之间的弧度值。</p>
+</div>
+
+<div>
+<h2>提示和注释</h2>
+
+<p class="note"><span>注释：</span>如果参数 x 超过了 -1.0 ~ 1.0 的范围，那么浏览器将返回 NaN。</p>
+
+<p class="note"><span>注释：</span>如果参数 x 取值 -1，那么将返回 PI。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在本例中，我们将取得不同数的反余弦值：</p>
+
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+
+document.write(Math.acos(0.64) + &quot;&lt;br /&gt;&quot;)
+document.write(Math.acos(0) + &quot;&lt;br /&gt;&quot;)
+document.write(Math.acos(-1) + &quot;&lt;br /&gt;&quot;)
+document.write(Math.acos(1) + &quot;&lt;br /&gt;&quot;)
+document.write(Math.acos(2))
+
+&lt;/script&gt;</pre>
+
+<p>输出：</p>
+
+<pre>
+0.8762980611683406
+1.5707963267948965
+3.141592653589793
+0
+NaN
+</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_acos')" >acos()</a></dt>
+<dd>如何使用 acos() 来取得不同数的反余弦值。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_math.htm"  title="JavaScript Math 对象">JavaScript Math 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

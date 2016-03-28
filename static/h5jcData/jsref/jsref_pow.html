@@ -1,0 +1,95 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript pow() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_math.htm"  title="JavaScript Math 对象">JavaScript Math 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>pow() 方法可返回 x 的 y 次幂的值。</p>
+
+<h3>语法</h3>
+
+<pre>Math.pow(x,y)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>x</td>
+    <td>必需。底数。必须是数字。</td>
+  </tr>
+  <tr>
+    <td>y</td>
+    <td>必需。幂数。必须是数字。</td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+
+<p>x 的 y 次幂。</p>
+
+<h3>说明</h3>
+
+<p>如果结果是虚数或负数，则该方法将返回 NaN。如果由于指数过大而引起浮点溢出，则该方法将返回 Infinity。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在下面的例子中，我们将把 pow() 运用到不同的数字组合上：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+document.write(Math.pow(0,0) + &quot;&lt;br /&gt;&quot;)
+document.write(Math.pow(0,1) + &quot;&lt;br /&gt;&quot;)
+document.write(Math.pow(1,1) + &quot;&lt;br /&gt;&quot;)
+document.write(Math.pow(1,10) + &quot;&lt;br /&gt;&quot;)
+document.write(Math.pow(2,3) + &quot;&lt;br /&gt;&quot;)
+document.write(Math.pow(-2,3) + &quot;&lt;br /&gt;&quot;)
+document.write(Math.pow(2,4) + &quot;&lt;br /&gt;&quot;)
+document.write(Math.pow(-2,4) + &quot;&lt;br /&gt;&quot;)
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>
+1
+0
+1
+1
+8
+-8
+16
+16
+</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_pow')" >pow()</a></dt>
+<dd>如何使用 pow() 方法。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_math.htm"  title="JavaScript Math 对象">JavaScript Math 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

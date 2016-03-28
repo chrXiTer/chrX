@@ -1,0 +1,101 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL NULL 函数</h1>
+
+<div>
+<h2>SQL ISNULL()、NVL()、IFNULL() 和 COALESCE() 函数</h2>
+
+<p>请看下面的 &quot;Products&quot; 表：</p>
+
+<table class="dataintable">
+  <tr>
+    <th>P_Id</th>
+    <th>ProductName</th>
+    <th>UnitPrice</th>
+    <th>UnitsInStock</th>
+    <th>UnitsOnOrder</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>computer</td>
+    <td>699</td>
+    <td>25</td>
+    <td>15</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>printer</td>
+    <td>365</td>
+    <td>36</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>telephone</td>
+    <td>280</td>
+    <td>159</td>
+    <td>57</td>
+  </tr>
+</table>
+
+<p>假如 &quot;UnitsOnOrder&quot; 是可选的，而且可以包含 NULL 值。</p>
+
+<p>我们使用如下 SELECT 语句：</p>
+
+<pre>
+SELECT ProductName,UnitPrice*(UnitsInStock+UnitsOnOrder)
+FROM Products
+</pre>
+
+<p>在上面的例子中，如果有 &quot;UnitsOnOrder&quot; 值是 NULL，那么结果是 NULL。</p>
+
+<p>微软的 ISNULL() 函数用于规定如何处理 NULL 值。</p>
+
+<p>NVL(), IFNULL() 和 COALESCE() 函数也可以达到相同的结果。</p>
+
+<p>在这里，我们希望 NULL 值为 0。</p>
+
+<p>下面，如果 &quot;UnitsOnOrder&quot; 是 NULL，则不利于计算，因此如果值是 NULL 则 ISNULL() 返回 0。</p>
+
+<h3>SQL Server / MS Access</h3>
+
+<pre>
+SELECT ProductName,UnitPrice*(UnitsInStock+ISNULL(UnitsOnOrder,0))
+FROM Products
+</pre>
+
+<h3>Oracle</h3>
+
+<p>Oracle 没有 ISNULL() 函数。不过，我们可以使用 NVL() 函数达到相同的结果：</p>
+
+<pre>
+SELECT ProductName,UnitPrice*(UnitsInStock+NVL(UnitsOnOrder,0))
+FROM Products
+</pre>
+
+<h3>MySQL</h3>
+
+<p>MySQL 也拥有类似 ISNULL() 的函数。不过它的工作方式与微软的 ISNULL() 函数有点不同。</p>
+
+<p>在 MySQL 中，我们可以使用 IFNULL() 函数，就像这样：</p>
+
+<pre>
+SELECT ProductName,UnitPrice*(UnitsInStock+IFNULL(UnitsOnOrder,0))
+FROM Products
+</pre>
+
+<p>或者我们可以使用 COALESCE() 函数，就像这样：</p>
+
+<pre>
+SELECT ProductName,UnitPrice*(UnitsInStock+COALESCE(UnitsOnOrder,0))
+FROM Products
+</pre>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

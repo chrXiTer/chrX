@@ -1,0 +1,112 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript getUTCDay() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>getUTCDay() 方法根据世界时返回表示星期的一天的一个数字。</p>
+
+<h3>语法</h3>
+
+<pre>dateObject.getUTCDay()</pre>
+
+<h3>返回值</h3>
+
+<p>dateObject 用世界时表示时，返回该星期中的某一天 ，该值是 0（星期天） ~ 6（星期六） 中的一个值。</p>
+</div>
+
+<div>
+<h2>提示和注释：</h2>
+
+<p class="note"><span>注释：</span>该方法总是结合一个 Date 对象来使用。</p>
+
+<p class="tip"><span>提示：</span>有关通用协调时间 (UTC) 的更多资料，请参阅<a href="http://baike.baidu.com/view/1187856.htm" vvll="my"  title="协调世界时_百度百科">百度百科</a>。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<h3>例子 1</h3>
+
+<p>在本例中，我们将取得本周的当前 UTC 天（以一个数字）：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var d=new Date()
+document.write(d.getUTCDay())
+
+&lt;/script&gt;</pre>
+<p>输出：</p>
+<pre><script type="text/javascript">
+	var d=new Date()
+	document.write(d.getUTCDay())
+</script>
+</pre>
+
+<h3>例子 2</h3>
+
+<p>现在，我将创建一个数组，使得上面的例子能够输出星期的名称，而不仅仅是一个数字：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var d=new Date()
+
+var weekday=new Array(7)
+weekday[0]=&quot;Sunday&quot;
+weekday[1]=&quot;Monday&quot;
+weekday[2]=&quot;Tuesday&quot;
+weekday[3]=&quot;Wednesday&quot;
+weekday[4]=&quot;Thursday&quot;
+weekday[5]=&quot;Friday&quot;
+weekday[6]=&quot;Saturday&quot;
+
+document.write(&quot;Today it is &quot; + weekday[d.getUTCDay()])
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>
+<script type="text/javascript">
+var d=new Date()
+var weekday=new Array(7)
+weekday[0]="Sunday"
+weekday[1]="Monday"
+weekday[2]="Tuesday"
+weekday[3]="Wednesday"
+weekday[4]="Thursday"
+weekday[5]="Friday"
+weekday[6]="Saturday"
+document.write("Today it is " + weekday[d.getUTCDay()])
+</script>
+</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_date_weekday_UTC')" >getUTCDay()</a></dt>
+<dd>使用 getUTCDay() 和一个数组来输出星期的名称，而不是一个数字。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,60 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 教程延伸阅读：改变文本的外观和含义</h1>
+
+<div>
+<p>很多标签都可以用来改变文本的外观，并为文本关联其隐藏的含义。总地来说，这些标签可以分成两类：基于内容的样式（content-based style）和物理样式（physical style）。</p>
+<p>同时，W3C 为级联样式表（CSS）指定的标准现在已被绝大多数浏览器所支持，它提供了一种允许作者控制文档文本外观和布局的更为全面的方法。如需学习更多有关 CSS 的内容，请访问 W3school 提供的 <a href="../css/index.htm"  title="CSS 教程">CSS 教程</a>。</p>
+</div>
+
+<div>
+<h2>基于内容的样式</h2>
+
+<p>基于内容的样式标签会告诉浏览器它所包含的文本具有特定的含义、上下文或者用法。然后浏览器就会把与该含义、上下文或者用法一致的格式应用在文本上。请注意这里面的区别。基于内容的标签赋予含义，而不是格式化。因此，它们对于自动处理来说非常重要；计算机并不关心文档的外观如何。</p>
+<p>因为字体样式是通过语义线索来指定的，因此浏览器可以为用户选择一种合适的显示样式。由于不同地点的样式各种各样，所以使用基于内容的样式可以帮助你确保自己的文档对广大范围的读者来说都是有意义的。这一点在专门供那些盲人和残疾人所使用的浏览器上显得尤其重要，因为他们的显示选项可能和我们传统的文本根本不同，或者在某方面具有非常大的局限性。</p>
+<p>当前的 HTML 和 XHTML 标准并没有为每一个基于内容的标签都定义一种格式；它们仅仅规定必须用与文档中普通文本不同的方式来显示基于内容的样式。标准甚至没有要求这些基于内容的样式彼此之间都要用不同的方式显示。在实际应用中，你可能会发现很多这样的标签和传统的印刷有着非常明显的关系，它们有着相似的含义和显示样式，而且在多数浏览器中都以相同的样式和字体来显示。</p>
+<p>使用 HTML/XHTML 基于内容的样式标签时要遵从一些规则，因为仅仅是简单地想想文本该如何显示，而不必知道这些文本的含义是什么，是十分容易的。一旦你开始使用基于内容的样式之后，文档将会更加一致，而且可以更好地帮助执行自动搜索和内容编辑。这些标签是：</p>
+
+<ul>
+<li><a href="../tags/tag_abbr.htm"  title="HTML &lt;abbr&gt; 标签">&lt;abbr&gt;</a></li>
+<li><a href="../tags/tag_acronym.htm"  title="HTML &lt;acronym&gt; 标签">&lt;acronym&gt;</a></li>
+<li><a href="../tags/tag_cite.htm"  title="HTML &lt;cite&gt; 标签">&lt;cite&gt;</a></li>
+<li><a href="../tags/tag_code.htm"  title="HTML &lt;code&gt; 标签">&lt;code&gt;</a></li>
+<li><a href="../tags/tag_dfn.htm"  title="HTML &lt;dfn&gt; 标签">&lt;dfn&gt;</a></li>
+<li><a href="../tags/tag_em.htm"  title="HTML &lt;em&gt; 标签">&lt;em&gt;</a></li>
+<li><a href="../tags/tag_kbd.htm"  title="HTML &lt;kbd&gt; 标签">&lt;kbd&gt;</a></li>
+<li><a href="../tags/tag_samp.htm"  title="HTML &lt;samp&gt; 标签">&lt;samp&gt;</a></li>
+<li><a href="../tags/tag_strong.htm"  title="HTML &lt;strong&gt; 标签">&lt;strong&gt;</a></li>
+<li><a href="../tags/tag_var.htm"  title="HTML &lt;var&gt; 标签">&lt;var&gt;</a></li>
+</ul>
+</div>
+
+<div>
+<h2>物理样式</h2>
+
+<p>在讨论基于内容的样式标签时，我们经常用到“意图”这个词。这是因为由标签传达的含义比浏览器显示文本的方式更为重要。然而，在某些情况下，可能是出于合法性或者版权等方面的原因的考虑，你希望文本以某种特殊的方式来显示（例如斜体或加粗）。在这种情况下，就可以对文本使用物理样式。</p>
+<p>虽然其他文字处理系统的趋势是精确地控制样式和外观，但是在使用 HTML 或 XHTML 时，除非极少情况下，都应该避免使用物理标签。应当尽可能地向浏览器提供上下文信息，并使用基于内容的样式。尽管现在浏览器不过是以斜体或者粗体字来显示这些文本，但是将来的浏览器和各种文档生成工具可能会以非常有创建的方式来利用这些基于内容的样式。</p>
+<p>当前的 HTML/XHTML 标准一共提供了 9 种物理样式，包括粗体（bold）、斜体（italic）、等宽（monospaced）、下划线（underlined）、删除线（strikethrough）、放大（larger）、缩小（smaller）、上标（superscripted）和下标（subscripted）文本。这些标签是：</p>
+
+<ul>
+<li><a href="../tags/tag_b.htm"  title="HTML &lt;b&gt; 标签">&lt;b&gt;</a></li>
+<li><a href="../tags/tag_big.htm"  title="HTML &lt;big&gt; 标签">&lt;big&gt;</a></li>
+<li><a href="../tags/tag_i.htm"  title="HTML &lt;i&gt; 标签">&lt;i&gt;</a></li>
+<li><a href="../tags/tag_s.htm"  title="HTML &lt;s&gt; 标签">&lt;s&gt;</a></li>
+<li><a href="../tags/tag_small.htm"  title="HTML &lt;small&gt; 标签">&lt;small&gt;</a></li>
+<li><a href="../tags/tag_strike.htm"  title="HTML &lt;strike&gt; 标签">&lt;strike&gt;</a></li>
+<li><a href="../tags/tag_sub.htm"  title="HTML &lt;sub&gt; 标签">&lt;sub&gt;</a></li>
+<li><a href="../tags/tag_sup.htm"  title="HTML &lt;sup&gt; 标签">&lt;sup&gt;</a></li>
+<li><a href="../tags/tag_tt.htm"  title="HTML &lt;tt&gt; 标签">&lt;tt&gt;</a></li>
+</ul>
+
+<p class="tip"><span>提示：</span>请记住这些物理样式标签对紧接的文本产生的强烈效果。要实现在整个文档范围内对文本显示的全面控制，请使用样式表。</p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

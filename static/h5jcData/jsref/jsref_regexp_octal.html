@@ -1,0 +1,58 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript RegExp \xxx 元字符</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_regexp.htm"  title="JavaScript RegExp 对象">JavaScript RegExp 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>\xxx 元字符用于查找以八进制数 <i>xxx</i> 规定的字符。</p>
+
+<p>如果未找到匹配，则返回 null。</p>
+
+<h3>语法</h3>
+
+<pre>new RegExp(&quot;\<i>xxx</i>&quot;)</pre>
+
+<p>直接量语法：</p>
+
+<pre>/\<i>xxx</i>/</pre>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+
+<p>所有主流浏览器都支持 \xxx 元字符。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>对字符串中的八进制 127 (W) 进行全局搜索：</p>
+
+<pre>
+var str=&quot;Visit W3School. Hello World!&quot;;
+var patt1=<code>/\127/g</code>;
+</pre>
+
+<p>下面被标记的文本显示了表达式获得匹配的位置：</p>
+
+<pre>Visit <span class="marked">W</span>3School. Hello <span class="marked">W</span>orld!</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('jseg_regexp_octal')" >TIY</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_regexp.htm"  title="JavaScript RegExp 对象">JavaScript RegExp 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

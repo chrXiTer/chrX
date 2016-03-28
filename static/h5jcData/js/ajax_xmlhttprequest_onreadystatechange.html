@@ -1,0 +1,79 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+<h1>AJAX - onreadystatechange 事件</h1>
+<h2>onreadystatechange 事件</h2>
+<p>当请求被发送到服务器时，我们需要执行一些基于响应的任务。</p>
+<p>每当 readyState 改变时，就会触发 onreadystatechange 事件。</p>
+<p>readyState 属性存有 XMLHttpRequest 的状态信息。</p>
+<p>下面是 XMLHttpRequest 对象的三个重要的属性：</p>
+<table class="dataintable">
+<tr>
+<th style="width:25%;">属性</th>
+<th>描述</th>
+</tr>
+<tr>
+<td>onreadystatechange</td>
+<td>存储函数（或函数名），每当 readyState 属性改变时，就会调用该函数。</td>
+</tr>
+<tr>
+<td>readyState</td>
+<td>
+	<p>存有 XMLHttpRequest 的状态。从 0 到 4 发生变化。</p>
+	<ul class="listintable">
+	<li>0: 请求未初始化</li>
+	<li>1: 服务器连接已建立</li>
+	<li>2: 请求已接收</li>
+	<li>3: 请求处理中</li>
+	<li>4: 请求已完成，且响应已就绪</li>
+	</ul>
+</td>
+</tr>
+<tr>
+<td>status</td>
+<td><p>200: &quot;OK&quot;</p><p>404: 未找到页面</p></td>
+</tr>
+</table>
+<p>在 onreadystatechange 事件中，我们规定当服务器响应已做好被处理的准备时所执行的任务。</p>
+<p>当 readyState 等于 4 且状态为 200 时，表示响应已就绪：</p>
+
+<pre>
+xmlhttp.onreadystatechange=function(){
+  if (xmlhttp.readyState==4 && xmlhttp.status==200){
+    document.getElementById(&quot;myDiv&quot;).innerHTML=xmlhttp.responseText;
+  }
+}
+</pre>
+
+<p class="tiy"><a href="../tiy/t.asp-f=ajax_async_true.htm" >亲自试一试</a></p>
+
+<p class="note"><span>注释：</span>onreadystatechange 事件被触发 5 次（0 - 4），对应着 readyState 的每个变化。</p>
+
+
+<h2>使用 Callback 函数</h2>
+
+<p>callback 函数是一种以参数形式传递给另一个函数的函数。</p>
+
+<p>如果您的网站上存在多个 AJAX 任务，那么您应该为创建 XMLHttpRequest 对象编写一个<em>标准</em>的函数，并为每个 AJAX 任务调用该函数。</p>
+
+<p>该函数调用应该包含 URL 以及发生 onreadystatechange 事件时执行的任务（每次调用可能不尽相同）：</p>
+
+<pre>
+function myFunction(){
+    loadXMLDoc(&quot;ajax_info.txt&quot;,function(){
+        if (xmlhttp.readyState==4 && xmlhttp.status==200){
+            document.getElementById(&quot;myDiv&quot;).innerHTML=xmlhttp.responseText;
+        }
+    });
+}
+</pre>
+
+<p class="tiy"><a href="../tiy/t.asp-f=ajax_callback.htm" >试一试</a></p>
+
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>

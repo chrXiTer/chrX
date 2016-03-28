@@ -1,0 +1,154 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;col&gt; 标签</h1>
+
+<div>
+<h2>实例</h2>
+
+<p>col 元素为表格中的三个列规定了不同的对齐方式：</p>
+
+<pre>
+&lt;table width=&quot;100%&quot; border=&quot;1&quot;&gt;
+  <code>&lt;col align=&quot;left&quot; /&gt;</code>
+  <code>&lt;col align=&quot;left&quot; /&gt;</code>
+  <code>&lt;col align=&quot;right&quot; /&gt;</code>
+  &lt;tr&gt;
+    &lt;th&gt;ISBN&lt;/th&gt;
+    &lt;th&gt;Title&lt;/th&gt;
+    &lt;th&gt;Price&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;3476896&lt;/td&gt;
+    &lt;td&gt;My first HTML&lt;/td&gt;
+    &lt;td&gt;$53&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_col_test')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>&lt;col&gt; 标签为表格中一个或多个列定义属性值。</p>
+
+<p>如需对全部列应用样式，&lt;col&gt; 标签很有用，这样就不需要对各个单元和各行重复应用样式了。</p>
+
+<p>您只能在 table 或 colgroup 元素中使用 &lt;col&gt; 标签。</p>
+</div>
+
+<div>
+<h2>HTML 与 XHTML 之间的差异</h2>
+
+<p>在 HTML 中，&lt;col&gt; 没有结束标签。</p>
+
+<p>在 XHTML 中，&lt;col&gt; 标签必须被正确的关闭。</p>
+</div>
+
+<div>
+<h2>提示和注释：</h2>
+
+<p class="tip"><span>提示：</span>请为 &lt;col&gt; 标签添加 class 属性。这样就可以使用 CSS 来负责对齐方式、宽度和颜色等等。</p>
+
+<p class="tip"><span>提示：</span>如果您希望在 colgroup 内部为每个列规定不同的属性值时，请使用此元素。如果没有 col 元素，列会从 colgroup 那里继承所有的属性值。</p>
+
+<p class="note"><span>注释：</span>col 元素是仅包含属性的空元素。如需创建列，您就必须在 tr 元素内部规定 td 元素。</p>
+
+<p>参见：<a href="tag_colgroup.htm"  title="HTML &lt;colgroup&gt; 标签">&lt;colgroup&gt; 标签</a>。</p>
+</div>
+
+<div>
+<h2>可选的属性</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:20%;">属性</th>
+<th style="width:20%;">值</th>
+<th style="width:60%;">描述</th>
+</tr>
+
+<tr>
+<td><a href="att_col_align.htm"  title="HTML &lt;col&gt; 标签的 align 属性">align</a></td>
+<td>
+	<ul>
+	<li>right</li>
+	<li>left</li>
+	<li>center</li>
+	<li>justify</li>
+	<li>char</li>
+	</ul>
+</td>
+<td>规定与 col 元素相关的内容的水平对齐方式。</td>
+</tr>
+
+<tr>
+<td><a href="att_col_char.htm"  title="HTML &lt;col&gt; 标签的 char 属性">char</a></td>
+<td><i>character</i></td>
+<td>规定根据哪个字符来对齐与 col 元素相关的内容。</td>
+</tr>
+
+<tr>
+<td><a href="att_col_charoff.htm"  title="HTML &lt;col&gt; 标签的 charoff 属性">charoff</a></td>
+<td><i>number</i></td>
+<td>规定第一个对齐字符的偏移量。</td>
+</tr>
+
+<tr>
+<td><a href="att_col_span.htm"  title="HTML &lt;col&gt; 标签的 span 属性">span</a></td>
+<td><i>number</i></td>
+<td>规定 col 元素应该横跨的列数。</td>
+</tr>
+
+<tr>
+<td><a href="att_col_valign.htm"  title="HTML &lt;col&gt; 标签的 valign 属性">valign</a></td>
+<td>
+	<ul>
+	<li>top</li>
+	<li>middle</li>
+	<li>bottom</li>
+	<li>baseline</li>
+	</ul>
+</td>
+<td>定义与 col 元素相关的内容的垂直对齐方式。</td>
+</tr>
+
+<tr>
+<td><a href="att_col_width.htm"  title="HTML &lt;col&gt; 标签的 width 属性">width</a></td>
+<td>
+	<ul>
+	<li><i>pixels</i></li>
+	<li><i>%</i></li>
+	<li><i>relative_length</i></li>
+	</ul>
+</td>
+<td>规定 col 元素的宽度。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>全局属性</h2>
+
+<p>&lt;col&gt; 标签支持 <a href="html_ref_standardattributes.htm" >HTML 中的全局属性</a>。</p>
+</div>
+
+<div>
+<h2>事件属性</h2>
+
+<p>&lt;col&gt; 标签支持 <a href="html_ref_eventattributes.htm" >HTML 中的事件属性</a>。</p>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>HTML DOM 参考手册：<a href="../jsref/dom_obj_col.htm"  title="HTML DOM Column 对象">Column 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

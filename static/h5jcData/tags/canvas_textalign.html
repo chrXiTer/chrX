@@ -1,0 +1,144 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 canvas textAlign 属性</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在位置 150 创建一条红线。位置 150 是下面例子中定义的所有文本的锚点。请研究每种 textAlign 属性值的效果：</p>
+
+<canvas id="myCanvas" width="300" height="200" style="border:1px solid #d3d3d3;background:#ffffff; margin-top:20px;">
+Your browser does not support the canvas tag.
+</canvas>
+
+<script>
+var c=document.getElementById("myCanvas");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+var ctx=c.getContext("2d");
+// 在位置 150 创建蓝线
+ctx.strokeStyle="blue";
+ctx.moveTo(150,20);
+ctx.lineTo(150,170);
+ctx.stroke();
+
+ctx.font="15px Arial";    
+
+// 显示不同的 textAlign 值
+ctx.textAlign="start";      
+ctx.fillText("textAlign=start",150,60);        
+ctx.textAlign="end";      
+ctx.fillText("textAlign=end",150,80);                  
+ctx.textAlign="left";      
+ctx.fillText("textAlign=left",150,100);
+ctx.textAlign="center";     
+ctx.fillText("textAlign=center",150,120);              
+ctx.textAlign="right";      
+ctx.fillText("textAlign=right",150,140);
+	}
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+
+<span class="code_comment">// 在位置 150 创建蓝线</span>
+ctx.strokeStyle=&quot;blue&quot;;
+ctx.moveTo(150,20);
+ctx.lineTo(150,170);
+ctx.stroke();
+
+ctx.font=&quot;15px Arial&quot;;
+
+<span class="code_comment">// 显示不同的 textAlign 值</span>
+ctx.textAlign=&quot;start&quot;;
+ctx.fillText(&quot;textAlign=start&quot;,150,60);
+ctx.textAlign=&quot;end&quot;;
+ctx.fillText(&quot;textAlign=end&quot;,150,80);
+ctx.textAlign=&quot;left&quot;;
+ctx.fillText(&quot;textAlign=left&quot;,150,100);
+ctx.textAlign=&quot;center&quot;;
+ctx.fillText(&quot;textAlign=center&quot;,150,120);
+ctx.textAlign=&quot;right&quot;;
+ctx.fillText(&quot;textAlign=right&quot;,150,140);
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_textalign')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>textAlign 属性根据锚点，设置或返回文本内容的当前对齐方式。</p>
+
+<p>通常，文本会从指定位置开始，不过，如果您设置为 textAlign=&quot;right&quot; 并将文本放置到位置 150，那么会在位置 150 结束。</p>
+
+<p class="tip"><span>提示：</span>使用 <a href="canvas_filltext.htm"  title="HTML5 canvas fillRect() 方法">fillText()</a> 或 <a href="canvas_stroketext.htm"  title="HTML5 canvas strokeText() 方法">strokeText()</a> 方法在实际地在画布上绘制并定位文本。</p>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">默认值：</th>
+<td>start</td>
+</tr>
+
+<tr>
+<th>JavaScript 语法：</th>
+<td><i>context</i>.textAlign=&quot;center|end|left|right|start&quot;;</td>
+</tr>
+</table>
+
+<h3>属性值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>start</td>
+<td>默认。文本在指定的位置开始。</td>
+</tr>
+
+<tr>
+<td>end</td>
+<td>文本在指定的位置结束。</td>
+</tr>
+
+<tr>
+<td>center</td>
+<td>文本的中心被放置在指定的位置。</td>
+</tr>
+
+<tr>
+<td>left</td>
+<td>文本左对齐。</td>
+</tr>
+
+<tr>
+<td>right</td>
+<td>文本右对齐。</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

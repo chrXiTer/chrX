@@ -1,0 +1,429 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 Canvas 参考手册</h1>
+
+<div id="intro">
+<h2>描述</h2>
+
+<p>HTML5 &lt;canvas&gt; 标签用于绘制图像（通过脚本，通常是 JavaScript）。</p>
+
+<p>不过，&lt;canvas&gt; 元素本身并没有绘制能力（它仅仅是图形的容器） - 您必须使用脚本来完成实际的绘图任务。</p>
+
+<p>getContext() 方法可返回一个对象，该对象提供了用于在画布上绘图的方法和属性。</p>
+
+<p>本手册提供完整的 getContext("2d") 对象属性和方法，可用于在画布上绘制文本、线条、矩形、圆形等等。</p>
+</div>
+
+<div>
+<h2>颜色、样式和阴影</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:30%;">属性</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><a href="canvas_fillstyle.htm"  title="HTML5 canvas fillStyle 属性">fillStyle</a></td>
+<td>设置或返回用于填充绘画的颜色、渐变或模式</td>
+</tr>
+
+<tr>
+<td><a href="canvas_strokestyle.htm"  title="HTML5 canvas strokeStyle 属性">strokeStyle</a></td>
+<td>设置或返回用于笔触的颜色、渐变或模式</td>
+</tr>
+
+<tr>
+<td><a href="canvas_shadowcolor.htm"  title="HTML5 canvas shadowColor 属性">shadowColor</a></td>
+<td>设置或返回用于阴影的颜色</td>
+</tr>
+
+<tr>
+<td><a href="canvas_shadowblur.htm"  title="HTML5 canvas shadowBlur 属性">shadowBlur</a></td>
+<td>设置或返回用于阴影的模糊级别</td>
+</tr>
+
+<tr>
+<td><a href="canvas_shadowoffsetx.htm"  title="HTML5 canvas shadowOffsetX 属性">shadowOffsetX</a></td>
+<td>设置或返回阴影距形状的水平距离</td>
+</tr>
+
+<tr>
+<td><a href="canvas_shadowoffsety.htm"  title="HTML5 canvas shadowOffsetY 属性">shadowOffsetY</a></td>
+<td>设置或返回阴影距形状的垂直距离</td>
+</tr>
+</table>
+
+<table class="dataintable">
+<tr>
+<th style="width:30%;">方法</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><a href="canvas_createlineargradient.htm"  title="HTML5 canvas createLinearGradient() 方法">createLinearGradient()</a></td>
+<td>创建线性渐变（用在画布内容上）</td>
+</tr>
+
+<tr>
+<td><a href="canvas_createpattern.htm"  title="HTML5 canvas createPattern() 方法">createPattern()</a></td>
+<td>在指定的方向上重复指定的元素</td>
+</tr>
+
+<tr>
+<td><a href="canvas_createradialgradient.htm"  title="HTML5 canvas createRadialGradient() 方法">createRadialGradient()</a></td>
+<td>创建放射状/环形的渐变（用在画布内容上）</td>
+</tr>
+
+<tr>
+<td><a href="canvas_addcolorstop.htm"  title="HTML5 canvas addColorStop() 方法">addColorStop()</a></td>
+<td>规定渐变对象中的颜色和停止位置</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>线条样式</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:30%;">属性</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><a href="canvas_linecap.htm"  title="HTML5 canvas lineCap 属性">lineCap</a></td>
+<td>设置或返回线条的结束端点样式</td>
+</tr>
+
+<tr>
+<td><a href="canvas_linejoin.htm"  title="HTML5 canvas lineJoin 属性">lineJoin</a></td>
+<td>设置或返回两条线相交时，所创建的拐角类型</td>
+</tr>
+
+<tr>
+<td><a href="canvas_linewidth.htm"  title="HTML5 canvas lineWidth 属性">lineWidth</a></td>
+<td>设置或返回当前的线条宽度</td>
+</tr>
+
+<tr>
+<td><a href="canvas_miterlimit.htm"  title="HTML5 canvas miterLimit 属性">miterLimit</a></td>
+<td>设置或返回最大斜接长度</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>矩形</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:30%;">方法</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><a href="canvas_rect.htm"  title="HTML5 canvas rect() 方法">rect()</a></td>
+<td>创建矩形</td>
+</tr>
+
+<tr>
+<td><a href="canvas_fillrect.htm"  title="HTML5 canvas fillRect() 方法">fillRect()</a></td>
+<td>绘制“被填充”的矩形</td>
+</tr>
+
+<tr>
+<td><a href="canvas_strokerect.htm"  title="HTML5 canvas strokeRect() 方法">strokeRect()</a></td>
+<td>绘制矩形（无填充）</td>
+</tr>
+
+<tr>
+<td><a href="canvas_clearrect.htm"  title="HTML5 canvas clearRect() 方法">clearRect()</a></td>
+<td>在给定的矩形内清除指定的像素</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>路径</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:30%;">方法</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><a href="canvas_fill.htm"  title="HTML5 canvas fill() 方法">fill()</a></td>
+<td>填充当前绘图（路径）</td>
+</tr>
+
+<tr>
+<td><a href="canvas_stroke.htm"  title="HTML5 canvas stroke() 方法">stroke()</a></td>
+<td>绘制已定义的路径</td>
+</tr>
+
+<tr>
+<td><a href="canvas_beginpath.htm"  title="HTML5 canvas beginPath() 方法">beginPath()</a></td>
+<td>起始一条路径，或重置当前路径</td>
+</tr>
+
+<tr>
+<td><a href="canvas_moveto.htm"  title="HTML5 canvas moveTo() 方法">moveTo()</a></td>
+<td>把路径移动到画布中的指定点，不创建线条</td>
+</tr>
+
+<tr>
+<td><a href="canvas_closepath.htm"  title="HTML5 canvas closePath() 方法">closePath()</a></td>
+<td>创建从当前点回到起始点的路径</td>
+</tr>
+
+<tr>
+<td><a href="canvas_lineto.htm"  title="HTML5 canvas lineTo() 方法">lineTo()</a></td>
+<td>添加一个新点，然后在画布中创建从该点到最后指定点的线条</td>
+</tr>
+
+<tr>
+<td><a href="canvas_clip.htm"  title="HTML5 canvas clip() 方法">clip()</a></td>
+<td>从原始画布剪切任意形状和尺寸的区域</td>
+</tr>
+
+<tr>
+<td><a href="canvas_quadraticcurveto.htm"  title="HTML5 canvas quadraticCurveTo() 方法">quadraticCurveTo()</a></td>
+<td>创建二次贝塞尔曲线</td>
+</tr>
+
+<tr>
+<td><a href="canvas_beziercurveto.htm"  title="HTML5 canvas bezierCurveTo() 方法">bezierCurveTo()</a></td>
+<td>创建三次方贝塞尔曲线</td>
+</tr>
+
+<tr>
+<td><a href="canvas_arc.htm"  title="HTML5 canvas arc() 方法">arc()</a></td>
+<td>创建弧/曲线（用于创建圆形或部分圆）</td>
+</tr>
+
+<tr>
+<td><a href="canvas_arcto.htm"  title="HTML5 canvas arcTo() 方法">arcTo()</a></td>
+<td>创建两切线之间的弧/曲线</td>
+</tr>
+
+<tr>
+<td><a href="canvas_ispointinpath.htm"  title="HTML5 canvas isPointInPath() 方法">isPointInPath()</a></td>
+<td>如果指定的点位于当前路径中，则返回 true，否则返回 false</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>转换</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:30%;">方法</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><a href="canvas_scale.htm"  title="HTML5 canvas scale() 方法">scale()</a></td>
+<td>缩放当前绘图至更大或更小</td>
+</tr>
+
+<tr>
+<td><a href="canvas_rotate.htm"  title="HTML5 canvas rotate() 方法">rotate()</a></td>
+<td>旋转当前绘图</td>
+</tr>
+
+<tr>
+<td><a href="canvas_translate.htm"  title="HTML5 canvas translate() 方法">translate()</a></td>
+<td>重新映射画布上的 (0,0) 位置</td>
+</tr>
+
+<tr>
+<td><a href="canvas_transform.htm"  title="HTML5 canvas transform() 方法">transform()</a></td>
+<td>替换绘图的当前转换矩阵</td>
+</tr>
+
+<tr>
+<td><a href="canvas_settransform.htm"  title="HTML5 canvas setTransform() 方法">setTransform()</a></td>
+<td>将当前转换重置为单位矩阵。然后运行 transform()</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>文本</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:30%;">属性</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><a href="canvas_font.htm"  title="HTML5 canvas font 属性">font</a></td>
+<td>设置或返回文本内容的当前字体属性</td>
+</tr>
+
+<tr>
+<td><a href="canvas_textalign.htm"  title="HTML5 canvas textAlign 属性">textAlign</a></td>
+<td>设置或返回文本内容的当前对齐方式</td>
+</tr>
+
+<tr>
+<td><a href="canvas_textbaseline.htm"  title="HTML5 canvas textBaseline 属性">textBaseline</a></td>
+<td>设置或返回在绘制文本时使用的当前文本基线</td>
+</tr>
+</table>
+
+<table class="dataintable">
+<tr>
+<th style="width:30%;">方法</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><a href="canvas_filltext.htm"  title="HTML5 canvas fillText() 方法">fillText()</a></td>
+<td>在画布上绘制“被填充的”文本</td>
+</tr>
+
+<tr>
+<td><a href="canvas_stroketext.htm"  title="HTML5 canvas strokeText() 方法">strokeText()</a></td>
+<td>在画布上绘制文本（无填充）</td>
+</tr>
+
+<tr>
+<td><a href="canvas_measuretext.htm"  title="HTML5 canvas measureText() 方法">measureText()</a></td>
+<td>返回包含指定文本宽度的对象</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>图像绘制</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:30%;">方法</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><a href="canvas_drawimage.htm"  title="HTML5 canvas drawImage() 方法">drawImage()</a></td>
+<td>向画布上绘制图像、画布或视频</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>像素操作</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:30%;">属性</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><a href="canvas_imagedata_width.htm"  title="HTML5 canvas width 属性">width</a></td>
+<td>返回 ImageData 对象的宽度</td>
+</tr>
+
+<tr>
+<td><a href="canvas_imagedata_height.htm"  title="HTML5 canvas height 属性">height</a></td>
+<td>返回 ImageData 对象的高度</td>
+</tr>
+
+<tr>
+<td><a href="canvas_imagedata_data.htm"  title="HTML5 canvas data 属性">data</a></td>
+<td>返回一个对象，其包含指定的 ImageData 对象的图像数据</td>
+</tr>
+</table>
+
+<table class="dataintable">
+<tr>
+<th style="width:30%;">方法</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><a href="canvas_createimagedata.htm"  title="HTML5 canvas createImageData() 方法">createImageData()</a></td>
+<td>创建新的、空白的 ImageData 对象</td>
+</tr>
+
+<tr>
+<td><a href="canvas_getimagedata.htm"  title="HTML5 canvas getImageData() 方法">getImageData()</a></td>
+<td>返回 ImageData 对象，该对象为画布上指定的矩形复制像素数据</td>
+</tr>
+
+<tr>
+<td><a href="canvas_putimagedata.htm"  title="HTML5 canvas putImageData() 方法">putImageData()</a></td>
+<td>把图像数据（从指定的 ImageData 对象）放回画布上</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>合成</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:30%;">属性</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><a href="canvas_globalalpha.htm"  title="HTML5 canvas globalAlpha 属性">globalAlpha</a></td>
+<td>设置或返回绘图的当前 alpha 或透明值</td>
+</tr>
+
+<tr>
+<td><a href="canvas_globalcompositeoperation.htm"  title="HTML5 canvas globalCompositeOperation 属性">globalCompositeOperation</a></td>
+<td>设置或返回新图像如何绘制到已有的图像上</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>其他</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:30%;">方法</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>save()</td>
+<td>保存当前环境的状态</td>
+</tr>
+
+<tr>
+<td>restore()</td>
+<td>返回之前保存过的路径状态和属性</td>
+</tr>
+
+<tr>
+<td>createEvent()</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr> 
+<td>getContext()</td>
+<td>&nbsp;</td>
+</tr> 
+
+<tr>
+<td>toDataURL()</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

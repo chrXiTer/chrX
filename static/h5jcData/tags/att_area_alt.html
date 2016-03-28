@@ -1,0 +1,71 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;area&gt; 标签的 alt 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_area.htm" >HTML &lt;area&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>带有可点击区域的图像映射：</p>
+
+<pre>
+&lt;img src=&quot;planets.jpg&quot; border=&quot;0&quot; usemap=&quot;#planetmap&quot; alt=&quot;Planets&quot; /&gt;
+
+&lt;map name=&quot;planetmap&quot; id=&quot;planetmap&quot;&gt;
+  &lt;area shape=&quot;circle&quot; coords=&quot;180,139,14&quot; href =&quot;venus.html&quot; <code>alt=&quot;Venus&quot;</code> /&gt;
+  &lt;area shape=&quot;circle&quot; coords=&quot;129,161,10&quot; href =&quot;mercur.html&quot; <code>alt=&quot;Mercury&quot;</code> /&gt;
+  &lt;area shape=&quot;rect&quot; coords=&quot;0,0,110,260&quot; href =&quot;sun.html&quot; <code>alt=&quot;Sun&quot;</code> /&gt;
+&lt;/map&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_areamap')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>alt 属性是一个必需的属性，它规定在图像无法显示时的替代文本。</p>
+<p>假设由于下列原因用户无法查看图像，alt 属性可以为图像提供替代的信息：</p>
+
+<ul>
+<li>网速太慢</li>
+<li>src 属性中的错误</li>
+<li>浏览器禁用图像</li>
+<li>用户使用的是屏幕阅读器</li>
+</ul>
+
+<p>&lt;area&gt; 标签的 alt 属性指定了替代文本，用于在图像无法显示或者用户禁用图像显示时，代替图像显示在浏览器中的内容。</p>
+<p>我们强烈推荐您在文档的每个图像中都使用这个属性。这样即使图像无法显示，用户还是可以看到关于丢失了什么东西的一些信息。而且对于残疾人来说，alt 属性通常是他们了解图像内容的唯一方式。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;area alt=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td><i>text</i></td>
+    <td>区域的替代文本。</td>
+  </tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_area.htm" >HTML &lt;area&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

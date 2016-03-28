@@ -1,0 +1,81 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;form&gt; 标签的 target 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_form.htm" >HTML &lt;form&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在下面的例子中，在 action 属性中规定的页面会在新窗口中打开：</p>
+
+<pre>
+&lt;form action=&quot;form_action.asp&quot; method=&quot;get&quot; <code>target=&quot;_blank&quot;</code>&gt;
+  &lt;p&gt;First name: &lt;input type=&quot;text&quot; name=&quot;fname&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;Last name: &lt;input type=&quot;text&quot; name=&quot;lname&quot; /&gt;&lt;/p&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+&lt;/form&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_form_method')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>target 属性规定在何处打开 action URL。</p>
+</div>
+
+<div>
+<h2>兼容性注释</h2>
+
+<p>在 HTML 4.01 中，不赞成使用 form 元素的 target 属性；在 XHTML 1.0 Strict DTD 中，不支持该属性。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;form target=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>_blank</td>
+    <td>在新窗口中打开。</td>
+  </tr>
+  <tr>
+    <td>_self</td>
+    <td>默认。在相同的框架中打开。</td>
+  </tr>
+  <tr>
+    <td>_parent</td>
+    <td>在父框架集中打开。</td>
+  </tr>
+  <tr>
+    <td>_top</td>
+    <td>在整个窗口中打开。</td>
+  </tr>
+  <tr>
+    <td><i>framename</i></td>
+    <td>在指定的框架中打开。</td>
+  </tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_form.htm" >HTML &lt;form&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

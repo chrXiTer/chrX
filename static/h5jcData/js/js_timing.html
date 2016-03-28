@@ -1,0 +1,161 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript 计时</h1>
+
+<div id="intro">
+<p><strong>通过使用 JavaScript，我们有能力做到在一个设定的时间间隔之后来执行代码，而不是在函数被调用后立即执行。我们称之为计时事件。</strong></p>
+</div>
+
+<div class="example">
+<h2>实例</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_timing1')" >简单的计时</a></dt>
+<dd>单击本例中的按钮后，会在 5 秒后弹出一个警告框。</dd>
+
+<dt><a href="javascript:tiy.run('jseg_timing2')" >另一个简单的计时</a></dt>
+<dd>本例中的程序会执行 2 秒、4 秒和 6 秒的计时。</dd>
+
+<dt><a href="javascript:tiy.run('jseg_timing_infinite')" >在一个无穷循环中的计时事件</a></dt>
+<dd>在本例中，单击开始计时按钮后，程序开始从 0 以秒计时。</dd>
+
+<dt><a href="javascript:tiy.run('jseg_timing_stop')" >带有停止按钮的无穷循环中的计时事件</a></dt>
+<dd>在本例中，点击计数按钮后根据用户输入的数值开始倒计时，点击停止按钮停止计时。</dd>
+
+<dt><a href="javascript:tiy.run('jseg_timing_clock')" >使用计时事件制作的钟表</a></dt>
+<dd>一个 JavaScript 小时钟</dd></dl>
+</div>
+
+<div>
+<h2>JavaScript 计时事件</h2>
+
+<p>通过使用 JavaScript，我们有能力作到在一个设定的时间间隔之后来执行代码，而不是在函数被调用后立即执行。我们称之为计时事件。</p>
+
+<p>在 JavaScritp 中使用计时事件是很容易的，两个关键方法是:</p>
+
+<dl class="define">
+<dt>setTimeout()</dt>
+<dd>未来的某时执行代码</dd>
+
+<dt>clearTimeout()</dt>
+<dd>取消setTimeout()</dd>
+</dl>
+</div>
+
+<div>
+<h2>setTimeout()</h2>
+
+<h3>语法</h3>
+
+<pre>var t=setTimeout(&quot;javascript语句&quot;,毫秒)</pre>
+
+<p>setTimeout() 方法会返回某个值。在上面的语句中，值被储存在名为 t 的变量中。假如你希望取消这个 setTimeout()，你可以使用这个变量名来指定它。</p>
+
+<p>setTimeout() 的第一个参数是含有 JavaScript 语句的字符串。这个语句可能诸如 &quot;alert('5 seconds!')&quot;，或者对函数的调用，诸如 alertMsg()&quot;。</p>
+
+<p>第二个参数指示从当前起多少毫秒后执行第一个参数。</p>
+
+<p class="tip"><span>提示：</span>1000 毫秒等于一秒。</p>
+
+<h3>实例</h3>
+
+<p>当下面这个例子中的按钮被点击时，一个提示框会在5秒中后弹出。</p>
+
+<pre>&lt;html&gt;
+&lt;head&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+function timedMsg()
+ {
+ <code>var t=setTimeout(&quot;alert('5 seconds!')&quot;,5000)</code>
+ }
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;form&gt;
+&lt;input type=&quot;button&quot; value=&quot;Display timed alertbox!&quot; onClick=&quot;timedMsg()&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<h3>实例 - 无穷循环</h3>
+
+<p>要创建一个运行于无穷循环中的计时器，我们需要编写一个函数来调用其自身。在下面的例子中，当按钮被点击后，输入域便从 0 开始计数。</p>
+
+<pre>&lt;html&gt;
+
+&lt;head&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+var c=0
+var t
+function timedCount()
+ {
+ document.getElementById('txt').value=c
+ c=c+1
+ <code>t=setTimeout(&quot;timedCount()&quot;,1000)</code>
+ }
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;form&gt;
+&lt;input type=&quot;button&quot; value=&quot;Start count!&quot; onClick=&quot;timedCount()&quot;&gt;
+&lt;input type=&quot;text&quot; id=&quot;txt&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+</div>
+
+<div>
+<h2>clearTimeout()</h2>
+
+<h3>语法</h3>
+
+<pre>clearTimeout(setTimeout_variable)</pre>
+
+<h3>实例</h3>
+
+<p>下面的例子和上面的无穷循环的例子相似。唯一的不同是，现在我们添加了一个 &quot;Stop Count!&quot; 按钮来停止这个计数器：</p>
+
+<pre>
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+var c=0
+var t
+
+function timedCount()
+ {
+ document.getElementById('txt').value=c
+ c=c+1
+ <code>t=setTimeout(&quot;timedCount()&quot;,1000)</code>
+ }
+
+function stopCount()
+ {
+ <code>clearTimeout(t)</code>
+ }
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;form&gt;
+&lt;input type=&quot;button&quot; value=&quot;Start count!&quot; onClick=&quot;timedCount()&quot;&gt;
+&lt;input type=&quot;text&quot; id=&quot;txt&quot;&gt;
+&lt;input type=&quot;button&quot; value=&quot;Stop count!&quot; onClick=&quot;stopCount()&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,77 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;td&gt; 标签的 char 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_td.htm" >HTML &lt;td&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在下面的例子中，&quot;Savings&quot; 数据单元的内容与 &quot;.&quot; 字符对齐：</p>
+
+<pre>
+&lt;table border=&quot;1&quot;&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Month&lt;/th&gt;
+    &lt;th&gt;Savings&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;January&lt;/td&gt;
+    &lt;td align=&quot;char&quot; <code>char=&quot;.&quot;</code>&gt;$100.00&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;February&lt;/td&gt;
+    &lt;td align=&quot;char&quot; <code>char=&quot;.&quot;</code>&gt;$10.00&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_td_char')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>char 属性规定将单元格中的内容相对某个字符的对齐方式。</p>
+<p>仅当 align 属性设置为 &quot;char&quot; 时，才能使用 char 属性。</p>
+<p>char 属性的默认值是页面语言的小数点字符。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;td char=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td><i>character</i></td>
+    <td>规定将内容与之对齐的字符。</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>延伸阅读：char 和 charoff 属性</h2>
+<p>即使是最简单的文字处理器也允许在表格中排列十进制数字中的点。直到 HTML 4.0 标准的出现，网页设计语言一直不能充分满足这方面的要求。</p>
+<p>现在，可以使用 char 属性，来指定表格行内单元格中的一个字母，这个字母就是对齐的中心线。不需要为 char 指定值。如果你没有指定的话，默认的字符是基于语言：例如，在英语中是一个句点，而在法语中是一个逗号。如果把一个单字符指定为 char 属性的值，则可以指定不同的对齐字符。</p>
+<p>使用 charoff 属性和一个整数值可指定每行对齐字符第一次出现的偏移量。如果一行中不包括对齐字符，应该水平平移到对齐位置的最后。</p>
+<p>char 和 charoff 属性在 HTML 4 和 XHTML 中是新出现的属性，还没有得到任何一个流行浏览器的支持。</p>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_td.htm" >HTML &lt;td&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

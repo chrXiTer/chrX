@@ -1,0 +1,99 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 canvas globalAlpha 属性</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>首先，绘制一个红色的矩形，然后将透明度 (globalAlpha) 设置为 0.2，然后再绘制一个绿色和一个蓝色的矩形：</p>
+
+<canvas id="myCanvas" class="canvas_example">
+Your browser does not support the canvas tag.
+</canvas>
+
+<script>
+var c=document.getElementById("myCanvas");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+    var ctx=c.getContext("2d");
+    ctx.fillStyle="red";
+    ctx.fillRect(20,20,75,50);
+
+    ctx.globalAlpha=0.2;
+    ctx.fillStyle="green"; 
+    ctx.fillRect(50,50,75,50); 
+    ctx.fillStyle="blue"; 
+    ctx.fillRect(80,80,75,50);
+	}
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+ctx.fillStyle=&quot;red&quot;;
+ctx.fillRect(20,20,75,50);
+<span class="code_comment">// 调节透明度</span>
+<code>ctx.globalAlpha=0.2;</code>
+ctx.fillStyle=&quot;blue&quot;;
+ctx.fillRect(50,50,75,50);
+ctx.fillStyle=&quot;green&quot;;
+ctx.fillRect(80,80,75,50);
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_globalalpha')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>globalAlpha 属性设置或返回绘图的当前透明值（alpha 或 transparency）。</p>
+
+<p>globalAlpha 属性值必须是介于 0.0（完全透明） 与 1.0（不透明） 之间的数字。</p>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">默认值：</th>
+<td>1.0</td>
+</tr>
+
+<tr>
+<th>JavaScript 语法：</th>
+<td><i>context</i>.globalAlpha=<i>number</i>;</td>
+</tr>
+</table>
+
+<h3>属性值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>number</i></td>
+<td>透明值。必须介于 0.0（完全透明） 与 1.0（不透明） 之间。</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

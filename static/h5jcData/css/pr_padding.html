@@ -1,0 +1,143 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS padding 属性</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>padding 简写属性在一个声明中设置所有内边距属性。</p>
+<h3>说明</h3>
+<p>这个简写属性设置元素所有内边距的宽度，或者设置各边上内边距的宽度。行内非替换元素上设置的内边距不会影响行高计算；因此，如果一个元素既有内边距又有背景，从视觉上看可能会延伸到其他行，有可能还会与其他内容重叠。元素的背景会延伸穿过内边距。不允许指定负边距值。</p>
+<p class="note"><span>注释：</span>不允许使用负值。</p>
+
+<h4>例子 1</h4>
+<pre>padding:10px 5px 15px 20px;</pre>
+	<ul>
+	<li>上内边距是 10px</li>
+	<li>右内边距是 5px</li>
+	<li>下内边距是 15px</li>
+	<li>左内边距是 20px</li>
+	</ul>
+
+<h4>例子 2</h4>
+<pre>padding:10px 5px 15px;</pre>
+	<ul>
+	<li>上内边距是 10px</li>
+	<li>右内边距和左内边距是 5px</li>
+	<li>下内边距是 15px</li>
+	</ul>
+
+<h4>例子 3</h4>
+<pre>padding:10px 5px;</pre>
+	<ul>
+	<li>上内边距和下内边距是 10px</li>
+	<li>右内边距和左内边距是 5px</li>
+	</ul>
+
+<h4>例子 4</h4>
+<pre>padding:10px;</pre>
+	<ul>
+	<li>所有 4 个内边距都是 10px</li>
+	</ul>
+
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">0</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS1</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.padding=&quot;10px 5px&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>设置 p 元素的 4 个内边距：</p>
+<pre>
+p
+  {
+  <code>padding:2cm 4cm 3cm 4cm;</code>
+  }
+</pre>
+
+<p><a href="../tiy/t.asp-f=csse_padding.htm" >TIY</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有浏览器都支持 padding 属性。</p>
+<p class="note"><span>注释：</span>任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 &quot;inherit&quot;。</p>
+</div>
+
+<div>
+<h2>可能的值</h2>
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>auto</td>
+<td>浏览器计算内边距。</td>
+</tr>
+
+<tr>
+<td><i>length</i></td>
+<td>规定以具体单位计的内边距值，比如像素、厘米等。默认值是 0px。</td>
+</tr>
+
+<tr>
+<td><i>%</i></td>
+<td>规定基于父元素的宽度的百分比的内边距。</td>
+</tr>
+
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承内边距。</td>
+</tr>
+</table>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="../tiy/t.asp-f=csse_padding.htm" >所有内边距属性在一个声明中</a></dt>
+<dd>本例演示使用简写属性将所有的内边距属性设置于一个声明中，可以有一到四个值。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>CSS 教程：<a href="css_padding.htm" title="CSS 内边距">CSS 内边距</a></p>
+<p>HTML DOM 参考手册：<a href="../htmldom/prop_style_padding.htm" title="HTML DOM padding 属性">padding 属性</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

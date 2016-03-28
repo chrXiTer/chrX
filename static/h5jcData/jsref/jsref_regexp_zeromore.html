@@ -1,0 +1,73 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript RegExp * 量词</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_regexp.htm"  title="JavaScript RegExp 对象">JavaScript RegExp 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p><i>n</i>+ 量词匹配包含零个或多个 <i>n</i> 的任何字符串。</p>
+
+<h3>语法</h3>
+
+<pre>new RegExp(&quot;<i>n</i>*&quot;)</pre>
+
+<p>直接量语法：</p>
+
+<pre>/<i>n</i>*/</pre>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+
+<p>所有主流浏览器都支持 * 量词。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<h3>例子 1</h3>
+
+<p>对 &quot;l&quot; 进行全局搜索，包括其后紧跟的一个或多个 &quot;o&quot;：</p>
+
+<pre>
+var str=&quot;Hellooo World! Hello W3School!&quot;;
+var patt1=<code>/lo*/g</code>;
+</pre>
+
+<p>下面被标记的文本显示了表达式获得匹配的位置：</p>
+
+<pre>He<span class="marked">llooo</span> Wor<span class="marked">l</span>d! He<span class="marked">llo</span> W3Schoo<span class="marked">l</span>!</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('jseg_regexp_zeromore')" >TIY</a></p>
+
+<h3>例子 2</h3>
+
+<p>对 &quot;1&quot; 进行全局搜索，包括其后紧跟的一个或多个 &quot;0&quot;：</p>
+
+<pre>
+var str=&quot;1, 100 or 1000?&quot;;
+var patt1=<code>/10*/g</code>;
+</pre>
+
+<p>下面被标记的文本显示了表达式获得匹配的位置：</p>
+
+<pre><span class="marked">1</span>, <span class="marked">100</span> or <span class="marked">1000</span>?</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('jseg_regexp_zeromore2')" >TIY</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_regexp.htm"  title="JavaScript RegExp 对象">JavaScript RegExp 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

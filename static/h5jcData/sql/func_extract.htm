@@ -1,0 +1,99 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>MySQL EXTRACT() 函数</h1>
+
+<div class="backtoreference">
+<p><a href="sql_dates.htm"  title="MySQL Date 函数">MySQL Date 函数</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>EXTRACT() 函数用于返回日期/时间的单独部分，比如年、月、日、小时、分钟等等。</p>
+
+<h3>语法</h3>
+<pre>EXTRACT(unit FROM date)</pre>
+
+<p><i>date</i> 参数是合法的日期表达式。<i>unit</i> 参数可以是下列的值：</p>
+
+<table class="dataintable" style="width:40%">
+<tr><th>Unit 值</th></tr>
+<tr><td>MICROSECOND</td></tr>
+<tr><td>SECOND</td></tr>
+<tr><td>MINUTE</td></tr>
+<tr><td>HOUR</td></tr>
+<tr><td>DAY</td></tr>
+<tr><td>WEEK</td></tr>
+<tr><td>MONTH</td></tr>
+<tr><td>QUARTER</td></tr>
+<tr><td>YEAR</td></tr>
+<tr><td>SECOND_MICROSECOND</td></tr>
+<tr><td>MINUTE_MICROSECOND</td></tr>
+<tr><td>MINUTE_SECOND</td></tr>
+<tr><td>HOUR_MICROSECOND</td></tr>
+<tr><td>HOUR_SECOND</td></tr>
+<tr><td>HOUR_MINUTE</td></tr>
+<tr><td>DAY_MICROSECOND</td></tr>
+<tr><td>DAY_SECOND</td></tr>
+<tr><td>DAY_MINUTE</td></tr>
+<tr><td>DAY_HOUR</td></tr>
+<tr><td>YEAR_MONTH</td></tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>假设我们有如下的表：</p>
+
+<table class="dataintable">
+<tr>
+<th>OrderId</th>
+<th>ProductName</th>
+<th>OrderDate</th>
+</tr>
+<tr>
+<td>1</td>
+<td>'Computer'</td>
+<td>2008-12-29 16:25:46.635</td>
+</tr>
+</table>
+
+<p>我们使用下面的 SELECT 语句：</p>
+
+<pre>
+SELECT EXTRACT(YEAR FROM OrderDate) AS OrderYear,
+EXTRACT(MONTH FROM OrderDate) AS OrderMonth,
+EXTRACT(DAY FROM OrderDate) AS OrderDay
+FROM Orders
+WHERE OrderId=1
+</pre>
+
+<p>结果：</p>
+
+<table class="dataintable">
+<tr>
+<th>OrderYear</th>
+<th>OrderMonth</th>
+<th>OrderDay</th>
+</tr>
+
+<tr>
+<td>2008</td>
+<td>12</td>
+<td>29</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="sql_dates.htm"  title="MySQL Date 函数">MySQL Date 函数</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

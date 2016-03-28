@@ -1,0 +1,92 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML5 canvas fillRect() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>绘制 150*100 像素的已填充矩形：</p>
+
+<canvas id="myCanvas" class="canvas_example">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+var c=document.getElementById("myCanvas");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+	var ctx=c.getContext("2d");
+	ctx.fillRect(20,20,150,100);
+	}
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+<code>ctx.fillRect(20,20,150,100);</code>
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_fillrect')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>fillRect() 方法绘制“已填色”的矩形。默认的填充颜色是黑色。</p>
+
+<p class="tip"><span>提示：</span>请使用 <a href="canvas_fillstyle.htm"  title="HTML5 canvas fillStyle 属性">fillStyle</a> 属性来设置用于填充绘图的颜色、渐变或模式。</p>
+
+<h3>JavaScript 语法：</h3>
+
+<pre>context.fillRect(<i>x</i>,<i>y</i>,<i>width</i>,<i>height</i>);</pre>
+
+<h3>参数值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">参数</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>x</i></td>
+<td>矩形左上角的 x 坐标</td>
+</tr>
+
+<tr>
+<td><i>y</i></td>
+<td>矩形左上角的 y 坐标</td>
+</tr>
+
+<tr>
+<td><i>width</i></td>
+<td>矩形的宽度，以像素计</td>
+</tr>
+
+<tr>
+<td><i>height</i></td>
+<td>矩形的高度，以像素计</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

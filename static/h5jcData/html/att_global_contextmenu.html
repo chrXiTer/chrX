@@ -1,0 +1,78 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 全局 contextmenu 属性</h1>
+
+<div class="backtoreference">
+<p><a href="html5_ref_globalattributes.htm" >HTML 5 全局属性</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>为 &lt;p&gt; 元素规定一个上下文菜单。该菜单会在用户右键点击该元素时出现：</p>
+
+<pre>
+&lt;p <code>contextmenu=&quot;supermenu&quot;</code>&gt;这个段落附加了一个名为 &quot;supermenu&quot; 的上下文菜单。&lt;/p&gt;
+
+&lt;menu id=&quot;supermenu&quot;&gt;
+  &lt;command label=&quot;Step 1: Write Tutorial&quot; onclick=&quot;doSomething()&quot;&gt;
+  &lt;command label=&quot;Step 2: Edit Tutorial&quot; onclick=&quot;doSomethingElse()&quot;&gt;
+&lt;/menu&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_global_contextmenu')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+
+<p>目前没有任何主流浏览器支持 contextmenu 属性。</p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>contextmenu 属性为元素规定上下文菜单。这个菜单会在用户右键点击元素时出现。</p>
+
+<p>contextmenu 属性的值是需要打开的 &lt;menu&gt; 元素的 id。</p>
+</div>
+
+<div>
+<h2>HTML 4.01 与 HTML 5 之间的差异</h2>
+
+<p>contextmenu 属性是 HTML5 中的新属性。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>
+&lt;<i>element</i> contextmenu=&quot;<i>menu_id</i>&quot;&gt;
+</pre>
+
+<h3>属性值</h3>
+
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>menu_id</i></td>
+<td>要打开的 &lt;menu&gt; 元素的 id。</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="html5_ref_globalattributes.htm" >HTML 5 全局属性</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

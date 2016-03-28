@@ -1,0 +1,217 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>window 对象</h1>
+
+<h2>window 对象</h2>
+<p>window 对象表示浏览器中打开的窗口。浏览器会为每一个 HTML 文档创建一个 window 对象，如果文档包含框架（frame 或 iframe 标签），会每个框架再创建一个额外的 window 对象。</p>
+<p>window 对象中的属性和方法可以直接使用，而不需要用window.开头，比如window.document可以直接写成document，window.alert()可以直接写成alert()
+
+<h2>window 对象集合</h2>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%">集合</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td class="no_wrap">frames[]</td>
+    <td>
+	<p>返回窗口中所有命名的框架。</p>
+	<p>该集合是 window 对象的数组，每个 window 对象在窗口中含有一个框架或 &lt;iframe&gt;。属性 frames.length 存放数组 frames[] 中含有的元素个数。注意，frames[] 数组中引用的框架可能还包括框架，它们自己也具有 frames[] 数组。</p>
+	</td>
+  </tr>
+  </table>
+
+<h2>window 对象属性</h2>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%">属性</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td><a href="win_closed.htm" >closed</a></td>
+    <td>返回窗口是否已被关闭。</td>
+  </tr>
+  <tr>
+    <td><a href="win_defaultstatus.htm" >defaultStatus</a></td>
+    <td>设置或返回窗口状态栏中的默认文本。</td>
+  </tr>
+  <tr>
+    <td><a href="dom_document.htm" >document</a><span style="float:right">DOM</span></td>
+    <td>对 Document 对象的只读引用。</td>
+  </tr>
+  <tr>
+    <td><a href="bom_history.htm" >history</a><span style="float:right">BOM</span></td>
+    <td>对 History 对象的只读引用。</td>
+  </tr>
+  <tr>
+    <td><a href="win_innerheight_innerwidth.htm" >innerheight</a></td>
+    <td>返回窗口的文档显示区的高度。</td>
+  </tr>
+  <tr>
+    <td><a href="win_innerheight_innerwidth.htm" >innerwidth</a></td>
+    <td>返回窗口的文档显示区的宽度。</td>
+  </tr>
+  <tr>
+    <td>length</td>
+    <td>设置或返回窗口中的框架数量。</td>
+  </tr>
+  <tr>
+    <td><a href="bom_location.htm" >location</a><span style="float:right">BOM</span></td>
+    <td>用于窗口或框架的 Location 对象。</td>
+  </tr>
+  <tr>
+    <td><a href="win_name.htm" >name</a></td>
+    <td>设置或返回窗口的名称。</td>
+  </tr>
+  <tr>
+    <td><a href="bom_navigator.htm" >navigator</a><span style="float:right">BOM</span></td>
+    <td>对 Navigator 对象的只读引用。</td>
+  </tr>
+  <tr>
+    <td><a href="win_opener.htm" >opener</a></td>
+    <td>返回对创建此窗口的窗口的引用。</td>
+  </tr>
+  <tr>
+    <td><a href="win_outerheight.htm" >outerheight</a></td>
+    <td>返回窗口的外部高度。</td>
+  </tr>
+  <tr>
+    <td><a href="win_outerwidth.htm" >outerwidth</a></td>
+    <td>返回窗口的外部宽度。</td>
+  </tr>
+  <tr>
+    <td>pageXOffset</td>
+    <td>设置或返回当前页面相对于窗口显示区左上角的 X 位置。</td>
+  </tr>
+  <tr>
+    <td>pageYOffset</td>
+    <td>设置或返回当前页面相对于窗口显示区左上角的 Y 位置。</td>
+  </tr>
+  <tr>
+    <td>parent</td>
+    <td>返回父窗口。</td>
+  </tr>
+  <tr>
+    <td><a href="dom_screen.htm" >screen</a><span style="float:right">BOM</span></td>
+    <td>对 Screen 对象的只读引用。</td>
+  </tr>
+  <tr>
+    <td><a href="self.htm" >self</a></td>
+    <td>返回对当前窗口的引用。等价于 window 属性。</td>
+  </tr>
+  <tr>
+    <td><a href="status.htm" >status</a></td>
+    <td>设置窗口状态栏的文本。</td>
+  </tr>
+  <tr>
+    <td><a href="top.htm" >top</a></td>
+    <td>返回最顶层的先辈窗口。</td>
+  </tr>
+  <tr>
+    <td>window</td>
+    <td>window 属性等价于 self 属性，它包含了对窗口自身的引用。</td>
+  </tr>
+  <tr>
+    <td>
+	<ul>
+	<li>screenLeft</li>
+	<li>screenTop</li>
+	<li>screenX</li>
+	<li>screenY</li>
+	</ul>
+	</td>
+    <td>只读整数。声明了窗口的左上角在屏幕上的的 x 坐标和 y 坐标。IE、Safari 和 Opera 支持 screenLeft 和 screenTop，而 Firefox 和 Safari 支持 screenX 和 screenY。</td>
+  </tr>
+  </table>
+
+<h2>window 对象方法</h2>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%">方法</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td><a href="met_alert.htm" >alert()</a></td>
+    <td>显示带有一段消息和一个确认按钮的警告框。</td>
+  </tr>
+  <tr>
+    <td><a href="met_blur.htm" >blur()</a></td>
+    <td>把键盘焦点从顶层窗口移开。</td>
+  </tr>
+  <tr>
+    <td><a href="met_clearinterval.htm" >clearInterval()</a></td>
+    <td>取消由 setInterval() 设置的 timeout。</td>
+  </tr>
+  <tr>
+    <td><a href="met_cleartimeout.htm" >clearTimeout()</a></td>
+    <td>取消由 setTimeout() 方法设置的 timeout。</td>
+  </tr>
+  <tr>
+    <td><a href="met_close.htm" >close()</a></td>
+    <td>关闭浏览器窗口。</td>
+  </tr>
+  <tr>
+    <td><a href="met_confirm.htm" >confirm()</a></td>
+    <td>显示带有一段消息以及确认按钮和取消按钮的对话框。</td>
+  </tr>
+  <tr>
+    <td><a href="met_createpopup.htm" >createPopup()</a></td>
+    <td>创建一个 pop-up 窗口。</td>
+  </tr>
+  <tr>
+    <td><a href="met_focus.htm" >focus()</a></td>
+    <td>把键盘焦点给予一个窗口。</td>
+  </tr>
+  <tr>
+    <td><a href="met_moveby.htm" >moveBy()</a></td>
+    <td>可相对窗口的当前坐标把它移动指定的像素。</td>
+  </tr>
+  <tr>
+    <td><a href="met_moveto.htm" >moveTo()</a></td>
+    <td>把窗口的左上角移动到一个指定的坐标。</td>
+  </tr>
+  <tr>
+    <td><a href="met_open.htm" >open()</a></td>
+    <td>打开一个新的浏览器窗口或查找一个已命名的窗口。</td>
+  </tr>
+  <tr>
+    <td><a href="met_print.htm" >print()</a></td>
+    <td>打印当前窗口的内容。</td>
+  </tr>
+  <tr>
+    <td><a href="met_prompt.htm" >prompt()</a></td>
+    <td>显示可提示用户输入的对话框。</td>
+  </tr>
+  <tr>
+    <td><a href="met_resizeby.htm" >resizeBy()</a></td>
+    <td>按照指定的像素调整窗口的大小。</td>
+  </tr>
+  <tr>
+    <td><a href="met_resizeto.htm" >resizeTo()</a></td>
+    <td>把窗口的大小调整到指定的宽度和高度。</td>
+  </tr>
+  <tr>
+    <td><a href="met_scrollby.htm" >scrollBy()</a></td>
+    <td>按照指定的像素值来滚动内容。</td>
+  </tr>
+  <tr>
+    <td><a href="met_scrollto.htm" >scrollTo()</a></td>
+    <td>把内容滚动到指定的坐标。</td>
+  </tr>
+  <tr>
+    <td><a href="met_setinterval.htm" >setInterval()</a></td>
+    <td>按照指定的周期（以毫秒计）来调用函数或计算表达式。</td>
+  </tr>
+  <tr>
+    <td><a href="met_settimeout.htm" >setTimeout()</a></td>
+    <td>在指定的毫秒数后调用函数或计算表达式。</td>
+  </tr>
+</table>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

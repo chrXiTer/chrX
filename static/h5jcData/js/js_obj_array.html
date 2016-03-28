@@ -1,0 +1,60 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript Array（数组）</h1>
+<p>在javaScript中，数组是一种特殊的对象。数组对象用来在单独的变量名中存储一系列的值。</p>
+
+<h2>实例</h2>
+<p><a href="javascript:tiy.run('jsrf_array')" >创建数组</a></p>
+<p><a href="javascript:tiy.run('jsrf_array_for_in')" >For...In 声明</a></p>
+<p><a href="javascript:tiy.run('jseg_concat_2')" >合并两个数组 - concat()</a></p>
+<p><a href="javascript:tiy.run('jseg_join')" >用数组的元素组成字符串 - join()</a></p>
+<p><a href="javascript:tiy.run('jseg_sort_1')" >文字数组 - sort()</a></p>
+<p><a href="javascript:tiy.run('jseg_sort_2')" >数字数组 - sort()</a></p>
+
+
+<p>参见<a href="../jsref/jsref_obj_array.htm" >JavaScript Array 对象参考手册</a>，其中包括数组对象的属性和方法。</p>
+
+
+<h2>定义数组</h2>
+<p>可以使用关键词 new 来创建数组对象。下面的代码定义了一个名为 myArray 的数组对象：</p>
+    <pre>var myArray=new Array()</pre>
+<p>也可以使用［］符号来创建数组对象。下面一行代码的效果与上面一行代码的效果完全相同。</p>
+    <pre>var myArray=［］</pre>
+<p>创建数组时也可以使用一个整数变量定义数组的初始长度：</p>
+    <pre>var mycars=<code>new Array(3)  //没有对应的［］创建方式</code>
+<p>创建数组时还可以直接初始化数组中的元素值：</p>
+<pre>var mycars=<code>new Array(&quot;Saab&quot;,&quot;Volvo&quot;,&quot;BMW&quot;)</code></pre>
+<pre>var mycars=<code>［&quot;Saab&quot;,&quot;Volvo&quot;,&quot;BMW&quot;］</code></pre>
+
+<h2>使用数组</h2>
+<p>可以用［］包围数字索引获取数据中元素，并能够对这些元素赋值</p>
+<pre>
+var mycars=<code>new Array(1)</code>
+mycars[0]=&quot;Saab&quot;
+mycars[2]=&quot;BMW&quot;
+mycars[1]=&quot;Volvo&quot;
+</pre>
+
+<h3>访问数组</h3>
+<p>通过指定数组名以及索引号码，你可以访问某个特定的元素。</p>
+<p>下面是代码行：</p>
+<pre>document.write(mycars[0])</pre>
+<p>下面是输出：</p>
+<pre>Saab</pre>
+
+<h3>修改已有数组中的值</h3>
+<p>如需修改已有数组中的值，只要向指定下标号添加一个新值即可：</p>
+<pre>mycars[0]=&quot;Opel&quot;;</pre>
+<p>现在，以上代码：</p>
+<pre>document.write(mycars[0]);</pre>
+<p>将输出：</p>
+<pre>Opel</pre>
+
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,167 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;script&gt; 标签</h1>
+
+<div>
+<h2>实例</h2>
+
+<p>在 HTML 页面中插入一段 JavaScript：</p>
+
+<pre>
+<code>&lt;script type=&quot;text/javascript&quot;&gt;</code>
+document.write(&quot;Hello World!&quot;)
+<code>&lt;/script&gt;</code>
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_script')" >亲自试一试</a></p>
+
+<p>（在本页底部可以找到更多实例）</p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>&lt;script&gt; 标签用于定义客户端脚本，比如 JavaScript。</p>
+
+<p>script 元素既可以包含脚本语句，也可以通过 src 属性指向外部脚本文件。</p>
+
+<p>必需的 type 属性规定脚本的 MIME 类型。</p>
+
+<p>JavaScript 的常见应用时图像操作、表单验证以及动态内容更新。</p>
+</div>
+
+<div>
+<h2>提示和注释：</h2>
+
+<p class="note"><span>注释：</span>假如此元素内部的代码没有位于某个函数中，那么这些代码会在页面被加载时被立即执行。&lt;frameset&gt; 标签之后的脚本会被忽略。</p>
+
+<p class="tip"><span>提示：</span>请参阅 <a href="tag_noscript.htm"  title="HTML &lt;noscript&gt; 标签">noscript 元素</a>；对于那些在浏览器中禁用脚本或者其浏览器不支持客户端脚本的用户来说，该元素非常有用。</p>
+</div>
+
+<div>
+<h2>HTML 与 XHTML 之间的差异</h2>
+
+<p>在 HTML 4.01 中，script 元素的 &quot;language&quot; 属性不被赞成使用。</p>
+
+<p>在 XHTML 1.0 Strict DTD 中，script 元素的 &quot;language&quot; 属性不被支持。</p>
+
+<h3>HTML 4 和 XHTML 在处理脚本中的内容方面有所不同：</h3>
+
+<p>在 HTML 4 中，内容类型声明为 CDATA，就是说不会对实体进行解析。</p>
+
+<p>在 XHTML 中，内容类型声明为 (#PCDATA)，也就是说会对实体进行解析。</p>
+
+<p>这意味着，在 XHTML 中，应该编码所有特殊的字符，或者把所有内容嵌套在 CDATA 部分中。</p>
+
+<p>为了确保在 XHTML 文档中脚本正确进行解析，请使用如下语法：</p>
+
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;&lt;![CDATA[
+  document.write(&quot;Hello World!&quot;)
+//]]&gt;&lt;/script&gt;</pre>
+</div>
+
+<div>
+<h2>必选的属性</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:20%;">属性</th>
+<th style="width:20%;">值</th>
+<th style="width:60%;">描述</th>
+</tr>
+
+<tr>
+<td><a href="att_script_type.htm" >type</a></td>
+<td><i>MIME-type</i></td>
+<td>指示脚本的 MIME 类型。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>可选的属性</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:20%;">属性</th>
+<th style="width:20%;">值</th>
+<th style="width:60%;">描述</th>
+</tr>
+
+<tr>
+<td class="html5_new"><a href="att_script_async.htm"  title="HTML5 &lt;script&gt; async 属性">async</a></td>
+<td>async</td>
+<td>规定异步执行脚本（仅适用于外部脚本）。</td>
+</tr>
+
+<tr>
+<td><a href="att_script_charset.htm" >charset</a></td>
+<td><i>charset</i></td>
+<td>规定在外部脚本文件中使用的字符编码。</td>
+</tr>
+
+<tr>
+<td><a href="att_script_defer.htm" >defer</a></td>
+<td>defer</td>
+<td>规定是否对脚本执行进行延迟，直到页面加载为止。</td>
+</tr>
+
+<tr>
+<td><a href="att_script_type.htm#type_language" >language</a></td>
+<td><i>script</i></td>
+<td><span class="deprecated">不赞成使用。</span>规定脚本语言。请使用 type 属性代替它。</td>
+</tr>
+
+<tr>
+<td><a href="att_script_src.htm" >src</a></td>
+<td><i>URL</i></td>
+<td>规定外部脚本文件的 URL。</td>
+</tr>
+
+<tr>
+<td>xml:space</td>
+<td>preserve</td>
+<td>规定是否保留代码中的空白。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>全局属性</h2>
+
+<p>&lt;script&gt; 标签支持 <a href="html_ref_standardattributes.htm" >HTML 中的全局属性</a>。</p>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('html_script')" >插入一段脚本</a></dt>
+<dd>本例演示如何将脚本插入 HTML 文档。</dd>
+
+<dt><a href="javascript:tiy.run('html_noscript')" >运行于不支持脚本的浏览器</a></dt>
+<dd>本例演示如何对付不支持脚本的浏览器。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>教程：<a href="../js/index.htm" >JavaScript 教程</a></p>
+
+<p>教程：<a href="../vbscript/index.htm" >VBScript 教程</a></p>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>HTML DOM 参考手册：<a href="../jsref/dom_obj_script.htm"  title="HTML DOM Script 对象">Script 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

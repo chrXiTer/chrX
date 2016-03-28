@@ -1,0 +1,76 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;col&gt; 标签的 span 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_col.htm" >HTML &lt;col&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在下面的例子中，所有这三列都是居中对齐，因为 col 元素横跨三列：</p>
+<pre>
+&lt;table width=&quot;100%&quot; border=&quot;1&quot;&gt;
+  &lt;col <code>span=&quot;3&quot;</code> align=&quot;center&quot; /&gt;
+  &lt;tr&gt;
+    &lt;th&gt;ISBN&lt;/th&gt;
+    &lt;th&gt;Title&lt;/th&gt;
+    &lt;th&gt;Price&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;3476896&lt;/td&gt;
+    &lt;td&gt;My first HTML&lt;/td&gt;
+    &lt;td&gt;$53&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_col_span')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>span 属性规定 col 元素应该横跨的列数。</p>
+
+<h3>详细解释</h3>
+<p>&lt;col&gt; 标签，如同 &lt;colgroup&gt; 标签中的 span 属性一样，允许设置设置 &lt;col&gt; 标签能够影响多少列。</p>
+<p>在默认情况下，它只能影响一列。举个例子，创建一个有 5 列的 &lt;colgroup&gt;。我们分别将第一列和最后一列靠左和靠右对齐，中间的三列居中。</p>
+<pre>
+&lt;colgroup&gt;
+  &lt;col align=&quot;left&quot; /&gt;
+  &lt;col align=&quot;center&quot; <code>span=&quot;3&quot;</code> /&gt;
+  &lt;col align=&quot;right&quot; /&gt;
+&lt;/colgroup&gt;
+</pre>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;col span=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td><i>number</i></td>
+    <td>设置 col 元素应该横跨的列数。</td>
+  </tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_col.htm" >HTML &lt;col&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

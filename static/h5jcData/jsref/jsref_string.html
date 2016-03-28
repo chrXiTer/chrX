@@ -1,0 +1,82 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript String() 函数</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_global.htm"  title="JavaScript 全局对象">JavaScript 全局对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>String() 函数把对象的值转换为字符串。</p>
+
+<h3>语法</h3>
+<pre>String(object)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>object</td>
+    <td>必需。JavaScript 对象。</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在本例中，我们将尝试把不同的对象转换为字符串：</p>
+
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+
+var test1= new Boolean(1);
+var test2= new Boolean(0);
+var test3= new Boolean(true);
+var test4= new Boolean(false);
+var test5= new Date();
+var test6= new String(&quot;999 888&quot;);
+var test7=12345;
+
+document.write(<code>String(test1)</code>+ &quot;&lt;br /&gt;&quot;);
+document.write(<code>String(test2)</code>+ &quot;&lt;br /&gt;&quot;);
+document.write(<code>String(test3)</code>+ &quot;&lt;br /&gt;&quot;);
+document.write(<code>String(test4)</code>+ &quot;&lt;br /&gt;&quot;);
+document.write(<code>String(test5)</code>+ &quot;&lt;br /&gt;&quot;);
+document.write(<code>String(test6)</code>+ &quot;&lt;br /&gt;&quot;);
+document.write(<code>String(test7)</code>+ &quot;&lt;br /&gt;&quot;);
+
+&lt;/script&gt;</pre>
+
+<p>输出：</p>
+
+<pre>true
+false
+true
+false
+Wed Oct 28 00:17:40 UTC+0800 2009
+999 888
+12345</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+<dl>
+<dt><a href="javascript:tiy.run('jseg_string')" >String()</a></dt>
+<dd>如何使用 String() 把对象的值转换为字符串。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_global.htm"  title="JavaScript 全局对象">JavaScript 全局对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

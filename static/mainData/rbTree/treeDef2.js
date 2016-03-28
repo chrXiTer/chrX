@@ -1,0 +1,156 @@
+
+var a = [
+{
+	treeName:"a",
+	treeRoot:{
+		color: "black",
+		text:"65",
+		leftChild:{
+			color:"red",
+			text:"50",
+			leftChild:{
+				color:"black",
+				text:"10",
+				leftChild:null,
+				rightChild:null,
+			},
+			rightChild:{
+				color:"black",
+				text:"60",
+				leftChild:null,
+				rightChild:{
+					color:"red",
+					text:"62",
+					leftChild:null,
+					rightChild:null,
+				},
+			}
+		},
+		rightChild:{
+			color:"black",
+			text:"90",
+			leftChild:{
+				color:"red",
+				text:"70",
+				leftChild:null,
+				rightChild:null,
+			},
+			rightChild:null
+		}
+	}
+},
+
+{
+	treeName:"b",
+	treeRoot:{
+		color: "black",
+		text:"65",
+		leftChild:{
+			color:"red",
+			text:"50",
+			leftChild:{
+				color:"black",
+				text:"10",
+				leftChild:null,
+				rightChild:null,
+			},
+			rightChild:{
+				color:"black",
+				text:"60",
+				leftChild:null,
+				rightChild:{
+					color:"red",
+					text:"62",
+					leftChild:null,
+					rightChild:null,
+				},
+			}
+		},
+		rightChild:{
+			color:"black",
+			text:"90",
+			leftChild:{
+				isNull:true,
+				text:"--"
+			},
+			rightChild:null
+		}
+	}
+},
+
+{
+	treeName:"c",
+	treeRoot:{
+		color: "black",
+		text:"65",
+		leftChild:{
+			color:"red",
+			text:"50",
+			leftChild:{
+				color:"black",
+				text:"10",
+				leftChild:null,
+				rightChild:null,
+			},
+			rightChild:{
+				color:"black",
+				text:"60",
+				leftChild:null,
+				rightChild:{
+					color:"red",
+					text:"62",
+					leftChild:null,
+					rightChild:null,
+				},
+			}
+		},
+		rightChild:{
+			color:"black",
+			text:"70*",
+			leftChild:{
+				isNull:true,
+				text:"--"
+			},
+			rightChild:null
+		}
+	}
+},
+
+{
+	treeName:"d",
+	treeRoot:{
+		color: "black",
+		text:"62*",
+		leftChild:{
+			color:"red",
+			text:"50",
+			leftChild:{
+				color:"black",
+				text:"10",
+				leftChild:null,
+				rightChild:null,
+			},
+			rightChild:{
+				color:"black",
+				text:"60",
+				leftChild:null,
+				rightChild:{
+					isNull:true,
+					text:"--"
+				},
+			}
+		},
+		rightChild:{
+			color:"black",
+			text:"90",
+			leftChild:{
+				color:"red",
+				text:"70",
+				leftChild:null,
+				rightChild:null,
+			},
+			rightChild:null,
+		}
+	}
+}
+]

@@ -1,0 +1,61 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS 盒模型概述</h1> 
+
+<div id="intro">
+<p>
+    <strong>CSS 盒模型 (Box Model) 规定了元素框处理元素内容、<a href="css_padding.htm" title="CSS 内边距">内边距</a>、<a href="css_border_outline.htm" title="CSS 边框">边框</a> 和 <a href="css_margin.htm" title="CSS 外边距">外边距</a> 的方式。</strong>
+</p>
+</div>
+
+<div>
+<h2>CSS 盒模型概述</h2>
+
+<img src="../i/ct_boxmodel.gif" alt="CSS 盒模型" />
+
+<p>元素框的最内部分是实际的内容，直接包围内容的是内边距。内边距呈现了元素的背景。内边距的边缘是边框。边框以外是外边距，外边距默认是透明的，因此不会遮挡其后的任何元素。</p>
+<p class="tip"><span>提示：</span>背景应用于由内容和内边距、边框组成的区域。</p>
+<p>内边距、边框和外边距都是可选的，默认值是零。但是，许多元素将由用户代理样式表设置外边距和内边距。可以通过将元素的 margin 和 padding 设置为零来覆盖这些浏览器样式。这可以分别进行，也可以使用通用选择器对所有元素进行设置：</p>
+<pre>
+* {
+  margin: 0;
+  padding: 0;
+}
+</pre>
+
+<p>在 CSS 中，width 和 height 指的是内容区域的宽度和高度。增加内边距、边框和外边距不会影响内容区域的尺寸，但是会增加元素框的总尺寸。</p>
+<p>假设框的每个边上有 10 个像素的外边距和 5 个像素的内边距。如果希望这个元素框达到 100 个像素，就需要将内容的宽度设置为 70 像素，请看下图：</p>
+<img src="../i/ct_css_boxmodel_example.gif" alt="CSS 盒模型实例" />
+
+<pre>
+#box {
+  width: 70px;
+  margin: 10px;
+  padding: 5px;
+}
+</pre>
+
+<p class="tip"><span>提示：</span>内边距、边框和外边距可以应用于一个元素的所有边，也可以应用于单独的边。</p>
+<p class="tip"><span>提示：</span>外边距可以是负值，而且在很多情况下都要使用负值的外边距。</p>
+</div>
+
+<div>
+<h3>术语翻译</h3>
+<ul>
+<li>element : 元素。</li>
+<li>padding : 内边距，也有资料将其翻译为填充。</li>
+<li>border : 边框。</li>
+<li>margin : 外边距，也有资料将其翻译为空白或空白边。</li>
+</ul>
+</div> 
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

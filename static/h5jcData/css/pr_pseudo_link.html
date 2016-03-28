@@ -1,0 +1,80 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS :link 伪类</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>:link 伪类向未访问的链接添加特殊的样式。</p>
+<p>这个伪类应用于尚未访问过的链接；也就是说，链接所指的 URI 尚未出现在用户代理的历史中。这种状态与 :visited 状态是互斥的。</p>
+<h3>说明</h3>
+<p>激活的、已访问的、未访问的或者当有鼠标悬停在其上的链接，它们会在支持 CSS 的浏览器中以不同的方式显示出来：</p>
+<pre>
+a:link {color: #FF0000}     /* 未访问的链接 */
+a:visited {color: #00FF00}  /* 已访问的链接 */
+a:hover {color: #FF00FF}    /* 当有鼠标悬停在链接上 */
+a:active {color: #0000FF}   /* 被选择的链接 */
+</pre>
+
+<p class="note"><span>注释：</span>为了产生预期的效果，在 CSS 定义中，a:hover 必须位于 a:link 和 a:visited 之后！！</p>
+<p class="note"><span>注释：</span>为了产生预期的效果，在 CSS 定义中，a:active 必须位于 a:hover 之后！！</p>
+<p class="note"><span>注释：</span>Pseudo-class（伪类）的名称对大小写不敏感。</p>
+<p class="note"><span>注释：</span>伪类可与 CSS 类配合使用：</p>
+<pre><code>a.red:visited {color: #FF0000;}</code>
+
+&lt;a <span style="color:#00FF00;">class=&quot;red&quot;</span> href=&quot;css_syntax.asp&quot;&gt;CSS Syntax&lt;/a&gt;</pre>
+
+<p class="note">如果上面这个例子中的链接已访问过，那么它会显示为红色。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>规定链接的颜色：</p>
+<pre>
+<code>a:link {color: #FF0000}</code>     <span>/* 未访问的链接 */</span>
+a:visited {color: #00FF00}  <span>/* 已访问的链接 */</span>
+a:hover {color: #FF00FF}    <span>/* 当有鼠标悬停在链接上 */</span>
+a:active {color: #0000FF}   <span>/* 被选择的链接 */</span>
+</pre>
+
+<p><a href="../tiy/t.asp-f=csse_link.htm" >TIY</a> （在页面底部可以找到更多实例）</p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有主流浏览器都支持 :link 伪类。</p>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="../tiy/t.asp-f=csse_link.htm" >超链接</a></dt>
+<dd>本例演示如何向文档中的超链接添加不同的颜色。</dd>
+
+<dt><a href="../tiy/t.asp-f=csse_link2.htm" >超链接 2</a></dt>
+<dd>本例演示如何向超链接添加其他样式。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+<p>CSS 教程：<a href="css_pseudo_classes.htm" title="CSS 伪类 (Pseudo-classes)">CSS 伪类</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

@@ -1,0 +1,97 @@
+﻿
+<link rel="stylesheet" type="text/css" href="../c3.css"  />
+
+<body class="multimedia">
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>SVG &lt;ellipse&gt;</h1>
+
+<div id="tpn">
+<ul class="prenext">
+<li class="pre"><a href="svg_circle.asp.htm"  title="SVG &lt;circle&gt;">SVG 圆形</a></li>
+<li class="next"><a href="svg_line.asp.htm"  title="SVG &lt;line&gt;">SVG 线条</a></li>
+</ul>
+</div>
+
+<div class="intro">
+<p><strong>&lt;ellipse&gt; 标签可用来创建椭圆。</strong></p>
+</div>
+
+<div>
+<h2>&lt;ellipse&gt; 标签</h2>
+
+<p>&lt;ellipse&gt; 标签可用来创建椭圆。椭圆与圆很相似。不同之处在于椭圆有不同的 x 和 y 半径，而圆的 x 和 y 半径是相同的。</p>
+<p>请把下面的代码拷贝到记事本，然后把文件保存为 &quot;ellipse1.svg&quot;。把此文件放入您的 web 目录：</p>
+<pre>&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;
+&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot; 
+&quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;
+
+&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; version=&quot;1.1&quot;
+xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+
+&lt;ellipse cx=&quot;300&quot; cy=&quot;150&quot; rx=&quot;200&quot; ry=&quot;80&quot;
+style=&quot;fill:rgb(200,100,50);
+stroke:rgb(0,0,100);stroke-width:2&quot;/&gt;
+
+&lt;/svg&gt;</pre>
+
+<h3>代码解释：</h3>
+<ul>
+<li>cx 属性定义圆点的 x 坐标</li>
+<li>cy 属性定义圆点的 y 坐标</li>
+<li>rx 属性定义水平半径</li>
+<li>ry 属性定义垂直半径</li>
+</ul>
+<p><a href="ellipse1.svg" >查看例子</a></p>
+
+<p>下面的例子创建了三个累叠而上的椭圆：</p>
+<pre>&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;
+&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot; 
+&quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;
+
+&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; version=&quot;1.1&quot;
+xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+
+&lt;ellipse cx=&quot;240&quot; cy=&quot;100&quot; rx=&quot;220&quot; ry=&quot;30&quot;
+style=&quot;fill:purple&quot;/&gt;
+
+&lt;ellipse cx=&quot;220&quot; cy=&quot;70&quot; rx=&quot;190&quot; ry=&quot;20&quot;
+style=&quot;fill:lime&quot;/&gt;
+
+&lt;ellipse cx=&quot;210&quot; cy=&quot;45&quot; rx=&quot;170&quot; ry=&quot;15&quot;
+style=&quot;fill:yellow&quot;/&gt;
+
+&lt;/svg&gt;</pre>
+<p><a href="ellipse2.svg" >查看例子</a></p>
+
+<p>下面的例子组合了两个椭圆（一个黄的和一个白的）：</p>
+<pre>&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;
+&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot; 
+&quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;
+
+&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; version=&quot;1.1&quot;
+xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+
+&lt;ellipse cx=&quot;240&quot; cy=&quot;100&quot; rx=&quot;220&quot; ry=&quot;30&quot;
+style=&quot;fill:yellow&quot;/&gt;
+
+&lt;ellipse cx=&quot;220&quot; cy=&quot;100&quot; rx=&quot;190&quot; ry=&quot;20&quot;
+style=&quot;fill:white&quot;/&gt;
+
+&lt;/svg&gt;</pre>
+<p><a href="ellipse3.svg" >查看例子</a></p>
+</div>
+
+<div id="bpn">
+<ul class="prenext">
+<li class="pre"><a href="svg_circle.asp.htm"  title="SVG &lt;circle&gt;">SVG 圆形</a></li>
+<li class="next"><a href="svg_line.asp.htm"  title="SVG &lt;line&gt;">SVG 线条</a></li>
+</ul>
+</div>
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+</body>

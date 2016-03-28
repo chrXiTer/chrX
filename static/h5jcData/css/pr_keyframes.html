@@ -1,0 +1,241 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS3 @keyframes 规则</h1>
+
+<div class="backtoreference">
+<p><a href="index.htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>使 div 元素匀速向下移动：</p>
+<pre>
+@keyframes mymove
+{
+from {top:0px;}
+to {top:200px;}
+}
+
+@-moz-keyframes mymove <span class="code_comment">/* Firefox */</span>
+{
+from {top:0px;}
+to {top:200px;}
+}
+
+@-webkit-keyframes mymove <span class="code_comment">/* Safari 和 Chrome */</span>
+{
+from {top:0px;}
+to {top:200px;}
+}
+
+@-o-keyframes mymove <span class="code_comment">/* Opera */</span>
+{
+from {top:0px;}
+to {top:200px;}
+}
+</pre>
+
+<p><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/t.asp?f=css3_keyframes  \n\n'))window.location='/chrX/nofile/123tiy/t.asp?f=css3_keyframes'" >亲自试一试</a></p>
+<p>页面底部有更多实例。</p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+
+<p>目前浏览器都不支持 @keyframes 规则。</p>
+<p>Firefox 支持替代的 @-moz-keyframes 规则。</p>
+<p>Opera 支持替代的 @-o-keyframes 规则。</p>
+<p>Safari 和 Chrome 支持替代的 @-webkit-keyframes 规则。</p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>通过 @keyframes 规则，您能够创建动画。</p>
+<p>创建动画的原理是，将一套 CSS 样式逐渐变化为另一套样式。</p>
+<p>在动画过程中，您能够多次改变这套 CSS 样式。</p>
+<p>以百分比来规定改变发生的时间，或者通过关键词 &quot;from&quot; 和 &quot;to&quot;，等价于 0% 和 100%。</p>
+<p>0% 是动画的开始时间，100% 动画的结束时间。</p>
+<p>为了获得最佳的浏览器支持，您应该始终定义 0% 和 100% 选择器。</p>
+<p class="note"><span>注释：</span>请使用动画属性来控制动画的外观，同时将动画与选择器绑定。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>@keyframes <i>animationname</i> {<i>keyframes-selector</i> {<i>css-styles</i>;}}</pre>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>animationname</i></td>
+<td>必需。定义动画的名称。</td>
+</tr>
+
+<tr>
+<td><i>keyframes-selector</i></td>
+<td>
+	<p>必需。动画时长的百分比。</p>
+	<p>合法的值：</p>
+	<ul class="listintable">
+	<li>0-100%</li>
+	<li>from（与 0% 相同）</li>
+	<li>to（与 100% 相同）</li>
+	</ul>
+</td>
+</tr>
+
+<tr>
+<td><i>css-styles</i></td>
+<td>必需。一个或多个合法的 CSS 样式属性。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>亲自试一试 - 实例</h2>
+
+<h3>实例 1</h3>
+
+<p>在一个动画中添加多个 keyframe 选择器：</p>
+<pre>
+@keyframes mymove
+{
+0%   {top:0px;}
+25%  {top:200px;}
+50%  {top:100px;}
+75%  {top:200px;}
+100% {top:0px;}
+}
+
+@-moz-keyframes mymove <span class="code_comment">/* Firefox */</span>
+{
+0%   {top:0px;}
+25%  {top:200px;}
+50%  {top:100px;}
+75%  {top:200px;}
+100% {top:0px;}
+}
+
+@-webkit-keyframes mymove <span class="code_comment">/* Safari 和 Chrome */</span>
+{
+0%   {top:0px;}
+25%  {top:200px;}
+50%  {top:100px;}
+75%  {top:200px;}
+100% {top:0px;}
+}
+
+@-o-keyframes mymove <span class="code_comment">/* Opera */</span>
+{
+0%   {top:0px;}
+25%  {top:200px;}
+50%  {top:100px;}
+75%  {top:200px;}
+100% {top:0px;}
+}
+</pre>
+
+<p><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/t.asp?f=css3_keyframes2  \n\n'))window.location='/chrX/nofile/123tiy/t.asp?f=css3_keyframes2'" >亲自试一试</a></p>
+<h3>实例 2</h3>
+
+<p>在一个动画中改变多个 CSS 样式：</p>
+<pre>
+@keyframes mymove
+{
+0%   {top:0px; background:red; width:100px;}
+100% {top:200px; background:yellow; width:300px;}
+}
+
+@-moz-keyframes mymove <span class="code_comment">/* Firefox */</span>
+{
+0%   {top:0px; background:red; width:100px;}
+100% {top:200px; background:yellow; width:300px;}
+}
+
+@-webkit-keyframes mymove <span class="code_comment">/* Safari 和 Chrome */</span>
+{
+0%   {top:0px; background:red; width:100px;}
+100% {top:200px; background:yellow; width:300px;}
+}
+
+@-o-keyframes mymove <span class="code_comment">/* Opera */</span>
+{
+0%   {top:0px; background:red; width:100px;}
+100% {top:200px; background:yellow; width:300px;}
+}
+</pre>
+
+<p><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/t.asp?f=css3_keyframes3  \n\n'))window.location='/chrX/nofile/123tiy/t.asp?f=css3_keyframes3'" >亲自试一试</a></p>
+<h3>实例 3</h3>
+
+<p>带有多个 CSS 样式的多个 keyframe 选择器：</p>
+<pre>
+@keyframes mymove
+{
+0%   {top:0px; left:0px; background:red;}
+25%  {top:0px; left:100px; background:blue;}
+50%  {top:100px; left:100px; background:yellow;}
+75%  {top:100px; left:0px; background:green;}
+100% {top:0px; left:0px; background:red;}
+}
+
+@-moz-keyframes mymove <span class="code_comment">/* Firefox */</span>
+{
+0%   {top:0px; left:0px; background:red;}
+25%  {top:0px; left:100px; background:blue;}
+50%  {top:100px; left:100px; background:yellow;}
+75%  {top:100px; left:0px; background:green;}
+100% {top:0px; left:0px; background:red;}
+}
+
+@-webkit-keyframes mymove <span class="code_comment">/* Safari and Chrome */</span>
+{
+0%   {top:0px; left:0px; background:red;}
+25%  {top:0px; left:100px; background:blue;}
+50%  {top:100px; left:100px; background:yellow;}
+75%  {top:100px; left:0px; background:green;}
+100% {top:0px; left:0px; background:red;}
+}
+
+@-o-keyframes mymove <span class="code_comment">/* Opera */</span>
+{
+0%   {top:0px; left:0px; background:red;}
+25%  {top:0px; left:100px; background:blue;}
+50%  {top:100px; left:100px; background:yellow;}
+75%  {top:100px; left:0px; background:green;}
+100% {top:0px; left:0px; background:red;}
+}
+</pre>
+
+<p><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/t.asp?f=css3_keyframes4  \n\n'))window.location='/chrX/nofile/123tiy/t.asp?f=css3_keyframes4'" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>CSS3 教程：<a href="../css3/css3_animation.htm" title="CSS3 动画">CSS3 动画</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href="index.htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+<!-- maincontent end -->
+
+</div>
+<!-- wrapper end -->
+
+<script src="../chrX.js"></script>
+
+

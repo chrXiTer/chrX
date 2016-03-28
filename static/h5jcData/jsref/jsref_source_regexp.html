@@ -1,0 +1,50 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript source 属性</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_regexp.htm"  title="JavaScript RegExp 对象">JavaScript RegExp 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>source  属性用于返回模式匹配所用的文本。</p>
+<p>该文本不包括正则表达式直接量使用的定界符，也不包括标志 g、i、m。</p>
+
+<h3>语法</h3>
+<pre>RegExpObject.source</pre>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在下面的例子中，我们将获得用于模式匹配的文本：</p>
+
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+var str = &quot;Visit W3School.com.cn&quot;;
+var patt1 = new RegExp(&quot;W3S&quot;,&quot;g&quot;);
+
+document.write(&quot;The regular expression is: &quot; + <code>patt1.source</code>);
+&lt;/script&gt;</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_source_regexp')" >source</a></dt>
+<dd>如何使用 source 属性来获得用于模式匹配的文本。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_regexp.htm"  title="JavaScript RegExp 对象">JavaScript RegExp 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

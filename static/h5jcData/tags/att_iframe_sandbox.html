@@ -1,0 +1,99 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;iframe&gt; 标签的 sandbox 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_iframe.htm" >HTML &lt;iframe&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>带有额外限制的 &lt;iframe&gt;：</p>
+
+<pre>
+&lt;iframe src=&quot;demo_iframe_sandbox.htm&quot; sandbox=&quot;&quot;&gt;&lt;/iframe&gt; 
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_iframe_sandbox')" >亲自试一试</a></p>
+
+<p>（页面底部有更多实例。）</p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>如果被规定为空字符串（sandbox=&quot;&quot;），sandbox 属性将会启用一系列对行内框架中内容的额外限制。</p>
+
+<p>sandbox 属性的值既可以是一个空字符串（应用所有的限制），也可以是空格分隔的预定义值列表（将移除特定的限制）。</p>
+</div>
+
+<div>
+<h2>HTML 4.01 与 HTML 5 之间的差异</h2>
+
+<p>sandbox 是 HTML5 中的新属性。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;iframe sandbox=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>&quot;&quot;</td>
+<td>应用以下所有的限制。</td>
+</tr>
+
+<tr>
+<td>allow-same-origin</td>
+<td>允许 iframe 内容被视为与包含文档有相同的来源。</td>
+</tr>
+
+<tr>
+<td>allow-top-navigation</td>
+<td>允许 iframe 内容从包含文档导航（加载）内容。</td>
+</tr>
+
+<tr>
+<td>allow-forms</td>
+<td>允许表单提交。</td>
+</tr>
+
+<tr>
+<td>allow-scripts</td>
+<td>允许脚本执行。</td>
+</tr>
+</table>
+</div>
+
+<div class="example">
+<h2>亲自试一试 - 实例</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('html5_iframe_sandbox_form')" >允许表单提交的 &lt;iframe&gt; sandbox</a></dt>
+<dd>启用一系列额外的限制，但允许表单提交。</dd>
+
+<dt><a href="javascript:tiy.run('html5_iframe_sandbox_origin')" >允许脚本并访问服务器内容的 &lt;iframe&gt; sandbox</a></dt>
+<dd>启用一系列额外限制，但允许脚本并访问服务器内容。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_iframe.htm" >HTML &lt;iframe&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,88 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>MySQL NOW() 函数</h1>
+
+<div class="backtoreference">
+<p><a href="sql_dates.htm"  title="MySQL Date 函数">MySQL Date 函数</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>NOW() 函数返回当前的日期和时间。</p>
+
+<h3>语法</h3>
+<pre>NOW()</pre>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<h3>例子 1</h3>
+
+<p>下面是 SELECT 语句：</p>
+
+<pre>SELECT NOW(),CURDATE(),CURTIME()</pre>
+
+<p>结果类似：</p>
+
+<table class="dataintable">
+<tr>
+<th>NOW()</th>
+<th>CURDATE()</th>
+<th>CURTIME()</th>
+</tr>
+<tr>
+<td>2008-12-29 16:25:46</td>
+<td>2008-12-29</td>
+<td>16:25:46</td>
+</tr>
+</table>
+
+<h3>例子 2</h3>
+
+<p>下面的 SQL 创建带有日期时间列 (OrderDate) 的 &quot;Orders&quot; 表：</p>
+
+<pre>
+CREATE TABLE Orders 
+(
+OrderId int NOT NULL,
+ProductName varchar(50) NOT NULL,
+OrderDate datetime NOT NULL DEFAULT NOW(),
+PRIMARY KEY (OrderId)
+)
+</pre>
+
+<p>请注意，OrderDate 列规定 NOW() 作为默认值。作为结果，当您向表中插入行时，当前日期和时间自动插入列中。</p>
+
+<p>现在，我们希望在 &quot;Orders&quot; 表中插入一条新记录：</p>
+
+<pre>INSERT INTO Orders (ProductName) VALUES ('Computer')</pre>
+
+<p>&quot;Orders&quot; 表将类似这样：</p>
+
+<table class="dataintable">
+<tr>
+<th>OrderId</th>
+<th>ProductName</th>
+<th>OrderDate</th>
+</tr>
+<tr>
+<td>1</td>
+<td>'Computer'</td>
+<td>2008-12-29 16:25:46.635</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="sql_dates.htm"  title="MySQL Date 函数">MySQL Date 函数</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

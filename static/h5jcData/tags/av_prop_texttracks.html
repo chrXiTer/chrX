@@ -1,0 +1,88 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 Audio/Video DOM textTracks 属性</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>获得可用文本轨道的数量：</p>
+
+<pre>
+myVid=document.getElementById(&quot;video1&quot;);
+alert(<code>myVid.textTracks.length</code>);
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_av_prop_texttracks')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>textTracks 属性返回 TextTrackList 对象。</p>
+
+<p>TextTrackList 对象表示音频/视频的可用文本轨道。</p>
+
+<p>每条可用的文本轨道是由 TextTrack 对象表示的。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre><i>audio</i>|<i>video</i>.textTracks</pre>
+
+<h3>返回值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">类型</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>TextTrackList 对象</td>
+<td>
+	<p>表示音频/视频的可用文本轨道。</p>
+	<p>TextioTrackList 对象的属性：</p>
+	<ul class="listintable">
+	<li>length - 获得音频/视频中可用的文本轨道的数量</li>
+	<li>[index] - 根据下标来获得 TextTrack 对象</li>
+	</ul>
+	<p class="note"><span>注释：</span>第一条可用文本轨道的下标是 0。</p>
+</td>
+</tr>
+
+<tr>
+<td>TextTrack 对象</td>
+<td>
+	<p>表示一条文本轨道。</p>
+	<p>TextTrack 对象的属性：</p>
+	<ul class="listintable">
+	<li>kind - 获得文本轨道的类型（可以是 &quot;subtitles&quot;, &quot;caption&quot;, &quot;descriptions&quot;, &quot;chapters&quot; 或者 &quot;metadata&quot;)</li>
+	<li>label - 获得文本轨道的标签</li>
+	<li>language - 获得文本轨道的语言</li>
+	<li>mode - 获得或设置该轨道是否是活动的 (&quot;disabled&quot;|&quot;hidden&quot;|&quot;showing&quot;)</li>
+	<li>cues - 获得 TextTrackCueList 对象的 cues 列表</li>
+	<li>activeCues - 获得 TextTrackCueList 对象形式的当前活动文本轨道 cues</li>
+	<li>addCue(cue) - 向 cues 列表添加一个 cue</li>
+	<li>removeCue(cue) - 从 cues 列表删除一个 cue</li>
+	</ul>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

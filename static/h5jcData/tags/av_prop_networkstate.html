@@ -1,0 +1,67 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 Audio/Video DOM networkState 属性</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>获得视频的当前网络状态：</p>
+
+<pre>
+myVid=document.getElementById(&quot;video1&quot;);
+alert(<code>myVid.networkState</code>);
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_av_prop_networkstate')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>networkState 属性返回音频/视频的当前网络状态（activity）。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>audio|video.networkState</pre>
+
+<h3>返回值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">类型</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>数字值</td>
+<td>
+	<p>表示音频/视频元素的当前网络状态：</p>
+	<ul class="listintable">
+	<li>0 = NETWORK_EMPTY - 音频/视频尚未初始化</li>
+	<li>1 = NETWORK_IDLE - 音频/视频是活动的且已选取资源，但并未使用网络</li>
+	<li>2 = NETWORK_LOADING - 浏览器正在下载数据</li>
+	<li>3 = NETWORK_NO_SOURCE - 未找到音频/视频来源</li>
+	</ul>
+</td>
+</tr>
+</table>
+
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

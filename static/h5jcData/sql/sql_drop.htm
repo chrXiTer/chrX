@@ -1,0 +1,57 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL 撤销索引、表以及数据库</h1>
+
+<div>
+<p><strong>通过使用 DROP 语句，可以轻松地删除索引、表和数据库。</strong></p>
+</div>
+
+<div>
+<h2>SQL DROP INDEX 语句</h2>
+
+<p>我们可以使用 DROP INDEX 命令删除表格中的索引。</p>
+
+<h3>用于 Microsoft SQLJet (以及 Microsoft Access) 的语法:</h3>
+<pre>DROP INDEX index_name ON table_name</pre>
+
+<h3>用于 MS SQL Server 的语法:</h3>
+<pre>DROP INDEX table_name.index_name</pre>
+
+<h3>用于 IBM DB2 和 Oracle 语法:</h3>
+<pre>DROP INDEX index_name</pre>
+
+<h3>用于 MySQL 的语法:</h3>
+<pre>ALTER TABLE table_name DROP INDEX index_name</pre>
+</div>
+
+<div>
+<h2>SQL DROP TABLE 语句</h2>
+
+<p>DROP TABLE 语句用于删除表（表的结构、属性以及索引也会被删除）：</p>
+<pre>DROP TABLE 表名称</pre>
+</div>
+
+<div>
+<h2>SQL DROP DATABASE 语句</h2>
+
+<p>DROP DATABASE 语句用于删除数据库：</p>
+<pre>DROP DATABASE 数据库名称</pre>
+</div>
+
+<div>
+<h2>SQL TRUNCATE TABLE 语句</h2>
+
+<p>如果我们仅仅需要除去表内的数据，但并不删除表本身，那么我们该如何做呢？</p>
+
+<p>请使用 TRUNCATE TABLE 命令（仅仅删除表格中的数据）：</p>
+
+<pre>TRUNCATE TABLE 表名称</pre>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

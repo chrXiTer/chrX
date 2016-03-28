@@ -1,0 +1,114 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL UNIQUE 约束</h1>
+
+<div>
+<h2>SQL UNIQUE 约束</h2>
+
+<p>UNIQUE 约束唯一标识数据库表中的每条记录。</p>
+
+<p>UNIQUE 和 PRIMARY KEY 约束均为列或列集合提供了唯一性的保证。</p>
+
+<p>PRIMARY KEY 拥有自动定义的 UNIQUE 约束。</p>
+
+<p>请注意，每个表可以有多个 UNIQUE 约束，但是每个表只能有一个 PRIMARY KEY 约束。</p>
+</div>
+
+<div>
+<h2>SQL UNIQUE Constraint on CREATE TABLE</h2>
+
+<p>下面的 SQL 在 &quot;Persons&quot; 表创建时在 &quot;Id_P&quot; 列创建 UNIQUE 约束：</p>
+
+<h3>MySQL:</h3>
+
+<pre>
+CREATE TABLE Persons
+(
+Id_P int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255),
+<code>UNIQUE (Id_P)</code>
+)
+</pre>
+
+<h3>SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+CREATE TABLE Persons
+(
+Id_P int NOT NULL <code>UNIQUE</code>,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255)
+)
+</pre>
+
+<p>如果需要命名 UNIQUE 约束，以及为多个列定义 UNIQUE 约束，请使用下面的 SQL 语法：</p>
+
+<h3>MySQL / SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+CREATE TABLE Persons
+(
+Id_P int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255),
+<code>CONSTRAINT uc_PersonID UNIQUE (Id_P,LastName)</code>
+)
+</pre>
+</div>
+
+<div>
+<h2>SQL UNIQUE Constraint on ALTER TABLE</h2>
+
+<p>当表已被创建时，如需在 &quot;Id_P&quot; 列创建 UNIQUE 约束，请使用下列 SQL：</p>
+
+<h3>MySQL / SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+ALTER TABLE Persons
+<code>ADD UNIQUE (Id_P)</code>
+</pre>
+
+<p>如需命名 UNIQUE 约束，并定义多个列的 UNIQUE 约束，请使用下面的 SQL 语法：</p>
+
+<h3>MySQL / SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+ALTER TABLE Persons
+<code>ADD CONSTRAINT uc_PersonID UNIQUE (Id_P,LastName)</code>
+</pre>
+</div>
+
+<div>
+<h2>撤销 UNIQUE 约束</h2>
+
+<p>如需撤销 UNIQUE 约束，请使用下面的 SQL：</p>
+
+<h3>MySQL:</h3>
+
+<pre>
+ALTER TABLE Persons
+<code>DROP INDEX uc_PersonID</code>
+</pre>
+
+<h3>SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+ALTER TABLE Persons
+<code>DROP CONSTRAINT uc_PersonID</code>
+</pre>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,94 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript substring() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_string.htm"  title="JavaScript String 对象">JavaScript String 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>substring() 方法用于提取字符串中介于两个指定下标之间的字符。</p>
+
+<h3>语法</h3>
+<pre><i>stringObject</i>.substring(<i>start</i>,<i>stop</i>)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th style="width:15%;">参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td><i>start</i></td>
+    <td>必需。一个非负的整数，规定要提取的子串的第一个字符在 stringObject 中的位置。</td>
+  </tr>
+  <tr>
+    <td><i>stop</i></td>
+    <td><p>可选。一个非负的整数，比要提取的子串的最后一个字符在 stringObject 中的位置多 1。</p>
+	<p>如果省略该参数，那么返回的子串会一直到字符串的结尾。</p>
+	</td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+<p>一个新的字符串，该字符串值包含 <i>stringObject</i> 的一个子字符串，其内容是从 <i>start</i> 处到 <i>stop</i>-1 处的所有字符，其长度为 <i>stop</i> 减 <i>start</i>。</p>
+
+<h3>说明</h3>
+<p>substring() 方法返回的子串包括 <i>start</i> 处的字符，但不包括 <i>stop</i> 处的字符。</p>
+<p>如果参数 <i>start</i> 与 <i>stop</i> 相等，那么该方法返回的就是一个空串（即长度为 0 的字符串）。如果 <i>start</i> 比 <i>stop</i> 大，那么该方法在提取子串之前会先交换这两个参数。</p>
+</div>
+
+<div>
+<h2>提示和注释</h2>
+<p class="important"><span>重要事项：</span>与 <a href="jsref_slice_string.htm"  title="JavaScript slice() 方法">slice()</a> 和 <a href="jsref_substr.htm"  title="JavaScript substr() 方法">substr()</a> 方法不同的是，substring() 不接受负的参数。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<h3>例子 1</h3>
+
+<p>在本例中，我们将使用 substring() 从字符串中提取一些字符：</p>
+
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+
+var str=&quot;Hello world!&quot;
+document.write(<code>str.substring(3)</code>)
+
+&lt;/script&gt;</pre>
+
+<p>输出：</p>
+
+<pre>lo world!</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('jseg_substring2')" >亲自试一试</a></p>
+
+<h3>例子 2</h3>
+
+<p>在本例中，我们将使用 substring() 从字符串中提取一些字符：</p>
+
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+
+var str=&quot;Hello world!&quot;
+document.write(<code>str.substring(3,7)</code>)
+
+&lt;/script&gt;</pre>
+
+<p>输出：</p>
+
+<pre>lo w</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('jseg_substring')" >亲自试一试</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_string.htm"  title="JavaScript String 对象">JavaScript String 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

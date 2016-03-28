@@ -1,0 +1,182 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 视频</h1>
+
+<div>
+<p><strong>在 HTML 中播放视频的方法有很多种。</strong></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<pre>
+&lt;video width=&quot;320&quot; height=&quot;240&quot; controls=&quot;controls&quot;&gt;
+  &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+  &lt;source src=&quot;movie.ogg&quot; type=&quot;video/ogg&quot; /&gt;
+  &lt;source src=&quot;movie.webm&quot; type=&quot;video/webm&quot; /&gt;
+  &lt;object data=&quot;movie.mp4&quot; width=&quot;320&quot; height=&quot;240&quot;&gt;
+    &lt;embed src=&quot;movie.swf&quot; width=&quot;320&quot; height=&quot;240&quot; /&gt;
+  &lt;/object&gt;
+&lt;/video&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_video')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>使用 &lt;embed&gt; 标签</h2>
+
+<p>&lt;embed&gt; 标签的作用是在 HTML 页面中嵌入多媒体元素。</p>
+
+<p>下面的 HTML 代码显示嵌入网页的 Flash 视频：</p>
+
+<h3>实例</h3>
+
+<pre>&lt;embed src=&quot;movie.swf&quot; height=&quot;200&quot; width=&quot;200&quot;/&gt;</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_video_embed')" >亲自试一试</a></p>
+
+<h3>问题</h3>
+
+<ul>
+<li>HTML4 无法识别 &lt;embed&gt; 标签。您的页面无法通过验证。</li>
+<li>如果浏览器不支持 Flash，那么视频将无法播放</li>
+<li>iPad 和 iPhone 不能显示 Flash 视频。</li>
+<li>如果您将视频转换为其他格式，那么它仍然不能在所有浏览器中播放。</li>
+</ul>
+</div>
+
+<div>
+<h2>使用 &lt;object&gt; 标签</h2>
+
+<p>&lt;object&gt; 标签的作用是在 HTML 页面中嵌入多媒体元素。</p>
+
+<p>下面的 HTML 片段显示嵌入网页的一段 Flash 视频：</p>
+
+<h3>实例</h3>
+
+<pre>&lt;object data=&quot;movie.swf&quot; height=&quot;200&quot; width=&quot;200&quot;/&gt;</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_video_object')" >亲自试一试</a></p>
+
+<h3>问题</h3>
+
+<ul>
+<li>如果浏览器不支持 Flash，将无法播放视频。</li>
+<li>iPad 和 iPhone 不能显示 Flash 视频。</li>
+<li>如果您将视频转换为其他格式，那么它仍然不能在所有浏览器中播放。</li>
+</ul>
+</div>
+
+<div>
+<h2>使用 &lt;video&gt; 标签</h2>
+
+<p>&lt;video&gt; 是 HTML 5 中的新标签。</p>
+
+<p>&lt;video&gt; 标签的作用是在 HTML 页面中嵌入视频元素。</p>
+
+<p>以下 HTML 片段会显示一段嵌入网页的 ogg、mp4 或 webm 格式的视频：</p>
+
+<h3>实例</h3>
+
+<pre>
+&lt;video width=&quot;320&quot; height=&quot;240&quot; controls=&quot;controls&quot;&gt;
+  &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+  &lt;source src=&quot;movie.ogg&quot; type=&quot;video/ogg&quot; /&gt;
+  &lt;source src=&quot;movie.webm&quot; type=&quot;video/webm&quot; /&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_video_html5')" >亲自试一试</a></p>
+
+<h3>问题</h3>
+
+<ul>
+<li>您必须把视频转换为很多不同的格式。</li>
+<li>&lt;video&gt; 元素在老式浏览器中无效。</li>
+<li>&lt;video&gt; 元素无法通过 HTML 4 和 XHTML 验证。</li>
+</ul>
+</div>
+
+<div>
+<h2>最好的 HTML 解决方法</h2>
+
+<p>HTML 5 + &lt;object&gt; + &lt;embed&gt;</p>
+
+<pre>
+&lt;video width=&quot;320&quot; height=&quot;240&quot; controls=&quot;controls&quot;&gt;
+  &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+  &lt;source src=&quot;movie.ogg&quot; type=&quot;video/ogg&quot; /&gt;
+  &lt;source src=&quot;movie.webm&quot; type=&quot;video/webm&quot; /&gt;
+  &lt;object data=&quot;movie.mp4&quot; width=&quot;320&quot; height=&quot;240&quot;&gt;
+    &lt;embed src=&quot;movie.swf&quot; width=&quot;320&quot; height=&quot;240&quot; /&gt;
+  &lt;/object&gt;
+&lt;/video&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_video')" >亲自试一试</a></p>
+
+<p>上例中使用了 4 中不同的视频格式。HTML 5 &lt;video&gt; 元素会尝试播放以 mp4、ogg 或 webm 格式中的一种来播放视频。如果均失败，则回退到 &lt;embed&gt; 元素。</p>
+
+<h3>问题</h3>
+
+<ul>
+<li>您必须把视频转换为很多不同的格式</li>
+<li>&lt;video&gt; 元素无法通过 HTML 4 和 XHTML 验证。</li>
+<li>&lt;embed&gt; 元素无法通过 HTML 4 和 XHTML 验证。</li>
+</ul>
+
+<p>注释：使用 &lt;!DOCTYPE html&gt; (HTML5) 解决验证问题。</p>
+</div>
+
+<div>
+<h2>优酷解决方案</h2>
+
+<p>在 HTML 中显示视频的最简单的方法是使用优酷等视频网站。</p>
+
+<p>如果您希望在网页中播放视频，那么您可以把视频上传到优酷等视频网站，然后在您的网页中插入 HTML 代码即可播放视频：</p>
+
+<pre>
+&lt;embed src=&quot;http://player.youku.com/player.php/sid/XMzI2NTc4NTMy/v.swf&quot; 
+width=&quot;480&quot; height=&quot;400&quot; 
+type=&quot;application/x-shockwave-flash&quot;&gt;
+&lt;/embed&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_video_youku')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>使用超链接</h2>
+
+<p>如果网页包含指向媒体文件的超链接，大多数浏览器会使用“辅助应用程序”来播放文件。</p>
+
+<p>以下代码片段显示指向 AVI 文件的链接。如果用户点击该链接，浏览器会启动“辅助应用程序”，比如 Windows Media Player 来播放这个 AVI 文件：</p>
+
+<h3>实例</h3>
+
+<pre>&lt;a href=&quot;movie.swf&quot;&gt;Play a video file&lt;/a&gt;</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_video_link')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>关于内联视频的一段注释</h2>
+
+<p>当视频被包含在网页中时，它被称为内联视频。</p>
+
+<p>如果您打算在 web 应用程序中使用内联视频，您需要意识到很多人都觉得内联视频令人恼火。</p>
+
+<p>同时请注意，用户可能已经关闭了浏览器中的内联视频选项。</p>
+
+<p>我们最好的建议是只在用户希望看到内联视频的地方包含它们。一个正面的例子是，在用户需要看到视频并点击某个链接时，会打开页面然后播放视频。</p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

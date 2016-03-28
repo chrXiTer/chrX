@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chrX</title>
+	<link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/static/mainData/site.css" />
+</head>
+
+<body>
+    <div id="replaceDivMenu"></div>
+    <div class="container body-content" style="padding-top:60px">
+<ul style="clear:both">
+    <li><a href="/mainData/game/woodGame">堆木头</a></li>
+    <li><a href="/mainData/game/fishSwimGame">鱼儿游</a></li>
+    <li><a href="/static/game/ccg/index.html">ccg</a></li>
+</ul>
+<br/>
+
+<style type="text/css">
+    #iframeGame{
+        width:98%;
+        height: 610px;
+        max-width: 600px;
+        max-height: 610px;
+    }
+</style>
+    
+<iframe id="iframeGame">
+</iframe>
+
+<script>
+    var iframeGame = document.getElementById("iframeGame");  //src="/mainData/game/woodGame/index.html"
+    iframeGame.src = document.location.pathname + "/index.html";
+</script>
+<!--
+        <div id="replaceDivMainContent"></div>
+-->
+        <hr style="clear:both"/>
+        <footer>
+            <p>&copy; <span id="showYear"><span> - My chrX</p>
+        </footer>
+    </div>
+    <script>
+        ;(function(){
+            showYearE = document.getElementById("showYear");
+            showYearE.innerText = new Data().getYear();
+        });
+    </script>
+    <script id="scriptDataBase" src="/static/mainData/data.base.js"></script>
+	<script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="http://cdn.bootcss.com/markdown.js/0.5.0/markdown.min.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap-markdown/2.7.0/js/bootstrap-markdown.min.js"></script>
+
+</body>
+</html>
+

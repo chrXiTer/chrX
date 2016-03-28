@@ -1,0 +1,204 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS list-style-type 属性</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>list-style-type 属性设置列表项标记的类型。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">disc</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>yes</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS1</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.listStyleType=&quot;square&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>设置不同的列表样式：</p>
+<pre>
+ul.circle {<code>list-style-type:circle;</code>}
+ul.square {<code>list-style-type:square;</code>}
+ol.upper-roman {<code>list-style-type:upper-roman;</code>}
+ol.lower-alpha {<code>list-style-type:lower-alpha;</code>}
+</pre>
+
+<p><a href="../tiy/t.asp-f=csse_list-style-type_test.htm" >TIY</a> （在页面底部可以找到更多实例）</p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有浏览器都支持 list-style-type 属性。</p>
+<p class="note"><span>注释：</span>任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 &quot;decimal-leading-zero&quot;、&quot;lower-greek&quot;、&quot;lower-latin&quot;、&quot;upper-latin&quot;、&quot;armenian&quot;、&quot;georgian&quot; 或 &quot;inherit&quot;。</p>
+</div>
+
+<div>
+<h2>可能的值</h2>
+
+<h3>CSS2 的值：</h3>
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>none</td>
+<td>无标记。</td>
+</tr>
+
+<tr>
+<td>disc</td>
+<td>默认。标记是实心圆。</td>
+
+<tr>
+<td>circle</td>
+<td>标记是空心圆。</td>
+</tr>
+
+<tr>
+<td>square</td>
+<td>标记是实心方块。</td>
+
+<tr>
+<td>decimal</td>
+<td>标记是数字。</td>
+</tr>
+
+<tr>
+<td>decimal-leading-zero</td>
+<td>0开头的数字标记。(01, 02, 03, 等。)</td>
+
+<tr>
+<td>lower-roman</td>
+<td>小写罗马数字(i, ii, iii, iv, v, 等。)</td>
+</tr>
+
+<tr>
+<td>upper-roman</td>
+<td>大写罗马数字(I, II, III, IV, V, 等。)</td>
+
+<tr>
+<td>lower-alpha</td>
+<td>小写英文字母The marker is lower-alpha (a, b, c, d, e, 等。)</td>
+</tr>
+
+<tr>
+<td>upper-alpha</td>
+<td>大写英文字母The marker is upper-alpha (A, B, C, D, E, 等。)</td>
+
+<tr>
+<td>lower-greek</td>
+<td>小写希腊字母(alpha, beta, gamma, 等。)</td>
+</tr>
+
+<tr>
+<td>lower-latin</td>
+<td>小写拉丁字母(a, b, c, d, e, 等。)</td>
+
+<tr>
+<td>upper-latin</td>
+<td>大写拉丁字母(A, B, C, D, E, 等。)</td>
+</tr>
+
+<tr>
+<td>hebrew</td>
+<td>传统的希伯来编号方式</td>
+</tr>
+
+<tr>
+<td>armenian</td>
+<td>传统的亚美尼亚编号方式</td>
+</tr>
+
+<tr>
+<td>georgian</td>
+<td>传统的乔治亚编号方式(an, ban, gan, 等。)</td>
+</tr>
+
+<tr>
+<td>cjk-ideographic</td>
+<td>简单的表意数字</td>
+</tr>
+
+<tr>
+<td>hiragana</td>
+<td>标记是：a, i, u, e, o, ka, ki, 等。（日文片假名）</td>
+</tr>
+
+<tr>
+<td>katakana</td>
+<td>标记是：A, I, U, E, O, KA, KI, 等。（日文片假名）</td>
+</tr>
+
+<tr>
+<td>hiragana-iroha</td>
+<td>标记是：i, ro, ha, ni, ho, he, to, 等。（日文片假名）</td>
+</tr>
+
+<tr>
+<td>katakana-iroha</td>
+<td>标记是：I, RO, HA, NI, HO, HE, TO, 等。（日文片假名）</td>
+</tr>
+</table>
+
+<h3>CSS2.1 的值：</h3>
+<pre>disc | circle | square | decimal | decimal-leading-zero | 
+lower-roman | upper-roman | lower-greek | lower-latin | upper-latin | 
+armenian | georgian | none | inherit</pre>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="../tiy/t.asp-f=csse_list-style-type.htm" >在无序列表中的不同类型的列表标记</a></dt>
+<dd>本例演示在CSS中不同类型的列表项标记。</dd>
+
+<dt><a href="../tiy/t.asp-f=csse_list-style-type2.htm" >在有序列表中不同类型的列表项标记</a></dt>
+<dd>本例演示在CSS中不同类型的列表项标记。</dd>
+
+<dt><a href="../tiy/t.asp-f=csse_list-style-type_all.htm" >所有的列表样式类型</a></dt>
+<dd>本例演示在CSS中所有不同类型的列表项标记。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>CSS 教程：<a href="css_list.htm" title="CSS 列表">CSS 列表</a></p>
+<p>CSS 参考手册：<a href="pr_list-style.htm" title="CSS list-style 属性">CSS list-style 属性</a></p>
+<p>HTML DOM 参考手册：<a href="../htmldom/prop_style_liststyletype.htm" title="HTML DOM listStyleType 属性">listStyleType 属性</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

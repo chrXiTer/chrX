@@ -1,0 +1,75 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML DOM closed 属性</h1>
+
+<div class="backtoreference">
+<p><a href="dom_obj_window.htm" >HTML DOM Window 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>closed 属性可返回一个布尔值，该值声明了窗口是否已经关闭。该属性为只读。</p>
+<p>当浏览器窗口关闭时，表示该窗口的 Windows 对象并不会消失，它将继续存在，不过它的 closed 属性将设置为 true。</p>
+
+<h3>语法</h3>
+<pre>window.closed</pre>
+</div>
+
+<div>
+<h2>实例</h2>
+<p>下面的例子可检测新窗口是否已被关闭：</p>
+
+<pre>&lt;html&gt;
+&lt;head&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+function ifClosed()
+  {
+  document.write(&quot;'myWindow' has been closed!&quot;)
+  }
+  
+function ifNotClosed()
+  {
+  document.write(&quot;'myWindow' has not been closed!&quot;)
+  }
+
+function checkWin()
+  {
+  if (myWindow.closed)
+    ifClosed()
+  else
+    ifNotClosed()
+  }
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+myWindow=window.open('','','width=200,height=100')
+myWindow.document.write(&quot;This is 'myWindow'&quot;)
+&lt;/script&gt;
+
+&lt;input type=&quot;button&quot; value=&quot;Has 'myWindow' been closed?&quot;
+onclick=&quot;checkWin()&quot;&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+<dl>
+<dt><a href="javascript:tiy.run('hdom_win_closed')" >检测窗口是否已关闭</a></dt>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="dom_obj_window.htm" >HTML DOM Window 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

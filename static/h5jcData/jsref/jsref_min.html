@@ -1,0 +1,79 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript min() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_math.htm"  title="JavaScript Math 对象">JavaScript Math 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>min() 方法可返回指定的数字中带有最低值的数字。</p>
+
+<h3>语法</h3>
+
+<pre>Math.min(x,y)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>x</td>
+    <td>0 或多个值。在 ECMASCript v3 之前，该方法只有两个参数。</td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+
+<p>参数中最小的值。如果没有参数，则返回 Infinity。如果有某个参数为 NaN，或是不能转换成数字的非数字值，则返回 NaN。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在本例中，我们将展示如何使用 min() 来返回指定数字中带有最低值的数字：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+document.write(Math.min(5,7) + &quot;&lt;br /&gt;&quot;)
+document.write(Math.min(-3,5) + &quot;&lt;br /&gt;&quot;)
+document.write(Math.min(-3,-5) + &quot;&lt;br /&gt;&quot;)
+document.write(Math.min(7.25,7.30))
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>
+5
+-3
+-5
+7.25
+</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_min')" >min()</a></dt>
+<dd>如何使用 min() 来取得指定数字中带有最低值的数字。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_math.htm"  title="JavaScript Math 对象">JavaScript Math 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,103 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL SELECT DISTINCT 语句</h1>
+
+<div  id="tpn">
+<ul class="prenext">
+<li class="pre"><a href="sql_select.htm"  title="SQL SELECT 语句">SQL select</a></li>
+<li class="next"><a href="sql_where.htm"  title="SQL WHERE 子句">SQL where</a></li>
+</ul>
+</div>
+
+<div>
+<p><strong>本章讲解 SELECT DISTINCT 语句。</strong></p>
+</div>
+
+<div>
+<h2>SQL SELECT DISTINCT 语句</h2>
+
+<p>在表中，可能会包含重复值。这并不成问题，不过，有时您也许希望仅仅列出不同（distinct）的值。</p>
+
+<p>关键词 DISTINCT 用于返回唯一不同的值。</p>
+
+<h3>语法：</h3>
+<pre>SELECT DISTINCT 列名称 FROM 表名称</pre>
+</div>
+
+<div>
+<h2>使用 DISTINCT 关键词</h2>
+<p>如果要从 &quot;Company&quot; 列中选取所有的值，我们需要使用 SELECT 语句：</p>
+<pre>SELECT Company FROM Orders</pre>
+
+<h3>&quot;Orders&quot;表：</h3>
+<table class="dataintable">
+<tr>
+<th>Company</th>
+<th>OrderNumber</th>
+</tr>
+
+<tr>
+<td>IBM</td>
+<td>3532</td>
+</tr>
+
+<tr>
+<td>W3School</td>
+<td>2356</td>
+</tr>
+
+<tr>
+<td>Apple</td>
+<td>4698</td>
+</tr>
+
+<tr>
+<td>W3School</td>
+<td>6953</td>
+</tr>
+</table>
+
+<h3>结果：</h3>
+<table class="dataintable">
+<tr><th>Company</th></tr>
+<tr>
+  <td>IBM</td>
+</tr>
+<tr>
+  <td>W3School</td>
+</tr>
+<tr>
+  <td>Apple</td>
+</tr>
+<tr>
+  <td>W3School</td>
+</tr>
+</table>
+
+<p>请注意，在结果集中，W3School 被列出了两次。</p>
+<p>如需从 Company&quot; 列中仅选取唯一不同的值，我们需要使用 SELECT DISTINCT 语句：</p>
+<pre>SELECT <code>DISTINCT</code> Company FROM Orders </pre>
+
+<h3>结果：</h3>
+<table class="dataintable">
+<tr><th>Company</th></tr>
+<tr>
+  <td>IBM</td>
+</tr>
+<tr>
+  <td>W3School</td>
+</tr>
+<tr>
+  <td>Apple</td>
+</tr>
+</table>
+<p>现在，在结果集中，&quot;W3School&quot; 仅被列出了一次。</p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

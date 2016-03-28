@@ -1,0 +1,116 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 canvas data 属性</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>创建 100*100 像素的 ImageData 对象，其中每个像素均被设置为红色：：</p>
+
+<canvas id="myCanvas" class="canvas_example">
+Your browser does not support the canvas tag.
+</canvas>
+
+<script>
+var c=document.getElementById("myCanvas");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+    var ctx=c.getContext("2d");
+    var imgData=ctx.createImageData(100,100);
+    for (var i=0;i<imgData.width*imgData.height*4;i+=4)
+      {
+      imgData.data[i+0]=255;
+      imgData.data[i+1]=0;
+      imgData.data[i+2]=0;
+      imgData.data[i+3]=255;
+      }
+    ctx.putImageData(imgData,10,10);
+	}
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+var imgData=ctx.createImageData(100,100);
+for (var i=0;i&lt;imgData.data.length;i+=4)
+  {
+  imgData.data[i+0]=255;
+  imgData.data[i+1]=0;
+  imgData.data[i+2]=0;
+  imgData.data[i+3]=255;
+  }
+ctx.putImageData(imgData,10,10);
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_createimagedata')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>fillStyle 属性设置或返回用于填充绘画的颜色、渐变或模式。</p>
+
+<p>data 属性返回一个对象，该对象包含指定的 ImageData 对象的图像数据。</p>
+
+<p>对于 ImageData 对象中的每个像素，都存在着四方面的信息，即 RGBA 值：</p>
+
+<ul>
+<li>R - 红色 (0-255)</li>
+<li>G - 绿色 (0-255)</li>
+<li>B - 蓝色 (0-255)</li>
+<li>A - alpha 通道 (0-255; 0 是透明的，255 是完全可见的)</li>
+</ul>
+
+<p>color/alpha 以数组形式存在，并存储于 ImageData 对象的 data 属性中。</p>
+
+<h3>例子：</h3>
+
+<p>将 ImageData 对象中的第一个像素变为红色的语法：</p>
+
+<pre>
+imgData=ctx.createImageData(100,100);
+
+imgData.data[0]=255;
+imgData.data[1]=0;
+imgData.data[2]=0;
+imgData.data[3]=255;
+</pre>
+
+<p>将 ImageData 对象中的第二个像素变为绿色的语法：</p>
+
+<pre>
+imgData=ctx.createImageData(100,100);
+
+imgData.data[4]=0;
+imgData.data[5]=255;
+imgData.data[6]=0;
+imgData.data[7]=255;
+</pre>
+
+<p class="tip"><span>提示：</span>请参阅 <a href="canvas_createimagedata.htm"  title="HTML5 canvas createImageData() 方法">createImageData()</a>、<a href="canvas_getimagedata.htm"  title="HTML5 canvas getImageData() 方法">getImageData()</a> 以及 <a href="canvas_putimagedata.htm"  title="HTML5 canvas putImageData() 方法">putImageData()</a> 方法，以获得更多关于 ImageData 对象的知识。</p>
+
+<h3>JavaScript 语法：</h3>
+
+<pre>imageData.data;</pre>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,87 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS :first-child 伪类</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>:first-child 伪类向元素的第一个子元素添加样式。</p>
+<h3>说明</h3>
+<p>利用 :first-child 这个伪类，只有当元素是另一个元素的第一个子元素时才能匹配。例如，p:first-child 会选择作为另外某个元素第一个子元素的所有 p 元素。一般可能认为这会选择作为段落第一个子元素的元素，但事实上并非如此，如果要选择段落的第一个子元素，应当写为 p &gt; *:first-child。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<h3>例子 1 - 匹配第一个 &lt;p&gt; 元素</h3>
+
+<p>在下面的例子中，选择器匹配属于任意元素的第一个子元素的 &lt;p&gt; 元素：</p>
+<pre>&lt;style type=&quot;text/css&quot;&gt;
+<code>p:first-child
+{
+font-weight:bold
+}</code>
+&lt;/style&gt;
+
+&lt;p&gt;I am a &lt;em&gt;strong&lt;/em&gt; man. I am a &lt;em&gt;strong&lt;/em&gt; man.&lt;/p&gt;
+&lt;p&gt;I am a &lt;em&gt;strong&lt;/em&gt; man. I am a &lt;em&gt;strong&lt;/em&gt; man.&lt;/p&gt;</pre>
+
+<p><a href="../tiy/t.asp-f=csse_first-child1.htm" >TIY</a></p>
+
+<h3>例子 2 - 匹配所有 &lt;p&gt; 元素中的第一个 &lt;em&gt; 元素</h3>
+
+<p>在本例中，选择器匹配属于 &lt;p&gt; 元素中的第一个子元素的 &lt;em&gt; 元素：</p>
+<pre>&lt;style type=&quot;text/css&quot;&gt;
+<code>p &gt; em:first-child
+{
+font-weight:bold
+}</code>
+&lt;/style&gt;
+
+&lt;p&gt;I am a &lt;em&gt;strong&lt;/em&gt; man. I am a &lt;em&gt;strong&lt;/em&gt; man.&lt;/p&gt;
+&lt;p&gt;I am a &lt;em&gt;strong&lt;/em&gt; man. I am a &lt;em&gt;strong&lt;/em&gt; man.&lt;/p&gt;</pre>
+
+<p><a href="../tiy/t.asp-f=csse_first-child2.htm" >TIY</a></p>
+<h3>例子 3 - 匹配所有第一个子元素 &lt;p&gt; 元素中的所有 &lt;em&gt; 元素</h3>
+
+<p>在下面的例子中，选择器匹配属于其他元素的第一个子元素的 &lt;p&gt; 元素中的所有 &lt;em&gt;：</p>
+<pre>&lt;style type=&quot;text/css&quot;&gt;
+<code>p:first-child em
+{
+font-weight:bold
+}</code>
+&lt;/style&gt;
+
+&lt;p&gt;I am a &lt;em&gt;strong&lt;/em&gt; man. I am a &lt;em&gt;strong&lt;/em&gt; man.&lt;/p&gt;
+&lt;p&gt;I am a &lt;em&gt;strong&lt;/em&gt; man. I am a &lt;em&gt;strong&lt;/em&gt; man.&lt;/p&gt;</pre>
+
+<p><a href="../tiy/t.asp-f=csse_first-child3.htm" >TIY</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有主流浏览器都支持 :first-child 伪类。</p>
+<p class="tip"><span>提示：</span>为了保证 :first-child 伪类在 IE 中正常工作，必须声明 <a href="../tags/tag_doctype.htm" title="HTML &lt;!DOCTYPE&gt; 标签">&lt;!DOCTYPE&gt;</a>。</p>
+</div>
+
+<div>
+<h2>相关页面</h2>
+<p>CSS 教程：<a href="css_pseudo_classes.htm" title="CSS 伪类 (Pseudo-classes)">CSS 伪类</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

@@ -1,0 +1,89 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript asin() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_math.htm"  title="JavaScript Math 对象">JavaScript Math 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>asin() 方法可返回一个数的反正弦值。</p>
+
+<h3>语法</h3>
+
+<pre>Math.asin(x)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>x</td>
+    <td>必需。必须是一个数值，该值介于 -1.0 ~ 1.0 之间。</td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+
+<p>x 的反正弦值。返回的值是 -PI/2 到 PI/2 之间的弧度值。</p>
+</div>
+
+<div>
+<h2>提示和注释</h2>
+
+<p class="note"><span>注释：</span>如果参数 x 超过了 -1.0 ~ 1.0 的范围，那么浏览器将返回 NaN。</p>
+
+<p class="note"><span>注释：</span>如果参数 x 取值 1，那么将返回 PI/2。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在本例中，我们将取得不同数字的反正弦值：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+document.write(Math.asin(0.64) + &quot;&lt;br /&gt;&quot;)
+document.write(Math.asin(0) + &quot;&lt;br /&gt;&quot;)
+document.write(Math.asin(-1) + &quot;&lt;br /&gt;&quot;)
+document.write(Math.asin(1) + &quot;&lt;br /&gt;&quot;)
+document.write(Math.asin(2))
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>
+0.6944982656265559
+0
+-1.5707963267948965
+1.5707963267948965
+NaN
+</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_asin')" >asin()</a></dt>
+<dd>如何使用 asin() 来取得不同数字的反正弦值。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_math.htm"  title="JavaScript Math 对象">JavaScript Math 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

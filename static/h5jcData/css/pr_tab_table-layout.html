@@ -1,0 +1,111 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS table-layout 属性</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>tableLayout 属性用来显示表格单元格、行、列的算法规则。</p>
+<h3>固定表格布局：</h3>
+<p>固定表格布局与自动表格布局相比，允许浏览器更快地对表格进行布局。</p>
+<p>在固定表格布局中，水平布局仅取决于表格宽度、列宽度、表格边框宽度、单元格间距，而与单元格的内容无关。</p>
+<p>通过使用固定表格布局，用户代理在接收到第一行后就可以显示表格。</p>
+<h3>自动表格布局：</h3>
+<p>在自动表格布局中，列的宽度是由列单元格中没有折行的最宽的内容设定的。</p>
+<p>此算法有时会较慢，这是由于它需要在确定最终的布局之前访问表格中所有的内容。</p>
+<h3>说明</h3>
+<p>该属性指定了完成表布局时所用的布局算法。固定布局算法比较快，但是不太灵活，而自动算法比较慢，不过更能反映传统的 HTML 表。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">auto</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>yes</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS2</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.tableLayout=&quot;fixed&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+<p>设置表格布局算法：</p>
+<pre>
+table
+  {
+  <code>table-layout:fixed;</code>
+  }
+</pre>
+<p><a href="javascript:tiy.run('csse_table_table-layout.htm" >TIY</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有浏览器都支持 table-layout 属性。</p>
+<p class="note"><span>注释：</span>任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 &quot;inherit&quot;。</p>
+</div>
+
+<div>
+<h2>可能的值</h2>
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>automatic</td>
+<td>默认。列宽度由单元格内容设定。</td>
+</tr>
+
+<tr>
+<td>fixed</td>
+<td>列宽由表格宽度和列宽度设定。</td>
+</tr>
+
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 table-layout 属性的值。</td>
+</tr>
+</table>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="javascript:tiy.run('csse_table_table-layout.htm" >设置表格的布局</a></dt>
+<dd>本例演示如何设置表格的布局。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>CSS 教程：<a href="css_table.htm" title="CSS 表格">CSS 表格</a></p>
+<p>HTML DOM 参考手册：<a href="../htmldom/prop_style_tablelayout.htm" title="HTML DOM tableLayout 属性">tableLayout 属性</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

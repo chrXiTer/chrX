@@ -1,0 +1,76 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript charAt() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_string.htm"  title="JavaScript String 对象">JavaScript String 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>charAt() 方法可返回指定位置的字符。</p>
+
+<p>请注意，JavaScript 并没有一种有别于字符串类型的字符数据类型，所以返回的字符是长度为 1 的字符串。</p>
+
+<h3>语法</h3>
+
+<pre>stringObject.charAt(index)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>index</td>
+    <td>必需。表示字符串中某个位置的数字，即字符在字符串中的下标。</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>提示和注释</h2>
+
+<p class="note"><span>注释：</span>字符串中第一个字符的下标是 0。如果参数 index 不在 0 与 string.length 之间，该方法将返回一个空字符串。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在字符串 &quot;Hello world!&quot; 中，我们将返回位置 1 的字符：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var str=&quot;Hello world!&quot;
+document.write(str.charAt(1))
+
+&lt;/script&gt;
+</pre>
+
+<p>以上代码的输出是：</p>
+
+<pre>e</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_charat')" >charAt()</a></dt>
+<dd>如何使用 charAt() 从某个字符串取得具体的字符。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_string.htm"  title="JavaScript String 对象">JavaScript String 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

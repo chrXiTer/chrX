@@ -1,0 +1,91 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;source&gt; 标签</h1>
+
+<div>
+<h2>实例</h2>
+
+<p>拥有两份源文件的音频播放器。浏览器应该选择它所支持的文件（如果有的话）：</p>
+
+<pre>
+&lt;audio controls&gt;
+   &lt;source src=&quot;horse.ogg&quot; type=&quot;audio/ogg&quot;&gt;
+   &lt;source src=&quot;horse.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+ Your browser does not support the audio element.
+&lt;/audio&gt; 
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_source_src')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>&lt;source&gt; 标签为媒介元素（比如 &lt;video&gt; 和 &lt;audio&gt;）定义媒介资源。</p>
+
+<p>&lt;source&gt; 标签允许您规定可替换的视频/音频文件供浏览器根据它对媒体类型或者编解码器的支持进行选择。</p>
+</div>
+
+<div>
+<h2>HTML 4.01 与 HTML 5 之间的差异</h2>
+
+<p>&lt;source&gt; 标签是 HTML 5 中的新标签。</p>
+</div>
+
+<div>
+<h2>属性</h2>
+
+<p class="html5_new_note"><span>new</span> : HTML5 中的新属性。</p>
+
+<table class="dataintable"> 
+<tr>
+<th style="width:20%;">属性</th>
+<th style="width:20%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td class="html5_new"><a href="att_source_media.htm"  title="HTML &lt;source&gt; media 属性">media</a></td>
+<td><i>media query</i></td>
+<td>规定媒体资源的类型。</td>
+</tr>
+
+<tr>
+<td class="html5_new"><a href="att_source_src.htm"  title="HTML &lt;source&gt; src 属性">src</a></td>
+<td><i>url</i></td>
+<td>规定媒体文件的 URL。</td>
+</tr>
+
+<tr>
+<td class="html5_new"><a href="att_source_type.htm"  title="HTML &lt;source&gt; type 属性">type</a></td>
+<td><i>numeric value</i></td>
+<td>规定媒体资源的 MIME 类型。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>全局属性</h2>
+
+<p>&lt;source&gt; 标签支持 <a href="html_ref_standardattributes.htm" >HTML 中的全局属性</a>。</p>
+</div>
+
+<div>
+<h2>事件属性</h2>
+
+<p>&lt;source&gt; 标签支持 <a href="html_ref_eventattributes.htm" >HTML 中的事件属性</a>。</p>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>HTML DOM 参考手册：<a href="../jsref/dom_obj_source.htm"  title="HTML DOM Source 对象">Source 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

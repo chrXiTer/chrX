@@ -1,0 +1,112 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL CHECK 约束</h1>
+
+<div>
+<h2>SQL CHECK 约束</h2>
+
+<p>CHECK 约束用于限制列中的值的范围。</p>
+
+<p>如果对单个列定义 CHECK 约束，那么该列只允许特定的值。</p>
+
+<p>如果对一个表定义 CHECK 约束，那么此约束会在特定的列中对值进行限制。</p>
+</div>
+
+<div>
+<h2>SQL CHECK Constraint on CREATE TABLE</h2>
+
+<p>下面的 SQL 在 &quot;Persons&quot; 表创建时为 &quot;Id_P&quot; 列创建 CHECK 约束。CHECK 约束规定 &quot;Id_P&quot; 列必须只包含大于 0 的整数。</p>
+
+<h3>My SQL:</h3>
+
+<pre>
+CREATE TABLE Persons
+(
+Id_P int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255),
+<code>CHECK (Id_P&gt;0)</code>
+)
+</pre>
+
+<h3>SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+CREATE TABLE Persons
+(
+Id_P int NOT NULL <code>CHECK (Id_P&gt;0)</code>,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255)
+)
+</pre>
+
+<p>如果需要命名 CHECK 约束，以及为多个列定义 CHECK 约束，请使用下面的 SQL 语法：</p>
+
+<h3>MySQL / SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+CREATE TABLE Persons
+(
+Id_P int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255),
+<code>CONSTRAINT chk_Person CHECK (Id_P&gt;0 AND City='Sandnes')</code>
+)
+</pre>
+</div>
+
+<div>
+<h2>SQL CHECK Constraint on ALTER TABLE</h2>
+
+<p>如果在表已存在的情况下为 &quot;Id_P&quot; 列创建 CHECK 约束，请使用下面的 SQL：</p>
+
+<h3>MySQL / SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+ALTER TABLE Persons
+<code>ADD CHECK (Id_P&gt;0)</code>
+</pre>
+
+<p>如果需要命名 CHECK 约束，以及为多个列定义 CHECK 约束，请使用下面的 SQL 语法：</p>
+
+<h3>MySQL / SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+ALTER TABLE Persons
+<code>ADD CONSTRAINT chk_Person CHECK (Id_P&gt;0 AND City='Sandnes')</code>
+</pre>
+</div>
+
+<div>
+<h2>撤销 CHECK 约束</h2>
+
+<p>如需撤销 CHECK 约束，请使用下面的 SQL：</p>
+
+<h3>SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+ALTER TABLE Persons
+<code>DROP CONSTRAINT chk_Person</code>
+</pre>
+
+<h3>MySQL:</h3>
+
+<pre>
+ALTER TABLE Persons
+<code>DROP CHECK chk_Person</code>
+</pre>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

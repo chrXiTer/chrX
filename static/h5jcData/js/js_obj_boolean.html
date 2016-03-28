@@ -1,0 +1,45 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript Boolean（布尔）对象</h1>
+<p>Boolean（布尔）对象用于定义逻辑值（真：true 或者 假：false）。</p>
+<p>实例<a href="javascript:tiy.run('jsrf_boolean')" >检查布尔值</a></p>
+
+
+<h2>Boolean 对象</h2>
+<p>您可以将 Boolean 对象理解为一个产生逻辑值的对象包装器。</p>
+<p>Boolean（逻辑）对象用于将非逻辑值转换为逻辑值（true 或者 false）。</p>
+<h3>创建 Boolean 对象</h3>
+<p>使用关键词 new 来定义 Boolean 对象。下面的代码定义了一个名为 myBoolean 的逻辑对象：</p>
+<pre>var myBoolean=new Boolean()</pre>
+<p class="note"><span>注释：</span>如果逻辑对象无初始值或者其值为 0、-0、null、&quot;&quot;、false、undefined 或者 NaN，那么对象的值为 false。否则，其值为 true（即使当自变量为字符串 &quot;false&quot; 时）！</p>
+<p>下面的所有的代码行均会创建初始值为 false 的 Boolean 对象。</p>
+<pre>
+var myBoolean=new Boolean();
+var myBoolean=new Boolean(0);
+var myBoolean=new Boolean(null);
+var myBoolean=new Boolean(&quot;&quot;);
+var myBoolean=new Boolean(false);
+var myBoolean=new Boolean(NaN);
+</pre>
+<p class="tiy"><a href="javascript:tiy.run('jseg_obj_boolean_create_false')" >亲自试一试</a></p>
+<p>下面的所有的代码行均会创初始值为 true 的 Boolean 对象：</p>
+<pre>
+var myBoolean=new Boolean(1);
+var myBoolean=new Boolean(true);
+var myBoolean=new Boolean(&quot;true&quot;);
+var myBoolean=new Boolean(&quot;false&quot;);
+var myBoolean=new Boolean(&quot;Bill Gates&quot;);
+</pre>
+<p class="tiy"><a href="javascript:tiy.run('jseg_obj_boolean_create_true')" >试一试</a></p>
+
+<h2>相关页面</h2>
+<p>JavaScript 高级教程：<a href="pro_js_referencetypes.htm"  title="ECMAScript 引用类型">ECMAScript 引用类型</a></p>
+<p>JavaScript 参考手册：<a href="../jsref/jsref_obj_boolean.htm"  title="JavaScript Boolean 对象参考手册">Boolean 对象</a></p>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

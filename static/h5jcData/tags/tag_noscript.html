@@ -1,0 +1,86 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;noscript&gt; 标签</h1>
+
+<div>
+<h2>例子</h2>
+<h3>JavaScript</h3>
+<pre>
+&lt;body&gt;
+  ...
+  ...
+
+  &lt;script type=&quot;text/javascript&quot;&gt;
+    &lt;!--
+    document.write(&quot;Hello World!&quot;)
+    //--&gt;
+  &lt;/script&gt;
+  
+  <code>&lt;noscript&gt;Your browser does not support JavaScript!&lt;/noscript&gt;</code>
+  ...
+  ...
+&lt;/body&gt;
+</pre>
+
+<h3>VBScript</h3>
+<pre>
+&lt;body&gt;
+  ...
+  ...
+  &lt;script type=&quot;text/vbscript&quot;&gt;
+   &lt;!--
+   document.write(&quot;Hello World!&quot;)
+   '--&gt;
+  &lt;/script&gt;
+  
+  <code>&lt;noscript&gt;Your browser does not support VBScript!&lt;/noscript&gt;</code>
+  ...
+  ...
+&lt;/body&gt;
+</pre>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>noscript 元素用来定义在脚本未被执行时的替代内容（文本）。</p>
+
+<p>此标签可被用于可识别 &lt;script&gt; 标签但无法支持其中的脚本的浏览器。</p>
+</div>
+
+<div>
+<h2>HTML 与 XHTML 之间的差异</h2>
+
+<p>NONE</p>
+</div>
+
+<div>
+<h2>提示和注释：</h2>
+
+<p class="note"><span>注释：</span>如果浏览器支持脚本，那么它不会显示出 noscript 元素中的文本。</p>
+
+<p class="note"><span>注释：</span>无法识别 &lt;script&gt; 标签的浏览器会把标签的内容显示到页面上。为了避免浏览器这样做，您应当在注释标签中隐藏脚本。老式的（无法识别 &lt;script&gt; 标签的）浏览器会忽略注释，这样就不会把标签的内容写到页面上，而新式的浏览器则懂得执行这些脚本，即使它们被包围在注释标签中！</p>
+</div>
+
+<div>
+<h2>全局属性</h2>
+
+<p>&lt;noscript&gt; 标签支持 <a href="html_ref_standardattributes.htm" >HTML 中的全局属性</a>。</p>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('html_noscript')" >运行于不支持脚本的浏览器</a></dt>
+<dd>本例演示如何对付不支持脚本的浏览器。</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

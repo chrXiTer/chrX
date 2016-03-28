@@ -1,0 +1,88 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML5 canvas isPointInPath() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>绘制一个矩形，如果点 20,50 位于当前路径中：</p>
+
+<canvas id="myCanvas" class="canvas_example">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+var c=document.getElementById("myCanvas");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+	var ctx=c.getContext("2d");
+	ctx.rect(20,20,150,100);
+	if (ctx.isPointInPath(20,50))
+		{
+		ctx.stroke();
+		};
+	}
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+ctx.rect(20,20,150,100);
+if (<code>ctx.isPointInPath(20,50)</code>)
+   {
+   ctx.stroke();
+   };
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_ispointinpath')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>isPointInPath() 方法返回 true，如果指定的点位于当前路径中；否则返回 false。</p>
+
+<h3>JavaScript 语法：</h3>
+
+<pre>context.isPointInPath(<i>x</i>,<i>y</i>);</pre>
+
+<h3>参数值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">参数</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>x</i></td>
+<td>测试的 x 坐标</td>
+</tr>
+
+<tr>
+<td><i>y</i></td>
+<td>测试的 y 坐标</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,188 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript Math 对象</h1>
+
+<div id="intro">
+<h2>Math 对象</h2>
+
+<p>Math 对象用于执行数学任务。</p>
+
+<h3>使用 Math 的属性和方法的语法：</h3>
+
+<pre>
+var pi_value=Math.PI;
+var sqrt_value=Math.sqrt(15);
+</pre>
+
+<p class="note"><span>注释：</span>Math 对象并不像 Date 和 String 那样是对象的类，因此没有构造函数 Math()，像 Math.sin() 这样的函数只是函数，不是某个对象的方法。您无需创建它，通过把 Math 作为对象使用就可以调用其所有属性和方法。</p>
+</div>
+
+<div>
+<h2>Math 对象属性</h2>
+
+<table class="dataintable">
+  <tr>
+    <th style="width:25%">属性</th>
+    <th>描述</th>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_e.htm" >E</a></td>
+    <td>返回算术常量 e，即自然对数的底数（约等于2.718）。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_ln2.htm" >LN2</a></td>
+    <td>返回 2 的自然对数（约等于0.693）。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_ln10.htm" >LN10</a></td>
+    <td>返回 10 的自然对数（约等于2.302）。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_log2e.htm" >LOG2E</a></td>
+    <td>返回以 2 为底的 e 的对数（约等于 1.414）。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_log10e.htm" >LOG10E</a></td>
+    <td>返回以 10 为底的 e 的对数（约等于0.434）。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_pi.htm" >PI</a></td>
+    <td>返回圆周率（约等于3.14159）。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_sqrt1_2.htm" >SQRT1_2</a></td>
+    <td>返回返回 2 的平方根的倒数（约等于 0.707）。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_sqrt2.htm" >SQRT2</a></td>
+    <td>返回 2 的平方根（约等于 1.414）。</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>Math 对象方法</h2>
+
+<table class="dataintable">
+  <tr>
+    <th style="width:25%">方法</th>
+    <th>描述</th>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_abs.htm" >abs(x)</a></td>
+    <td>返回数的绝对值。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_acos.htm" >acos(x)</a></td>
+    <td>返回数的反余弦值。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_asin.htm" >asin(x)</a></td>
+    <td>返回数的反正弦值。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_atan.htm" >atan(x)</a></td>
+    <td>以介于 -PI/2 与 PI/2 弧度之间的数值来返回 x 的反正切值。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_atan2.htm" >atan2(y,x)</a></td>
+    <td>返回从 x 轴到点 (x,y) 的角度（介于 -PI/2 与 PI/2 弧度之间）。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_ceil.htm" >ceil(x)</a></td>
+    <td>对数进行上舍入。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_cos.htm" >cos(x)</a></td>
+    <td>返回数的余弦。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_exp.htm" >exp(x)</a></td>
+    <td>返回 e 的指数。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_floor.htm" >floor(x)</a></td>
+    <td>对数进行下舍入。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_log.htm" >log(x)</a></td>
+    <td>返回数的自然对数（底为e）。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_max.htm" >max(x,y)</a></td>
+    <td>返回 x 和 y 中的最高值。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_min.htm" >min(x,y)</a></td>
+    <td>返回 x 和 y 中的最低值。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_pow.htm" >pow(x,y)</a></td>
+    <td>返回 x 的 y 次幂。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_random.htm" >random()</a></td>
+    <td>返回 0 ~ 1 之间的随机数。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_round.htm" >round(x)</a></td>
+    <td>把数四舍五入为最接近的整数。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_sin.htm" >sin(x)</a></td>
+    <td>返回数的正弦。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_sqrt.htm" >sqrt(x)</a></td>
+    <td>返回数的平方根。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_tan.htm" >tan(x)</a></td>
+    <td>返回角的正切。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_tosource_math.htm" >toSource()</a></td>
+    <td>返回该对象的源代码。</td>
+  </tr>
+
+  <tr>
+    <td><a href="jsref_valueof_math.htm" >valueOf()</a></td>
+    <td>返回 Math 对象的原始值。</td>
+  </tr>
+</table>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

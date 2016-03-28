@@ -1,0 +1,106 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS content 属性</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>content 属性与 :before 及 :after 伪元素配合使用，来插入生成内容。</p>
+<h3>说明</h3>
+
+<p>该属性用于定义元素之前或之后放置的生成内容。默认地，这往往是行内内容，不过该内容创建的框类型可以用属性 display 控制。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">normal</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS2</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.content=&quot;url(beep.wav)&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>下面的例子在每个链接后插入括号中的 URL：</p>
+<pre>
+a:after
+  {
+  <code>content: &quot; (&quot; attr(href) &quot;)&quot;;</code>
+  }
+</pre>
+
+<p><a href="../tiy/t.asp-f=csse_gen_content.htm" >TIY</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有浏览器都支持 content 属性。</p>
+<p class="note"><span>注释：</span>如果已规定 !DOCTYPE，那么 Internet Explorer 8 （以及更高版本）支持 content 属性。</p>
+</div>
+
+<div>
+<h2>可能的值</h2>
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>none</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>normal</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td><i>content specifications</i></td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 content 属性的值。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>CSS 参考手册：<a href="pr_pseudo_before.htm" title="CSS :before 伪元素">CSS :before 伪元素</a></p>
+<p>CSS 参考手册：<a href="pr_pseudo_after.htm" title="CSS :after 伪元素">CSS :after 伪元素</a></p>
+<p>HTML DOM 参考手册：<a href="../htmldom/prop_style_content.htm" title="HTML DOM content 属性">content 属性</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

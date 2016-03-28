@@ -1,0 +1,239 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML DOM Attribute 对象</h1>
+
+<div>
+<h2>HTML DOM 节点</h2>
+
+<p>在 HTML DOM （文档对象模型）中，每个部分都是节点：</p>
+
+<ul>
+<li>文档本身是文档节点</li>
+<li>所有 HTML 元素是元素节点</li>
+<li>所有 HTML 属性是属性节点</li>
+<li>HTML 元素内的文本是文本节点</li>
+<li>注释是注释节点</li>
+</ul>
+</div>
+
+<div>
+<h2>Attr 对象</h2>
+
+<p>在 HTML DOM 中，<em>Attr</em> 对象表示 HTML 属性。</p>
+
+<p>HTML 属性始终属于 HTML 元素。</p>
+</div>
+
+<div>
+<h2>NamedNodeMap 对象</h2>
+
+<p>在 HTML DOM 中，<em>NamedNodeMap</em> 对象表示元素属性节点的无序集合。</p>
+
+<p>NamedNodeMap 中的节点可通过名称或索引（数字）来访问。</p>
+</div>
+
+<div>
+<h2>属性和方法</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:35%;">属性 / 方法</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><a href="prop_attr_isid.htm"  title="HTML DOM isId 属性">attr.isId</a></td>
+<td>如果属性是 id 类型，则返回 true，否则返回 false。</td>
+</tr>
+
+<tr>
+<td><a href="prop_attr_name.htm"  title="HTML DOM name 属性">attr.name</a></td>
+<td>返回属性的名称。</td>
+</tr>
+
+<tr>
+<td><a href="prop_attr_value.htm"  title="HTML DOM value 属性">attr.value</a></td>
+<td>设置或返回属性的值。</td>
+</tr>
+
+<tr>
+<td><a href="prop_attr_specified.htm"  title="HTML DOM specified 属性">attr.specified</a></td>
+<td>如果已指定属性，则返回 true，否则返回 false。</td>
+</tr>
+
+<tr>
+<td><a href="met_namednodemap_getnameditem.htm"  title="HTML DOM getNamedItem() 方法">nodemap.getNamedItem()</a></td>
+<td>从 NamedNodeMap 返回指定的属性节点。</td>
+</tr>
+
+<tr>
+<td><a href="met_namednodemap_item.htm"  title="HTML DOM item() 方法">nodemap.item()</a></td>
+<td>返回 NamedNodeMap 中位于指定下标的节点。</td>
+</tr>
+
+<tr>
+<td><a href="prop_namednodemap_length.htm"  title="HTML DOM length 属性">nodemap.length</a></td>
+<td>返回 NamedNodeMap 中的节点数。</td>
+</tr>
+
+<tr>
+<td><a href="met_namednodemap_removenameditem.htm"  title="HTML DOM removeNamedItem() 方法">nodemap.removeNamedItem()</a></td>
+<td>移除指定的属性节点。</td>
+</tr>
+
+<tr>
+<td><a href="met_namednodemap_setnameditem.htm"  title="HTML DOM setNamedItem() 方法">nodemap.setNamedItem()</a></td>
+<td>设置指定的属性节点（通过名称）。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>DOM 4 警告！</h2>
+
+<p>在 W3C DOM Core 中，Attr (attribute) 对象从 Node 对象继承所有属性和方法。</p>
+
+<p>在 DOM 4 中，Attr 对象不再从 Node 继承。</p>
+
+<p>为了保证未来的代码安全，您应该避免在属性对象上使用节点对象的属性和方法：</p>
+
+<table class="dataintable">
+<tr>
+<th style="width:35%;">属性 / 方法</th>
+<th>避免的理由</th>
+</tr>
+
+<tr>
+<td>attr.appendChild()</td>
+<td>属性没有子节点。</td>
+</tr>
+
+<tr>
+<td>attr.attributes</td>
+<td>属性没有属性。</td>
+</tr>
+
+<tr>
+<td>attr.baseURI</td>
+<td>使用 document.baseURI 代替。</td>
+</tr>
+
+<tr>
+<td>attr.childNodes</td>
+<td>属性没有子节点。</td>
+</tr>
+
+<tr>
+<td>attr.cloneNode()</td>
+<td>使用 attr.value 代替。</td>
+</tr>
+
+<tr>
+<td>attr.firstChild</td>
+<td>属性没有子节点。</td>
+</tr>
+
+<tr>
+<td>attr.hasAttributes()</td>
+<td>属性没有属性。</td>
+</tr>
+
+<tr>
+<td>attr.hasChildNodes</td>
+<td>属性没有子节点。</td>
+</tr>
+
+<tr>
+<td>attr.insertBefore()</td>
+<td>属性没有子节点。</td>
+</tr>
+
+<tr>
+<td>attr.isEqualNode()</td>
+<td>没有意义。</td>
+</tr>
+
+<tr>
+<td>attr.isSameNode()</td>
+<td>没有意义。</td>
+</tr>
+
+<tr>
+<td>attr.isSupported()</td>
+<td>始终为 true。</td>
+</tr>
+
+<tr>
+<td>attr.lastChild</td>
+<td>属性没有子节点。</td>
+</tr>
+
+<tr>
+<td>attr.nextSibling</td>
+<td>属性没有同级节点。</td>
+</tr>
+
+<tr>
+<td>attr.nodeName</td>
+<td>使用 attr.name 代替。</td>
+</tr>
+
+<tr>
+<td>attr.nodeType</td>
+<td>始终为 2 (ATTRIBUTE_NODE)。</td>
+</tr>
+
+<tr>
+<td>attr.nodeValue</td>
+<td>使用 attr.value 代替。</td>
+</tr>
+
+<tr>
+<td>attr.normalize()</td>
+<td>属性无法被正常化。</td>
+</tr>
+
+<tr>
+<td>attr.ownerDocument</td>
+<td>始终是您的 HTML 文档。</td>
+</tr>
+
+<tr>
+<td>attr.ownerElement</td>
+<td>这是您用来访问该属性的 HTML 元素。</td>
+</tr>
+
+<tr>
+<td>attr.parentNode</td>
+<td>这是您用来访问该属性的 HTML 元素。</td>
+</tr>
+
+<tr>
+<td>attr.previousSibling</td>
+<td>属性没有同级节点。</td>
+</tr>
+
+<tr>
+<td>attr.removeChild</td>
+<td>属性没有子节点。</td>
+</tr>
+
+<tr>
+<td>attr.replaceChild</td>
+<td>属性没有子节点。</td>
+</tr>
+
+<tr>
+<td>attr.textContent</td>
+<td>使用 attr.value 代替。</td>
+</tr>
+</table>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

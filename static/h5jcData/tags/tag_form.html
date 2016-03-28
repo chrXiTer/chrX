@@ -1,0 +1,209 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;form&gt; 标签</h1>
+
+<div>
+<h2>例子</h2>
+
+<pre>
+<code>&lt;form action=&quot;form_action.asp&quot; method=&quot;get&quot;&gt;</code>
+  &lt;p&gt;First name: &lt;input type=&quot;text&quot; name=&quot;fname&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;Last name: &lt;input type=&quot;text&quot; name=&quot;lname&quot; /&gt;&lt;/p&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+<code>&lt;/form&gt;</code>
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_form_submit')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>&lt;form&gt; 标签用于为用户输入创建 HTML 表单。</p>
+
+<p>表单能够包含 <a href="tag_input.htm"  title="HTML &lt;input&gt; 标签">input 元素</a>，比如文本字段、复选框、单选框、提交按钮等等。</p>
+
+<p>表单还可以包含 <a href="tag_menu.htm"  title="HTML &lt;menu&gt; 标签">menus</a>、<a href="tag_textarea.htm"  title="HTML &lt;textarea&gt; 标签">textarea</a>、<a href="tag_fieldset.htm"  title="HTML &lt;fieldset&gt; 标签">fieldset</a>、<a href="tag_legend.htm"  title="HTML &lt;legend&gt; 标签">legend</a> 和 <a href="tag_label.htm"  title="HTML &lt;label&gt; 标签">label 元素</a>。</p>
+
+<p>表单用于向服务器传输数据。</p>
+</div>
+
+<div>
+<h2>提示和注释</h2>
+
+<p class="note"><span>注释：</span>form 元素是块级元素，其前后会产生折行。</p>
+</div>
+
+<div>
+<h2>HTML 与 XHTML 之间的差异</h2>
+
+<p>NONE</p>
+</div>
+
+<div>
+<h2>属性</h2>
+
+<p class="html5_new_note"><span>new</span> : HTML5 中的新属性。</p>
+
+<table class="dataintable">
+  <tr>
+    <th>属性</th>
+    <th>值</th>
+    <th>描述</th>
+  </tr>
+
+  <tr>
+    <td>accept</td>
+    <td><i>MIME_type</i></td>
+    <td><span class="deprecated">HTML 5 中不支持。</span></td>
+  </tr>
+
+  <tr>
+    <td><a href="att_form_accept-charset.htm"  title="HTML5 &lt;form&gt; accept-charset 属性">accept-charset</a></td>
+    <td><i>charset_list</i></td>
+    <td>规定服务器可处理的表单数据字符集。</td>
+  </tr>
+
+  <tr>
+    <td><a href="att_form_action.htm"  title="HTML5 &lt;form&gt; action 属性">action</a></td>
+    <td><i>URL</i></td>
+    <td>规定当提交表单时向何处发送表单数据。</td>
+  </tr>
+
+  <tr>
+    <td class="html5_new"><a href="att_form_autocomplete.htm"  title="HTML5 &lt;form&gt; autocomplete 属性">autocomplete</a></td>
+    <td>
+      <ul>
+      <li>on</li>
+      <li>off</li>
+      </ul>
+    </td>
+    <td>规定是否启用表单的自动完成功能。</td>
+  </tr>
+
+  <tr>
+    <td><a href="att_form_enctype.htm"  title="HTML5 &lt;form&gt; enctype 属性">enctype</a></td>
+    <td>见说明</td>
+    <td>规定在发送表单数据之前如何对其进行编码。</td>
+  </tr>
+
+  <tr>
+    <td><a href="att_form_method.htm"  title="HTML5 &lt;form&gt; method 属性">method</a></td>
+    <td>
+      <ul>
+      <li>get</li>
+      <li>post</li>
+      </ul>
+    </td>
+    <td>规定用于发送 form-data 的 HTTP 方法。</td>
+  </tr>
+
+  <tr>
+    <td><a href="att_form_name.htm"  title="HTML5 &lt;form&gt; name 属性">name</a></td>
+    <td><i>form_name</i></td>
+    <td>规定表单的名称。</td>
+  </tr>
+
+  <tr>
+    <td class="html5_new"><a href="att_form_novalidate.htm"  title="HTML5 &lt;form&gt; novalidate 属性">novalidate</a></td>
+    <td>novalidate</td>
+    <td>如果使用该属性，则提交表单时不进行验证。</td>
+  </tr>
+
+  <tr>
+    <td><a href="att_form_target.htm"  title="HTML5 &lt;form&gt; target 属性">target</a></td>
+    <td>
+      <ul>
+      <li>_blank</li>
+      <li>_self</li>
+      <li>_parent</li>
+      <li>_top</li>
+      <li><i>framename</i></li>
+      </ul>
+    </td>
+    <td>规定在何处打开 action URL。</td>
+  </tr>
+</table>
+
+<h3>说明</h3>
+
+<p>enctype 属性可能的值：</p>
+
+<ul>
+<li>application/x-www-form-urlencoded</li>
+<li>multipart/form-data</li>
+<li>text/plain</li>
+</ul>
+
+</div>
+
+<div>
+<h2>全局属性</h2>
+
+<p>&lt;form&gt; 标签支持 <a href="html_ref_standardattributes.htm" >HTML 中的全局属性</a>。</p>
+</div>
+
+<div>
+<h2>事件属性</h2>
+
+<p>&lt;form&gt; 标签支持 <a href="html_ref_eventattributes.htm" >HTML 中的事件属性</a>。</p>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('html_inputfields')" >文本域(Text fields)</a></dt>
+<dd>本例演示如何在HTML页面创建文本域。用户可以在文本域写入文本。</dd>
+
+<dt><a href="javascript:tiy.run('html_passwordfields')" >密码域</a></dt>
+<dd>本例演示如何创建HTML的密码域。</dd>
+
+<dt><a href="javascript:tiy.run('html_checkboxes')" >复选框</a></dt>
+<dd>本例演示如何在HTML页中创建文本框。用户可以选中或取消选取复选框。</dd>
+
+<dt><a href="javascript:tiy.run('html_radiobuttons')" >单选按钮</a></dt>
+<dd>本例演示如何在HTML中创建单选按钮。</dd>
+
+<dt><a href="javascript:tiy.run('html_dropdownbox')" >简单的下拉列表</a></dt>
+<dd>本例演示如何在HTML页面中创建简单的下拉列表框。下拉列表框是一个可选列表。</dd>
+
+<dt><a href="javascript:tiy.run('html_dropdownbox2')" >另一个下拉列表</a></dt>
+<dd>本例演示如何创建一个简单的带有预选值的下拉列表。（注：预选值指预先指定的首选项。）</dd>
+
+<dt><a href="javascript:tiy.run('html_textarea')" >文本域(Textarea)</a></dt>
+<dd>本例演示如何创建一个文本域（多行文本输入控制）。用户可以在文本域中写入文本。在文本域中，可写入的字符字数不受限制。</dd>
+
+<dt><a href="javascript:tiy.run('html_button')" >创建按钮</a></dt>
+<dd>本例演示如何创建按钮。你可以对按钮上的文字进行自定义。</dd>
+
+<dt><a href="javascript:tiy.run('html_fieldset')" >围绕数据的Fieldset</a></dt>
+<dd>本例演示如何在数据周围绘制一个带标题的框。</dd>
+
+<dt><a href="javascript:tiy.run('html_form_submit')" >带有输入框和确认按钮的表单</a></dt>
+<dd>本例演示如何向页面添加表单。此表单包含两个输入框和一个确认按钮。</dd>
+
+<dt><a href="javascript:tiy.run('html_form_checkbox')" >带有复选框的表单</a></dt>
+<dd>此表单包含两个复选框和一个确认按钮。</dd>
+
+<dt><a href="javascript:tiy.run('html_form_radio')" >带有单选按钮的表单</a></dt>
+<dd>此表单包含两个单选框和一个确认按钮。</dd>
+
+<dt><a href="javascript:tiy.run('html_form_mail')" >从表单发送电子邮件</a></dt>
+<dd>此例演示如何从表单发送电子邮件。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>HTML DOM 参考手册：<a href="../jsref/dom_obj_form.htm"  title="HTML DOM Form 对象">Form 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

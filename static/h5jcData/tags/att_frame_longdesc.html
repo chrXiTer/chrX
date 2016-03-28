@@ -1,0 +1,71 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;frame&gt; 标签的 longdesc 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_frame.htm" >HTML &lt;frame&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>longdesc 属性指向了带有框架内容长描述的页面：</p>
+
+<pre>
+&lt;html&gt;
+
+&lt;frameset cols=&quot;50%,50%&quot;&gt;
+&lt;frame src=&quot;frame_a.htm&quot; <code>longdesc=&quot;w3school.txt&quot;</code> /&gt;
+&lt;frame src=&quot;frame_b.htm&quot; /&gt;
+&lt;/frameset&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_frame_longdesc')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>longdesc 属性规定指向一个页面的 URL，该页面包含有关框架内容的长描述。</p>
+<p>由于浏览器对 longdesc 属性的支持性非常差，没有必要使用该属性。</p>
+<p class="tip"><span>提示：</span>如需为某个 frame 提供长描述（如果有必要的话），只要简单地创建一个指向描述页面的链接即可（该链接对任何人都是可见的）。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;frame longdesc=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td><i>URL</i></td>
+    <td>
+	<p>规定框架的内容描述页面的 URL。</p>
+	<p>可能的值：</p>
+		<ul class="listintable">
+			<li>绝对 URL - 指向其他站点（比如 src=&quot;www.example.com/description.txt&quot;）</li>
+			<li>相对 URL - 指向站点内的文件（比如 src=&quot;description.txt&quot;）</li>
+		</ul>
+	</td>
+  </tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_frame.htm" >HTML &lt;frame&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

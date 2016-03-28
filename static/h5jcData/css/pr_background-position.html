@@ -1,0 +1,137 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS background-position 属性</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>background-position 属性设置背景图像的起始位置。</p>
+<p>这个属性设置背景原图像（由 <a href="pr_background-image.htm" title="CSS background-image 属性">background-image</a> 定义）的位置，背景图像如果要重复，将从这一点开始。</p>
+<p class="tip"><span>提示：</span>您需要把 background-attachment 属性设置为 &quot;fixed&quot;，才能保证该属性在 Firefox 和 Opera 中正常工作。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">0% 0%</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS1</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.backgroundPosition=&quot;center&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>如何定位背景图像：</p>
+<pre>
+body
+{ 
+background-image:url('bgimage.gif');
+background-repeat:no-repeat;
+background-attachment:fixed;
+<code>background-position:center;</code>
+}
+</pre>
+
+<p><a href="../tiy/t.asp-f=csse_background-position.htm" >TIY</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有浏览器都支持 background-position 属性。</p>
+<p class="note"><span>注释：</span>任何版本的 Internet Explorer （包括 IE8）都不支持属性值 &quot;inherit&quot;。</p>
+</div>
+
+<div>
+<h2>可能的值</h2>
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>
+<ul>
+<li>top left</li>
+<li>top center</li>
+<li>top right</li>
+<li>center left</li>
+<li>center center</li>
+<li>center right</li>
+<li>bottom left</li>
+<li>bottom center</li>
+<li>bottom right</li>
+</ul>
+</td>
+<td>
+<p>如果您仅规定了一个关键词，那么第二个值将是&quot;center&quot;。</p>
+<p>默认值：0% 0%。</p>
+</td>
+</tr>
+
+<tr>
+<td>x% y%</td>
+<td>
+<p>第一个值是水平位置，第二个值是垂直位置。</p>
+<p>左上角是 0% 0%。右下角是 100% 100%。</p>
+<p>如果您仅规定了一个值，另一个值将是 50%。</p>
+</td>
+</tr>
+
+<tr>
+<td>xpos ypos</td>
+<td>
+<p>第一个值是水平位置，第二个值是垂直位置。</p>
+<p>左上角是 0 0。单位是像素 (0px 0px) 或任何其他的 CSS 单位。</p>
+<p>如果您仅规定了一个值，另一个值将是50%。</p>
+<p>您可以混合使用 % 和 position 值。</p>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="../tiy/t.asp-f=csse_background-position.htm" >如何放置背景图像</a></dt>
+<dd>本例演示如何在页面上放置背景图像。</dd>
+<dt><a href="../tiy/t.asp-f=csse_background-position_percent.htm" >如何使用%来定位背景图像</a></dt>
+<dd>本例演示如何使用百分比来在页面上定位背景图像。</dd>
+<dt><a href="../tiy/t.asp-f=csse_background-position_pixel.htm" >如何使用像素来定位背景图像</a></dt>
+<dd>本例演示如何使用像素来在页面上定位背景图像。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>CSS 教程：<a href="css_background.htm" title="CSS 背景">CSS 背景</a></p>
+<p>CSS 参考手册：<a href="pr_background-image.htm" title="CSS background-image 属性">background-image 属性</a></p>
+<p>HTML DOM 参考手册：<a href="../htmldom/prop_style_backgroundposition.htm" title="HTML DOM backgroundPosition 属性">backgroundPosition 属性</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>

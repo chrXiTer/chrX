@@ -1,0 +1,196 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;object&gt; 标签</h1>
+
+<div>
+<h2>实例</h2>
+
+<p>向 HTML 代码添加一个对象：</p>
+
+<pre>
+<code>&lt;object classid=&quot;clsid:F08DF954-8592-11D1-B16A-00C0F0283628&quot; id=&quot;Slider1&quot; 
+width=&quot;100&quot; height=&quot;50&quot;&gt;</code>
+  &lt;param name=&quot;BorderStyle&quot; value=&quot;1&quot; /&gt;
+  &lt;param name=&quot;MousePointer&quot; value=&quot;0&quot; /&gt;
+  &lt;param name=&quot;Enabled&quot; value=&quot;1&quot; /&gt;
+  &lt;param name=&quot;Min&quot; value=&quot;0&quot; /&gt;
+  &lt;param name=&quot;Max&quot; value=&quot;10&quot; /&gt;
+<code>&lt;/object&gt;</code>
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_object')" >亲自试一试</a></p>
+</div>
+<div>
+<h2>定义和用法</h2>
+
+<p>定义一个嵌入的对象。请使用此元素向您的 XHTML 页面添加多媒体。此元素允许您规定插入 HTML 文档中的对象的数据和参数，以及可用来显示和操作数据的代码。</p>
+
+<p>&lt;object&gt; 标签用于包含对象，比如图像、音频、视频、Java applets、ActiveX、PDF 以及 Flash。</p>
+
+<p>object 的初衷是取代 img 和 applet 元素。不过由于漏洞以及缺乏浏览器支持，这一点并未实现。</p>
+
+<p>浏览器的对象支持有赖于对象类型。不幸的是，主流浏览器都使用不同的代码来加载相同的对象类型。</p>
+
+<p>而幸运的是，object 对象提供了解决方案。如果未显示 object 元素，就会执行位于 &lt;object&gt; 和 &lt;/object&gt; 之间的代码。通过这种方式，我们能够嵌套多个 object 元素（每个对应一个浏览器）。</p>
+</div>
+
+<div>
+<h2>HTML 与 XHTML 之间的差异</h2>
+
+<p>NONE</p>
+</div>
+
+<div>
+<h2>提示和注释：</h2>
+
+<p class="note"><span>注释：</span><a href="tag_param.htm"  title="HTML &lt;param&gt; 标签">&lt;param&gt; 标签</a>定义用于对象的 run-time 设置。</p>
+
+<p class="note"><span>注释：</span>不要对图像使用 &lt;object&gt; 标签，请使用 <a href="tag_img.htm"  title="HTML &lt;img&gt; 标签">&lt;img&gt; 标签</a>代替。</p>
+</div>
+
+<div>
+<h2>可选的属性</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:20%;">属性</th>
+<th style="width:20%;">值</th>
+<th style="width:60%;">描述</th>
+</tr>
+
+<tr>
+<td>align</td>
+<td>
+<ul>
+<li>left</li>
+<li>right</li>
+<li>top</li>
+<li>bottom</li>
+</ul>
+</td>
+<td>定义围绕该对象的文本对齐方式。</td>
+</tr>
+
+<tr>
+<td><a href="tag_object_prop.htm#archive" >archive</a></td>
+<td><i>URL</i></td>
+<td>由空格分隔的指向档案文件的 URL 列表。这些档案文件包含了与对象相关的资源。</td>
+</tr>
+
+<tr>
+<td>border</td>
+<td><i>pixels</i></td>
+<td>定义对象周围的边框。</td>
+</tr>
+
+<tr>
+<td><a href="tag_object_prop.htm#classid" >classid</a></td>
+<td><i>class ID</i></td>
+<td>定义嵌入 Windows Registry 中或某个 URL 中的类的 ID 值，此属性可用来指定浏览器中包含的对象的位置，通常是一个 Java 类。</td>
+</tr>
+
+<tr>
+<td><a href="tag_object_prop.htm#codebase" >codebase</a></td>
+<td><i>URL</i></td>
+<td>定义在何处可找到对象所需的代码，提供一个基准 URL。</td>
+</tr>
+
+<tr>
+<td><a href="tag_object_prop.htm#codetype" >codetype</a></td>
+<td><i>MIME type</i></td>
+<td>通过 classid 属性所引用的代码的 MIME 类型。</td>
+</tr>
+
+<tr>
+<td><a href="tag_object_prop.htm#data" >data</a></td>
+<td><i>URL</i></td>
+<td>定义引用对象数据的 URL。如果有需要对象处理的数据文件,要用 data 属性来指定这些数据文件。</td>
+</tr>
+
+<tr>
+<td><a href="tag_object_prop.htm#declare" >declare</a></td>
+<td>declare</td>
+<td>可定义此对象仅可被声明，但不能被创建或例示，直到此对象得到应用为止。</td>
+</tr>
+
+<tr>
+<td class="html5_new"><a href="att_object_form.htm"  title="HTML5 &lt;object&gt; form 属性">form</a></td>
+<td><i>form_id</i></td>
+<td>规定对象所属的一个或多个表单。</td>
+</tr>
+
+<tr>
+<td>height</td>
+<td><i>pixels</i></td>
+<td>定义对象的高度。</td>
+</tr>
+
+<tr>
+<td>hspace</td>
+<td><i>pixels</i></td>
+<td>定义对象周围水平方向的空白。</td>
+</tr>
+
+<tr>
+<td>name</td>
+<td><i>unique_name</i></td>
+<td>为对象定义唯一的名称（以便在脚本中使用）。</td>
+</tr>
+
+<tr>
+<td>standby</td>
+<td><i>text</i></td>
+<td>定义当对象正在加载时所显示的文本。</td>
+</tr>
+
+<tr>
+<td>type</td>
+<td><i>MIME_type</i></td>
+<td>定义被规定在 data 属性中指定的文件中出现的数据的 MIME 类型。</td>
+</tr>
+
+<tr>
+<td>usemap</td>
+<td><i>URL</i></td>
+<td>规定与对象一同使用的客户端图像映射的 URL。</td>
+</tr>
+
+<tr>
+<td>vspace</td>
+<td><i>pixels</i></td>
+<td>定义对象的垂直方向的空白。</td>
+</tr>
+
+<tr>
+<td>width</td>
+<td><i>pixels</i></td>
+<td>定义对象的宽度。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>全局属性</h2>
+
+<p>&lt;object&gt; 标签支持 <a href="html_ref_standardattributes.htm" >HTML 中的全局属性</a>。</p>
+</div>
+
+<div>
+<h2>事件属性</h2>
+
+<p>&lt;object&gt; 标签支持 <a href="html_ref_eventattributes.htm" >HTML 中的事件属性</a>。</p>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>HTML DOM 参考手册：<a href="../jsref/dom_obj_object.htm"  title="HTML DOM Object 对象">Object 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

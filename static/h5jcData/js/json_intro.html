@@ -1,0 +1,93 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JSON 简介</h1>
+
+<div>
+<h2>亲自试一试 - 实例</h2>
+
+<p>通过我们的编辑器，您可以在线编辑 JavaScript 代码，然后通过点击一个按钮来查看结果：</p>
+
+<pre>
+&lt;html&gt;
+&lt;body&gt;
+&lt;h2&gt;在 JavaScript 中创建 JSON 对象&lt;/h2&gt;
+
+&lt;p&gt;
+Name: &lt;span id=&quot;jname&quot;&gt;&lt;/span&gt;&lt;br /&gt;
+Age: &lt;span id=&quot;jage&quot;&gt;&lt;/span&gt;&lt;br /&gt;
+Address: &lt;span id=&quot;jstreet&quot;&gt;&lt;/span&gt;&lt;br /&gt;
+Phone: &lt;span id=&quot;jphone&quot;&gt;&lt;/span&gt;&lt;br /&gt;
+&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+<code>var JSONObject= {
+&quot;name&quot;:&quot;Bill Gates&quot;,
+&quot;street&quot;:&quot;Fifth Avenue New York 666&quot;,
+&quot;age&quot;:56,
+&quot;phone&quot;:&quot;555 1234567&quot;};</code>
+document.getElementById(&quot;jname&quot;).innerHTML=<span class="marked">JSONObject.name</span>
+document.getElementById(&quot;jage&quot;).innerHTML=<span class="marked">JSONObject.age</span>
+document.getElementById(&quot;jstreet&quot;).innerHTML=<span class="marked">JSONObject.street</span>
+document.getElementById(&quot;jphone&quot;).innerHTML=<span class="marked">JSONObject.phone</span>
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('json_create')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>类似 XML</h2>
+
+<ul>
+<li>JSON 是纯文本</li>
+<li>JSON 具有“自我描述性”（人类可读）</li>
+<li>JSON 具有层级结构（值中存在值）</li>
+<li>JSON 可通过 JavaScript 进行解析</li>
+<li>JSON 数据可使用 AJAX 进行传输</li>
+</ul>
+</div>
+
+<div>
+<h2>相比 XML 的不同之处</h2>
+
+<ul>
+<li>没有结束标签</li>
+<li>更短</li>
+<li>读写的速度更快</li>
+<li>能够使用内建的 JavaScript eval() 方法进行解析</li>
+<li>使用数组</li>
+<li>不使用保留字</li>
+</ul>
+</div>
+
+<div>
+<h2>为什么使用 JSON？</h2>
+
+<p>对于 AJAX 应用程序来说，JSON 比 XML 更快更易使用：</p>
+
+<h4>使用 XML</h4>
+
+<ul>
+<li>读取 XML 文档</li>
+<li>使用 XML DOM 来循环遍历文档</li>
+<li>读取值并存储在变量中</li>
+</ul>
+
+<h4>使用 JSON</h4>
+
+<ul>
+<li>读取 JSON 字符串</li>
+<li>用 eval() 处理 JSON 字符串</li>
+</ul>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

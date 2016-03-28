@@ -1,0 +1,84 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript RegExp 对象</h1>
+
+<p>使用 RegExp 对象可以在字符串中利用正则表达式匹配、查询、处理文本。</p>
+
+
+<p>RegExp 对象的名称是正则表达式（reguler express）的缩写。</p>
+<p>当您检索某个文本时，可以使用一种模式来描述要检索的内容。正则表达式是其中常见、高效、应该广泛的一类模式</p>
+<p>简单的模式可以是一个单独的字符。更复杂的模式包括了更多的字符，并可用于解析、格式检查、替换等等。</p>
+
+<h2>定义 RegExp</h2>
+<p>RegExp 对象用于存储检索模式。</p>
+<p>通过 new 关键词来定义 RegExp 对象。以下代码定义了名为 patt1 的 RegExp 对象，其模式是 &quot;e&quot;：</p>
+<pre>var patt1=new RegExp(&quot;e&quot;);</pre>
+<p>当您使用该 RegExp 对象在一个字符串中检索时，将寻找的是字符 &quot;e&quot;。</p>
+
+<h2>RegExp 对象的方法</h2>
+<p>RegExp 对象有 3 个方法：test()、exec() 以及 compile()。</p>
+
+<h2>test()</h2>
+<p>test() 方法检索字符串中的指定值。返回值是 true 或 false。</p>
+<h3>例子：</h3>
+
+var patt1=new RegExp(&quot;e&quot;);
+document.write(patt1.test(&quot;The best things in life are free&quot;)); 
+<p>由于该字符串中存在字母 &quot;e&quot;，以上代码的输出将是：</p>
+<pre>true</pre>
+<p class="tiy"><a href="javascript:tiy.run('jseg_regexp_test')" >TIY</a></p>
+
+<h2>exec()</h2>
+<p>exec() 方法检索字符串中的指定值。返回值是被找到的值。如果没有发现匹配，则返回 null。</p>
+<h3>例子 1：</h3>
+<pre>
+var patt1=new RegExp(&quot;e&quot;);
+document.write(patt1.exec(&quot;The best things in life are free&quot;)); 
+</pre>
+<p>由于该字符串中存在字母 &quot;e&quot;，以上代码的输出将是：</p>
+<pre>e</pre>
+<p class="tiy"><a href="javascript:tiy.run('jseg_regexp_exec')" >TIY</a></p>
+<h3>例子 2：</h3>
+<p>您可以向 RegExp 对象添加第二个参数，以设定检索。例如，如果需要找到所有某个字符的所有存在，则可以使用 &quot;g&quot; 参数 (&quot;global&quot;)。</p>
+<p>如需关于如何修改搜索模式的完整信息，请访问我们的 <a href="../jsref/jsref_obj_regexp.htm"  title="JavaScript RegExp 对象参考手册">RegExp 对象参考手册</a>。</p>
+<p>在使用 &quot;g&quot; 参数时，exec() 的工作原理如下：</p>
+<ul>
+<li>找到第一个 &quot;e&quot;，并存储其位置</li>
+<li>如果再次运行 exec()，则从存储的位置开始检索，并找到下一个 &quot;e&quot;，并存储其位置</li>
+</ul>
+<pre>
+var patt1=new RegExp(&quot;e&quot;,&quot;g&quot;);
+do
+{
+result=patt1.exec(&quot;The best things in life are free&quot;);
+document.write(result);
+}
+while (result!=null) 
+</pre>
+<p>由于这个字符串中 6 个 &quot;e&quot; 字母，代码的输出将是：</p>
+<pre>eeeeeenull</pre>
+<p class="tiy"><a href="javascript:tiy.run('jseg_regexp_exec_2')" >TIY</a></p>
+
+<h2>compile()</h2>
+<p>compile() 方法用于改变 RegExp。</p>
+<p>compile() 既可以改变检索模式，也可以添加或删除第二个参数。</p>
+<h3>例子：</h3>
+<pre>var patt1=new RegExp(&quot;e&quot;);
+document.write(patt1.test(&quot;The best things in life are free&quot;));
+patt1.compile(&quot;d&quot;);
+document.write(patt1.test(&quot;The best things in life are free&quot;));</pre>
+<p>由于字符串中存在 &quot;e&quot;，而没有 &quot;d&quot;，以上代码的输出是：</p>
+<pre>truefalse</pre>
+<p class="tiy"><a href="javascript:tiy.run('jseg_regexp_compile')" >TIY</a></p>
+
+<h2>完整的 RegExp 对象参考手册</h2>
+<p>如需可与 RegExp 对象一同使用所有属性和方法的完整信息，请访问我们的 <a href="../jsref/jsref_obj_regexp.htm"  title="JavaScript RegExp 对象参考手册">RegExp 对象参考手册</a>。</p>
+<p>这个参考手册包含了对 RegExp 对象中每个属性和方法的详细描述，以及使用的例子。</p>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

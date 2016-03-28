@@ -1,0 +1,346 @@
+﻿<iframe id="tiyiframe_jsrf_array">
+<textarea name="c">
+<html>
+<body>
+
+<script type="text/javascript">
+var mycars = new Array()
+mycars[0] = "Saab"
+mycars[1] = "Volvo"
+mycars[2] = "BMW"
+
+for (i=0;i<mycars.length;i++)
+{
+document.write(mycars[i] + "<br />")
+}
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_jsrf_array_for_in">
+<textarea name="c">
+<html>
+<body>
+<script type="text/javascript">
+var x
+var mycars = new Array()
+mycars[0] = "Saab"
+mycars[1] = "Volvo"
+mycars[2] = "BMW"
+
+for (x in mycars)
+{
+document.write(mycars[x] + "<br />")
+}
+</script>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_jsrf_boolean">
+<textarea name="c">
+<html>
+<body>
+
+<script type="text/javascript">
+var b1=new Boolean( 0)
+var b2=new Boolean(1)
+var b3=new Boolean("")
+var b4=new Boolean(null)
+var b5=new Boolean(NaN)
+var b6=new Boolean("false")
+
+document.write("0 是逻辑的 "+ b1 +"<br />")
+document.write("1 是逻辑的 "+ b2 +"<br />")
+document.write("空字符串是逻辑的 "+ b3 + "<br />")
+document.write("null 是逻辑的 "+ b4+ "<br />")
+document.write("NaN 是逻辑的 "+ b5 +"<br />")
+document.write("字符串 'false' 是逻辑的 "+ b6 +"<br />")
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_jsrf_date">
+<textarea name="c">
+<html>
+<body>
+
+<script type="text/javascript">
+
+document.write(Date())
+
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_jsrf_date_date_weekday">
+<textarea name="c">
+<html>
+<body>
+
+<script type="text/javascript">
+
+var d=new Date()
+var weekday=new Array(7)
+weekday[0]="星期日"
+weekday[1]="星期一"
+weekday[2]="星期二"
+weekday[3]="星期三"
+weekday[4]="星期四"
+weekday[5]="星期五"
+weekday[6]="星期六"
+
+document.write("今天是" + weekday[d.getDay()])
+
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_jsrf_date_setfullyear2">
+<textarea name="c">
+<html>
+<body>
+
+<script type="text/javascript">
+
+var d = new Date()
+d.setFullYear(1992,10,3)
+document.write(d)
+
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_jsrf_date_timing_clock">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function startTime()
+{
+var today=new Date()
+var h=today.getHours()
+var m=today.getMinutes()
+var s=today.getSeconds()
+// add a zero in front of numbers<10
+m=checkTime(m)
+s=checkTime(s)
+document.getElementById('txt').innerHTML=h+":"+m+":"+s
+t=setTimeout('startTime()',500)
+}
+
+function checkTime(i)
+{
+if (i<10) 
+  {i="0" + i}
+  return i
+}
+</script>
+</head>
+
+<body onload="startTime()">
+<div id="txt"></div>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_jsrf_date_toutcstring">
+<textarea name="c">
+<html>
+<body>
+
+<script type="text/javascript">
+
+var d = new Date()
+document.write (d.toUTCString())
+
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_jsrf_math_max">
+<textarea name="c">
+<html>
+<body>
+
+<script type="text/javascript">
+
+document.write(Math.max(5,7) + "<br />")
+document.write(Math.max(-3,5) + "<br />")
+document.write(Math.max(-3,-5) + "<br />")
+document.write(Math.max(7.25,7.30))
+
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_jsrf_math_min">
+<textarea name="c">
+<html>
+<body>
+
+<script type="text/javascript">
+
+document.write(Math.min(5,7) + "<br />")
+document.write(Math.min(-3,5) + "<br />")
+document.write(Math.min(-3,-5) + "<br />")
+document.write(Math.min(7.25,7.30))
+
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_jsrf_math_random">
+<textarea name="c">
+<html>
+<body>
+
+<script type="text/javascript">
+
+document.write(Math.random())
+
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_jsrf_math_round">
+<textarea name="c">
+<html>
+<body>
+
+<script type="text/javascript">
+
+document.write(Math.round(0.60) + "<br />")
+document.write(Math.round(0.50) + "<br />")
+document.write(Math.round(0.49) + "<br />")
+document.write(Math.round(-4.40) + "<br />")
+document.write(Math.round(-4.60))
+
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_jsrf_string_indexof">
+<textarea name="c">
+<html>
+<body>
+
+<script type="text/javascript">
+
+var str="Hello world!"
+document.write(str.indexOf("Hello") + "<br />")
+document.write(str.indexOf("World") + "<br />")
+document.write(str.indexOf("world"))
+
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_jsrf_string_length">
+<textarea name="c">
+<html>
+<body>
+
+<script type="text/javascript">
+
+var txt="Hello World!"
+document.write(txt.length)
+
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_jsrf_string_match">
+<textarea name="c">
+<html>
+<body>
+
+<script type="text/javascript">
+
+var str="Hello world!"
+document.write(str.match("world") + "<br />")
+document.write(str.match("World") + "<br />")
+document.write(str.match("worlld") + "<br />")
+document.write(str.match("world!"))
+
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_jsrf_string_style">
+<textarea name="c">
+<html>
+<body>
+
+<script type="text/javascript">
+
+var txt="Hello World!"
+
+document.write("<p>Big: " + txt.big() + "</p>")
+document.write("<p>Small: " + txt.small() + "</p>")
+
+document.write("<p>Bold: " + txt.bold() + "</p>")
+document.write("<p>Italic: " + txt.italics() + "</p>")
+
+document.write("<p>Blink: " + txt.blink() + " (does not work in IE)</p>")
+document.write("<p>Fixed: " + txt.fixed() + "</p>")
+document.write("<p>Strike: " + txt.strike() + "</p>")
+
+document.write("<p>Fontcolor: " + txt.fontcolor("Red") + "</p>")
+document.write("<p>Fontsize: " + txt.fontsize(16) + "</p>")
+
+document.write("<p>Lowercase: " + txt.toLowerCase() + "</p>")
+document.write("<p>Uppercase: " + txt.toUpperCase() + "</p>")
+
+document.write("<p>Subscript: " + txt.sub() + "</p>")
+document.write("<p>Superscript: " + txt.sup() + "</p>")
+
+document.write("<p>Link: " + txt.link("/chrX/nofile/123") + "</p>")
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+

@@ -1,0 +1,97 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript HTML DOM 元素（节点）</h1>
+<p><strong>添加和删除节点（HTML 元素）。</strong></p>
+
+<h2>创建新的 HTML 元素</h2>
+<p>如需向 HTML DOM 添加新元素，您必须首先创建该元素（元素节点），然后向一个已存在的元素追加该元素。</p>
+
+<h3>实例</h3>
+<pre>
+&lt;div id=&quot;div1&quot;&gt;
+&lt;p id=&quot;p1&quot;&gt;这是一个段落&lt;/p&gt;
+&lt;p id=&quot;p2&quot;&gt;这是另一个段落&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var para=document.createElement(&quot;p&quot;);
+var node=document.createTextNode(&quot;这是新段落。&quot;);
+para.appendChild(node);
+
+var element=document.getElementById(&quot;div1&quot;);
+element.appendChild(para);
+&lt;/script&gt;
+</pre>
+<p class="tiy"><a href="javascript:tiy.run('js_dom_elementcreate')" >亲自试一试</a></p>
+<p>例子解释：</p>
+<p>这段代码创建新的 &lt;p&gt; 元素：</p>
+<pre>var para=document.createElement(&quot;p&quot;);</pre>
+<p>如需向 &lt;p&gt; 元素添加文本，您必须首先创建文本节点。这段代码创建了一个文本节点：</p>
+<pre>var node=document.createTextNode(&quot;这是新段落。&quot;);</pre>
+<p>然后您必须向 &lt;p&gt; 元素追加这个文本节点：</p>
+<pre>para.appendChild(node);</pre>
+<p>最后您必须向一个已有的元素追加这个新元素。</p>
+<p>这段代码找到一个已有的元素：</p>
+<pre>var element=document.getElementById(&quot;div1&quot;);</pre>
+<p>这段代码向这个已有的元素追加新元素：</p>
+<pre>element.appendChild(para);</pre>
+
+<h2>删除已有的 HTML 元素</h2>
+<p>如需删除 HTML 元素，您必须首先获得该元素的父元素：</p>
+
+<h3>实例</h3>
+<pre>
+&lt;div id=&quot;div1&quot;&gt;
+&lt;p id=&quot;p1&quot;&gt;这是一个段落。&lt;/p&gt;
+&lt;p id=&quot;p2&quot;&gt;这是另一个段落。&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var parent=document.getElementById(&quot;div1&quot;);
+var child=document.getElementById(&quot;p1&quot;);
+parent.removeChild(child);
+&lt;/script&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('js_dom_elementremove')" >亲自试一试</a></p>
+<p>例子解释：</p>
+<p>这个 HTML 文档含有拥有两个子节点（两个 &lt;p&gt; 元素）的 &lt;div&gt; 元素：</p>
+<pre>
+&lt;div id=&quot;div1&quot;&gt;
+&lt;p id=&quot;p1&quot;&gt;这是一个段落。&lt;/p&gt;
+&lt;p id=&quot;p2&quot;&gt;这是另一个段落。&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+<p>找到 id=&quot;div1&quot; 的元素：</p>
+<pre>var parent=document.getElementById(&quot;div1&quot;);</pre>
+<p>找到 id=&quot;p1&quot; 的 &lt;p&gt; 元素：</p>
+<pre>var child=document.getElementById(&quot;p1&quot;);</pre>
+<p>从父元素中删除子元素：</p>
+<pre>parent.removeChild(child);</pre>
+<p class="tip"><span>提示：</span>如果能够在不引用父元素的情况下删除某个元素，就太好了。</p>
+<p>不过很遗憾。DOM 需要清楚您需要删除的元素，以及它的父元素。</p>
+<p>这是常用的解决方案：找到您希望删除的子元素，然后使用其 parentNode 属性来找到父元素：</p>
+<pre>
+var child=document.getElementById(&quot;p1&quot;);
+child.parentNode.removeChild(child);
+</pre>
+
+<h2>HTML DOM 教程</h2>
+<p>在我们的 JavaScript 教程的 HTML DOM 部分，您已经学到了：</p>
+<ul>
+<li>如何改变 HTML 元素的内容 (innerHTML)</li>
+<li>如何改变 HTML 元素的样式 (CSS)</li>
+<li>如何对 HTML DOM 事件作出反应</li>
+<li>如何添加或删除 HTML 元素</li>
+</ul>
+
+<p>如果您希望学到更多有关使用 JavaScript 访问 HTML DOM 的知识，请访问我们完整的 <a href="../htmldom/index.htm"  title="HTML DOM 教程">HTML DOM 教程</a>。</p>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

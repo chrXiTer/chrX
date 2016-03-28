@@ -1,0 +1,76 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;audio&gt; preload 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_audio.htm" >HTML &lt;audio&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>设置为预加载的 audio 元素：</p>
+
+<pre>
+&lt;audio controls=&quot;controls&quot; <code>preload=&quot;auto&quot;</code>&gt;
+  &lt;source src=&quot;song.ogg&quot; type=&quot;audio/ogg&quot; /&gt;
+  &lt;source src=&quot;song.mp3&quot; type=&quot;audio/mpeg&quot; /&gt;
+Your browser does not support the audio element.
+&lt;/audio&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_audio_preload')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>preload 属性规定是否在页面加载后载入音频。</p>
+
+<p>如果设置了 autoplay 属性，则忽略该属性。</p>
+
+</div>
+
+<div>
+<h2>HTML 4.01 与 HTML 5 之间的差异</h2>
+
+<p>preload 属性是 HTML 5 中的新属性。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;audio preload=&quot;load&quot; /&gt;</pre>
+
+属性值
+
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+
+<tr>
+<td>load</td>
+<td>
+	<p>规定是否预加载音频。</p>
+	<p>可能的值：</p>
+	<ul class="listintable">
+	<li>auto - 当页面加载后载入整个音频</li>
+	<li>meta - 当页面加载后只载入元数据</li>
+	<li>none - 当页面加载后不载入音频</li>
+	</ul>
+</td>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_audio.htm" >HTML &lt;audio&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

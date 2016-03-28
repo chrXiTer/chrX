@@ -1,0 +1,76 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 &lt;input&gt; formaction 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_input.htm" >HTML &lt;input&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>带有两个提交按钮的表单（不同的 action 值）：</p>
+
+<pre>
+&lt;form action=&quot;demo_form.asp&quot; method=&quot;get&quot;&gt;
+  First name: &lt;input type=&quot;text&quot; name=&quot;fname&quot; /&gt;&lt;br /&gt;
+  Last name: &lt;input type=&quot;text&quot; name=&quot;lname&quot; /&gt;&lt;br /&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;&lt;br /&gt;
+  &lt;input type=&quot;submit&quot; <code>formaction=&quot;demo_admin.asp&quot;</code> value=&quot;Submit as admin&quot; /&gt;
+&lt;/form&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_input_formaction')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>formaction 属性覆盖 form 元素的 <a href="att_form_action.htm"  title="HTML 5 &lt;form&gt; action 属性">action</a> 属性。</p>
+
+<p>该属性适用于 type=&quot;submit&quot; 以及 type=&quot;image&quot;。</p>
+</div>
+
+<div>
+<h2>HTML 4.01 与 HTML 5 之间的差异</h2>
+
+<p>formaction 属性是 &lt;input&gt; 标签在 HTML5 中的新属性。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;input formaction=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+
+<table class="dataintable">
+  <tr>
+    <th style="width:20%;">值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td><i>URL</i></td>
+    <td>
+		<p>向何处发送表单数据。</p>
+		<p>可能的值：</p>
+		<ul class="listintable">
+			<li>绝对 URL - 指向其他站点（比如 src=&quot;www.example.com/example.htm&quot;）</li>
+			<li>相对 URL - 指向站点内的文件（比如 src=&quot;example.htm&quot;）</li>
+		</ul>
+	</td>
+  </tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_input.htm" >HTML &lt;input&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

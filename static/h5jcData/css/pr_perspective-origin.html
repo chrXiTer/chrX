@@ -1,0 +1,118 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS3 perspective-origin 属性</h1>
+
+<div class="backtoreference">
+<p><a href="index.htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>设置 3D 元素的基点位置：</p>
+<pre>
+div
+{
+perspective:150;
+perspective-origin: 10% 10%;
+-webkit-perspective:150;	<span class="code_comment">/* Safari 和 Chrome */</span>
+-webkit-perspective-origin: 10% 10%;	<span class="code_comment">/* Safari 和 Chrome */</span>
+}
+</pre>
+
+<p><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/t.asp?f=css3_perspective1  \n\n'))window.location='/chrX/nofile/123tiy/t.asp?f=css3_perspective1'" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+
+<p>目前浏览器都不支持 perspective-origin 属性。</p>
+<p>Chrome 和 Safari 支持替代的 -webkit-perspecitve-origin 属性。</p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>perspective-origin 属性定义 3D 元素所基于的 X 轴和 Y 轴。该属性允许您改变 3D 元素的底部位置。</p>
+<p>当为元素定义 perspective-origin 属性时，其子元素会获得透视效果，而不是元素本身。</p>
+<p class="note"><span>注释：</span>该属性必须与 <a href="pr_perspective.htm" title="CSS3 perspective 属性">perspective</a> 属性一同使用，而且只影响 3D 转换元素。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">50% 50%</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS3</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.perspectiveOrigin=&quot;10% 10%&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>perspective-origin: <i>x-axis</i> <i>y-axis</i>;</pre>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>x-axis</i></td>
+<td>
+	<p>定义该视图在 x 轴上的位置。默认值：50%。</p>
+	<p>可能的值：</p>
+	<ul class="listintable">
+	<li>left</li>
+	<li>center</li>
+	<li>right</li>
+	<li><i>length</i></li>
+	<li><i>%</i></li>
+	</ul>
+</td>
+</tr>
+
+<tr>
+<td><i>y-axis</i></td>
+<td>
+	<p>定义该视图在 y 轴上的位置。默认值：50%。</p>
+	<p>可能的值：</p>
+	<ul class="listintable">
+	<li>top</li>
+	<li>center</li>
+	<li>bottom</li>
+	<li><i>length</i></li>
+	<li><i>%</i></li>
+	</ul>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="index.htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+<!-- maincontent end -->
+
+</div>
+<!-- wrapper end -->
+
+<script src="../chrX.js"></script>
+
+

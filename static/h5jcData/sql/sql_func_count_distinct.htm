@@ -1,0 +1,75 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL COUNT DISTINCT 函数</h1>
+
+<div class="backtoreference">
+<p><a href="sql_functions.htm"  title="SQL 函数">SQL 函数</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>可以一同使用 DISTINCT 和 COUNT 关键词，来计算非重复结果的数目。</p>
+
+<h3>语法</h3>
+<pre>SELECT COUNT(DISTINCT column(s)) FROM table</pre>
+</div>
+
+<div>
+<h2>例子</h2>
+
+<p class="important"><span>注意：</span>下面的例子仅适用于 ORACLE 和 Microsoft SQL server，不能用于 Microsoft Access。</p>
+
+<h3>&quot;Orders&quot;表：</h3>
+<table class="dataintable">
+<tr>
+<th>Company</th>
+<th>OrderNumber</th>
+</tr>
+
+<tr>
+<td>IBM</td>
+<td>3532</td>
+</tr>
+
+<tr>
+<td>W3School</td>
+<td>2356</td>
+</tr>
+
+<tr>
+<td>Apple</td>
+<td>4698</td>
+</tr>
+
+<tr>
+<td>W3School</td>
+<td>6953</td>
+</tr>
+</table>
+
+<h3>例子 1</h3>
+<pre>SELECT COUNT(Company) FROM Orders</pre>
+
+<p>结果：</p>
+<pre>4</pre>
+
+<h3>例子 2</h3>
+<pre>SELECT COUNT(DISTINCT Company) FROM Orders</pre>
+
+<p>结果：</p>
+<pre>3</pre>
+
+</div>
+
+<div class="backtoreference">
+<p><a href="sql_functions.htm"  title="SQL 函数">SQL 函数</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

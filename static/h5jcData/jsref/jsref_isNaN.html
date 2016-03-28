@@ -1,0 +1,88 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript isNaN() 函数</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_global.htm"  title="JavaScript 全局对象">JavaScript 全局对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>isNaN() 函数用于检查其参数是否是非数字值。</p>
+
+<h3>语法</h3>
+
+<pre>isNaN(x)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>x</td>
+    <td>必需。要检测的值。</td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+
+<p>如果 x 是特殊的非数字值 NaN（或者能被转换为这样的值），返回的值就是 true。如果 x 是其他值,则返回 false。</p>
+
+<h3>说明</h3>
+
+<p>isNaN() 函数可用于判断其参数是否是 NaN，该值表示一个非法的数字（比如被 0 除后得到的结果）。</p>
+
+<p>如果把 NaN 与任何值（包括其自身）相比得到的结果均是 false，所以要判断某个值是否是 NaN，不能使用 == 或 === 运算符。正因为如此，isNaN() 函数是必需的。</p>
+</div>
+
+<div>
+<h2>提示和注释</h2>
+
+<p class="tip"><span>提示：</span>isNaN() 函数通常用于检测 parseFloat() 和 parseInt() 的结果，以判断它们表示的是否是合法的数字。当然也可以用 isNaN() 函数来检测算数错误，比如用 0 作除数的情况。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>检查数字是否非法：</p>
+
+<pre>
+&lt;script&gt;
+
+document.write(<code>isNaN(123)</code>);
+document.write(<code>isNaN(-1.23)</code>);
+document.write(<code>isNaN(5-2)</code>);
+document.write(<code>isNaN(0)</code>);
+document.write(<code>isNaN(&quot;Hello&quot;)</code>);
+document.write(<code>isNaN(&quot;2005/12/12&quot;)</code>);
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>
+false
+false
+false
+false
+true
+true
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('jseg_isNaN')" >亲自试一试</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_global.htm"  title="JavaScript 全局对象">JavaScript 全局对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

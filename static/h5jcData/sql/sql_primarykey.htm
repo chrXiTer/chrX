@@ -1,0 +1,116 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL PRIMARY KEY 约束</h1>
+
+<div>
+<h2>SQL PRIMARY KEY 约束</h2>
+
+<p>PRIMARY KEY 约束唯一标识数据库表中的每条记录。</p>
+
+<p>主键必须包含唯一的值。</p>
+
+<p>主键列不能包含 NULL 值。</p>
+
+<p>每个表都应该有一个主键，并且每个表只能有一个主键。</p>
+</div>
+
+<div>
+<h2>SQL PRIMARY KEY Constraint on CREATE TABLE</h2>
+
+<p>下面的 SQL 在 &quot;Persons&quot; 表创建时在 &quot;Id_P&quot; 列创建 PRIMARY KEY 约束：</p>
+
+<h3>MySQL:</h3>
+
+<pre>
+CREATE TABLE Persons
+(
+Id_P int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255),
+<code>PRIMARY KEY (Id_P)</code>
+)
+</pre>
+
+<h3>SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+CREATE TABLE Persons
+(
+Id_P int NOT NULL <code>PRIMARY KEY</code>,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255)
+)
+</pre>
+
+<p>如果需要命名 PRIMARY KEY 约束，以及为多个列定义 PRIMARY KEY 约束，请使用下面的 SQL 语法：</p>
+
+<h3>MySQL / SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+CREATE TABLE Persons
+(
+Id_P int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255),
+<code>CONSTRAINT pk_PersonID PRIMARY KEY (Id_P,LastName)</code>
+)
+</pre>
+</div>
+
+<div>
+<h2>SQL PRIMARY KEY Constraint on ALTER TABLE</h2>
+
+<p>如果在表已存在的情况下为 &quot;Id_P&quot; 列创建 PRIMARY KEY 约束，请使用下面的 SQL：</p>
+
+<h3>MySQL / SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+ALTER TABLE Persons
+<code>ADD PRIMARY KEY (Id_P)</code>
+</pre>
+
+<p>如果需要命名 PRIMARY KEY 约束，以及为多个列定义 PRIMARY KEY 约束，请使用下面的 SQL 语法：</p>
+
+<h3>MySQL / SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+ALTER TABLE Persons
+<code>ADD CONSTRAINT pk_PersonID PRIMARY KEY (Id_P,LastName)</code>
+</pre>
+
+<p class="note"><span>注释：</span>如果您使用 ALTER TABLE 语句添加主键，必须把主键列声明为不包含 NULL 值（在表首次创建时）。
+</div>
+
+<div>
+<h2>撤销 PRIMARY KEY 约束</h2>
+
+<p>如需撤销 PRIMARY KEY 约束，请使用下面的 SQL：</p>
+
+<h3>MySQL:</h3>
+
+<pre>
+ALTER TABLE Persons
+<code>DROP PRIMARY KEY</code>
+</pre>
+
+<h3>SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+ALTER TABLE Persons
+<code>DROP CONSTRAINT pk_PersonID</code>
+</pre>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

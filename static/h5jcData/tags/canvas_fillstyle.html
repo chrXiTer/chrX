@@ -1,0 +1,243 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 canvas fillStyle 属性</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>定义用蓝色填充的矩形：</p>
+
+<canvas id="myCanvas" class="canvas_example">
+Your browser does not support the canvas tag.
+</canvas>
+
+<script type="text/javascript">
+var c=document.getElementById("myCanvas");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+	var ctx=c.getContext("2d");
+	ctx.fillStyle="#0000ff";
+	ctx.fillRect(20,20,150,100);
+	}
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+<code>ctx.fillStyle=&quot;#0000ff&quot;;</code>
+ctx.fillRect(20,20,150,100);
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_fillstyle')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>fillStyle 属性设置或返回用于填充绘画的颜色、渐变或模式。</p>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">默认值：</th>
+<td>#000000</td>
+</tr>
+
+<tr>
+<th>JavaScript 语法：</th>
+<td>context.fillStyle=<i>color</i>|<i>gradient</i>|<i>pattern</i>;</td>
+</tr>
+</table>
+
+<h3>属性值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>color</i></td>
+<td>指示绘图填充色的 <a href="/chrX/nofile/123cssref/css_colors_legal.asp" vvll="my"  title="CSS 合法颜色值">CSS 颜色值</a>。默认值是 #000000。</td>
+</tr>
+
+<tr>
+<td><i>gradient</i></td>
+<td>用于填充绘图的渐变对象（<a href="canvas_createlineargradient.htm"  title="HTML5 canvas createLinearGradient() 方法">线性</a>或<a href="canvas_createradialgradient.htm"  title="HTML5 canvas createRadialGradient() 方法">放射性</a>）</td>
+</tr>
+
+<tr>
+<td><i>pattern</i></td>
+<td>用于填充绘图的 pattern 对象</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>更多实例</h2>
+
+<h3>实例 1</h3>
+
+<p>定义从上到下的渐变，作为矩形的填充样式：</p>
+
+<canvas id="myCanvas2" class="canvas_example">
+Your browser does not support the canvas tag.
+</canvas>
+
+<script type="text/javascript">
+var canvas=document.getElementById("myCanvas2");
+var ctx=canvas.getContext("2d");
+var my_gradient=ctx.createLinearGradient(0,0,0,170);
+my_gradient.addColorStop(0,"black");
+my_gradient.addColorStop(1,"white");
+ctx.fillStyle=my_gradient;
+ctx.fillRect(20,20,150,100);
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+var my_gradient=ctx.createLinearGradient(0,0,0,170);
+my_gradient.addColorStop(0,&quot;black&quot;);
+my_gradient.addColorStop(1,&quot;white&quot;);
+<code>ctx.fillStyle=my_gradient;</code>
+ctx.fillRect(20,20,150,100);
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_fillstyle_gradient')" >亲自试一试</a></p>
+
+<h3>实例 2</h3>
+
+<p>定义从左到右的渐变，作为矩形的填充样式：</p>
+
+<canvas id="myCanvas3" class="canvas_example">
+Your browser does not support the canvas tag.
+</canvas>
+
+<script type="text/javascript">
+var canvas=document.getElementById("myCanvas3");
+var ctx=canvas.getContext("2d");
+var my_gradient=ctx.createLinearGradient(0,0,170,0);
+my_gradient.addColorStop(0,"black");
+my_gradient.addColorStop(1,"white");
+ctx.fillStyle=my_gradient;
+ctx.fillRect(20,20,150,100);
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+var my_gradient=ctx.createLinearGradient(0,0,170,0);
+my_gradient.addColorStop(0,&quot;black&quot;);
+my_gradient.addColorStop(1,&quot;white&quot;);
+<code>ctx.fillStyle=my_gradient;</code>
+ctx.fillRect(20,20,150,100);
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_fillstyle_gradient2')" >亲自试一试</a></p>
+
+<h3>实例 3</h3>
+
+<p>定义从黑到红到白的的渐变，作为矩形的填充样式：</p>
+
+<canvas id="myCanvas4" class="canvas_example">
+Your browser does not support the canvas tag.
+</canvas>
+
+<script type="text/javascript">
+var canvas=document.getElementById("myCanvas4");
+var ctx=canvas.getContext("2d");
+var my_gradient=ctx.createLinearGradient(0,0,170,0);
+my_gradient.addColorStop(0,"black");
+my_gradient.addColorStop(0.5,"red");
+my_gradient.addColorStop(1,"white");
+ctx.fillStyle=my_gradient;
+ctx.fillRect(20,20,150,100);
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+var my_gradient=ctx.createLinearGradient(0,0,170,0);
+my_gradient.addColorStop(0,&quot;black&quot;);
+my_gradient.addColorStop(0.5,&quot;red&quot;);
+my_gradient.addColorStop(1,&quot;white&quot;);
+<code>ctx.fillStyle=my_gradient;</code>
+ctx.fillRect(20,20,150,100);
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_fillstyle_gradient3')" >亲自试一试</a></p>
+
+<h3>实例 4</h3>
+
+<p>用到的图像：</p>
+
+<img id="lamp" src="../i/lamp.gif"  alt="lamp" style="margin:10px 0 0 0;" />
+
+<p>使用图像来填充绘图：</p>
+
+<canvas id="myCanvas5" class="canvas_example">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script type="text/javascript">
+document.getElementById("lamp").onload=function()
+	{
+	var c=document.getElementById("myCanvas5");
+	var canvOK=1;
+	try {c.getContext("2d");}
+	catch (er) {canvOK=0;}
+	if (canvOK==1)
+		{
+		var ctx=c.getContext('2d');
+		var img=this;	
+		var pat=ctx.createPattern(img,'repeat');
+		ctx.rect(0,0,150,100);
+		ctx.fillStyle=pat;
+		ctx.fill();
+		}
+	}
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+var img=document.getElementById(&quot;lamp&quot;);
+var pat=ctx.createPattern(img,&quot;repeat&quot;);
+ctx.rect(0,0,150,100);
+<code>ctx.fillStyle=pat;</code>
+ctx.fill();
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_createpattern')" >亲自试一试</a></p>
+
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

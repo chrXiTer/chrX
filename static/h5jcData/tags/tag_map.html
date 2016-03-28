@@ -1,0 +1,112 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;map&gt; 标签</h1>
+
+<div>
+<h2>实例</h2>
+
+<p>带有可点击区域的图像映射：</p>
+
+<pre>
+&lt;img src=&quot;planets.jpg&quot; border=&quot;0&quot; <span class="marked">usemap=&quot;#planetmap&quot;</span> alt=&quot;Planets&quot; /&gt;
+
+<code>&lt;map name=&quot;planetmap&quot; id=&quot;planetmap&quot;&gt;</code>
+  &lt;area shape=&quot;circle&quot; coords=&quot;180,139,14&quot; href =&quot;venus.html&quot; alt=&quot;Venus&quot; /&gt;
+  &lt;area shape=&quot;circle&quot; coords=&quot;129,161,10&quot; href =&quot;mercur.html&quot; alt=&quot;Mercury&quot; /&gt;
+  &lt;area shape=&quot;rect&quot; coords=&quot;0,0,110,260&quot; href =&quot;sun.html&quot; alt=&quot;Sun&quot; /&gt;
+<code>&lt;/map&gt;</code>
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_areamap')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>定义一个客户端图像映射。图像映射（image-map）指带有可点击区域的一幅图像。</p>
+</div>
+
+<div>
+<h2>HTML 与 XHTML 之间的差异</h2>
+
+<p>NONE</p>
+</div>
+
+<div>
+<h2>提示和注释：</h2>
+
+<p class="note"><span>注释：</span>area 元素永远嵌套在 map 元素内部。area 元素可定义图像映射中的区域。</p>
+
+<p class="note"><span>注释：</span>&lt;img&gt;中的 usemap 属性可引用 &lt;map&gt; 中的 id 或 name 属性（取决于浏览器），所以我们应同时向 &lt;map&gt; 添加 id 和 name 属性。</p>
+</div>
+
+<div>
+<h2>必需的属性</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:20%;">属性</th>
+<th style="width:20%;">值</th>
+<th style="width:60%;">描述</th>
+</tr>
+
+<tr>
+<td>id</td>
+<td>unique_name</td>
+<td>为 map 标签定义唯一的名称。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>可选的属性</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:20%;">属性</th>
+<th style="width:20%;">值</th>
+<th style="width:60%;">描述</th>
+</tr>
+
+<tr>
+<td><a href="att_map_name.htm"  title="HTML &lt;map&gt; 标签的 name 属性">name</a></td>
+<td><i>mapname</i></td>
+<td>为 image-map 规定的名称。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>全局属性</h2>
+
+<p>&lt;map&gt; 标签支持 <a href="html_ref_standardattributes.htm" >HTML 中的全局属性</a>。</p>
+</div>
+
+<div>
+<h2>事件属性</h2>
+
+<p>&lt;map&gt; 标签支持 <a href="html_ref_eventattributes.htm" >HTML 中的事件属性</a>。</p>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('html_areamap')" >创建图像地图</a></dt>
+<dd>本例显示如何创建带有可点击区域的图像地图。其中的每个区域都是一个超级链接。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>HTML DOM 参考手册：<a href="../jsref/dom_obj_map.htm"  title="HTML DOM Map 对象">Map 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

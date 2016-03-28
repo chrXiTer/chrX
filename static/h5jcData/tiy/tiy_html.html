@@ -1,0 +1,3007 @@
+﻿<script>
+var f = function(){
+	var href = location.href;
+	var index = href.indexOf("#")
+	if(index == -1) return;
+	var varg = href.substring(index + 1)
+	var strid = "tiyiframe_" + varg
+	var iframeSource = document.getElementById(strid)
+	var iframeTarget = document.getElementById("tiyiframe_iframe")
+	var textareaE = document.getElementById('tiyiframe_textarea')
+	if(!iframeSource){
+		textareaE.innerText("示例代码不存在")
+		return
+	}
+		
+	var htmlStr = iframeSource.textContent;
+	var newDoc=iframeTarget.contentDocument.open("text/html","replace");
+	newDoc.write(htmlStr)
+	newDoc.close()
+	
+	textareaE.innerText = htmlStr
+	
+	var buttonE = document.getElementById("tiyiframe_button")
+	buttonE.onclick = function(){
+			var textareaE = document.getElementById('tiyiframe_textarea')
+			var eIframe = document.getElementById('tiyiframe_iframe')
+			var newDoc=eIframe.contentDocument.open("text/html","replace")
+			newDoc.write(textareaE.value)
+			newDoc.close()
+	}
+}
+window.onload = f;
+window.onresize = f;
+
+</script>
+
+<div style="width:100%; height:13px; background-color:yellow">实验<span style="float:right; background-color:red">X</span></div>
+<iframe id="tiyiframe_iframe" style="width:100%;height:40%;background-color:#ffffff">
+</iframe>
+<p style="height:8%;margin:0px; padding:0px">编辑代码：
+    <input id="tiyiframe_button" type="button" value="查看效果" style="float:right; margin-right:20px"></input>
+</p>
+<textarea id="tiyiframe_textarea" style="width:90%; height:35%;"></textarea>
+</br>
+
+<div style="visibility:hidden;display:none">
+<iframe id="tiyiframe_html_a">
+<html>
+<body>
+
+<a href="javascript:if" >W3School</a>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_abbr" >
+<html>
+<body>
+
+<abbr title="etcetera">etc.</abbr>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_abbracronym" >
+<html>
+
+<body>
+
+<abbr title="etcetera">etc.</abbr>
+<br />
+<acronym title="World Wide Web">WWW</acronym>
+
+<p>在某些浏览器中，当您把鼠标移至缩略词语上时，title 可用于展示表达的完整版本。</p>
+
+<p>仅对于 IE 5 中的 acronym 元素有效。</p>
+
+<p>对于 Netscape 6.2 中的 abbr 和 acronym 元素都有效。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_acronym" >
+<html>
+<body>
+
+<acronym title="World Wide Web">WWW</acronym>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_address" >
+<html>
+
+<body>
+
+<h2>唐老鸭的地址：</h2>
+<address>
+Donald Duck<br />
+BOX 555<br />
+Disneyland<br />
+USA<br />
+</address>
+
+<br />
+
+<h2>W3School 的地址：</h2>
+<address>
+  <a href="mailto:service@w3school.com.cn">用户服务信箱</a><br />
+  上海赢科投资有限公司<br />
+  金桥开发区 789 号<br />
+</address>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_areamap" >
+<html>
+<body>
+
+<p>请点击图像上的星球，把它们放大。</p>
+
+<img
+src="../i/eg_planets.jpg" border="0" usemap="#planetmap"
+alt="Planets" />
+
+<map name="planetmap" id="planetmap">
+
+<area
+shape="circle"
+coords="180,139,14"
+href ="../example/html/venus.html" target ="_blank"
+alt="Venus" />
+
+<area
+shape="circle"
+coords="129,161,10"
+href ="../example/html/mercur.html" target ="_blank"
+alt="Mercury" />
+
+<area
+shape="rect"
+coords="0,0,110,260"
+href ="../example/html/sun.html" target ="_blank"
+alt="Sun" />
+
+</map>
+
+<p><b>注释：</b>img 元素中的 "usemap" 属性引用 map 元素中的 "id" 或 "name" 属性（根据浏览器），所以我们同时向 map 元素添加了 "id" 和 "name" 属性。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_audio_all" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<audio controls="controls">
+  <source src="../i/song.ogg.htm" type="audio/ogg">
+  <source src="../i/song.mp3" type="audio/mpeg">
+<embed height="100" width="100" src="../i/song.mp3" />
+</audio>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_audio_embed" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<embed height="100" width="100" src="../i/horse.mp3" ></embed>
+<p><b>注释：</b>浏览器可能需要安装插件以后，才能播放该文件。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_audio_html5" >
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<audio controls="controls">
+  <source src="../i/song.ogg.htm" type="audio/ogg">
+  <source src="../i/song.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_audio_link" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>链接到一段音乐</h2>
+
+<p><a href="../i/song.mp3" >点击这里，播放音乐</a></p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_audio_object" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<object height="100" width="100" data="../i/horse.mp3" ></object>
+<p><b>注释：</b>浏览器可能需要安装插件以后，才能播放该文件。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_audio_yahoo" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<p><a href="../i/song.mp3" >播放 mp3</a></p>
+<p><a href="../i/bird.wav" >播放 wav</a></p>
+
+<script type="text/javascript" src="../../webplayer.yahooapis.com/legacy/player.js" ></script>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_backgroundimage" >
+<html>
+
+<body background="../i/eg_background.jpg" >
+
+<h3>图像背景</h3>
+
+<p>gif 和 jpg 文件均可用作 HTML 背景。</p>
+
+<p>如果图像小于页面，图像会进行重复。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_back_bad" >
+<html>
+
+<body bgcolor="#ffffff" text="yellow">
+
+<p>
+这是段落。这是段落。这是段落。这是段落。这是段落。这是段落。这是段落。这是段落。这是段落。这是段落。
+</p>
+
+<p>
+这是另一个段落。这是另一个段落。这是另一个段落。这是另一个段落。这是另一个段落。这是另一个段落。这是另一个段落。
+</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_back_good" >
+<html>
+
+<body bgcolor="#d0d0d0">
+
+<p>
+这是段落。这是段落。这是段落。这是段落。这是段落。这是段落。这是段落。这是段落。这是段落。这是段落。
+</p>
+
+<p>
+这是另一个段落。这是另一个段落。这是另一个段落。这是另一个段落。这是另一个段落。这是另一个段落。这是另一个段落。
+</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_back_img" >
+<html>
+
+<body background="../i/eg_bg_06.gif" >
+
+<h3>图像背景</h3>
+
+<p>gif 和 jpg 文件均可用作 HTML 背景。</p>
+
+<p>如果图像小于页面，图像会进行重复。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_back_img2" >
+<html>
+
+<body background="../i/eg_bg_04.gif" >
+
+<h3>图像背景</h3>
+
+<p>gif 和 jpg 文件均可用作 HTML 背景。</p>
+
+<p>如果图像小于页面，图像会进行重复。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_back_imgbad" >
+<html>
+
+<body background="../i/eg_bg_01.gif" >
+
+<h3>图像背景</h3>
+
+<p>gif 和 jpg 文件均可用作 HTML 背景。</p>
+
+<p>如果图像小于页面，图像会进行重复。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_base" >
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Language" content="zh-cn" />
+
+<base target="_blank" />
+</head>
+
+<body>
+
+<p>
+<a href="javascript:" target="_blank">这个连接</a> 将在新窗口中加载，因为 target 属性被设置为 "_blank"。
+</p>
+
+<p>
+<a href="javascript:" >这个连接</a> 也将在新窗口中加载，即使没有 target 属性。
+</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_basefont" >
+<html>
+<head>
+<basefont color="red" size="5" />
+</head>
+
+<body>
+<h1>This is a header</h1>
+<p>This is a paragraph</p>
+
+<p>
+在 HTML 4.01 中，不赞成使用 basefont 元素；在 XHTML 1.0 Strict DTD 中，不支持 basefont 元素。
+</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_base_test" >
+<html>
+<head>
+<xbasehref="/chrX/nofile/123i/" />
+<base target="_blank" />
+</head>
+
+<body>
+<img src="../../www.w3school.com.cn/i/eg_smile.gif" /><br />
+<p>请注意，我们已经为图像规定了一个相对地址。由于我们已经在 head 部分规定了一个基准 URL，浏览器将在如下地址寻找图片：</p>
+<p>"/chrX/nofile/123i/eg_smile.gif"</p>
+
+<br /><br />
+<p><a href="javascript:if" >W3School</a></p>
+<p>请注意，链接会在新窗口中打开，即使链接中没有 target="_blank" 属性。这是因为 base 元素的 target 属性已经被设置为 "_blank" 了。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_basic" >
+<html>
+
+<head>
+<title>我的第一个 HTML 页面</title>
+</head>
+
+<body>
+<p>body 元素的内容会显示在浏览器中。</p>
+<p>title 元素的内容会显示在浏览器的标题栏中。</p>
+</body>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_basic_img" >
+<html>
+<body>
+
+<img src="../i/eg_w3school.gif" width="300" height="120" />
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_basic_link" >
+<html>
+<body>
+
+<a href="javascript:if" >
+This is a link</a>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_bdo" >
+<html>
+
+<body>
+
+<p>
+如果您的浏览器支持 bi-directional override (bdo)，下一行会从右向左输出 (rtl)；
+</p>
+
+<bdo dir="rtl">
+Here is some Hebrew text
+</bdo>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_bgcolor" >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Language" content="zh-cn" />
+</head>
+
+<body bgcolor="yellow">
+<h2>请看: 改变了颜色的背景。</h2>
+</body>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_blockquote" >
+<html>
+<body>
+
+Here comes a long quotation:
+
+<blockquote>
+This is a long quotation. This is a long quotation. This is a long quotation. This is a long quotation. This is a long quotation.
+</blockquote>
+
+请注意，浏览器在 blockquote 元素前后添加了换行，并增加了外边距。
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_bodybgcol" >
+<html>
+
+<body bgcolor="yellow">
+<h2>This is a heading</h2>
+<p>This is a paragraph.</p>
+<p>The old bgcolor attribute only works on the body element.</p>
+<p>For future proof HTML, use styles instead:</p>
+</body>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_bodybgstyle" >
+<html>
+<body style="background-color:yellow">
+<h2 style="background-color:red">This is a heading</h2>
+<p style="background-color:green">This is a paragraph.</p>
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_button" >
+<html>
+
+<body>
+
+<form>
+<input type="button" value="Hello world!">
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_button_test" >
+<html>
+<body>
+
+<button type="button">Click Me!</button>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_checkboxes" >
+<html>
+
+<body>
+
+<form>
+我喜欢自行车：
+<input type="checkbox" name="Bike">
+<br />
+我喜欢汽车：
+<input type="checkbox" name="Car">
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_colgroup_test" >
+<html>
+<body>
+
+<table width="100%" border="1">
+  <colgroup span="2" align="left"></colgroup>
+  <colgroup align="right" style="color:#0000FF;"></colgroup>
+  <tr>
+    <th>ISBN</th>
+    <th>Title</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>3476896</td>
+    <td>My first HTML</td>
+    <td>$53</td>
+  </tr>
+  <tr>
+    <td>2489604</td>
+    <td>My first CSS</td>
+    <td>$47</td>
+  </tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_color" >
+<html>
+<body>
+<h1 style="color:blue">A heading</h1>
+<p style="color:red">A paragraph</p>
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_col_test" >
+<html>
+<body>
+
+<table width="100%" border="1">
+  <col align="left" />
+  <col align="left" />
+  <col align="right" />
+  <tr>
+    <th>ISBN</th>
+    <th>Title</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>3476896</td>
+    <td>My first HTML</td>
+    <td>$53</td>
+  </tr>
+  <tr>
+    <td>2489604</td>
+    <td>My first CSS</td>
+    <td>$47</td>
+  </tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_comment" >
+<html>
+
+<body>
+
+<!--这是一段注释。注释不会在浏览器中显示。-->
+
+<p>这是一段普通的段落。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_computeroutput" >
+<html>
+
+<body>
+
+<code>Computer code</code>
+<br />
+<kbd>Keyboard input</kbd>
+<br />
+<tt>Teletype text</tt>
+<br />
+<samp>Sample text</samp>
+<br />
+<var>Computer variable</var>
+<br />
+
+<p>
+<b>注释：</b>这些标签常用于显示计算机/编程代码。
+</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_delins" >
+<html>
+
+<body>
+
+<p>一打有 <del>二十</del> <ins>十二</ins> 件。</p>
+
+<p>大多数浏览器会改写为删除文本和下划线文本。</p>
+
+<p>一些老式的浏览器会把删除文本和下划线文本显示为普通文本。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_dir_test" >
+<html>
+<body>
+
+<dir>
+  <li>html</li>
+  <li>xhtml</li>
+  <li>css</li>
+</dir>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_div_test" >
+<html>
+<body>
+
+<h3>This is a header</h3>
+<p>This is a paragraph.</p>
+
+<div style="color:#00FF00">
+  <h3>This is a header</h3>
+  <p>This is a paragraph.</p>
+</div>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_dropdownbox" >
+<html>
+
+<body>
+
+<form>
+<select name="cars">
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+<option value="fiat">Fiat</option>
+<option value="audi">Audi</option>
+</select>
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_dropdownbox2" >
+<html>
+
+<body>
+
+<form>
+<select name="cars">
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+<option value="fiat" selected="selected">Fiat</option>
+<option value="audi">Audi</option>
+</select>
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_entities" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>字符实体</h2>
+
+<p>&X;</p>
+
+<p>用实体数字（比如"#174"）或者实体名称（比如 "pound"）替代 "X"，然后查看结果。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_fieldset" >
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+<form>
+  <fieldset>
+    <legend>健康信息</legend>
+    身高：<input type="text" />
+    体重：<input type="text" />
+  </fieldset>
+</form>
+
+<p>如果表单周围没有边框，说明您的浏览器太老了。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_font-family" >
+<html>
+<body>
+<h1 style="font-family:verdana">A heading</h1>
+<p style="font-family:courier">A paragraph</p>
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_font-size" >
+<html>
+<body>
+<h1 style="font-size:150%">A heading</h1>
+<p style="font-size:80%">A paragraph</p>
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_font" >
+<html>
+<body>
+
+<h1><font face="verdana">A heading</font></h1>
+<p><font size="5" face="arial" color="red">A paragraph.</font></p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_fontall" >
+<html>
+<body>
+<p style="font-family:verdana;font-size:80%;color:green">
+This is a paragraph with some text in it. This is a paragraph with some text in it. This is a paragraph with some text in it. This is a paragraph with some text in it.
+</p>
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_form_checkbox" >
+<html>
+
+<body>
+
+<form name="input" action="http://w3school.com.cn/html/html_form_action.asp" method="get">
+I have a bike:
+<input type="checkbox" name="vehicle" value="Bike" checked="checked" />
+<br />
+I have a car: 
+<input type="checkbox" name="vehicle" value="Car" />
+<br />
+I have an airplane: 
+<input type="checkbox" name="vehicle" value="Airplane" />
+<br /><br />
+<input type="submit" value="Submit" />
+</form> 
+
+<p>如果您点击 "Submit" 按钮，您将把输入传送到名为 html_form_action.asp 的新页面。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_form_mail" >
+<html>
+
+<body>
+<form action="http:///someone@w3school.com.cn"  method="post" enctype="text/plain">
+
+<h3>这个表单会把电子邮件发送到 W3School。</h3>
+姓名：<br />
+<input type="text" name="name" value="yourname" size="20">
+<br />
+电邮：<br />
+<input type="text" name="mail" value="yourmail" size="20">
+<br />
+内容：<br />
+<input type="text" name="comment" value="yourcomment" size="40">
+<br /><br />
+<input type="submit" value="发送">
+<input type="reset" value="重置">
+
+</form>
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_form_radio" >
+<html>
+
+<body>
+
+<form name="input" action="http://w3school.com.cn/html/html_form_action.asp" method="get">
+Male: 
+<input type="radio" name="Sex" value="Male" checked="checked">
+<br />
+Female: 
+<input type="radio" name="Sex" value="Female">
+<br />
+<input type ="submit" value ="Submit">
+</form> 
+
+<p>如果您点击 "Submit" 按钮，您将把输入传送到名为 html_form_action.asp 的新页面。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_form_submit" >
+<html>
+<body>
+
+<form action="http://w3school.com.cn/example/html/form_action.asp" method="get">
+  <p>First name: <input type="text" name="fname" /></p>
+  <p>Last name: <input type="text" name="lname" /></p>
+  <input type="submit" value="Submit" />
+</form>
+
+<p>请单击确认按钮，输入会发送到服务器上名为 "form_action.asp" 的页面。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_frame_cols" >
+<html>
+
+<frameset cols="25%,50%,25%">
+
+  <frame src="../example/html/frame_a.html" >
+  <frame src="../example/html/frame_b.html" >
+  <frame src="../example/html/frame_c.html" >
+
+</frameset>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_frame_getfree" >
+<html>
+
+<body>
+
+<p>被锁在框架中了吗？</p> 
+
+<a href="../index.html" target="_top">请点击这里！</a> 
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_frame_jump" >
+<html>
+
+<frameset cols="20%,80%">
+
+ <frame src="../example/html/frame_a.html" >
+ <frame src="../example/html/link.html#C10" >
+
+</frameset>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_frame_mix" >
+<html>
+
+<frameset rows="50%,50%">
+
+<frame src="../example/html/frame_a.html" >
+
+<frameset cols="25%,75%">
+<frame src="../example/html/frame_b.html" >
+<frame src="../example/html/frame_c.html" >
+</frameset>
+
+</frameset>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_frame_navigation" >
+<html>
+
+<frameset cols="120,*">
+
+  <frame src="../example/html/html_contents.html" >
+  <frame src="../example/html/frame_a.html" name="showframe">
+
+</frameset>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_frame_navigation2" >
+<html>
+
+<frameset cols="180,*">
+
+<frame src="../example/html/content.html" >
+<frame src="../example/html/link.html" name="showframe">
+
+</frameset>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_frame_noresize" >
+<html>
+
+<frameset cols="50%,*,25%">
+  <frame src="../example/html/frame_a.html" noresize="noresize" />
+  <frame src="../example/html/frame_b.html" />
+  <frame src="../example/html/frame_c.html" />
+</frameset>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_frame_rows" >
+<html>
+
+<frameset rows="25%,50%,25%">
+
+  <frame src="../example/html/frame_a.html" >
+  <frame src="../example/html/frame_b.html" >
+  <frame src="../example/html/frame_c.html" >
+
+</frameset>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_header" >
+<!DOCTYPE HTML>
+
+<html>
+
+<body>
+
+<h1 align="center">This is heading 1</h1>
+
+<p>上面的标题在页面中进行了居中排列。上面的标题在页面中进行了居中排列。上面的标题在页面中进行了居中排列。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_headeralign" >
+<html>
+<body>
+
+<h1 style="text-align:center">This is a heading</h1>
+<p>上面的标题相对于页面居中对齐。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_headers" >
+<html>
+
+<body>
+
+<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+<h3>This is heading 3</h3>
+<h4>This is heading 4</h4>
+<h5>This is heading 5</h5>
+<h6>This is heading 6</h6>
+
+<p>请仅仅把标题标签用于标题文本。不要仅仅为了产生粗体文本而使用它们。请使用其它标签或 CSS 代替。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_hr" >
+<html>
+
+<body>
+<p>hr 标签定义水平线：</p>
+<hr />
+<p>这是段落。</p>
+<hr />
+<p>这是段落。</p>
+<hr />
+<p>这是段落。</p>
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_iframe" >
+<html>
+
+<body>
+
+<iframe src="../i/eg_landscape.jpg" ></iframe>
+
+<p>一些老的浏览器不支持 iframe。</p>
+<p>如果得不到支持，iframe 是不可见的。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_iframe_frameborder" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<iframe src="../example/html/demo_iframe.html" frameborder="0"></iframe>
+
+<p>某些老式的浏览器不支持内联框架。</p>
+<p>如果不支持，则 iframe 是不可见的。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_iframe_height_width" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<iframe src="../example/html/demo_iframe.html" width="200" height="200"></iframe>
+
+<p>某些老式的浏览器不支持内联框架。</p>
+<p>如果不支持，则 iframe 是不可见的。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_iframe_target" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<iframe src="../example/html/demo_iframe.html" name="iframe_a"></iframe>
+
+<p><a href="javascript:if" target="iframe_a">W3School.com.cn</a></p>
+
+<p><b>注释：</b>由于链接的目标匹配 iframe 的名称，所以链接会在 iframe 中打开。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_image" >
+<html>
+
+<body>
+
+<p>
+一幅图像：
+<img src="../i/eg_mouse.jpg" width="128" height="128">
+</p>
+
+<p>
+一幅动画图像：
+<img src="../i/eg_cute.gif" width="50" height="50">
+</p>
+
+<p>请注意，插入动画图像的语法与插入普通图像的语法没有区别。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_image2" >
+<html>
+
+<body>
+
+<p>
+来自另一个文件夹的图像：
+<img src="../i/ct_netscape.jpg" />
+</p>
+
+<p>
+来自 W3School.com.cn 的图像：
+<img src="../../www.w3school.com.cn/i/w3school_logo_white.gif" />
+</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_image_align" >
+<html>
+
+<body>
+
+<h2>未设置对齐方式的图像：</h2>
+
+<p>图像 <img src ="../i/eg_cute.gif" > 在文本中</p>
+
+<h2>已设置对齐方式的图像：</h2>
+
+<p>图像 <img src="../i/eg_cute.gif" align="bottom"> 在文本中</p>
+
+<p>图像 <img src ="../i/eg_cute.gif" align="middle"> 在文本中</p>
+
+<p>图像 <img src ="../i/eg_cute.gif" align="top"> 在文本中</p>
+
+<p>请注意，bottom 对齐方式是默认的对齐方式。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_image_alt" >
+<html>
+
+<body>
+
+<p>仅支持文本的浏览器无法显示图像，仅仅能够显示在图像的 "alt" 属性中指定的文本。在这里，"alt" 的文本是“向左转”。</p>
+
+<p>请注意，如果您把鼠标指针移动到图像上，大多数浏览器会显示 "alt" 文本。</p>
+
+<img src="../i/eg_goleft.gif" alt="向左转" />
+
+<p>如果无法显示图像，将显示 "alt" 属性中的文本：</p>
+
+<img src="../i/eg_goleft123.gif" alt="向左转" />
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_image_float" >
+<html>
+
+<body>
+
+<p>
+<img src ="../i/eg_cute.gif" align ="left"> 
+带有图像的一个段落。图像的 align 属性设置为 "left"。图像将浮动到文本的左侧。
+</p>
+
+<p>
+<img src ="../i/eg_cute.gif" align ="right"> 
+带有图像的一个段落。图像的 align 属性设置为 "right"。图像将浮动到文本的右侧。
+</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_image_link" >
+<html>
+
+<body>
+<p>
+您也可以把图像作为链接来使用：
+<a href="../example/html/lastpage.html" >
+<img border="0" src="../i/eg_buttonnext.gif" />
+</a>
+</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_image_size" >
+<html>
+
+<body>
+
+<img src="../i/eg_mouse.jpg" width="50" height="50">
+
+<br />
+
+<img src="../i/eg_mouse.jpg" width="100" height="100">
+
+<br />
+
+<img src="../i/eg_mouse.jpg" width="200" height="200">
+
+<p>通过改变 img 标签的 "height" 和 "width" 属性的值，您可以放大或缩小图像。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_image_test" >
+<html>
+<body>
+
+<img src="../i/eg_tulip.jpg"  alt="上海鲜花港 - 郁金香" />
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_imglink" >
+<html>
+
+<body>
+<p>
+您也可以使用图像来作链接：
+<a href="../example/html/lastpage.html" >
+<img border="0" src="../i/eg_buttonnext.gif" />
+</a>
+</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_inputfields" >
+<html>
+
+<body>
+
+<form>
+名：
+<input type="text" name="firstname">
+<br />
+姓：
+<input type="text" name="lastname">
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_intro" >
+<html>
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_ismap" >
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<p>请把鼠标移动到图像上，看一下状态栏的坐标如何变化。</p>
+
+<a href="javascript:if" >
+<img src="../i/eg_planets.jpg" ismap />
+</a>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_keywords" >
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+<meta name="description"
+content="HTML examples">
+
+<meta name="keywords"
+content="HTML, DHTML, CSS, XML, XHTML, JavaScript, VBScript">
+
+</head>
+
+<body>
+<p>本文档的 meta 属性描述了该文档和它的关键词。</p>
+</body>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_label" >
+<html>
+<body>
+
+<p>请点击文本标记之一，就可以触发相关控件：</p>
+
+<form>
+<label for="male">Male</label>
+<input type="radio" name="sex" id="male" />
+<br />
+<label for="female">Female</label>
+<input type="radio" name="sex" id="female" />
+</form>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_layout_divs" >
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+div#container{width:500px}
+div#header {background-color:#99bbbb;}
+div#menu {background-color:#ffff99;height:200px;width:100px;float:left;}
+div#content {background-color:#EEEEEE;height:200px;width:400px;float:left;}
+div#footer {background-color:#99bbbb;clear:both;text-align:center;}
+h1 {margin-bottom:0;}
+h2 {margin-bottom:0;font-size:18px;}
+ul {margin:0;}
+li {list-style:none;}
+</style>
+</head>
+
+<body>
+
+<div id="container">
+
+<div id="header">
+<h1>Main Title of Web Page</h1>
+</div>
+
+<div id="menu">
+<h2>Menu</h2>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+</ul>
+</div>
+
+<div id="content">Content goes here</div>
+
+<div id="footer">Copyright W3School.com.cn</div>
+
+</div>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_layout_tables" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<table width="500" border="0">
+<tr>
+<td colspan="2" style="background-color:#99bbbb;">
+<h1>Main Title of Web Page</h1>
+</td>
+</tr>
+
+<tr valign="top">
+<td style="background-color:#ffff99;width:100px;text-align:top;">
+<b>Menu</b><br />
+HTML<br />
+CSS<br />
+JavaScript
+</td>
+<td style="background-color:#EEEEEE;height:200px;width:400px;text-align:top;">
+Content goes here</td>
+</tr>
+
+<tr>
+<td colspan="2" style="background-color:#99bbbb;text-align:center;">
+Copyright W3School.com.cn</td>
+</tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_link" >
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="../html/csstest1.css" >
+</head>
+
+<body>
+<h1>我通过外部样式表进行格式化。</h1>
+<p>我也一样！</p>
+</body>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_linknoline" >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Language" content="zh-cn" />
+</head>
+
+<body>
+
+<a href="../example/html/lastpage.html" style="text-decoration:none">
+这是一个链接！
+</a>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_links" >
+<html>
+
+<body>
+
+<p>
+<a href="../index.html" >本文本</a> 是一个指向本网站中的一个页面的链接。</p>
+
+<p><a href="javascript:if" >本文本</a> 是一个指向万维网上的页面的链接。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_link_locations" >
+<html>
+
+<body>
+
+<p>
+<a href="#C4">查看 Chapter 4。</a>
+</p>
+
+<h2>Chapter 1</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 2</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 3</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2><a name="C4">Chapter 4</a></h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 5</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 6</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 7</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 8</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 9</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 10</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 11</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 12</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 13</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 14</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 15</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 16</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2>Chapter 17</h2>
+<p>This chapter explains ba bla bla</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_link_target" >
+<html>
+
+<body>
+
+<a href="javascript:if" target="_blank">Visit h5!</a>
+
+<p>如果把链接的 target 属性设置为 "_blank"，该链接会在新窗口中打开。</p>
+
+</body>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_lists_nested" >
+<html>
+
+<body>
+
+<h4>一个嵌套列表：</h4>
+<ul>
+  <li>咖啡</li>
+  <li>茶
+    <ul>
+    <li>红茶</li>
+    <li>绿茶</li>
+    </ul>
+  </li>
+  <li>牛奶</li>
+</ul>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_lists_nested2" >
+<html>
+
+<body>
+
+<h4>一个嵌套列表：</h4>
+<ul>
+  <li>咖啡</li>
+  <li>茶
+    <ul>
+    <li>红茶</li>
+    <li>绿茶
+      <ul>
+      <li>中国茶</li>
+      <li>非洲茶</li>
+      </ul>
+    </li>
+    </ul>
+  </li>
+  <li>牛奶</li>
+</ul>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_lists_ordered" >
+<html>
+<body>
+
+<h4>数字列表：</h4>
+<ol>
+ <li>苹果</li>
+ <li>香蕉</li>
+ <li>柠檬</li>
+ <li>桔子</li>
+</ol>  
+
+<h4>字母列表：</h4>
+<ol type="A">
+ <li>苹果</li>
+ <li>香蕉</li>
+ <li>柠檬</li>
+ <li>桔子</li>
+</ol>  
+
+<h4>小写字母列表：</h4>
+<ol type="a">
+ <li>苹果</li>
+ <li>香蕉</li>
+ <li>柠檬</li>
+ <li>桔子</li>
+</ol>  
+
+<h4>罗马字母列表：</h4>
+<ol type="I">
+ <li>苹果</li>
+ <li>香蕉</li>
+ <li>柠檬</li>
+ <li>桔子</li>
+</ol>  
+
+<h4>小写罗马字母列表：</h4>
+<ol type="i">
+ <li>苹果</li>
+ <li>香蕉</li>
+ <li>柠檬</li>
+ <li>桔子</li>
+</ol>  
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_lists_unordered" >
+<html>
+<body>
+
+<h4>Disc 项目符号列表：</h4>
+<ul type="disc">
+ <li>苹果</li>
+ <li>香蕉</li>
+ <li>柠檬</li>
+ <li>桔子</li>
+</ul>  
+
+<h4>Circle 项目符号列表：</h4>
+<ul type="circle">
+ <li>苹果</li>
+ <li>香蕉</li>
+ <li>柠檬</li>
+ <li>桔子</li>
+</ul>  
+
+<h4>Square 项目符号列表：</h4>
+<ul type="square">
+ <li>苹果</li>
+ <li>香蕉</li>
+ <li>柠檬</li>
+ <li>桔子</li>
+</ul>  
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_list_definition" >
+<html>
+
+<body>
+
+<h2>一个定义列表：</h2>
+
+<dl>
+   <dt>计算机</dt>
+   <dd>用来计算的仪器 ... ...</dd>
+   <dt>显示器</dt>
+   <dd>以视觉方式显示信息的装置 ... ...</dd>
+</dl>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_list_ordered" >
+<html>
+<body>
+
+<h4>一个有序列表：</h4>
+<ol>
+  <li>咖啡</li>
+  <li>茶</li>
+  <li>牛奶</li>
+</ol>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_list_test" >
+<html>
+<body>
+
+<p>有序列表：</p>
+<ol>
+  <li>打开冰箱门</li>
+  <li>把大象放进去</li>
+  <li>关上冰箱门</li>
+</ol>
+
+<p>无序列表：</p>
+<ul>
+  <li>雪碧</li>
+  <li>可乐</li>
+  <li>凉茶</li>
+</ul>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_mailto" >
+<html>
+
+<body>
+
+<p>
+这是邮件链接：
+<a href="mailto:someone@microsoft.com?subject=Hello%20again">发送邮件</a>
+</p>
+
+<p>
+<b>注意：</b>应该使用 %20 来替换单词之间的空格，这样浏览器就可以正确地显示文本了。
+</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_mailto2" >
+<html>
+
+<body>
+
+<p>
+这是另一个 mailto 链接：
+<a href="mailto:someone@microsoft.com?cc=someoneelse@microsoft.com&bcc=andsomeoneelse2@microsoft.com&subject=Summer%20Party&body=You%20are%20invited%20to%20a%20big%20summer%20party!">发送邮件！</a>
+</p>
+
+<p>
+<b>注意：</b>应该使用 %20 来替换单词之间的空格，这样浏览器就可以正确地显示文本了。
+</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_meta" >
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+<meta name="author"
+content="w3school.com.cn">
+
+<meta name="revised"
+content="David Yang,8/1/07">
+ 
+<meta name="generator"
+content="Dreamweaver 8.0en">
+
+</head>
+
+<body>
+<p>本文档的 meta 属性标识了创作者和编辑软件。</p>
+</body>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_newfont" >
+<html>
+<body>
+<h1 style="font-family:verdana">A heading</h1>
+<p style="font-family:arial;color:red;font-size:20px;">A paragraph.</p>
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_noframes" >
+<html>
+
+<frameset cols="25%,50%,25%">
+  <frame src="../example/html/frame_a.html" >
+  <frame src="../example/html/frame_b.html" >
+  <frame src="../example/html/frame_c.html" >
+
+<noframes>
+<body>您的浏览器无法处理框架！</body>
+</noframes>
+
+</frameset>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_noscript" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<script type="text/javascript">
+document.write("Hello World!")
+</script>
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+<p>不支持 JavaScript 的浏览器将显示 noscript 元素中的文本。</p>
+ 
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_object" >
+<object classid="clsid:F08DF954-8592-11D1-B16A-00C0F0283628" id="Slider1" 
+width="100" height="50">
+<param name="BorderStyle" value="1" />
+<param name="MousePointer" value="0" />
+<param name="Enabled" value="1" />
+<param name="Min" value="0" />
+<param name="Max" value="10" />
+</object>
+</iframe>
+
+<iframe id="tiyiframe_html_object_flash" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<object width="400" height="40"
+classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0">
+<param name="SRC" value="bookmark.swf" >
+<embed src="../i/bookmark.swf" ></embed>
+</object>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_object_mplayer" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<object width="100%" height="100%"
+type="video/x-ms-asf" url="/i/3d.wmv" data="3d.wmv" classid="CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6">
+<param name="url" value="3d.wmv" >
+<param name="filename" value="3d.wmv" >
+<param name="autostart" value="1">
+<param name="uiMode" value="full" />
+<param name="autosize" value="1">
+<param name="playcount" value="1">                              
+<embed type="application/x-mplayer2" src="../i/3d.wmv" width="100%" height="100%" autostart="true" showcontrols="true" pluginspage="http://www.microsoft.com/Windows/MediaPlayer/"></embed>
+</object>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_object_qtaudio" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<object width="420" height="360"
+ classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" 
+ codebase="http://www.apple.com/qtactivex/qtplugin.cab">
+<param name="src" value="../i/bird.wav" />
+<param name="controller" value="true" />
+</object>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_object_qtvideo" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<object width="420" height="360"
+ classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" 
+ codebase="http://www.apple.com/qtactivex/qtplugin.cab">
+<param name="src" value="../i/movie.mp4" />
+<param name="controller" value="true" />
+</object>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_optgroup" >
+<html>
+<body>
+
+<select>
+  <optgroup label="Swedish Cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+  </optgroup>
+  <optgroup label="German Cars">
+    <option value="mercedes">Mercedes</option>
+    <option value="audi">Audi</option>
+  </optgroup>
+</select>
+ 
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_option" >
+<html>
+<body>
+
+<select>
+  <option>Volvo</option>
+  <option>Saab</option>
+  <option>Mercedes</option>
+  <option>Audi</option>
+</select>
+ 
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_paragraphs" >
+<html>
+
+<body>
+
+<p>
+To break<br />lines<br />in a<br />paragraph,<br />use the br tag.
+</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_paragraphs0" >
+<html>
+<body>
+
+<p>This is a paragraph.
+<p>This is a paragraph.
+<p>This is a paragraph.
+
+<p>不要忘记关闭你的 HTML 标签！</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_paragraphs1" >
+<html>
+<body>
+
+<p>这是段落。</p>
+<p>这是段落。</p>
+<p>这是段落。</p>
+
+<p>段落元素由 p 标签定义。</p> 
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_paragraphs2" >
+<!DOCTYPE HTML>
+
+<html>
+
+<body>
+
+<p>
+这个段落
+在源代码中
+包含许多行
+但是浏览器
+忽略了它们。
+</p>
+
+<p>
+这个段落
+在源代码       中
+包含   许多行
+但是      浏览器
+忽略了  它们。
+</p>
+
+<p>
+段落的行数依赖于浏览器窗口的大小。如果调节浏览器窗口的大小，将改变段落中的行数。
+</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_passwordfields" >
+<html>
+
+<body>
+
+<form>
+用户：
+<input type="text" name="user">
+<br />
+密码：
+<input type="password" name="password">
+</form>
+<p>
+请注意，当您在密码域中键入字符时，浏览器将使用项目符号来代替这些字符。
+</p>
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_poem" >
+<html>
+
+<body>
+
+<h1>春晓</h1>
+
+<p>
+    春眠不觉晓，
+      处处闻啼鸟。
+        夜来风雨声，
+          花落知多少。
+</p>
+
+<p>注意，浏览器忽略了源代码中的排版（省略了多余的空格和换行）。</p>
+
+</body>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_preformattedtext" >
+<html>
+
+<body>
+
+<pre>
+这是
+预格式文本。
+它保留了      空格
+和换行。
+</pre>
+
+<p>pre 标签很适合显示计算机代码：</p>
+
+<pre>
+for i = 1 to 10
+     print i
+next i
+</pre>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_q" >
+<html>
+<body>
+
+<p>Here comes a short quotation: <q>This is a short quotation</q></p>
+
+<p>请注意，浏览器在引用的周围插入了引号。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_quotations" >
+<html>
+
+<body>
+
+这是长的引用：
+<blockquote>
+这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。这是长的引用。
+</blockquote>
+
+这是短的引用：
+<q>
+这是短的引用。
+</q>
+
+<p>
+使用 blockquote 元素的话，浏览器会插入换行和外边距，而 q 元素不会有任何特殊的呈现。
+</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_radiobuttons" >
+<html>
+
+<body>
+
+<form>
+男性：
+<input type="radio" checked="checked" name="Sex" value="male" />
+<br />
+女性：
+<input type="radio" name="Sex" value="female" />
+</form>
+
+<p>当用户点击一个单选按钮时，该按钮会变为选中状态，其他所有按钮会变为非选中状态。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_redirect" >
+<html>
+<head>
+<meta http-equiv="Refresh" content="5;url=javascript:if" >
+</head>
+
+<body>
+<p>
+对不起。我们已经搬家了。您的 URL 是 <a href="javascript:if" >http://www.ccc.com.cn</a>
+</p>
+
+<p>您将在 5 秒内被重定向到新的地址。</p>
+
+<p>如果超过 5 秒后您仍然看到本消息，请点击上面的的链接。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_s" >
+<html>
+
+<body>
+
+<p>在 HTML 5 中，<s>仍然支持</s>已经不支持这个标签了。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_script" >
+<html>
+
+<body>
+
+<script type="text/javascript">
+document.write("<h1>Hello World!</h1>")
+</script> 
+
+</body>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_strike" >
+<html>
+
+<body>
+
+<p>在 HTML 5 中，<strike>仍然支持</strike>已经不支持这个标签了。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_style" >
+<html>
+
+<head>
+<style type="text/css">
+h1 {color: red}
+p {color: blue}
+</style>
+</head>
+
+<body>
+<h1>header 1</h1>
+<p>A paragraph.</p>
+</body>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_styles" >
+<html>
+<body style="background-color:PowderBlue;">
+
+<h1>Look! Styles and colors</h1>
+
+<p style="font-family:verdana;color:red">
+This text is in Verdana and red</p>
+
+<p style="font-family:times;color:green">
+This text is in Times and green</p>
+
+<p style="font-size:30px">This text is 30 pixels high</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_sup" >
+<html>
+<body>
+
+<p>
+This text contains <sub>subscript</sub>
+</p>
+
+<p>
+This text contains <sup>superscript</sup>
+</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_table" >
+<html>
+<body>
+
+<table border="1">
+  <tr>
+    <th>Company</th>
+    <th>Address</th>
+  </tr>
+
+  <tr>
+    <td>Apple, Inc.</td>
+    <td>1 Infinite Loop Cupertino, CA 95014</td>
+  </tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_tables" >
+<html>
+
+<body>
+
+<p>每个表格由 table 标签开始。</p>
+<p>每个表格行由 tr 标签开始。</p>
+<p>每个表格数据由 td 标签开始。</p>
+
+<h4>一列：</h4>
+<table border="1">
+<tr>
+  <td>100</td>
+</tr>
+</table>
+
+<h4>一行三列：</h4>
+<table border="1">
+<tr>
+  <td>100</td>
+  <td>200</td>
+  <td>300</td>
+</tr>
+</table>
+
+<h4>两行三列：</h4>
+<table border="1">
+<tr>
+  <td>100</td>
+  <td>200</td>
+  <td>300</td>
+</tr>
+<tr>
+  <td>400</td>
+  <td>500</td>
+  <td>600</td>
+</tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_tables2" >
+<html>
+
+<body>
+
+<h4>这个表格没有边框：</h4>
+<table>
+<tr>
+  <td>100</td>
+  <td>200</td>
+  <td>300</td>
+</tr>
+<tr>
+  <td>400</td>
+  <td>500</td>
+  <td>600</td>
+</tr>
+</table>
+
+<h4>这个表格也没有边框：</h4>
+<table border="0">
+<tr>
+  <td>100</td>
+  <td>200</td>
+  <td>300</td>
+</tr>
+<tr>
+  <td>400</td>
+  <td>500</td>
+  <td>600</td>
+</tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_table_align" >
+<html>
+
+<body>
+
+<table width="400" border="1">
+ <tr>
+  <th align="left">消费项目....</th>
+  <th align="right">一月</th>
+  <th align="right">二月</th>
+ </tr>
+ <tr>
+  <td align="left">衣服</td>
+  <td align="right">$241.10</td>
+  <td align="right">$50.20</td>
+ </tr>
+ <tr>
+  <td align="left">化妆品</td>
+  <td align="right">$30.00</td>
+  <td align="right">$44.45</td>
+ </tr>
+ <tr>
+  <td align="left">食物</td>
+  <td align="right">$730.40</td>
+  <td align="right">$650.00</td>
+ </tr>
+ <tr>
+  <th align="left">总计</th>
+  <th align="right">$1001.50</th>
+  <th align="right">$744.65</th>
+ </tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_table_background" >
+<html>
+
+<body>
+
+<h4>背景颜色：</h4>
+<table border="1" bgcolor="red">
+<tr>
+  <td>First</td>
+  <td>Row</td>
+</tr>   
+<tr>
+  <td>Second</td>
+  <td>Row</td>
+</tr>
+</table>
+
+<h4>背景图像：</h4>
+<table border="1" background="../i/eg_bg_07.gif" >
+<tr>
+  <td>First</td>
+  <td>Row</td>
+</tr>   
+<tr>
+  <td>Second</td>
+  <td>Row</td>
+</tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_table_borders" >
+<html>
+
+<body>
+
+<h4>带有普通的边框：</h4>  
+<table border="1">
+<tr>
+  <td>First</td>
+  <td>Row</td>
+</tr>   
+<tr>
+  <td>Second</td>
+  <td>Row</td>
+</tr>
+</table>
+
+<h4>带有粗的边框：</h4>  
+<table border="8">
+<tr>
+  <td>First</td>
+  <td>Row</td>
+</tr>   
+<tr>
+  <td>Second</td>
+  <td>Row</td>
+</tr>
+</table>
+
+<h4>带有很粗的边框：</h4>  
+<table border="15">
+<tr>
+  <td>First</td>
+  <td>Row</td>
+</tr>   
+<tr>
+  <td>Second</td>
+  <td>Row</td>
+</tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_table_cellbackground" >
+<html>
+
+<body>
+
+<h4>单元背景：</h4>  
+<table border="1">
+<tr>
+  <td bgcolor="red">First</td>
+  <td>Row</td>
+</tr>   
+<tr>
+  <td 
+  background="../i/eg_bg_07.gif" >
+  Second</td>
+  <td>Row</td>
+</tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_table_cellpadding" >
+<html>
+
+<body>
+
+<h4>没有 cellpadding：</h4>
+<table border="1">
+<tr>
+  <td>First</td>
+  <td>Row</td>
+</tr>   
+<tr>
+  <td>Second</td>
+  <td>Row</td>
+</tr>
+</table>
+
+<h4>带有 cellpadding：</h4>
+<table border="1" 
+cellpadding="10">
+<tr>
+  <td>First</td>
+  <td>Row</td>
+</tr>   
+<tr>
+  <td>Second</td>
+  <td>Row</td>
+</tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_table_cellspacing" >
+<html>
+
+<body>
+
+<h4>没有 cellspacing：</h4>
+<table border="1">
+<tr>
+  <td>First</td>
+  <td>Row</td>
+</tr>   
+<tr>
+  <td>Second</td>
+  <td>Row</td>
+</tr>
+</table>
+
+<h4>带有 cellspacing：</h4>
+<table border="1" 
+cellspacing="10">
+<tr>
+  <td>First</td>
+  <td>Row</td>
+</tr>   
+<tr>
+  <td>Second</td>
+  <td>Row</td>
+</tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_table_elements" >
+<html>
+
+<body>
+
+<table border="1">
+<tr>
+  <td>
+   <p>这是一个段落。</p>
+   <p>这是另一个段落。</p>
+  </td>
+  <td>这个单元包含一个表格：
+   <table border="1">
+   <tr>
+     <td>A</td>
+     <td>B</td>
+   </tr>
+   <tr>
+     <td>C</td>
+     <td>D</td>
+   </tr>
+   </table>
+  </td>
+</tr>
+<tr>
+  <td>这个单元包含一个列表：
+   <ul>
+    <li>苹果</li>
+    <li>香蕉</li>
+    <li>菠萝</li>
+   </ul>
+  </td>
+  <td>HELLO</td>
+</tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_table_frame" >
+<html>
+<body>
+
+<p><b>注释：</b>frame 属性无法在 Internet Explorer 中正确地显示。</p>
+
+<p>Table with frame="box":</p>
+<table frame="box">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+<p>Table with frame="above":</p>
+<table frame="above">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+<p>Table with frame="below":</p>
+<table frame="below">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+<p>Table with frame="hsides":</p>
+<table frame="hsides">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+<p>Table with frame="vsides":</p>
+<table frame="vsides">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_table_headers" >
+<html>
+
+<body>
+
+<h4>表头：</h4>
+<table border="1">
+<tr>
+  <th>姓名</th>
+  <th>电话</th>
+  <th>电话</th>
+</tr>
+<tr>
+  <td>Bill Gates</td>
+  <td>555 77 854</td>
+  <td>555 77 855</td>
+</tr>
+</table>
+
+<h4>垂直的表头：</h4>
+<table border="1">
+<tr>
+  <th>姓名</th>
+  <td>Bill Gates</td>
+</tr>
+<tr>
+  <th>电话</th>
+  <td>555 77 854</td>
+</tr>
+<tr>
+  <th>电话</th>
+  <td>555 77 855</td>
+</tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_table_nbsp" >
+<html>
+
+<body>
+
+<table border="1">
+<tr>
+  <td>Some text</td>
+  <td>Some text</td>
+</tr>
+<tr>
+  <td></td>
+  <td>Some text</td>
+</tr>
+</table>
+
+<p>正如您看到的，其中一个单元没有边框。这是因为它是空的。在该单元中插入一个空格后，仍然没有边框。</p>
+
+<p>我们的技巧是在单元中插入一个 no-breaking 空格。</p>
+
+<p>no-breaking 空格是一个字符实体。如果您不清楚什么是字符实体，请阅读关于字符实体的章节。</p>
+
+<p>no-breaking 空格由和号开始 ("&")，然后是字符"nbsp"，并以分号结尾(";")。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_table_span" >
+<html>
+
+<body>
+
+<h4>横跨两列的单元格：</h4>
+<table border="1">
+<tr>
+  <th>姓名</th>
+  <th colspan="2">电话</th>
+</tr>
+<tr>
+  <td>Bill Gates</td>
+  <td>555 77 854</td>
+  <td>555 77 855</td>
+</tr>
+</table>
+
+<h4>横跨两行的单元格：</h4>
+<table border="1">
+<tr>
+  <th>姓名</th>
+  <td>Bill Gates</td>
+</tr>
+<tr>
+  <th rowspan="2">电话</th>
+  <td>555 77 854</td>
+</tr>
+<tr>
+  <td>555 77 855</td>
+</tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_table_test" >
+<html>
+<body>
+
+<table border="1">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_tbody" >
+<html>
+<head>
+<style type="text/css">
+thead {color:green}
+tbody {color:blue;height:50px}
+tfoot {color:red}
+</style>
+</head>
+<body>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Savings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>January</td>
+      <td>$100</td>
+    </tr>
+    <tr>
+      <td>February</td>
+      <td>$80</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Sum</td>
+      <td>$180</td>
+    </tr>
+  </tfoot>
+</table>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_textarea" >
+<html>
+<body>
+
+<p>
+This example cannot be edited
+because our editor uses a textarea
+for input,
+and your browser does not allow
+a textarea inside a textarea.
+</p>
+
+<textarea rows="10" cols="30">
+The cat was playing in the garden.
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_textformatting" >
+<html>
+
+<body>
+<b>This text is bold</b>
+<br />
+<strong>This text is strong</strong>
+<br />
+<big>This text is big</big>
+<br />
+<em>This text is emphasized</em>
+<br />
+<i>This text is italic</i>
+<br />
+<small>This text is small</small>
+<br />
+This text contains
+<sub>subscript</sub>
+<br />
+This text contains
+<sup>superscript</sup>
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_title" >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Language" content="zh-cn" />
+
+<title>标题不会显示在文档区</title>
+</head>
+
+<body>
+<p>这段文本会显示出来。</p>
+</body>
+
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_u" >
+<html>
+<body>
+
+<p>如果文本不是超链接，就不要<u>对其使用下划线</u>。</p>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_video" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video width="320" height="240" controls="controls" autoplay="autoplay">
+  <source src="../i/movie.ogg" type="video/ogg" />
+  <source src="../i/movie.mp4" type="video/mp4" />
+  <source src="../i/movie.webm" type="video/webm" />
+  <object data="../i/movie.mp4" width="320" height="240">
+    <embed width="320" height="240" src="../i/movie.swf" />
+  </object>
+</video>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_video_embed" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<embed width="320" height="240" src="../i/bookmark.swf" />
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_video_html5" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<video width="320" height="240" controls="controls" autoplay="autoplay">
+  <source src="../i/movie.ogg" type="video/ogg" />
+  <source src="../i/movie.mp4" type="video/mp4" />
+  <source src="../i/movie.webm" type="video/webm" />
+</video>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_video_link" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>点击该链接来播放这个对象</h2>
+
+<a href="../i/bookmark.swf" >播放视频文件</a> 
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_video_object" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<object width="320" height="240" data="../i/bookmark.swf" ></object>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_video_youku" >
+<!DOCTYPE html>
+<html>
+<body>
+
+<embed src="../../player.youku.com/player.php/sid/XMzI2NTc4NTMy/v.swf" 
+width="480" height="400" 
+type="application/x-shockwave-flash">
+</embed>
+
+</body>
+</html>
+</iframe>
+
+<iframe id="tiyiframe_html_tables3" >
+<html>
+
+<body>
+
+<h4>这个表格有一个标题，以及粗边框：</h4>
+
+<table border="6">
+<caption>我的标题</caption>
+<tr>
+  <td>100</td>
+  <td>200</td>
+  <td>300</td>
+</tr>
+<tr>
+  <td>400</td>
+  <td>500</td>
+  <td>600</td>
+</tr>
+</table>
+
+</body>
+</html>
+</iframe>
+</div>
+

@@ -1,0 +1,82 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 框架</h1>
+
+<p>通过使用框架，你可以在同一个浏览器窗口中显示不止一个页面。</p>
+<p>在最新的HTML5 中已经废弃了框架标签</p>
+<h1>HTML iframe</h1>
+
+<p><strong>iframe 用于在网页内显示其他网页。</strong></p>
+<iframe src="html_intro.htm"  height="200px" width="99%" style="margin-top:15px;"></iframe>
+
+<h2>添加 iframe 的语法</h2>
+<pre>&lt;iframe src=&quot;<i>URL</i>&quot;&gt;&lt;/iframe&gt;</pre>
+<p><i>URL</i> 指向隔离页面的位置。</p>
+
+<h2>Iframe - 设置高度和宽度</h2>
+<p>height 和 width 属性用于规定 iframe 的高度和宽度。</p>
+<p>属性值的默认单位是像素，但也可以用百分比来设定（比如 &quot;80%&quot;）。</p>
+<h3>实例</h3>
+<pre>&lt;iframe src=&quot;demo_iframe.htm&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;&lt;/iframe&gt;</pre>
+<p class="tiy"><a href="javascript:tiy.run('html_iframe_height_width')" >亲自试一试</a></p>
+
+<h2>iframe - 删除边框</h2>
+<p>frameborder 属性规定是否显示 iframe 周围的边框。</p>
+<p>设置属性值为 &quot;0&quot; 就可以移除边框：</p>
+<h3>实例</h3>
+<pre>&lt;iframe src=&quot;demo_iframe.htm&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</pre>
+<p class="tiy"><a href="javascript:tiy.run('html_iframe_frameborder')" >亲自试一试</a></p>
+
+<h2>使用 iframe 作为链接的目标</h2>
+<p>iframe 可用作链接的目标（target）。</p>
+<p>链接的 target 属性必须引用 iframe 的 name 属性：</p>
+<h3>实例</h3>
+<pre>
+&lt;iframe src=&quot;demo_iframe.htm&quot; <code>name=&quot;iframe_a&quot;</code>&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.w3school.com.cn&quot; <span class="marked">target=&quot;iframe_a&quot;</span>&gt;W3School.com.cn&lt;/a&gt;&lt;/p&gt;
+</pre>
+<p class="tiy"><a href="javascript:tiy.run('html_iframe_target')" >亲自试一试</a></p>
+
+
+<h2>框架</h2>
+<p>通过使用框架，你可以在同一个浏览器窗口中显示不止一个页面。每份HTML文档称为一个框架，并且每个框架都独立于其他的框架。</p>
+<p>使用框架的坏处：</p>
+<ul>
+<li>开发人员必须同时跟踪更多的HTML文档</li>
+<li>很难打印整张页面</li>
+</ul>
+
+<dl class="define">
+<dt>框架结构标签（&lt;frameset&gt;）</dt>
+<dd>
+<ul>
+<li>框架结构标签（&lt;frameset&gt;）定义如何将窗口分割为框架</li>
+<li>每个 frameset 定义了一系列行<em>或</em>列</li>
+<li>rows/columns 的值规定了每行或每列占据屏幕的面积</li>
+</ul>
+</dd>
+</dl>
+<p class="note"><span>编者注：</span>frameset 标签也被某些文章和书籍译为框架集。</p>
+
+<h2>框架标签（Frame）</h2>
+<p>Frame 标签定义了放置在每个框架中的 HTML 文档。</p>
+<p>在下面的这个例子中，我们设置了一个两列的框架集。第一列被设置为占据浏览器窗口的 25%。第二列被设置为占据浏览器窗口的 75%。HTML 文档 &quot;frame_a.htm&quot; 被置于第一个列中，而 HTML 文档 &quot;frame_b.htm&quot; 被置于第二个列中：</p>
+<pre>
+&lt;frameset cols=&#34;25%,75%&#34;&gt;
+&nbsp;&nbsp; &lt;frame src=&#34;frame_a.htm&#34;&gt;
+&nbsp;&nbsp; &lt;frame src=&#34;frame_b.htm&#34;&gt;
+&lt;/frameset&gt;
+</pre>
+
+<h2>基本的注意事项 - 有用的提示：</h2>
+<p>假如一个框架有可见边框，用户可以拖动边框来改变它的大小。为了避免这种情况发生，可以在 &lt;frame&gt; 标签中加入：noresize=&#34;noresize&#34;。</p>
+<p>为不支持框架的浏览器添加 &lt;noframes&gt; 标签。</p>
+<p class="important"><span>重要提示：</span>不能将 &lt;body&gt;&lt;/body&gt; 标签与 &lt;frameset&gt;&lt;/frameset&gt; 标签同时使用！不过，假如你添加包含一段文本的 &lt;noframes&gt; 标签，就必须将这段文字嵌套于 &lt;body&gt;&lt;/body&gt; 标签内。（实例练习中，可以查看它是如何实现的。）</p>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

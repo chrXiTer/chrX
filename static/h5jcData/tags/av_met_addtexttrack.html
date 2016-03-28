@@ -1,0 +1,98 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 Audio/Video DOM addTextTrack() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>向视频添加一个新的文本轨道：</p>
+
+<pre>
+text1=<code>myVid.addTextTrack(&quot;caption&quot;)</code>;
+text1.addCue(new TextTrackCue(&quot;Test text&quot;, 01.000, 04.000,&quot;&quot;,&quot;&quot;,&quot;&quot;,true));
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_av_met_addtexttrack')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>addTextTrack() 方法创建和返回新的文本轨道。</p>
+
+<p>新的 TextTrack 对象会被添加到视频/音频元素的文本轨道列表中。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+<pre>audio|video.addTextTrack(<i>kind</i>,<i>label</i>,<i>language</i>)</pre>
+
+<h3>参数</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>kind</i></td>
+<td>
+<p>规定文本轨道的类型。</p>
+
+<p>可能的值：</p>
+
+<ul class="listintable">
+<li>&quot;subtitles&quot;</li>
+<li>&quot;caption&quot;</li>
+<li>&quot;descriptions&quot;</li>
+<li>&quot;chapters&quot;</li>
+<li>&quot;metadata&quot;</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td><i>label</i></td>
+<td>字符串值，为文本轨道规定标签。用于为用户对文本轨道进行标识。</td>
+</tr>
+
+<tr>
+<td><i>language</i></td>
+<td>
+<p>双字母语言代码，规定文本轨道的语言。</p>
+<p>如需查看所有可用的语言代码，请参阅我们的<a href="html_ref_language_codes.htm"  title="HTML 语言代码参考手册">语言代码参考手册</a>。</p>
+</td>
+</tr>
+</table>
+
+<h3>返回值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">类型</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>TextTrack 对象</td>
+<td>表示新的文本轨道。</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

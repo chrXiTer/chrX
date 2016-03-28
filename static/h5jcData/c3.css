@@ -1,0 +1,405 @@
+*{
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+
+body{
+	font-family:Verdana, Arial, '宋体';
+	font-size:12px;
+}
+
+div#maincontent h1, div#maincontent h2 {
+	font-family:'微软雅黑';
+}
+
+pre, pre code, div#maincontent input, div#maincontent select, div#maincontent textarea {
+	font-family:"Courier New", Courier, monospace;
+}
+
+h2, h3, h4, h5, h6, em {
+	font-weight: bold;
+}
+
+p.note span, p.important span, p.tip span, p.inherited, p.inherited span, p.gototop, .html5_new_note span {
+	font-weight: bold;
+}
+
+.tiy{
+	font-weight:normal;
+}
+
+/* ---------------------------------------------------------------------- */
+div#maincontent h1{
+	font-size: 26px;
+	font-weight:400;
+}
+
+div#maincontent h2 {
+	font-size: 16px;
+}
+
+div#maincontent h3,  div#maincontent h4{
+	font-size: 13px;
+}
+
+div#maincontent button, div#maincontent input, div#maincontent select, div#maincontent textarea {
+	font-size:12px;
+}
+
+div#navsecond h2{
+	font-size: 12px;
+}
+
+em{
+	font-style:normal;
+}
+
+pre code{
+	color:#0000dd;
+}
+
+.html5_new_note{
+	background: #ffffff url("i/html5_new_note.png") top left no-repeat;
+	padding-left:20px;
+}
+
+.html5_new_note span{
+	color:blue;
+}
+
+p.gototop{
+	text-align:right;
+}
+
+span.deprecated {
+	color:#e80000;
+	}
+
+.marked {
+	color:#dd0000;
+	}
+
+
+	/* ----------------------------------- layout ----------------------------------- */
+html {
+	background: #f9f9f9;
+	overflow:scroll;
+	overflow-x:hidden;
+}
+
+body {
+	text-align: center;
+}
+
+div#wrapper, header nav {
+    max-width: 1024px;
+	  margin: 0 auto;
+	  text-align: left;
+    padding:0px 6px 0px 6px;
+}
+
+div#navsecond {
+	float: left;
+  width:120px;
+}
+div#navsecond div#courseMenuKey{
+    display:none
+}
+
+div#navsecond h2	{
+	margin:10px 0 0 12px;
+}
+
+
+div#navsecond li{
+  margin: 0px 0px 0px 12px;
+  padding: 0;
+	list-style: none;
+}
+
+
+div#maincontent{
+	  max-width: 740px;
+    margin-left:120px;/* 与navsecond的宽度相同*/
+}
+
+
+@media (max-width: 450px) {
+    div#navsecond div#courseMenuKey{
+        display:block;
+        font-weight: bold;
+
+    }
+    div#navsecond div#course{
+        display:none;
+        overflow:hidden;/* 为了能够实现：“通过改变第一个子元素节点的margin-top而进行滚动” */
+    }
+
+    div#navsecond{
+        position:fixed;
+        top:28px; /* <36 */
+        right:1px;
+        background: #e0e099;
+    }
+
+    div#navsecond li{
+      margin-top:6px;
+    }
+
+    div#maincontent{
+        margin-left:0px;
+        margin-top:36px;
+    }
+}
+
+	/* -----------------------------------Default links ------------------------------ */
+
+a:link, a:visited {
+	text-decoration : underline;
+	color : #900b09;
+}
+
+a:hover {
+	text-decoration : underline;
+	color: #ff0000;
+}
+
+a:active {
+	text-decoration : underline;
+	color : #ff0000;
+}
+
+
+div#navsecond a:link, div#navsecond a:visited	{
+	text-decoration : none;
+	color:#000;
+}
+
+div#navsecond a:hover	{
+	text-decoration : underline;
+	color : #000;
+}
+
+div#navsecond a:active	{
+	text-decoration : underline;
+	color : #000;
+}
+
+	/* ----------------------------------- Typography ----------------------------------- */
+pre	{
+	padding: 10px;
+	border: 0;
+	border: 1px dotted #785;
+	background: #f5f5f5;
+}
+
+pre code {
+	color:#0000dd;
+}
+
+pre span {
+	color:#999;
+}
+
+pre span.code_comment {
+	color:#999;
+}
+
+blockquote{
+    margin:10px;
+    background-color:#eeeeee
+}
+
+/* -----*/
+div#maincontent h1	{
+	margin:15px 0 0 15px;
+}
+
+div#maincontent h2	{
+	margin:12px 0 0 0;
+}
+
+div#maincontent h3,  div#maincontent h4{
+	margin:20px 0 0 0;
+}
+
+div#maincontent p {
+	margin: 6px 0 2px 0;
+	line-height: 150%;
+	text-indent: 2em;
+}
+
+div#maincontent ul, div#maincontent ol {
+	margin-top:10px;
+	margin-left:35px;
+	margin-bottom:0;
+}
+
+div#maincontent li {
+	margin-top:3px;
+}
+
+div#maincontent img {
+	margin:25px 0 0 25px;
+}
+
+div#maincontent div#toc div {
+	margin:0;
+	margin-top:15px;
+	margin-bottom:35px;
+	padding:0;
+	border:0;
+}
+
+div#maincontent canvas.canvas_example {
+	border:1px solid #d3d3d3;
+	background:#ffffff;
+	width:300px;
+	height:150px;
+	margin-top:15px;
+}
+
+div#maincontent div.panel,p.flip {
+	/* width:400px; */
+	margin:0;
+	padding:5px;
+	text-align:center;
+	background:#e5eecc;
+	border:solid 1px #c3c3c3;
+}
+
+div#maincontent p.flip {
+	margin-top:15px;
+}
+
+div#maincontent input[type=text]{
+	border:1px #bebebe solid;
+	height:30px;
+	padding-left:10px;
+	margin:15px 0 0 0;
+}
+
+div#maincontent input[type=submit], button{
+	border:1px #bebebe solid;
+	height:30px;
+	padding-left:5px;
+	padding-right:5px;
+}
+
+div#maincontent input[type=submit]:hover, button:hover{
+	border:1px #999 solid;
+}
+
+div#maincontent select{
+	border:1px #bebebe solid;
+	height:25px;
+	margin:15px 0 0 0;
+}
+
+/* ----------------------------------- 表格 ----------------------------------- */
+
+table.dataintable {
+	margin-top:10px;
+	border-collapse:collapse;
+	border:1px solid #aaa;
+	width:100%;
+}
+
+table.dataintable th {
+	vertical-align:baseline;
+	padding:5px 15px 5px 6px;
+	background-color:#d5d5d5;
+	border:1px solid #aaa;
+	text-align:left;
+}
+
+table.dataintable td {
+	vertical-align:text-top;
+	padding:6px 15px 6px 6px;
+	background-color:#efefef;
+	border:1px solid #aaa;
+}
+
+table.dataintable pre {
+	width:auto;
+	margin:0;
+	padding:0;
+	border:0;
+	background-color:transparent;
+}
+
+table.dataintable p {margin:0 0 2px 0;}
+
+div#maincontent table.dataintable ul, div#maincontent table.dataintable li {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+
+table.dataintable td em {
+		color:#0000ff;
+		font-weight:normal;
+}
+
+table.dataintable .table_value {color:#0F93D2;}
+
+.no_wrap {white-space:nowrap;}
+
+div#maincontent table.dataintable ul.listintable {
+	margin:20px;
+	padding:0;
+}
+
+div#maincontent table.dataintable ul.listintable  li{
+	list-style-type:disc;
+}
+
+table.dataintable td.html5_new {
+	background: #EFEFEF url("i/table_bg_html5.gif") top right no-repeat;
+	}
+
+tr.notsupported {
+	color:#999999;
+}
+
+
+/*****  css  ****/
+header {
+    width:100%;
+    background-color:#4d4545;
+    height:36px;
+    text-align:left
+}
+header nav{
+    line-height:36px;
+}
+
+nav a{
+    display:inline-block;
+    padding-left:10px;
+    padding-right:10px;
+    height:100%;
+}
+nav a:link, nav a:visited{
+    text-decoration: none;
+    color : #ffffff;
+    font-size:18px;
+}
+nav a:hover, nav a:active{
+    background-color:#6d6565;
+}
+
+.currentHeaderNavA{
+    background-color:#8d8585;
+}
+
+@media (max-width: 450px) {
+    header{
+        position:fixed;
+        top:0px;
+    }
+}
+
+

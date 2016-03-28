@@ -1,0 +1,86 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL NOW() 函数</h1>
+
+<div>
+<h2>NOW() 函数</h2>
+
+<p>NOW 函数返回当前的日期和时间。</p>
+
+<p class="tip"><span>提示：</span>如果您在使用 Sql Server 数据库，请使用 getdate() 函数来获得当前的日期时间。</p>
+
+<h3>SQL NOW() 语法</h3>
+<pre>SELECT NOW() FROM table_name</pre>
+</div>
+
+<div>
+<h2>SQL NOW() 实例</h2>
+
+<p>我们拥有下面这个 &quot;Products&quot; 表：</p>
+
+<table class="dataintable">
+  <tr>
+    <th>Prod_Id</th>
+    <th>ProductName</th>
+    <th>Unit</th>
+    <th>UnitPrice</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>gold</td>
+    <td>1000 g</td>
+    <td>32.35</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>silver</td>
+    <td>1000 g</td>
+    <td>11.56</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>copper</td>
+    <td>1000 g</td>
+    <td>6.85</td>
+  </tr>
+</table>
+
+<p>现在，我们希望显示当天的日期所对应的名称和价格。</p>
+
+<p>我们使用如下 SQL 语句：</p>
+
+<pre>SELECT ProductName, UnitPrice, Now() as PerDate FROM Products</pre>
+
+<p>结果集类似这样：</p>
+
+<table class="dataintable">
+  <tr>
+    <th>ProductName</th>
+    <th>UnitPrice</th>
+    <th>PerDate</th>
+  </tr>
+  <tr>
+    <td>gold</td>
+    <td>32.35</td>
+    <td>12/29/2008 11:36:05 AM</td>
+  </tr>
+  <tr>
+    <td>silver</td>
+    <td>11.56</td>
+    <td>12/29/2008 11:36:05 AM</td>
+  </tr>
+  <tr>
+    <td>copper</td>
+    <td>6.85</td>
+    <td>12/29/2008 11:36:05 AM</td>
+  </tr>
+</table>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

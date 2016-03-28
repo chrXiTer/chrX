@@ -1,0 +1,117 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;menu&gt; 标签</h1>
+
+<div>
+<h2>实例</h2>
+
+<p>带有两个菜单按钮 （&quot;File&quot; 和 &quot;Edit&quot;） 的工具栏，每个按钮都包含带有一系列选项的下拉列表：</p>
+
+<pre>
+<code>&lt;menu type=&quot;toolbar&quot;&gt;</code>
+ &lt;li&gt;
+ <span class="marked">&lt;menu label=&quot;File&quot;&gt;</span>
+ &lt;button type=&quot;button&quot; onclick=&quot;file_new()&quot;&gt;New...&lt;/button&gt;
+ &lt;button type=&quot;button&quot; onclick=&quot;file_open()&quot;&gt;Open...&lt;/button&gt;
+ &lt;button type=&quot;button&quot; onclick=&quot;file_save()&quot;&gt;Save&lt;/button&gt;
+ <span class="marked">&lt;/menu&gt;</span>
+ &lt;/li&gt;
+ &lt;li&gt;
+ <span class="marked">&lt;menu label=&quot;Edit&quot;&gt;</span>
+ &lt;button type=&quot;button&quot; onclick=&quot;edit_cut()&quot;&gt;Cut&lt;/button&gt;
+ &lt;button type=&quot;button&quot; onclick=&quot;edit_copy()&quot;&gt;Copy&lt;/button&gt;
+ &lt;button type=&quot;button&quot; onclick=&quot;edit_paste()&quot;&gt;Paste&lt;/button&gt;
+ <span class="marked">&lt;/menu&gt;</span>
+ &lt;/li&gt;
+<code>&lt;/menu&gt;</code>
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_menu')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>&lt;menu&gt; 标签定义命令的列表或菜单。</p>
+
+<p>&lt;menu&gt; 标签用于上下文菜单、工具栏以及用于列出表单控件和命令。</p>
+</div>
+
+<div>
+<h2>提示和注释：</h2>
+
+<p class="tip"><span>提示：</span>请使用 CSS 来设置菜单列表的样式！</p>
+</div>
+
+<div>
+<h2>HTML 4.01 与 HTML5 之间的差异</h2>
+
+<p>在 HTML 4.01 中已弃用 &lt;menu&gt; 元素。</p>
+
+<p>在 HTML5 中重新定义了 &lt;menu&gt; 元素。</p>
+</div>
+
+<div>
+<h2>HTML 与 XHTML 之间的差异</h2>
+
+<p>在 HTML 4.01 中，menu 元素不被赞成使用。</p>
+
+<p>在 XHTML 1.0 Strict DTD 中，menu 元素不被支持。</p>
+</div>
+
+<div>
+<h2>属性</h2>
+
+<p class="html5_new_note"><span>New:</span> HTML5 中的新属性。</p>
+
+<table class="dataintable">
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td class="html5_new"><a href="att_menu_label.htm"  title="HTML &lt;menu&gt; 标签的 label 属性">label</a></td>
+<td>text</td>
+<td>规定菜单的可见标签。</td>
+</tr>
+
+<tr>
+<td class="html5_new"><a href="att_menu_type.htm"  title="HTML &lt;menu&gt; 标签的 type 属性">type</a></td>
+<td>
+    <ul>
+    <li>popup</li>
+    <li>toolbar</li>
+    </ul>
+</td>
+<td>规定要显示哪种菜单类型。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>全局属性</h2>
+
+<p>&lt;menu&gt; 标签支持 <a href="html_ref_standardattributes.htm" >HTML 中的全局属性</a>。</p>
+</div>
+
+<div>
+<h2>事件属性</h2>
+
+<p>&lt;menu&gt; 标签支持 <a href="html_ref_eventattributes.htm" >HTML 中的事件属性</a>。</p>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>HTML DOM 参考手册：<a href="../jsref/dom_obj_col.htm"  title="HTML DOM Column 对象">Column 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

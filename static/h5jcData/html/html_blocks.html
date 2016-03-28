@@ -1,0 +1,91 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+
+
+<p>大多数 HTML 元素被定义为块级元素（block level element）或内联元素（行内元素：inline element）。</p>
+<h2>HTML 块元素</h2>
+<p>每个块级元素默认占一行高度，一行内添加一个块级元素后无法一般无法添加其他元素（float浮动后除外）。两个块级元素连续编辑时，会在页面自动换行显示。块级元素一般可嵌套块级元素或行内元素；</p>
+<p>块级元素一般作为容器出现，用来组织结构，但并不全是如此。有些块级元素，如&lt;form&gt;只能包含块级元素。其他的块级元素则可以包含 行级元素如&lt;p&gt;.也有一些则既可以包含块级，也可以包含行级元素。</p>
+<h3>block（块）元素的特点</h3>
+<ol>
+    <li>总是在新行上开始</li>
+    <li>高度，行高以及外边距和内边距都可控制</li>
+    <li>宽度缺省是它的容器的100%，除非设定一个宽度</li>
+    <li>它可以容纳内联元素和其他块元素</li>
+</ol>
+<p>以下是 HTML 中所有的块级元素列表（虽然”块级“在新的 HTML5 元素中没有明确定义）</p>
+<pre>
+&lt;address&gt;Contact information.
+&lt;article&gt; HTML5 Article content.
+&lt;aside&gt; HTML5 Aside content.
+&lt;audio&gt; HTML5 Audio player.
+&lt;blockquote&gt;Long ("block") quotation.
+&lt;canvas&gt; HTML5 Drawing canvas.
+&lt;dd&gt;Definition description.
+&lt;div&gt;Document division.
+&lt;dl&gt;Definition list.
+&lt;fieldset&gt;Field set label.
+&lt;figcaption&gt; HTML5Figure caption.
+&lt;figure&gt; HTML5 Groups media content with a caption (see &lt;figcaption&gt;).
+&lt;footer&gt; HTML5 Section or page footer.
+&lt;form&gt;Input form.
+&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt; Heading levels 1-6.
+&lt;header&gt; HTML5 Section or page header.
+&lt;hgroup&gt; HTML5 Groups header information.
+&lt;hr&gt; Horizontal rule (dividing line).
+&lt;main&gt;Contains the central content unique to this document.
+&lt;nav&gt;Contains navigation links.
+&lt;noscript&gt;Content to use if scripting is not supported or turned off.
+&lt;ol&gt;Ordered list.
+&lt;output&gt; HTML5 Form output.
+&lt;p&gt;Paragraph.
+&lt;pre&gt; Preformatted text.
+&lt;section&gt; HTML5 Section of a web page.
+&lt;table&gt;Table.
+&lt;tfoot&gt;Table footer.
+&lt;ul&gt;Unordered list.
+&lt;video&gt; HTML5 Video player.
+</pre>
+
+<h2>HTML 内联元素</h2>
+<p>内联元素在显示时通常不会以新行开始。</p>
+<h3>inline元素的特点</h3>
+<ol>
+    <li>和其他元素都在一行上</li>
+    <li>高，行高及外边距和内边距不可改变</li>
+    <li>宽度就是它的文字或图片的宽度，不可改变</li>
+    <li>内联元素只能容纳文本或者其他内联元素</li>
+</ol>
+<h3>行内元素，需要需要特别注意以下情况</h3>
+<ul>
+<li>设置宽度width 无效。 </li>
+<li>设置高度height 无效，可以通过line-height来设置。</li> 
+<li>设置margin 只有左右margin有效，上下无效。</li> 
+<li>设置padding 只有左右padding有效，上下则无效。注意元素范围是增大了，但是对元素周围的内容是没影响的。 </li>
+</ul>
+
+<p>以下是 HTML 中所有的内联元素列表</p>
+<pre>
+b, big, i, small, tt
+abbr, acronym, cite, code, dfn, em, kbd, strong, samp, var
+a, bdo, br, img, map, object, q, script, span, sub, sup
+button, input, label, select, textarea
+</pre>
+
+<h2>HTML &lt;div&gt; 和 &lt;span&gt;</h2>
+<p>&lt;div&gt; 和 &lt;span&gt; 是HTML中最常用的两个标签元素，它们分别为块级元素和内联元素的典型代表。当需要定义一块区域有没有找到其他合适标签时，往往都会使用这两个标签。</p>
+<p>HTML &lt;div&gt; 元素是块级元素，它可作为其它 HTML 元素的容器。</p>
+<p>&lt;div&gt; 元素没有特定的含义。除此之外，由于它属于块级元素，浏览器会在其前后显示折行。</p>
+<p>&lt;div&gt; 元素的一个常见用途是文档布局。</p>
+<p>HTML &lt;span&gt; 元素是内联元素，可用作文本的容器。</p>
+<p>&lt;span&gt; 元素也没有特定的含义。</p>
+
+<h2>其他显示级和显示级切换</h2>
+<p>除了block和inline之外，还要inline-block等多少显示级，通过css的display可以对HTML元素的显示级进行修改</p>
+</div>
+</div>
+<script src="../chrX.js"></script>

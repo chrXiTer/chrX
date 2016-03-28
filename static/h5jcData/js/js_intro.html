@@ -1,0 +1,91 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript 简介</h1>
+<p>JavaScript 是世界上最流行的编程语言，是Web前端最重要的编程语言，JavaScript 可插入到 HTML 页面中使用。</p>
+<p>以下是在浏览器上使用JavaScript的简要介绍：</p>
+<br/>
+
+<h2>JavaScript：写入 HTML 输出</h2>
+<pre>
+document.write(&quot;&lt;h1&gt;This is a heading&lt;/h1&gt;&quot;);
+document.write(&quot;&lt;p&gt;This is a paragraph&lt;/p&gt;&quot;);
+</pre>
+<p class="tiy"><a href="javascript:tiy.run('js_intro_document_write')" >试一试</a></p>
+<p class="tip"><span>提示：</span>只有在 HTML 输出过程中使用 document.write，才能添加内容。如果在文档加载完成之后使用该方法，会覆盖整个文档。</p>
+
+<h2>JavaScript：对事件作出反应</h2>
+<pre>
+&lt;button type=&quot;button&quot;
+        onclick=&quot;alert('Welcome!')&quot;&gt;点击这里
+&lt;/button&gt;
+</pre>
+<p class="tiy"><a href="javascript:tiy.run('js_intro_alert')" >试一试</a></p>
+<p>onclick 事件在用户点击后调用绑定的代码。上例中调用的<em>alert() 函数，使用方便，但对用户很不友好</em>，除了临时的测试演示之外，在正式的编码中不应该使用。</p>
+
+<h2>JavaScript：改变 HTML 内容</h2>
+<pre>
+x=document.getElementById(&quot;demo&quot;)  <span>//查找元素</span>
+x.innerHTML=&quot;Hello JavaScript&quot;;    <span>//改变内容</span>
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('js_intro_inner_html')" >亲自试一试</a></p>
+<p>document.getElementByID(&quot;<i>some id</i>&quot;)会经常看到。这个方法是 HTML DOM 中定义的，是用以访问 HTML 元素标准。</p>
+
+<h2>JavaScript：改变 HTML 图像</h2>
+<p>动态地改变 HTML &lt;image&gt; 的图片来源 (src)。<br/>点击灯泡来点亮或熄灭这盏灯：</p>
+<script>
+function changeImage(){
+	element=document.getElementById('myimage')
+	if (element.src.match("bulbon")){
+		element.src="../i/eg_bulboff.gif";
+	}else{
+		element.src="../i/eg_bulbon.gif";
+	}
+}
+</script>
+<img id="myimage" onclick="changeImage()" src="../i/eg_bulboff.gif" >
+<p>点击事件代码如下：</p>
+<pre>
+function changeImage(){
+  element=document.getElementById('myimage')
+  if(element.src.match("bulbon")){
+    element.src="../i/eg_bulboff.gif";
+  }else{
+    element.src="../i/eg_bulbon.gif";
+  }
+}
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('js_lightbulb')" >亲自试一试</a></p>
+<p>JavaScript 能够改变任意 HTML 元素的大多数属性，而不仅仅是图片。</p>
+
+<h2>JavaScript：改变 HTML 样式</h2>
+<p>改变 HTML 元素的样式，属于改变 HTML 属性的变种。</p>
+<pre>
+x=document.getElementById(&quot;demo&quot;)  <span>//找到元素</span>
+x.style.color=&quot;#ff0000&quot;;           <span>//改变样式</span>
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('js_intro_style')" >试一试</a></p>
+
+<h2>JavaScript：验证输入</h2>
+<p>JavaScript 常用于验证用户的输入。</p>
+<pre>if(isNaN(x)) {alert(&quot;Not Numeric&quot;)};</pre>
+<p class="tiy"><a href="javascript:tiy.run('js_intro_validate')" >试一试</a></p>
+
+
+<h2>JavaScript 扩展阅读</h2>
+<p class="tip"><span>提示：</span>JavaScript 与 Java 是两种完全不同的语言，JavaScript标准还有一个JavaScript的官方名称：ECMAScript。</p>
+<p>JavaScript 由 Brendan Eich 花了10天时间发明。它于 1995 年出现在 Netscape 中（该浏览器已停止更新），并于 1997 年被 ECMA（一个标准协会）采纳。</p>
+<p>
+<a href="pro_js_implement.htm"  title="JavaScript 实现">JavaScript 实现</a>
+</p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

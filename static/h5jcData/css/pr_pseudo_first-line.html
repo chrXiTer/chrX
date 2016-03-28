@@ -1,0 +1,86 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS :first-line 伪元素</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>:first-line 伪元素向文本的首行添加特殊样式。</p>
+<p>这个伪元素用于设置元素中的第一行文本的样式，而不论该行出现多少单词。</p>
+<p>:first-line 只能与块级元素关联。可以应用到首字母的属性是有限的。</p>
+<p class="note"><span>注释：</span>下列属性应用于 :first-line 伪元素：</p>
+<ul>
+<li>font 属性</li>
+<li>color 属性</li>
+<li>background 属性</li>
+<li>word-spacing</li>
+<li>letter-spacing</li>
+<li>text-decoration</li>
+<li>vertical-align</li>
+<li>text-transform</li>
+<li>line-height</li>
+<li>clear</li>
+</ul>
+
+<p>伪元素可与 CSS 类结合：</p>
+<pre><code>p.article:first-line {color: #FF0000}</code>
+
+&lt;p <span style="font-weight:bold; color:#00FF00;">class=&quot;article&quot;</span>&gt;A paragraph in an article&lt;/p&gt;</pre>
+ 
+<p>本例将把所有 class=&quot;article&quot; 的段落的第一行字符设置为红色。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>向段落的第一个字符添加特殊样式：</p>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+<code>p:first-line
+  {
+  color:#ff0000;
+  font-variant:small-caps;
+  }</code>
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;p&gt;This is a text.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p><a href="../tiy/t.asp-f=csse_firstline.htm" >TIY</a> （在页面底部可以找到更多实例）</p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有主流浏览器都支持 :first-line 伪元素。</p>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="../tiy/t.asp-f=csse_firstletter.htm" >向首字母添加样式</a></dt>
+<dt><a href="../tiy/t.asp-f=csse_firstline_letter.htm" >向首字母和首行添加样式</a></dt>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

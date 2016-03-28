@@ -1,0 +1,88 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML5 canvas translate() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在位置 (10,10) 处绘制一个矩形，将新的 (0,0) 位置设置为 (70,70)。再次绘制新的矩形（请注意现在矩形从位置 (80,80) 开始绘制）：</p>
+
+<canvas id="myCanvas" class="canvas_example">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+var c=document.getElementById("myCanvas");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+	var ctx=c.getContext("2d");
+	ctx.fillRect(10,10,100,50);
+	ctx.translate(70,70);
+	ctx.fillRect(10,10,100,50);
+	}
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+ctx.fillRect(10,10,100,50);
+<code>ctx.translate(70,70);</code>
+ctx.fillRect(10,10,100,50);
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_translate')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>translate() 方法重新映射画布上的 (0,0) 位置。</p>
+
+<p class="note"><span>注释：</span>当您在 translate() 之后调用诸如 fillRect() 之类的方法时，值会添加到 x 和 y 坐标值上。</p>
+
+<img src="../i/translate.gif"  alt="translate() 方法的图示" />
+
+<h3>JavaScript 语法：</h3>
+
+<pre>context.translate(<i>x</i>,<i>y</i>);</pre>
+
+<h3>参数值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">参数</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>x</i></td>
+<td>添加到水平坐标（x）上的值</td>
+</tr>
+
+<tr>
+<td><i>y</i></td>
+<td>添加到垂直坐标（y）上的值</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

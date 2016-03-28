@@ -1,0 +1,108 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML5 canvas arcTo() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在画布上创建介于两个切线之间的弧：</p>
+
+<canvas id="myCanvas" class="canvas_example">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+var c=document.getElementById("myCanvas");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+	var ctx=c.getContext("2d");
+	ctx.beginPath();     
+	ctx.moveTo(20,20);
+	ctx.lineTo(100,20);
+	ctx.arcTo(150,20,150,70,50);
+	ctx.lineTo(150,120);
+	ctx.stroke();
+	}
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+ctx.beginPath();
+ctx.beginPath();
+ctx.moveTo(20,20);           <span class="code_comment">// 创建开始点</span>
+ctx.lineTo(100,20);          <span class="code_comment">// 创建水平线</span>
+ctx.arcTo(150,20,150,70,50); <span class="code_comment">// 创建弧</span>
+ctx.lineTo(150,120);         <span class="code_comment">// 创建垂直线</span>
+ctx.stroke();                <span class="code_comment">// 进行绘制</span>
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_arctohtml5_canvas_arcto')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>arcTo() 方法在画布上创建介于两个切线之间的弧/曲线。</p>
+
+<p class="tip"><span>提示：</span>请使用 stroke() 方法在画布上绘制确切的弧。</p>
+
+<h3>JavaScript 语法：</h3>
+
+<pre>context.fillRect(<i>x1</i>,<i>y1</i>,<i>x2</i>,<i>y2</i>,<i>r</i>);</pre>
+
+<h3>参数值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">参数</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>x1</i></td>
+<td>弧的起点的 x 坐标</td>
+</tr>
+
+<tr>
+<td><i>y1</i></td>
+<td>弧的起点的 y 坐标</td>
+</tr>
+
+<tr>
+<td><i>x2</i></td>
+<td>弧的终点的 x 坐标</td>
+</tr>
+
+<tr>
+<td><i>y2</i></td>
+<td>弧的终点的 y 坐标</td>
+</tr>
+
+<tr>
+<td><i>r</i></td>
+<td>弧的半径</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

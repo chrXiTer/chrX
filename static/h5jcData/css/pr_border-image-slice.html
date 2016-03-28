@@ -1,0 +1,103 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS3 border-image-slice 属性</h1>
+
+<div class="backtoreference">
+<p><a href="index.htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>规定图像边框的向内偏移：</p>
+<pre>
+div
+{
+border-image-source: url(border.png);
+<code>border-image-slice: 50% 50%;</code>
+}
+</pre>
+
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+
+<p>目前主流浏览器都不支持 border-image-slice 属性。</p>
+<p>请参阅 <a href="pr_border-image.htm" title="CSS3 border-image 属性">border-image</a> 属性。</p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>border-image-slice 属性规定图像边框的向内偏移。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">100%</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS3</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.borderImageSlice=&quot;50% 50%&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>border-image-slice: <i>number</i>|<i>%</i>|fill;</pre>
+
+<p class="note"><span>注释：</span>该属性规定图像的上、右、下、左侧边缘的向内偏移，图像被分割为九个区域：四个角、四条边以及一个中间区域。除非使用了关键词 fill，否则中间的图像部分会被丢弃。如果省略第四个数值/百分比，则与第二个值相同。如果省略第三个值，则与第一个值相同。如果省略第二个值，则与第一个值相同。</p>
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>number</i></td>
+<td>数字值，代表图像中像素（如果是光栅图像）或矢量坐标（如果是矢量图像）。</td>
+</tr>
+
+<tr>
+<td><i>%</i></td>
+<td>相对于图像尺寸的百分比值：图像的宽度影响水平偏移，高度影响垂直偏移。</td>
+</tr>
+
+<tr>
+<td>fill</td>
+<td>保留边框图像的中间部分。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>CSS3 教程：<a href="../css3/css3_border.htm" title="CSS3 边框">CSS3 边框</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href="index.htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+<!-- maincontent end -->
+
+</div>
+<!-- wrapper end -->
+
+<script src="../chrX.js"></script>

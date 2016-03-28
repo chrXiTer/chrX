@@ -1,0 +1,189 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL 快速参考</h1>
+
+<h2>SQL 语句</h2>
+<table class="dataintable">
+    <tr>
+      <th>语句</th>
+      <th>语法</th>
+    </tr>
+    <tr>
+      <td>AND / OR</td>
+      <td>SELECT column_name(s)<br />
+		FROM table_name<br />
+		WHERE condition<br />
+		AND|OR condition</td>
+    </tr>
+	<tr>
+      <td>ALTER TABLE (add column)</td>
+      <td>ALTER TABLE table_name <br />
+		ADD column_name datatype</td>
+    </tr>
+	<tr>
+      <td>ALTER TABLE (drop column)</td>
+      <td>ALTER TABLE table_name <br />
+		DROP COLUMN column_name</td>
+    </tr>
+	<tr>
+      <td>AS (alias for column)</td>
+      <td>SELECT column_name AS column_alias<br />
+		FROM table_name</td>
+    </tr>
+	<tr>
+      <td>AS (alias for table)</td>
+      <td>SELECT column_name<br />
+		FROM table_name&nbsp; AS table_alias</td>
+    </tr>
+	<tr>
+      <td>BETWEEN</td>
+      <td>SELECT column_name(s)<br />
+		FROM table_name<br />
+		WHERE column_name<br />
+		BETWEEN value1 AND value2</td>
+    </tr>
+	<tr>
+      <td>CREATE DATABASE</td>
+      <td>CREATE DATABASE database_name</td>
+    </tr>
+	<tr>
+      <td>CREATE INDEX</td>
+      <td>CREATE INDEX index_name<br />
+		ON table_name (column_name)</td>
+    </tr>
+	<tr>
+      <td>CREATE TABLE</td>
+      <td>CREATE TABLE table_name<br />
+		(<br />
+		column_name1 data_type,<br />
+		column_name2 data_type,<br />
+		.......<br />
+		)</td>
+    </tr>
+	<tr>
+      <td>CREATE UNIQUE INDEX</td>
+      <td>CREATE UNIQUE INDEX index_name<br />
+		ON table_name (column_name)</td>
+    </tr>
+	<tr>
+      <td>CREATE VIEW</td>
+      <td>CREATE VIEW view_name AS<br />
+		SELECT column_name(s)<br />
+		FROM table_name<br />
+		WHERE condition</td>
+    </tr>
+	<tr>
+      <td>DELETE FROM</td>
+      <td>DELETE FROM table_name <br />
+		(<b>Note: </b>Deletes the entire table!!)<p><i>or</i></p>
+		<p>DELETE FROM table_name<br />
+		WHERE condition</p></td>
+    </tr>
+	<tr>
+      <td>DROP DATABASE</td>
+      <td>DROP DATABASE database_name</td>
+    </tr>
+	<tr>
+      <td>DROP INDEX</td>
+      <td>DROP INDEX table_name.index_name</td>
+    </tr>
+	<tr>
+      <td>DROP TABLE</td>
+      <td>DROP TABLE table_name</td>
+    </tr>
+	<tr>
+      <td>GROUP BY</td>
+      <td>SELECT column_name1,SUM(column_name2)<br />
+		FROM table_name<br />
+		GROUP BY column_name1</td>
+    </tr>
+	<tr>
+      <td>HAVING</td>
+      <td>SELECT column_name1,SUM(column_name2)<br />
+		FROM table_name<br />
+		GROUP BY column_name1<br />
+		HAVING SUM(column_name2) condition value</td>
+    </tr>
+	<tr>
+      <td>IN</td>
+      <td>SELECT column_name(s)<br />
+		FROM table_name<br />
+		WHERE column_name<br />
+		IN (value1,value2,..)</td>
+    </tr>
+	<tr>
+      <td>INSERT INTO</td>
+      <td>INSERT INTO table_name<br />
+		VALUES (value1, value2,....)<p><i>or</i></p>
+		<p>INSERT INTO table_name<br />
+		(column_name1, column_name2,...)<br />
+		VALUES (value1, value2,....)</p></td>
+    </tr>
+	<tr>
+      <td>LIKE</td>
+      <td>SELECT column_name(s)<br />
+		FROM table_name<br />
+		WHERE column_name<br />
+		LIKE pattern</td>
+    </tr>
+	<tr>
+      <td>ORDER BY</td>
+      <td>SELECT column_name(s)<br />
+		FROM table_name<br />
+		ORDER BY column_name [ASC|DESC]</td>
+    </tr>
+    <tr>
+      <td>SELECT</td>
+      <td>SELECT column_name(s)<br />
+		FROM table_name</td>
+    </tr>
+    <tr>
+      <td>SELECT *</td>
+      <td>SELECT *<br />
+		FROM table_name</td>
+    </tr>
+    <tr>
+      <td>SELECT DISTINCT</td>
+      <td>SELECT DISTINCT column_name(s)<br />
+		FROM table_name</td>
+    </tr>
+    <tr>
+      <td>SELECT INTO<br />
+		(used to create backup copies of 
+		tables)</td>
+      <td>SELECT *<br />
+		INTO new_table_name<br />
+		FROM original_table_name<p><i>or</i></p>
+		<p>SELECT column_name(s)<br />
+		INTO new_table_name<br />
+		FROM original_table_name</p></td>
+    </tr>
+    <tr>
+      <td>TRUNCATE TABLE<br />
+		(deletes only the data inside 
+		the table)</td>
+      <td>TRUNCATE TABLE table_name</td>
+    </tr>
+	<tr>
+      <td>UPDATE</td>
+      <td>UPDATE table_name<br />
+		SET column_name=new_value<br />
+		[, column_name=new_value]<br />
+		WHERE column_name=some_value</td>
+    </tr>
+    <tr>
+      <td>WHERE</td>
+      <td>SELECT column_name(s)<br />
+		FROM table_name<br />
+		WHERE condition</td>
+    </tr>
+</table>
+
+
+</div>
+</div>
+<script src="../chrX.js"></script>

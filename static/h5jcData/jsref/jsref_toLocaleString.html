@@ -1,0 +1,70 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript toLocaleString() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>toLocaleString() 方法可根据本地时间把 Date 对象转换为字符串，并返回结果。</p>
+
+<h3>语法</h3>
+<pre>dateObject.toLocaleString()</pre>
+
+<h3>返回值</h3>
+<p>dateObject 的字符串表示，以本地时间区表示，并根据本地规则格式化。</p>
+</div>
+	
+<div>
+<h2>实例</h2>
+
+<h3>例子 1</h3>
+<p>在本例中，我们将根据本地时间把今天的日期转换为字符串：</p>
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+
+var d = new Date()
+document.write(d.toLocaleString())
+
+&lt;/script&gt;</pre>
+<p>输出：</p>
+<pre><script type="text/javascript">
+	var d = new Date()
+	document.write (d.toLocaleString())
+</script></pre>
+
+<h3>例子 2</h3>
+<p>在本例中，我们将根据本地时间把具体的日期转换为字符串：</p>
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+
+var born = new Date(&quot;July 21, 1983 01:15:00&quot;)
+document.write(born.toLocaleString())
+
+&lt;/script&gt;</pre>
+<p>输出：</p>
+<pre><script type="text/javascript">
+var born = new Date("July 21, 1983 01:15:00")
+document.write(born.toLocaleString())
+</script></pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+<dl>
+<dt><a href="javascript:tiy.run('jseg_tolocalestring')" >toLocaleString()</a></dt>
+<dd>如何使用 toLocaleString() 来根据本地时间把今天的日期转换为字符串。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

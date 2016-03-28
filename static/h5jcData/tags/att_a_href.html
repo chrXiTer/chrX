@@ -1,0 +1,96 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;a&gt; 标签的 href 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_a.htm" >HTML &lt;a&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>href 属性规定链接的目标：</p>
+
+<pre>&lt;a <code>href=&quot;http://h5jc.sinaapp.com/&quot;</code>&gt;W3School&lt;/a&gt;</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_a_href')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>&lt;a&gt; 标签的 href 属性用于指定超链接目标的 URL。</p>
+<p>href 属性的值可以是任何有效文档的相对或绝对 URL，包括片段标识符和 JavaScript 代码段。如果用户选择了 &lt;a&gt; 标签中的内容，那么浏览器会尝试检索并显示 href 属性指定的 URL 所表示的文档，或者执行 JavaScript 表达式、方法和函数的列表。</p>
+</div>
+
+<div>
+<h2>提示和注释</h2>
+
+<p class="important"><span>注意：</span>&lt;a&gt; 标签中必须提供 href 属性或 name 属性。</p>
+</div>
+
+<div>
+<h2>制作文本链接</h2>
+<p>一个引用其他文档的简单 &lt;a&gt; 标签可以是下列形式：</p>
+<pre>&lt;a href=&quot;/chrX/nofile/123index.html&quot;&gt;W3School 在线教程&lt;/a&gt;</pre>
+<p>浏览器用特殊效果显示短语“W3School 在线教程”（通常是带下划线的蓝色文本），这样用户就会知道它是一个可以链接到其他文档的超链接。就像这样：</p>
+<p><a href="/chrX/nofile/123index.html" vvll="my"  style="color:#0000ff;">W3School 在线教程</a></p>
+<p>用户还可以利用浏览器中的选项来自己指定文本颜色、设置链接前和链接后链接文本的颜色。</p>
+<p class="tip"><span>提示：</span>可以使用 <a href="../css/css_pseudo_classes.htm"  title="CSS 伪类 (Pseudo-classes)">CSS 伪类</a>向文本超链接添加复杂而多样的样式。</p>
+</div>
+
+<div>
+<h2>制作图像链接</h2>
+<p>更复杂的锚还可以包含图像。下面这个 LOGO 是一个图像链接，点击该图像，可以返回 W3school 的首页：</p>
+<pre>&lt;a href=&quot;/chrX/nofile/123index.html&quot;&gt;
+&lt;img src=&quot;/i/w3school_logo_white.gif&quot; /&gt;
+&lt;/a&gt;</pre>
+<p>上面的代码会为 W3School 的 LOGO 添加一个返回首页的超链接：</p>
+<a href="/chrX/nofile/123index.html" vvll="my" ><img src="../i/w3school_logo_white.gif"  alt="W3School 在线教程" /></a>
+<p>大多数图形浏览器都会在作为锚的一部分的图像周围放置特殊的边框。通过在 &lt;img&gt; 标签中把图像的 <a href="att_img_border.htm"  title="HTML &lt;img&gt; 标签的 border 属性">border 属性</a>设置为 0 可以删除超链接的边框。也可以使用 <a href="../css/css_border_outline.htm"  title="CSS 边框">CSS 的边框属性</a>来全局性地改变元素的边框样式。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;a href=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td><i>URL</i></td>
+    <td>超链接的 URL。可能的值：
+		<ul class="listintable">
+			<li>绝对 URL - 指向另一个站点（比如 href=&quot;http://www.example.com/index.htm&quot;）</li>
+			<li>相对 URL - 指向站点内的某个文件（href=&quot;index.htm&quot;）</li>
+			<li>锚 URL - 指向页面中的锚（href=&quot;#top&quot;）</li>
+		</ul>
+    </td>
+  </tr>
+</table>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="javascript:tiy.run('html_links')" >创建超级链接</a></dt>
+<dd>本例演示如何在 HTML 文档中创建链接。</dd>
+<dt><a href="javascript:tiy.run('html_imglink')" >将图像作为链接</a></dt>
+<dd>本例演示如何使用图像作为链接。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_a.htm" >HTML &lt;a&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

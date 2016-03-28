@@ -1,0 +1,186 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS3 transition-timing-function 属性</h1>
+
+<div class="backtoreference">
+<p><a href="index.htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>以相同的速度从开始到结束的过渡效果：</p>
+<pre>
+div
+{
+transition-timing-function: linear;
+-moz-transition-timing-function: linear; /* Firefox 4 */
+-webkit-transition-timing-function: linear; /* Safari 和 Chrome */
+-o-transition-timing-function: linear; /* Opera */
+}
+</pre>
+
+<p><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/t.asp?f=css3_transition-timing-function  \n\n'))window.location='/chrX/nofile/123tiy/t.asp?f=css3_transition-timing-function'" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+
+<p>目前所有浏览器都不支持 transition-timing-function 属性。</p>
+<p>Firefox 4 支持替代的 -moz-transition-timing-function 属性。</p>
+<p>Safari 和 Chrome 支持替代的 -webkit-transition-timing-function 属性。</p>
+<p>Opera 支持替代的 -o-transition-timing-function 属性。</p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>transition-timing-function 属性规定过渡效果的速度曲线。</p>
+<p>该属性允许过渡效果随着时间来改变其速度。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">ease</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS3</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.transitionTimingFunction=&quot;linear&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>transition-timing-function: linear|ease|ease-in|ease-out|ease-in-out|cubic-<br />bezier(<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>);</pre>
+
+<table class="dataintable">
+<tr>
+<th style="width:18%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>linear</td>
+<td>规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。</td>
+</tr>
+
+<tr>
+<td>ease</td>
+<td>规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。</td>
+</tr>
+
+<tr>
+<td>ease-in</td>
+<td>规定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。</td>
+</tr>
+
+<tr>
+<td>ease-out</td>
+<td>规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。</td>
+</tr>
+
+<tr>
+<td>ease-in-out</td>
+<td>规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。</td>
+</tr>
+
+<tr>
+<td>cubic-bezier(<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>)</td>
+<td>在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。</td>
+</tr>
+</table>
+
+<p class="tip"><span>提示：</span>请在实例中测试不同的值，这样可以更好地理解它们的工作原理。</p>
+</div>
+
+<div>
+<h2>亲自试一试 - 实例</h2>
+
+<h3>实例 1</h3>
+
+<p>为了更好地理解不同的函数值，请看下面带有五个不同值的五个不同的 div 元素：</p>
+<pre>
+#div1 {transition-timing-function: linear;}
+#div2 {transition-timing-function: ease;}
+#div3 {transition-timing-function: ease-in;}
+#div4 {transition-timing-function: ease-out;}
+#div5 {transition-timing-function: ease-in-out;}
+<span class="code_comment">/* Firefox 4: */</span>
+#div1 {-moz-transition-timing-function: linear;}
+#div2 {-moz-transition-timing-function: ease;}
+#div3 {-moz-transition-timing-function: ease-in;}
+#div4 {-moz-transition-timing-function: ease-out;}
+#div5 {-moz-transition-timing-function: ease-in-out;}
+<span class="code_comment">/* Safari and Chrome: */</span>
+#div1 {-webkit-transition-timing-function: linear;}
+#div2 {-webkit-transition-timing-function: ease;}
+#div3 {-webkit-transition-timing-function: ease-in;}
+#div4 {-webkit-transition-timing-function: ease-out;}
+#div5 {-webkit-transition-timing-function: ease-in-out;}
+<span class="code_comment">/* Opera: */</span>
+#div1 {-o-transition-timing-function: linear;}
+#div2 {-o-transition-timing-function: ease;}
+#div3 {-o-transition-timing-function: ease-in;}
+#div4 {-o-transition-timing-function: ease-out;}
+#div5 {-o-transition-timing-function: ease-in-out;}
+</pre>
+
+<p><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/t.asp?f=css3_transition-timing-function2  \n\n'))window.location='/chrX/nofile/123tiy/t.asp?f=css3_transition-timing-function2'" >亲自试一试</a></p>
+<h3>实例 2</h3>
+
+<p>与上例相同，但通过 cubic-bezier 来规定速度曲线：</p>
+<pre>
+#div1 {transition-timing-function: cubic-bezier(0,0,1,1;}
+#div2 {transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);}
+#div3 {transition-timing-function: cubic-bezier(0.42,0,1,1);}
+#div4 {transition-timing-function: cubic-bezier(0,0,0.58,1);}
+#div5 {transition-timing-function: cubic-bezier(0.42,0,0.58,1);}
+<span class="code_comment">/* Firefox 4: */</span>
+#div1 {-moz-transition-timing-function: cubic-bezier(0,0,0.25,1);}
+#div2 {-moz-transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);}
+#div3 {-moz-transition-timing-function: cubic-bezier(0.42,0,1,1);}
+#div4 {-moz-transition-timing-function: cubic-bezier(0,0,0.58,1);}
+#div5 {-moz-transition-timing-function: cubic-bezier(0.42,0,0.58,1);}
+<span class="code_comment">/* Safari and Chrome: */</span>
+#div1 {-webkit-transition-timing-function: cubic-bezier(0,0,1,1;}
+#div2 {-webkit-transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);}
+#div3 {-webkit-transition-timing-function: cubic-bezier(0.42,0,1,1);}
+#div4 {-webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);}
+#div5 {-webkit-transition-timing-function: cubic-bezier(0.42,0,0.58,1);}
+<span class="code_comment">/* Opera: */</span>
+#div1 {-o-transition-timing-function: cubic-bezier(0,0,1,1;}
+#div2 {-o-transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);}
+#div3 {-o-transition-timing-function: cubic-bezier(0.42,0,1,1);}
+#div4 {-o-transition-timing-function: cubic-bezier(0,0,0.58,1);}
+#div5 {-o-transition-timing-function: cubic-bezier(0.42,0,0.58,1);}
+</pre>
+
+<p><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/t.asp?f=css3_transition-timing-function3  \n\n'))window.location='/chrX/nofile/123tiy/t.asp?f=css3_transition-timing-function3'" >亲自试一试</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href="index.htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+<!-- maincontent end -->
+
+</div>
+<!-- wrapper end -->
+
+<script src="../chrX.js"></script>
+
+

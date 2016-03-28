@@ -1,0 +1,111 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript setTime() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>setTime() 方法以毫秒设置 Date 对象。</p>
+
+<h3>语法</h3>
+
+<pre>dateObject.setTime(<i>millisec</i>)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td><i>millisec</i></td>
+    <td>必需。要设置的日期和时间据 GMT 时间 1970 年 1 月 1 日午夜之间的毫秒数。这种类型的毫秒值可以传递给 Date() 构造函数，可以通过调用 Date.UTC() 和 Date.parse() 方法获得该值。以毫秒形式表示日期可以使它独立于时区。</td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+
+<p>返回参数 <i>millisec</i>。在 ECMAScript 标准化之前，该方法不返回值。</p>
+</div>
+
+<div>
+<h2>提示和注释：</h2>
+
+<p class="note"><span>注释：</span>该方法总是结合一个 Date 对象来使用。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<h3>例子 1</h3>
+
+<p>在本例中，我们将向 1970/01/01 添加 77771564221 毫秒，并显示新的日期和时间：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var d = new Date()
+d.setTime(77771564221)
+document.write(d)
+
+&lt;/script&gt;</pre>
+<p>输出：</p>
+<pre><script type="text/javascript">
+
+var d = new Date()
+d.setTime(77771564221)
+document.write(d)
+
+</script>
+</pre>
+
+<h3>例子 2</h3>
+
+<p>在本例中，我们将从 1970/01/01 减去 77771564221 毫秒，并显示新的日期和时间：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var d = new Date()
+d.setTime(-77771564221)
+document.write(d)
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>
+<script type="text/javascript">
+
+var d = new Date()
+d.setTime(-77771564221)
+document.write(d)
+
+</script>
+</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_settime')" >setTime()</a></dt>
+<dd>使用 setTime() 向 1970/01/01 添加毫秒，并显示新的日期和时间。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

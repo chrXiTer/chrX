@@ -1,0 +1,165 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;a&gt; 标签</h1>
+
+<h2>定义和用法</h2>
+<p>&lt;a&gt; 标签定义超链接，用于从一张页面链接到另一张页面。</p>
+<p>&lt;a&gt; 元素最重要的属性是 href 属性，它指示链接的目标。</p>
+<p>链接的默认外观是：</p>
+<ul>
+<li style="text-decoration: underline; color:#0000ff;">未被访问的链接带有下划线而且是蓝色的</li>
+<li style="text-decoration: underline; color:purple;">已被访问的链接带有下划线而且是紫色的</li>
+<li style="text-decoration: underline; color:red;">活动链接带有下划线而且是红色的</li>
+</ul>
+<p class="tip"><span>提示：</span>可以使用 <a href="../css/css_pseudo_classes.htm"  title="CSS 伪类 (Pseudo-classes)">CSS 伪类</a> 向文本超链接添加复杂而多样的样式。</p>
+
+<h2>术语解释</h2>
+<p><a href="tag_term_hypertext.htm" >什么是超文本？</a></p>
+<p class="tip"><span>提示：</span>如果不使用 href 属性，则不可以使用如下属性：download, hreflang, media, rel, target 以及 type 属性。</p>
+<p class="tip"><span>提示：</span>被链接页面通常显示在当前浏览器窗口中，除非您规定了另一个目标（target 属性）。</p>
+<p class="tip"><span>提示：</span>请使用 CSS 来设置链接的样式。</p>
+<p>在 HTML 4.01 中，&lt;a&gt; 标签可以是超链接或锚。在 HTML5 中，&lt;a&gt; 标签始终是超链接，但是如果未设置 href 属性，则只是超链接的占位符。</p>
+
+<p>指向百度的超链接：</p>
+<pre>&lt;a href=&quot;http://www.baidu.com&quot;&gt;baidul&lt;/a&gt;</pre>
+<p class="tiy"><a href="javascript:tiy.run('html_a')" >试一试</a></p>
+
+<h2>属性</h2>
+<p class="note"><span style="color:blue;">New</span> : HTML5 中的新属性。</p>
+
+<table class="dataintable">
+<tr>
+<th style="width:20%;">属性</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><a href="att_a_charset.htm"  title="HTML &lt;a&gt; 标签的 charset 属性">charset</a></td>
+<td><i>char_encoding</i></td>
+<td><span class="marked">HTML5 中不支持。</span>规定被链接文档的字符集。</td>
+</tr>
+
+<tr>
+<td><a href="att_a_coords.htm"  title="HTML &lt;a&gt; 标签的 coords 属性">coords</a></td>
+<td><i>coordinates</i></td>
+<td><span class="marked">HTML5 中不支持。</span>规定链接的坐标。</td>
+</tr>
+
+<tr>
+<td class="html5_new"><a href="att_a_download.htm"  title="HTML5 &lt;a&gt; download 属性">download</a></td>
+<td><i>filename</i></td>
+<td>规定被下载的超链接目标。</td>
+</tr>
+
+<tr>
+<td><a href="att_a_href.htm"  title="HTML &lt;a&gt; 标签的 href 属性">href</a></td>
+<td><i>URL</i></td>
+<td>规定链接指向的页面的 URL。</td>
+</tr>
+
+<tr>
+<td><a href="att_a_hreflang.htm"  title="HTML &lt;a&gt; 标签的 hreflang 属性">hreflang</a></td>
+<td><i>language_code</i></td>
+<td>规定被链接文档的语言。</td>
+</tr>
+
+<tr>
+<td class="html5_new"><a href="att_a_media.htm"  title="HTML5 &lt;a&gt; media 属性">media</a></td>
+<td><i>media_query</i></td>
+<td>规定被链接文档是为何种媒介/设备优化的。</td>
+</tr>
+
+<tr>
+<td><a href="att_a_name.htm"  title="HTML &lt;a&gt; 标签的 name 属性">name</a></td>
+<td><i>section_name</i></td>
+<td><span class="marked">HTML5 中不支持。</span>规定锚的名称。</td>
+</tr>
+
+<tr>
+<td><a href="att_a_rel.htm"  title="HTML &lt;a&gt; 标签的 rel 属性">rel</a></td>
+<td><i>text</i></td>
+<td>规定当前文档与被链接文档之间的关系。</td>
+</tr>
+
+<tr>
+<td><a href="att_a_rev.htm"  title="HTML &lt;a&gt; 标签的 rev 属性">rev</a></td>
+<td><i>text</i></td>
+<td><span class="marked">HTML5 中不支持。</span>规定被链接文档与当前文档之间的关系。</td>
+</tr>
+
+<tr>
+<td><a href="att_a_shape.htm"  title="HTML &lt;a&gt; 标签的 shape 属性">shape</a></td>
+<td>
+	<ul>
+	<li>default</li>
+	<li>rect</li>
+	<li>circle</li>
+	<li>poly</li>
+	</ul>
+</td>
+<td><span class="marked">HTML5 中不支持。</span>规定链接的形状。</td>
+</tr>
+
+<tr>
+<td><a href="att_a_target.htm"  title="HTML &lt;a&gt; 标签的 target 属性">target</a></td>
+<td>
+	<ul>
+	<li>_blank</li>
+	<li>_parent</li>
+	<li>_self</li>
+	<li>_top</li>
+	<li><i>framename</i></li>
+	</ul>
+</td>
+<td>规定在何处打开链接文档。</td>
+</tr>
+
+<tr>
+<td class="html5_new"><a href="att_a_type.htm"  title="HTML5 &lt;a&gt; type 属性">type</a></td>
+<td><i>MIME type</i></td>
+<td>规定被链接文档的的 MIME 类型。</td>
+</tr>
+</table>
+
+
+
+<h2>全局属性</h2>
+<p>&lt;a&gt; 标签支持 <a href="html_ref_standardattributes.htm" >HTML 中的全局属性</a>。</p>
+
+
+<h2>事件属性</h2>
+<p>&lt;a&gt; 标签支持 <a href="html_ref_eventattributes.htm" >HTML 中的事件属性</a>。</p>
+
+<h2>试一试 - 实例</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('html_links')" >创建超级链接</a></dt>
+<dd>本例演示如何在 HTML 文档中创建链接。</dd>
+<dt><a href="javascript:tiy.run('html_imglink')" >将图像作为链接</a></dt>
+<dd>本例演示如何使用图像作为链接。</dd>
+<dt><a href="javascript:tiy.run('html_link_locations')" >链接到同一个页面的不同位置</a></dt>
+<dd>本例演示如何使用链接跳转至文档的另一个部分</dd>
+<dt><a href="javascript:tiy.run('html_link_target')" >在新的浏览器窗口打开链接</a></dt>
+<dd>本例演示如何在新窗口打开一个页面，这样的话访问者就无需离开你的站点了。</dd>
+<dt><a href="javascript:tiy.run('html_frame_getfree')" >跳出框架</a></dt>
+<dd>本例演示如何跳出框架，假如你的页面被固定在框架之内。</dd>
+<dt><a href="javascript:tiy.run('html_mailto')" >创建电子邮件链接</a></dt>
+<dd>本例演示如何如何链接到一个邮件。（本例在安装邮件客户端程序后才能工作。）</dd>
+<dt><a href="javascript:tiy.run('html_mailto2')" >创建电子邮件链接 2</a></dt>
+<dd>本例演示更加复杂的邮件链接。</dd>
+</dl>
+
+<h2>相关页面</h2>
+
+<p>HTML 教程：<a href="../html/html_links.htm"  title="HTML 链接">HTML 链接</a></p>
+<p>HTML DOM 参考手册：<a href="../jsref/dom_obj_anchor.htm"  title="HTML DOM Anchor 对象">Anchor 对象</a></p>
+
+
+</div>
+</div>
+<script src="../chrX.js"></script>

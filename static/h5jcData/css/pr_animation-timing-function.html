@@ -1,0 +1,188 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS3 animation-timing-function 属性</h1>
+
+<div class="backtoreference">
+<p><a href="index.htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>为 @keyframes 动画规定一个名称：</p>
+<pre>
+div
+{
+animation-timing-function:2s;
+-webkit-animation-timing-function:2s; <span class="code_comment">/* Safari 和 Chrome */</span>
+}
+</pre>
+
+<p><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/t.asp?f=css3_animation-timing-function  \n\n'))window.location='/chrX/nofile/123tiy/t.asp?f=css3_animation-timing-function'" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+
+<p>Internet Explorer 10、Firefox 以及 Opera 支持 animation-timing-function 属性。</p>
+<p>Safari 和 Chrome 支持替代的 -webkit-animation-timing-function 属性。</p>
+<p class="note"><span>注释：</span>Internet Explorer 9 以及更早的版本不支持 animation-timing-function 属性。</p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>animation-timing-function 规定动画的速度曲线。</p>
+<p>速度曲线定义动画从一套 CSS 样式变为另一套所用的时间。</p>
+<p>速度曲线用于使变化更为平滑。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">ease</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS3</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.animationTimingFunction=&quot;linear&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>animation-timing-function: <i>value</i>;</pre>
+
+<p>animation-timing-function 使用名为三次贝塞尔（Cubic Bezier）函数的数学函数，来生成速度曲线。您能够在该函数中使用自己的值，也可以预定义的值：</p>
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+<th style="width:8%;">测试</th>
+</tr>
+
+<tr>
+<td>linear</td>
+<td>动画从头到尾的速度是相同的。</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_animation-timing-function  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_animation-timing-function'" >测试</a></td>
+</tr>
+
+<tr>
+<td>ease</td>
+<td>默认。动画以低速开始，然后加快，在结束前变慢。</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_animation-timing-function&p=2  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_animation-timing-function&p=2'" >测试</a></td>
+</tr>
+
+<tr>
+<td>ease-in</td>
+<td>动画以低速开始。</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_animation-timing-function&p=3  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_animation-timing-function&p=3'" >测试</a></td>
+</tr>
+
+<tr>
+<td>ease-out</td>
+<td>动画以低速结束。</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_animation-timing-function&p=4  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_animation-timing-function&p=4'" >测试</a></td>
+</tr>
+
+<tr>
+<td>ease-in-out</td>
+<td>动画以低速开始和结束。</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_animation-timing-function&p=5  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_animation-timing-function&p=5'" >测试</a></td>
+</tr>
+
+<tr>
+<td>cubic-bezier(<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>)</td>
+<td>在 cubic-bezier 函数中自己的值。可能的值是从 0 到 1 的数值。</td>
+<td></td>
+</tr>
+</table>
+
+<p class="tip"><span>提示：</span>请试着在下面的“亲自试一试”功能中使用不同的值。</p>
+</div>
+
+<div>
+<h2>亲自试一试 - 实例</h2>
+
+<h3>实例 1</h3>
+
+<p>为了更好地理解不同的定时函数值，这里提供了设置五个不同值的五个不同的 div 元素：</p>
+<pre>
+<span class="code_comment">/* W3C 和 Opera: */</span>
+#div1 {animation-timing-function: linear;}
+#div2 {animation-timing-function: ease;}
+#div3 {animation-timing-function: ease-in;}
+#div4 {animation-timing-function: ease-out;}
+#div5 {animation-timing-function: ease-in-out;}
+<span class="code_comment">/* Firefox: */</span>
+#div1 {-moz-animation-timing-function: linear;}
+#div2 {-moz-animation-timing-function: ease;}
+#div3 {-moz-animation-timing-function: ease-in;}
+#div4 {-moz-animation-timing-function: ease-out;}
+#div5 {-moz-animation-timing-function: ease-in-out;}
+<span class="code_comment">/* Safari 和 Chrome: */</span>
+#div1 {-webkit-animation-timing-function: linear;}
+#div2 {-webkit-animation-timing-function: ease;}
+#div3 {-webkit-animation-timing-function: ease-in;}
+#div4 {-webkit-animation-timing-function: ease-out;}
+#div5 {-webkit-animation-timing-function: ease-in-out;}
+</pre>
+
+<p><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/t.asp?f=css3_animation-timing-function2  \n\n'))window.location='/chrX/nofile/123tiy/t.asp?f=css3_animation-timing-function2'" >亲自试一试</a></p>
+<h3>实例 2</h3>
+
+<p>与上例相同，但是通过 cubic-bezier 函数来定义速度曲线：</p>
+<pre>
+<span class="code_comment">/* W3C 和 Opera: */</span>
+#div1 {animation-timing-function: cubic-bezier(0,0,1,1);}
+#div2 {animation-timing-function: cubic-bezier(0.25,0.1,0.25,1);}
+#div3 {animation-timing-function: cubic-bezier(0.42,0,1,1);}
+#div4 {animation-timing-function: cubic-bezier(0,0,0.58,1);}
+#div5 {animation-timing-function: cubic-bezier(0.42,0,0.58,1);}
+<span class="code_comment">/* Firefox: */</span>
+#div1 {-moz-animation-timing-function: cubic-bezier(0,0,1,1);}
+#div2 {-moz-animation-timing-function: cubic-bezier(0.25,0.1,0.25,1);}
+#div3 {-moz-animation-timing-function: cubic-bezier(0.42,0,1,1);}
+#div4 {-moz-animation-timing-function: cubic-bezier(0,0,0.58,1);}
+#div5 {-moz-animation-timing-function: cubic-bezier(0.42,0,0.58,1);}
+<span class="code_comment">/* Safari 和 Chrome: */</span>
+#div1 {-webkit-animation-timing-function: cubic-bezier(0,0,1,1);}
+#div2 {-webkit-animation-timing-function: cubic-bezier(0.25,0.1,0.25,1);}
+#div3 {-webkit-animation-timing-function: cubic-bezier(0.42,0,1,1);}
+#div4 {-webkit-animation-timing-function: cubic-bezier(0,0,0.58,1);}
+#div5 {-webkit-animation-timing-function: cubic-bezier(0.42,0,0.58,1);}
+</pre>
+
+<p><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/t.asp?f=css3_animation-timing-function3  \n\n'))window.location='/chrX/nofile/123tiy/t.asp?f=css3_animation-timing-function3'" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>CSS3 教程：<a href="../css3/css3_animation.htm" title="CSS3 动画">CSS3 动画</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href="index.htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+<!-- maincontent end -->
+
+</div>
+<!-- wrapper end -->
+
+<script src="../chrX.js"></script>
+
+

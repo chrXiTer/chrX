@@ -1,0 +1,119 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript 全局对象</h1>
+<h2>全局对象描述</h2>
+<p>全局对象是预定义的对象，作为 JavaScript 的全局函数和全局属性的占位符。在 JavaScript 代码嵌入一个特殊环境中时，全局对象通常具有环境特定的属性，甚至不同的名字，在浏览器中这个全局变量就是window，在其它环境中可能是其他名字。</p>
+<p>在最顶层的 JavaScript 代码中，还可以用关键字 this 引用全局对象。但平常使用全局对象中的属性（全局属性）和方法（全局方法），并不需要直接引用全局对象。因为全局对象是作用域链的头，所有非限定性的变量和函数名都会作为该对象的属性来查询。例如，当JavaScript 代码引用 parseInt() 函数时，它引用的是全局对象的 parseInt 属性。全局对象是作用域链的头，还意味着在顶层 JavaScript 代码中声明的所有变量都将成为全局对象的属性。</p>
+
+<p>在 JavaScript 核心语言中，全局对象的预定义属性都是不可枚举的，但可以用 for/in 循环列出所有隐式或显式声明的全局变量，如下所示：</p>
+<pre>
+var variables = "";
+for (var name in this) {
+	variables += name + "&lt;br /&gt;";
+}
+document.write(variables);
+</pre>
+<p class="tiy"><a href="javascript:tiy.run('jseg_global')" >TIY</a></p>
+
+
+<h2>顶层函数（全局函数）</h2>
+<table class="dataintable">
+  <tr>
+    <th style="width:35%">函数</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td><a href="jsref_decodeURI.htm" >decodeURI()</a></td>
+    <td>解码某个编码的 URI。</td>
+  </tr>
+  <tr>
+    <td><a href="jsref_decodeURIComponent.htm" >decodeURIComponent()</a></td>
+    <td>解码一个编码的 URI 组件。</td>
+  </tr>
+  <tr>
+    <td><a href="jsref_encodeuri.htm" >encodeURI()</a></td>
+    <td>把字符串编码为 URI。</td>
+  </tr>
+  <tr>
+    <td><a href="jsref_encodeURIComponent.htm" >encodeURIComponent()</a></td>
+    <td>把字符串编码为 URI 组件。</td>
+  </tr>
+  <tr>
+    <td><a href="jsref_escape.htm" >escape()</a></td>
+    <td>对字符串进行编码。</td>
+  </tr>
+  <tr>
+    <td><a href="jsref_eval.htm" >eval()</a></td>
+    <td>计算 JavaScript 字符串，并把它作为脚本代码来执行。</td>
+  </tr>
+  <tr>
+    <td><a href="jsref_getClass.htm" >getClass()</a></td>
+    <td>返回一个 JavaObject 的 JavaClass。</td>
+  </tr>
+  <tr>
+    <td><a href="jsref_isFinite.htm" >isFinite()</a></td>
+    <td>检查某个值是否为有穷大的数。</td>
+  </tr>
+  <tr>
+    <td><a href="jsref_isNaN.htm" >isNaN()</a></td>
+    <td>检查某个值是否是数字。</td>
+  </tr>
+  <tr>
+    <td><a href="jsref_number.htm" >Number()</a></td>
+    <td>把对象的值转换为数字。</td>
+  </tr>
+  <tr>
+    <td><a href="jsref_parseFloat.htm" >parseFloat()</a></td>
+    <td>解析一个字符串并返回一个浮点数。</td>
+  </tr>
+  <tr>
+    <td><a href="jsref_parseInt.htm" >parseInt()</a></td>
+    <td>解析一个字符串并返回一个整数。</td>
+  </tr>
+  <tr>
+    <td><a href="jsref_string.htm" >String()</a></td>
+    <td>把对象的值转换为字符串。</td>
+  </tr>
+  <tr>
+    <td><a href="jsref_unescape.htm" >unescape()</a></td>
+    <td>对由 escape() 编码的字符串进行解码。</td>
+  </tr>
+</table>
+
+<h2>顶层属性（全局属性）</h2>
+<table class="dataintable">
+  <tr>
+    <th style="width:35%">方法</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td><a href="jsref_infinity.htm" >Infinity</a></td>
+    <td>代表正的无穷大的数值。</td>
+  </tr>
+  <tr>
+    <td><a href="jsref_java.htm" >java</a></td>
+    <td>代表 java.* 包层级的一个 JavaPackage。</td>
+  </tr>
+  <tr>
+    <td><a href="jsref_nan.htm" >NaN</a></td>
+    <td>指示某个值是不是数字值。</td>
+  </tr>
+  <tr>
+    <td><a href="jsref_Packages.htm" >Packages</a></td>
+    <td>根 JavaPackage 对象。</td>
+  </tr>
+  <tr>
+    <td><a href="jsref_undefined.htm" >undefined</a></td>
+    <td>指示未定义的值。</td>
+  </tr>
+</table>
+
+
+
+</div>
+</div>
+<script src="../chrX.js"></script>

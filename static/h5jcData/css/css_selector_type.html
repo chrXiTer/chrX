@@ -1,0 +1,94 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS 元素选择器（类型选择器）</h1> 
+
+<div>
+<h2>CSS 元素选择器</h2>
+<p>元素选择器又称为类型选择器（type selector）。“类型选择器匹配文档语言元素类型的名称。类型选择器匹配文档树中该元素类型的每一个实例。”</p>
+<p>元素选择器 CSS 选择器，可以利用某个 HTML 元素标签，比如 p、h1、em、a，甚至 html 。</p>
+
+<p>下面的规则匹配文档树中所有 h1 元素：</p>
+<pre>h1 {font-family: sans-serif;}</pre>
+
+<p>其他示例：</p>
+<pre>
+html {color:black;}
+h1 {color:blue;}
+h2 {color:silver;}
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_selector_type_1')">试一试</a></p>
+<p>设置段落文本为灰色。而不设置h1 可以改成下面的形式：</p>
+<pre>
+html {color:black;}
+<code>p {color:gray;}</code>
+h2 {color:silver;}
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_selector_type_2')">试一试</a></p>
+
+<hr />
+<p>我们也可以为 XML 文档中的元素设置样式：</p>
+<h3>XML 文档：</h3>
+
+<pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+<code>&lt;?xml-stylesheet type=&quot;text/css&quot; href=&quot;note.css&quot;?&gt;</code>
+&lt;note&gt;
+&lt;to&gt;George&lt;/to&gt;
+&lt;from&gt;John&lt;/from&gt;
+&lt;heading&gt;Reminder&lt;/heading&gt;
+&lt;body&gt;Don't forget the meeting!&lt;/body&gt;
+&lt;/note&gt;
+</pre>
+
+<h3>CSS 文档：</h3>
+<pre>
+note
+  {
+  font-family:Verdana, Arial;
+  margin-left:30px;
+  }
+
+to
+  {
+  font-size:28px;
+  display: block;
+  }
+
+from
+  {
+  font-size:28px;
+  display: block;
+  }
+
+heading
+  {
+  color: red;
+  font-size:60px;
+  display: block;
+  }
+
+body
+  {
+  color: blue;
+  font-size:35px;
+  display: block;
+  }
+</pre>
+
+<p><a href="../example/csse/note_css.xml.htm" >查看效果</a></p>
+<p>如果您需要更多关于为 XML 文档添加样式的知识<a href="../xml/index.htm" >XML 教程</a>。</p>
+</div> 
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+
+

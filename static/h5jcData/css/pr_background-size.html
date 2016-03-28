@@ -1,0 +1,136 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>CSS3 background-size 属性</h1>
+
+<div class="backtoreference">
+<p><a href="index.htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>规定背景图像的尺寸：</p>
+<pre>
+div
+{
+background:url(img_flwr.gif);
+<code>background-size:80px 60px;</code>
+background-repeat:no-repeat;
+}
+</pre>
+
+<p><a target="_blank" href="../tiy/t.asp-f=css3_background-size.htm" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+
+<p>IE9+、Firefox 4+、Opera、Chrome 以及 Safari 5+ 支持 background-size 属性。</p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>background-size 属性规定背景图像的尺寸。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">auto</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS3</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.backgroundSize=&quot;60px 80px&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>background-size: <i>length</i>|<i>percentage</i>|cover|contain;</pre>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+<th style="width:8%;">测试</th>
+</tr>
+
+<tr>
+<td><i>length</i></td>
+<td>
+	<p>设置背景图像的高度和宽度。</p>
+	<p>第一个值设置宽度，第二个值设置高度。</p>
+	<p>如果只设置一个值，则第二个值会被设置为 &quot;auto&quot;。</p>
+</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_background-size  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_background-size'" >测试</a></td>
+</tr>
+
+<tr>
+<td><i>percentage</i></td>
+<td>
+	<p>以父元素的百分比来设置背景图像的宽度和高度。</p>
+	<p>第一个值设置宽度，第二个值设置高度。</p>
+	<p>如果只设置一个值，则第二个值会被设置为 &quot;auto&quot;。</p>
+</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_background-size&p=5  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_background-size&p=5'" >测试</a></td>
+</tr>
+
+<tr>
+<td>cover</td>
+<td>
+	<p>把背景图像扩展至足够大，以使背景图像完全覆盖背景区域。</p>
+	<p>背景图像的某些部分也许无法显示在背景定位区域中。</p>
+</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_background-size&p=7  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_background-size&p=7'" >测试</a></td>
+</tr>
+
+<tr>
+<td>contain</td>
+<td>把图像图像扩展至最大尺寸，以使其宽度和高度完全适应内容区域。</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_background-size&p=8  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_background-size&p=8'" >测试</a></td>
+</tr>
+</table>
+</div>
+
+<div class="example">
+<h2>亲自试一试 - 实例</h2>
+
+<dl>
+<dt><a target="_blank" href="../tiy/t.asp-f=css3_background-size2.htm" >拉伸背景图像</a></dt>
+<dd>拉伸背景图像来完全覆盖内容区域。</dd>
+
+<dt><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/t.asp?f=css3_background-size3  \n\n'))window.location='/chrX/nofile/123tiy/t.asp?f=css3_background-size3'" >拉伸背景图像，对背景图像水平复制四次</a></dt>
+<dd>对背景图像进行拉伸，以使背景图像恰好水平复制四次。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>CSS3 教程：<a href="../css3/css3_background.htm" title="CSS3 背景">CSS3 背景</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href="index.htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+<!-- maincontent end -->
+
+</div>
+<!-- wrapper end -->
+
+<script src="../chrX.js"></script>
+

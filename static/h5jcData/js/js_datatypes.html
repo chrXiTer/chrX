@@ -1,0 +1,308 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript 数据类型</h1>
+<p>JavaScript中有6种数据类型：包括5种简单数据类型（原始数据类型）：Undefined, Null, Boolean（布尔）, Number（数字）, String（字符串）和1种复杂数据类型Object（对象）。</p>
+<p>Array（数组）类型和function（函数）类型都属于Object（对象）类型，无论它们采用什么方式定义，本质上都是各自类型的对象，也都属于Object类型。</p>
+<p>原始类型的Boolean、Number、String都有相应的Object(对象)类型，它们与各自的原始类型常常可以混用，有时会自动转化。但这些类型的对象跟各自的元素类型属于不同类型，在一些情况下必须清楚这些不同。</p>
+
+<h2>typeof 运算符</h2>
+<p>typeof 运算符用于检测变量的类型。</p>
+
+<pre>
+var sTemp = &quot;test string&quot;;
+alert (typeof sTemp);  <span>//输出 &quot;string&quot;</span>
+alert (typeof 86);  <span>//输出 &quot;number&quot;</span>
+</pre>
+
+<p>对变量或值调用 typeof 运算符将返回下列值之一：</p>
+<ul>
+<li>"undefined" - 变量是 Undefined 类型的</li>
+<li>"boolean" - 变量是 Boolean 类型的</li>
+<li>"number" - 变量是 Number 类型的</li>
+<li>"string" - 变量是 String 类型的</li>
+<li>"object" - 变量是Object类型（但不是function类型）或 Null 类型</li>
+<li>"function" - 变量是function类型</li>
+</ul>
+<p class="note"><span>注释：</span>null 常被用于表示空的对象，所以typeof null被规定为"object"。function类型与其它的Object类型相比有一些特殊性质， 所以typeof为其专门返回一个结果”function“</p>
+
+
+
+<h2>Undefined 类型</h2>
+<p>Undefined 类型只有一个值，即<em>undefined</em>。当声明的变量未初始化时，该变量的默认值是 undefined。</p>
+<pre>
+var oTemp;
+alert(oTemp == undefined);
+alert(typeof oTemp); <span>//输出 &quot;undefined&quot;</span>
+</pre>
+<p>前面第一行代码声明变量 oTemp，没有初始值。该变量将被初始化为值 undefined，即 undefined 类型的字面量。第二行代码检测oTemp的值是否为undefined，将显示 &quot;true&quot;，说明这两个值确实相等。第三行代码用 typeof 运算符显示该变量的值：结果为undefined：</p>
+<p>当函数无明确返回值时，返回的也是值 &quot;undefined&quot;，如下所示：</p>
+<pre>
+function testFunc() {
+}
+
+alert(testFunc() == undefined);  <span>//输出 &quot;true&quot;</span>
+</pre>
+
+<p class="tip"><span>提示：</span>值为 undefined 的变量和未声明的变量并不相同。但是，typeof 运算符并不区分这两种值。考虑下面的代码：</p>
+<pre>
+var oTemp;
+alert(typeof oTemp);  <span>//输出 &quot;undefined&quot;</span>
+alert(typeof oTemp2);  <span>//输出 &quot;undefined&quot;</span>
+</pre>
+
+<p>前面的代码对两个变量输出的都是 &quot;undefined&quot;，即使只有变量 oTemp2 从未被声明过。<em>但是</em>，如果对 oTemp2 使用除 typeof 之外的其他运算符的话，会引起错误，因为其他运算符只能用于已声明的变量上。</p>
+<p>例如，下面的代码将引发错误：</p>
+<pre>
+var oTemp;
+alert(oTemp2 == undefined); //出错
+</pre>
+
+<h2>Null 类型</h2>
+<p>类型是 Null也只有一个专用值<em>null</em>。值 undefined 实际上是从值 null 派生来的，因此 ECMAScript 把它们定义为相等的。</p>
+
+<pre>
+alert(null == undefined);  <span>//输出 &quot;true&quot;</span>
+</pre>
+
+<p>尽管这两个值相等，但它们的含义不同。undefined 是声明了变量但未对其初始化时赋予该变量的值，null 则用于表示尚未存在的对象（在讨论 typeof 运算符时，简单地介绍过这一点）。如果函数或方法要返回的是对象，那么找不到该对象时，返回的通常是 null。</p>
+
+<h2>Boolean 类型</h2>
+<p>Boolean 类型是 ECMAScript 中最常用的类型之一。它有两个值 true 和 false （即两个 Boolean 字面量）。</p>
+<p>即使 false 不等于 0，0 也可以在必要时被转换成 false，这样在 Boolean 语句中使用两者都是安全的。</p>
+
+<pre>
+var bFound = true;
+var bLost = false;
+</pre>
+
+<h2>Number 类型</h2>
+<p>JavaScript中的数字采用 IEEE-754 format 存储，存储的是64位的浮点数。</p>
+<p>直接输入的（而不是从另一个变量访问的）任何数字都被看做 Number 类型的字面量。例如，下面的代码声明了存放整数值的变量，它的值由字面量 86 定义：</p>
+<pre>var iNum = 86;</pre>
+<h3>八进制数和十六进制数</h3>
+<p>整数也可以被表示为八进制（以 8 为底）或十六进制（以 16 为底）的字面量。八进制字面量的首数字必须是 0，其后的数字可以是任何八进制数字（0-7），如下面的代码所示：</p>
+<pre>var iNum = 070;  <span>//070 等于十进制的 56</span></pre>
+<p>要创建十六进制的字面量，首位数字必须为 0，后面接字母 x，然后是任意的十六进制数字（0 到 9 和 A 到 F）。这些字母可以是大写的，也可以是小写的。例如：</p>
+<pre>
+var iNum = 0x1f;  <span>//0x1f 等于十进制的 31</span>
+var iNum = 0xAB;  <span>//0xAB 等于十进制的 171</span>
+</pre>
+
+<p class="tip"><span>提示：</span>尽管所有整数都可以表示为八进制或十六进制的字面量，但所有数学运算返回的都是十进制结果。</p>
+<h3>浮点数</h3>
+
+<p>要定义浮点值，必须包括小数点和小数点后的一位数字（例如，用 1.0 而不是 1）。这被看作浮点数字面量。例如：</p>
+<pre>var fNum = 5.0;</pre>
+
+<p><strong>对于浮点字面量的有趣之处在于，用它进行计算前，真正存储的是字符串。</strong></p>
+
+<h3>科学计数法</h3>
+<p>对于非常大或非常小的数，可以用科学计数法表示浮点数，可以把一个数表示为数字（包括十进制数字）加 e（或 E），后面加乘以 10 的倍数。例如：</p>
+
+<pre>var fNum = 5.618e7</pre>
+
+<p>该符号表示的是数 56180000。把科学计数法转化成计算式就可以得到该值：5.618 x 10<sup>7</sup>。</p>
+<p>也可以用科学计数法表示非常小的数，例如 0.00000000000000008 可以表示为 8-e<sup>17</sup>（这里，10 被升到 -17 次冥，意味着需要被 10 除 17 次）。ECMAScript 默认把具有 6 个或 6 个以上前导 0 的浮点数转换成科学计数法。</p>
+
+<h3>特殊的 Number 值</h3>
+
+<p>JavaScript中能够表示的最大正值为 Number.MAX_VALUE（一般为：1.7976931348623157e+308），最小正值为 Number.MIN_VALUE（一般为：5e-324），它们定义了 Number 值集合的边界。所有 ECMAScript 数都必须在这两个值之间。</p>
+<p>当计算生成的数大于 Number.MAX_VALUE 时，它将被赋予值 Number.POSITIVE_INFINITY（输出时会用infinity表示）；同样，生成的数值小于 -Number.MAX_VALUE 的计算也会被赋予值 Number.NEGATIVE_INFINITY（输出时会用infinity表示）。无法再进行正常的计算。
+<em>注意</em>：由于Number.MAX_VALUE太大，以及数字表示的精度问题，当Number.MAX_VALUE加一个比较小的数，比如1、100、1000、10000等，相当于没加，得到的结果依然为Number.MAX_VALUE所以不会变为Number.POSITIVE_INFINITY。
+</p>
+<p>当计算生成的正数小于 Number.MIN_VALUE时（或者负数大于 -Number.MIN_VALUE），它将被赋值为 0。</p>
+<p>如果计算返回的是无穷大值，那么生成的结果不能再用于其他计算。可以对任何数调用 isFinite() 方法，以检查该数是不是无穷大。例如：</p>
+
+<pre>
+var iResult = iNum * some_really_large_number;
+
+<code>if (isFinite(iResult))</code> {
+    alert(&quot;finite&quot;);
+}
+
+else {
+    alert(&quot;infinite&quot;);
+}
+</pre>
+
+<p>最后一个特殊值是 NaN，表示非数（Not a Number）。NaN 是个奇怪的特殊值。一般说来，这种情况发生在类型（String、Boolean 等）转换失败时。例如，要把单词 blue 转换成数值就会失败，因为没有与之等价的数值。与无穷大一样，NaN 也不能用于算术计算。NaN 的另一个奇特之处在于，它与自身不相等，这意味着下面的代码将返回 false：</p>
+
+<pre>alert(NaN == NaN);  <span>//输出 &quot;false&quot;</span></pre>
+
+<p>出于这个原因，不推荐使用 NaN 值本身。函数 isNaN() 会做得相当好：</p>
+
+<pre>
+alert(isNaN(&quot;blue&quot;));  <span>//输出 &quot;true&quot;</span>
+alert(isNaN(&quot;666&quot;));  <span>//输出 &quot;false&quot;</span>
+</pre>
+
+<h2>String 类型</h2>
+
+<p>String 类型的独特之处在于，它是唯一没有固定大小的原始类型。可以用字符串存储 0 或更多的 Unicode 字符，有 16 位整数表示（Unicode 是一种国际字符集，本教程后面将讨论它）。</p>
+
+<p>字符串中每个字符都有特定的位置，首字符从位置 0 开始，第二个字符在位置 1，依此类推。这意味着字符串中的最后一个字符的位置一定是字符串的长度减 1：</p>
+
+<img src="../i/ct_js_string.gif"  alt="字符串的长度和字符的位置" />
+
+<p>字符串字面量是由双引号（&quot;）或单引号（'）声明的。而 Java 则是用双引号声明字符串，用单引号声明字符。但是由于 ECMAScript 没有字符类型，所以可使用这两种表示法中的任何一种。例如，下面的两行代码都有效：</p>
+
+<pre>
+var sColor1 = &quot;red&quot;;
+var sColor2 = 'red';
+</pre>
+
+<p>String 类型还包括几种字符字面量，Java、C 和 Perl 的开发者应该对此非常熟悉。</p>
+
+<p>下面列出了 ECMAScript 的字符字面量：</p>
+
+<table class="dataintable">
+<tr>
+<th>字面量</th>
+<th>含义</th>
+</tr>
+
+<tr>
+<td>\n</td>
+<td>换行</td>
+</tr>
+
+<tr>
+<td>\t</td>
+<td>制表符</td>
+</tr>
+
+<tr>
+<td>\\</td>
+<td>反斜杠</td>
+</tr>
+
+<tr>
+<td>\'</td>
+<td>单引号</td>
+</tr>
+
+<tr>
+<td>\&quot;</td>
+<td>双引号</td>
+</tr>
+
+<tr>
+<td>\0<i>nnn</i></td>
+<td>八进制代码 <i>nnn</i> 表示的字符（<i>n</i> 是 0 到 7 中的一个八进制数字）</td>
+</tr>
+
+<tr>
+<td>\x<i>nn</i></td>
+<td>十六进制代码 <i>nn</i> 表示的字符（<i>n</i> 是 0 到 F 中的一个十六进制数字）</td>
+</tr>
+
+<tr>
+<td>\u<i>nnnn</i></td>
+<td>十六进制代码 <i>nnnn</i> 表示的 Unicode 字符（<i>n</i> 是 0 到 F 中的一个十六进制数字）</td>
+</tr>
+</table>
+
+<h2>动态类型</h2>
+<p>JavaScript 变量拥有动态类型。这意味着相同的变量可用作不同的类型：</p>
+<pre>
+var x                <span class="code_comment">// x 为 undefined</span>
+var x = 6;           <span class="code_comment">// x 为数字</span>
+var x = &quot;Bill&quot;;      <span class="code_comment">// x 为字符串</span>
+</pre>
+<h2>字符串</h2>
+<p>字符串是存储字符（比如 &quot;Bill Gates&quot;）的变量。字符串是用引号包围的文本。您可以使用单引号或双引号。</p>
+<pre>
+var carname=&quot;Bill Gates&quot;;
+var carname='Bill Gates';
+</pre>
+
+<p>一种引号包围的文本中可以含有另一种引号作为字符。</p>
+
+<pre>
+var answer=&quot;Nice to meet you!&quot;;
+var answer=&quot;He is called 'Bill'&quot;;
+var answer='He is called &quot;Bill&quot;';
+</pre>
+<p class="tiy"><a href="javascript:tiy.run('js_datatypes_string')" >亲自试一试</a></p>
+
+<h2>数组</h2>
+<p>下面的代码创建名为 cars 的数组：</p>
+<pre>
+var cars=new Array();
+cars[0]=&quot;Audi&quot;;
+cars[1]=&quot;BMW&quot;;
+cars[2]=&quot;Volvo&quot;;
+</pre>
+
+<p>或者 (condensed array):</p>
+
+<pre>
+var cars=new Array(&quot;Audi&quot;,&quot;BMW&quot;,&quot;Volvo&quot;);
+</pre>
+
+<p>或者 (literal array):</p>
+<pre>var cars=[&quot;Audi&quot;,&quot;BMW&quot;,&quot;Volvo&quot;];</pre>
+<p class="tiy"><a href="javascript:tiy.run('js_datatypes_array')" >亲自试一试</a></p>
+<p>数组下标是基于零的，所以第一个项目是 [0]，第二个是 [1]，以此类推。</p>
+<p>您将在本教程稍后的章节中学到更多关于数组的知识。</p>
+
+<h2>JavaScript 对象</h2>
+<p>对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 (name : value) 来定义。属性由逗号分隔：</p>
+<pre>var person={firstname:&quot;Bill&quot;, lastname:&quot;Gates&quot;, id:5566};</pre>
+<p>上面例子中的对象 (person) 有三个属性：firstname、lastname 以及 id。</p>
+<p>空格和折行无关紧要。声明可横跨多行：</p>
+
+<pre>
+var person={
+firstname : &quot;Bill&quot;,
+lastname  : &quot;Gates&quot;,
+id        :  5566
+};
+</pre>
+
+<p>对象属性有两种寻址方式：</p>
+<pre>
+name=person.lastname;
+name=person[&quot;lastname&quot;];
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('js_datatypes_object')" >亲自试一试</a></p>
+<p>您将在本教程稍后的章节中学到更多关于对象的知识。</p>
+
+<h2>Undefined 和 Null</h2>
+<p>Undefined 这个值表示变量不含有值。</p>
+<p>可以通过将变量的值设置为 null 来清空变量。</p>
+
+<pre>
+cars=null;
+person=null;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('js_undefined')" >亲自试一试</a></p>
+
+<h2>声明变量类型</h2>
+<p>当您声明新变量时，可以使用关键词 &quot;new&quot; 来声明其类型：</p>
+
+<pre>
+var carname=new String;
+var x=      new Number;
+var y=      new Boolean;
+var cars=   new Array;
+var person= new Object;
+</pre>
+
+<p>JavaScript 变量均为对象。当您声明一个变量时，就创建了一个新的对象。</p>
+
+<h2>扩展阅读</h2>
+<ul>
+<li><a href="pro_js_referencetypes.htm"  title="ECMAScript 引用类型">ECMAScript 引用类型</a></li>
+</ul>
+
+
+</div>
+</div>
+<script src="../chrX.js"></script>

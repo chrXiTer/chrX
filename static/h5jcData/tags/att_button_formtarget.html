@@ -1,0 +1,92 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 &lt;button&gt; formtarget 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_button.htm" >HTML &lt;button&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>带有两个提交按钮的表单（进行验证或不进行验证）：</p>
+
+<pre>
+&lt;form action=&quot;demo_form.asp&quot; method=&quot;get&quot;&gt;
+  First name: &lt;input type=&quot;text&quot; name=&quot;fname&quot; /&gt;
+  Last name: &lt;input type=&quot;text&quot; name=&quot;lname&quot; /&gt;
+&lt;button type=&quot;submit&quot; &gt;提交&lt;/button&gt;
+&lt;button type=&quot;submit&quot; <code>formtarget=&quot;_blank&quot;</code>&gt;提交到新窗口&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_button_formtarget')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>formtarget 属性覆盖表单元素的 <a href="att_form_target.htm"  title="HTML &lt;form&gt; target 属性">target</a> 属性。</p>
+
+<p>该属性与 type=&quot;submit&quot; 配合使用。</p>
+
+<p class="note"><span>注释：</span>HTML5 不支持框架和框架集。现在，parent, top 和 <i>framename</i> 值大多用于 iframe。</p>
+</div>
+
+<div>
+<h2>HTML 4.01 与 HTML 5 之间的差异</h2>
+
+<p>formtarget 属性是 HTML 5 中的新属性。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;button formtarget=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>_blank</td>
+<td>在新窗口/选项卡中将表单提交到文档。</td>
+</tr>
+
+<tr>
+<td>_self</td>
+<td>在同一框架中将表单提交到文档。（默认）</td>
+</tr>
+
+<tr>
+<td>_parent</td>
+<td>在父框架中将表单提交到文档。</td>
+</tr>
+
+<tr>
+<td>_top</td>
+<td>在整个窗口中将表单提交到文档。</td>
+</tr>
+
+<tr>
+<td><i>framename</i></td>
+<td>在指定的框架中将表单提交到文档。</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_button.htm" >HTML &lt;button&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

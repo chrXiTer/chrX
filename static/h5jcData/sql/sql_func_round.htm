@@ -1,0 +1,95 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL ROUND() 函数</h1>
+
+<div>
+<h2>ROUND() 函数</h2>
+
+<p>ROUND 函数用于把数值字段舍入为指定的小数位数。</p>
+
+<h3>SQL ROUND() 语法</h3>
+<pre>SELECT ROUND(column_name,decimals) FROM table_name</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>column_name</td>
+    <td>必需。要舍入的字段。</td>
+  </tr>
+  <tr>
+    <td>decimals</td>
+    <td>必需。规定要返回的小数位数。</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>SQL ROUND() 实例</h2>
+
+<p>我们拥有下面这个 &quot;Products&quot; 表：</p>
+
+<table class="dataintable">
+  <tr>
+    <th>Prod_Id</th>
+    <th>ProductName</th>
+    <th>Unit</th>
+    <th>UnitPrice</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>gold</td>
+    <td>1000 g</td>
+    <td>32.35</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>silver</td>
+    <td>1000 g</td>
+    <td>11.56</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>copper</td>
+    <td>1000 g</td>
+    <td>6.85</td>
+  </tr>
+</table>
+
+<p>现在，我们希望把名称和价格舍入为最接近的整数。</p>
+
+<p>我们使用如下 SQL 语句：</p>
+
+<pre>SELECT ProductName, ROUND(UnitPrice,0) as UnitPrice FROM Products</pre>
+
+<p>结果集类似这样：</p>
+
+<table class="dataintable" style="width:50%">
+  <tr>
+    <th>ProductName</th>
+    <th>UnitPrice</th>
+  </tr>
+  <tr>
+    <td>gold</td>
+    <td>32</td>
+  </tr>
+  <tr>
+    <td>silver</td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <td>copper</td>
+    <td>7</td>
+  </tr>
+</table>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

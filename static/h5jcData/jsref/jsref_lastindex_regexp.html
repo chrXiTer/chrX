@@ -1,0 +1,70 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript lastIndex 属性</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_regexp.htm"  title="JavaScript RegExp 对象">JavaScript RegExp 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>lastIndex  属性用于规定下次匹配的起始位置。</p>
+
+<h3>语法</h3>
+
+<pre>RegExpObject.lastIndex</pre>
+
+<h3>说明</h3>
+
+<p>该属性存放一个整数，它声明的是上一次匹配文本之后的第一个字符的位置。</p>
+
+<p>上次匹配的结果是由方法 RegExp.exec() 和 RegExp.test() 找到的，它们都以 lastIndex 属性所指的位置作为下次检索的起始点。这样，就可以通过反复调用这两个方法来遍历一个字符串中的所有匹配文本。</p>
+
+<p>该属性是可读可写的。只要目标字符串的下一次搜索开始，就可以对它进行设置。当方法 exec() 或 test() 再也找不到可以匹配的文本时，它们会自动把 lastIndex 属性重置为 0。</p>
+</div>
+
+<div>
+<h3>提示和注释</h3>
+
+<p class="important"><span>重要事项：</span>不具有标志 g 和不表示全局模式的 RegExp 对象不能使用 lastIndex 属性。</p>
+
+<p class="tip"><span>提示：</span>如果在成功地匹配了某个字符串之后就开始检索另一个新的字符串，需要手动地把这个属性设置为 0。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在下面的例子中，我们将输出匹配完成之后的 lastIndex 属性：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+var str = &quot;The rain in Spain stays mainly in the plain&quot;;
+var patt1 = new RegExp(&quot;ain&quot;, &quot;g&quot;);
+
+patt1.test(str)
+document.write(&quot;Match found. index now at: &quot; + <code>patt1.lastIndex</code>);
+&lt;/script&gt;
+</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_lastindex_regexp')" >lastIndex</a></dt>
+<dd>如何使用 lastIndex 属性来检测从何处开始下一次匹配。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_regexp.htm"  title="JavaScript RegExp 对象">JavaScript RegExp 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

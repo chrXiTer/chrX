@@ -1,0 +1,70 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript getClass() 函数</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_global.htm"  title="JavaScript 全局对象">JavaScript 全局对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>getClass() 函数可返回一个 JavaObject 的 JavaClass。</p>
+
+<h3>语法</h3>
+
+<pre>getClass(javaobj)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>javaobj</td>
+    <td>一个 JavaObject 对象。</td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+
+<p>javaobj 的 JavaClass 对象。</p>
+
+<h3>说明</h3>
+
+<p>该函数可接受一个 JavaObject 对象作为其参数，并返回该对象的 JavaClass，即返回 JavaClass 对象。该 JavaClass 对象表示 Java 对象的 Java 类，而这个 Java 对象所表示的 Java 类是由 JavaObject 指定的。</p>
+
+<h3>习惯用法</h3>
+
+<p>请不要把 JavaScript 的 getClass() 函数与所有 Java 对象的 getClass 方法混淆在一起。也不要把 JavaScript 的 JavaClass 对象与 Java java.lang.Class 类混淆了。</p>
+
+<p>请看下面这行代码，它可创建一个 Java Rectangle 对象：</p>
+
+<pre>var obj = new java.awt.Rectangle();</pre>
+
+<p>obj 是一个保存了 JavaObject 的 JavaScript 变量。我们可以调用 JavaScript 函数 getClass() 返回一个 JavaClass 对象，该 JavaClass 对象表示 java.awt.Rectangle 类：</p>
+
+<pre>var cls = getClass(obj);</pre>
+
+<p>而调用 Java getClass() 的方式有所不同，且执行完全不同的功能：</p>
+
+<pre>cls = obj.getClass();</pre>
+
+<p>在执行了上面这行代码后，cls 是表示 java.lang.class 对象的一个 Java Object。这个 java.lang.class 对象是一个 Java 对象，它是 java.awt.Rectangle 类的一个 Java 表示。</p>
+
+<p>最后，对于任何的 JavaObject obj，您do会看到下面的表示式始终为 true：</p>
+
+<pre>(getClass(obj.getClass()) == java.lang.Class)</pre>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_global.htm"  title="JavaScript 全局对象">JavaScript 全局对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

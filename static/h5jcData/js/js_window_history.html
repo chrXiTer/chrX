@@ -1,0 +1,81 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript Window history</h1>
+
+<p>window.history 对象包含浏览器的历史。</p>
+<p><em>window.history</em> 对象在编写时可不使用 window 这个前缀。</p>
+<p>为了保护用户隐私，对 JavaScript 访问该对象的方法做出了限制。</p>
+<p>history 对象最初设计来表示窗口的浏览历史。但出于隐私方面的原因，history 对象不再允许脚本访问已经访问过的实际 URL。唯一保持使用的功能只有 <a href="met_his_back.htm" >back()</a>、<a href="met_his_forward.htm" >forward()</a> 和 <a href="met_his_go.htm" >go()</a> 方法。</p>
+
+<h2>back()方法</h2>
+<p>history.back() 方法加载历史列表中的前一个 URL。</p>
+<p>这与在浏览器中点击后退按钮是相同的：</p>
+<p>在页面上创建后退按钮：</p>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+function goBack(){
+  <code>window.history.back()</code>
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;input type=&quot;button&quot; value=&quot;Back&quot; onclick=&quot;goBack()&quot;&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>以上代码输出为：</p>
+<script>
+function goBack(){
+  window.history.back()
+}
+</script>
+
+<pre><input type="button" value="转到上一页" onclick="goBack()" /></pre>
+
+<h2>forward() 方法</h2>
+<p>history forward() 方法加载历史列表中的下一个 URL。</p>
+<p>这与在浏览器中点击前进按钮是相同的：</p>
+<p>在页面上创建一个向前的按钮：</p>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+function goForward(){
+  <code>window.history.forward()</code>
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;input type=&quot;button&quot; value=&quot;Forward&quot; onclick=&quot;goForward()&quot;&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>以上代码输出为：</p>
+<script>
+function goForward(){
+  window.history.forward()
+}
+</script>
+<pre><input type="button" value="转到下一页" onclick="goForward()" /></pre>
+
+
+<h2>go() 方法</h2>
+<p>下面一行代码执行的操作与单击两次后退按钮执行的操作一样：</p>
+<pre>history.go(-2)</pre>
+
+
+</div>
+</div>
+<script src="../chrX.js"></script>

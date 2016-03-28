@@ -1,0 +1,77 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;a&gt; 标签的 coords 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_a.htm" >HTML &lt;a&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<pre>
+&lt;object data=&quot;planets.gif&quot; alt=&quot;Planets&quot; type=&quot;image/gif&quot; usemap=&quot;#Map1&quot;&gt;
+  &lt;map name=&quot;Map1&quot;&gt;
+  &lt;a href=&quot;sun.htm&quot; shape=&quot;rect&quot; <code>coords=&quot;0,0,110,260&quot;</code>&gt;Sun&lt;/a&gt;
+  &lt;a href=&quot;mercur.htm&quot; shape=&quot;circle&quot; <code>coords=&quot;129,161,10&quot;</code>&gt;Mercury&lt;/a&gt;
+  &lt;a href=&quot;venus.htm&quot; shape=&quot;circle&quot; <code>coords=&quot;180,139,14&quot;</code>&gt;Venus&lt;/a&gt;
+  &lt;/map&gt;
+&lt;/object&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_a_coords')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>coords 属性与 <a href="att_a_shape.htm"  title="HTML &lt;a&gt; 标签的 shape 属性">shape 属性</a>配合，可以规定 object 或 img 元素中链接的尺寸、形状和位置。</p>
+<p class="note"><span>注释：</span>左上角的坐标是 0,0。</p>
+<p class="tip"><span>提示：</span>如需创建能够<em>在所有浏览器中运行的</em>图像映射，请使用 <a href="tag_area.htm"  title="HTML &lt;area&gt; 标签">area 元素</a>。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;a coords=&quot;<i>value&quot;</i>&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td><i>x1,y1,x2,y2</i></td>
+    <td>如果 shape 属性设置为 &quot;rect&quot;，则该值规定矩形左上角和右下角的坐标。</td>
+  </tr>
+	<tr>
+    <td><i>x,y,radius</i></td>
+    <td>如果 shape 属性设置为 &quot;circ&quot;，则该值规定圆心的坐标和半径。</td>
+  </tr>
+  <tr>
+    <td><i>x1,y1,x2,y2,..,xn,yn</i></td>
+    <td>如果 shape 属性设置为 &quot;poly&quot;，则该值规定多边形各边的坐标。如果第一个坐标和最后一个坐标不一致，那么为了关闭多边形，浏览器必须添加最后一对坐标。</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>参阅</h2>
+<ul>
+<li><a href="tag_map.htm" >&lt;map&gt; 标签</a></li>
+<li><a href="tag_area.htm" >&lt;area&gt; 标签</a></li>
+<li><a href="att_area_coords.htm" >&lt;area&gt; 标签的 coords 属性</a></li>
+</ul>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_a.htm" >HTML &lt;a&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,103 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 简介</h1>
+<p>HTML 指的是超文本标记语言 (<b>H</b>yper <b>T</b>ext <b>M</b>arkup <b>L</b>anguage)，是一种用来描述网页的<em>标记语言</em> (markup language)，而不是编程语言。HTML 使用<em>标记标签</em>(markup tag)来描述网页</p>
+
+<h2>HTML 标签</h2>
+<p>HTML 标记标签通常被称为 HTML 标签 (HTML tag)。</p>
+
+<ul>
+<li>HTML 标签是由<em>尖括号</em>包围的关键词，比如 &lt;html&gt;</li>
+<li>HTML 标签通常是<em>成对出现</em>的，比如 &lt;p&gt; 和 &lt;/p&gt;</li>
+<li>标签对中的第一个标签是<em>开始标签</em>，第二个标签是<em>结束标签</em></li>
+<li>开始和结束标签也被称为<em>开放标签</em>和<em>闭合标签</em></li>
+</ul>
+
+<h2>HTML 文档</h2>
+<ul>
+<li>HTML 文档<em>描述网页</em></li>
+<li>HTML 文档<em>包含 HTML 标签</em>和纯文本</li>
+</ul>
+<p>Web 浏览器的作用是读取 HTML 文档，并以网页的形式显示出它们。浏览器不会显示 HTML 标签，而是使用标签来解释页面的内容：</p>
+
+<pre>
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My First Heading&lt;/h1&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<h3>例子解释</h3>
+
+<ul>
+<li>&lt;html&gt; 与 &lt;/html&gt; 之间的文本描述网页</li>
+<li>&lt;body&gt; 与 &lt;/body&gt; 之间的文本是可见的页面内容</li>
+<li>&lt;h1&gt; 与 &lt;/h1&gt; 之间的文本被显示为标题</li>
+<li>&lt;p&gt; 与 &lt;/p&gt; 之间的文本被显示为段落</li>
+</ul>
+<p class="tiy"><a href="javascript:tiy.run('html_intro')" >亲自试一试</a></p>
+
+<h2>HTML5</h2>
+<p>HTML5 是HTML的最新标准，是HTML的上一个版本XHTML1和上上个版本HTML4的结合与发展。除了HTML之外，HTML5还涉及了CSS和浏览器端javascript的相关内容</p>
+<p>HTML5 是 W3C 与 WHATWG 合作的结果。</p>
+<p class="note"><span>注：</span>W3C 指 World Wide Web Consortium，万维网联盟。</p>
+<p class="note"><span>注：</span>WHATWG 指 Web Hypertext Application Technology Working Group。</p>
+<p>WHATWG 致力于 web 表单和应用程序，而 W3C 专注于 XHTML 2.0。后W3C被迫放弃XHTML 2.0，双方决定进行合作，共同开发HTML5规范。</p>
+
+<h3>HTML5新特性</h3>
+<p>HTML5 中的一些有趣的新特性：</p>
+
+<ul>
+<li>用于绘画的 canvas 元素</li>
+<li>用于媒介回放的 video 和 audio 元素</li>
+<li>对本地离线存储的更好的支持</li>
+<li>新的语义标签，比如 article、footer、header、nav、section</li>
+<li>新的表单控件，比如 calendar、date、time、email、url、search</li>
+</ul>
+
+<h3>实例</h3>
+
+<pre>
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;video width=&quot;320&quot; height=&quot;240&quot; controls=&quot;controls&quot;&gt;
+  &lt;source src=&quot;movie.ogg&quot; type=&quot;video/ogg&quot;&gt;
+  &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot;&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_video_all')" >试一试</a></p>
+
+
+<h2>HTML 文档编写</h2>
+
+<p>任何纯文本编辑器都可以用来编辑HTML，比如记事本等。但在实际的开发中，一般使用更专业的工具来编辑 HTML。</p>
+<p>通过记事本，依照以下四步来创建一个网页。</p>
+<h3>步骤一：启动记事本</h3>
+<h3>步骤二：用记事本来编辑 HTML</h3>
+<p>在记事本中键入 HTML 代码：</p>
+<img src="../i/html_editor_notepad.gif"  alt="记事本" />
+
+<h3>步骤三：保存 HTML</h3>
+<p>保存 HTML 文件时，既可以使用 .htm 也可以使用 .html 扩展名。两者没有区别，完全根据您的喜好。</p>
+<h3>步骤四：用浏览器打开这个 HTML 文件</h3>
+<p>结果应该类似这样：</p>
+<img src="../i/html_editor_ie.gif"  alt="在浏览器中查看" />
+
+</div>
+</div>
+<script src="../chrX.js"></script>

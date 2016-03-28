@@ -1,0 +1,73 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 Audio/Video DOM seekable 属性</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>获得首个以秒计的视频可寻址范围（部分）：</p>
+
+<pre>
+myVid=document.getElementById(&quot;video1&quot;);
+alert(&quot;Start: &quot; + <code>myVid.seekable.start(0)</code> + &quot; End: &quot; + <code>myVid.seekable.end(0))</code>;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_av_prop_seekable')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>seekable 属性返回 TimeRanges 对象。</p>
+
+<p>TimeRanges 对象表示音频/视频中用户可寻址的范围。</p>
+
+<p>可寻址范围指的是用户在音频/视频中可寻址（移动播放位置）的时间范围。</p>
+
+<p>对于流视频，通常可以寻址到视频中的任何位置，即使其尚未完成缓冲。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre><i>audio</i>|<i>video</i>.seekable</pre>
+
+<h3>返回值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">类型</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>TimeRanges 对象</td>
+<td>
+	<p>表示音频/视频中的可寻址部分。</p>
+	<p>TimeRanges 对象的属性：</p>
+	<ul class="listintable">
+	<li>length - 获得音频/视频中可寻址范围的数量</li>
+	<li>start(<i>index</i>) - 获得可寻址范围的开始位置</li>
+	<li>end(<i>index</i>) - 获得可寻址范围的结束位置</li>
+	</ul>
+	<p class="note"><span>注释：</span>第一个可寻址范围的下标是 index 0。</p>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

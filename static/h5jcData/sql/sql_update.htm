@@ -1,0 +1,108 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL UPDATE 语句</h1>
+
+<div  id="tpn">
+<ul class="prenext">
+<li class="pre"><a href="sql_insert.htm"  title="SQL INSERT INTO 语句">SQL insert</a></li>
+<li class="next"><a href="sql_delete.htm"  title="SQL DELETE 语句">SQL delete</a></li>
+</ul>
+</div>
+
+<div>
+<h2>Update 语句</h2>
+<p>Update 语句用于修改表中的数据。</p>
+
+<h3>语法：</h3>
+<pre>UPDATE 表名称 SET 列名称 = 新值 WHERE 列名称 = 某值</pre>
+</div>
+
+<div>
+<h2>Person:</h2>
+<table class="dataintable">
+    <tr>
+      <th>LastName</th>
+      <th>FirstName</th>
+      <th>Address</th>
+      <th>City</th>
+    </tr>
+    <tr>
+      <td>Gates</td>
+      <td>Bill</td>
+      <td>Xuanwumen 10</td>
+      <td>Beijing</td>
+    </tr>
+    <tr>
+      <td>Wilson</td>
+      <td>&nbsp;</td>
+      <td>Champs-Elysees</td>
+      <td>&nbsp;</td>
+    </tr>
+</table>
+</div>
+
+<div>
+<h2>更新某一行中的一个列</h2>
+<p>我们为 lastname 是 &quot;Wilson&quot; 的人添加 firstname：</p>
+<pre>UPDATE Person SET FirstName = 'Fred' WHERE LastName = 'Wilson' </pre>
+
+<h3>结果：</h3>
+<table class="dataintable">
+    <tr>
+      <th>LastName</th>
+      <th>FirstName</th>
+      <th>Address</th>
+      <th>City</th>
+    </tr>
+    <tr>
+      <td>Gates</td>
+      <td>Bill</td>
+      <td>Xuanwumen 10</td>
+      <td>Beijing</td>
+    </tr>
+    <tr>
+      <td>Wilson</td>
+      <td>Fred</td>
+      <td>Champs-Elysees</td>
+      <td>&nbsp;</td>
+    </tr>
+</table>
+</div>
+
+<div>
+<h2>更新某一行中的若干列</h2>
+<p>我们会修改地址（address），并添加城市名称（city）：</p>
+<pre>UPDATE Person SET Address = 'Zhongshan 23', City = 'Nanjing'
+WHERE LastName = 'Wilson'</pre>
+
+<h3>结果：</h3>
+
+<table class="dataintable">
+    <tr>
+      <th>LastName</th>
+      <th>FirstName</th>
+      <th>Address</th>
+      <th>City</th>
+    </tr>
+    <tr>
+      <td>Gates</td>
+      <td>Bill</td>
+      <td>Xuanwumen 10</td>
+      <td>Beijing</td>
+    </tr>
+    <tr>
+      <td>Wilson</td>
+      <td>Fred</td>
+      <td>Zhongshan 23</td>
+      <td>Nanjing</td>
+    </tr>
+</table>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

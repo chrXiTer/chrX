@@ -1,0 +1,191 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL UNION 和 UNION ALL 操作符</h1>
+
+<div>
+<h2>SQL UNION 操作符</h2>
+
+<p>UNION 操作符用于合并两个或多个 SELECT 语句的结果集。</p>
+
+<p>请注意，UNION 内部的 SELECT 语句必须拥有相同数量的列。列也必须拥有相似的数据类型。同时，每条 SELECT 语句中的列的顺序必须相同。</p>
+
+<h3>SQL UNION 语法</h3>
+
+<pre>
+SELECT column_name(s) FROM table_name1
+UNION
+SELECT column_name(s) FROM table_name2
+</pre>
+
+<p class="note"><span>注释：</span>默认地，UNION 操作符选取不同的值。如果允许重复的值，请使用 UNION ALL。</p>
+
+<h3>SQL UNION ALL 语法</h3>
+
+<pre>
+SELECT column_name(s) FROM table_name1
+UNION ALL
+SELECT column_name(s) FROM table_name2
+</pre>
+
+<p>另外，UNION 结果集中的列名总是等于 UNION 中第一个 SELECT 语句中的列名。</p>
+</div>
+
+<div>
+<h2>下面的例子中使用的原始表：</h2>
+
+<h3>Employees_China:</h3>
+
+<table class="dataintable">
+  <tr>
+    <th>E_ID</th>
+    <th>E_Name</th>
+  </tr>
+  <tr>
+    <td>01</td>
+    <td>Zhang, Hua</td>
+  </tr>
+  <tr>
+    <td>02</td>
+    <td>Wang, Wei</td>
+  </tr>
+  <tr>
+    <td>03</td>
+    <td>Carter, Thomas</td>
+  </tr>
+  <tr>
+    <td>04</td>
+    <td>Yang, Ming</td>
+  </tr>
+</table>
+
+<h3>Employees_USA:</h3>
+
+<table class="dataintable">
+  <tr>
+    <th>E_ID</th>
+    <th>E_Name</th>
+  </tr>
+  <tr>
+    <td>01</td>
+    <td>Adams, John</td>
+  </tr>
+  <tr>
+    <td>02</td>
+    <td>Bush, George</td>
+  </tr>
+  <tr>
+    <td>03</td>
+    <td>Carter, Thomas</td>
+  </tr>
+  <tr>
+    <td>04</td>
+    <td>Gates, Bill</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>使用 UNION 命令</h2>
+
+<h3>实例</h3>
+<p>列出所有在中国和美国的不同的雇员名：</p>
+<pre>
+SELECT E_Name FROM Employees_China
+<code>UNION</code>
+SELECT E_Name FROM Employees_USA
+</pre>
+
+<h3>结果</h3>
+<table class="dataintable">
+  <tr>
+    <th>E_Name</b></th>
+  </tr>
+  <tr>
+    <td>Zhang, Hua</td>
+  </tr>
+  <tr>
+    <td>Wang, Wei</td>
+  </tr>
+  <tr>
+    <td>Carter, Thomas</td>
+  </tr>
+  <tr>
+    <td>Yang, Ming</td>
+  </tr>
+  
+  <tr>
+    <td>Adams, John</td>
+  </tr>
+  <tr>
+    <td>Bush, George</td>
+  </tr>
+  <tr>
+    <td>Gates, Bill</td>
+  </tr>
+</table>
+
+<p class="note"><span>注释：</span>这个命令无法列出在中国和美国的所有雇员。在上面的例子中，我们有两个名字相同的雇员，他们当中只有一个人被列出来了。UNION 命令只会选取不同的值。</p>
+</div>
+
+<div>
+<h2>UNION ALL</h2>
+
+<p>UNION ALL 命令和 UNION 命令几乎是等效的，不过 UNION ALL 命令会列出所有的值。</p>
+<pre>
+SQL Statement 1
+UNION ALL
+SQL Statement 2
+</pre>
+</div>
+
+<div>
+<h2>使用 UNION ALL 命令</h2>
+
+<h3>实例：</h3>
+<p>列出在中国和美国的所有的雇员：</p>
+<pre>
+SELECT E_Name FROM Employees_China
+<code>UNION ALL</code>
+SELECT E_Name FROM Employees_USA
+</pre>
+
+<h3>结果</h3>
+<table class="dataintable">
+  <tr>
+    <th>E_Name</b></th>
+  </tr>
+  <tr>
+    <td>Zhang, Hua</td>
+  </tr>
+  <tr>
+    <td>Wang, Wei</td>
+  </tr>
+  <tr>
+    <td>Carter, Thomas</td>
+  </tr>
+  <tr>
+    <td>Yang, Ming</td>
+  </tr>
+  
+  <tr>
+    <td>Adams, John</td>
+  </tr>
+  <tr>
+    <td>Bush, George</td>
+  </tr>
+  <tr>
+    <td>Carter, Thomas</td>
+  </tr>
+  <tr>
+    <td>Gates, Bill</td>
+  </tr>
+</table>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

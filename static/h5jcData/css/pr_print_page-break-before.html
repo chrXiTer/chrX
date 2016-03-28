@@ -1,0 +1,121 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS page-break-before 属性</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>page-break-before 属性设置元素前的 page-breaking 行为。</p>
+<p>尽管可以用 always 强制放上分页符，但是无法保证避免分页符的插入，创作人员最多只能要求用户代理尽可能避免插入分页。</p>
+<p class="note"><span>应用于：</span>position 值为 relative 或 static 的非浮动块级元素。</p>
+<p class="note"><span>注释：</span>请尽可能少地使用分页属性，并且避免在表格、浮动元素、带有边框的块元素中使用分页属性。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">auto</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS2</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.pageBreakBefore=&quot;always&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+<p>设置在表格元素之后始终进行分页的分页行为：</p>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+@media print
+{
+table {<code>page-break-before:always;</code>}
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+....
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有浏览器都支持 page-break-before 属性。</p>
+<p class="note"><span>注释：</span>任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 &quot;left&quot;、&quot;right&quot; 以及 &quot;inherit&quot;。</p>
+<p class="note"><span>注释：</span>Firefox、Chrome 以及 Safari 不支持属性值 &quot;avoid&quot;、&quot;left&quot; 以及 &quot;right&quot;。</p>
+</div>
+
+<div>
+<h2>可能的值</h2>
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>auto</td>
+<td>默认值。如果必要则在元素前插入分页符。</td>
+</tr>
+
+<tr>
+<td>always</td>
+<td>在元素前插入分页符。</td>
+</tr>
+
+<tr>
+<td>avoid</td>
+<td>避免在元素前插入分页符。</td>
+</tr>
+
+<tr>
+<td>left</td>
+<td>在元素之前足够的分页符，一直到一张空白的左页为止。</td>
+</tr>
+
+<tr>
+<td>right</td>
+<td>在元素之前足够的分页符，一直到一张空白的右页为止。</td>
+</tr>
+
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 page-break-before 属性的设置。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>HTML DOM 参考手册：<a href="../htmldom/prop_style_pagebreakbefore.htm" title="HTML DOM pageBreakBefore 属性">pageBreakBefore 属性</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

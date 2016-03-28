@@ -1,0 +1,168 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 canvas font 属性</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在画布上写一段 40 像素的文本，使用的字体是 &quot;Arial&quot;：</p>
+
+<canvas id="myCanvas" class="canvas_example">
+Your browser does not support the canvas tag.
+</canvas>
+
+<script>
+var c=document.getElementById("myCanvas");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+	var c=document.getElementById("myCanvas");
+	var ctx=c.getContext("2d");
+	ctx.font="40px Arial";
+	ctx.fillText("Hello World",10,50);
+	}
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+<code>ctx.font=&quot;40px Arial&quot;;</code>
+ctx.fillText(&quot;Hello World&quot;,10,50);
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_font')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>font 属性设置或返回画布上文本内容的当前字体属性。</p>
+
+<p>font 属性使用的语法与 <a href="../cssref/pr_font_font.htm"  title="CSS font 属性">CSS font 属性</a>相同。</p>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">默认值：</th>
+<td>10px sans-serif</td>
+</tr>
+
+<tr>
+<th>JavaScript 语法：</th>
+<td>context.font=&quot;italic small-caps bold 12px arial&quot;;</td>
+</tr>
+</table>
+
+<h3>属性值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>font-style</i></td>
+<td>
+	<p>规定字体样式。可能的值：</p>
+	<ul class="listintable">
+	<li>normal</li>
+	<li>italic</li>
+	<li>oblique</li>
+	</ul>
+</td>
+</tr>
+
+<tr>
+<td><i>font-variant</i></td>
+<td>
+	<p>规定字体变体。可能的值：</p>
+	<ul class="listintable">
+	<li>normal</li>
+	<li>small-caps</li>
+	</ul>
+</td>
+</tr>
+
+<tr>
+<td><i>font-weight</i></td>
+<td>
+	<p>规定字体的粗细。可能的值：</p>
+	<ul class="listintable">
+	<li>normal</li>
+	<li>bold</li>
+	<li>bolder</li>
+	<li>lighter</li>
+	<li>100</li>
+	<li>200</li>
+	<li>300</li>
+	<li>400</li>
+	<li>500</li>
+	<li>600</li>
+	<li>700</li>
+	<li>800</li>
+	<li>900</li>
+	</ul>
+</td>
+</tr>
+
+<tr>
+<td><i>font-size</i> / <i>line-height</i></td>
+<td>规定字号和行高，以像素计。</td>
+</tr>
+
+<tr>
+<td><i>font-family</i></td>
+<td>规定字体系列。</td>
+</tr>
+
+<tr>
+<td>caption</td>
+<td>使用标题控件的字体（比如按钮、下拉列表等）。</td>
+</tr>
+
+<tr>
+<td>icon</td>
+<td>使用用于标记图标的字体。</td>
+</tr>
+
+<tr>
+<td>menu</td>
+<td>使用用于菜单中的字体（下拉列表和菜单列表）。</td>
+</tr>
+
+<tr>
+<td>message-box</td>
+<td>使用用于对话框中的字体。</td>
+</tr>
+
+<tr>
+<td>small-caption</td>
+<td>使用用于标记小型控件的字体。</td>
+</tr>
+
+<tr>
+<td>status-bar</td>
+<td>使用用于窗口状态栏中的字体。</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <title>jsTool</title>
+</head>
+
+<body>
+	<label for="text1">text1</label>
+	<textarea id="text1" style="width:600px">111</textarea>
+	<br /><br />
+
+	<label for="text2">text2</label>
+	<textarea id="text2" style="width:600px"></textarea>
+	<br /><br />
+
+	<label for="text3">text3</label>
+	<textarea id="text3" style="width:600px"></textarea>
+	<br /><br />
+
+<label for="div1">div1</label>
+<div id="div1" contenteditable="true" style="display:block" spellcheck="false">
+   在此输入附加的html
+</div>
+<br /><br />
+
+	<input type="radio" id="radio1" name="radio" /><label for="radio1">radio1</label> 
+	<input type="radio" id="radio2" name="radio" /><label for="radio2">radio2</label> 
+	<input type="radio" id="radio3" name="radio" /><label for="radio3">radio3</label> 
+	<input type="radio" id="radio4" name="radio" /><label for="radio4">radio4</label> 
+	<br /><br />
+
+	<input type="button" id="button" value="执行脚本" />
+
+	<div id="contentAll"></div>
+	<div id="info"></div>
+	<link rel="stylesheet" href="./highlight/styles/vs.css">
+
+	<pre><code contenteditable="true" style="display:block" spellcheck="false">
+//在此输入代码执行,点击“执行脚本“按钮，执行代码
+var text1E = document.getElementById("text1");
+var text2E = document.getElementById("text2");
+var text3E = document.getElementById("text3");
+var text4E = document.getElementById("text4");
+alert(text1E.value);
+	</code></pre>
+    <script src="./highlight/highlight.pack.js"></script>
+	<script src="./jsToolHtml.js"></script>
+</body>
+</html>

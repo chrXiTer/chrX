@@ -1,0 +1,71 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>MySQL DATE() 函数</h1>
+
+<div class="backtoreference">
+<p><a href="sql_dates.htm"  title="MySQL Date 函数">MySQL Date 函数</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>DATE() 函数返回日期或日期/时间表达式的日期部分。</p>
+
+<h3>语法</h3>
+<pre>DATE(date)</pre>
+
+<p><i>date</i> 参数是合法的日期表达式。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>假设我们有如下的表：</p>
+
+<table class="dataintable">
+<tr>
+<th>OrderId</th>
+<th>ProductName</th>
+<th>OrderDate</th>
+</tr>
+<tr>
+<td>1</td>
+<td>'Computer'</td>
+<td>2008-12-29 16:25:46.635</td>
+</tr>
+</table>
+
+<p>我们使用下面的 SELECT 语句：</p>
+
+<pre>
+SELECT ProductName, DATE(OrderDate) AS OrderDate
+FROM Orders
+WHERE OrderId=1
+</pre>
+
+<p>结果：</p>
+
+<table class="dataintable">
+<tr>
+<th>ProductName</th>
+<th>OrderDate</th>
+</tr>
+<tr>
+<td>'Computer'</td>
+<td>2008-12-29</td>
+</tr>
+</table>
+
+</div>
+
+<div class="backtoreference">
+<p><a href="sql_dates.htm"  title="MySQL Date 函数">MySQL Date 函数</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

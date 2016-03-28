@@ -1,0 +1,27 @@
+<h2>Tool.</h2>
+<hr />
+<h3>upload file</h3>
+<form method="post" action="/tool/uploadFile" enctype="multipart/form-data">
+<input name="upload" type="file"></input>
+<input value="上传" type="submit"></input>
+</form>
+
+<hr />
+<h3>Record Text</h3>
+<form method="post" action="/tool/uploadFile">
+    <textarea id="record" rows="3"></textarea>
+    <br />
+    <input value="保存" type="submit" />
+</form>
+
+<hr />
+<h3>Record Markdown Text</h3>
+<form method="post" action="/tool/uploadFile">
+    <input name="title" type="text" placeholder="Title?" />
+    <textarea name="content" data-provide="markdown" rows="10"></textarea>
+    <label class="checkbox">
+        <input name="publish" type="checkbox"> Publish
+    </label>
+    <hr />
+    <button type="submit" class="btn">Submit</button>
+</form>

@@ -1,0 +1,106 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS empty-cells 属性</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>empty-cells 属性设置是否显示表格中的空单元格（仅用于“分离边框”模式）。</p>
+<p class="note"><span>注释：</span>某些版本的 IE 浏览器不支持此属性。</p>
+<h3>说明</h3>
+<p>该属性定义了不包含任何内容的表单元格如何表示。如果显示，就会绘制出单元格的边框和背景。除非 border-collapse 设置为 separate，否则将忽略这个属性。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">show</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>yes</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS2</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.emptyCells=&quot;hide&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+<p>隐藏表格中空单元格上的边框和背景：</p>
+<pre>
+table
+  {
+  border-collapse:separate;
+  <code>empty-cells:hide;</code>
+  }
+</pre>
+<p><a href="../tiy/t.asp-f=csse_table_empty-cells.htm" >TIY</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有浏览器都支持 empty-cells 属性。</p>
+<p class="note"><span>注释：</span>如果已规定 !DOCTYPE，那么 Internet Explorer 8 （以及更高版本）支持 empty-cells 属性。</p>
+</div>
+
+<div>
+<h2>可能的值</h2>
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>hide</td>
+<td>默认。不在空单元格周围绘制边框。</td>
+</tr>
+
+<tr>
+<td>show</td>
+<td>在空单元格周围绘制边框。</td>
+</tr>
+
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 empty-cells 属性的值。</td>
+</tr>
+</table>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="../tiy/t.asp-f=csse_table_empty-cells.htm" >显示表格中的空单元</a></dt>
+<dd>本例演示是否显示表格中的空单元。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>CSS 教程：<a href="css_table.htm" title="CSS 表格">CSS 表格</a></p>
+<p>HTML DOM 参考手册：<a href="../htmldom/prop_style_emptycells.htm" title="HTML DOM emptyCells 属性">emptyCells 属性</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

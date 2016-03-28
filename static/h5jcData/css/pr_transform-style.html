@@ -1,0 +1,97 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS3 transform-style 属性</h1>
+
+<div class="backtoreference">
+<p><a href="index.htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>使被转换的子元素保留其 3D 转换：</p>
+<pre>
+div
+{
+transform: rotateY(60deg);
+transform-style: preserve-3d;
+-webkit-transform: rotateY(60deg);	<span class="code_comment">/* Safari 和 Chrome */</span>
+-webkit-transform-style: preserve-3d;	<span class="code_comment">/* Safari 和 Chrome */</span>
+}
+</pre>
+
+<p><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/t.asp?f=css3_transform-style  \n\n'))window.location='/chrX/nofile/123tiy/t.asp?f=css3_transform-style'" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+
+<p>目前主流浏览器都不支持 transform-style 属性。</p>
+<p>Chrome 和 Safari 支持替代的 -webkit-transform-style 属性。</p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>transform-style 属性规定如何在 3D 空间中呈现被嵌套的元素。</p>
+<p class="note"><span>注释：</span>该属性必须与 <a href="pr_transform.htm" title="CSS3 transform 属性">transform</a> 属性一同使用。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">flat</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS3</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.transformStyle=&quot;preserve-3d&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>transform-style: flat|preserve-3d;</pre>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>flat</td>
+<td>子元素将不保留其 3D 位置。</td>
+</tr>
+
+<tr>
+<td>preserve-3d</td>
+<td>子元素将保留其 3D 位置。</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="index.htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+<!-- maincontent end -->
+
+</div>
+<!-- wrapper end -->
+
+<script src="../chrX.js"></script>
+
+

@@ -1,0 +1,96 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript 错误处理 - throw、try 和 catch</h1>
+<p><em>try</em> 语句测试代码块的错误。</p>
+<p><em>catch</em> 语句处理错误。</p>
+<p><em>throw</em> 语句创建自定义错误。</p>
+
+<p>当 JavaScript 引擎执行 JavaScript 代码时，可能会发生各种错误，而有一些错误可能是程序员在编码时无法避免的。</p>
+<h2>JavaScript 抛出错误</h2>
+<p>当错误发生时，当事情出问题时，JavaScript 引擎通常会停止，并生成一个错误消息。</p>
+<p>描述这种情况的技术术语是：JavaScript 将<em>抛出</em>一个错误。</p>
+
+<h2>JavaScript 测试和捕捉</h2>
+<p><em>try</em> 语句允许我们定义在执行时进行错误测试的代码块。</p>
+<p><em>catch</em> 语句允许我们定义当 try 代码块发生错误时，所执行的代码块。</p>
+<p>JavaScript 语句 <em>try</em> 和 <em>catch</em> 是成对出现的。</p>
+<h3>语法</h3>
+<pre>
+try{
+  <span>//在这里运行代码</span>
+}catch(err){
+  <span>//在这里处理错误</span>
+}
+</pre>
+<h3>实例</h3>
+<p>在下面的例子中，我们故意在 try 块的代码中写了一个错字。</p>
+<p>catch 块会捕捉到 try 块中的错误，并执行代码来处理它。</p>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+var txt=&quot;&quot;;
+function message(){
+	try{
+	  <span class="marked">adddlert</span>(&quot;Welcome guest!&quot;);
+	}catch(err){
+	  txt=&quot;There was an error on this page.\n\n&quot;;
+	  txt+=&quot;Error description: &quot; + err.message + &quot;\n\n&quot;;
+	  txt+=&quot;Click OK to continue.\n\n&quot;;
+	  alert(txt);
+	}
+}
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;input type=&quot;button&quot; value=&quot;View message&quot; onclick=&quot;message()&quot;&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p class="tiy"><a href="javascript:tiy.run('js_try_catch')" >试一试</a></p>
+
+<h2>throw 语句</h2>
+<p>throw 语句允许我们创建自定义错误。</p>
+<p>正确的技术术语是：创建或<em>抛出异常</em>（exception）。</p>
+<p>如果把 throw 与 try 和 catch 一起使用，那么您能够控制程序流，并生成自定义的错误消息。</p>
+<h3>语法</h3>
+<pre>throw <i>exception</i></pre>
+<p>异常可以是 JavaScript 字符串、数字、逻辑值或对象。</p>
+<h3>实例</h3>
+<p>本例检测输入变量的值。如果值是错误的，会抛出一个异常（错误）。catch 会捕捉到这个错误，并显示一段自定义的错误消息：</p>
+<pre>
+&lt;script&gt;
+function myFunction(){
+	try{
+	  var x=document.getElementById(&quot;demo&quot;).value;
+	  if(x==&quot;&quot;)    <code>throw &quot;empty&quot;</code>;
+	  if(isNaN(x)) <code>throw &quot;not a number&quot;</code>;
+	  if(x&gt;10)     <code>throw &quot;too high&quot;</code>;
+	  if(x&lt;5)      <code>throw &quot;too low&quot;</code>;
+	}catch(err){
+	  var y=document.getElementById(&quot;mess&quot;);
+	  y.innerHTML=&quot;Error: &quot; + err + &quot;.&quot;;
+	}
+}
+&lt;/script&gt;
+
+&lt;h1&gt;My First JavaScript&lt;/h1&gt;
+&lt;p&gt;Please input a number between 5 and 10:&lt;/p&gt;
+&lt;input id=&quot;demo&quot; type=&quot;text&quot;&gt;
+&lt;button type=&quot;button&quot; onclick=&quot;myFunction()&quot;&gt;Test Input&lt;/button&gt;
+&lt;p id=&quot;mess&quot;&gt;&lt;/p&gt;
+</pre>
+<p class="tiy"><a href="javascript:tiy.run('js_throw_error')" >亲自试一试</a></p>
+<p>请注意，如果 getElementById 函数出错，上面的例子也会抛出一个错误。</p>
+
+
+</div>
+</div>
+<script src="../chrX.js"></script>

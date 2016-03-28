@@ -1,0 +1,101 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript join() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_array.htm"  title="JavaScript Array 对象">JavaScript Array 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>join() 方法用于把数组中的所有元素放入一个字符串。</p>
+
+<p>元素是通过指定的分隔符进行分隔的。</p>
+
+<h3>语法</h3>
+
+<pre>arrayObject.join(<i>separator</i>)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>separator</td>
+    <td>可选。指定要使用的分隔符。如果省略该参数，则使用逗号作为分隔符。</td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+
+<p>返回一个字符串。该字符串是通过把 arrayObject 的每个元素转换为字符串，然后把这些字符串连接起来，在两个元素之间插入 <i>separator</i> 字符串而生成的。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<h3>例子 1</h3>
+
+<p>在本例中，我们将创建一个数组，然后把它的所有元素放入一个字符串：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var arr = new Array(3)
+arr[0] = &quot;George&quot;
+arr[1] = &quot;John&quot;
+arr[2] = &quot;Thomas&quot;
+
+document.write(<code>arr.join()</code>)
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>George,John,Thomas</pre>
+
+<h3>例子 2</h3>
+
+<p>在本例中，我们将使用分隔符来分隔数组中的元素：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var arr = new Array(3)
+arr[0] = &quot;George&quot;
+arr[1] = &quot;John&quot;
+arr[2] = &quot;Thomas&quot;
+
+document.write(<code>arr.join(&quot;.&quot;)</code>)
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>George.John.Thomas</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_join')" >join()</a></dt>
+<dd>如何使用 join() 从数组创建字符串。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_array.htm"  title="JavaScript Array 对象">JavaScript Array 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

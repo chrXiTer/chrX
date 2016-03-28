@@ -1,0 +1,163 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript splice() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_array.htm"  title="JavaScript Array 对象">JavaScript Array 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。</p>
+
+<p class="note"><span>注释：</span>该方法会改变原始数组。</p>
+
+<h3>语法</h3>
+
+<pre>arrayObject.splice(index,howmany,item1,.....,itemX)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th style="width:25%;">参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>index</td>
+    <td>必需。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。</td>
+  </tr>
+  <tr>
+    <td>howmany</td>
+    <td>必需。要删除的项目数量。如果设置为 0，则不会删除项目。</td>
+  </tr>
+    <tr>
+    <td>item1, ..., itemX</td>
+    <td>可选。向数组添加的新项目。</td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">类型</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>Array</td>
+<td>包含被删除项目的新数组，如果有的话。</td>
+</tr>
+</table>
+
+<h3>说明</h3>
+
+<p>splice() 方法可删除从 index 处开始的零个或多个元素，并且用参数列表中声明的一个或多个值来替换那些被删除的元素。</p>
+
+<p>如果从 arrayObject 中删除了元素，则返回的是含有被删除的元素的数组。</p>
+
+<h3>技术细节</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">JavaScript 版本：</th>
+<td>1.2</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+
+<p>所有主流浏览器都支持 splice() 方法。</p>
+</div>
+
+<div>
+<h2>提示和注释</h2>
+<p class="tip"><span>注释：</span>请注意，splice() 方法与 slice() 方法的作用是不同的，splice() 方法会直接对数组进行修改。</p>
+</div>
+	
+<div>
+<h2>实例</h2>
+
+<h3>例子 1</h3>
+<p>在本例中，我们将创建一个新数组，并向其添加一个元素：</p>
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+
+var arr = new Array(6)
+arr[0] = &quot;George&quot;
+arr[1] = &quot;John&quot;
+arr[2] = &quot;Thomas&quot;
+arr[3] = &quot;James&quot;
+arr[4] = &quot;Adrew&quot;
+arr[5] = &quot;Martin&quot;
+
+document.write(arr + &quot;&lt;br /&gt;&quot;)
+<code>arr.splice(2,0,&quot;William&quot;)</code>
+document.write(arr + &quot;&lt;br /&gt;&quot;)
+
+&lt;/script&gt;</pre>
+<p>输出：</p>
+<pre>George,John,Thomas,James,Adrew,Martin
+George,John,William,Thomas,James,Adrew,Martin</pre>
+
+<h3>例子 2</h3>
+<p>在本例中我们将删除位于 index 2 的元素，并添加一个新元素来替代被删除的元素：</p>
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+
+var arr = new Array(6)
+arr[0] = &quot;George&quot;
+arr[1] = &quot;John&quot;
+arr[2] = &quot;Thomas&quot;
+arr[3] = &quot;James&quot;
+arr[4] = &quot;Adrew&quot;
+arr[5] = &quot;Martin&quot;
+
+document.write(arr + &quot;&lt;br /&gt;&quot;)
+<code>arr.splice(2,1,&quot;William&quot;)</code>
+document.write(arr)
+
+&lt;/script&gt;</pre>
+<p>输出：</p>
+<pre>George,John,Thomas,James,Adrew,Martin<br />George,John,William,James,Adrew,Martin</pre>
+
+<h3>例子 3</h3>
+<p>在本例中我们将删除从 index 2 (&quot;Thomas&quot;) 开始的三个元素，并添加一个新元素 (&quot;William&quot;) 来替代被删除的元素：</p>
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+
+var arr = new Array(6)
+arr[0] = &quot;George&quot;
+arr[1] = &quot;John&quot;
+arr[2] = &quot;Thomas&quot;
+arr[3] = &quot;James&quot;
+arr[4] = &quot;Adrew&quot;
+arr[5] = &quot;Martin&quot;
+
+document.write(arr + &quot;&lt;br /&gt;&quot;)
+<code>arr.splice(2,3,&quot;William&quot;)</code>
+document.write(arr)
+
+&lt;/script&gt;</pre>
+<p>输出：</p>
+<pre>George,John,Thomas,James,Adrew,Martin<br />George,John,William,Martin</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+<dl>
+<dt><a href="javascript:tiy.run('jseg_splice')" >splice()</a></dt>
+<dd>如何使用 splice() 来更改数组。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_array.htm"  title="JavaScript Array 对象">JavaScript Array 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

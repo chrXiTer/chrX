@@ -1,0 +1,186 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;button&gt; 标签</h1>
+
+<div>
+<h2>实例</h2>
+
+<p>以下代码标记了一个按钮：</p>
+
+<pre>&lt;button type=&quot;button&quot;&gt;Click Me!&lt;/button&gt;</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_button_test')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>&lt;button&gt; 标签定义一个按钮。</p>
+
+<p>在 button 元素内部，您可以放置内容，比如文本或图像。这是该元素与使用 input 元素创建的按钮之间的不同之处。</p>
+
+<p>&lt;button&gt; 控件 与 &lt;input type=&quot;button&quot;&gt; 相比，提供了更为强大的功能和更丰富的内容。&lt;button&gt; 与 &lt;/button&gt; 标签之间的所有内容都是按钮的内容，其中包括任何可接受的正文内容，比如文本或多媒体内容。例如，我们可以在按钮中包括一个图像和相关的文本，用它们在按钮中创建一个吸引人的标记图像。</p>
+
+<p>唯一禁止使用的元素是图像映射，因为它对鼠标和键盘敏感的动作会干扰表单按钮的行为。</p>
+
+<p>请始终为按钮规定 type 属性。Internet Explorer 的默认类型是 &quot;button&quot;，而其他浏览器中（包括 W3C 规范）的默认值是 &quot;submit&quot;。</p>
+</div>
+
+<div>
+<h2>HTML 4.01 与 HTML 5 之间的差异</h2>
+<p>HTML 5 中的新属性：autofocus, form, formaction, formenctype, formmethod, formnovalidate 以及 formtarget。</p>
+</div>
+
+<div>
+<h2>提示和注释</h2>
+
+<p class="note"><span>注释：</span>如果在 HTML 表单中使用 button 元素，不同的浏览器会提交不同的按钮值。请使用 <a href="tag_input.htm"  title="HTML 5 &lt;input&gt; 标签">input 元素</a>在 HTML 表单中创建按钮。</p>
+</div>
+
+<div>
+<h2>属性</h2>
+
+<p class="html5_new_note"><span>new</span> : HTML5 中的新属性。</p>
+
+<table class="dataintable">
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td class="html5_new"><a href="att_button_autofocus.htm"  title="HTML5 &lt;button&gt; autofocus 属性">autofocus</a></td>
+<td>autofocus</td>
+<td>规定当页面加载时按钮应当自动地获得焦点。</td>
+</tr>
+
+<tr>
+<td><a href="att_button_disabled.htm"  title="HTML5 &lt;button&gt; disabled 属性">disabled</a></td>
+<td>disabled</td>
+<td>规定应该禁用该按钮。</td>
+</tr>
+
+<tr>
+<td class="html5_new"><a href="att_button_form.htm"  title="HTML5 &lt;button&gt; form 属性">form</a></td>
+<td><i>form_name</i></td>
+<td>规定按钮属于一个或多个表单。</td>
+</tr>
+
+<tr>
+<td class="html5_new"><a href="att_button_formaction.htm"  title="HTML5 &lt;button&gt; formaction 属性">formaction</a></td>
+<td><i>url</i></td>
+<td>
+	<p>覆盖 form 元素的 action 属性。</p>
+	<p class="note"><span>注释：</span>该属性与 type=&quot;submit&quot; 配合使用。</p>
+</td>
+</tr>
+
+<tr>
+<td class="html5_new"><a href="att_button_formenctype.htm"  title="HTML5 &lt;button&gt; formenctype 属性">formenctype</a></td>
+<td>见注释</td>
+<td>
+	<p>覆盖 form 元素的 enctype 属性。</p>
+	<p class="note"><span>注释：</span>该属性与 type=&quot;submit&quot; 配合使用。</p>
+</td>
+</tr>
+
+<tr>
+<td class="html5_new"><a href="att_button_formmethod.htm"  title="HTML5 &lt;button&gt; formmethod 属性">formmethod</a></td>
+<td>
+	<ul>
+	<li>get</li>
+	<li>post</li>
+	</ul>
+</td>
+<td>
+	<p>覆盖 form 元素的 method 属性。</p>
+	<p class="note"><span>注释：</span>该属性与 type=&quot;submit&quot; 配合使用。</p>
+</td>
+</tr>
+
+<tr>
+<td class="html5_new"><a href="att_button_formnovalidate.htm"  title="HTML5 &lt;button&gt; formnovalidate 属性">formnovalidate</a></td>
+<td>formnovalidate</td>
+<td>
+	<p>覆盖 form 元素的 novalidate 属性。</p>
+	<p class="note"><span>注释：</span>该属性与 type=&quot;submit&quot; 配合使用。</p>
+</td>
+</tr>
+
+<tr>
+<td class="html5_new"><a href="att_button_formtarget.htm"  title="HTML5 &lt;button&gt; formtarget 属性">formtarget</a></td>
+<td>
+	<ul>
+	<li>_blank</li>
+	<li>_self</li>
+	<li>_parent</li>
+	<li>_top</li>
+	<li><i>framename</i></li>
+	</ul>
+</td>
+<td>
+	<p>覆盖 form 元素的 target 属性。</p>
+	<p class="note"><span>注释：</span>该属性与 type=&quot;submit&quot; 配合使用。</p>
+</td>
+</tr>
+
+<tr>
+<td><a href="att_button_name.htm"  title="HTML5 &lt;button&gt; name 属性">name</a></td>
+<td><i>button_name</i></td>
+<td>规定按钮的名称。</td>
+</tr>
+
+<tr>
+<td><a href="att_button_type.htm"  title="HTML5 &lt;button&gt; type 属性">type</a></td>
+<td>
+	<ul>
+	<li>button</li>
+	<li>reset</li>
+	<li>submit</li>
+	</ul>
+</td>
+<td>规定按钮的类型。</td>
+</tr>
+
+<tr>
+<td><a href="att_button_value.htm"  title="HTML5 &lt;button&gt; value 属性">value</a></td>
+<td><i>text</i></td>
+<td>规定按钮的初始值。可由脚本进行修改。</td>
+</tr>
+</table>
+
+<p class="note"><span>注释：</span>formenctype 属性可能的值：</p>
+
+<ul>
+<li>application/x-www-form-urlencoded</li>
+<li>multipart/form-data</li>
+<li>text/plain</li>
+</ul>
+</div>
+
+<div>
+<h2>全局属性</h2>
+
+<p>&lt;button&gt; 标签支持 <a href="html_ref_standardattributes.htm" >HTML 中的全局属性</a>。</p>
+</div>
+
+<div>
+<h2>事件属性</h2>
+
+<p>&lt;button&gt; 标签支持 <a href="html_ref_eventattributes.htm" >HTML 中的事件属性</a>。</p>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>HTML DOM 参考手册：<a href="../jsref/dom_obj_pushbutton.htm"  title="HTML DOM Button 对象">Button 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

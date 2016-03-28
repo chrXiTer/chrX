@@ -1,0 +1,70 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript prototype 属性</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_array.htm"  title="JavaScript Array 对象">JavaScript Array 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>prototype 属性使您有能力向对象添加属性和方法。</p>
+
+<h3>语法</h3>
+
+<pre>object.prototype.name=value</pre>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在本例中，我们将展示如何使用 prototype 属性来向对象添加属性：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+function employee(name,job,born)
+{
+this.name=name;
+this.job=job;
+this.born=born;
+}
+
+var bill=new employee(&quot;Bill Gates&quot;,&quot;Engineer&quot;,1985);
+
+<code>employee.prototype.salary=null;</code>
+bill.salary=20000;
+
+document.write(bill.salary);
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>20000</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('jseg_prototype')" >TIY</a></p>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_prototype')" >prototype</a></dt>
+<dd>在本例中，我们将展示如何使用 prototype 属性。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_array.htm"  title="JavaScript Array 对象">JavaScript Array 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

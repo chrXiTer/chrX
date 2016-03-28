@@ -1,0 +1,109 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>基本的 HTML 标签 </h1>
+
+<div>
+<h2>HTML 标题</h2>
+<p>HTML 标题（Heading）是通过 &lt;h1&gt; - &lt;h6&gt; 等标签进行定义的。&lt;h1&gt; 定义最大的标题。&lt;h6&gt; 定义最小的标题。应该将 h1 用作主标题（最重要的），其后是 h2（次重要的），再其次是 h3，以此类推。</p>
+<p>标题对于文档结构的呈现非常重要，用户可以通过标题来快速浏览网页，搜索引擎使用标题为网页的结构和内容编制索引。</p>
+<P>HTML heading 标签在浏览器中默认会以大号字体显示，但只应在实际的标题才使用，而不应该用于产生粗体或大号的文本。</p></p>
+
+<pre>
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;h2&gt;This is a heading&lt;/h2&gt;
+&lt;h3&gt;This is a heading&lt;/h3&gt;
+</pre>
+<p class="tiy"><a href="javascript:tiy.run('html_headers')" >试一试</a></p>
+
+<h2>HTML 段落</h2>
+<p>HTML 段落是通过 &lt;p&gt; 标签进行定义的。</p>
+
+<pre>
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_paragraphs1')" >试一试</a></p>
+
+
+<h2>HTML 折行</h2>
+<p>如果您希望在不产生一个新段落的情况下进行换行（新行），请使用 &lt;br /&gt; 标签：</p>
+<pre>&lt;p&gt;This is&lt;br /&gt;a para&lt;br /&gt;graph with line breaks&lt;/p&gt;</pre>
+<p class="tiy"><a href="javascript:tiy.run('html_paragraphs')" >试一试</a></p>
+<p class="note"><span>注释：</span>浏览器会自动在标题、段落等块级元素后后面行。（&lt;h1&gt;~&lt;h6&gt;、&lt;p&gt; 是块级元素）</p>
+<p class="tip"><span>提示：</span>使用空的段落标记 &lt;p&gt;&lt;/p&gt; 去插入一个空行是个坏习惯。用 &lt;br /&gt; 标签代替它！（但是不要用 &lt;br /&gt; 标签去创建列表。不要着急，您将在稍后的篇幅学习到 HTML 列表。）</p>
+<p>&lt;br /&gt; 元素是一个空的 HTML 元素。由于关闭标签没有任何意义，因此它没有结束标签。</p>
+
+<h3>&lt;br&gt; 还是 &lt;br /&gt;</h3>
+<p>在 XHTML中，不允许使用没有结束标签（闭合标签）的 HTML 元素。</p>
+<p>即使 &lt;br&gt; 在所有浏览器中的显示都没有问题，使用 &lt;br /&gt; 也是<em>更好的选择</em>。</p>
+
+<h2>HTML文本中的空格和换行符</h2>
+<p>我们无法确定 HTML 被显示的确切效果。屏幕的大小，以及对窗口的调整都可能导致不同的结果。</p>
+<p>对于 HTML，您无法通过在 HTML 代码中添加额外的空格或换行来改变输出的效果。</p>
+<p>当显示页面时，浏览器会移除<em>源代码中</em>多余的空格和空行。所有连续的空格或空行都会被算作一个空格。需要注意的是，HTML 代码中的所有连续的空行（换行）也被显示为一个空格。</p>
+<p class="tiy"><a href="javascript:tiy.run('html_poem')" >试一试</a></p>
+<p>（这个例子演示了一些 HTML 格式化方面的问题）</p>
+
+<h2>HTML 链接</h2>
+<p>HTML 链接是通过 &lt;a&gt; 标签进行定义的。</p>
+<pre>&lt;a href="http://www.h5jc.com"&gt;This is a link&lt;/a&gt;</pre>
+<p class="tiy"><a href="javascript:tiy.run('html_basic_link')" >试一试</a></p>
+<p class="note"><span>注释：</span>在 href 属性中指定链接的地址。</p>
+
+<h2>HTML 图像</h2>
+<p>在 HTML 中，图像由 &lt;img&gt; 标签定义。</p>
+<pre>&lt;img src="w3school.jpg" width="104" height="142" /&gt;</pre>
+<p class="tiy"><a href="javascript:tiy.run('html_basic_img')" >试一试</a></p>
+<p>&lt;img&gt; 是空标签，意思是说，它只包含属性，并且没有闭合标签。</p>
+<p>要在页面上显示图像，需要使用源属性（src）。src 指 &quot;source&quot;。源属性的值是图像的 URL 地址。</p>
+<p>定义图像的语法是：</p>
+<pre>&lt;img src=&quot;url&quot; /&gt;</pre>
+
+<p>URL 指存储图像的位置。如果名为 &quot;boat.gif&quot; 的图像位于 /chrX/nofile/123images/ 目录中，那么其 URL 为 /chrX/nofile/123images/boat.gif。</p>
+<p>浏览器将图像显示在文档中图像标签出现的地方。如果你将图像标签置于两个段落之间，那么浏览器会首先显示第一个段落，然后显示图片，最后显示第二段。</p>
+
+<h3>替换文本属性（Alt）</h3>
+<p>alt 属性用来为图像定义一串预备的可替换的文本。替换文本属性的值是用户定义的。</p>
+
+<pre>&lt;img src=&quot;boat.gif&quot; <code>alt=&quot;Big Boat&quot;</code>&gt;</pre>
+
+<p>在浏览器无法载入图像时，替换文本属性告诉读者失去的信息。此时，浏览器将显示这个替代性的文本而不是图像。为页面上的图像都加上替换文本属性是个好习惯，这样有助于更好的显示信息，并且对于使用纯文本浏览器的人来说是非常有用的。</p>
+
+<h3>相关标签</h3>
+<a href="../tags/tag_img.htm" >&lt;img&gt;</a>
+<a href="../tags/tag_map.htm" >&lt;map&gt;</a>
+<a href="../tags/tag_area.htm" >&lt;area&gt;</a>
+
+<h2>HTML 水平线</h2>
+<p>&lt;hr /&gt; 标签在 HTML 页面中创建水平线。</p>
+<p>hr 元素可用于分隔内容。</p>
+
+<pre>
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_hr')" >试一试</a></p>
+<p class="tip"><span>提示：</span>使用水平线 (&lt;hr&gt; 标签) 来分隔文章中的小节是一个办法（但并不是唯一的办法）。</p>
+
+<h2>HTML 注释</h2>
+<p>可以将注释插入 HTML 代码中，这样可以提高其可读性，使代码更易被人理解。浏览器会忽略注释，也不会显示它们。</p>
+<p>注释是这样写的：</p>
+
+<pre>&lt;!-- This is a comment --&gt;</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_comment')" >试一试</a></p>
+<p class="note"><span>注释：</span>开始括号之后（左边的括号）需要紧跟一个叹号，结束括号之前（右边的括号）不需要。</p>
+<p class="tip"><span>提示：</span>合理地使用注释可以对未来的代码编辑工作产生帮助。</p>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

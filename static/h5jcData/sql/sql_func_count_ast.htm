@@ -1,0 +1,67 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL COUNT(*) 函数</h1>
+
+<div class="backtoreference">
+<p><a href="sql_functions.htm"  title="SQL 函数">SQL 函数</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>COUNT(*) 函数返回在给定的选择中被选的行数。</p>
+
+<h3>语法</h3>
+<pre>SELECT COUNT(*) FROM table</pre>
+</div>
+
+<div>
+<h2>例子</h2>
+
+<table class="dataintable">
+    <tr>
+      <th style="width:35%">Name</th>
+      <th style="width:65%">Age</th>
+    </tr>
+    <tr>
+      <td>Adams, John</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <td>Bush, George</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <td>Carter, Thomas</td>
+      <td>18</td>
+    </tr>    
+</table>
+
+<h3>例子 1</h3>
+<p>本例返回 &quot;Persons&quot; 表中的行数：</p>
+<pre>SELECT COUNT(*) FROM Persons</pre>
+
+<p>结果：</p>
+<pre>3</pre>
+
+<h3>例子 2</h3>
+
+<p>返回大于 20 岁的人数：</p>
+<pre>SELECT COUNT(*) FROM Persons WHERE Age&gt;20</pre>
+
+<p>结果：</p>
+<pre>2</pre>
+
+</div>
+
+<div class="backtoreference">
+<p><a href="sql_functions.htm"  title="SQL 函数">SQL 函数</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,94 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 Audio/Video DOM loadstart 事件</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>提示音频的元数据已加载：</p>
+
+<pre>
+myVid=document.getElementById(&quot;video1&quot;);
+<code>myVid.onloadstart=alert(&quot;Starting to load video&quot;)</code>;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_av_event_loadstart')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>当浏览器开始寻找指定的音频/视频时，会发生 loadstart 事件。即当加载过程开始时。</p>
+
+<p>当音频/视频处于加载过程中时，会依次发生以下事件：</p>
+
+<ul>
+<li>loadstart</li>
+<li><a href="av_event_durationchange.htm"  title="HTML5 Audio/Video DOM durationchange 事件">durationchange</a></li>
+<li><a href="av_event_loadedmetadata.htm"  title="HTML5 Audio/Video DOM loadedmetadata 事件">loadedmetadata</a></li>
+<li><a href="av_event_loadeddata.htm"  title="HTML5 Audio/Video DOM loadeddata 事件">loadeddata</a></li>
+<li><a href="av_event_progress.htm"  title="HTML5 Audio/Video DOM progress 事件">progress</a></li>
+<li><a href="av_event_canplay.htm"  title="HTML5 Audio/Video DOM canplay 事件">canplay</a></li>
+<li><a href="av_event_canplaythrough.htm"  title="HTML5 Audio/Video DOM canplaythrough 事件">canplaythrough</a></li>
+</ul>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<p>在 HTML 中：</p>
+<pre>&lt;audio|video onloadstart=&quot;<i>SomeJavaScriptCode</i>&quot;&gt;</pre>
+
+<p>在 JavaScript 中：</p>
+<pre>audio|video.onloadstart=<i>SomeJavaScriptCode</i>;</pre>
+
+<p>使用 addEventListener()：</p>
+<pre>
+audio|video.addEventListener(&quot;loadstart&quot;, function()
+  {
+  <span>//SomeJavaScriptCode</span>
+  }
+);
+</pre>
+</div>
+
+<div>
+<h3>技术细节</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:35%;">以下 HTML 标签支持：</th>
+<td>&lt;audio&gt;, &lt;video&gt;</td>
+</tr>
+
+<tr>
+<th>以下 JavaScript 对象支持：</th>
+<td>Audio, Video</td>
+</tr>
+
+</table>
+</div>
+
+<div>
+<h2>更多实例</h2>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_av_event_loadstart_html')" >在 HTML 元素上使用 loadstart 属性</a></p>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_av_event_loadstart_addeventlistener')" >使用 addEventListener() 来监听 loadstart 事件</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

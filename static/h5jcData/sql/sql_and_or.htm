@@ -1,0 +1,151 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL AND &amp; OR 运算符</h1>
+
+<div  id="tpn">
+<ul class="prenext">
+<li class="pre"><a href="sql_where.htm"  title="SQL WHERE 子句">SQL where</a></li>
+<li class="next"><a href="sql_orderby.htm"  title="SQL ORDER BY 语句">SQL Order By</a></li>
+</ul>
+</div>
+
+<div>
+<p><strong>AND 和 OR 运算符用于基于一个以上的条件对记录进行过滤。</strong></p>
+</div>
+
+<div>
+<h2>AND 和 OR 运算符</h2>
+
+<p>AND 和 OR 可在 WHERE 子语句中把两个或多个条件结合起来。</p>
+<p>如果第一个条件和第二个条件都成立，则 AND 运算符显示一条记录。</p>
+<p>如果第一个条件和第二个条件中只要有一个成立，则 OR 运算符显示一条记录。</p>
+</div>
+
+<div>
+<h2>原始的表 (用在例子中的)：</h2>
+<table class="dataintable">
+  <tr>
+    <th>LastName</th>
+    <th>FirstName</th>
+    <th>Address</th>
+    <th>City</th>
+  </tr>
+  <tr>
+    <td>Adams</td>
+    <td>John</td>
+    <td>Oxford Street</td>
+    <td>London</td>
+  </tr>
+  <tr>
+    <td>Bush</td>
+    <td>George</td>
+    <td>Fifth Avenue</td>
+    <td>New York </td>
+  </tr>
+  <tr>
+    <td>Carter</td>
+    <td>Thomas</td>
+    <td>Changan Street</td>
+    <td>Beijing</td>
+  </tr>
+  <tr>
+    <td>Carter</td>
+    <td>William</td>
+    <td>Xuanwumen 10</td>
+    <td>Beijing</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>AND 运算符实例</h2>
+
+<p>使用 AND 来显示所有姓为 &quot;Carter&quot; 并且名为 &quot;Thomas&quot; 的人：</p>
+<pre>SELECT * FROM Persons WHERE FirstName='Thomas' <code>AND</code> LastName='Carter'</pre>
+
+<h3>结果：</h3>
+<table class="dataintable">
+  <tr>
+    <th>LastName</th>
+    <th>FirstName</th>
+    <th>Address</th>
+    <th>City</th>
+  </tr>
+  <tr>
+    <td>Carter</td>
+    <td>Thomas</td>
+    <td>Changan Street</td>
+    <td>Beijing</td>
+  </tr>
+</table>
+
+</div>
+
+<div>
+<h2>OR 运算符实例</h2>
+
+<p>使用 OR 来显示所有姓为 &quot;Carter&quot; 或者名为 &quot;Thomas&quot; 的人：</p>
+<pre>SELECT * FROM Persons WHERE firstname='Thomas' <code>OR</code> lastname='Carter'</pre>
+
+<h3>结果：</h3>
+<table class="dataintable">
+  <tr>
+    <th>LastName</th>
+    <th>FirstName</th>
+    <th>Address</th>
+    <th>City</th>
+  </tr>
+  <tr>
+    <td>Carter</td>
+    <td>Thomas</td>
+    <td>Changan Street</td>
+    <td>Beijing</td>
+  </tr>
+  <tr>
+    <td>Carter</td>
+    <td>William</td>
+    <td>Xuanwumen 10</td>
+    <td>Beijing</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>结合 AND 和 OR 运算符</h2>
+
+<p>我们也可以把 AND 和 OR 结合起来（使用圆括号来组成复杂的表达式）:</p>
+<pre>
+SELECT * FROM Persons WHERE <code>(</code>FirstName='Thomas' <code>OR</code> FirstName='William'<code>)</code>
+<code>AND</code> LastName='Carter'
+</pre>
+
+<h3>结果：</h3>
+<table class="dataintable">
+  <tr>
+    <th>LastName</th>
+    <th>FirstName</th>
+    <th>Address</th>
+    <th>City</th>
+  </tr>
+  <tr>
+    <td>Carter</td>
+    <td>Thomas</td>
+    <td>Changan Street</td>
+    <td>Beijing</td>
+  </tr>
+  <tr>
+    <td>Carter</td>
+    <td>William</td>
+    <td>Xuanwumen 10</td>
+    <td>Beijing</td>
+  </tr>
+</table>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

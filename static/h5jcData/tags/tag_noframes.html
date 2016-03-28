@@ -1,0 +1,70 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;noframes&gt; 标签</h1>
+
+<div>
+<h2>实例</h2>
+
+<pre>
+&lt;frameset cols = &quot;25%, 25%,*&quot;&gt;
+  <code>&lt;noframes&gt;
+  &lt;body&gt;Your browser does not handle frames!&lt;/body&gt;
+  &lt;/noframes&gt;</code>
+  &lt;frame src =&quot;venus.htm&quot; /&gt;
+  &lt;frame src   =&quot;sun.htm&quot; /&gt;
+  &lt;frame src =&quot;mercur.htm&quot;   /&gt;
+&lt;/frameset&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_noframes')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>noframes 元素可为那些不支持框架的浏览器显示文本。noframes 元素位于 frameset 元素内部。</p>
+</div>
+
+<div>
+<h2>HTML 与 XHTML 之间的差异</h2>
+
+<p>NONE</p>
+</div>
+
+<div>
+<h2>提示和注释：</h2>
+
+<p class="note"><span>注释：</span>如果浏览器有能力处理框架，就不会显示出 frameset 元素中的文本。</p>
+
+<p class="important"><span>重要事项：</span>如果您希望 frameset 添加 &lt;noframes&gt; 标签，就必须把其中的文本包装在 &lt;body&gt;&lt;/body&gt; 标签中！</p>
+
+<p class="note"><span>注释：</span>如果您希望验证包含框架的页面，请确保 DTD 被设置为 &quot;Frameset DTD&quot;。</p>
+
+<p><a href="../xhtml/xhtml_validate.htm" >阅读更多有关 XHTML 验证的内容</a>。</p>
+
+<p class="note"><span>注释：</span>在<a href="tag_doctype.htm" >XHTML 1.0 Strict DTD</a> 中，&lt;noframes&gt; 标签是不被允许的。</p>
+</div>
+
+<div>
+<h2>标准属性</h2>
+
+<pre>id, class, title, style, dir, lang, xml:lang</pre>
+
+<p>如需完整的描述，请访问<a href="html_ref_standardattributes.htm" >标准属性</a>。</p>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="javascript:tiy.run('html_noframes')" >如何使用 &lt;noframes&gt; 标签</a></dt>
+<dd>本例演示：如何使用 &lt;noframes&gt; 标签。</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

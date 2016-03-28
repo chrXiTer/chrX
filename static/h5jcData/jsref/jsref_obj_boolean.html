@@ -1,0 +1,97 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript Boolean 对象</h1>
+
+<div id="intro">
+<h2>Boolean 对象</h2>
+
+<p>Boolean 对象表示两个值：&quot;true&quot; 或 &quot;false&quot;。</p>
+
+<h3>创建 Boolean 对象的语法：</h3>
+
+<pre>
+new Boolean(<i>value</i>);	<span>//构造函数</span>
+Boolean(<i>value</i>);		<span>//转换函数</span>
+</pre>
+
+<h3>参数</h3>
+
+<p>参数 <i>value</i> 由布尔对象存放的值或者要转换成布尔值的值。</p>
+
+<h3>返回值</h3>
+
+<p>当作为一个构造函数（带有运算符 new）调用时，Boolean() 将把它的参数转换成一个布尔值，并且返回一个包含该值的 Boolean 对象。</p>
+
+<p>如果作为一个函数（不带有运算符 new）调用时，Boolean() 只将把它的参数转换成一个原始的布尔值，并且返回这个值。</p>
+
+<p class="note"><span>注释：</span>如果省略 value 参数，或者设置为 0、-0、null、&quot;&quot;、false、undefined 或 NaN，则该对象设置为 false。否则设置为 true（即使 value 参数是字符串 &quot;false&quot;）。</p>
+</div>
+
+<div>
+<h2>Boolean 对象属性</h2>
+
+<table class="dataintable">
+  <tr>
+    <th style="width:25%">属性</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td><a href="jsref_constructor_boolean.htm" >constructor</a></td>
+    <td>返回对创建此对象的 Boolean 函数的引用</td>
+  </tr>
+  <tr>
+    <td><a href="jsref_prototype_boolean.htm" >prototype</a></td>
+    <td>使您有能力向对象添加属性和方法。</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>Boolean 对象方法</h2>
+
+<table class="dataintable">
+  <tr>
+    <th style="width:25%">方法</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td><a href="jsref_tosource_boolean.htm" >toSource()</a></td>
+    <td>返回该对象的源代码。</td>
+  </tr>
+  <tr>
+    <td><a href="jsref_toString_boolean.htm" >toString()</a></td>
+    <td>把逻辑值转换为字符串，并返回结果。</td>
+  </tr>
+  <tr>
+    <td><a href="jsref_valueOf_boolean.htm" >valueOf()</a></td>
+    <td>返回 Boolean 对象的原始值。</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>Boolean 对象描述</h2>
+
+<p>在 JavaScript 中，布尔值是一种基本的数据类型。Boolean 对象是一个将布尔值打包的布尔对象。Boolean 对象主要用于提供将布尔值转换成字符串的 toString() 方法。</p>
+
+<p>当调用 toString() 方法将布尔值转换成字符串时（通常是由 JavaScript 隐式地调用），JavaScript 会内在地将这个布尔值转换成一个临时的 Boolean 对象，然后调用这个对象的 toString() 方法。</p>
+</div>
+
+<div id="toc">
+<h2>课外书</h2>
+
+<p>如需更多信息，请阅读 JavaScript 高级教程中的相关内容：</p>
+
+<dl>
+<dt><a href="../js/pro_js_referencetypes.htm"  title="ECMAScript 引用类型">ECMAScript 引用类型</a></dt>
+<dd>引用类型通常叫做类（class）或对象。本节讲解 ECMAScript 的预定义引用类型。</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

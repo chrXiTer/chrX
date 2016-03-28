@@ -1,0 +1,183 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL FOREIGN KEY 约束</h1>
+
+<div>
+<h2>SQL FOREIGN KEY 约束</h2>
+
+<p>一个表中的 FOREIGN KEY 指向另一个表中的 PRIMARY KEY。</p>
+
+<p>让我们通过一个例子来解释外键。请看下面两个表：</p>
+
+<p>&quot;Persons&quot; 表：</p>
+
+<table class="dataintable">
+  <tr>
+    <th style="color:blue;">Id_P</th>
+	<th>LastName</th>
+	<th>FirstName</th>
+	<th>Address</th>
+	<th>City</th>
+  </tr>
+  <tr>
+	<td>1</td>
+	<td>Adams</td>
+	<td>John</td>
+	<td>Oxford Street</td>
+	<td>London</td>
+  </tr>
+  <tr>
+	<td>2</td>
+	<td>Bush</td>
+	<td>George</td>
+	<td>Fifth Avenue</td>
+	<td>New York</td>
+  </tr>
+  <tr>
+	<td>3</td>
+	<td>Carter</td>
+	<td>Thomas</td>
+	<td>Changan Street</td>
+	<td>Beijing</td>
+  </tr>
+</table>
+
+<p>&quot;Orders&quot; 表：</p>
+
+<table class="dataintable">
+  <tr>
+    <th style="color:blue;">Id_O</th>
+    <th>OrderNo</th>
+    <th style="color:red;">Id_P</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>77895</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>44678</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>22456</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>24562</td>
+    <td>1</td>
+  </tr>
+</table>
+
+<p>请注意，&quot;Orders&quot; 中的 &quot;Id_P&quot; 列指向 &quot;Persons&quot; 表中的 &quot;Id_P&quot; 列。</p>
+
+<p>&quot;Persons&quot; 表中的 &quot;Id_P&quot; 列是 &quot;Persons&quot; 表中的 PRIMARY KEY。</p>
+
+<p>&quot;Orders&quot; 表中的 &quot;Id_P&quot; 列是 &quot;Orders&quot; 表中的 FOREIGN KEY。</p>
+
+<p>FOREIGN KEY 约束用于预防破坏表之间连接的动作。</p>
+
+<p>FOREIGN KEY 约束也能防止非法数据插入外键列，因为它必须是它指向的那个表中的值之一。</p>
+</div>
+
+<div>
+<h2>SQL FOREIGN KEY Constraint on CREATE TABLE</h2>
+
+<p>下面的 SQL 在 &quot;Orders&quot; 表创建时为 &quot;Id_P&quot; 列创建 FOREIGN KEY：</p>
+
+<h3>MySQL:</h3>
+
+<pre>
+CREATE TABLE Orders
+(
+Id_O int NOT NULL,
+OrderNo int NOT NULL,
+Id_P int,
+PRIMARY KEY (Id_O),
+<code>FOREIGN KEY (Id_P) REFERENCES Persons(Id_P)</code>
+)
+</pre>
+
+<h3>SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+CREATE TABLE Orders
+(
+Id_O int NOT NULL PRIMARY KEY,
+OrderNo int NOT NULL,
+<code>Id_P int FOREIGN KEY REFERENCES Persons(Id_P)</code>
+)
+</pre>
+
+<p>如果需要命名 FOREIGN KEY 约束，以及为多个列定义 FOREIGN KEY 约束，请使用下面的 SQL 语法：</p>
+
+<h3>MySQL / SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+CREATE TABLE Orders
+(
+Id_O int NOT NULL,
+OrderNo int NOT NULL,
+Id_P int,
+PRIMARY KEY (Id_O),
+<code>CONSTRAINT fk_PerOrders FOREIGN KEY (Id_P)
+REFERENCES Persons(Id_P)</code>
+)
+</pre>
+</div>
+
+<div>
+<h2>SQL FOREIGN KEY Constraint on ALTER TABLE</h2>
+
+<p>如果在 &quot;Orders&quot; 表已存在的情况下为 &quot;Id_P&quot; 列创建 FOREIGN KEY 约束，请使用下面的 SQL：</p>
+
+<h3>MySQL / SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+ALTER TABLE Orders
+<code>ADD FOREIGN KEY (Id_P)
+REFERENCES Persons(Id_P)</code>
+</pre>
+
+<p>如果需要命名 FOREIGN KEY 约束，以及为多个列定义 FOREIGN KEY 约束，请使用下面的 SQL 语法：</p>
+
+<h3>MySQL / SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+ALTER TABLE Orders
+<code>ADD CONSTRAINT fk_PerOrders
+FOREIGN KEY (Id_P)
+REFERENCES Persons(Id_P)</code>
+</pre>
+</div>
+
+<div>
+<h2>撤销 FOREIGN KEY 约束</h2>
+
+<p>如需撤销 FOREIGN KEY 约束，请使用下面的 SQL：</p>
+
+<h3>MySQL:</h3>
+
+<pre>
+ALTER TABLE Orders
+<code>DROP FOREIGN KEY fk_PerOrders</code>
+</pre>
+
+<h3>SQL Server / Oracle / MS Access:</h3>
+
+<pre>
+ALTER TABLE Orders
+<code>DROP CONSTRAINT fk_PerOrders</code>
+</pre>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

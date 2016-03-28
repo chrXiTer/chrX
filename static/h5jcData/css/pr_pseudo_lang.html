@@ -1,0 +1,69 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS :lang 伪类</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>:lang 伪类向带有指定 lang 属性的元素添加样式。</p>
+<h3>说明</h3>
+<p>:lang 伪类根据元素的语言编码匹配元素。这种语言信息必须包含在文档中，或者与文档关联，不能从 CSS 指定。:lang 的处理与 |= 选择器相同。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+<p>:lang 伪类允许您为不同的语言定义特殊的规则。在下面的例子中，:lang 类为带有值为 &quot;no&quot; 的 lang 属性的 q 元素定义引号的类型：</p>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+<code>q:lang(no)
+  {
+  quotes: &quot;~&quot; &quot;~&quot;
+  }</code>
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;p&gt;Some text &lt;q lang=&quot;no&quot;&gt;A quote in a paragraph&lt;/q&gt; Some text.&lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+<p><a href="../tiy/t.asp-f=csse_lang.htm" >TIY</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有主流浏览器都支持 :lang 伪类。</p>
+<p class="note"><span>注释：</span>如果已规定 !DOCTYPE，那么 Internet Explorer 8 （以及更高版本）支持 :lang 伪类。</p>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="../tiy/t.asp-f=csse_lang.htm" >:lang</a></dt>
+<dd>本例演示 :lang 伪类的用法。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+<p>CSS 教程：<a href="css_pseudo_classes.htm" title="CSS 伪类 (Pseudo-classes)">CSS 伪类</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

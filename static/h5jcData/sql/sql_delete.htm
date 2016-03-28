@@ -1,0 +1,76 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL DELETE 语句</h1>
+
+<div>
+<h2>DELETE 语句</h2>
+
+<p>DELETE 语句用于删除表中的行。</p>
+
+<h3>语法</h3>
+<pre>DELETE FROM 表名称 WHERE 列名称 = 值</pre>
+</div>
+
+<div>
+<h2>Person:</h2>
+<table class="dataintable">
+    <tr>
+      <th>LastName</th>
+      <th>FirstName</th>
+      <th>Address</th>
+      <th>City</th>
+    </tr>
+    <tr>
+      <td>Gates</td>
+      <td>Bill</td>
+      <td>Xuanwumen 10</td>
+      <td>Beijing</td>
+    </tr>
+    <tr>
+      <td>Wilson</td>
+      <td>Fred</td>
+      <td>Zhongshan 23</td>
+      <td>Nanjing</td>
+    </tr>
+</table>
+</div>
+
+<div>
+<h2>删除某行</h2>
+
+<p>&quot;Fred Wilson&quot; 会被删除：</p>
+<pre>DELETE FROM Person WHERE LastName = 'Wilson' </pre>
+
+<h3>结果:</h3>
+<table class="dataintable">
+    <tr>
+      <th>LastName</th>
+      <th>FirstName</th>
+      <th>Address</th>
+      <th>City</th>
+    </tr>
+    <tr>
+      <td>Gates</td>
+      <td>Bill</td>
+      <td>Xuanwumen 10</td>
+      <td>Beijing</td>
+    </tr>
+</table>
+</div>
+
+<div>
+<h2>删除所有行</h2>
+
+<p>可以在不删除表的情况下删除所有的行。这意味着表的结构、属性和索引都是完整的：</p>
+<pre>DELETE FROM table_name</pre>
+<p>或者：</p>
+<pre>DELETE * FROM table_name</pre>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

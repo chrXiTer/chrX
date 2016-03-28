@@ -1,0 +1,107 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript getTime() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>getTime() 方法可返回距 1970 年 1 月 1 日之间的毫秒数。</p>
+
+<h3>语法</h3>
+
+<pre>dateObject.getTime()</pre>
+
+<h3>返回值</h3>
+
+<p>dateObject 指定的日期和时间距 1970 年 1 月 1 日午夜（GMT 时间）之间的毫秒数。</p>
+</div>
+
+<div>
+<h2>提示和注释：</h2>
+
+<p class="note"><span>注释：</span>该方法总是结合一个 Date 对象来使用。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<h3>例子 1</h3>
+
+<p>在本例中，我们将取得从 1970/01/01 至今的毫秒数，并输出它：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var d = new Date()
+document.write(d.getTime() + &quot; milliseconds since 1970/01/01&quot;)
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>
+<script type="text/javascript">
+	var d = new Date()
+	document.write(d.getTime() + " milliseconds since 1970/01/01")
+</script>
+</pre>
+
+<h3>例子 2</h3>
+
+<p>在下面的例子中，我们将计算出从 1970/01/01 至今有多少年：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var minutes = 1000*60
+var hours = minutes*60
+var days = hours*24
+var years = days*365
+var d = new Date()
+var t = d.getTime()
+var y = t/years
+document.write(&quot;It's been: &quot; + y + &quot; years since 1970/01/01!&quot;)
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>
+<script>
+    var Minutes = 1000 * 60;
+	var Hours = Minutes * 60;
+	var Days = Hours * 24;
+	var Years = Days * 365;
+	var d = new Date();
+	var t = d.getTime();
+	document.write("It's been: " + t/Years + " years since 1970/01/01!")
+</script>
+</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_gettime')" >getTime()</a></dt>
+<dd>使用 getTime() 来计算从 1970 至今有多少年。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

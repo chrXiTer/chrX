@@ -1,0 +1,76 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 元信息</h1>
+
+<div class="example">
+<h2>实例</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('html_meta.htm" >文档描述</a></dt>
+<dd>Meta 元素中的信息可以描述 HTML 文档。</dd>
+
+<dt><a href="javascript:tiy.run('html_keywords.htm" >文档关键字</a></dt>
+<dd>Meta 元素中的信息可以描述文档的关键词。</dd>
+
+<dt><a href="javascript:tiy.run('html_redirect.htm" >重定向</a></dt>
+<dd>这个例子演示：在网址已经变更的情况下，将用户重定向到另外一个地址。</dd>
+</dl>
+</div>
+
+<div>
+<h2>Meta元素</h2>
+
+<p>正如在上一章中我们所解释的，头元素包含着关于文档的概要信息。</p>
+
+<p>HTML 同样包含位于 head 元素内部的 meta 元素。Meta 元素的作用是提供文档的元信息。</p>
+
+<p>大多数情况下，meta 元素用来提供与浏览器或者搜索引擎相关的信息，比方说描述文档的内容等等。</p>
+
+<p class="note"><span>提示：</span>W3C 声明说：某些用户程序支持使用 META 在设定好的几秒钟后来刷新当前的页面，并将之替换为另一个 url。开发人员不应使用此技术强迫用户转到不同的页面，因为这样会使页面的可用性变差。相反，应使用服务器端重定向来进行自动页面定向。</p>
+
+<p>参阅：<a href="http://www.w3.org/TR/html4/struct/global.html#adef-http-equiv" vvll="my" >http://www.w3.org/TR/html4/struct/global.html#adef-http-equiv</a>。</p>
+</div>
+
+<div>
+<h2>针对搜索引擎的关键字</h2>
+
+<p>某些万维网搜索引擎使用 meta 标签的 name 和 content 属性来索引页面。</p>
+
+<p>这个 Meta 元素定义了对页面的描述:</p>
+
+<pre>
+&lt;meta <code>name=&quot;description&quot;</code> 
+content=&quot;Free Web tutorials on HTML, CSS, XML, and XHTML&quot; /&gt;
+</pre>
+
+<p>这个 Meta 元素定义了页面的关键字:</p>
+
+<pre>&lt;meta <code>name=&quot;keywords&quot;</code> 
+content=&quot;HTML, DHTML, CSS, XML, XHTML, JavaScript, VBScript&quot;&gt;</pre>
+
+<p>name 和 content 属性的作用是描述页面的内容。</p>
+
+<p>然而，由于非常多的网管们使用 meta 标签制造垃圾信息，比方说在页面重复关键词以达到提高排名的目的，一些搜索引擎已经彻底放弃了使用它们。</p>
+
+<p>请阅读我们的 <a href="../site/index.htm"  title="网站构建 高级教程">网站构建教程</a>，学习更多关于搜索引擎的知识。</p>
+</div>
+
+<div>
+<h2>陌生的 Meta 属性</h2>
+
+<p>有时你会发现一些对你来说很陌生的 meta 属性，比方说：</p>
+
+<pre>&lt;meta name=&quot;security&quot; content=&quot;low&quot;&gt;。</pre>
+
+<p>其实你只需明白，这些东西对于站点或者开发人员来说具有某种特殊的意义，而也许对你来说没有什么关系。</p>
+
+<p>你也可以在我们的完整的 <a href="../tags/index.htm"  title="HTML 4.01 / XHTML 1.0 参考手册">HTML4.01 标签参考手册</a> 中找到更多有关 <a href="../tags/tag_meta.htm"  title="HTML &lt;meta&gt; 标签">meta 标签</a> 的信息。</p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

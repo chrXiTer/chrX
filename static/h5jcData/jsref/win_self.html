@@ -1,0 +1,59 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML DOM self 属性</h1>
+
+<div class="backtoreference">
+<p><a href="dom_obj_window.htm" >HTML DOM Window 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>self 属性可返回对窗口自身的只读引用。等价于 Window 属性。</p>
+	
+<h3>语法</h3>
+<pre>window.self</pre>
+</div>
+
+<div>
+<h2>实例</h2>
+<p>下面的例子窗口是否在一个框架中，如果是，则跳出框架：</p>
+
+<pre>&lt;html&gt;
+&lt;head&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+function breakout()
+  {
+  if (window.top!=<code>window.self</code>) 
+    {
+    window.top.location=&quot;tryjs_breakout.htm&quot;
+    }
+  }
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;input type=&quot;button&quot; onclick=&quot;breakout()&quot;
+value=&quot;Break out of frame!&quot;&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+<dl>
+<dt><a href="javascript:tiy.run('hdom_breakout')" >跳出框架</a></dt>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="dom_obj_window.htm" >HTML DOM Window 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

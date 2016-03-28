@@ -1,0 +1,152 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL BETWEEN 操作符</h1>
+
+<div>
+<p><strong>BETWEEN 操作符在 WHERE 子句中使用，作用是选取介于两个值之间的数据范围。</strong></p>
+</div>
+
+<div>
+<h2>BETWEEN 操作符</h2>
+
+<p>操作符 BETWEEN ... AND 会选取介于两个值之间的数据范围。这些值可以是数值、文本或者日期。</p>
+
+<h3>SQL BETWEEN 语法</h3>
+
+<pre>SELECT column_name(s)
+FROM table_name
+WHERE column_name
+BETWEEN value1 AND value2</pre>
+</div>
+
+<div>
+<h2>原始的表 (在实例中使用：)</h2>
+
+<p>Persons 表:</p>
+
+<table class="dataintable">
+  <tr>
+    <th>Id</th>
+	<th>LastName</th>
+    <th>FirstName</th>
+    <th>Address</th>
+    <th>City</th>
+  </tr>
+  <tr>
+    <td>1</td>
+	<td>Adams</td>
+    <td>John</td>
+    <td>Oxford Street</td>
+    <td>London</td>
+  </tr>
+  <tr>
+    <td>2</td>
+	<td>Bush</td>
+    <td>George</td>
+    <td>Fifth Avenue</td>
+    <td>New York</td>
+  </tr>
+  <tr>
+    <td>3</td>
+	<td>Carter</td>
+    <td>Thomas</td>
+    <td>Changan Street</td>
+    <td>Beijing</td>
+  </tr>
+  <tr>
+    <td>4</td>
+	<td>Gates</td>
+    <td>Bill</td>
+    <td>Xuanwumen 10</td>
+    <td>Beijing</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>BETWEEN 操作符实例</h2>
+
+<p>如需以字母顺序显示介于 &quot;Adams&quot;（包括）和 &quot;Carter&quot;（不包括）之间的人，请使用下面的 SQL：</p>
+
+<pre>
+SELECT * FROM Persons
+WHERE LastName
+<code>BETWEEN</code> 'Adams' <code>AND</code> 'Carter'
+</pre>
+
+<h3>结果集：</h3>
+
+<table class="dataintable">
+  <tr>
+    <th>Id</th>
+	<th>LastName</th>
+    <th>FirstName</th>
+    <th>Address</th>
+    <th>City</th>
+  </tr>
+  <tr>
+    <td>1</td>
+	<td>Adams</td>
+    <td>John</td>
+    <td>Oxford Street</td>
+    <td>London</td>
+  </tr>
+  <tr>
+    <td>2</td>
+	<td>Bush</td>
+    <td>George</td>
+    <td>Fifth Avenue</td>
+    <td>New York</td>
+  </tr>
+</table>
+  
+<p class="important"><span>重要事项：</span>不同的数据库对 BETWEEN...AND 操作符的处理方式是有差异的。某些数据库会列出介于 &quot;Adams&quot; 和 &quot;Carter&quot; 之间的人，但不包括 &quot;Adams&quot; 和 &quot;Carter&quot; ；某些数据库会列出介于 &quot;Adams&quot; 和 &quot;Carter&quot; 之间并包括 &quot;Adams&quot; 和 &quot;Carter&quot; 的人；而另一些数据库会列出介于 &quot;Adams&quot; 和 &quot;Carter&quot; 之间的人，包括 &quot;Adams&quot; ，但不包括 &quot;Carter&quot; 。</p>
+
+<p>所以，请检查你的数据库是如何处理 BETWEEN....AND 操作符的！</p>
+</div>
+
+<div>
+<h2>实例 2</h2>
+
+<p>如需使用上面的例子显示范围之外的人，请使用 NOT 操作符：</p>
+
+<pre>
+SELECT * FROM Persons
+WHERE LastName
+<code>NOT</code> BETWEEN 'Adams' AND 'Carter'
+</pre>
+
+<h3>结果集：</h3>
+
+<table class="dataintable">
+  <tr>
+    <th>Id</th>
+	<th>LastName</th>
+    <th>FirstName</th>
+    <th>Address</th>
+    <th>City</th>
+  </tr>
+  <tr>
+    <td>3</td>
+	<td>Carter</td>
+    <td>Thomas</td>
+    <td>Changan Street</td>
+    <td>Beijing</td>
+  </tr>
+  <tr>
+    <td>4</td>
+	<td>Gates</td>
+    <td>Bill</td>
+    <td>Xuanwumen 10</td>
+    <td>Beijing</td>
+  </tr>
+</table>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

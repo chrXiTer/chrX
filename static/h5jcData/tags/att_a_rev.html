@@ -1,0 +1,136 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;a&gt; 标签的 rev 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_a.htm" >HTML &lt;a&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>带有 rev 属性的链接：</p>
+
+<pre>&lt;a rev=&quot;friend&quot; href=&quot;http://www.w3c.com/&quot;&gt;w3c&lt;/a&gt;</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_a_rev')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>&lt;a&gt; 标签的 rev 属性用于指定当前文档与被链接文档的关系。</p>
+<p>用于 &lt;a&gt; 标签的可选属性 rel 和 rev 分别表示源文档与目标文档之间正式的关系和方向。rel 属性指定从源文档到目标文档的关系，而 rev 属性则指定从目标文档到源文档的关系。这两种属性可以在 &lt;a&gt; 标签中同时使用。</p>
+<p>rel 或 rev 属性的值都是以空格分隔的关系列表。实际的关系名和它们的含义取决于你自己：HTML 或 XHTML 标准并没有正式提出这两种属性。例如，一系列文档中的某个文档可能会在链接中包含它的关系：</p>
+<pre>&lt;a href=&quot;part_12.html&quot; <code>rel=&quot;next&quot;</code> <code>rev=&quot;prev&quot;</code>&gt;</pre>
+<p>从源到目标的关系是移动到下一个文档，而从目标到源的关系则是返回前一个文档。</p>
+
+<p class="tip"><span>提示：</span>创作者也许希望定义 W3C 中没有描述过的其他链接类型。如果这样做的话，则应该使用 profile 来引用用于定义链接类型的约定。如需获得更多信息，请参阅 <a href="tag_head.htm" >head</a> 元素的 <a href="tag_head.htm#attribute_profile" >profile</a> 属性。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;a rev=&quot;<i>value&quot;</i>&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>alternate</td>
+    <td>文档的可选版本（例如打印页、翻译页或镜像）。</td>
+  </tr>
+	<tr>
+    <td>stylesheet</td>
+    <td>文档的外部样式表。</td>
+  </tr>
+	<tr>
+    <td>start</td>
+    <td>集合中的第一个文档。</td>
+  </tr>
+	<tr>
+    <td>next</td>
+    <td>集合中的下一个文档。</td>
+  </tr>
+	<tr>
+    <td>prev</td>
+    <td>集合中的前一个文档。</td>
+  </tr>
+	<tr>
+    <td>contents</td>
+    <td>文档目录。</td>
+  </tr>
+	<tr>
+    <td>index</td>
+    <td>文档索引。</td>
+  </tr>
+	<tr>
+    <td>glossary</td>
+    <td>文档中所用字词的术语表或解释。</td>
+  </tr>
+	<tr>
+    <td>copyright</td>
+    <td>包含版权信息的文档。</td>
+  </tr>
+	<tr>
+    <td>chapter</td>
+    <td>文档的章。</td>
+  </tr>
+  <tr>
+    <td>section</td>
+    <td>文档的节。</td>
+  </tr>
+  <tr>
+    <td>subsection</td>
+    <td>文档的子段。</td>
+  </tr>
+	<tr>
+    <td>appendix</td>
+    <td>文档附录。</td>
+  </tr>
+	<tr>
+    <td>help</td>
+    <td>帮助文档。</td>
+  </tr>
+  <tr>
+    <td>bookmark</td>
+    <td>相关文档。</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>nofollow</td>
+    <td>Google 使用 &quot;nofollow&quot;，用于指定 Google 搜索引擎不要跟踪链接。</td>
+  </tr>
+	<tr>
+    <td>licence</td>
+    <td>&nbsp;</td>
+  </tr>
+	<tr>
+    <td>tag</td>
+    <td>&nbsp;</td>
+  </tr>
+	<tr>
+    <td>friend</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+
+<p class="note"><span>注释：</span>上面这些关系也用在文档的 &lt;head&gt; 中的 <a href="tag_link.htm"  title="HTML &lt;link&gt; 标签">&lt;link&gt; 标签</a>里。&lt;link&gt; 标签无需实际创建一个指向目标文档的链接就可以创建关系；&lt;a&gt; 标签则要创建链接，并在其中加入关系属性。</p>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_a.htm" >HTML &lt;a&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

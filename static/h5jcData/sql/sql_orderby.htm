@@ -1,0 +1,181 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL ORDER BY 子句</h1>
+
+<div id="intro">
+<p><strong>ORDER BY 语句用于对结果集进行排序。</strong></p>
+</div>
+
+<div>
+<h2>ORDER BY 语句</h2>
+
+<p>ORDER BY 语句用于根据指定的列对结果集进行排序。</p>
+
+<p>ORDER BY 语句默认按照升序对记录进行排序。</p>
+
+<p>如果您希望按照降序对记录进行排序，可以使用 DESC 关键字。</p>
+</div>
+
+<div>
+<h2>原始的表 (用在例子中的)：</h2>
+
+<p>Orders 表:</p>
+
+<table class="dataintable">
+  <tr>
+    <th>Company</th>
+    <th>OrderNumber</th>
+  </tr>
+  <tr>
+    <td>IBM</td>
+    <td>3532</td>
+  </tr>
+  <tr>
+    <td>W3School</td>
+    <td>2356</td>
+  </tr>
+  <tr>
+    <td>Apple</td>
+    <td>4698</td>
+  </tr>
+  <tr>
+    <td>W3School</td>
+    <td>6953</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例 1</h2>
+<p>以字母顺序显示公司名称：</p>
+<pre>SELECT Company, OrderNumber FROM Orders <code>ORDER BY Company</code></pre>
+<h3>结果：</h3>
+<table class="dataintable">
+  <tr>
+    <th>Company</th>
+    <th>OrderNumber</th>
+  </tr>
+  <tr>
+    <td>Apple</td>
+    <td>4698</td>
+  </tr>
+  <tr>
+    <td>IBM</td>
+    <td>3532</td>
+  </tr>
+  <tr>
+    <td>W3School</td>
+    <td>6953</td>
+  </tr>
+  <tr>
+    <td>W3School</td>
+    <td>2356</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例 2</h2>
+<p>以字母顺序显示公司名称（Company），并以数字顺序显示顺序号（OrderNumber）：</p>
+<pre>SELECT Company, OrderNumber FROM Orders <code>ORDER BY Company, OrderNumber</code></pre>
+<p>结果：</p>
+
+<table class="dataintable">
+  <tr>
+    <th>Company</th>
+    <th>OrderNumber</th>
+  </tr>
+  <tr>
+    <td>Apple</td>
+    <td>4698</td>
+  </tr>
+  <tr>
+    <td>IBM</td>
+    <td>3532</td>
+  </tr>
+  <tr>
+    <td>W3School</td>
+    <td>2356</td>
+  </tr>
+  <tr>
+    <td>W3School</td>
+    <td>6953</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例 3</h2>
+<p>以逆字母顺序显示公司名称：</p>
+<pre>SELECT Company, OrderNumber FROM Orders <code>ORDER BY Company DESC</code></pre>
+<h3>结果：</h3>
+
+<table class="dataintable">
+  <tr>
+    <th>Company</th>
+    <th>OrderNumber</th>
+  </tr>
+  <tr>
+    <td>W3School</td>
+    <td>6953</td>
+  </tr>
+  <tr>
+    <td>W3School</td>
+    <td>2356</td>
+  </tr>
+  <tr>
+    <td>IBM</td>
+    <td>3532</td>
+  </tr>
+  <tr>
+    <td>Apple</td>
+    <td>4698</td>
+  </tr>
+</table>
+
+</div>
+
+<div>
+<h2>实例 4</h2>
+<p>以逆字母顺序显示公司名称，并以数字顺序显示顺序号：</p>
+<pre>SELECT Company, OrderNumber FROM Orders <code>ORDER BY Company DESC, OrderNumber ASC</code></pre>
+<h3>结果：</h3>
+
+<table class="dataintable">
+  <tr>
+    <th>Company</th>
+    <th>OrderNumber</th>
+  </tr>
+  <tr>
+    <td>W3School</td>
+    <td>2356</td>
+  </tr>
+  <tr>
+    <td>W3School</td>
+    <td>6953</td>
+  </tr>
+  <tr>
+    <td>IBM</td>
+    <td>3532</td>
+  </tr>
+  <tr>
+    <td>Apple</td>
+    <td>4698</td>
+  </tr>
+</table>
+<p class="important"><span>注意：</span>在以上的结果中有两个相等的公司名称 (W3School)。只有这一次，在第一列中有相同的值时，第二列是以升序排列的。如果第一列中有些值为 nulls 时，情况也是这样的。</p>
+</div>
+
+<div  id="bpn">
+<ul class="prenext">
+<li class="pre"><a href="sql_and_or.htm"  title="SQL AND &amp; OR">SQL AND &amp; OR</a></li>
+<li class="next"><a href="sql_insert.htm"  title="SQL INSERT INTO 语句">SQL insert</a></li>
+</ul>
+</div>
+</div>
+</div>
+<script src="../chrX.js"></script>

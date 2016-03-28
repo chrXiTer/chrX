@@ -1,0 +1,323 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript 运算符</h1>
+
+<h2>JavaScript 算术运算符</h2>
+<p>算术运算符用于执行变量与/或值之间的算术运算。</p>
+<p>给定 <em>y=5</em>，下面的表格解释了这些算术运算符：</p>
+
+<table class="dataintable">
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>例子</th>
+<th>结果</th>
+</tr>
+
+<tr>
+<td>+</td>
+<td>加</td>
+<td>x=y+2
+</td>
+<td>x=7
+</td>
+</tr>
+
+<tr>
+<td>-</td>
+<td>减</td>
+<td>x=y-2</td>
+<td>x=3</td>
+</tr>
+
+<tr>
+<td>*</td>
+<td>乘</td>
+<td>x=y*2</td>
+<td>x=10</td>
+</tr>
+
+<tr>
+<td>/</td>
+<td>除</td>
+<td>x=y/2</td>
+<td>x=2.5</td>
+</tr>
+
+<tr>
+<td>%</td>
+<td>求余数 (保留整数)</td>
+<td>x=y%2</td>
+<td>x=1</td>
+</tr>
+
+<tr>
+<td>++</td>
+<td>累加</td>
+<td>x=++y</td>
+<td>x=6
+</td>
+</tr>
+
+<tr>
+<td>--</td>
+<td>递减</td>
+<td>x=--y</td>
+<td>x=4
+</td>
+</tr>
+</table>
+
+<p>算术运算符 + 用于把值加起来。</p>
+<pre>
+y=5;
+z=2;
+x=y+z; 
+</pre>
+<p>在以上语句执行后，x 的值是 7。</p>
+
+<h3>用于字符串的 + 运算符</h3>
+<p>+ 运算符用于把文本值或字符串变量加起来（连接起来）。</p>
+<p>如需把两个或多个字符串变量连接起来，请使用 + 运算符。</p>
+<pre>
+txt1=&quot;What a very&quot;;
+txt2=&quot;nice day&quot;;
+txt3=txt1+txt2;
+</pre>
+<p>在以上语句执行后，变量 txt3 包含的值是 &quot;What a verynice day&quot;。</p>
+<p>要想在两个字符串之间增加空格，需要把空格插入一个字符串之中：</p>
+<pre>
+txt1=&quot;What a very &quot;;
+txt2=&quot;nice day&quot;;
+txt3=txt1+txt2;
+</pre>
+<p>或者：</p>
+
+<pre>
+txt1=&quot;What a very&quot;;
+txt2=&quot;nice day&quot;;
+txt3=txt1+&quot; &quot;+txt2;
+</pre>
+<p>在以上语句执行后，变量 txt3 包含的值是：&quot;What a very nice day&quot;</p>
+
+<h3>字符串和数字相加</h3>
+<p>如果把数字与字符串相加，在相加之前会先把数字转换为字符串。</strong></p>
+<pre>
+x=5+5;
+document.write(x);
+
+x=&quot;5&quot;+&quot;5&quot;;
+document.write(x);
+
+x=5+&quot;5&quot;;
+document.write(x);
+
+x=&quot;5&quot;+5;
+document.write(x);
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('jseg_variables')" >TIY</a></p>
+
+<h2>JavaScript 赋值运算符</h2>
+<p>赋值运算符用于给 JavaScript 变量赋值。</p>
+<p>给定 <em>x=10</em> 和 <em>y=5</em>，下面的表格解释了赋值运算符：</p>
+
+<table class="dataintable">
+
+<tr>
+<th>运算符</th>
+<th>例子</th>
+<th>等价于</th>
+<th>结果</th></tr>
+
+<tr>
+<td>=</td>
+<td>x=y</td>
+<td>&nbsp;</td>
+<td>x=5</td>
+</tr>
+
+<tr>
+<td>+=</td>
+<td>x+=y</td>
+<td>x=x+y</td>
+<td>x=15</td>
+</tr>
+
+<tr>
+<td>-=</td>
+<td>x-=y</td>
+<td>x=x-y</td>
+<td>x=5</td>
+</tr>
+
+<tr>
+<td>*=</td>
+<td>x*=y</td>
+<td>x=x*y</td>
+<td>x=50</td>
+</tr>
+
+<tr>
+<td>/=</td>
+<td>x/=y</td>
+<td>x=x/y</td>
+<td>x=2</td>
+</tr>
+
+<tr>
+<td>%=</td>
+<td>x%=y</td>
+<td>x=x%y</td>
+<td>x=0</td>
+</tr>
+
+</table>
+
+<p><strong>比较和逻辑运算符用于测试 true 或 false。</strong></p>
+<h2>比较运算符</h2>
+<p>比较运算符在逻辑语句中使用，以测定变量或值是否相等。</p>
+<p>给定 x=5，下面的表格解释了比较运算符：</p>
+
+<table class="dataintable">
+
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+
+<tr>
+<td>==</td>
+<td>等于</td>
+<td>x==8 为 false</td>
+</tr>
+
+<tr>
+<td>===</td>
+<td>全等（值和类型）</td>
+<td>x===5 为 true；x===&quot;5&quot; 为 false</td>
+</tr>
+
+<tr>
+<td>!=</td>
+<td>不等于</td>
+<td>x!=8 为 true</td>
+</tr>
+
+<tr>
+<td>&gt;</td>
+<td>大于</td>
+<td>x&gt;8 为 false</td>
+</tr>
+
+<tr>
+<td>&lt;</td>
+<td>小于</td>
+<td>x&lt;8 为 true</td>
+</tr>
+
+<tr>
+<td>&gt;=</td>
+<td>大于或等于</td>
+<td>x&gt;=8 为 false</td>
+</tr>
+
+<tr>
+<td>&lt;=</td>
+<td>小于或等于</td>
+<td>x&lt;=8 为 true</td>
+</tr>
+
+</table>
+
+<h2>如何使用</h2>
+<p>可以在条件语句中使用比较运算符对值进行比较，然后根据结果来采取行动：</p>
+<pre>if (age&lt;18) document.write(&quot;Too young&quot;);</pre>
+<p>您将在本教程的下一节中学习更多有关条件语句的知识。</p>
+
+<h2>逻辑运算符</h2>
+<p>逻辑运算符用于测定变量或值之间的逻辑。</p>
+<p>给定  x=6 以及 y=3，下表解释了逻辑运算符：</p>
+
+<table class="dataintable">
+
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+
+<tr>
+<td>&amp;&amp;</td>
+<td>and</td>
+<td>(x &lt; 10 &amp;&amp; y &gt; 1) 为 true</td>
+</tr>
+
+<tr>
+<td>||</td>
+<td>or</td>
+<td>(x==5 || y==5) 为 false</td>
+</tr>
+
+<tr>
+<td>!</td>
+<td>not</td>
+<td>!(x==y) 为 true</td>
+</tr>
+</table>
+
+<h2>条件运算符</h2>
+<p>JavaScript 还包含了基于某些条件对变量进行赋值的条件运算符。</p>
+
+<h3>语法</h3>
+<pre>variablename=(condition)?value1:value2&nbsp;</pre>
+
+<h3>例子</h3>
+<pre>greeting=(visitor==&quot;PRES&quot;)?&quot;Dear President &quot;:&quot;Dear &quot;;</pre>
+<p>如果变量 visitor 中的值是 &quot;PRES&quot;，则向变量 greeting 赋值 &quot;Dear President &quot;，否则赋值 &quot;Dear&quot;。</p>
+
+
+<div id="toc">
+<h2>各类运算符详解-<em>重要</em></h2>
+
+<dl>
+<dt><a href="pro_js_operators_unary.htm"  title="ECMAScript 一元运算符">ECMAScript 一元运算符</a></dt>
+<dd>一元运算符只有一个参数，即要操作的对象或值。本节讲解 ECMAScript 中最简单的运算符 - 一元运算符。</dd>
+
+<dt><a href="pro_js_operators_bitwise.htm"  title="ECMAScript 位运算符">ECMAScript 位运算符</a></dt>
+<dd>位运算符是在数字底层进行操作的。本节深入讲解了有关整数的知识，并介绍了 ECMAScript 的各种位运算符。</dd>
+
+<dt><a href="pro_js_operators_boolean.htm"  title="ECMAScript Boolean 运算符">ECMAScript Boolean 运算符</a></dt>
+<dd>Boolean 运算符非常重要。本节深入讲解三种 Boolean 运算符：NOT、AND 和 OR。</dd>
+
+<dt><a href="pro_js_operators_multiplicative.htm"  title="ECMAScript 乘性运算符">ECMAScript 乘性运算符</a></dt>
+<dd>本节讲解 ECMAScript 的乘性运算符：乘法、除法、取模运算符，以及它们的特殊行为。</dd>
+
+<dt><a href="pro_js_operators_additive.htm"  title="ECMAScript 加性运算符">ECMAScript 加性运算符</a></dt>
+<dd>本节讲解 ECMAScript 的加性运算符：加法、减法运算符，以及它们的特殊行为。</dd>
+
+<dt><a href="pro_js_operators_relational.htm"  title="ECMAScript 关系运算符">ECMAScript 关系运算符</a></dt>
+<dd>关系运算符执行的是比较运算。本节讲解关系运算符的常规比较方式，以及如何比较字符串与数字。</dd>
+
+<dt><a href="pro_js_operators_equality.htm"  title="ECMAScript 等性运算符">ECMAScript 等性运算符</a></dt>
+<dd>等性运算符用于判断变量是否相等。ECMAScript 提供两套等性运算符：等号和非等号，以及全等号和非全等号。</dd>
+
+<dt><a href="pro_js_operators_conditional.htm"  title="ECMAScript 条件运算符">ECMAScript 条件运算符</a></dt>
+<dd>本节讲解 ECMAScript 中的条件运算符。</dd>
+
+<dt><a href="pro_js_operators_assignment.htm"  title="ECMAScript 赋值运算符">ECMAScript 赋值运算符</a></dt>
+<dd>本节讲解 ECMAScript 中的赋值运算符。</dd>
+
+<dt><a href="pro_js_operators_comma.htm"  title="ECMAScript 逗号运算符">ECMAScript 逗号运算符符</a></dt>
+<dd>本节讲解 ECMAScript 中的逗号运算符。</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

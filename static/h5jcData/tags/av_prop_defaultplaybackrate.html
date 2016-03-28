@@ -1,0 +1,90 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 Audio/Video DOM defaultPlaybackRate 属性</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>把视频设置为默认低速播放：</p>
+
+<pre>
+myVid=document.getElementById(&quot;video1&quot;);
+<code>myVid.defaultPlaybackRate=0.5</code>;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_av_prop_defaultplaybackrate')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>defaultPlaybackRate 属性设置或返回音频/视频的默认播放速度。</p>
+
+<p>设置该属性仅会改变默认的播放速度，而不是当前的。要改变当前的播放速度，请使用 playbackRate 属性。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<p>设置 defaultPlaybackRate 属性：</p>
+<pre>audio|video.defaultPlaybackRate=<i>playbackspeed</i></pre>
+
+<p>返回 defaultPlaybackRate 属性：</p>
+<pre>audio|video.defaultPlaybackRate</pre>
+
+<h3>属性值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>playbackspeed</i></td>
+<td>
+	<p>指示音频/视频的默认播放速度。</p>	
+	<p>例值：</p>
+	<ul class="listintable">
+	<li>1.0 正常速度</li>
+	<li>0.5 半速（更慢）</li>
+	<li>2.0 倍速（更快）</li>
+	<li>-1.0 向后，正常速度</li>
+	<li>-0.5 向后，半速</li>
+	</ul>
+</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>技术细节</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">返回值</th>
+<td>数字值，默认的播放速度</td>
+</tr>
+
+<tr>
+<th>默认值：</th>
+<td>1.0</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

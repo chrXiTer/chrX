@@ -1,0 +1,92 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript HTML DOM</h1>
+
+<div>
+<p><strong>通过 HTML DOM，可访问 JavaScript HTML 文档的所有元素。</strong></p>
+</div>
+
+<div>
+<h2>HTML DOM （文档对象模型）</h2>
+
+<p>当网页被加载时，浏览器会创建页面的文档对象模型（Document Object Model）。</p>
+
+<p>HTML DOM 模型被构造为对象的树。</p>
+
+<h3>HTML DOM 树</h3>
+
+<img src="../i/ct_htmltree.gif"  alt="DOM HTML 树" />
+
+<p>通过文档对象模型 DOM，JavaScript 获得动态操作 HTML 的接口。
+	<br/>JavaScript 利用 DOM 能够改变页面中的所有 HTML 元素，元素的属性，元素的CSS样式，并能够对页面中的事件做出反应。</p>
+
+</div>
+
+<div>
+<h2>查找 HTML 元素</h2>
+
+<p>通过 JavaScript 操作 HTML 元素，必须首先找到该元素。
+	<br/>有以下方法可以实现：</p>
+
+<ul>
+<li>通过 id 找到 HTML 元素</li>
+<li>通过标签名找到 HTML 元素</li>
+<li>通过类名找到 HTML 元素</li>
+</ul>
+</div>
+
+<div>
+<h2>通过 id 查找 HTML 元素</h2>
+
+<p>在 DOM 中查找 HTML 元素的最简单的方法，是通过使用元素的 id。</p>
+
+<h3>实例</h3>
+
+<p>本例查找 id=&quot;intro&quot; 元素：</p>
+
+<pre>var x=document.getElementById(&quot;intro&quot;);</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('js_dom_getelementbyid')" >亲自试一试</a></p>
+
+<p>如果找到该元素，则该方法将以对象（在 x 中）的形式返回该元素。</p>
+
+<p>如果未找到该元素，则 x 将包含 null。</p>
+</div>
+
+<div>
+<h2>通过标签名查找 HTML 元素</h2>
+
+<h3>实例</h3>
+
+<p>本例查找 id=&quot;main&quot; 的元素，然后查找 &quot;main&quot; 中的所有 &lt;p&gt; 元素：</p>
+
+<pre>
+var x=document.getElementById(&quot;main&quot;);
+var y=x.getElementsByTagName(&quot;p&quot;);
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('js_dom_getelementsbytagname')" >亲自试一试</a></p>
+
+<p class="tip"><span>提示：</span>通过类名查找 HTML 元素在 IE 5,6,7,8 中无效。</p>
+</div>
+
+<div>
+<h2>HTML DOM 教程</h2>
+
+<p>在本教程接下来的篇幅中，您将学到：</p>
+
+<ul>
+<li>如何改变 HTML 元素的内容 (innerHTML)</li>
+<li>如何改变 HTML 元素的样式 (CSS)</li>
+<li>如何对 HTML DOM 事件对做出反应</li>
+<li>如何添加或删除 HTML 元素</li>
+</ul>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

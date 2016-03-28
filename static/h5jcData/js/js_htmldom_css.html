@@ -1,0 +1,66 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript HTML DOM - 改变 CSS</h1>
+
+<div>
+<p><strong>HTML DOM 允许 JavaScript 改变 HTML 元素的样式。</strong></p>
+</div>
+
+<div>
+<h2>改变 HTML 样式</h2>
+
+<p>如需改变 HTML 元素的样式，请使用这个语法：</p>
+
+<pre>document.getElementById(<i>id</i>).style.property=<i>new style</i></pre>
+
+<h3>例子 1</h3>
+
+<p>下面的例子会改变 &lt;p&gt; 元素的样式：</p>
+
+<pre>
+&lt;p id=&quot;p2&quot;&gt;Hello World!&lt;/p&gt;
+
+&lt;script&gt;
+document.getElementById(&quot;p2&quot;).style.color=&quot;blue&quot;;
+&lt;/script&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('js_change_style')" >亲自试一试</a></p>
+
+<h3>例子 2</h3>
+
+<p>本例改变了 id=&quot;id1&quot; 的 HTML 元素的样式，当用户点击按钮时：</p>
+
+<pre>
+&lt;h1 id=&quot;id1&quot;&gt;My Heading 1&lt;/h1&gt;
+
+&lt;button type=&quot;button&quot; onclick=&quot;document.getElementById('id1').style.color='red'&quot;&gt;
+点击这里
+&lt;/button&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('js_change_style2')" >亲自试一试</a></p>
+</div>
+
+<div class="example">
+<h2>更多实例</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('js_change_style_visibility')" >Visibility</a></dt>
+<dd>如何使元素不可见。您希望元素显示或消失吗？</dd>
+</dl>
+</div>
+
+<div>
+<h2>HTML DOM Style 对象参考手册</h2>
+
+<p>如需完整的 HTML DOM Style 对象属性，请参阅我们的 <a href="../jsref/dom_obj_style.htm"  title="HTML DOM Style 对象">HTML DOM Style 对象参考手册</a>。</p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

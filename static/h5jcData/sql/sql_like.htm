@@ -1,0 +1,189 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL LIKE 操作符</h1>
+
+<div>
+<p><strong>LIKE 操作符用于在 WHERE 子句中搜索列中的指定模式。</strong></p>
+</div>
+
+<div>
+<h2>LIKE 操作符</h2>
+
+<p>LIKE 操作符用于在 WHERE 子句中搜索列中的指定模式。</p>
+
+<h3>SQL LIKE 操作符语法</h3>
+
+<pre>SELECT column_name(s)
+FROM table_name
+WHERE column_name LIKE pattern</pre>
+</div>
+
+<div>
+<h2>原始的表 (用在例子中的)：</h2>
+
+<p>Persons 表:</p>
+
+<table class="dataintable">
+  <tr>
+    <th>Id</th>
+	<th>LastName</th>
+	<th>FirstName</th>
+	<th>Address</th>
+	<th>City</th>
+  </tr>
+  <tr>
+	<td>1</td>
+	<td>Adams</td>
+	<td>John</td>
+	<td>Oxford Street</td>
+	<td>London</td>
+  </tr>
+  <tr>
+	<td>2</td>
+	<td>Bush</td>
+	<td>George</td>
+	<td>Fifth Avenue</td>
+	<td>New York</td>
+  </tr>
+  <tr>
+	<td>3</td>
+	<td>Carter</td>
+	<td>Thomas</td>
+	<td>Changan Street</td>
+	<td>Beijing</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>LIKE 操作符实例</h2>
+
+<h3>例子 1</h3>
+
+<p>现在，我们希望从上面的 &quot;Persons&quot; 表中选取居住在以 &quot;N&quot; 开始的城市里的人：</p>
+
+<p>我们可以使用下面的 SELECT 语句：</p>
+
+<pre>SELECT * FROM Persons
+WHERE City LIKE 'N%'</pre>
+
+<p class="tip"><span>提示：</span>&quot;%&quot; 可用于定义通配符（模式中缺少的字母）。</p>
+
+<h4>结果集：</h4>
+
+<table class="dataintable">
+  <tr>
+    <th>Id</th>
+	<th>LastName</th>
+    <th>FirstName</th>
+    <th>Address</th>
+    <th>City</th>
+  </tr>
+  <tr>
+    <td>2</td>
+	<td>Bush</td>
+    <td>George</td>
+    <td>Fifth Avenue</td>
+    <td>New York</td>
+  </tr>
+</table>
+
+<h3>例子 2</h3>
+
+<p>接下来，我们希望从 &quot;Persons&quot; 表中选取居住在以 &quot;g&quot; 结尾的城市里的人：</p>
+
+<p>我们可以使用下面的 SELECT 语句：</p>
+
+<pre>SELECT * FROM Persons
+WHERE City LIKE '%g'</pre>
+
+<h4>结果集：</h4>
+
+<table class="dataintable">
+  <tr>
+    <th>Id</th>
+	<th>LastName</th>
+    <th>FirstName</th>
+    <th>Address</th>
+    <th>City</th>
+  </tr>
+  <tr>
+    <td>3</td>
+	<td>Carter</td>
+    <td>Thomas</td>
+    <td>Changan Street</td>
+    <td>Beijing</td>
+  </tr>
+</table>
+
+<h3>例子 3</h3>
+
+<p>接下来，我们希望从 &quot;Persons&quot; 表中选取居住在包含 &quot;lon&quot; 的城市里的人：</p>
+
+<p>我们可以使用下面的 SELECT 语句：</p>
+
+<pre>SELECT * FROM Persons
+WHERE City LIKE '%lon%'</pre>
+
+<h4>结果集：</h4>
+
+<table class="dataintable">
+  <tr>
+    <th>Id</th>
+	<th>LastName</th>
+    <th>FirstName</th>
+    <th>Address</th>
+    <th>City</th>
+  </tr>
+  <tr>
+    <td>1</td>
+	<td>Adams</td>
+    <td>John</td>
+    <td>Oxford Street</td>
+    <td>London</td>
+  </tr>
+</table>
+
+<h3>例子 4</h3>
+
+<p>通过使用 NOT 关键字，我们可以从 &quot;Persons&quot; 表中选取居住在<em>不包含</em> &quot;lon&quot; 的城市里的人：</p>
+
+<p>我们可以使用下面的 SELECT 语句：</p>
+
+<pre>SELECT * FROM Persons
+WHERE City NOT LIKE '%lon%'</pre>
+
+<h4>结果集：</h4>
+
+<table class="dataintable">
+  <tr>
+    <th>Id</th>
+	<th>LastName</th>
+    <th>FirstName</th>
+    <th>Address</th>
+    <th>City</th>
+  </tr>
+  <tr>
+    <td>2</td>
+	<td>Bush</td>
+    <td>George</td>
+    <td>Fifth Avenue</td>
+    <td>New York</td>
+  </tr>
+  <tr>
+    <td>3</td>
+	<td>Carter</td>
+    <td>Thomas</td>
+    <td>Changan Street</td>
+    <td>Beijing</td>
+  </tr>
+</table>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

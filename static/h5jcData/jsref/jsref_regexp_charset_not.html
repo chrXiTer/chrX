@@ -1,0 +1,58 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript RegExp [^abc] 表达式</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_regexp.htm"  title="JavaScript RegExp 对象">JavaScript RegExp 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>[^abc] 表达式用于查找任何不在方括号之间的字符。</p>
+
+<p>方括号内的字符可以是任何字符或字符范围。</p>
+
+<h3>语法</h3>
+
+<pre>new RegExp(&quot;[^xyz]&quot;)</pre>
+
+<p>直接量语法：</p>
+
+<pre>/[^xyz]/</pre>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+
+<p>所有主流浏览器都支持 [^abc] 表达式。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>对不在字符范围 [a-h] 内的字符进行全局搜索：</p>
+
+<pre>
+var str="Is this all there is?";
+var patt1=<code>/[^a-h]/g</code>;
+</pre>
+
+<p>下面被标记的文本显示了表达式获得匹配的位置：</p>
+
+<pre><span class="marked">Is t</span>h<span class="marked">is </span>a<span class="marked">ll t</span>he<span class="marked">r</span>e<span class="marked"> is?</span></pre>
+
+<p class="tiy"><a href="javascript:tiy.run('jseg_regexp_not_charset')" >亲自试一试</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_regexp.htm"  title="JavaScript RegExp 对象">JavaScript RegExp 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

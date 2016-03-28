@@ -1,0 +1,95 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;area&gt; 标签的 shape 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_area.htm" >HTML &lt;area&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<pre>
+&lt;img src =&quot;planets.gif&quot; alt=&quot;Planets&quot; usemap =&quot;#planetmap&quot; /&gt;
+
+&lt;map name=&quot;planetmap&quot;&gt;
+  &lt;area <code>shape=&quot;rect&quot;</code> coords=&quot;0,0,110,260&quot; href=&quot;sun.htm&quot; alt=&quot;Sun&quot; /&gt;
+  &lt;area <code>shape=&quot;circle&quot;</code> coords=&quot;129,161,10&quot; href=&quot;mercur.htm&quot; alt=&quot;Mercury&quot; /&gt;
+  &lt;area <code>shape=&quot;circle&quot;</code> coords=&quot;180,139,14&quot; href=&quot;venus.htm&quot; alt=&quot;Venus&quot; /&gt;
+&lt;/map&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_areamap')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>shape 属性与 <a href="att_area_coords.htm"  title="HTML &lt;area&gt; 标签的 coords 属性">coords 属性</a>配合，可以规定区域的尺寸、形状和位置。</p>
+
+<h3>详细解释：</h3>
+
+<p>shape 属性用于定义图像映射中对鼠标敏感的区域的形状：</p>
+
+<ul>
+<li>圆形（circ 或 circle）</li>
+<li>多边形（poly 或 polygon）</li>
+<li>矩形（rect 或 rectangle）</li>
+</ul>
+
+<p>shape 属性的值会影响浏览器对 coords 属性的解释。如果未使用 shape 属性，那么会假设使用值 default。依照标准，default 意味着该区域覆盖整个图像。在实际中，浏览器默认使用矩形区域，并期望能找到 4 个 coords 值。如果没有指定形状，而且在标签中也没有包括 4 个坐标，那么浏览器会忽略整个区域。</p>
+
+<p>可以识别 shape 属性的 default 值的浏览器，可以提供一个包括全部热点的区域，以用于在超过其他热点定义的范围之外单击的情况。由于区域在 &lt;map&gt; 标签中是采用“先来先得”的顺序，所有必须将默认区域放置在后面。否则，默认区域会覆盖其他的图像映射中出现的所有区域。</p>
+
+<p>浏览器在形状名称的实现方面没有严格要求。例如，对于矩形，Netscape 4 不能识别 &quot;rectangle&quot;，却能识别 &quot;rect&quot;。出于这个原因，我们建议使用缩写的名称。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;a shape=&quot;<i>value&quot;</i>&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>default</td>
+    <td>规定全部区域。</td>
+  </tr>
+  <tr>
+    <td>rect</td>
+    <td>定义矩形区域。</td>
+  </tr>
+  <tr>
+    <td>circ</td>
+    <td>定义圆形。</td>
+  </tr>
+  <tr>
+    <td>poly</td>
+    <td>定义多边形区域。</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>参阅</h2>
+<ul>
+<li><a href="tag_map.htm"  title="HTML &lt;map&gt; 标签">&lt;map&gt; 标签</a></li>
+<li><a href="att_a_shape.htm"  title="HTML &lt;a&gt; 标签的 shape 属性">&lt;a&gt; 标签的 shape 属性</a></li>
+</ul>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_area.htm" >HTML &lt;area&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

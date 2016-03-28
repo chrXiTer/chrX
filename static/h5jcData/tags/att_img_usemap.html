@@ -1,0 +1,116 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;img&gt; 标签的 usemap 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_img.htm" >HTML &lt;img&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>客户器端图像映射：</p>
+
+<pre>
+&lt;img src=&quot;planets.gif&quot; alt=&quot;Planets&quot; <code>usemap=&quot;#planetmap&quot;</code> /&gt;
+
+&lt;map <span class="marked">name=&quot;planetmap&quot;</span>&gt;
+  &lt;area href=&quot;sun.htm&quot; shape=&quot;rect&quot; coords=&quot;0,0,110,260&quot;&gt;Sun&lt;/a&gt;
+  &lt;area href=&quot;mercur.htm&quot; shape=&quot;circle&quot; coords=&quot;129,161,10&quot;&gt;Mercury&lt;/a&gt;
+  &lt;area href=&quot;venus.htm&quot; shape=&quot;circle&quot; coords=&quot;180,139,14&quot;&gt;Venus&lt;/a&gt;
+&lt;/map&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_areamap')" >亲自试一试</a></p>
+
+<h3>解释</h3>
+
+<p>上面这段源代码将一幅图像 planets.gif 映射为 3 个区域，当用户单击其中某一个区域时，将被链接到不同的文档中。</p>
+
+<p>如需了解更多有关 map 和 area 元素的信息，请参阅：</p>
+
+<ul>
+<li><a href="tag_map.htm"  title="HTML &lt;map&gt; 标签">HTML &lt;map&gt; 标签</a></li>
+<li><a href="tag_area.htm"  title="HTML &lt;area&gt; 标签">HTML &lt;area&gt; 标签</a></li>
+</ul>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>usemap 属性将图像定义为客户端图像映射。</p>
+<p>图像映射指的是带有可点击区域的图像。</p>
+<p>usemap 属性与 <a href="tag_map.htm"  title="HTML &lt;map&gt; 标签">&lt;map&gt;</a> 元素的 name 或 id 属性相关联，以建立 &lt;img&gt; 与 &lt;map&gt; 之间的关系。</p>
+<p><a href="#pro">延伸阅读：详解 usemap 属性</a></p>
+</div>
+
+<div>
+<h2>HTML 4.01 与 HTML5 之间的差异</h2>
+
+<p>没有。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;img usemap=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td><i>#mapname</i></td>
+    <td># + 要使用的 &lt;map&gt; 元素的 name 或 id 属性</td>
+  </tr>
+</table>
+
+</div>
+
+<div>
+<h2>参阅</h2>
+
+<ul>
+<li><a href="tag_map.htm"  title="HTML &lt;map&gt; 标签">HTML &lt;map&gt; 标签</a></li>
+<li><a href="tag_area.htm"  title="HTML &lt;area&gt; 标签">HTML &lt;area&gt; 标签</a></li>
+</ul>
+</div>
+
+<div id="pro">
+<h2>延伸阅读：详解 usemap 属性</h2>
+
+<p><em>usemap</em> 属性提供了一种“客户端”的图像映射机制，有效地消除了服务器端对鼠标坐标的处理，以及由此带来的网络延迟问题。通过特殊的 &lt;map&gt; 和 &lt;area&gt; 标签，HTML 创作者可以提供一个描述 usemap 图像中超链接敏感区域坐标的映射，这个映射同时包含相应的超链接 URL。usemap 属性的值是一个 URL，它指向特殊的 &lt;map&gt; 区域。用户计算机上的浏览器将把鼠标在图像上单击时的坐标转换成特定的行为，包括加载和显示另外一个文档。</p>
+
+<p>我们举例说明一下，下面这段源代码将一个 100x100 像素的图像 map.gif 映射为 4 个区域，当用户单击其中某一个区域时，将被链接到不同的文档中。请注意，在这个 &lt;img&gt; 标签中，我们已经有效地包含了对 ismap 图像映射的处理功能，这样，那些使用不具有 usemap 处理功能的浏览器用户，就可以通过另外一中途径，即服务器端机制来处理图像映射：</p>
+
+<pre>
+&lt;a href=&quot;/example/map&quot;&gt;
+  &lt;img src=&quot;/i/map.gif&quot; ismap=&quot;ismap&quot; usemap=&quot;#map&quot; /&gt;
+&lt;/a&gt;
+
+&lt;map name=&quot;map&quot;&gt;
+  &lt;area coords=&quot;0,0,49,49&quot; href=&quot;link1.html&quot;&gt;
+  &lt;area coords=&quot;50,0,99,49&quot; href=&quot;link2.html&quot;&gt;
+  &lt;area coords=&quot;0,50,49,99&quot; href=&quot;link3.html&quot;&gt;
+  &lt;area coords=&quot;50,50,99,99&quot; href=&quot;link4.html&quot;&gt;
+&lt;/map&gt;
+</pre>
+
+<h3>ismap 属性和 usemap 属性的应用差异</h3>
+<p>地图就是很好地应用 ismap 和 usemap 属性的一个示例，例如，在浏览一家全国范围的大公司网页时，用户可能会在地图上单击他们所居住的城市，以获得附近地区零售店的地址和电话号码等。</p>
+
+<p>usemap 客户端处理图像映射的好处是，它不要求有服务器或特殊的服务器软件，与 ismap 机制不同，它可以用在非 web （无网络）环境中，例如在本地的文件或者 CD-ROM 中使用。</p>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_img.htm" >HTML &lt;img&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

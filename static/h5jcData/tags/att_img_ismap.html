@@ -1,0 +1,76 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;img&gt; 标签的 ismap 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_img.htm" >HTML &lt;img&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>服务器端图像映射：</p>
+
+<pre>
+&lt;a href=&quot;demo_form.asp&quot;&gt;
+&lt;img src=&quot;tulip.gif&quot; <code>ismap</code> /&gt;
+&lt;/a&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_img_ismap')" >亲自试一试</a></p>
+
+<h3>解释</h3>
+
+<p>当用户在 ismap 图像上单击了某处时，浏览器会自动把鼠标的 x、y 位置（相对于图像的左上角）发送到服务器端。特殊的服务器端软件（在本例中是 demo_form.asp 程序）可以根据这些坐标来做出响应。</p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>ismap 属性将图像定义为服务器端图像映射。</p>
+
+<p>图像映射指的是带有可点击区域的图像。</p>
+
+<p>当点击一个服务器端图像映射时，点击坐标会以 URL 查询字符串的形式发送到服务器。</p>
+
+<p class="note"><span>注释：</span>只有当 &lt;img&gt; 元素属于带有有效 href 属性的 &lt;a&gt; 元素的后代时，才允许 ismap 属性。</p>
+</div>
+
+<div>
+<h2>HTML 4.01 与 HTML5 之间的差异</h2>
+
+<p>没有。</p>
+</div>
+
+<div>
+<h2>HTML 与 XHTML 之间的差异</h2>
+
+<p>在 XHTML 中，禁止属性简写，并且必须把 ismap 属性定义为 &lt;img ismap=&quot;ismap&quot; /&gt;。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;img ismap&gt;</pre>
+</div>
+
+<div>
+<h2>参阅</h2>
+
+<ul>
+<li><a href="tag_map.htm"  title="HTML &lt;map&gt; 标签">HTML &lt;map&gt; 标签</a></li>
+<li><a href="tag_area.htm"  title="HTML &lt;area&gt; 标签">HTML &lt;area&gt; 标签</a></li>
+</ul>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_img.htm" >HTML &lt;img&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

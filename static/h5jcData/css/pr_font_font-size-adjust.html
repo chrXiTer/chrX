@@ -1,0 +1,115 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS font-size-adjust 属性</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>font-size-adjust 属性为某个元素规定一个 aspect 值，这样就可以保持首选字体的 x-height。</p>
+<h3>说明</h3>
+<p>字体的小写字母 &quot;x&quot; 的高度与 &quot;font-size&quot; 高度之间的比率被称为一个字体的 aspect 值。当字体拥有高的 aspect 值时，那么当此字体被设置为很小的尺寸时会更易阅读。举例：Verdana 的 aspect 值是 0.58（意味着当字体尺寸为 100px 时，它的 x-height 是 58px ）。Times New Roman 的 aspect 值是 0.46。这就意味着 Verdana 在小尺寸时比 Times New Roman 更易阅读。</p>
+
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">none</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>yes</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS2</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.fontSizeAdjust=&quot;0.70&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>设置不同的 HTML 元素的 font-size-adjust 属性：</p>
+<pre>
+h1
+  {
+  <code>font-size-adjust:0.58;</code>
+  }
+
+p
+  {
+  <code>font-size-adjust:0.60;</code>
+  }
+</pre>
+
+<p><a href="../tiy/t.asp-f=csse_font-size-adjust.htm" >TIY</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>Internet Explorer 不支持 font-size-adjust 属性。</p>
+</div>
+
+<div>
+<h2>可能的值</h2>
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>none</td>
+<td>默认。如果此字体不可用，则不保持此字体的 x-height。</td>
+</tr>
+
+<tr>
+<td><i>number</i></td>
+<td>
+<p>定义字体的 aspect 值比率。</p>
+<h3>可使用的公式：</h3>
+<p>首选字体的字体尺寸 * （font-size-adjust 值 / 可用字体的 aspect 值）=可应用到可用字体的字体尺寸</p>
+<h3>举例：</h3>
+<p>如果 14px 的 Verdana（aspect 值是 0.58）不可用，但是某个可用的字体的 aspect 值是 0.46，那么替代字体的尺寸将是 14 * (0.58/0.46) = 17.65px。</p>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="../tiy/t.asp-f=csse_font-size-adjust.htm" >使用 font-size-adjust 设置字体尺寸</a></dt>
+<dd>本例演示如何使用 font-size-adjust 设置字体尺寸。</dd>
+</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>CSS 教程：<a href="css_font.htm" title="CSS 字体">CSS 字体</a></p>
+<p>CSS 参考手册：<a href="pr_font_font.htm" title="CSS font 属性">CSS font 属性</a></p>
+<p>HTML DOM 参考手册：<a href="../htmldom/prop_style_fontsizeadjust.htm" title="HTML DOM fontSizeAdjust 属性">fontSizeAdjust 属性</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

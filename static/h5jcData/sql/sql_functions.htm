@@ -1,0 +1,301 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL 函数</h1>
+
+<div  id="tpn">
+<ul class="prenext">
+<li class="pre"><a href="sql_server.htm"  title="SQL 服务器 - RDBMS">SQL 服务器</a></li>
+<li class="next"><a href="sql_func_avg.htm"  title="SQL AVG() 函数">SQL avg()</a></li>
+</ul>
+</div>
+
+<div>
+<p><strong>SQL 拥有很多可用于计数和计算的内建函数。</strong></p>
+</div>
+
+<div>
+<h2>函数的语法</h2>
+<p>内建 SQL 函数的语法是：</p>
+<pre>SELECT function(列) FROM 表</pre>
+</div>
+
+<div>
+<h2>函数的类型</h2>
+<p>在 SQL 中，基本的函数类型和种类有若干种。函数的基本类型是：</p>
+<ul>
+<li>Aggregate 函数</li>
+<li>Scalar 函数</li>
+</ul>
+</div>
+
+<div>
+<h2>合计函数（Aggregate functions）</h2>
+
+<p>Aggregate 函数的操作面向一系列的值，并返回一个单一的值。</p>
+
+<p class="note"><span>注释：</span>如果在 SELECT 语句的项目列表中的众多其它表达式中使用 SELECT 语句，则这个 SELECT 必须使用 GROUP BY 语句！</p>
+
+<h3>&quot;Persons&quot; table (在大部分的例子中使用过)</h3>
+<table class="dataintable">
+    <tr>
+      <th style="width:35%">Name</th>
+      <th style="width:65%">Age</th>
+    </tr>
+    <tr>
+      <td>Adams, John</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <td>Bush, George</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <td>Carter, Thomas</td>
+      <td>28</td>
+    </tr>    
+</table>
+
+<h3>MS Access 中的合计函数</h3>
+<table class="dataintable">
+<tr>
+<th style="width:35%">函数</th>
+<th style="width:65%">描述</th>
+</tr>
+
+<tr>
+<td><a href="sql_func_avg.htm"  title="SQL AVG 函数">AVG(column)</a></td>
+<td>返回某列的平均值</td>
+</tr>
+
+<tr>
+<td><a href="sql_func_count.htm"  title="SQL COUNT 函数">COUNT(column)</a></td>
+<td>返回某列的行数（不包括 NULL 值）</td>
+</tr>
+
+<tr>
+<td><a href="sql_func_count_ast.htm"  title="SQL COUNT(*) 函数">COUNT(*)</a></td>
+<td>返回被选行数</td>
+</tr>
+
+<tr>
+<td>FIRST(column)</td>
+<td>返回在指定的域中第一个记录的值</td>
+</tr>
+
+<tr>
+<td>LAST(column)</td>
+<td>返回在指定的域中最后一个记录的值</td>
+</tr>
+
+<tr>
+<td><a href="sql_func_max.htm"  title="SQL MAX 函数">MAX(column)</a></td>
+<td>返回某列的最高值</td>
+</tr>
+
+<tr>
+<td><a href="sql_func_min.htm"  title="SQL MIN 函数">MIN(column)</a></td>
+<td>返回某列的最低值</td>
+</tr>
+
+<tr>
+<td>STDEV(column)</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>STDEVP(column)</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td><a href="sql_func_sum.htm"  title="SQL SUM 函数">SUM(column)</a></td>
+<td>返回某列的总和</td>
+</tr>
+
+<tr>
+<td>VAR(column)</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>VARP(column)</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+
+<h3>在 SQL Server 中的合计函数</h3>
+<table class="dataintable">
+<tr>
+<th style="width:35%">函数</th>
+<th style="width:65%">描述</th>
+</tr>
+
+<tr>
+<td><a href="sql_func_avg.htm"  title="SQL AVG 函数">AVG(column)</a></td>
+<td>返回某列的平均值</td>
+</tr>
+
+<tr>
+<td>BINARY_CHECKSUM</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>CHECKSUM</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>CHECKSUM_AGG</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td><a href="sql_func_count.htm"  title="SQL COUNT 函数">COUNT(column)</a></td>
+<td>返回某列的行数（不包括NULL值）</td>
+</tr>
+
+<tr>
+<td><a href="sql_func_count_ast.htm"  title="SQL COUNT(*) 函数">COUNT(*)</a></td>
+<td>返回被选行数</td>
+</tr>
+
+<tr>
+<td><a href="sql_func_count_distinct.htm"  title="SQL COUNT DISTINCT 函数">COUNT(DISTINCT column)</a></td>
+<td>返回相异结果的数目</td>
+</tr>
+
+<tr>
+<td><a href="sql_func_first.htm"  title="SQL FIRST 函数">FIRST(column)</a></td>
+<td>返回在指定的域中第一个记录的值（SQLServer2000 不支持）</td>
+</tr>
+
+<tr>
+<td><a href="sql_func_last.htm"  title="SQL LAST 函数">LAST(column)</a></td>
+<td>返回在指定的域中最后一个记录的值（SQLServer2000 不支持）</td>
+</tr>
+
+<tr>
+<td><a href="sql_func_max.htm"  title="SQL MAX 函数">MAX(column)</a></td>
+<td>返回某列的最高值</td>
+</tr>
+
+<tr>
+<td><a href="sql_func_min.htm"  title="SQL MIN 函数">MIN(column)</a></td>
+<td>返回某列的最低值</td>
+</tr>
+
+<tr>
+<td>STDEV(column)</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>STDEVP(column)</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td><a href="sql_func_sum.htm"  title="SQL SUM 函数">SUM(column)</a></td>
+<td>返回某列的总和</td>
+</tr>
+
+<tr>
+<td>VAR(column)</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>VARP(column)</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>Scalar 函数</h2>
+<p>Scalar 函数的操作面向某个单一的值，并返回基于输入值的一个单一的值。</p>
+
+<h3>MS Access 中的 Scalar 函数</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:35%">函数</th>
+<th style="width:65%">描述</th>
+</tr>
+
+<tr>
+<td>UCASE(c)</td>
+<td>将某个域转换为大写</td>
+</tr>
+
+<tr>
+<td>LCASE(c)</td>
+<td>将某个域转换为小写</td>
+</tr>
+
+<tr>
+<td>MID(c,start[,end])</td>
+<td>从某个文本域提取字符</td>
+</tr>
+
+<tr>
+<td>LEN(c)</td>
+<td>返回某个文本域的长度</td>
+</tr>
+
+<tr>
+<td>INSTR(c,char)</td>
+<td>返回在某个文本域中指定字符的数值位置</td>
+</tr>
+
+<tr>
+<td>LEFT(c,number_of_char)</td>
+<td>返回某个被请求的文本域的左侧部分</td>
+</tr>
+
+<tr>
+<td>RIGHT(c,number_of_char)</td>
+<td>返回某个被请求的文本域的右侧部分</td>
+</tr>
+
+<tr>
+<td>ROUND(c,decimals)</td>
+<td>对某个数值域进行指定小数位数的四舍五入</td>
+</tr>
+
+<tr>
+<td>MOD(x,y)</td>
+<td>返回除法操作的余数</td>
+</tr>
+
+<tr>
+<td>NOW()</td>
+<td>返回当前的系统日期</td>
+</tr>
+
+<tr>
+<td>FORMAT(c,format)</td>
+<td>改变某个域的显示方式</td>
+</tr>
+
+<tr>
+<td>DATEDIFF(d,date1,date2)</td>
+<td>用于执行日期计算</td>
+</tr>
+</table>
+</div>
+
+<div  id="bpn">
+<ul class="prenext">
+<li class="pre"><a href="sql_server.htm"  title="SQL 服务器 - RDBMS">SQL 服务器</a></li>
+<li class="next"><a href="sql_func_avg.htm"  title="SQL AVG() 函数">SQL avg()</a></li>
+</ul>
+</div>
+</div>
+</div>
+<script src="../chrX.js"></script>

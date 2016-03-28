@@ -1,0 +1,64 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML DOM close() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="dom_obj_window.htm" >HTML DOM Window 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>close() 方法用于关闭浏览器窗口。</p>
+
+<h3>语法</h3>
+<pre>window.close()</pre>
+
+<h3>说明</h3>
+<p>方法 close() 将关闭有 window 指定的顶层浏览器窗口。某个窗口可以通过调用 self.close() 或只调用 close() 来关闭其自身。</p>
+<p>只有通过 JavaScript 代码打开的窗口才能够由 JavaScript 代码关闭。这阻止了恶意的脚本终止用户的浏览器。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+<p>下面的例子可关闭新的浏览器：</p>
+<pre>&lt;html&gt;
+&lt;head&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+function closeWin()
+  {
+  myWindow.close()
+  }
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+myWindow=window.open('','','width=200,height=100')
+myWindow.document.write(&quot;This is 'myWindow'&quot;)
+&lt;/script&gt;
+
+&lt;input type=&quot;button&quot; value=&quot;Close 'myWindow'&quot;
+onclick=&quot;closeWin()&quot; /&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+<dl>
+<dt><a href="javascript:tiy.run('hdom_win_close')" >在点击按钮时关闭浏览器</a></dt>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="dom_obj_window.htm" >HTML DOM Window 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

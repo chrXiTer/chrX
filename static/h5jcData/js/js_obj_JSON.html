@@ -1,0 +1,31 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript JSON 对象</h1>
+
+
+<p>JSON对象用于处理JSON格式的数据。JSON对象包含两个函数：stringify() 和 parse()</p>
+
+
+<h2>stringify()</h2>
+<p>stringify()函数将对象转换成JSON格式的字符串。接收要转换的对象作第一个参数，返回转换后的字符串，原对象不变。</p>
+<p>如果第二个参数是数组，返回的JSON字符串中将只包含数组中列出的属性。</p>
+<p>如果第二个参数是函数，该函数被称为replacer(filter) 函数stringify()函数对象的属性名key（字符串）和属性值value传给该函数，作为该函数的第一个第二个变量，并将该函数的返回值作为JSON的key/value对中value的值。
+	<br/>在传入的函数中，对于需要忽略的属性，要返回undefined。</p>
+<p>如果第三个参数指示JSON的缩进使用的空格数</p>
+<p>stringify()函数的执行过程如下：
+<br/>1、如果对象存在toJSON()方法，调用toJSON方法将对象序列化。否则采用默认方式序列化。
+<br/>2、如果第二个参数存在且不为null，利用第二个参数对结果进行处理。
+<br/>3、直到步骤2中将每个值序列化。
+<br/>4、如果第三个参数存在，安装第三个参数将结果格式化。
+
+<h2>parse()</h2>
+<p>parse()函数将一个JSON字符串转化为一个JavaScript对象。接收JSON字符串作为第一个参数，返回得到的对象。
+parse()函数也接收附加的第二个参数，是一个被称为 revive 的函数参数。revive函数也接收key/value两个参数。其作用与replacer函数相反。
+
+</div>
+</div>
+<script src="../chrX.js"></script>

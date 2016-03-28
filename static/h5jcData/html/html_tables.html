@@ -1,0 +1,143 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 表格</h1>
+
+<div>
+<h2>表格</h2>
+
+<p>表格由 &lt;table&gt; 标签来定义。每个表格均有若干行（由 &lt;tr&gt; 标签定义），每行被分割为若干单元格（由 &lt;td&gt; 标签定义）。字母 td 指表格数据（table data），即数据单元格的内容。数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等。</p>
+
+<pre>&lt;table border=&quot;1&quot;&gt;
+&lt;tr&gt;
+&lt;td&gt;row 1, cell 1&lt;/td&gt;
+&lt;td&gt;row 1, cell 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;row 2, cell 1&lt;/td&gt;
+&lt;td&gt;row 2, cell 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</pre>
+
+<p>在浏览器显示如下：</p>
+
+<table border="1" style="margin-top:15px;">
+<tr>
+<td>row 1, cell 1</td>
+<td>row 1, cell 2</td>
+</tr>
+<tr>
+<td>row 2, cell 1</td>
+<td>row 2, cell 2</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>表格和边框属性</h2>
+
+<p>如果不定义边框属性，表格将不显示边框。有时这很有用，但是大多数时候，我们希望显示边框。</p>
+
+<p>使用边框属性来显示一个带有边框的表格：</p>
+
+<pre>&lt;table <code>border=&quot;1&quot;&gt;</code>
+&lt;tr&gt;
+&lt;td&gt;Row 1, cell 1&lt;/td&gt;
+&lt;td&gt;Row 1, cell 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</pre>
+</div>
+
+<div>
+<h2>表格的表头</h2>
+
+<p>表格的表头使用 &lt;th&gt; 标签进行定义。</p>
+
+<p>大多数浏览器会把表头显示为粗体居中的文本：</p>
+
+<pre>&lt;table border=&quot;1&quot;&gt;
+&lt;tr&gt;
+<code>&lt;th&gt;Heading&lt;/th&gt;
+&lt;th&gt;Another Heading&lt;/th&gt;</code>
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;row 1, cell 1&lt;/td&gt;
+&lt;td&gt;row 1, cell 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;row 2, cell 1&lt;/td&gt;
+&lt;td&gt;row 2, cell 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</pre>
+
+<p>在浏览器显示如下：</p>
+
+<table border="1" style="margin-top:15px;">
+<tr>
+<th>Heading</th>
+<th>Another Heading</th>
+</tr>
+<tr>
+<td>row 1, cell 1</td>
+<td>row 1, cell 2</td>
+</tr>
+<tr>
+<td>row 2, cell 1</td>
+<td>row 2, cell 2</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>表格中的空单元格</h2>
+
+<p>在一些浏览器中，没有内容的表格单元显示得不太好。如果某个单元格是空的（没有内容），浏览器可能无法显示出这个单元格的边框。</p>
+
+<pre>&lt;table border=&quot;1&quot;&gt;
+&lt;tr&gt;
+&lt;td&gt;row 1, cell 1&lt;/td&gt;
+&lt;td&gt;row 1, cell 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+<code>&lt;td&gt;&lt;/td&gt;</code>
+&lt;td&gt;row 2, cell 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</pre>
+
+<p>浏览器可能会这样显示：</p>
+
+<img src="../i/table_td_empty.gif"  alt="表格中的空单元格" style="margin:15px 0 0 0;"  />
+
+<p class="important"><span>注意：</span>这个空的单元格的边框没有被显示出来。为了避免这种情况，在空单元格中添加一个空格占位符，就可以将边框显示出来。</p>
+
+<pre>&lt;table border=&quot;1&quot;&gt;
+&lt;tr&gt;
+&lt;td&gt;row 1, cell 1&lt;/td&gt;
+&lt;td&gt;row 1, cell 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+<code>&lt;td&gt;&amp;nbsp;&lt;/td&gt;</code>
+&lt;td&gt;row 2, cell 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</pre>
+
+<p>在浏览器中显示如下：</p>
+
+<table border="1" style="margin-top:15px;">
+<tr>
+<td>row 1, cell 1</td>
+<td>row 1, cell 2</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>row 2, cell 2</td>
+</tr>
+</table>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

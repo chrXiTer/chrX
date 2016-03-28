@@ -1,0 +1,73 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;output&gt; 标签的 form 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_output.htm" >HTML &lt;output&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>位于表单之外的一个 &lt;output&gt; 元素（但仍然属于表单的一部分）：</p>
+
+<pre>
+&lt;form action=&quot;demo_form.asp&quot; <span class="marked">id=&quot;numform&quot;</span>
+ oninput=&quot;x.value=parseInt(a.value)+parseInt(b.value)&quot;&gt;0
+ &lt;input type=&quot;range&quot; id=&quot;a&quot; name=&quot;a&quot; value=&quot;50&quot;&gt;100
+ +&lt;input type=&quot;number&quot; id=&quot;b&quot; name=&quot;b&quot; value=&quot;50&quot;&gt;
+ &lt;br&gt;&lt;br&gt;
+ &lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;
+
+&lt;output <code>form=&quot;numform&quot;</code> name=&quot;x&quot; for=&quot;a b&quot;&gt;&lt;/output&gt; 
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_output_form')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>form 属性规定 &lt;output&gt; 元素所属的一个或多个表单。</p>
+</div>
+
+<div>
+<h2>HTML 4.01 与 HTML 5 之间的差异</h2>
+
+<p>&lt;output&gt; 标签是 HTML5 中的新标签。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>
+&lt;output form=&quot;form_id&quot;&gt;
+</pre>
+
+<h3>属性值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:20%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>form_id</i></td>
+<td>规定 &lt;output&gt; 元素所属的表单元素。该值必须是同一文档中的 &lt;form&gt; 元素的 id 属性。</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_output.htm" >HTML &lt;output&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,181 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript 函数</h1>
+
+<h1>函数定义</h1>
+<p>函数的基本语法如下：</p>
+<pre>function <i>functionName(arg0, arg1, ... argN)</i> {
+  <i>statements</i>
+}
+</pre>
+
+<p>包括：关键字 function、函数名、一组参数，以及置于括号中的待执行代码。比如：</p>
+<pre id="pre_f_sayHi">
+function sayHi(sName, sMessage) {
+  alert(&quot;Hello &quot; + sName + sMessage);
+}
+</pre>
+
+<p>函数可以通过其名字加上括号及其中的参数进行调用。如果想调用上例中的sayHi个函数，可以使用如下的代码：</p>
+<pre id = pre_callF_sayHi>
+sayHi(&quot;David&quot;, &quot; Nice to meet you!&quot;)
+</pre>
+<p>调用上面的函数 sayHi() 会弹出一个警告窗口。<a href="javascript:tiy.runLs(
+                   document.getElementById('pre_f_sayHi').innerText  + document.getElementById('pre_callF_sayHi').innerText
+                                      )" >试一试</a></p>
+
+<h2>函数参数</h2>
+<p>在调用函数时，可以向其传递值，这些值被称为参数，由逗号 (,) 分隔。参数可以在函数中使用。</p>
+<pre>myFunction(<i>argument1</i>,<i>argument2</i>)</pre>
+<p>函数定义时使用的参数名称为：<em>形参</em>，函数调用时传递给形参的值称为：<em>实参</em>。实参和形参必须以一致的顺序出现。</p>
+<p>函数中的形参除了是在括号中声明、利用实参初始化之外，与函数中定义的变量相同。</p>
+<pre>
+&lt;button onclick=&quot;myFunction('<span class="marked">Bill Gates</span>','<span class="marked">CEO</span>')&quot;&gt;点击这里&lt;/button&gt;
+&lt;script&gt;
+function myFunction(name,job){
+alert(&quot;Welcome &quot; + <code>name</code> + &quot;, the &quot; + <code>job</code>);
+}
+&lt;/script&gt;
+</pre>
+<p>上面的函数，当按钮被点击时提示： &quot;Welcome Bill Gates, the CEO&quot;。<a href="javascript:tiy.run('js_function2')" >试一试</a></p>
+<p>采用不同的形参来调用函数，就可以给形参赋不同的值，从而在函数运行中给出不同的消息：</p>
+<pre>
+&lt;button onclick=&quot;myFunction('<span class="marked">Harry Potter</span>','<span class="marked">Wizard</span>')&quot;&gt;点击这里&lt;/button&gt;
+&lt;button onclick=&quot;myFunction('<span class="marked">Bob</span>','<span class="marked">Builder</span>')&quot;&gt;点击这里&lt;/button&gt;
+</pre>
+<p>上面的例子，点击两个按钮分别会提示 &quot;Welcome Harry Potter, the Wizard&quot; 或 &quot;Welcome Bob, the Builder&quot;。<a href="javascript:tiy.run('js_function3')" >试一试</a></p>
+
+<h2>函数返回值 --return语句</h2>
+<p>前面的 sayHi() 函数没有返回值。有时，会希望函数将某个值返回给调用它的地方。通过使用 return 语句就可以实现。在遇到 return 语句时，函数会停止执行，并返回指定的值到调用函数的地方以继续执行。</p>
+<pre>
+function sum(iNum1, iNum2) {
+  return iNum1 + iNum2;
+}
+</pre>
+<p>上面的sum函数返回两个参数的和。
+函数返回之后，函数调用将被返回值取代。下面的代码把 sum 函数返回的值赋予一个变量：</p>
+<pre>
+var iResult = sum(1,1);
+alert(iResult);	<span>//输出 &quot;2&quot;</span>
+</pre>
+<p>计算两个数字的乘积，并返回结果：</p>
+<pre>
+function myFunction(a,b){
+	return a*b;
+}
+document.getElementById(&quot;demo&quot;).innerHTML=myFunction(4,3);
+</pre>
+<p>&quot;demo&quot; 元素的 innerHTML 将被设置为：12。 <a href="javascript:tiy.run('js_function_return')" >试一试</a></p>
+
+<p>函数在执行过 return 语句后立即停止当前的函数执行，并跳出到调用该函数的地方继续执行。因此，return 语句后的代码不会被执行。例如，在下面的代码中，alert 窗口就不会显示出来：</p>
+<pre>
+function sum(iNum1, iNum2) {
+  return iNum1 + iNum2;
+  alert(iNum1 + iNum2);
+}
+</pre>
+<p>一个函数中可以有多个 return 语句，如下所示：</p>
+<pre>
+function diff(iNum1, iNum2) {
+  if (iNum1 &gt; iNum2) {
+    return iNum1 - iNum2;
+  } else {
+    return iNum2 - iNum1;
+  }
+}
+</pre>
+<p>上面的函数用于返回两个数的差。要实现这一点，必须用较大的数减去较小的数，因此用 if 语句决定执行哪个 return 语句。</p>
+<p>如果函数无返回值，依然可以使用 return 跳出函数，只是return之后不带返回值。例如：</p>
+<pre>
+function sayMessage(sMessage) {
+  if (sMessage == &quot;bye&quot;) {
+    return;
+  }
+  alert(sMessage);
+}
+</pre>
+<p>这段代码中，如果 sMessage 等于 &quot;bye&quot;，就不显示警告框。</p>
+<p class="note"><span>注释：</span>如果函数无明确的返回值：没有return语句，或调用了没有参数的 return 语句，那么它真正返回的值是 undefined。</p>
+
+
+<h2>arguments 对象</h2>
+<p>在每个函数中都有一个无需定义即可使用的预定义变量：arguments，用来表示函数被调用时传入的所有参数。</p>
+<p>例如，在函数 sayMessage() 中，第一个参数是 message。用 arguments[0] 也可以访问这个值</p>
+<p>因此，就可以重写函数如下：</p>
+<pre>
+function sayMessage() {
+  if (<code>arguments[0]</code> == &quot;bye&quot;) {
+    return;
+  }
+  alert(arguments[0]);
+}
+</pre>
+
+<p>用 arguments.length 可以查询传入参数的个数：</p>
+<pre>
+function howManyArgs() {
+  alert(arguments.length);
+}
+howManyArgs(&quot;string&quot;, 45);
+howManyArgs();
+howManyArgs(12);
+</pre>
+<p>上面这段代码将依次显示 &quot;2&quot;、&quot;0&quot; 和 &quot;1&quot;。</p>
+<p class="note"><span>注释：</span>与其他程序设计语言不同，ECMAScript 不会验证传递给函数的参数个数是否等于函数定义的参数个数。开发者定义的函数都可以接受任意个数的参数（根据 Netscape 的文档，最多可接受 255 个），而不会引发任何错误。任何遗漏的参数都会以 undefined 传递给函数，多余的函数将忽略。</p>
+
+<h3>模拟函数重载</h3>
+<p>利用 arguments 对象可以模拟函数的重载：</p>
+<pre>
+function doAdd() {
+  if(arguments.length == 1) {
+    alert(arguments[0] + 5);
+  } else if(arguments.length == 2) {
+    alert(arguments[0] + arguments[1]);
+  }
+}
+doAdd(10);	<span>//输出 &quot;15&quot;</span>
+doAdd(40, 20);	<span>//输出 &quot;60&quot;</span>
+</pre>
+<p>当只有一个参数时，doAdd() 函数给参数加 5。如果有两个参数，则会把两个参数相加，返回它们的和。所以，doAdd(10) 输出的是 &quot;15&quot;，而 doAdd(40, 20) 输出的是 &quot;60&quot;。</p>
+
+<h2>ECMAScript 闭包（closure）</h2>
+<p>在 ECMAScript 中使用全局变量是一个简单的闭包实例。请思考下面这段代码：</p>
+
+<pre>
+var sMessage = &quot;hello world&quot;;
+function sayHelloWorld() {
+  alert(sMessage);
+}
+sayHelloWorld();
+</pre>
+
+<p>在上面这段代码中，脚本被载入内存后，并没有为函数 sayHelloWorld() 计算变量 sMessage 的值。该函数捕获 sMessage 的值只是为了以后的使用，也就是说，解释程序知道在调用该函数时要检查 sMessage 的值。sMessage 将在函数调用 sayHelloWorld() 时（最后一行）被赋值，显示消息 &quot;hello world&quot;。</p>
+
+<h3>复杂的闭包实例</h3>
+<p>在一个函数中定义另一个会使闭包变得更加复杂。例如：</p>
+<pre>
+var iBaseNum = 10;
+function addNum(iNum1, iNum2) {
+  function doAdd() {
+    return iNum1 + iNum2 + iBaseNum;
+  }
+  return doAdd();
+}
+</pre>
+<p>这里，函数 addNum() 包括函数 doAdd() （闭包）。内部函数是一个闭包，因为它将获取外部函数的参数 iNum1 和 iNum2 以及全局变量 iBaseNum 的值。 addNum() 的最后一步调用了 doAdd()，把两个参数和全局变量相加，并返回它们的和。</p>
+<p>这里要掌握的重要概念是，doAdd() 函数根本不接受参数，它使用的值是从执行环境中获取的。</p>
+<p>可以看到，闭包是 ECMAScript 中非常强大多用的一部分，可用于执行复杂的计算。</p>
+<p class="tip"><span>提示：</span>就像使用任何高级函数一样，使用闭包要小心，因为它们可能会变得非常复杂。</p>
+
+
+<h2>函数对象</h2>
+<p>javascript中，function也是一个对象，也可以像其他变量一样使用：<a href="pro_js_functions_function_object.htm"  title="ECMAScript Function 对象（类）">ECMAScript Function 对象</a></p>
+
+
+</div>
+</div>
+<script src="../chrX.js"></script>

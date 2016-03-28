@@ -1,0 +1,67 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;area&gt; 标签的 href 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_area.htm" >HTML &lt;area&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>带有可点击区域的图像映射：</p>
+
+<pre>
+&lt;img src=&quot;planets.jpg&quot; border=&quot;0&quot; usemap=&quot;#planetmap&quot; alt=&quot;Planets&quot; /&gt;
+
+&lt;map name=&quot;planetmap&quot; id=&quot;planetmap&quot;&gt;
+  &lt;area shape=&quot;circle&quot; coords=&quot;180,139,14&quot; <code>href =&quot;venus.html&quot;</code> alt=&quot;Venus&quot; /&gt;
+  &lt;area shape=&quot;circle&quot; coords=&quot;129,161,10&quot; <code>href =&quot;mercur.html&quot;</code> alt=&quot;Mercury&quot; /&gt;
+  &lt;area shape=&quot;rect&quot; coords=&quot;0,0,110,260&quot; <code>href =&quot;sun.html&quot;</code> alt=&quot;Sun&quot; /&gt;
+&lt;/map&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_areamap')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>href 属性规定区域中连接的目标。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;area href=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td><i>URL</i></td>
+    <td>
+	<p>链接的 URL。可能的值：</p>
+		<ul class="listintable">
+			<li>绝对 URL - 指向另一个站点（比如 href=&quot;http://www.example.com/sun.htm&quot;）</li>
+			<li>相对 URL - 指向站点内的某个文件（href=&quot;sun.htm&quot;）</li>
+			<li>锚 URL - 指向页面中的锚（href=&quot;#sun&quot;）</li>
+		</ul>
+    </td>
+  </tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_area.htm" >HTML &lt;area&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

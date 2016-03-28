@@ -1,0 +1,83 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;col&gt; 标签的 width 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_col.htm" >HTML &lt;col&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>具有预定义宽度的两个 col 元素：</p>
+
+<pre>
+&lt;table border=&quot;1&quot; width=&quot;100%&quot;&gt;
+  &lt;col <code>width=&quot;100&quot;</code> /&gt;
+  &lt;col <code>width=&quot;50&quot;</code> /&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Month&lt;/th&gt;
+    &lt;th&gt;Savings&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;January&lt;/td&gt;
+    &lt;td&gt;$100&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;February&lt;/td&gt;
+    &lt;td&gt;$80&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_col_width')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>width 属性规定 col 元素的宽度。</p>
+<p>通常，col 元素占用的空间就是它显示内容需要的空间。width 属性用于为 col 元素设置预定义的宽度。</p>
+<p class="note"><span>注释：</span>该属性会覆盖 colgroup 元素中的任何宽度设置。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;col width=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td><i>pixels</i></td>
+    <td>设置以像素计的宽度值（例子：width=&quot;50&quot;）。</td>
+  </tr>
+  <tr>
+    <td><i>percent</i></td>
+    <td>设置以包围元素的百分比计的宽度值（例子：width=&quot;50%&quot;）。</td>
+  </tr>
+  <tr>
+    <td><i>relative_length</i></td>
+    <td>把可用像素分配到各部分。</td>
+  </tr>
+</table>
+
+<h4><i>relative_length</i> 值</h4>
+<p>假如表格的宽度是 100 像素，第一个列组是 20 像素，第二个列组是 50%，那么剩余的可用像素是 30 像素。</p>
+<p>如果可用像素是 30px，那么可以设置部分一为 &quot;1*&quot;，部分二为 &quot;2*&quot;，这将被解释为 10 和 20 像素（&quot;1*&quot; 为部分一，&quot;2*&quot; 为部分二）。</p>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_col.htm" >HTML &lt;col&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,147 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL Server DATEPART() 函数</h1>
+
+<div class="backtoreference">
+<p><a href="sql_dates.htm"  title="SQL Server Date 函数">SQL Server Date 函数</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>DATEPART() 函数用于返回日期/时间的单独部分，比如年、月、日、小时、分钟等等。</p>
+
+<h3>语法</h3>
+<pre>DATEPART(<i>datepart</i>,<i>date</i>)</pre>
+
+<p><i>date</i> 参数是合法的日期表达式。<i>datepart</i> 参数可以是下列的值：</p>
+
+<table class="dataintable" style="width:60%;">
+<tr>
+<th>datepart</th>
+<th>缩写</th>
+</tr>
+
+<tr>
+<td>年</td>
+<td>yy, yyyy</td>
+</tr>
+
+<tr>
+<td>季度</td>
+<td>qq, q</td>
+</tr>
+
+<tr>
+<td>月</td>
+<td>mm, m</td>
+</tr>
+
+<tr>
+<td>年中的日</td>
+<td>dy, y</td>
+</tr>
+
+<tr>
+<td>日</td>
+<td>dd, d</td>
+</tr>
+
+<tr>
+<td>周</td>
+<td>wk, ww</td>
+</tr>
+
+<tr>
+<td>星期</td>
+<td>dw, w</td>
+</tr>
+
+<tr>
+<td>小时</td>
+<td>hh</td>
+</tr>
+
+<tr>
+<td>分钟</td>
+<td>mi, n</td>
+</tr>
+
+<tr>
+<td>秒</td>
+<td>ss, s</td>
+</tr>
+
+<tr>
+<td>毫秒</td>
+<td>ms</td>
+</tr>
+
+<tr>
+<td>微妙</td>
+<td>mcs</td>
+</tr>
+
+<tr>
+<td>纳秒</td>
+<td>ns</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>假设我们有下面这个 &quot;Orders&quot; 表：</p>
+
+<table class="dataintable">
+<tr>
+<th>OrderId</th>
+<th>ProductName</th>
+<th>OrderDate</th>
+</tr>
+<tr>
+<td>1</td>
+<td>'Computer'</td>
+<td>2008-12-29 16:25:46.635</td>
+</tr>
+</table>
+
+<p>我们使用如下 SELECT 语句：</p>
+
+<pre>
+SELECT <code>DATEPART(yyyy,OrderDate)</code> AS OrderYear,
+<code>DATEPART(mm,OrderDate)</code> AS OrderMonth,
+<code>DATEPART(dd,OrderDate)</code> AS OrderDay
+FROM Orders
+WHERE OrderId=1
+</pre>
+
+<p>结果：</p>
+
+<table class="dataintable">
+<tr>
+<th>OrderYear</th>
+<th>OrderMonth</th>
+<th>OrderDay</th>
+</tr>
+
+<tr>
+<td>2008</td>
+<td>12</td>
+<td>29</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="sql_dates.htm"  title="SQL Server Date 函数">SQL Server Date 函数</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

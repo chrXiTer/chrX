@@ -1,0 +1,72 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;form&gt; 标签的 enctype 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_form.htm" >HTML &lt;form&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在下面的例子中，表单数据会在未编码的情况下进行发送：</p>
+
+<pre>
+&lt;form action=&quot;form_action.asp&quot; <code>enctype=&quot;text/plain&quot;</code>&gt;
+  &lt;p&gt;First name: &lt;input type=&quot;text&quot; name=&quot;fname&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;Last name: &lt;input type=&quot;text&quot; name=&quot;lname&quot; /&gt;&lt;/p&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+&lt;/form&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_form_enctype')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>enctype 属性规定在发送到服务器之前应该如何对表单数据进行编码。</p>
+
+<p>默认地，表单数据会编码为 &quot;application/x-www-form-urlencoded&quot;。就是说，在发送到服务器之前，所有字符都会进行编码（空格转换为 &quot;+&quot; 加号，特殊符号转换为 ASCII HEX 值）。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;form enctype=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>application/x-www-form-urlencoded</td>
+    <td>在发送前编码所有字符（默认）</td>
+  </tr>
+  <tr>
+    <td>multipart/form-data</td>
+    <td>
+	<p>不对字符编码。</p>
+	<p>在使用包含文件上传控件的表单时，必须使用该值。</p>
+	</td>
+  </tr>
+  <tr>
+    <td>text/plain</td>
+    <td>空格转换为 &quot;+&quot; 加号，但不对特殊字符编码。</td>
+  </tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_form.htm" >HTML &lt;form&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

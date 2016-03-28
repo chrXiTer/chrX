@@ -1,0 +1,152 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS ID 选择器</h1> 
+
+<div id="intro">
+<p><strong>ID 选择器允许以一种独立于文档元素的方式来指定样式。</strong></p>
+</div>
+
+<div>
+<h2>id 选择器</h2>
+
+<p><strong>id 选择器可以为标有特定 id 的 HTML 元素指定特定的样式。</strong></p>
+<p><strong>id 选择器以 &quot;#&quot; 来定义。</strong></p>
+<p>下面的两个 id 选择器，第一个可以定义元素的颜色为红色，第二个定义元素的颜色为绿色：</p>
+<pre>
+<code>#red</code> {color:red;}
+<code>#green</code> {color:green;}
+</pre>
+
+<p>下面的 HTML 代码中，id 属性为 red 的 p 元素显示为红色，而 id 属性为 green 的 p 元素显示为绿色。</p>
+<pre>
+&lt;p <code>id=&quot;red&quot;</code>&gt;这个段落是红色。&lt;/p&gt;
+&lt;p <code>id=&quot;green&quot;</code>&gt;这个段落是绿色。&lt;/p&gt;
+</pre>
+
+<p class="important"><span>注意：</span>id 属性只能在每个 HTML 文档中出现一次。想知道原因吗，请参阅 <a href="../xhtml/xhtml_structural_01.htm" >XHTML:网站重构</a>。</p>
+
+<p>在某些方面，ID 选择器类似于类选择器，不过也有一些重要差别。</p>
+<h3>语法</h3>
+
+<p>首先，ID 选择器前面有一个 # 号。</p>
+<p>请看下面的规则：</p>
+<pre>*#intro {font-weight:bold;}</pre>
+
+<p>与类选择器一样，ID 选择器中可以忽略通配选择器。前面的例子也可以写作：</p>
+<pre>#intro {font-weight:bold;}</pre>
+
+<p>这个选择器的效果将是一样的。</p>
+<p>第二个区别是 ID 选择器不引用 class 属性的值，毫无疑问，它要引用 id 属性中的值。</p>
+<p>以下是一个实际 ID 选择器的例子：</p>
+<pre>&lt;p <span class="marked">id=&quot;intro&quot;</span>&gt;This is a paragraph of introduction.&lt;/p&gt;</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_selector_id')">试一试</a></p>
+</div>
+
+<div>
+<h2>类选择器还是 ID 选择器？</h2>
+
+<p>在类选择器这一章中我们曾讲解过，可以为任意多个元素指定类。前一章中类名 important 被应用到 p 和 h1 元素，而且它还可以应用到更多元素。</p>
+<h3>区别 1：只能在文档中使用一次</h3>
+
+<p>与类不同，在一个 HTML 文档中，ID 选择器会使用一次，而且仅一次。</p>
+<h3>区别 2：不能使用 ID 词列表</h3>
+
+<p>不同于类选择器，ID 选择器不能结合使用，因为 ID 属性不允许有以空格分隔的词列表。</p>
+<h3>区别 3：ID 能包含更多含义</h3>
+
+<p>类似于类，可以独立于元素来选择 ID。有些情况下，您知道文档中会出现某个特定 ID 值，但是并不知道它会出现在哪个元素上，所以您想声明独立的 ID 选择器。例如，您可能知道在一个给定的文档中会有一个 ID 值为 mostImportant 的元素。您不知道这个最重要的东西是一个段落、一个短语、一个列表项还是一个小节标题。您只知道每个文档都会有这么一个最重要的内容，它可能在任何元素中，而且只能出现一个。在这种情况下，可以编写如下规则：</p>
+<pre>#mostImportant {color:red; background:yellow;}</pre>
+
+<p>这个规则会与以下各个元素匹配（这些元素不能在同一个文档中同时出现，因为它们都有相同的 ID 值）：</p>
+<pre>
+&lt;h1 <span class="marked">id=&quot;mostImportant&quot;</span>&gt;This is important!&lt;/h1&gt;
+&lt;em <span class="marked">id=&quot;mostImportant&quot;</span>&gt;This is important!&lt;/em&gt;
+&lt;ul <span class="marked">id=&quot;mostImportant&quot;</span>&gt;This is important!&lt;/ul&gt;
+</pre>
+
+<p>试一试：</p>
+<ul>
+<li><a href="javascript:tiy.run('css_selector_id_h1')">为 id 为 mostImportant 的 h1 元素设定样式</a></li>
+<li><a href="javascript:tiy.run('css_selector_id_em')">为 id 为 mostImportant 的 em 元素设定样式</a></li>
+<li><a href="javascript:tiy.run('css_selector_id_ul')">为 id 为 mostImportant 的 ul 元素设定样式</a></li>
+</ul>
+</div>
+
+<div>
+<h2>区分大小写</h2>
+
+<p>请注意，类选择器和 ID  选择器可能是区分大小写的。这取决于文档的语言。HTML 和 XHTML 将类和 ID 值定义为区分大小写，所以类和 ID 值的大小写必须与文档中的相应值匹配。</p>
+<p>因此，对于以下的 CSS 和 HTML，元素不会变成粗体：</p>
+<pre>#intro {font-weight:bold;}
+
+&lt;p <span class="marked">id=&quot;Intro&quot;</span>&gt;This is a paragraph of introduction.&lt;/p&gt;</pre>
+
+<p>由于字母 i 的大小写不同，所以选择器不会匹配上面的元素。</p>
+</div>
+
+<div>
+<h2>id 选择器和派生选择器</h2>
+
+<p><strong>在现代布局中，id 选择器常常用于建立派生选择器。</strong></p>
+<pre>
+<code>#sidebar p</code> {
+	font-style: italic;
+	text-align: right;
+	margin-top: 0.5em;
+	}
+</pre>
+
+<p>上面的样式只会应用于出现在 id 是 sidebar 的元素内的段落。这个元素很可能是 div 或者是表格单元，尽管它也可能是一个表格或者其他块级元素。它甚至可以是一个内联元素，比如 &lt;em&gt;&lt;/em&gt; 或者 &lt;span&gt;&lt;/span&gt;，不过这样的用法是非法的，因为不可以在内联元素 &lt;span&gt; 中嵌入 &lt;p&gt; （如果你忘记了原因，请参阅 <a href="../xhtml/xhtml_structural_01.htm" >XHTML:网站重构</a>）。</p>
+<h3>一个选择器，多种用法</h3>
+
+<p><strong>即使被标注为 sidebar 的元素只能在文档中出现一次，这个 id 选择器作为派生选择器也可以被使用很多次：</strong></p>
+<pre>
+<code>#sidebar p</code> {
+	font-style: italic;
+	text-align: right;
+	margin-top: 0.5em;
+	}
+
+<code>#sidebar h2</code> {
+	font-size: 1em;
+	font-weight: normal;
+	font-style: italic;
+	margin: 0;
+	line-height: 1.5;
+	text-align: right;
+	}
+</pre>
+
+<p>在这里，与页面中的其他 p 元素明显不同的是，sidebar 内的 p 元素得到了特殊的处理，同时，与页面中其他所有 h2 元素明显不同的是，sidebar 中的 h2 元素也得到了不同的特殊处理。</p>
+</div>
+
+<div>
+<h2>单独的选择器</h2>
+
+<p><strong>id 选择器即使不被用来创建派生选择器，它也可以独立发挥作用：</strong></p>
+<pre><code>#sidebar</code> {
+	border: 1px dotted #000;
+	padding: 10px;
+	}</pre>
+
+<p>根据这条规则，id 为 sidebar 的元素将拥有一个像素宽的黑色点状边框，同时其周围会有 10 个像素宽的内边距（padding，内部空白）。老版本的 Windows/IE 浏览器可能会忽略这条规则，除非你特别地定义这个选择器所属的元素：</p>
+<pre>
+<code>div#sidebar</code> {
+	border: 1px dotted #000;
+	padding: 10px;
+	}
+</pre>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+
+

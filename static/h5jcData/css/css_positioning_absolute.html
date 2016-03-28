@@ -1,0 +1,43 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS 绝对定位</h1> 
+
+<div id="intro">
+<p><strong>设置为绝对定位的元素框从文档流完全删除，并相对于其包含块定位，包含块可能是文档中的另一个元素或者是初始包含块。元素原先在正常文档流中所占的空间会关闭，就好像该元素原来不存在一样。元素定位后生成一个块级框，而不论原来它在正常流中生成何种类型的框。</strong></p>
+</div>
+
+<div>
+<h2>CSS 绝对定位</h2>
+
+<p>绝对定位使元素的位置与文档流无关，因此不占据空间。这一点与相对定位不同，相对定位实际上被看作普通流定位模型的一部分，因为元素的位置相对于它在普通流中的位置。</p>
+<p>普通流中其它元素的布局就像绝对定位的元素不存在一样：</p>
+<pre>
+#box_relative {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+}
+</pre>
+
+<p>如下图所示：</p>
+<img src="../i/ct_css_positioning_absolute_example.gif" alt="CSS 绝对定位实例" />
+
+<p>绝对定位的元素的位置相对于<em>最近的已定位祖先元素</em>，如果元素没有已定位的祖先元素，那么它的位置相对于<em>最初的包含块</em>。</p>
+<h3>已定位元素</h3>
+已定位元素是指设置了position属性样式，且设置的值为absolute、relative、fixed之一的元素。
+
+<p>相对定位是“相对于”元素在文档中的初始位置，而绝对定位是“相对于”最近的已定位祖先元素，如果不存在已定位的祖先元素，那么“相对于”最初的包含块。</p>
+<p class="note"><span>注释：</span>根据用户代理的不同，最初的包含块可能是画布或 HTML 元素。</p>
+<p class="tip"><span>提示：</span>因为绝对定位的框与文档流无关，所以它们可以覆盖页面上的其它元素。可以通过设置 <a href="../cssref/pr_pos_z-index.htm" title="CSS z-index 属性">z-index 属性</a>来控制这些框的堆放次序。</p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

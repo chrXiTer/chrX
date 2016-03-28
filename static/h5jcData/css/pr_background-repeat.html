@@ -1,0 +1,128 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS background-repeat 属性</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>background-repeat 属性设置是否及如何重复背景图像。</p>
+<p>默认地，背景图像在水平和垂直方向上重复。</p>
+
+<h3>详细说明</h3>
+<p>background-repeat 属性定义了图像的平铺模式。</p>
+<p>从原图像开始重复，原图像由 <a href="pr_background-image.htm" title="CSS background-image 属性">background-image</a> 定义，并根据 <a href="pr_background-position.htm" title="CSS background-position 属性">background-position</a> 的值放置。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">repeat</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS1</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.backgroundPosition=&quot;center&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+<pre>
+body
+  {
+  background-image: url(stars.gif);
+  <code>background-repeat: repeat-y;</code>
+  }
+</pre>
+
+<p><a href="../tiy/t.asp-f=csse_background-repeaty.htm" >TIY</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有浏览器都支持 background-repeat 属性。</p>
+<p class="note"><span>注释：</span>任何版本的 Internet Explorer （包括 IE8）都不支持属性值 &quot;inherit&quot;。</p>
+</div>
+
+<div>
+<h2>提示和注释</h2>
+<p class="tip"><span>提示：</span>背景图像的位置是根据 background-position 属性设置的。如果未规定 background-position 属性，图像会被放置在元素的左上角。</p>
+</div>
+
+<div>
+<h2>可能的值</h2>
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>repeat</td>
+<td>默认。背景图像将在垂直方向和水平方向重复。</td>
+</tr>
+
+<tr>
+<td>repeat-x</td>
+<td>背景图像将在水平方向重复。</td>
+</tr>
+
+<tr>
+<td>repeat-y</td>
+<td>背景图像将在垂直方向重复。</td>
+</tr>
+
+<tr>
+<td>no-repeat</td>
+<td>背景图像将仅显示一次。</td>
+</tr>
+
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 background-repeat 属性的设置。</td>
+</tr>
+</table>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="../tiy/t.asp-f=csse_background-repeat.htm" >如何重复背景图像</a></dt>
+<dd>本例演示如何重复背景图像。</dd>
+<dt><a href="../tiy/t.asp-f=csse_background-repeaty.htm" >如何在垂直方向重复背景图像</a></dt>
+<dd>本例演示如何垂直地重复背景图像。</dd>
+<dt><a href="../tiy/t.asp-f=csse_background-repeatx.htm" >如何在水平方向重复背景图像</a></dt>
+<dd>本例演示如何水平地重复背景图像。</dd>
+<dt><a href="../tiy/t.asp-f=csse_background-repeat_no-repeat.htm" >如何仅显示一次背景图像</a></dt>
+<dd>本例演示如何仅显示一次背景图像。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>CSS 教程：<a href="css_background.htm" title="CSS 背景">CSS 背景</a></p>
+<p>HTML DOM 参考手册：<a href="../htmldom/prop_style_backgroundrepeat.htm" title="HTML DOM backgroundRepeat 属性">backgroundRepeat 属性</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>

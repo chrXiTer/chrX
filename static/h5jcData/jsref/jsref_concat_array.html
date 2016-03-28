@@ -1,0 +1,133 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript concat() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_array.htm"  title="JavaScript Array 对象">JavaScript Array 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>concat() 方法用于连接两个或多个数组。</p>
+
+<p>该方法不会改变现有的数组，而仅仅会返回被连接数组的一个副本。</p>
+
+<h3>语法</h3>
+
+<pre>arrayObject.concat(arrayX,arrayX,......,arrayX)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>arrayX</td>
+    <td>必需。该参数可以是具体的值，也可以是数组对象。可以是任意多个。</td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+
+<p>返回一个新的数组。该数组是通过把所有 arrayX 参数添加到 arrayObject 中生成的。如果要进行 concat() 操作的参数是数组，那么添加的是数组中的元素，而不是数组。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<h3>例子 1</h3>
+
+<p>在本例中，我们将把 concat() 中的参数连接到数组 a 中：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var a = [1,2,3];
+document.write(<code>a.concat(4,5)</code>);
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>1,2,3,4,5</pre>
+
+<h3>例子 2</h3>
+
+<p>在本例中，我们创建了两个数组，然后使用 concat() 把它们连接起来：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var arr = new Array(3)
+arr[0] = &quot;George&quot;
+arr[1] = &quot;John&quot;
+arr[2] = &quot;Thomas&quot;
+
+var arr2 = new Array(3)
+arr2[0] = &quot;James&quot;
+arr2[1] = &quot;Adrew&quot;
+arr2[2] = &quot;Martin&quot;
+
+document.write(<code>arr.concat(arr2)</code>)
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>George,John,Thomas,James,Adrew,Martin</pre>
+
+<h3>例子 3</h3>
+
+<p>在本例中，我们创建了三个数组，然后使用 concat() 把它们连接起来：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var arr = new Array(3)
+arr[0] = &quot;George&quot;
+arr[1] = &quot;John&quot;
+arr[2] = &quot;Thomas&quot;
+
+var arr2 = new Array(3)
+arr2[0] = &quot;James&quot;
+arr2[1] = &quot;Adrew&quot;
+arr2[2] = &quot;Martin&quot;
+
+var arr3 = new Array(2)
+arr3[0] = &quot;William&quot;
+arr3[1] = &quot;Franklin&quot;
+
+document.write(<code>arr.concat(arr2,arr3)</code>)
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>George,John,Thomas,James,Adrew,Martin,William,Franklin</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_concat_1')" >如何使用 concat() 连接数组中的值</a></dt>
+<dt><a href="javascript:tiy.run('jseg_concat_2')" >如何使用 concat() 连接两个数组</a></dt>
+<dt><a href="javascript:tiy.run('jseg_concat_3')" >如何使用 concat() 连接三个数组</a></dt>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_array.htm"  title="JavaScript Array 对象">JavaScript Array 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

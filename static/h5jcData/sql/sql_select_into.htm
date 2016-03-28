@@ -1,0 +1,106 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL SELECT INTO 语句</h1>
+
+<div>
+<p><strong>SQL SELECT INTO 语句可用于创建表的备份复件。</strong></p>
+</div>
+
+<div>
+<h2>SELECT INTO 语句</h2>
+
+<p>SELECT INTO 语句从一个表中选取数据，然后把数据插入另一个表中。</p>
+
+<p>SELECT INTO 语句常用于创建表的备份复件或者用于对记录进行存档。</p>
+
+<h3>SQL SELECT INTO 语法</h3>
+
+<p>您可以把所有的列插入新表：</p>
+
+<pre>
+SELECT *
+INTO new_table_name [IN externaldatabase] 
+FROM old_tablename
+</pre>
+
+<p>或者只把希望的列插入新表：</p>
+
+<pre>
+SELECT column_name(s)
+INTO new_table_name [IN externaldatabase] 
+FROM old_tablename
+</pre>
+</div>
+
+<div>
+<h2>SQL SELECT INTO 实例 - 制作备份复件</h2>
+
+<p>下面的例子会制作 &quot;Persons&quot; 表的备份复件：</p>
+
+<pre>
+<code>SELECT</code> *
+<code>INTO</code> Persons_backup
+FROM Persons
+</pre>
+
+<p>IN 子句可用于向另一个数据库中拷贝表：</p>
+
+<pre>
+<code>SELECT</code> *
+<code>INTO</code> Persons <code>IN</code> 'Backup.mdb'
+FROM Persons
+</pre>
+
+<p>如果我们希望拷贝某些域，可以在 SELECT 语句后列出这些域：</p>
+
+<pre>
+<code>SELECT</code> LastName,FirstName
+<code>INTO</code> Persons_backup
+FROM Persons
+</pre>
+</div>
+
+<div>
+<h2>SQL SELECT INTO 实例 - 带有 WHERE 子句</h2>
+
+<p>我们也可以添加 WHERE 子句。</p>
+
+<p>下面的例子通过从 &quot;Persons&quot; 表中提取居住在 &quot;Beijing&quot; 的人的信息，创建了一个带有两个列的名为 &quot;Persons_backup&quot; 的表：</p>
+
+<pre>
+<code>SELECT</code> LastName,Firstname
+<code>INTO</code> Persons_backup
+FROM Persons
+<code>WHERE</code> City='Beijing'
+</pre>
+</div>
+
+<div>
+<h2>SQL SELECT INTO 实例 - 被连接的表</h2>
+
+<p>从一个以上的表中选取数据也是可以做到的。</p>
+
+<p>下面的例子会创建一个名为 &quot;Persons_Order_Backup&quot; 的新表，其中包含了从 Persons 和 Orders 两个表中取得的信息：</p>
+
+<pre>
+<code>SELECT</code> Persons.LastName,Orders.OrderNo
+<code>INTO</code> Persons_Order_Backup
+<code>FROM</code> Persons
+<code>INNER JOIN</code> Orders
+<code>ON</code> Persons.Id_P=Orders.Id_P
+</pre>
+</div>
+
+<div  id="bpn">
+<ul class="prenext">
+<li class="pre"><a href="sql_union.htm"  title="SQL UNION 和 UNION ALL">SQL Union</a></li>
+<li class="next"><a href="sql_create_db.htm"  title="SQL CREATE DATABASE 语句">SQL Create DB</a></li>
+</ul>
+</div>
+</div>
+</div>
+<script src="../chrX.js"></script>

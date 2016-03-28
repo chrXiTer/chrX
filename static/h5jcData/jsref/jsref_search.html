@@ -1,0 +1,117 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript search() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_string.htm"  title="JavaScript String 对象">JavaScript String 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>search() 方法用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串。</p>
+
+<h3>语法</h3>
+
+<pre>stringObject.search(regexp)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>regexp</td>
+    <td>
+	<p>该参数可以是需要在 stringObject 中检索的子串，也可以是需要检索的 RegExp 对象。</p>
+	<p>注释：要执行忽略大小写的检索，请追加标志 i。</p></td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+
+<p>stringObject 中第一个与 regexp 相匹配的子串的起始位置。</p>
+
+<p class="note"><span>注释：</span>如果没有找到任何匹配的子串，则返回 -1。</p>
+
+<h3>说明</h3>
+
+<p>search() 方法不执行全局匹配，它将忽略标志 g。它同时忽略 regexp 的 lastIndex 属性，并且总是从字符串的开始进行检索，这意味着它总是返回 stringObject 的第一个匹配的位置。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<h3>例子 1</h3>
+
+<p>在本例中，我们将检索 &quot;W3School&quot;：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var str=&quot;Visit W3School!&quot;
+document.write(str.search(/W3School/))
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>6</pre>
+
+<p>在下面的例子中，无法检索到 w3school（因为 search() 对大小写敏感）。</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var str=&quot;Visit W3School!&quot;
+document.write(str.search(/w3school/))
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>-1</pre>
+
+<h3>例子 2</h3>
+
+<p>在本例中，我们将执行一次忽略大小写的检索：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var str=&quot;Visit W3School!&quot;
+document.write(str.search(/w3school/i))
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>6</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_search_1')" >search()</a></dt>
+<dd>如何使用 search() 来检索字符串中指定的子串。</dd>
+
+<dt><a href="javascript:tiy.run('jseg_search_2')" >search() 忽略大小写的检索</a></dt>
+<dd>如何使用 search() 来检索字符串中指定的子串。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_string.htm"  title="JavaScript String 对象">JavaScript String 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

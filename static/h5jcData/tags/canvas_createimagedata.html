@@ -1,0 +1,150 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML5 canvas createImageData() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>创建 100*100 像素的 ImageData 对象，其中每个像素都是红色的，然后把它放到画布上：</p>
+
+<canvas id="myCanvas" class="canvas_example">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+var c=document.getElementById("myCanvas");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+	var ctx=c.getContext("2d");
+	var imgData=ctx.createImageData(100,100);
+	for (var i=0;i<imgData.width*imgData.height*4;i+=4)
+		{
+	    imgData.data[i+0]=0;
+	    imgData.data[i+1]=255;
+	    imgData.data[i+2]=0;
+	    imgData.data[i+3]=255;
+		}
+	ctx.putImageData(imgData,10,10);
+	}
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+var imgData=<code>ctx.createImageData(100,100)</code>;
+for (var i=0;i&lt;imgData.data.length;i+=4)
+  {
+  imgData.data[i+0]=255;
+  imgData.data[i+1]=0;
+  imgData.data[i+2]=0;
+  imgData.data[i+3]=255;
+  }
+ctx.putImageData(imgData,10,10);
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_createimagedata')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>createImageData() 方法创建新的空白 ImageData 对象。新对象的默认像素值 transparent black。</p>
+
+<p>对于 ImageData 对象中的每个像素，都存在着四方面的信息，即 RGBA 值：</p>
+
+<ul>
+<li>R - 红色 (0-255)</li>
+<li>G - 绿色 (0-255)</li>
+<li>B - 蓝色 (0-255)</li>
+<li>A - alpha 通道 (0-255; 0 是透明的，255 是完全可见的)</li>
+</ul>
+
+<p>因此 ，transparent black 表示 (0,0,0,0)。</p>
+
+<p>color/alpha 以数组形式存在，并且既然数组包含了每个像素的四条信息，数组的大小是 ImageData 对象的四倍。（获得数组大小有更简单的办法，就是使用 ImageDataObject.data.length）</p>
+
+<p>包含 color/alpha 信息的数组存储于 ImageData 对象的 <a href="canvas_imagedata_data.htm"  title="HTML canvas data 属性">data</a> 属性中。</p>
+
+<p class="tip"><span>提示：</span>在操作完成数组中的 color/alpha 信息之后，您可以使用 <a href="canvas_putimagedata.htm"  title="HTML canvas putImageData() 方法">putImageData()</a> 方法将图像数据拷贝回画布上。</p>
+
+<h3>例子：</h3>
+
+<p>该语法把 ImageData 对象中的第一个像素变为红色：</p>
+
+<pre>
+imgData=ctx.createImageData(100,100);
+
+imgData.data[0]=255;
+imgData.data[1]=0;
+imgData.data[2]=0;
+imgData.data[3]=255;
+</pre>
+
+<p>该语法把 ImageData 对象中的第二个像素变为红色：</p>
+
+<pre>
+imgData=ctx.createImageData(100,100);
+
+imgData.data[4]=0;
+imgData.data[5]=255;
+imgData.data[6]=0;
+imgData.data[7]=255;
+</pre>
+
+<h3>JavaScript 语法</h3>
+
+<p>有两个版本的 createImageData() 方法：</p>
+
+<p>1. 以指定的尺寸（以像素计）创建新的 ImageData 对象：</p>
+
+<pre>var imgData=context.createImageData(<i>width</i>,<i>height</i>);</pre>
+
+<p>2. 创建与指定的另一个 ImageData 对象尺寸相同的新 ImageData 对象（不会复制图像数据）：</p>
+
+<pre>var imgData=context.createImageData(<i>imageData</i>);</pre>
+
+<h3>参数值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">参数</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>width</i></td>
+<td>ImageData 对象的宽度，以像素计。</td>
+</tr>
+
+<tr>
+<td><i>height</i></td>
+<td>ImageData 对象的高度，以像素计。</td>
+</tr>
+
+<tr>
+<td><i>imageData</i></td>
+<td>另一个 ImageData 对象。</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,182 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS border-style 属性</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>border-style 属性用于设置元素所有边框的样式，或者单独地为各边设置边框样式。</p>
+<p>只有当这个值不是 none 时边框才可能出现。</p>
+<h4>例子 1</h4>
+<pre>border-style:dotted solid double dashed; </pre>
+	<ul>
+	<li>上边框是点状</li>
+	<li>右边框是实线</li>
+	<li>下边框是双线</li>
+	<li>左边框是虚线</li>
+	</ul>
+
+<h4>例子 2</h4>
+<pre>border-style:dotted solid double;</pre>
+	<ul>
+	<li>上边框是点状</li>
+	<li>右边框和左边框是实线</li>
+	<li>下边框是双线</li>
+	</ul>
+
+<h4>例子 3</h4>
+<pre>border-style:dotted solid;</pre>
+	<ul>
+	<li>上边框和下边框是点状</li>
+	<li>右边框和左边框是实线</li>
+	</ul>
+
+<h4>例子 4</h4>
+<pre>border-style:dotted;</pre>
+	<ul>
+	<li>所有 4 个边框都是点状</li>
+	</ul>
+
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;"><i>not specified</i></td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS1</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.borderStyle=&quot;dotted double&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>设置 4 个边框的样式：</p>
+<pre>
+p
+  {
+  <code>border-style:solid;</code>
+  }
+</pre>
+
+<p><a href="../tiy/t.asp-f=csse_border-style.htm" >TIY</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有浏览器都支持 border-style 属性。</p>
+<p class="note"><span>注释：</span>任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 &quot;inherit&quot;。</p>
+</div>
+
+<div>
+<h2>可能的值</h2>
+
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>none</td>
+<td>定义无边框。</td>
+</tr>
+
+<tr>
+<td>hidden</td>
+<td>与 &quot;none&quot; 相同。不过应用于表时除外，对于表，hidden 用于解决边框冲突。</td>
+</tr>
+
+<tr>
+<td>dotted</td>
+<td>定义点状边框。在大多数浏览器中呈现为实线。</td>
+</tr>
+
+<tr>
+<td>dashed</td>
+<td>定义虚线。在大多数浏览器中呈现为实线。</td>
+</tr>
+
+<tr>
+<td>solid</td>
+<td>定义实线。</td>
+</tr>
+
+<tr>
+<td>double</td>
+<td>定义双线。双线的宽度等于 border-width 的值。</td>
+</tr>
+
+<tr>
+<td>groove</td>
+<td>定义 3D 凹槽边框。其效果取决于 border-color 的值。</td>
+</tr>
+
+<tr>
+<td>ridge</td>
+<td>定义 3D 垄状边框。其效果取决于 border-color 的值。</td>
+</tr>
+
+<tr>
+<td>inset</td>
+<td>定义 3D inset 边框。其效果取决于 border-color 的值。</td>
+</tr>
+
+<tr>
+<td>outset</td>
+<td>定义 3D outset 边框。其效果取决于 border-color 的值。</td>
+</tr>
+
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承边框样式。</td>
+</tr>
+</table>
+
+<h3>描述</h3>
+
+<p>最不可预测的边框样式是 double。它定义为两条线的宽度再加上这两条线之间的空间等于 border-width 值。不过，CSS 规范并没有说其中一条线是否比另一条粗或者两条线是否应该是一样的粗，也没有指出线之间的空间是否应当比线粗。所有这些都有用户代理决定，创作人员对这个决定没有任何影响。</p>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="../tiy/t.asp-f=csse_border-style.htm" >设置四边框样式</a></dt>
+<dd>本例演示如何设置四边框样式。</dd>
+
+<dt><a href="../tiy/t.asp-f=csse_border-style2.htm" >设置每一边的不同边框</a></dt>
+<dd>本例演示如何在元素的各边设置不同的边框。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>CSS 教程：<a href="css_border_outline.htm" title="CSS 边框">CSS 边框</a></p>
+<p>HTML DOM 参考手册：<a href="../htmldom/prop_style_borderstyle.htm" title="HTML DOM borderStyle 属性">borderStyle 属性</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>

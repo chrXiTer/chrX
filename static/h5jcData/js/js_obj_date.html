@@ -1,0 +1,61 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript Date（日期）对象</h1>
+<p>日期对象用于处理日期和时间。</p>
+
+<h2>定义日期</h2>
+<p>Date 对象用于处理日期和时间。</p>
+<p>可以通过 new 关键词来定义 Date 对象。以下代码定义了名为 myDate 的 Date 对象：</p>
+<pre>var myDate=<code>new</code> Date() </pre>
+<p class="note"><span>注释：</span>Date 对象自动使用当前的日期和时间作为其初始值。</p>
+
+<h2>操作日期</h2>
+<p>通过使用针对日期对象的方法，我们可以很容易地对日期进行操作。</p>
+<p>在下面的例子中，我们为日期对象设置了一个特定的日期 (2008 年 8 月 9 日)：</p>
+<pre>
+var myDate=new Date()
+myDate.<code>setFullYear</code>(2008,7,9)
+</pre>
+
+<p class="important"><span>注意：</span>表示月份的参数介于 0 到 11 之间。也就是说，如果希望把月设置为 8 月，则参数应该是 7。</p>
+<p>在下面的例子中，我们将日期对象设置为 5 天后的日期：</p>
+<pre>
+var myDate=new Date()
+myDate.<code>setDate</code>(myDate.getDate()+5)
+</pre>
+
+<p class="important"><span>注意：</span>如果增加天数会改变月份或者年份，那么日期对象会自动完成这种转换。</p>
+
+<h2>比较日期</h2>
+<p>日期对象也可用于比较两个日期。</p>
+<p>下面的代码将当前日期与 2008 年 8 月 9 日做了比较：</p>
+<pre>
+var myDate=new Date();
+myDate.setFullYear(2008,8,9);
+var today = new Date();
+if (myDate&gt;today){
+	alert(&quot;Today is before 9th August 2008&quot;);
+}else{
+	alert(&quot;Today is after 9th August 2008&quot;);
+}
+</pre>
+
+<h2>试一试</h2>
+
+<p>使用 <a href="javascript:tiy.run('jsrf_date')" >Date()</a> 方法获得当日的日期。</p>
+<p>使用 <a href="javascript:tiy.run('jseg_date_gettime')" >getTime()</a> 返回从 1970 年 1 月 1 日至今的毫秒数。</p>
+<p>使用 <a href="javascript:tiy.run('jsrf_date_setfullyear2')" >setFullYear()</a> 设置具体的日期。</p>
+<p>使用 <a href="javascript:tiy.run('jsrf_date_toutcstring')" >toUTCString()</a> 将当日的日期（根据 UTC）转换为字符串。</p>
+<p>使用 <a href="javascript:tiy.run('jsrf_date_date_weekday')" >getDay()</a> 和数组来显示星期，而不仅仅是数字。</p>
+<p>在网页上<a href="javascript:tiy.run('jsrf_date_timing_clock')" >显示一个钟表</a>。</p>
+
+<h2>完整的 Date 对象参考手册</h2>
+<p><a href="../jsref/jsref_obj_date.htm" >JavaScript Date 对象参考手册</a>，其中包括所有可用于日期对象的属性和方法。</p>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

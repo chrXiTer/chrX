@@ -1,0 +1,58 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML DOM createPopup() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="dom_obj_window.htm" >HTML DOM Window 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>createPopup() 方法用于创建一个 pop-up 窗口。</p>
+
+<h3>语法</h3>
+<pre>window.createPopup()</pre>
+</div>
+
+<div>
+<h2>实例</h2>
+<pre>&lt;html&gt;
+&lt;head&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+function show_popup()
+{
+var p=<code>window.createPopup()</code>
+var pbody=p.document.body
+pbody.style.backgroundColor=&quot;lime&quot;
+pbody.style.border=&quot;solid black 1px&quot;
+pbody.innerHTML=&quot;This is a pop-up! Click outside to close.&quot;
+p.show(150,150,200,50,document.body)
+}
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;button onclick=&quot;show_popup()&quot;&gt;Create pop-up!&lt;/button&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+<dl>
+<dt><a href="javascript:tiy.run('hdom_window_popup')" >创建 pop-up</a></dt>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="dom_obj_window.htm" >HTML DOM Window 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

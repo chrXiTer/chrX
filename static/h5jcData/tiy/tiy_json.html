@@ -1,0 +1,148 @@
+﻿<script>
+var f = function(){
+	var href = location.href;
+	var index = href.indexOf("#")
+	if(index == -1) return;
+	var varg = href.substring(index + 1)
+	var strid = "tiyiframe_" + varg
+	var iframeSource = document.getElementById(strid)
+	var iframeTarget = document.getElementById("tiyiframe_iframe")
+	var textareaE = document.getElementById('tiyiframe_textarea')
+	if(!iframeSource){
+		textareaE.innerText("示例代码不存在")
+		return
+	}
+		
+	var htmlStr = iframeSource.textContent;
+	var newDoc=iframeTarget.contentDocument.open("text/html","replace");
+	newDoc.write(htmlStr)
+	newDoc.close()
+	
+	textareaE.innerText = htmlStr
+	
+	var buttonE = document.getElementById("tiyiframe_button")
+	buttonE.onclick = function(){
+			var textareaE = document.getElementById('tiyiframe_textarea')
+			var eIframe = document.getElementById('tiyiframe_iframe')
+			var newDoc=eIframe.contentDocument.open("text/html","replace")
+			newDoc.write(textareaE.value)
+			newDoc.close()
+	}
+}
+window.onload = f;
+window.onresize = f;
+
+</script>
+
+<div style="width:100%; height:13px; background-color:yellow">实验<span style="float:right; background-color:red">X</span></div>
+<iframe id="tiyiframe_iframe" style="width:100%;height:40%;background-color:#ffffff">
+</iframe>
+<p style="height:8%;margin:0px; padding:0px">编辑代码：
+    <input id="tiyiframe_button" type="button" value="查看效果" style="float:right; margin-right:20px"></input>
+</p>
+<textarea id="tiyiframe_textarea" style="width:90%; height:35%;"></textarea>
+</br>
+
+<div style="visibility:hidden;display:none">
+<iframe id="tiyiframe_json_create">
+
+<html>
+<body>
+<h2>在 JavaScript 中创建 JSON 对象</h2>
+
+<p>
+Name: <span id="jname"></span><br />
+Age: <span id="jage"></span><br />
+Address: <span id="jstreet"></span><br />
+Phone: <span id="jphone"></span><br />
+</p>
+
+<script type="text/javascript">
+var JSONObject= {
+"name":"Bill Gates",
+"street":"Fifth Avenue New York 666",
+"age":56,
+"phone":"555 1234567"};
+document.getElementById("jname").innerHTML=JSONObject.name
+document.getElementById("jage").innerHTML=JSONObject.age
+document.getElementById("jstreet").innerHTML=JSONObject.street
+document.getElementById("jphone").innerHTML=JSONObject.phone
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_json_eval">
+
+<html>
+<body>
+<h2>通过 JSON 字符串来创建对象</h3>
+<p>
+First Name: <span id="fname"></span><br /> 
+Last Name: <span id="lname"></span><br /> 
+</p> 
+<script type="text/javascript">
+var txt = '{"employees":[' +
+'{"firstName":"Bill","lastName":"Gates" },' +
+'{"firstName":"George","lastName":"Bush" },' +
+'{"firstName":"Thomas","lastName":"Carter" }]}';
+
+var obj = eval ("(" + txt + ")");
+
+document.getElementById("fname").innerHTML=obj.employees[1].firstName 
+document.getElementById("lname").innerHTML=obj.employees[1].lastName 
+</script>
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_json_objectarray">
+
+<html>
+<body>
+<h2>通过 JSON 字符串来创建对象</h3>
+<p>First Name: <span id="fname"></span></p> 
+
+<script type="text/javascript">
+var employees = [
+{ "firstName":"Bill" , "lastName":"Gates" },
+{ "firstName":"George" , "lastName":"Bush" },
+{ "firstName":"Thomas" , "lastName": "Carter" }
+];
+employees[1].firstName="Jobs";
+document.getElementById("fname").innerHTML=employees[1].firstName;
+</script>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_json_parse">
+
+<html>
+<body>
+<h2>通过 JSON 字符串来创建对象</h3>
+<p>
+First Name: <span id="fname"></span><br /> 
+Last Name: <span id="lname"></span><br /> 
+</p> 
+<script type="text/javascript">
+var txt = '{"employees":[' +
+'{"firstName":"Bill","lastName":"Gates" },' +
+'{"firstName":"George","lastName":"Bush" },' +
+'{"firstName":"Thomas","lastName":"Carter" }]}';
+
+obj = JSON.parse(txt);
+
+document.getElementById("fname").innerHTML=obj.employees[1].firstName 
+document.getElementById("lname").innerHTML=obj.employees[1].lastName 
+</script>
+</body>
+</html>
+
+</iframe>
+

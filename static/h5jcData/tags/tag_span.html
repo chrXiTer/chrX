@@ -1,0 +1,72 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;span&gt; 标签</h1>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>&lt;span&gt; 标签被用来组合文档中的行内元素。</p>
+</div>
+
+<div>
+<h2>HTML 与 XHTML 之间的差异</h2>
+
+<p>NONE</p>
+</div>
+
+<div>
+<h2>提示和注释：</h2>
+
+<p class="tip"><span>提示：</span>请使用 &lt;span&gt; 来组合行内元素，以便通过样式来格式化它们。</p>
+
+<p class="note"><span>注释：</span>span 没有固定的格式表现。当对它应用样式时，它才会产生视觉上的变化。</p>
+</div>
+
+<div>
+<h2>例子</h2>
+
+<pre>&lt;p&gt;<code>&lt;span&gt;some text.&lt;/span&gt;</code>some other text.&lt;/p&gt;</pre>
+
+<h3>例子解释</h3>
+
+<p>如果不对 span 应用样式，那么 span 元素中的文本与其他文本不会任何视觉上的差异。尽管如此，上例中的 span 元素仍然为 p 元素增加了额外的结构。</p>
+
+<p>可以为 span 应用 id 或 class 属性，这样既可以增加适当的语义，又便于对 span 应用样式。</p>
+
+<p>可以对同一个 &lt;span&gt; 元素应用 class 或 id 属性，但是更常见的情况是只应用其中一种。这两者的主要差异是，class 用于元素组（类似的元素，或者可以理解为某一类元素），而 id 用于标识单独的唯一的元素。</p>
+
+<p class="tip"><span>提示：</span>事实上，您也许已经注意到了，W3School 站点上有一些文本的样式与其他文本是不同的。比如“提示”使用了粗体的橘红色。尽管实现这种效果的方法非常多，但是我们的做法是：使用“提示”使用 span 元素，然后对这个 span 元素的父元素，即 p 元素应用 class，这样就可以对这个类的子元素 span 应用相应的样式了。</p>
+
+<p>HTML:</p>
+
+<pre>&lt;p class=&quot;tip&quot;&gt;&lt;span&gt;提示：&lt;/span&gt;... ... ...&lt;/p&gt;</pre>
+
+<p>CSS:</p>
+
+<pre>
+p.tip span {
+	font-weight:bold;
+	color:#ff9955;
+	}
+</pre>
+</div>
+
+<div>
+<h2>全局属性</h2>
+
+<p>&lt;span&gt; 标签支持 <a href="html_ref_standardattributes.htm" >HTML 中的全局属性</a>。</p>
+</div>
+
+<div>
+<h2>事件属性</h2>
+
+<p>&lt;span&gt; 标签支持 <a href="html_ref_eventattributes.htm" >HTML 中的事件属性</a>。</p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

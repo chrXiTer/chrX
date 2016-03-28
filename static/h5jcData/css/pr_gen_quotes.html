@@ -1,0 +1,116 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS quotes 属性</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>quotes 属性设置嵌套引用（embedded quotation）的引号类型。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">not specified</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>yes</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS2</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.quotes=&quot;none&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<pre>
+q:lang(en)
+  {
+  <code>quotes: '&quot;' '&quot;' &quot;'&quot; &quot;'&quot;;</code>
+  }
+</pre>
+
+<p>HTML 代码：</p>
+<pre>
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;&lt;q&gt;This is a &lt;q&gt;big&lt;/q&gt; quote&lt;/q&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>输出：</p>
+<pre>&quot;This is a 'big' quote&quot;</pre>
+
+<p><a href="../tiy/t.asp-f=csse_gen_quotes.htm" >TIY</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有浏览器都支持 quotes 属性。</p>
+<p class="note"><span>注释：</span>如果已规定 !DOCTYPE，那么 Internet Explorer 8 （以及更高版本）支持 quotes 属性。</p>
+</div>
+
+<div>
+<h2>可能的值</h2>
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>none</td>
+<td>规定 &quot;content&quot; 属性的 &quot;open-quote&quot; 和 &quot;close-quote&quot; 的值不会产生任何引号。</td>
+</tr>
+
+<tr>
+<td><i>string string string string</i></td>
+<td>
+	<p>定义要使用的引号。</p>
+	<p>前两个值规定第一级引用嵌套，后两个值规定下一级引号嵌套。</p>
+</td>
+</tr>
+
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 quotes 属性的值。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>引号字符</h2>
+<img src="../i/ct_css_pr_gen_quotes.gif" alt="Quotation Mark Characters" />
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>HTML DOM 参考手册：<a href="../htmldom/prop_style_quotes.htm" title="HTML DOM quotes 属性">quotes 属性</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

@@ -1,0 +1,54 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JSON 教程</h1>
+
+<div id="intro">
+<p><strong>JSON：JavaScript 对象表示法（<span class="marked">J</span>ava<span class="marked">S</span>cript <span class="marked">O</span>bject <span class="marked">N</span>otation）。</strong></p>
+<p><strong>JSON 是存储和交换文本信息的语法。类似 XML。</strong></p>
+<p><strong>JSON 比 XML 更小、更快，更易解析。</strong></p>
+</div>
+
+<div>
+<h2>每一章中用到的实例</h2>
+
+<pre>
+{
+&quot;employees&quot;: [
+{ &quot;firstName&quot;:&quot;Bill&quot; , &quot;lastName&quot;:&quot;Gates&quot; },
+{ &quot;firstName&quot;:&quot;George&quot; , &quot;lastName&quot;:&quot;Bush&quot; },
+{ &quot;firstName&quot;:&quot;Thomas&quot; , &quot;lastName&quot;:&quot;Carter&quot; }
+]
+}
+</pre>
+
+<p>这个 employee 对象是包含 3 个员工记录（对象）的数组。</p>
+</div>
+
+<div>
+<h2>什么是 JSON ？</h2>
+
+<ul>
+<li>JSON 指的是 JavaScript 对象表示法（<em>J</em>ava<em>S</em>cript <em>O</em>bject <em>N</em>otation）</li>
+<li>JSON 是轻量级的文本数据交换格式</li>
+<li>JSON 独立于语言 <span class="marked">*</span></li>
+<li>JSON 具有自我描述性，更易理解</li>
+</ul>
+
+<p><span class="marked">*</span> JSON 使用 JavaScript 语法来描述数据对象，但是 JSON 仍然独立于语言和平台。JSON 解析器和 JSON 库支持许多不同的编程语言。</p>
+</div>
+
+<div>
+<h2>JSON - 转换为 JavaScript 对象</h2>
+
+<p>JSON 文本格式在语法上与创建 JavaScript 对象的代码相同。</p>
+
+<p>由于这种相似性，无需解析器，JavaScript 程序能够使用内建的 <a href="../jsref/jsref_eval.htm"  title="JavaScript eval() 函数">eval() 函数</a>，用 JSON 数据来生成原生的 JavaScript 对象。</p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

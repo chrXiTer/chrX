@@ -1,0 +1,104 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS3 border-image-repeat 属性</h1>
+
+<div class="backtoreference">
+<p><a href="index.htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>规定如何重复图像边框：</p>
+<pre>
+div
+{
+border-image-source: url(border.png);
+<code>border-image-repeat: round;</code>
+}
+</pre>
+
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+
+<p>目前主流浏览器都不支持 border-image-repeat 属性。</p>
+<p>请参阅 <a href="pr_border-image.htm" title="CSS3 border-image 属性">border-image</a> 属性。</p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>border-image-repeat 属性规定图像边框是否应该被重复（repeated）、拉伸（stretched）或铺满（rounded）。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">stretch</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS3</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.borderImageRepeat=&quot;round&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>可能的值</h2>
+
+<pre>border-image-repeat: stretch|repeat|round;</pre>
+
+<p class="note"><span>注释：</span>该属性规定如何延展和铺排边框图像的边缘和中间部分。因此，您可以规定两个值。如果省略第二个值，则采取与第一个值相同的值。</p>
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>stretch</td>
+<td>拉伸图像来填充区域</td>
+</tr>
+
+<tr>
+<td>repeat</td>
+<td>平铺（重复）图像来填充区域。</td>
+</tr>
+
+<tr>
+<td>round</td>
+<td>类似 repeat 值。如果无法完整平铺所有图像，则对图像进行缩放以适应区域。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>CSS3 教程：<a href="../css3/css3_border.htm" title="CSS3 边框">CSS3 边框</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href="index.htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+<!-- maincontent end -->
+
+</div>
+<!-- wrapper end -->
+
+<script src="../chrX.js"></script>
+

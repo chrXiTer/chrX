@@ -1,0 +1,241 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS3 transform 属性</h1>
+
+<div class="backtoreference">
+<p><a href="index.htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>旋转 div 元素：</p>
+<pre>
+div
+{
+transform:rotate(7deg);
+-ms-transform:rotate(7deg); 	<span class="code_comment">/* IE 9 */</span>
+-moz-transform:rotate(7deg); 	<span class="code_comment">/* Firefox */</span>
+-webkit-transform:rotate(7deg); <span class="code_comment">/* Safari 和 Chrome */</span>
+-o-transform:rotate(7deg); 	<span class="code_comment">/* Opera */</span>
+}
+</pre>
+
+<p><a target="_blank" href="../tiy/t.asp-f=css3_transform.htm" >亲自试一试</a></p>
+<p>页面底部有更多实例。</p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+
+<p>目前没有浏览器支持 transform 属性。</p>
+<p>Internet Explorer 支持 -ms-transform 属性，但仅限于 2D 转换。</p>
+<p>Firefox 支持 -moz-transform 属性，但仅限于 2D 转换。</p>
+<p>Opera 支持 -o-transform 属性，但仅限于 2D 转换。</p>
+<p>Safari 和 Chrome 支持 -webkit-transform 属性，且同时适用于 2D 和 3D 转换。</p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>transform 属性向元素应用 2D 或 3D 转换。该属性允许我们对元素进行旋转、缩放、移动或倾斜。</p>
+<p>为了更好地理解 transform 属性，请查看这个<a target="_blank" href="javascript:if(confirm('/chrX/nofile/123example/css3/demo_css3_transform.html  \n\n'))window.location='/chrX/nofile/123example/css3/demo_css3_transform.html'" >演示</a>。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">none</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS3</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.transform=&quot;rotate(7deg)&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>transform: none|<i>transform-functions</i>;</pre>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+<th style="width:8%;">测试</th>
+</tr>
+
+<tr>
+<td>none</td>
+<td>定义不进行转换。</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_transform_rotate&p=22  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_transform_rotate&p=22'" >测试</a></td>
+</tr>
+
+<tr>
+<td>matrix(<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>)</td>
+<td>定义 2D 转换，使用六个值的矩阵。</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_transform_matrix  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_transform_matrix'" >测试</a></td>
+</tr>
+
+<tr>
+<td>matrix3d(<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>)</td>
+<td>定义 3D 转换，使用 16 个值的 4x4 矩阵。</td>
+<td></td>
+</tr>
+
+<tr>
+<td>translate(<i>x</i>,<i>y</i>)</td>
+<td>定义 2D 转换。</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_transform_translate  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_transform_translate'" >测试</a></td>
+</tr>
+
+<tr>
+<td>translate3d(<i>x</i>,<i>y</i>,<i>z</i>)</td>
+<td>定义 3D 转换。</td>
+<td></td>
+</tr>
+
+<tr>
+<td>translateX(<i>x</i>)</td>
+<td>定义转换，只是用 X 轴的值。</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_transform_translatex  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_transform_translatex'" >测试</a></td>
+</tr>
+
+<tr>
+<td>translateY(<i>y</i>)</td>
+<td>定义转换，只是用 Y 轴的值。</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_transform_translatey  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_transform_translatey'" >测试</a></td>
+</tr>
+
+<tr>
+<td>translateZ(<i>z</i>)</td>
+<td>定义 3D 转换，只是用 Z 轴的值。</td>
+<td></td>
+</tr>
+
+<tr>
+<td>scale(<i>x</i>,<i>y</i>)</td>
+<td>定义 2D 缩放转换。</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_transform_scale  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_transform_scale'" >测试</a></td>
+</tr>
+
+<tr>
+<td>scale3d(<i>x</i>,<i>y</i>,<i>z</i>)</td>
+<td>定义 3D 缩放转换。</td>
+<td></td>
+</tr>
+
+<tr>
+<td>scaleX(<i>x</i>)</td>
+<td>通过设置 X 轴的值来定义缩放转换。</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_transform_scalex  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_transform_scalex'" >测试</a></td>
+</tr>
+
+<tr>
+<td>scaleY(<i>y</i>)</td>
+<td>通过设置 Y 轴的值来定义缩放转换。</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_transform_scaley  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_transform_scaley'" >测试</a></td>
+</tr>
+
+<tr>
+<td>scaleZ(<i>z</i>)</td>
+<td>通过设置 Z 轴的值来定义 3D 缩放转换。</td>
+<td></td>
+</tr>
+
+<tr>
+<td>rotate(<i>angle</i>)</td>
+<td>定义 2D 旋转，在参数中规定角度。</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_transform_rotate  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_transform_rotate'" >测试</a></td>
+</tr>
+
+<tr>
+<td>rotate3d(<i>x</i>,<i>y</i>,<i>z</i>,<i>angle</i>)</td>
+<td>定义 3D 旋转。</td>
+<td></td>
+</tr>
+
+<tr>
+<td>rotateX(<i>angle</i>)</td>
+<td>定义沿着 X 轴的 3D 旋转。</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_transform_rotatex  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_transform_rotatex'" >测试</a></td>
+</tr>
+
+<tr>
+<td>rotateY(<i>angle</i>)</td>
+<td>定义沿着 Y 轴的 3D 旋转。</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_transform_rotatey  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_transform_rotatey'" >测试</a></td>
+</tr>
+
+<tr>
+<td>rotateZ(<i>angle</i>)</td>
+<td>定义沿着 Z 轴的 3D 旋转。</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_transform_rotatez  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_transform_rotatez'" >测试</a></td>
+</tr>
+
+<tr>
+<td>skew(<i>x-angle</i>,<i>y-angle</i>)</td>
+<td>定义沿着 X 和 Y 轴的 2D 倾斜转换。</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_transform_skew  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_transform_skew'" >测试</a></td>
+</tr>
+
+<tr>
+<td>skewX(<i>angle</i>)</td>
+<td>定义沿着 X 轴的 2D 倾斜转换。</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_transform_skewx  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_transform_skewx'" >测试</a></td>
+</tr>
+
+<tr>
+<td>skewY(<i>angle</i>)</td>
+<td>定义沿着 Y 轴的 2D 倾斜转换。</td>
+<td><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/c.asp?f=css_transform_skewy  \n\n'))window.location='/chrX/nofile/123tiy/c.asp?f=css_transform_skewy'" >测试</a></td>
+</tr>
+
+<tr>
+<td>perspective(<i>n</i>)</td>
+<td>为 3D 转换元素定义透视视图。</td>
+<td>测试</td>
+</tr>
+</table>
+</div>
+
+<div class="example">
+<h2>亲自试一试 - 实例</h2>
+
+<dl>
+<dt><a target="_blank" href="javascript:if(confirm('/chrX/nofile/123tiy/t.asp?f=css3_image_gallery  \n\n'))window.location='/chrX/nofile/123tiy/t.asp?f=css3_image_gallery'" >扔到桌子上面的图片</a></dt>
+<dd>本例演示如何创建“宝丽来”图片，并旋转图片。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>CSS3 教程：<a href="../css3/css3_2dtransform.htm" title="CSS3 2D 转换">CSS3 2D 转换</a></p>
+<p>CSS3 教程：<a href="../css3/css3_3dtransform.htm" title="CSS3 3D 转换">CSS3 3D 转换</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href="index.htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+<!-- maincontent end -->
+
+</div>
+<!-- wrapper end -->
+
+<script src="../chrX.js"></script>
+
+

@@ -1,0 +1,92 @@
+
+<link rel="stylesheet" type="text/css" href="../c3.css"  />
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SVG &lt;rect&gt;</h1>
+
+
+<p>&lt;rect&gt; 标签可用来创建矩形，以及矩形的变种。</p>
+<p>要理解它的工作原理，请把这些代码拷贝到记事本，然后保存为 &quot;rect1.svg&quot; 文件。把此文件放入web目录中：</p>
+<pre>&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;
+&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot;
+&quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;
+
+&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; version=&quot;1.1&quot;
+xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+
+&lt;rect width=&quot;300&quot; height=&quot;100&quot;
+style=&quot;fill:rgb(0,0,255);stroke-width:1;
+stroke:rgb(0,0,0)&quot;/&gt;
+
+&lt;/svg&gt;</pre>
+
+<h3>代码解释：</h3>
+<ul>
+<li>rect 元素的 width 和 height 属性可定义矩形的高度和宽度</li>
+<li>style 属性用来定义 CSS 属性</li>
+<li>CSS 的 fill 属性定义矩形的填充颜色（rgb 值、颜色名或者十六进制值）</li>
+<li>CSS 的 stroke-width 属性定义矩形边框的宽度</li>
+<li>CSS 的 stroke 属性定义矩形边框的颜色</li>
+</ul>
+<p><a href="rect1.svg" >查看此例</a></p>
+
+<p>让我们看一下另一个包含新属性的例子：</p>
+<pre>&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;
+&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot;
+&quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;
+
+&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; version=&quot;1.1&quot;
+xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+
+&lt;rect x=&quot;20&quot; y=&quot;20&quot; width=&quot;250&quot; height=&quot;250&quot;
+style=&quot;fill:blue;stroke:pink;stroke-width:5;
+fill-opacity:0.1;stroke-opacity:0.9&quot;/&gt;
+
+&lt;/svg&gt;</pre>
+<h3>例子解释：</h3>
+<ul>
+<li>x 属性定义矩形的左侧位置（例如，x=&quot;0&quot; 定义矩形到浏览器窗口左侧的距离是 0px）</li>
+<li>y 属性定义矩形的顶端位置（例如，y=&quot;0&quot; 定义矩形到浏览器窗口顶端的距离是 0px）</li>
+<li>CSS 的 fill-opacity 属性定义填充颜色透明度（合法的范围是：0 - 1）</li>
+<li>CSS 的 stroke-opacity 属性定义笔触颜色的透明度（合法的范围是：0 - 1）</li>
+</ul>
+<p><a href="rect2.svg" >查看例子</a></p>
+
+<p>为整个元素定义透明度：</p>
+<pre>&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;
+&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot;
+&quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;
+
+&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; version=&quot;1.1&quot;
+xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+
+&lt;rect x=&quot;20&quot; y=&quot;20&quot; width=&quot;250&quot; height=&quot;250&quot;
+style=&quot;fill:blue;stroke:pink;stroke-width:5;
+opacity:0.9&quot;/&gt;
+
+&lt;/svg&gt;</pre>
+<h3>代码解释：</h3>
+<p>CSS 的 opacity 属性定义整个元素的透明值（合法的范围是：0 - 1）</p>
+<p><a href="rect3.svg" >查看例子</a></p>
+
+<p>最后的例子，创建带有圆角的矩形：</p>
+<pre>&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;
+&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot;
+&quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;
+
+&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; version=&quot;1.1&quot;
+xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+
+&lt;rect x=&quot;20&quot; y=&quot;20&quot; rx=&quot;20&quot; ry=&quot;20&quot; width=&quot;250&quot;
+height=&quot;100&quot; style=&quot;fill:red;stroke:black;
+stroke-width:5;opacity:0.5&quot;/&gt;
+
+&lt;/svg&gt;</pre>
+<h3>代码解释：</h3>
+<p>rx 和 ry 属性可使矩形产生圆角。</p>
+<p><a href="rect4.svg" >查看例子</a></p>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

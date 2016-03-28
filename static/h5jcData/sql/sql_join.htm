@@ -1,0 +1,201 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL JOIN</h1>
+
+<div>
+<p><strong>SQL join 用于根据两个或多个表中的列之间的关系，从这些表中查询数据。</strong></p>
+</div>
+
+<div>
+<h2>Join 和 Key</h2>
+
+<p>有时为了得到完整的结果，我们需要从两个或更多的表中获取结果。我们就需要执行 join。</p>
+
+<p>数据库中的表可通过键将彼此联系起来。主键（Primary Key）是一个列，在这个列中的每一行的值都是唯一的。在表中，每个主键的值都是唯一的。这样做的目的是在不重复每个表中的所有数据的情况下，把表间的数据交叉捆绑在一起。</p>
+
+<p>请看 &quot;Persons&quot; 表：</p>
+
+<table class="dataintable">
+  <tr>
+    <th style="color:blue;">Id_P</th>
+	<th>LastName</th>
+	<th>FirstName</th>
+	<th>Address</th>
+	<th>City</th>
+  </tr>
+  <tr>
+	<td>1</td>
+	<td>Adams</td>
+	<td>John</td>
+	<td>Oxford Street</td>
+	<td>London</td>
+  </tr>
+  <tr>
+	<td>2</td>
+	<td>Bush</td>
+	<td>George</td>
+	<td>Fifth Avenue</td>
+	<td>New York</td>
+  </tr>
+  <tr>
+	<td>3</td>
+	<td>Carter</td>
+	<td>Thomas</td>
+	<td>Changan Street</td>
+	<td>Beijing</td>
+  </tr>
+</table>
+
+<p>请注意，&quot;Id_P&quot; 列是 Persons 表中的的主键。这意味着没有两行能够拥有相同的 Id_P。即使两个人的姓名完全相同，Id_P 也可以区分他们。</p>
+
+<p>接下来请看 &quot;Orders&quot; 表：</p>
+
+<table class="dataintable">
+  <tr>
+    <th style="color:blue;">Id_O</th>
+    <th>OrderNo</th>
+    <th>Id_P</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>77895</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>44678</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>22456</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>24562</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>34764</td>
+    <td>65</td>
+  </tr>
+</table>
+
+<p>请注意，&quot;Id_O&quot; 列是 Orders 表中的的主键，同时，&quot;Orders&quot; 表中的 &quot;Id_P&quot; 列用于引用 &quot;Persons&quot; 表中的人，而无需使用他们的确切姓名。</p>
+
+<p>请留意，&quot;Id_P&quot; 列把上面的两个表联系了起来。</p>
+</div>
+
+<div>
+<h2>引用两个表</h2>
+
+<p>我们可以通过引用两个表的方式，从两个表中获取数据：</p>
+
+<p>谁订购了产品，并且他们订购了什么产品？</p>
+
+<pre>
+SELECT Persons.LastName, Persons.FirstName, Orders.OrderNo
+FROM Persons, Orders
+WHERE Persons.Id_P = Orders.Id_P 
+</pre>
+
+<p>结果集：</p>
+
+<table class="dataintable">
+  <tr>
+    <th>LastName</th>
+    <th>FirstName</th>
+    <th>OrderNo</th>
+  </tr>
+  <tr>
+    <td>Adams</td>
+    <td>John</td>
+    <td>22456</td>
+  </tr>
+  <tr>
+    <td>Adams</td>
+    <td>John</td>
+    <td>24562</td>
+  </tr>
+  <tr>
+    <td>Carter</td>
+    <td>Thomas</td>
+    <td>77895</td>
+  </tr>
+  <tr>
+    <td>Carter</td>
+    <td>Thomas</td>
+    <td>44678</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>SQL JOIN - 使用 Join</h2>
+
+<p>除了上面的方法，我们也可以使用关键词 JOIN 来从两个表中获取数据。</p>
+
+<p>如果我们希望列出所有人的定购，可以使用下面的 SELECT 语句：</p>
+
+<pre>
+SELECT Persons.LastName, Persons.FirstName, Orders.OrderNo
+FROM Persons
+<code>INNER JOIN Orders</code>
+ON Persons.Id_P = Orders.Id_P
+ORDER BY Persons.LastName
+</pre>
+
+<p>结果集：</p>
+
+<table class="dataintable">
+  <tr>
+    <th>LastName</th>
+    <th>FirstName</th>
+    <th>OrderNo</th>
+  </tr>
+  <tr>
+    <td>Adams</td>
+    <td>John</td>
+    <td>22456</td>
+  </tr>
+  <tr>
+    <td>Adams</td>
+    <td>John</td>
+    <td>24562</td>
+  </tr>
+  <tr>
+    <td>Carter</td>
+    <td>Thomas</td>
+    <td>77895</td>
+  </tr>
+  <tr>
+    <td>Carter</td>
+    <td>Thomas</td>
+    <td>44678</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>不同的 SQL JOIN</h2>
+
+<p>除了我们在上面的例子中使用的 INNER JOIN（内连接），我们还可以使用其他几种连接。</p>
+
+<p>下面列出了您可以使用的 JOIN 类型，以及它们之间的差异。</p>
+
+<ul>
+<li>JOIN: 如果表中有至少一个匹配，则返回行</li>
+<li>LEFT JOIN: 即使右表中没有匹配，也从左表返回所有的行</li>
+<li>RIGHT JOIN: 即使左表中没有匹配，也从右表返回所有的行</li>
+<li>FULL JOIN: 只要其中一个表中存在匹配，就返回行</li>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

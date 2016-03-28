@@ -1,0 +1,66 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript toExponential() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_number.htm"  title="JavaScript Number 对象">JavaScript Number 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>toExponential() 方法可把对象的值转换成指数计数法。</p>
+
+<h3>语法</h3>
+<pre>NumberObject.toExponential(num)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th class="no_wrap">参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>num</td>
+    <td>必需。规定指数计数法中的小数位数，是 0 ~ 20 之间的值，包括 0 和 20，有些实现可以支持更大的数值范围。如果省略了该参数，将使用尽可能多的数字。</td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+<p>返回 NumberObject 的字符串表示，采用指数计数法，即小数点之前有一位数字，小数点之后有 num 位数字。该数字的小数部分将被舍入，必要时用 0 补足，以便它达到指定的长度。</p>
+
+<h3>抛出</h3>
+<p>当 num 太小或太大时抛出异常 RangeError。0 ~ 20 之间的值不会引发该异常。有些实现支持更大范围或更小范围内的值。</p>
+<p>当调用该方法的对象不是 Number 时抛出 TypeError 异常。</p>
+</div>
+	
+<div>
+<h2>实例</h2>
+<p>在本例中，我们将把一个数字转换为指数计数法：</p>
+<pre>Show 10,000 as an exponential notation:
+&lt;script type=&quot;text/javascript&quot;&gt;
+var num = new Number(10000);
+document.write (num.toExponential(1))
+&lt;/script&gt;</pre>
+<p>输出：</p>
+<pre>Show 10,000 as an exponential notation:
+1.0e+4</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+<dl>
+<dt><a href="javascript:tiy.run('jseg_toexponential')" >toExponential()</a></dt>
+<dd>如何使用 toExponential() 来把数字转换为指数计数法。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_number.htm"  title="JavaScript Number 对象">JavaScript Number 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

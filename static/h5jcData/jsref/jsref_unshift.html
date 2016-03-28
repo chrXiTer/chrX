@@ -1,0 +1,88 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript unshift() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_array.htm"  title="JavaScript Array 对象">JavaScript Array 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>unshift() 方法可向数组的开头添加一个或更多元素，并返回新的长度。</p>
+
+<h3>语法</h3>
+<pre>arrayObject.unshift(newelement1,newelement2,....,newelementX)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>newelement1</td>
+    <td>必需。向数组添加的第一个元素。</td>
+  </tr>
+	<tr>
+    <td>newelement2</td>
+    <td>可选。向数组添加的第二个元素。</td>
+  </tr>
+	<tr>
+    <td>newelementX</td>
+    <td>可选。可添加若干个元素。</td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+<p>arrayObject 的新长度。</p>
+
+<h3>说明</h3>
+<p>unshift() 方法将把它的参数插入 arrayObject 的头部，并将已经存在的元素顺次地移到较高的下标处，以便留出空间。该方法的第一个参数将成为数组的新元素 0，如果还有第二个参数，它将成为新的元素 1，以此类推。</p>
+
+<p>请注意，unshift() 方法不创建新的创建，而是直接修改原有的数组。</p>
+</div>
+
+<div>
+<h2>提示和注释</h2>
+<p class="note"><span>注释：</span>该方法会改变数组的长度。</p>
+<p class="note"><span>注释：</span>unshift() 方法无法在 Internet Explorer 中正确地工作！</p>
+<p class="tip"><span>提示：</span>要把一个或多个元素添加到数组的尾部，请使用 push() 方法。</p>
+</div>
+	
+<div>
+<h2>实例</h2>
+<p>在本例中，我们将创建一个数组，并把一个元素添加到数组的开头，并返回数组的新长度：</p>
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+
+var arr = new Array()
+arr[0] = &quot;George&quot;
+arr[1] = &quot;John&quot;
+arr[2] = &quot;Thomas&quot;
+
+document.write(arr + &quot;&lt;br /&gt;&quot;)
+document.write(<code>arr.unshift(&quot;William&quot;)</code> + &quot;&lt;br /&gt;&quot;)
+document.write(arr)
+
+&lt;/script&gt;</pre>
+<p>输出：</p>
+<pre>George,John,Thomas<br />4<br />William,George,John,Thomas</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+<dl>
+<dt><a href="javascript:tiy.run('jseg_unshift')" >unshift()</a></dt>
+<dd>如何使用 unshift() 把一个元素添加到数组的开头，并返回数组的新长度。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_array.htm"  title="JavaScript Array 对象">JavaScript Array 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

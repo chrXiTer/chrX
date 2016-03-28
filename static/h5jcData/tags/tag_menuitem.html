@@ -1,0 +1,134 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;menuitem&gt; 标签</h1>
+
+<div>
+<h2>实例</h2>
+
+<p>包含不同 &lt;menuitem&gt; 元素的上下文菜单：</p>
+
+<pre>
+&lt;menu type=&quot;context&quot; id=&quot;mymenu&quot;&gt;
+  &lt;menuitem label=&quot;Refresh&quot; onclick=&quot;window.location.reload();&quot; icon=&quot;ico_reload.png&quot;&gt;
+  &lt;/menuitem&gt;
+  &lt;menu label=&quot;Share on...&quot;&gt;
+    &lt;menuitem label=&quot;Twitter&quot; icon=&quot;ico_twitter.png&quot;
+    onclick=&quot;window.open('//twitter.com/intent/tweet?text='+window.location.href);&quot;&gt;
+    &lt;/menuitem&gt;
+    &lt;menuitem label=&quot;Facebook&quot; icon=&quot;ico_facebook.png&quot;
+    onclick=&quot;window.open('//facebook.com/sharer/sharer.php?u='+window.location.href);&quot;&gt;
+    &lt;/menuitem&gt;
+  &lt;/menu&gt;
+  &lt;menuitem label=&quot;Email This Page&quot;
+  onclick=&quot;window.location='mailto:?body='+window.location.href;&quot;&gt;&lt;/menuitem&gt;
+&lt;/menu&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_menuitem')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>&lt;menuitem&gt; 标签定义用户可以从弹出菜单调用的命令/菜单项目。</p>
+</div>
+
+<div>
+<h2>HTML 4.01 与 HTML 5 之间的差异</h2>
+
+<p>&lt;menuitem&gt; 标签是 HTML5 中的新标签。</p>
+</div>
+
+<div>
+<h2>属性</h2>
+
+<p class="html5_new_note"><span>new</span> : HTML5 中的新属性。</p>
+
+<table class="dataintable">
+<tr>
+<th style="width:20%;">属性</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td class="html5_new">checked</td>
+<td>checked</td>
+<td><p>规定在页面加载后选中命令/菜单项目。</p><p>仅适用于 type=&quot;radio&quot; 或 type=&quot;checkbox&quot;。</p></td>
+</tr>
+
+<tr>
+<td class="html5_new">default</td>
+<td>default</td>
+<td>把命令/菜单项设置为默认命令。</td>
+</tr>
+
+<tr>
+<td class="html5_new">disabled</td>
+<td>disabled</td>
+<td>规定命令/菜单项应该被禁用。</td>
+</tr>
+
+<tr>
+<td class="html5_new">icon</td>
+<td>URL</td>
+<td>规定命令/菜单项的图标。</td>
+</tr>
+
+<tr>
+<td class="html5_new">open</td>
+<td>open</td>
+<td>定义 details 是否可见。</td>
+</tr>
+
+<tr>
+<td class="html5_new">label</td>
+<td><i>text</i></td>
+<td>必需。规定命令/菜单项的名称，以向用户显示。</td>
+</tr>
+
+<tr>
+<td class="html5_new">radiogroup</td>
+<td><i>groupname</i></td>
+<td><p>规定命令组的名称，命令组会在命令/菜单项本身被切换时进行切换。</p><p>仅适用于 type=&quot;radio&quot;。</p></td>
+</tr>
+
+<tr>
+<td class="html5_new">type</td>
+<td>
+    <ul>
+    <li>checkbox</li>
+    <li>command</li>
+    <li>radio</li>
+    </ul>
+</td>
+<td>规定命令/菜单项的类型。默认是 &quot;command&quot;。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>全局属性</h2>
+
+<p>&lt;menuitem&gt; 标签支持 <a href="html_ref_standardattributes.htm" >HTML 中的全局属性</a>。</p>
+</div>
+
+<div>
+<h2>事件属性</h2>
+
+<p>&lt;menuitem&gt; 标签支持 <a href="html_ref_eventattributes.htm" >HTML 中的事件属性</a>。</p>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>HTML DOM 参考手册：<a href="../jsref/dom_obj_menuitem.htm"  title="HTML DOM MenuItem 对象">MenuItem 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

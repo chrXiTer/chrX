@@ -1,0 +1,62 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 链接</h1>
+<p>超链接（简称链接）是HTML的灵魂之一，HTML 使用超链接指向网络上的另一个文档，点击链接就可以打开所指向的网页。</strong></p>
+<p>超链接可以是一个字，一个词，或者一组词，也可以是一幅图像，可以点击这些内容来跳转到新的文档或者当前文档中的某个部分。</p>
+<p>当把鼠标指针移动到网页中的某个链接上时，箭头会变为一只小手。</p>
+<p>通过使用 &lt;a&gt; 标签在 HTML 中创建链接。有两种使用 &lt;a&gt; 标签的方式：</p>
+
+<ol>
+<li>通过使用 href 属性 - 创建指向另一个文档的链接</li>
+<li>通过使用 name 属性 - 创建文档内的书签</li>
+</ol>
+
+<p class="note"><span>延伸阅读：</span><a href="../tags/tag_term_hypertext.htm" >什么是超文本？</a></p>
+
+<h2>HTML 链接语法</h2>
+<p>链接的 HTML 代码很简单。它类似这样：</p>
+<pre>&lt;a href=&quot;url&quot;&gt;Link text&lt;/a&gt;</pre>
+<p>href 属性规定链接的目标。</p>
+<p>开始标签和结束标签之间的文字作为超级链接显示的内容。</p>
+<pre>&lt;a <code>href=&quot;/chrX/nofile/123&quot;</code>&gt;Visit a page&lt;/a&gt;</pre>
+<p>上面这行代码显示为：<a href="/chrX/nofile/123" vvll="my" >Visit a page</a></p>
+<p>点击这个超链接会把用户带到 h5jc 的首页。</p>
+<p class="tip"><span>提示：</span>&quot;链接文本&quot; 不必一定是文本。图片或其他 HTML 元素都可以成为链接的显示内容。</p>
+
+<h2>HTML 链接 - target 属性</h2>
+<p>通过超链接打开另一个文档，可能是期望在当前窗口打开新文档并覆盖旧的文档，也可能是希望在新的窗口打开文档，使用 target 属性，可以达到这个目的。target 属性定义被链接文档在何处显示。</p>
+<p>下面的这行链接会在新窗口打开文档：</p>
+<pre>&lt;a href=&quot;/chrX/nofile/123&quot; <code>target=&quot;_blank&quot;</code>&gt;Visit a page!&lt;/a&gt;</pre>
+<p class="tiy"><a href="javascript:tiy.run('html_link_target')" >试一试</a></p>
+
+<h2>HTML 链接 - name 属性</h2>
+<p>name 属性规定锚（anchor）的名称。可以使用 name 属性创建 HTML 页面中的书签。书签不会以任何特殊方式显示，它对读者是不可见的。</p>
+<p>当使用命名锚（named anchors）时，我们可以创建直接跳至该命名锚（比如页面中某个小节）的链接，这样使用者就无需不停地滚动页面来寻找他们需要的信息了。</p>
+
+<h3>命名锚的语法：</h3>
+<pre>&lt;a name=&quot;<i>label</i>&quot;&gt;锚（显示在页面上的文本）&lt;/a&gt;</pre>
+<p class="tip"><span>提示：</span>您可以使用 id 属性来替代 name 属性，命名锚同样有效。</p>
+
+<p>首先，我们在 HTML 文档中对锚进行命名（创建一个书签）：</p>
+<pre>&lt;a <code>name=&quot;tips&quot;</code>&gt;基本的注意事项 - 有用的提示&lt;/a&gt;</pre>
+<p>然后，我们在同一个文档中创建指向该锚的链接：</p>
+<pre>&lt;a <span class="marked">href=&quot;#tips&quot;</span>&gt;有用的提示&lt;/a&gt;</pre>
+<p>您也可以在其他页面中创建指向该锚的链接：</p>
+<pre>&lt;a <span class="marked">href=&quot;/chrX/nofile/123html/html_links.asp#tips</span>&quot;&gt;有用的提示&lt;/a&gt;</pre>
+<p>在上面的代码中，我们将 # 符号和锚名称添加到 URL 的末端，就可以直接链接到 tips 这个命名锚了。</p>
+<p>具体效果：<a href="#tips">有用的提示</a> </p>
+
+<h2><a id="tips">基本的注意事项 - 有用的提示：</a></h2>
+<p class="tip"><span>提示：</span>命名锚经常用于在大型文档开始位置上创建目录。可以为每个章节赋予一个命名锚，然后把链接到这些锚的链接放到文档的上部。如果您经常访问百度百科，您会发现其中几乎每个词条都采用这样的导航方式。</p>
+<p class="tip"><span>提示：</span>假如浏览器找不到已定义的命名锚，那么就会定位到文档的顶端。不会有错误发生。</p>
+
+<h2>延伸阅读</h2>
+<p><a href="../tags/tag_term_hypertext.htm" >什么是超文本？</a></p>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

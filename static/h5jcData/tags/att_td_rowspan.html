@@ -1,0 +1,71 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;td&gt; 标签的 rowspan 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_td.htm" >HTML &lt;td&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>表格单元横跨两行的表格：</p>
+
+<pre>
+&lt;table border=&quot;1&quot;&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Month&lt;/th&gt;
+    &lt;th&gt;Savings&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;January&lt;/td&gt;
+    &lt;td&gt;$100.00&lt;/td&gt;
+    &lt;td <code>rowspan=&quot;2&quot;</code>&gt;$50&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;February&lt;/td&gt;
+    &lt;td&gt;$10.00&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_td_rowspan')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>rowspan 属性规定单元格可横跨的行数。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;td rowspan=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td><i>number</i></td>
+    <td>
+		<p>设置单元格可横跨的行数。</p>
+		<p class="note"><span>注释：</span>rowspan=&quot;0&quot; 指示浏览器横跨到表格部分的最后一行（thead、tbody 或者 tfoot）。</p>
+	</td>
+  </tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_td.htm" >HTML &lt;td&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,75 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS :focus 伪类</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>:focus 伪类在元素获得焦点时向元素添加特殊的样式。</p>
+<p class="note"><span>注释：</span>IE 浏览器不支持此属性。</p>
+<h3>说明</h3>
+<p>这个伪类应用于有焦点的元素。例如 HTML 中一个有文本输入焦点的输入框，其中出现了文本输入光标；也就是说，在用户开始键入时，文本会输入到这个输入框。其他元素（如超链接）也可以有焦点，不过 CSS 没有定义哪些元素可以有焦点。</p>
+<pre>
+a:link {color: #FF0000}     <span>/* 未访问的链接 */</span>
+<code>a:focus {color: #00FF00}</code>  <span>/* 获得焦点的链接 */</span>
+</pre>
+
+<p class="note"><span>注释：</span>伪类的名称对大小写不敏感。</p>
+<p class="note"><span>注释：</span>伪类可与 CSS 类配合使用：</p>
+<pre><code>a.red:visited {color: #FF0000;}</code>
+
+&lt;a <span style="color:#00FF00;">class=&quot;red&quot;</span> href=&quot;css_syntax.asp&quot;&gt;CSS Syntax&lt;/a&gt;</pre>
+
+<p class="note">如果上面这个例子中的链接已被访问过，那么它会显示为红色。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>规定获得焦点的输入字段的颜色：</p>
+<pre>
+input:focus
+  {
+  color:yellow;
+  }
+</pre>
+
+<p><a href="../tiy/t.asp-f=csse_link_focus.htm" >TIY</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有主流浏览器都支持 :focus 伪类。</p>
+<p class="note"><span>注释：</span>如果已规定 !DOCTYPE，那么 Internet Explorer 8 （以及更高版本）支持 :focus 伪类。</p>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="../tiy/t.asp-f=csse_link_focus.htm" >超链接：:focus 的使用</a></dt>
+<dd>本例演示如何使用 :focus 伪类。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+<p>CSS 教程：<a href="css_pseudo_classes.htm" title="CSS 伪类 (Pseudo-classes)">CSS 伪类</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

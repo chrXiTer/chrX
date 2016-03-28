@@ -1,0 +1,83 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS 后代选择器</h1> 
+
+<div id="intro">
+<p><strong>后代选择器（descendant selector）又称为包含选择器。</strong></p>
+<p><strong>后代选择器可以选择作为某元素后代的元素。</strong></p>
+</div>
+
+<div>
+<h2>根据上下文选择元素</h2>
+
+<p>我们可以定义后代选择器来创建一些规则，使这些规则在某些文档结构中起作用，而在另外一些结构中不起作用。</p>
+<p>举例来说，如果您希望只对 h1 元素中的 em 元素应用样式，可以这样写：</p>
+<pre>h1 em {color:red;}</pre>
+
+<p>上面这个规则会把作为 h1 元素后代的 em 元素的文本变为 红色。其他 em 文本（如段落或块引用中的 em）则不会被这个规则选中：</p>
+<pre>
+&lt;h1&gt;This is a &lt;em&gt;important&lt;/em&gt; heading&lt;/h1&gt;
+&lt;p&gt;This is a &lt;em&gt;important&lt;/em&gt; paragraph.&lt;/p&gt;
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_selector_descendant_1')">试一试</a></p>
+</div>
+
+<div>
+<h2>语法解释</h2>
+
+<p>在后代选择器中，包括两个或多个项，各项之间用空格隔开。tag1 tag2可以解释为：tag1 后代中的所有 tag2。</p>
+<p>因此，h1 em 选择器可以解释为 “所有 h1 元素后代中的所有 em 元素”。</p>
+</div>
+
+<div>
+<h2>具体应用</h2>
+
+<p>后代选择器的功能极其强大。有了它，可以使 HTML 中不可能实现的任务成为可能。</p>
+<p>假设有一个文档，其中有一个边栏，还有一个主区。边栏的背景为蓝色，主区的背景为白色，这两个区都包含链接列表。不能把所有链接都设置为蓝色，因为这样一来边栏中的蓝色链接都无法看到。</p>
+<p>解决方法是使用后代选择器。在这种情况下，可以为包含边栏的 div 指定值为 sidebar 的 class 属性，并把主区的 class 属性值设置为 maincontent。然后编写以下样式：</p>
+<pre>
+div.sidebar {background:blue;}
+div.maincontent {background:white;}
+div.sidebar a:link {color:white;}
+div.maincontent a:link {color:blue;}
+</pre>
+
+<p>有关后代选择器有一个易被忽视的方面，即两个元素之间的层次间隔可以是无限的。</p>
+<p>例如，如果写作 ul em，这个语法就会选择从 ul 元素继承的所有 em 元素，而不论 em 的嵌套层次多深。</p>
+<p>因此，ul em 将会选择以下标记中的所有 em 元素：</p>
+<pre>
+&lt;ul&gt;
+  &lt;li&gt;List item 1
+    &lt;ol&gt;
+      &lt;li&gt;List item 1-1&lt;/li&gt;
+      &lt;li&gt;List item 1-2&lt;/li&gt;
+      &lt;li&gt;List item 1-3
+        &lt;ol&gt;
+          &lt;li&gt;List item 1-3-1&lt;/li&gt;
+          &lt;li&gt;List item <span class="marked">&lt;em&gt;1-3-2&lt;/em&gt;</span>&lt;/li&gt;
+          &lt;li&gt;List item 1-3-3&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;List item 1-4&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;List item 2&lt;/li&gt;
+  &lt;li&gt;List item 3&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_selector_descendant')">试一试</a></p>
+</div> 
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+
+

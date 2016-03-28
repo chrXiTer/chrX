@@ -1,0 +1,128 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript getUTCMonth() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+<div>
+
+<h2>定义和用法</h2>
+
+<p>getUTCMonth() 方法可返回一个表示月份的数字（按照世界时 UTC）。</p>
+
+<h3>语法</h3>
+
+<pre>dateObject.getUTCMonth()</pre>
+
+<h3>返回值</h3>
+
+<p>返回 dateObject 用世界时表示时的月份，该值是 0（一月） ~ 11（十二月） 之间中的一个整数。</p>
+
+<p>需要注意的是，Date 对象使用 1 来表示月的第一天，而不是像月份字段那样使用 0 来代表一年的第一个月。</p>
+</div>
+
+<div>
+<h2>提示和注释：</h2>
+
+<p class="note"><span>注释：</span>该方法总是结合一个 Date 对象来使用。</p>
+
+<p class="tip"><span>提示：</span>有关通用协调时间 (UTC) 的更多资料，请参阅<a href="http://baike.baidu.com/view/1187856.htm" vvll="my"  title="协调世界时_百度百科">百度百科</a>。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<h3>例子 1</h3>
+
+<p>在本例中，我们将取得当前月份，然后输出它：</p>
+
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+
+var d=new Date()
+
+document.write(d.getUTCMonth())
+
+&lt;/script&gt;</pre>
+
+<p>输出：</p>
+
+<pre>
+<script type="text/javascript">
+	var d=new Date()
+	document.write(d.getUTCMonth())
+</script>
+</pre>
+
+<h3>例子 2</h3>
+
+<p>现在，我们将创建一个数组，使得我们上面的例子能够输出月份的名称，而不仅仅是一个数字：</p>
+
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+
+var d=new Date()
+
+var month=new Array(12)
+month[0]=&quot;January&quot;
+month[1]=&quot;February&quot;
+month[2]=&quot;March&quot;
+month[3]=&quot;April&quot;
+month[4]=&quot;May&quot;
+month[5]=&quot;June&quot;
+month[6]=&quot;July&quot;
+month[7]=&quot;August&quot;
+month[8]=&quot;September&quot;
+month[9]=&quot;October&quot;
+month[10]=&quot;November&quot;
+month[11]=&quot;December&quot;
+
+document.write(&quot;The month is &quot; + month[d.getUTCMonth()])
+
+&lt;/script&gt;</pre>
+
+<p>输出：</p>
+
+<pre>
+<script type="text/javascript">
+var d=new Date()
+var month=new Array(12)
+month[0]="January"
+month[1]="February"
+month[2]="March"
+month[3]="April"
+month[4]="May"
+month[5]="June"
+month[6]="July"
+month[7]="August"
+month[8]="September"
+month[9]="October"
+month[10]="November"
+month[11]="December"
+document.write("The month is " + month[d.getUTCMonth()])
+</script>
+</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_date_getutcmonth')" >getUTCMonth()</a></dt>
+<dd>使用 getUTCMonth() 和一个数组来输出月份的名称，而不是一个数字。</dd>
+<dt><a href="javascript:tiy.run('jseg_datedate_UTC')" >以不同的格式显示 UTC 日期</a></dt>
+<dd>如何使用 getUTCDate(), getUTCMonth() 以及 getUTCFullYear() 来使用不同的格式显示 UTC 日期。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

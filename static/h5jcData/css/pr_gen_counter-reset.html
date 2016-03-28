@@ -1,0 +1,119 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS counter-reset 属性</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>counter-reset 属性设置某个选择器出现次数的计数器的值。默认为 0。</p>
+<p>利用这个属性，计数器可以设置或重置为任何值，可以是正值或负值。如果没有提供 number，则默认为 0。</p>
+<p class="note"><span>注释：</span>如果使用 &quot;display: none&quot;，则无法重置计数器。如果使用 &quot;visibility: hidden&quot;，则可以重置计数器。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">none</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS2</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.counterReset=&quot;subsection&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>对部分和子部分进行编号（比如 &quot;Section 1&quot;、&quot;1.1&quot;、&quot;1.2&quot;）的方法：</p>
+<pre>
+body
+  {
+  <code>counter-reset:section;</code>
+  }
+
+h1
+  {
+  <code>counter-reset:subsection;</code>
+  }
+
+h1:before
+  {
+  content:&quot;Section &quot; counter(section) &quot;. &quot;;
+  counter-increment:section;
+  }
+
+h2:before
+  {
+  counter-increment:subsection;
+  content:counter(section) &quot;.&quot; counter(subsection) &quot; &quot;;
+  }
+</pre>
+
+<p><a href="../tiy/t.asp-f=csse_gen_content.htm" >TIY</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有浏览器都支持 counter-reset 属性。</p>
+<p class="note"><span>注释：</span>如果已规定 !DOCTYPE，那么 Internet Explorer 8 （以及更高版本）支持 counter-reset 属性。</p>
+</div>
+
+<div>
+<h2>可能的值</h2>
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>none</td>
+<td>默认。不能对选择器的计数器进行重置。</td>
+</tr>
+
+<tr>
+<td><i>id number</i></td>
+<td>
+<p><i>id</i> 定义重置计数器的选择器、id 或 class。</p>
+<p><i>number</i> 可设置此选择器出现次数的计数器的值。可以是正数、零或负数。</p></td>
+</tr>
+
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 counter-reset 属性的值。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>CSS 参考手册：<a href="pr_pseudo_before.htm" title="CSS :before 伪元素">CSS :before 伪元素</a></p>
+<p>CSS 参考手册：<a href="pr_pseudo_after.htm" title="CSS :after 伪元素">CSS :after 伪元素</a></p>
+<p>CSS 参考手册：<a href="pr_gen_content.htm" title="CSS content 属性">content 属性</a></p>
+<p>CSS 参考手册：<a href="pr_gen_counter-increment.htm" title="CSS counter-increment 属性">counter-increment 属性</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

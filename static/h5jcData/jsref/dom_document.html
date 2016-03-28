@@ -1,0 +1,126 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML DOM document 对象</h1>
+
+<div>
+<p>浏览器每载入一个 HTML 文档都会生成一个 document 对象。通过document 对象从JavaScript脚本中对 HTML 页面中的所有元素进行访问。</p>
+<p class="tip"><span>提示：</span>document 对象是 Window 对象一个属性，可通过 window.document 属性对其进行访问，也可以省略window.前缀，直接使用document访问</p>
+
+<h2>document 对象描述</h2>
+<p>DOM 可用于 XML 和 HTML， DOM 用 Document 提供操作文档的接口接口。HTMLDocument 接口继承和扩展了 Document 接口，定义 HTML 专用的属性和方法。document 对象是HTMLDocument 接口针对具体HTML文档的实例</p>
+<p>很多属性和方法都是 HTMLCollection 对象（实际上是可以用数组或名称索引的只读数组），其中保存了对锚、表单、链接以及其他可脚本元素的引用。</p>
+<p>这些集合属性都源自于 0 级 DOM。它们已经被 <a href="met_doc_getelementsbytagname.htm" >Document.getElementsByTagName()</a> 所取代，但是仍然常常使用，因为他们很方便。</p>
+<p><a href="met_doc_write.htm" >write() 方法</a>值得注意，在文档载入和解析的时候，它允许一个脚本向文档中插入动态生成的内容。</p>
+<p>注意，在 1 级 DOM 中，HTMLDocument 定义了一个名为 <a href="met_doc_getelementbyid.htm" >getElementById()</a> 的非常有用的方法。在 2 级 DOM 中，该方法已经被转移到了 Document 接口，它现在由 HTMLDocument 继承而不是由它定义了。</p>
+
+<h2>document 对象集合</h2>
+<table class="dataintable">
+  <tr>
+    <th style="width:30%">集合</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td><a href="coll_doc_all.htm" >all[]</a></td>
+    <td>提供对文档中所有 HTML 元素的访问。</td>
+  </tr>
+  <tr>
+    <td><a href="coll_doc_anchors.htm" >anchors[]</a></td>
+    <td>返回对文档中所有 Anchor 对象的引用。</td>
+  </tr>
+  <tr>
+    <td>applets</td>
+    <td>返回对文档中所有 Applet 对象的引用。</td>
+  </tr>
+  <tr>
+    <td><a href="coll_doc_forms.htm" >forms[]</a></td>
+    <td>返回对文档中所有 Form 对象引用。</td>
+  </tr>
+  <tr>
+    <td><a href="coll_doc_images.htm" >images[]</a></td>
+    <td>返回对文档中所有 Image 对象引用。</td>
+  </tr>
+  <tr>
+    <td><a href="coll_doc_links.htm" >links[]</a></td>
+    <td>返回对文档中所有 Area 和 Link 对象引用。</td>
+  </tr>
+  </table>
+
+<h2>document 对象属性</h2>
+<table class="dataintable">
+  <tr>
+    <th style="width:30%">属性</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td>body</td>
+    <td><p>提供对 &lt;body&gt; 元素的直接访问。</p><p>对于定义了框架集的文档，该属性引用最外层的 &lt;frameset&gt;。</p></td>
+  </tr>
+  <tr>
+    <td><a href="prop_doc_cookie.htm" >cookie</a></td>
+    <td>设置或返回与当前文档有关的所有 cookie。</td>
+  </tr>
+  <tr>
+    <td><a href="prop_doc_domain.htm" >domain</a></td>
+    <td>返回当前文档的域名。</td>
+  </tr>
+  <tr>
+    <td><a href="prop_doc_lastmodified.htm" >lastModified</a></td>
+    <td>返回文档被最后修改的日期和时间。</td>
+  </tr>
+  <tr>
+    <td><a href="prop_doc_referrer.htm" >referrer</a></td>
+    <td>返回载入当前文档的文档的 URL。</td>
+  </tr>
+  <tr>
+    <td><a href="prop_doc_title.htm" >title</a></td>
+    <td>返回当前文档的标题。</td>
+  </tr>
+  <tr>
+    <td><a href="prop_doc_url.htm" >URL</a></td>
+    <td>返回当前文档的 URL。</td>
+  </tr>
+  </table>
+
+<h2>document 对象方法</h2>
+<table class="dataintable">
+  <tr>
+    <th style="width:30%">方法</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td><a href="met_doc_close.htm" >close()</a></td>
+    <td>关闭用  document.open() 方法打开的输出流，并显示选定的数据。</td>
+  </tr>
+  <tr>
+    <td><a href="met_doc_getelementbyid.htm" >getElementById()</a></td>
+    <td>返回对拥有指定 id 的第一个对象的引用。</td>
+  </tr>
+  <tr>
+    <td><a href="met_doc_getelementsbyname.htm" >getElementsByName()</a></td>
+    <td>返回带有指定名称的对象集合。</td>
+  </tr>
+  <tr>
+    <td class="no_wrap"><a href="met_doc_getelementsbytagname.htm" >getElementsByTagName()</a></td>
+    <td>返回带有指定标签名的对象集合。</td>
+  </tr>
+  <tr>
+    <td><a href="met_doc_open.htm" >open()</a></td>
+    <td>打开一个流，以收集来自任何 document.write() 或 document.writeln() 方法的输出。</td>
+  </tr>
+  <tr>
+    <td><a href="met_doc_write.htm" >write()</a></td>
+    <td>向文档写 HTML 表达式 或 JavaScript 代码。</td>
+  </tr>
+  <tr>
+    <td><a href="met_doc_writeln.htm" >writeln()</a></td>
+    <td>等同于 write() 方法，不同的是在每个表达式之后写一个换行符。</td>
+  </tr>
+  </table>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

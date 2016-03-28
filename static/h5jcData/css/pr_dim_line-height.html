@@ -1,0 +1,121 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS line-height 属性</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>line-height 属性设置行间的距离（行高）。</p>
+<p class="note"><span>注释：</span>不允许使用负值。</p>
+<h3>说明</h3>
+<p>该属性会影响行框的布局。在应用到一个块级元素时，它定义了该元素中基线之间的最小距离而不是最大距离。</p>
+<p>line-height 与 font-size 的计算值之差（在 CSS 中成为“行间距”）分为两半，分别加到一个文本行内容的顶部和底部。可以包含这些内容的最小框就是行框。</p>
+<p>原始数字值指定了一个缩放因子，后代元素会继承这个缩放因子而不是计算值。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">normal</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>yes</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS1</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.lineHeight=&quot;2&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+<p>设置以百分比计的行高：</p>
+<pre>
+p.small {<code>line-height:90%</code>}
+p.big {<code>line-height:200%</code>}
+</pre>
+<p><a href="../tiy/t.asp-f=csse_dim_line-height_percent.htm" >TIY</a> （可以在页面底部查看更多实例）</p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有浏览器都支持 line-height 属性。</p>
+<p class="note"><span>注释：</span>任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 &quot;inherit&quot;。</p>
+</div>
+
+<div>
+<h2>可能的值</h2>
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>normal</td>
+<td>默认。设置合理的行间距。</td>
+</tr>
+
+<tr>
+<td><i>number</i></td>
+<td>设置数字，此数字会与当前的字体尺寸相乘来设置行间距。</td>
+</tr>
+
+<tr>
+<td><i>length</i></td>
+<td>设置固定的行间距。</td>
+</tr>
+
+<tr>
+<td><i>%</i></td>
+<td>基于当前字体尺寸的百分比行间距。</td>
+</tr>
+
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 line-height 属性的值。</td>
+</tr>
+</table>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="../tiy/t.asp-f=csse_dim_line-height_percent.htm" >使用百分比设置行间距</a></dt>
+<dd>本例演示如何使用百分比值来设置段落中的行间距。</dd>
+
+<dt><a href="../tiy/t.asp-f=csse_dim_line-height_pixel.htm" >使用像素值设置行间距</a></dt>
+<dd>本例演示如何使用像素值来设置段落中的行间距。</dd>
+
+<dt><a href="../tiy/t.asp-f=csse_dim_line-height_number.htm" >使用数值来设置行间距</a></dt>
+<dd>本例演示如何使用一个数值来设置段落中的行间距。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>CSS 教程：<a href="css_text.htm" title="CSS 文本">CSS 文本</a></p>
+<p>HTML DOM 参考手册：<a href="../htmldom/prop_style_lineheight.htm" title="HTML DOM lineHeight 属性">lineHeight 属性</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

@@ -1,0 +1,112 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;head&gt; 标签</h1>
+
+<div>
+<h2>实例</h2>
+
+<p>一个简单的 HTML 文档，带有最基本的必需的元素：</p>
+
+<pre>
+&lt;html&gt;
+
+<code>&lt;head&gt;</code>
+  &lt;title&gt;文档的标题&lt;/title&gt;
+<code>&lt;/head&gt;</code>
+
+&lt;body&gt;
+  文档的内容... ...
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_basic')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>&lt;head&gt; 标签用于定义文档的头部，它是所有头部元素的容器。&lt;head&gt; 中的元素可以引用脚本、指示浏览器在哪里找到样式表、提供元信息等等。</p>
+
+<p>文档的头部描述了文档的各种属性和信息，包括文档的标题、在 Web 中的位置以及和其他文档的关系等。绝大多数文档头部包含的数据都不会真正作为内容显示给读者。</p>
+
+<p>下面这些标签可用在 head 部分：<a href="tag_base.htm"  title="HTML &lt;base&gt; 标签">&lt;base&gt;</a>, <a href="tag_link.htm"  title="HTML &lt;link&gt; 标签">&lt;link&gt;</a>, <a href="tag_meta.htm"  title="HTML &lt;meta&gt; 标签">&lt;meta&gt;</a>, <a href="tag_script.htm"  title="HTML &lt;script&gt; 标签">&lt;script&gt;</a>, <a href="tag_style.htm"  title="HTML &lt;style&gt; 标签">&lt;style&gt;</a>, 以及 <a href="tag_title.htm"  title="HTML &lt;title&gt; 标签">&lt;title&gt;</a>。</p>
+
+<p>&lt;title&gt; 定义文档的标题，它是 head 部分中唯一必需的元素。</p>
+</div>
+
+<div>
+<h2>提示和注释</h2>
+
+<p class="tip"><span>提示：</span>应该把 &lt;head&gt; 标签放在文档的开始处，紧跟在 &lt;html&gt; 后面，并处于 &lt;body&gt; 标签或 &lt;frameset&gt; 标签之前。</p>
+
+<p class="tip"><span>提示：</span>请记住始终为文档规定标题！</p>
+</div>
+
+<div>
+<h2>HTML 与 XHTML 之间的差异</h2>
+
+<p>NONE</p>
+</div>
+
+<div>
+<h2>可选的属性</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:20%;">属性</th>
+<th style="width:20%;">值</th>
+<th style="width:60%;">描述</th>
+</tr>
+
+<tr>
+<td>profile</td>
+<td><i>URL</i></td>
+<td>一个由空格分隔的 URL 列表，这些 URL 包含着有关页面的元数据信息。</td>
+</tr>
+</table>
+
+<h3 id="attribute_profile">profile 属性的更多信息</h3>
+
+<p>文档的头部经常会包含一些 &lt;meta&gt; 标签，用来告诉浏览器关于文档的附加信息。在将来，创作者可能会利用预先定义好的标准文档的元数据配置文件（metadata profile），以便更好地描述它们的文档。profile 属性提供了与当前文档相关联的配置文件的 URL。</p>
+
+<p>配置文件的格式以及浏览器使用它们的方式都还没有进行定义，这个属性主要是为将来的开发而保留的占位符。</p>
+</div>
+
+<div>
+<h2>全局属性</h2>
+
+<p>&lt;head&gt; 标签支持 <a href="html_ref_standardattributes.htm" >HTML 中的全局属性</a>。</p>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('html_title')" >文档的标题</a></dt>
+<dd>头元素内部的标题信息不会被显示在浏览器窗口中。</dd>
+<dt><a href="javascript:tiy.run('html_base')" >一个 target，所有的链接</a></dt>
+<dd>本例显示如何使用 base 标签使页面中的所有标签在新窗口中打开。</dd>
+
+<dt><a href="javascript:tiy.run('html_style')" >HTML 中的样式</a></dt>
+<dd>本例演示如何使用添加到 &lt;head&gt; 部分的样式信息对 HTML 进行格式化。</dd>
+<dt><a href="javascript:tiy.run('html_link')" >链接到一个外部样式表</a></dt>
+<dd>本例演示如何通过 &lt;link&gt; 标签链接到一个外部样式表。</dd>
+
+<dt><a href="javascript:tiy.run('html_meta')" >文档描述</a></dt>
+<dd>Meta 元素中的信息可以描述 HTML 文档。</dd>
+<dt><a href="javascript:tiy.run('html_keywords')" >文档关键字</a></dt>
+<dd>Meta 元素中的信息可以描述文档的关键词。</dd>
+<dt><a href="javascript:tiy.run('html_redirect')" >重定向</a></dt>
+<dd>这个例子演示：在网址已经变更的情况下，将用户重定向到另外一个地址。</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,69 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 Audio/Video DOM error 属性</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>获得视频的错误状态：</p>
+
+<pre>
+myVid=document.getElementById(&quot;video1&quot;);
+alert(<code>myVid.error.code</code>);
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_av_prop_error')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>error 属性返回一个 MediaError 对象。</p>
+
+<p>MediaError 对象的 code 属性包含了音频/视频的错误状态。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>audio|video.error.code</pre>
+
+<h3>返回值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">类型</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>数字值</td>
+<td>
+	<p>MediaError 对象的 code 属性返回一个数字值，它表示音频/视频的错误状态：</p>
+	<ul class="listintable">
+	<li>1 = MEDIA_ERR_ABORTED - 取回过程被用户中止</li>
+	<li>2 = MEDIA_ERR_NETWORK - 当下载时发生错误</li>
+	<li>3 = MEDIA_ERR_DECODE - 当解码时发生错误</li>
+	<li>4 = MEDIA_ERR_SRC_NOT_SUPPORTED - 不支持音频/视频</li>
+	</ul>
+</td>
+</tr>
+</table>
+
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

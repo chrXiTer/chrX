@@ -1,0 +1,132 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;a&gt; 标签的 target 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_a.htm" >HTML &lt;a&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>&lt;a&gt; 标签的 target 属性规定在何处打开链接文档。</p>
+
+<p>如果在一个 &lt;a&gt; 标签内包含一个 target 属性，浏览器将会载入和显示用这个标签的 href 属性命名的、名称与这个目标吻合的框架或者窗口中的文档。如果这个指定名称或 id 的框架或者窗口不存在，浏览器将打开一个新的窗口，给这个窗口一个指定的标记，然后将新的文档载入那个窗口。从此以后，超链接文档就可以指向这个新的窗口。</p>
+
+<h3>打开新窗口</h3>
+
+<p>被指向的超链接使得创建高效的浏览工具变得很容易。例如，一个简单的内容文档的列表，可以将文档重定向到一个单独的窗口：</p>
+
+<pre>
+&lt;h3&gt;Table of Contents&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;pref.html&quot; <code>target=&quot;view_window&quot;</code>&gt;Preface&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;chap1.html&quot; <code>target=&quot;view_window&quot;</code>&gt;Chapter 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;chap2.html&quot; <code>target=&quot;view_window&quot;</code>&gt;Chapter 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;chap3.html&quot; <code>target=&quot;view_window&quot;</code>&gt;Chapter 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_a_target_framename')" >亲自试一试</a></p>
+
+<p>当用户第一次选择内容列表中的某个链接时，浏览器将打开一个新的窗口，将它标记为 &quot;view_window&quot;，然后在其中显示希望显示的文档内容。如果用户从这个内容列表中选择另一个链接，且这个 &quot;view_window&quot; 仍处于打开状态，浏览器就会再次将选定的文档载入那个窗口，取代刚才的那些文档。</p>
+
+<p>在整个过程中，这个包含了内容列表的窗口是用户可以访问的。通过单击窗口中的一个连接，可使另一个窗口的内容发生变化。</p>
+
+<h3>在框架中打开窗口</h3>
+
+<p>不用打开一个完整的浏览器窗口，使用 target 更通常的方法是在一个 &lt;frameset&gt; 显示中将超链接内容定向到一个或者多个框架中。可以将这个内容列表放入一个带有两个框架的文档的其中一个框架中，并用这个相邻的框架来显示选定的文档：</p>
+
+<pre>
+&lt;frameset cols=&quot;100,*&quot;&gt;
+  &lt;frame src=&quot;toc.html&quot;&gt;
+  &lt;frame src=&quot;pref.html&quot; <span style="color:#ff0000;">name=&quot;view_frame&quot;</span>&gt;
+&lt;/frameset&gt; 
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_a_target_frameset')" >亲自试一试</a></p>
+
+<p>当浏览器最初显示这两个框架的时候，左边这个框架包含目录，右边这个框架包含前言。</p>
+
+<p>这是 &quot;toc.html&quot; 的源代码：</p>
+
+<pre>
+&lt;h3&gt;Table of Contents&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;pref.html&quot; <code>target=&quot;view_frame&quot;</code>&gt;Preface&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;chap1.html&quot; <code>target=&quot;view_frame&quot;</code>&gt;Chapter 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;chap2.html&quot; <code>target=&quot;view_frame&quot;</code>&gt;Chapter 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;chap3.html&quot; <code>target=&quot;view_frame&quot;</code>&gt;Chapter 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<p>请注意，在文档 &quot;toc.html&quot; 中，每个链接的目标都是 &quot;view_frame&quot;，也就是右边的框架。</p>
+
+<p>当用户从左边框架中的目录中选择一个链接时，浏览器会将这个关联的文档载入并显示在右边这个 &quot;view_frame&quot; 框架中。当其他链接被选中时，右边这个框架中的内容也会发生变化，而左边这个框架始终保持不变。</p>
+</div>
+
+<div>
+<h2>特殊的目标</h2>
+
+<p>有 4 个保留的目标名称用作特殊的文档重定向操作：</p>
+
+<h3>_blank</h3>
+<p>浏览器总在一个新打开、未命名的窗口中载入目标文档。</p>
+
+<h3>_self</h3>
+<p>这个目标的值对所有没有指定目标的 &lt;a&gt; 标签是默认目标，它使得目标文档载入并显示在相同的框架或者窗口中作为源文档。这个目标是多余且不必要的，除非和文档标题 &lt;base&gt; 标签中的 target 属性一起使用。</p>
+
+<h3>_parent</h3>
+<p>这个目标使得文档载入父窗口或者包含来超链接引用的框架的框架集。如果这个引用是在窗口或者在顶级框架中，那么它与目标 _self 等效。</p>
+
+<h3>_top</h3>
+<p>这个目标使得文档载入包含这个超链接的窗口，用 _top 目标将会清除所有被包含的框架并将文档载入整个浏览器窗口。</p>
+
+<p class="tip"><span>提示：</span>这些 target 的所有 4 个值都以下划线开始。任何其他用一个下划线作为开头的窗口或者目标都会被浏览器忽略，因此，不要将下划线作为文档中定义的任何框架 name 或 id 的第一个字符。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;a target=&quot;<i>value&quot;</i>&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>_blank</td>
+    <td>在新窗口中打开被链接文档。</td>
+  </tr>
+  <tr>
+    <td>_self</td>
+    <td>默认。在相同的框架中打开被链接文档。</td>
+  </tr>
+  <tr>
+    <td>_parent</td>
+    <td>在父框架集中打开被链接文档。</td>
+  </tr>
+  <tr>
+    <td>_top</td>
+    <td>在整个窗口中打开被链接文档。</td>
+  </tr>
+  <tr>
+    <td><i>framename</i></td>
+    <td>在指定的框架中打开被链接文档。</td>
+  </tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_a.htm" >HTML &lt;a&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

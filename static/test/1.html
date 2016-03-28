@@ -1,0 +1,23 @@
+<html>
+<body>
+
+<div id="infoShow">qqq</div>
+<script>
+date_1 = Date();
+date_2 = Date(222);
+document.getElementById("infoShow").innerText = "rrr";
+document.getElementById("infoShow").innerText = "date_1 = " + date_1.toString() + "\n"
+                                               +"date_2 = " + date_2.toLocaleString();
+
+error_1 = Error("error_1 123456");
+error_2 = Error();
+
+document.getElementById("infoShow").innerText += (
+    "\nerror_1 = " + error_1.toString() 
+    + "\nerror_2 = " + error_2.toString()
+    +"\nerror_1.message = " + error_1.message.toString()
+    + "\nerror_2.message = " + error_2.message.toString()
+);
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;a&gt; 标签的 name 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_a.htm" >HTML &lt;a&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>通过 name 属性，我们可以制作一个目录列表：</p>
+
+<pre>
+&lt;a href=&quot;#C1&quot;&gt;第一章&lt;/a&gt;
+&lt;a href=&quot;#C2&quot;&gt;第二章&lt;/a&gt;
+&lt;a href=&quot;#C3&quot;&gt;第三章&lt;/a&gt;
+&lt;a href=&quot;#C3&quot;&gt;第四章&lt;/a&gt;
+...
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_a_name')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>name 属性用于指定锚（anchor）的名称。</p>
+
+<p>name 属性可以创建（大型）文档内的书签。</p>
+
+<p>&lt;a&gt; 标签内必须提供 href 或 name 属性。</p>
+
+<p class="note"><span>延伸阅读：</span><a href="#name-vs-id">使用 name 属性还是 id 属性</a></p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;a name=&quot;<i>value&quot;</i>&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+<tr>
+    <th style="width:30%;">值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td><i>anchor_name</i></td>
+    <td>锚的名称。</td>
+  </tr>
+</table>
+</div>
+
+<div id="name-vs-id">
+<h2>延伸阅读：使用 name 属性还是 id 属性？</h2>
+
+<p>在 HTML 4.0 之前的版本中，只有使用 &lt;a&gt; 标签的 name 属性才能创建片段标识符。随着 HTML 4.0 中 id 属性的出现，所有 HTML 或 XHTML 元素都可以是片段标识符。这是因为 id 标识符几乎可以用在所有的标签中。&lt;a&gt; 标签为了能够和以前的版本相兼容而保留了 name 属性，同时也可以使用 id 属性。这些属性可以相互交换使用，可以把 id 属性看作是 name 属性的升级版本。name 和 id 属性都可以与 href 属性结合起来使用，这样一个 &lt;a&gt; 标签就可以同时作为超链接和片段标识符使用。</p>
+
+<p>可以简单地将片段标识符看作是对许多编程语言中普遍使用的 goto 语句标签的 HTML 模拟。&lt;a&gt; 标签中的 name 属性或者 &lt;a&gt; 或其他标签中的 id 属性会在文档中放置一个标识。当标签用于链接到该文档时，就等于告诉浏览器要转到（goto）该标识。</p>
+
+<p>id 或 name 属性的值可以是引号引起来的任何字符串。字符串必须是唯一的标记，不能在同一文档中的其他 name 或 id 属性中重复使用，但是可以在不同的文档中再次使用。</p>
+
+<p>如果使用 id 属性，上面的实例可改写为：</p>
+
+<pre>
+&lt;a id=&quot;#C1&quot;&gt;第一章&lt;/a&gt;
+&lt;a id=&quot;#C2&quot;&gt;第二章&lt;/a&gt;
+&lt;a id=&quot;#C3&quot;&gt;第三章&lt;/a&gt;
+&lt;a id=&quot;#C3&quot;&gt;第四章&lt;/a&gt;
+...
+</pre>
+
+<p>或者直接在标题中设置 id 属性：</p>
+
+<pre>
+&lt;h2 id=&quot;#C1&quot;&gt;第一章&lt;/h2&gt;
+&lt;h2 id=&quot;#C2&quot;&gt;第二章&lt;/h2&gt;
+&lt;h2 id=&quot;#C3&quot;&gt;第三章&lt;/h2&gt;
+&lt;h2 id=&quot;#C3&quot;&gt;第四章&lt;/h2&gt;
+...
+</pre>
+
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_a.htm" >HTML &lt;a&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,206 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;input&gt; 标签的 type 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_input.htm" >HTML &lt;input&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>下面的表单拥有两个输入字段以及一个提交按钮：</p>
+
+<pre>
+&lt;form action=&quot;form_action.asp&quot; method=&quot;get&quot;&gt;
+  &lt;p&gt;First name: &lt;input type=&quot;text&quot; name=&quot;fname&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;Last name: &lt;input type=&quot;text&quot; name=&quot;lname&quot; /&gt;&lt;/p&gt;
+  &lt;input <code>type=&quot;submit&quot;</code> value=&quot;Submit&quot; /&gt;
+&lt;/form&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_input_type_submit')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>type 属性规定 input 元素的类型。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;input type=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>button</td>
+    <td>定义可点击按钮（多数情况下，用于通过 JavaScript 启动脚本）。</td>
+  </tr>
+  <tr>
+    <td>checkbox</td>
+    <td>定义复选框。</td>
+  </tr>
+  <tr>
+    <td>file</td>
+    <td>定义输入字段和 &quot;浏览&quot;按钮，供文件上传。</td>
+  </tr>
+  <tr>
+    <td>hidden</td>
+    <td>定义隐藏的输入字段。</td>
+  </tr>
+  <tr>
+    <td>image</td>
+    <td>定义图像形式的提交按钮。</td>
+  </tr>
+  <tr>
+    <td>password</td>
+    <td>定义密码字段。该字段中的字符被掩码。</td>
+  </tr>
+  <tr>
+    <td>radio</td>
+    <td>定义单选按钮。</td>
+  </tr>
+  <tr>
+    <td>reset</td>
+    <td>定义重置按钮。重置按钮会清除表单中的所有数据。</td>
+  </tr>
+  <tr>
+    <td>submit</td>
+    <td>定义提交按钮。提交按钮会把表单数据发送到服务器。</td>
+  </tr>
+  <tr>
+    <td>text</td>
+    <td>定义单行的输入字段，用户可在其中输入文本。默认宽度为 20 个字符。</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>Text</h2>
+
+<p>&lt;input type=&quot;text&quot; /&gt; 定义用户可输入文本的单行输入字段。</p>
+
+<pre>
+Email: &lt;input type=&quot;text&quot; name=&quot;email&quot; /&gt;
+Pin: &lt;input type=&quot;text&quot; name=&quot;pin&quot; /&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_input_type_text')" >TIY</a></p>
+</div>
+
+<div>
+<h2>Button</h2>
+
+<p>&lt;input type=&quot;button&quot; /&gt; 定义可点击的按钮，但没有任何行为。button 类型常用于在用户点击按钮时启动 JavaScript 程序。</p>
+
+<pre>&lt;input type=&quot;button&quot; value=&quot;Click me&quot; onclick=&quot;msg()&quot; /&gt;</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_input_type_button')" >TIY</a></p>
+</div>
+
+<div>
+<h2>Checkbox</h2>
+
+<p>&lt;input type=&quot;checkbox&quot; /&gt; 定义复选框。复选框允许用户在一定数目的选择中选取一个或多个选项。</p>
+
+<pre>
+&lt;input type=&quot;checkbox&quot; name=&quot;vehicle&quot; value=&quot;Bike&quot; /&gt; I have a bike
+&lt;input type=&quot;checkbox&quot; name=&quot;vehicle&quot; value=&quot;Car&quot; /&gt; I have a car
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_input_type_checkbox')" >TIY</a></p>
+</div>
+
+<div>
+<h2>File</h2>
+
+<p>&lt;input type=&quot;file&quot; /&gt; 用于文件上传。</p>
+
+<pre>&lt;input type=&quot;file&quot; /&gt;</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_input_type_file')" >TIY</a></p>
+</div>
+
+<div>
+<h2>Hidden</h2>
+
+<p>&lt;input type=&quot;hidden&quot; /&gt; 定义隐藏字段。隐藏字段对于用户是不可见的。隐藏字段通常会存储一个默认值，它们的值也可以由 JavaScript 进行修改。</p>
+
+<pre>&lt;input type=&quot;hidden&quot; name=&quot;country&quot; value=&quot;Norway&quot; /&gt;</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_input_type_hidden')" >TIY</a></p>
+</div>
+
+<div>
+<h2>Image</h2>
+
+<p>&lt;input type=&quot;image&quot; /&gt; 定义图像形式的提交按钮。</p>
+
+<p>必须把 <a href="att_input_src.htm"  title="HTML &lt;input&gt; 标签的 src 属性">src 属性</a> 和 <a href="att_input_alt.htm"  title="HTML &lt;input&gt; 标签的 alt 属性">alt 属性</a> 与 &lt;input type=&quot;image&quot;&gt; 结合使用。</p>
+
+<pre>&lt;input type=&quot;image&quot; src=&quot;submit.gif&quot; alt=&quot;Submit&quot; /&gt;</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_input_src')" >TIY</a></p>
+</div>
+
+<div>
+<h2>Password</h2>
+
+<p>&lt;input type=&quot;password&quot; /&gt; 定义密码字段。密码字段中的字符会被掩码（显示为星号或原点）。</p>
+
+<pre>&lt;input type=&quot;password&quot; name=&quot;pwd&quot; /&gt;</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_input_type_password')" >TIY</a></p>
+</div>
+
+<div>
+<h2>Radio</h2>
+
+<p>&lt;input type=&quot;radio&quot; /&gt; 定义单选按钮。单选按钮允许用户选取给定数目的选择中的一个选项。</p>
+
+<pre>&lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;male&quot; /&gt; Male<br />&lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;female&quot; /&gt; Female</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_input_type_radio')" >TIY</a></p>
+</div>
+
+<div>
+<h2>Reset Button</h2>
+
+<p>&lt;input type=&quot;reset&quot; /&gt; 定义重置按钮。重置按钮会清除表单中的所有数据。</p>
+
+<pre>&lt;input type=&quot;reset&quot; /&gt;</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_input_type_reset')" >TIY</a></p>
+</div>
+
+<div>
+<h2>Submit</h2>
+
+<p>&lt;input type=&quot;submit&quot; /&gt; 定义提交按钮。提交按钮用于向服务器发送表单数据。数据会发送到表单的 action 属性中指定的页面。</p>
+
+<pre>&lt;form action=&quot;form_action.asp&quot; method=&quot;get&quot;&gt;
+Email: &lt;input type=&quot;text&quot; name=&quot;email&quot; /&gt;
+&lt;input type=&quot;submit&quot; /&gt;
+&lt;/form&gt;</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_input_type_text')" >TIY</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_input.htm" >HTML &lt;input&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

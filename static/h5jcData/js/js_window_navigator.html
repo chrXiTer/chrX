@@ -1,0 +1,39 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript window navigator</h1>
+<p>navigator 对象源于Netscape 的 Navigator 浏览器，包含了有关浏览器的信息，可以使用这些属性进行平台专用的配置。</p>
+<p>navigator 对象的实例是唯一的，可以用 window 对象的 navigator 属性来引用它或者直接用navigator引用，效果是一样的。</p>
+<p>window.navigator 对象在编写时可不使用 window 这个前缀。</p>
+
+<pre>
+&lt;div id=&quot;example&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+	txt = &quot;&lt;p&gt;Browser CodeName: &quot; + navigator.appCodeName + &quot;&lt;/p&gt;&quot;;
+	txt+= &quot;&lt;p&gt;Browser Name: &quot; + navigator.appName + &quot;&lt;/p&gt;&quot;;
+	txt+= &quot;&lt;p&gt;Browser Version: &quot; + navigator.appVersion + &quot;&lt;/p&gt;&quot;;
+	txt+= &quot;&lt;p&gt;Cookies Enabled: &quot; + navigator.cookieEnabled + &quot;&lt;/p&gt;&quot;;
+	txt+= &quot;&lt;p&gt;Platform: &quot; + navigator.platform + &quot;&lt;/p&gt;&quot;;
+	txt+= &quot;&lt;p&gt;User-agent header: &quot; + navigator.userAgent + &quot;&lt;/p&gt;&quot;;
+	txt+= &quot;&lt;p&gt;User-agent language: &quot; + navigator.systemLanguage + &quot;&lt;/p&gt;&quot;;
+	document.getElementById(&quot;example&quot;).innerHTML=txt;
+&lt;/script&gt;
+</pre>
+<p class="tiy"><a href="javascript:tiy.run('js_navigator_all')" >亲自试一试</a></p>
+<p class="important"><span>警告：</span>来自 navigator 对象的信息具有误导性，不应该被用于检测浏览器版本，这是因为：</p>
+<ul>
+<li>navigator 数据可被浏览器使用者更改</li>
+<li>浏览器无法报告晚于浏览器发布的新操作系统</li>
+</ul>
+
+<h2>浏览器检测</h2>
+<p>由于 navigator 可误导浏览器检测，使用对象检测可用来嗅探不同的浏览器。</p>
+<p>由于不同的浏览器支持不同的对象，您可以使用对象来检测浏览器。例如，由于只有 Opera 支持属性 &quot;window.opera&quot;，您可以据此识别出 Opera。</p>
+<p>例子：if (window.opera) {...some action...}</p>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

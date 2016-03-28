@@ -1,0 +1,76 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript length 属性</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_array.htm"  title="JavaScript Array 对象">JavaScript Array 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>length 属性可设置或返回数组中元素的数目。</p>
+
+<h3>语法</h3>
+
+<pre>arrayObject.length</pre>
+
+<h3>说明</h3>
+
+<p>数组的 length 属性总是比数组中定义的最后一个元素的下标大 1。对于那些具有连续元素，而且以元素 0 开始的常规数组而言，属性 length 声明了数组中的元素的个数。</p>
+
+<p>数组的 length 属性在用构造函数 Array() 创建数组时被初始化。给数组添加新元素时，如果必要，将更新 length 的值。</p>
+
+<p>设置 length 属性可改变数组的大小。如果设置的值比其当前值小，数组将被截断，其尾部的元素将丢失。如果设置的值比它的当前值大，数组将增大，新的元素被添加到数组的尾部，它们的值为 undefined。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在本例中，我们将展示如何使用 length 属性返回并设置数组的长度：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var arr = new Array(3)
+arr[0] = &quot;John&quot;
+arr[1] = &quot;Andy&quot;
+arr[2] = &quot;Wendy&quot;
+
+document.write(&quot;Original length: &quot; + <code>arr.length</code>)
+document.write(&quot;&lt;br /&gt;&quot;)
+
+arr.length=5
+document.write(&quot;New length: &quot; + <code>arr.length</code>)
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>
+Original length: 3
+New length: 5
+</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_length_array')" >length</a></dt>
+<dd>在本例中，我们将展示如何使用 length 属性。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_array.htm"  title="JavaScript Array 对象">JavaScript Array 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

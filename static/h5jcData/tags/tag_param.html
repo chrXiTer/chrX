@@ -1,0 +1,116 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;param&gt; 标签</h1>
+
+<div>
+<h2>实例</h2>
+
+<p>向 HTML 代码添加一个对象：</p>
+
+<pre>
+&lt;object classid=&quot;clsid:F08DF954-8592-11D1-B16A-00C0F0283628&quot; id=&quot;Slider1&quot; 
+width=&quot;100&quot; height=&quot;50&quot;&gt;
+  <code>&lt;param name=&quot;BorderStyle&quot; value=&quot;1&quot; /&gt;
+  &lt;param name=&quot;MousePointer&quot; value=&quot;0&quot; /&gt;
+  &lt;param name=&quot;Enabled&quot; value=&quot;1&quot; /&gt;
+  &lt;param name=&quot;Min&quot; value=&quot;0&quot; /&gt;
+  &lt;param name=&quot;Max&quot; value=&quot;10&quot; /&gt;</code>
+&lt;/object&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_object')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>param 元素允许您为插入 XHTML 文档的对象规定 run-time 设置，也就是说，此标签可为包含它的 <a href="tag_object.htm"  title="HTML &lt;object&gt; 标签">&lt;object&gt;</a> 或者 <a href="tag_applet.htm"  title="HTML &lt;applet&gt; 标签">&lt;applet&gt; 标签</a>提供参数。</p>
+</div>
+
+<div>
+<h2>HTML 与 XHTML 之间的差异</h2>
+
+<p>在 HTML 中，&lt;param&gt; 标签没有结束标签。</p>
+
+<p>在 XHTML 中，&lt;param&gt; 标签必须被正确地关闭。</p>
+</div>
+
+<div>
+<h2>必需的属性</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:20%;">属性</th>
+<th style="width:20%;">值</th>
+<th style="width:60%;">描述</th>
+</tr>
+
+<tr>
+<td>name</td>
+<td><i>unique_name</i></td>
+<td>定义参数的名称（用在脚本中）。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>可选的属性</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:20%;">属性</th>
+<th style="width:20%;">值</th>
+<th style="width:60%;">描述</th>
+</tr>
+
+<tr>
+<td>type</td>
+<td><i>MIME type</i></td>
+<td>规定参数的 MIME 类型（internet media type）。</td>
+</tr>
+
+<tr>
+<td>value</td>
+<td><i>value</i></td>
+<td>规定参数的值。</td>
+</tr>
+
+<tr>
+<td>valuetype</td>
+<td>
+<ul>
+<li>data</li>
+<li>ref</li>
+<li>object</li>
+</ul>
+</td>
+<td>规定值的 MIME 类型。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>全局属性</h2>
+
+<p>&lt;param&gt; 标签支持 <a href="html_ref_standardattributes.htm" >HTML 中的全局属性</a>。</p>
+</div>
+
+<div>
+<h2>事件属性</h2>
+
+<p>&lt;param&gt; 标签支持 <a href="html_ref_eventattributes.htm" >HTML 中的事件属性</a>。</p>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>HTML DOM 参考手册：<a href="../jsref/dom_obj_param.htm"  title="HTML DOM Parameter 对象">Parameter 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

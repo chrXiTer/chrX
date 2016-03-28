@@ -1,0 +1,4792 @@
+﻿<iframe id="tiyiframe_dhtm_alpha" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+img
+{
+filter:alpha(opacity=10)
+}
+</style>
+<script type="text/javascript">
+function clean()
+{
+interval=setInterval("makeclean(myImage)",10)
+}
+
+function foggy()
+{
+clearInterval(interval)
+document.getElementById('myImage').filters.alpha.opacity=10
+}
+
+function makeclean()
+{
+if (document.getElementById('myImage').filters.alpha.opacity<100)
+	{
+	document.getElementById('myImage').filters.alpha.opacity+=5
+	}
+else if (window.interval)
+	{
+	clearInterval(interval)
+	}
+}
+</script>
+</head>
+
+<body>
+<img id="myImage" src="../i/eg_landscape.jpg" onmouseover="clean()" onmouseout="foggy()" />
+<b>请把鼠标移动到这个图像上</b>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_alphalink" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+img
+{
+filter:alpha(opacity=10)
+}
+</style>
+<script type="text/javascript">
+function clean()
+{
+interval=setInterval("makeclean(myImage)",10)
+}
+function foggy()
+{
+clearInterval(interval)
+document.getElementById('myImage').filters.alpha.opacity=10
+}
+function makeclean()
+{
+if (document.getElementById('myImage').filters.alpha.opacity<100)
+	{
+	document.getElementById('myImage').filters.alpha.opacity+=5
+	}
+else if (window.interval)
+	{
+	clearInterval(interval)
+	}
+}
+</script>
+</head>
+
+<body>
+<b>请把鼠标移动到图像链接上：</b><br />
+<a href="../index.html" >
+<img border="0" id="myImage" src="../i/eg_smile.gif" onmouseover="clean()" onmouseout="foggy()" />
+</a>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_array_next" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+myImages=new Array()
+myImages[0]="/i/eg_mouse.jpg"
+myImages[1]="/i/eg_smile.gif"
+myImages[2]="/i/eg_landscape.jpg"
+myImages[3]="/i/eg_landscape2.jpg"
+myImages[4]="/i/eg_landscape3.jpg"
+myImages[5]="/i/eg_greanfoliage.jpg"
+imagecounter=myImages.length-1
+i=0
+
+function first()
+{
+document.getElementById('imageviewer').src=myImages[0]
+i=0
+}
+
+function previous()
+{
+if (i>0)
+	{
+	i--
+	document.getElementById('imageviewer').src=myImages[i]
+	}
+}
+
+function next()
+{
+if (i<imagecounter)
+	{
+	i++
+	document.getElementById('imageviewer').src=myImages[i]
+	}
+}
+
+function last()
+{
+document.getElementById('imageviewer').src=myImages[imagecounter]
+i=imagecounter
+}
+</script>
+</head>
+
+<body>
+<center>
+<form>
+<input type="button" value="First" onclick="first()">
+<input type="button" value="Previous" onclick="previous()">
+<input type="button" value="Next" onclick="next()">
+<input type="button" value="Last" onclick="last()">
+</form>
+<img id="imageviewer" src="../i/eg_mouse.jpg" />
+</center>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_blink" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function blinklink()
+{
+if (!document.getElementById('blink').style.color)
+	{
+	document.getElementById('blink').style.color="red"
+	}
+if (document.getElementById('blink').style.color=="red")
+	{
+	document.getElementById('blink').style.color="black"
+	}
+else
+	{
+	document.getElementById('blink').style.color="red"
+	}
+timer=setTimeout("blinklink()",100)
+}
+
+function stoptimer()
+{
+clearTimeout(timer)
+}
+</script>
+</head>
+
+<body onload="blinklink()" onunload="stoptimer()">
+<a id="blink" href="../index.html" >闪烁的链接</a> 
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_blinkheader" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function blinking_header()
+{
+if (!document.getElementById('blink').style.color)
+	{
+	document.getElementById('blink').style.color="red"
+	}
+if (document.getElementById('blink').style.color=="red")
+	{
+	document.getElementById('blink').style.color="black"
+	}
+else
+	{
+	document.getElementById('blink').style.color="red"
+	}
+timer=setTimeout("blinking_header()",100)
+}
+
+function stoptimer()
+{
+clearTimeout(timer)
+}
+</script>
+</head>
+
+<body onload="blinking_header()" onunload="stoptimer()">
+<h1 id="blink">闪动的标题</h1> 
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_buttonbg" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+input
+{
+background-image:url('/i/eg_bg_03.gif');
+width:156px;
+height:111px;
+}
+</style>
+<script type="text/javascript">
+function over()
+{
+if (event.srcElement.tagName=="INPUT")
+	{
+	event.srcElement.style.backgroundImage="url('/i/eg_bg_04.gif')"
+	}
+}
+
+function out()
+{
+if (event.srcElement.tagName=="INPUT")
+	{
+	event.srcElement.style.backgroundImage="url('/i/eg_bg_07.gif')"
+	}
+}
+</script>
+</head>
+
+<body>
+<p>请把鼠标移动到图像上：</p>
+<form onmouseout="out()" onmouseover="over()">
+<input class="a" type="button" value="按钮 1"><br />
+<input class="b" type="button" value="按钮 2"><br />
+<input class="c" type="button" value="按钮 3"><br />
+</form>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_css_bgcolor" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+
+<script type="text/javascript">
+function bgChange(bg)
+{
+document.body.style.background=bg
+}
+</script>
+</head>
+
+<body>
+
+<b>请把鼠标移动到正方形上，背景颜色会发生改变！</b>
+
+<table width="300" height="100">
+ <tr>
+  <td onmouseover="bgChange('red')" 
+      onmouseout="bgChange('transparent')"
+      bgcolor="red">
+  </td>
+  <td onmouseover="bgChange('blue')" 
+      onmouseout="bgChange('transparent')"
+      bgcolor="blue">
+  </td>
+  <td onmouseover="bgChange('green')" 
+      onmouseout="bgChange('transparent')"
+      bgcolor="green">
+  </td>
+</tr>
+</table>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_css_watermark" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+body
+{
+background-attachment: fixed;
+background-image: url("/i/eg_bulboff.gif");
+background-repeat: no-repeat;
+}
+</style>
+</head>
+<body>
+
+<p>请滚动页面，看看会发生什么。</p>
+<br /><br /><br /><br /><br /><br /><br />
+<p>请滚动页面，看看会发生什么。</p>
+<br /><br /><br /><br /><br /><br /><br />
+<p>请滚动页面，看看会发生什么。</p>
+<br /><br /><br /><br /><br /><br /><br />
+<p>请滚动页面，看看会发生什么。</p>
+<br /><br /><br /><br /><br /><br /><br />
+<p>请滚动页面，看看会发生什么。</p>
+<br /><br /><br /><br /><br /><br /><br />
+<p>请滚动页面，看看会发生什么。</p>
+<br /><br /><br /><br /><br /><br /><br />
+<p>请滚动页面，看看会发生什么。</p>
+<br /><br /><br /><br /><br /><br /><br />
+<p>请滚动页面，看看会发生什么。</p>
+<br /><br /><br /><br /><br /><br /><br />
+<p>请滚动页面，看看会发生什么。</p>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_cursor" style="visibility:hidden">
+<textarea name="c">
+<html>
+<body>
+<p>请把鼠标移动到单词上，这样会看到鼠标指针的变化：</p> 
+<span style="cursor: auto">Auto</span><br />
+<span style="cursor: crosshair">Crosshair</span><br />
+<span style="cursor: default">Default</span><br />
+<span style="cursor: pointer">Pointer</span><br />
+<span style="cursor: hand">Hand</span><br />
+<span style="cursor: move">Move</span><br />
+<span style="cursor: e-resize">e-resize</span><br />
+<span style="cursor: ne-resize">ne-resize</span><br />
+<span style="cursor: nw-resize">nw-resize</span><br />
+<span style="cursor: n-resize">n-resize</span><br />
+<span style="cursor: se-resize">se-resize</span><br />
+<span style="cursor: sw-resize">sw-resize</span><br />
+<span style="cursor: s-resize">s-resize</span><br />
+<span style="cursor: w-resize">w-resize</span><br />
+<span style="cursor: text">text</span><br />
+<span style="cursor: wait">wait</span><br />
+<span style="cursor: help">help</span><br />
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_cursorfx" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+
+<script type="text/javascript">
+var i=0
+txt=new Array("trailA","trailB","trailC")
+
+function cursor(interval)
+{
+pos=i*8+5
+if (interval=='first')
+	{
+	i=0
+	}
+if (i==0)
+	{
+	xpos=event.clientX
+	ypos=event.clientY
+	document.all(txt[i]).style.visibility="visible"
+	document.all(txt[i]).style.position="absolute"
+	document.all(txt[i]).style.left=xpos+5
+	document.all(txt[i]).style.top=ypos+5
+	}
+else
+	{	
+	document.all(txt[i]).style.visibility="visible"
+	document.all(txt[i]).style.position="absolute"
+	document.all(txt[i]).style.left=xpos+pos
+	document.all(txt[i]).style.top=ypos+pos
+	}
+if (i==txt.length)
+	{
+	i=i
+	}
+else
+	{
+	i++
+	}
+setTimeout("cursor('next')",10)
+}
+</script>
+
+</head>
+<body onmousemove="cursor('first')">
+
+<h1>请在页面上移动指针</h1>
+
+<span id="trailA" style="visibility:hidden">W</span>
+<span id="trailB" style="visibility:hidden">3</span>
+<span id="trailC" style="visibility:hidden">S</span>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_cursorimage" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function cursor(event)
+{
+document.getElementById('trail').style.visibility="visible"
+document.getElementById('trail').style.position="absolute"
+document.getElementById('trail').style.left=event.clientX+10
+document.getElementById('trail').style.top=event.clientY
+}
+</script>
+</head>
+
+<body onmousemove="cursor(event)">
+
+<h1>请在页面上移动指针</h1>
+
+<img id="trail" style="visibility:hidden" src="../i/eg_w3school.gif" />
+
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_cursortext" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function cursor(event)
+{
+document.getElementById('trail').style.visibility="visible"
+document.getElementById('trail').style.position="absolute"
+document.getElementById('trail').style.left=event.clientX+10
+document.getElementById('trail').style.top=event.clientY
+}
+</script>
+</head>
+
+<body onmousemove="cursor(event)">
+
+<h1>请在页面上移动指针</h1>
+
+<span id="trail" style="visibility:hidden">指针文本</span>
+
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_demo" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+
+<script type="text/javascript">
+function nameon()
+{
+document.getElementById('h2text').innerHTML="欢迎！"
+}
+function nameout()
+{
+document.getElementById('h2text').innerHTML="今天过得怎么样？"
+}
+</script>
+
+</head>
+<body>
+<h2 id="h2text" onmouseout="nameout()"
+onmouseover="nameon()">
+请把鼠标移动到文本上！</h2>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_dom_color" style="visibility:hidden">
+<textarea name="c">
+<html>
+<body>
+
+<h1 id="header">我的标题</h1>
+
+<script type="text/javascript">
+document.getElementById('header').style.color="red"
+</script>
+
+<p><b>注释：</b>是脚本改变了该元素的样式！</p>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_dom_image" style="visibility:hidden">
+<textarea name="c">
+<html>
+<body>
+
+<img id="image" src="../i/eg_smile.gif" />
+
+<script type="text/javascript">
+document.getElementById('image').src="../i/eg_landscape.jpg"/*tpa=http://w3school.com.cn/i/eg_landscape.jpg*/
+</script>
+
+<p><b>注释：</b>原始图片是一个笑脸，但是上面的脚本把图片改为风景。</p>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_dom_innertext" style="visibility:hidden">
+<textarea name="c">
+<html>
+<body>
+
+<h1 id="header">旧标题</h1>
+
+<script type="text/javascript">
+document.getElementById('header').innerHTML="新标题"
+</script>
+
+<p>请注意，原始的文本是“旧标题”。</p>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_dropshadow" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+h1
+{
+color:black;
+height:50;
+font:bold;
+}
+</style>
+<script type="text/javascript">
+var i
+function dropshadow()
+{
+i=0
+interval=setInterval("makedropshadow()",10)
+}
+
+function back()
+{
+clearInterval(interval)
+document.getElementById('myHeader').style.filter=false
+}
+
+function makedropshadow()
+{
+i++
+if (i<15)
+	{
+	document.getElementById('myHeader').style.filter="dropshadow(offx=" + i + ")"
+	document.getElementById('myHeader').style.filter="dropshadow(offy=" + i + ")"
+	}
+else if (window.interval)
+	{
+	clearInterval(interval)
+	}
+}
+</script>
+</head>
+
+<body>
+<h1 id="myHeader" onmouseover="dropshadow()" onmouseout="back()">请把鼠标移动到这个标题上</h1>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_dropshadowlink" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+a
+{
+color:black;
+height:25;
+font:bold;
+text-decoration:none;
+}
+</style>
+<script type="text/javascript">
+var i
+function dropshadow()
+{
+i=0
+interval=setInterval("makedropshadow(myLink)",10)
+}
+
+function back()
+{
+clearInterval(interval)
+document.getElementById('myLink').style.filter=false
+}
+
+function makedropshadow()
+{
+i++
+if (i<7)
+	{
+	document.getElementById('myLink').style.filter="dropshadow(offx=" + i + ")"
+	document.getElementById('myLink').style.filter="dropshadow(offy=" + i + ")"
+	}
+else if (window.interval)
+	{
+	clearInterval(interval)
+	}
+}
+</script>
+</head>
+
+<body>
+<a href="../index.html" id="myLink" onmouseover="dropshadow()" onmouseout="back()">请把鼠标移动到链接上</a>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_earthquake" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script>
+function startEQ()
+{
+richter=5
+parent.moveBy(0,richter)
+parent.moveBy(0,-richter)
+parent.moveBy(richter,0)
+parent.moveBy(-richter,0)
+timer=setTimeout("startEQ()",10)
+}
+function stopEQ()
+{
+clearTimeout(timer)
+}
+</script>
+</head>
+<body>
+
+<form>
+<input type="button" onclick="startEQ()" value="开始地震">
+<br />
+<br />
+<input type="button" onclick="stopEQ()" value="停止地震">
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_event_onblur" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function message()
+{
+alert("这个提示框由 onblur 事件句柄触发")
+}
+</script>
+</head>
+
+<body>
+
+<p>在元素失去焦点时，会发生 onblur 事件。试着在输入框中点击或输入，然后在文档的其他位置点击，这样输入框就会失去焦点。</p>
+<form>
+请输入您的名字：<input type="text" onblur="message()" size="20">
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_event_onchange" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function preferedBrowser()
+{
+prefer=document.forms[0].browsers.value
+alert("您浏览器互联网时喜欢使用 " + prefer)
+}
+</script>
+</head>
+
+<body>
+
+<form>
+请选择您喜欢的浏览器：
+<select id="browsers" onchange="preferedBrowser()">
+<option value="Internet Explorer">Internet Explorer
+<option value="Netscape">Netscape
+</select>
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_event_ondblclick" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function gettip(txt)
+{
+document.getElementById('tip').innerHTML='W3School 提供有关 WEB 标准和脚本技术的教程'
+}
+</script>
+</head>
+
+<body>
+
+<p>请双击 "W3School.com.cn"</p>
+<table>
+<tr>
+<th ondblclick="gettip()" valign="top">W3School.com.cn</th>
+<th id="tip"> </th>
+</tr>
+</table>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_event_onfocus" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function message()
+{
+alert("这个提示框由 onfocus 事件句柄触发")
+}
+</script>
+</head>
+
+<body>
+
+<form>
+请输入您的名字：<input type="text" onfocus="message()" size="20">
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_event_onkeydown" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function writeMessage()
+{
+document.forms[0].mySecondInput.value=document.forms[0].myInput.value
+}
+</script>
+</head>
+
+<body>
+
+<p>当键盘按键被按下时，会发生 onkeydown 事件。</p>
+<form>
+请输入您的名字：
+<input type="text" name="myInput" onkeydown="writeMessage()" size="20">
+<input type="text" name="mySecondInput" size="20">
+</select>
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_event_onkeydownup" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function color(color)
+{
+document.forms[0].myInput.style.background=color
+}
+</script>
+</head>
+
+<body>
+
+<form>
+请编写一条消息：<br />
+<input
+type="text" 
+onkeydown="color('red')"
+onkeyup="color('blue')"
+name="myInput" size="20">
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_event_onkeypress" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function message()
+{
+alert("当您按键盘上的按键时，会触发这个提示框。")
+}
+</script>
+</head>
+
+<body onkeypress="message()">
+<p>当敲击键盘上的按键时，会发生 onkeypress 事件。</p>
+<p>要触发 onkeypress 事件，请确保窗口拥有焦点。</p>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_event_onkeyup" style="visibility:hidden">
+<textarea name="c">
+<html>
+
+<head>
+<script type="text/javascript">
+function writeMessage()
+{
+document.forms[0].mySecondInput.value=document.forms[0].myInput.value
+}
+</script>
+</head>
+
+<body>
+<p>当键盘按键上升时，会发生 onkeyup 事件。</p>
+<form>
+请编写一条消息：<br />
+<input type="text" name="myInput" onkeyup="writeMessage()" size="20">
+<input type="text" name="mySecondInput" size="20">
+</form>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_event_onload" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+
+<script type="text/javascript">
+function mymessage()
+{
+alert("该消息被 onload 事件触发")
+}
+</script>
+</head>
+
+<body onload="mymessage()">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_event_onmouse" style="visibility:hidden">
+<textarea name="c">
+<html>
+<body>
+
+<h1 onmouseover="style.color='red'"
+onmouseout="style.color='black'">
+请把鼠标移动到文本上</h1>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_event_onmousedown" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function lighton()
+{
+document.getElementById('myimage').src="../i/eg_bulbon.gif"/*tpa=http://w3school.com.cn/i/eg_bulbon.gif*/
+}
+function lightoff()
+{
+document.getElementById('myimage').src="../i/eg_bulboff.gif"/*tpa=http://w3school.com.cn/i/eg_bulboff.gif*/
+}
+</script>
+</head>
+
+<body>
+<img id="myimage" onmousedown="lighton()" 
+onmouseup="lightoff()" 
+src="../i/eg_bulboff.gif" width="100" 
+height="180">
+<p>请点击灯泡，把它点亮！</p>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_event_onreset" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function message()
+{
+alert("这个提示框由 onreset 事件句柄触发")
+}
+</script>
+</head>
+
+<body>
+
+<form onreset="message()">
+请输入您的名字：<input type="text" size="20" />
+<input type="reset" />
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_event_onselect" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function message()
+{
+alert("当您选择输入框中的内容时会触发这个提示框")
+}
+</script>
+</head>
+
+<body>
+
+<p>请选择输入框中的内容</p>
+<form>
+<input type="text" value="Select this text" onselect="message()" size="20">
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_event_onsubmit" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function confirmInput()
+{
+fname=document.forms[0].fname.value
+alert("您好 " + fname + "！您会被重定向到 www.w3School.com.cn")
+}
+</script>
+</head>
+
+<body>
+<form onsubmit="confirmInput()" action="/chrX/nofile/123">
+请输入您的名字：<input id="fname" type="text" size="20">
+<input type="submit">
+</form>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_event_onunload" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+
+<script type="text/javascript">
+function mymessage()
+{
+alert("该消息被 onunload 事件触发")
+}
+</script>
+</head>
+
+<body onunload="mymessage()">
+
+<p>当您关闭该文档时，提示框会显示一条消息！</p>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_examples_image" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+cc=0
+function changeimage()
+{
+if (cc==0) 
+{
+cc=1
+document.getElementById('myimage').src="../i/eg_bulbon.gif"/*tpa=http://w3school.com.cn/i/eg_bulbon.gif*/
+}
+else
+{
+cc=0
+document.getElementById('myimage').src="../i/eg_bulboff.gif"/*tpa=http://w3school.com.cn/i/eg_bulboff.gif*/
+}
+}
+</script>
+</head>
+
+<body>
+
+<img id="myimage" onclick="changeimage()" 
+border="0" src="../i/eg_bulboff.gif" 
+width="100" height="180" />
+<p>请点击这个灯泡，把它点亮吧！</p>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_examples_imgposition" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function moveleft()
+{
+document.getElementById('image').style.position="absolute"
+document.getElementById('image').style.left="0"
+}
+function moveback()
+{
+document.getElementById('image').style.position="relative"
+}
+</script>
+</head>
+
+<body>
+
+<img id="image" src="../i/eg_bulbon.gif" onmouseover="moveleft()"
+onmouseout="moveback()"  />
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_examples_onload" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+
+<script type="text/javascript">
+var i=1
+function starttimer()
+{
+document.getElementById('h_one').style.position="relative"
+document.getElementById('h_one').style.left=+i
+document.getElementById('h_two').style.position="relative"
+document.getElementById('h_two').style.top=+i
+i++
+timer=setTimeout("starttimer()",10)
+}
+
+function stoptimer()
+{
+clearTimeout(timer)
+}
+</script>
+
+</head>
+<body onload="starttimer()" onunload="stoptimer()">
+
+<h1 id="h_one">标题一</h1>
+<h1 id="h_two">标题二</h1>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_examples_onmousemove" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+
+<script type="text/javascript">
+var i=1
+function moveright()
+{
+document.getElementById('header').style.position="relative"
+document.getElementById('header').style.left=i
+i++
+}
+
+</script>
+</head>
+<body onmousemove="moveright()">
+
+<h1 id="header">
+请在页面上移动鼠标
+</h1>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_examples_position" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+
+<script type="text/javascript">
+function moveleft()
+{
+document.getElementById('header').style.position="absolute"
+document.getElementById('header').style.left="0"
+}
+
+function moveback()
+{
+document.getElementById('header').style.position="relative"
+}
+</script>
+</head>
+<body>
+
+<h1 id="header" 
+onmouseover="moveleft()"
+onmouseout="moveback()">
+请把鼠标移动到文本上</h1>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_examples_tooltip" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function gettip(txt)
+{
+document.getElementById('tip').innerHTML=txt
+}
+
+function reset()
+{
+document.getElementById('tip').innerHTML=""
+}
+</script>
+</head>
+
+<body>
+<p>把鼠标移动到下面的饮料上：</p>
+
+<span onmouseover="gettip('热的黑色饮品')"
+onmouseout="reset()">咖啡</span>
+<br /><br />
+<span onmouseover="gettip('冷的白色饮品')"
+onmouseout="reset()">牛奶</span>
+
+<p id="tip"></p>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_filter" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+h2
+{
+width:100%;
+}
+</style>
+</head>
+
+<body>
+
+<h2 style="filter:glow()">发光</h2>
+<h2 style="filter:blur()">模糊</h2>
+<h2 style="filter:fliph()">Flip H</h2>
+<h2 style="filter:flipv()">Flip V</h2>
+<h2 style="filter:shadow()">阴影</h2>
+<h2 style="filter:dropshadow()">阴影</h2>
+<h2 style="filter:wave(Strength=2)">波浪</h2>
+
+<p>注释：如果元素的 width 属性没有设置，那么滤镜不会起作用。</p>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_filter_light" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function setlight()
+{
+document.getElementById('light_div').filters[0].addcone(0,0,0,60,60,115,132,214,100,100);
+}
+</script>
+<style>
+div
+{
+width:100px;
+}
+</style>
+
+</head>
+<body onload="setlight()">
+图像："landscape.jpg" 没有光照效果：<br />
+<img src="../i/eg_landscape.jpg" width="160" height="120" />
+<br />
+<br />
+同一个图像，带有光照效果：<br />
+<div id="light_div" style="filter:light(enabled=1);">
+<img src="../i/eg_landscape.jpg" width="160" height="120" />
+</div>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_filter_lightfx" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+var timer
+i=0
+j=0
+k=0
+l=160
+m=120
+
+function setlight()
+{
+document.getElementById('light_div').filters[0].clear()
+
+if (i<100)
+	{
+	document.getElementById('light_div').filters[0].addcone(0,0,0,50,50,100,120,200,i,100)
+	}
+else
+	{
+	if (j<160)
+		{
+		document.getElementById('light_div').filters[0].addcone(j,0,0,50,50,100,120,200,i,200)
+		j++
+		}
+	else
+		{
+		if (k<120)
+			{
+			document.getElementById('light_div').filters[0].addcone(j,k,0,50,50,100,120,200,i,200)
+			k++
+			}
+		else
+			{
+			if (l>0)
+				{
+				l--
+				document.getElementById('light_div').filters[0].addcone(l,k,0,50,50,100,120,200,i,200)
+				}
+			else
+				{
+				if (m>0)
+					{
+					m--
+					document.getElementById('light_div').filters[0].addcone(l,m,0,50,50,100,120,200,i,200)
+					}
+				else
+					{
+					stoptimer()
+					}
+				}				
+			}			
+		}
+	}
+i++
+timer=setTimeout("setlight()",1)
+}
+
+function stoptimer()
+{
+clearTimeout(timer)
+}
+</script>
+<style>
+div
+{
+width:100px;
+}
+body
+{
+background:#000000;
+}
+</style>
+</head>
+
+<body onload="setlight()" onunload="stoptimer()">
+<div id="light_div" style="filter:light(enabled=1);"><img src="../i/eg_landscape.jpg" width="160" height="120" /></div>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_filter_mask" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+div
+{
+width:160px;
+height:120px;
+}
+img
+{
+position:relative;
+}
+span
+{
+position:absolute;
+left:0px;
+top:0px;
+}
+</style>
+<script type="text/javascript">
+mouseover=true
+
+function coordinates()
+{
+if (!moveMe)
+	{
+	return
+	}
+if (event.srcElement.id=="moveMe")
+	{
+	mouseover=true
+	pleft=document.getElementById('moveMe').style.pixelLeft
+	ptop=document.getElementById('moveMe').style.pixelTop
+	xcoor=event.clientX
+	ycoor=event.clientY
+	document.onmousemove=moveImage
+	}
+}
+
+function moveImage()
+{
+if (mouseover&&event.button==1)
+	{
+	document.getElementById('moveMe').style.pixelLeft=pleft+event.clientX-xcoor
+	document.getElementById('moveMe').style.pixelTop=ptop+event.clientY-ycoor
+	return false
+	}
+}
+function mouseup()
+{
+mouseover=false
+}
+document.onmousedown=coordinates
+document.onmouseup=mouseup
+</script>
+
+</head>
+<body>
+<span>请移动这个图形：</span>
+<br />
+<div style="position:absolute;left:0;top:20;">
+<img src="../i/eg_landscape.jpg" width="160" height="120" /></div>
+<div style="position:absolute;left:0;top:20;filter:mask(color=#ffffff);width:160;height:120">
+<img id="moveMe" src="../i/eg_smile.gif" width="40" height="40"></div>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_filter_mask_text" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+div
+{
+width:160px;
+height:120px;
+}
+img
+{
+position:relative;
+}
+span
+{
+width:100%;
+position:absolute;
+top:0px;
+left:0px;
+}
+</style>
+<script type="text/javascript">
+mouseover=true
+function coordinates()
+{
+if (!moveMe)
+	{
+	return
+	}
+if (event.srcElement.id=="moveMe")
+	{
+	mouseover=true
+	pleft=document.getElementById('moveMe').style.pixelLeft
+	ptop=document.getElementById('moveMe').style.pixelTop
+	xcoor=event.clientX
+	ycoor=event.clientY
+	document.onmousemove=moveImage
+	}
+}
+
+function moveImage()
+{
+if (mouseover&&event.button==1)
+	{
+	document.getElementById('moveMe').style.pixelLeft=pleft+event.clientX-xcoor
+	document.getElementById('moveMe').style.pixelTop=ptop+event.clientY-ycoor
+	return false
+	}
+}
+
+function mouseup()
+{
+mouseover=false
+}
+
+document.onmousedown=coordinates
+document.onmouseup=mouseup
+</script>
+
+</head>
+<body>
+<span>请移动这个图形：</span>
+<h1>www.W3School.com.cn</h1>
+<p>
+Can you read this text?<br />
+Pretty cool effect!<br />
+W3school DHTML Section<br />
+Can you read this text?<br />
+Pretty cool effect!<br />
+W3school DHTML Section
+</p> 
+<div style="position:absolute;left:0;top:20;filter:mask(color=#000000);width:300;height:200">
+<img id="moveMe" src="../i/eg_smile.gif" />
+</div>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_form_bg" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function bgChange(bg)
+{
+document.getElementById('x').style.background="url(" + bg + ")"
+}
+</script>
+</head>
+
+<body>
+
+<p>本例演示如何向输入框插入背景图像。</p>
+<p>把鼠标移动到这两幅图像上，输入框会获得一幅背景图像。</p>
+
+<table width="300" height="100">
+<tr>
+<td onmouseover="bgChange('/i/eg_bg_03.gif')" 
+background="../i/eg_bg_03.gif" >
+</td>
+<td onmouseover="bgChange('/i/eg_bg_04.gif')" 
+background="../i/eg_bg_04.gif" >
+</td>
+</tr>
+</table>
+
+<form>
+<input id="x" type="text" value="把鼠标移动到图像上" size="20">
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_form_bg_button" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function bgChange(bg)
+{
+document.getElementById('x').style.background="url(" + bg + ")"
+}
+</script>
+</head>
+
+<body>
+
+<p>本例演示如何向按钮插入背景图像。</p>
+<p>请把鼠标移动到图像上，按钮会获得一幅背景图像：</p>
+
+<table width="300" height="100">
+ <tr>
+  <td onmouseover="bgChange('/i/eg_bg_03.gif')" 
+      background="../i/eg_bg_03.gif" >
+  </td>
+  <td onmouseover="bgChange('/i/eg_bg_04.gif')" 
+      background="../i/eg_bg_04.gif" >
+  </td>
+</tr>
+</table>
+
+<form>
+<input id="x" type="button" value="Mouse over the images">
+</form>
+
+</body>
+</html>
+
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_form_bg_checkbox" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function bgChange(bg)
+{
+document.getElementById('x').style.background="url(" + bg + ")"
+}
+</script>
+</head>
+
+<body>
+
+<p>本例演示如何改变单选按钮的背景颜色。</p>
+<p>请把鼠标移动到下面的三个表格单元上，背景颜色将会改变：</p>
+
+<table width="300" height="100">
+ <tr>
+  <td onmouseover="bgChange('/i/eg_bg_03.gif')" 
+      background="../i/eg_bg_03.gif" >
+  </td>
+  <td onmouseover="bgChange('/i/eg_bg_04.gif')" 
+      background="../i/eg_bg_04.gif" >
+  </td>
+</tr>
+</table>
+
+<form>
+请把鼠标移动到图像上：
+<input id="x" type="checkbox" checked value="ON">
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_form_bg_radio" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function bgChange(bg)
+{
+document.getElementById('x').style.background="url(" + bg + ")"
+}
+</script>
+</head>
+
+<body>
+
+<p>本例演示如何向单选按钮插入背景图像。</p>
+<p>请把鼠标移动到图像上，单选按钮会获得一幅背景图像：</p>
+
+<table width="300" height="100">
+ <tr>
+  <td onmouseover="bgChange('/i/eg_bg_03.gif')" 
+      background="../i/eg_bg_03.gif" >
+  </td>
+  <td onmouseover="bgChange('/i/eg_bg_04.gif')" 
+      background="../i/eg_bg_04.gif" >
+  </td>
+</tr>
+</table>
+
+<form>
+请把鼠标移动到图像上：
+<input id="x" type="radio" checked>
+</form>
+
+</body>
+</html>
+
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_form_bg_textarea" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+
+<script type="text/javascript">
+function bgChange(bg)
+{
+document.getElementById('x').style.background="url(" + bg + ")"
+}
+</script>
+</head>
+
+<body>
+<p>本例演示如何向 textarea 插入背景图像。</p>
+<p>请把鼠标移动到图像上，textarea 会获得一幅背景图像：</p>
+
+<table width="300" height="100">
+<tr>
+<td onmouseover="bgChange('/i/eg_bg_03.gif')" 
+background="../i/eg_bg_03.gif" ></td>
+<td onmouseover="bgChange('/i/eg_bg_04.gif')" 
+background="../i/eg_bg_04.gif" ></td>
+</tr>
+</table>
+
+<form>
+<textarea id="x" rows="5" cols="20">
+This example can not be edited
+because our editor uses a textarea
+for input,
+and your browser does not allow
+a textarea inside a textarea.
+</textarea>
+</form>
+
+</body>
+</html>
+
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_form_color" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function changeColor(color)
+{
+document.getElementById('x').style.background=color
+}
+</script>
+</head>
+
+<body>
+
+<p>本例演示如何改变文本框的背景颜色。</p>
+<p>请把鼠标移动到下面的三个表格单元上，输入框会改变 background-color：</p>
+
+<table width="100%"><tr>
+<td bgcolor="red" onmouseover="changeColor('red')"> </td>
+<td bgcolor="blue" onmouseover="changeColor('blue')"> </td>
+<td bgcolor="green" onmouseover="changeColor('green')"> </td>
+</tr></table>
+
+<form>
+<input id="x" type="text" value="请把鼠标移动到颜色上面" size="20">
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_form_color2" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function changeColor(color)
+{
+document.getElementById('x').style.color=color
+}
+</script>
+</head>
+
+<body>
+
+<p>本例演示如何改变文本框的文本颜色。</p>
+<p>请把鼠标移动到下面的三个表格单元上，文本的颜色将会改变：</p>
+
+<table width="100%"><tr>
+<td bgcolor="red" onmouseover="changeColor('red')"> </td>
+<td bgcolor="blue" onmouseover="changeColor('blue')"> </td>
+<td bgcolor="green" onmouseover="changeColor('green')"> </td>
+</tr></table>
+
+<form>
+<input id="x" type="text" value="请把鼠标移动到颜色上面" size="20">
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_form_color_button" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function changeColor(color)
+{
+document.getElementById('x').style.background=color
+}
+</script>
+</head>
+
+<body>
+
+<p>本例演示如何改变按钮的背景颜色。</p>
+<p>请把鼠标移动到下面的三个表格单元上，背景颜色将会改变：</p>
+
+<table width="100%"><tr>
+<td bgcolor="red" onmouseover="changeColor('red')"> </td>
+<td bgcolor="blue" onmouseover="changeColor('blue')"> </td>
+<td bgcolor="green" onmouseover="changeColor('green')"> </td>
+</tr></table>
+
+<form>
+<input id="x" type="button" value="请把鼠标移动到颜色上面" />
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_form_color_button2" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function changeColor(color)
+{
+document.getElementById('x').style.color=color
+}
+</script>
+</head>
+
+<body>
+
+<p>本例演示如何改变按钮的文本颜色。</p>
+<p>请把鼠标移动到下面的三个表格单元上，文本颜色将会改变：</p>
+
+<table width="100%"><tr>
+<td bgcolor="red" onmouseover="changeColor('red')"> </td>
+<td bgcolor="blue" onmouseover="changeColor('blue')"> </td>
+<td bgcolor="green" onmouseover="changeColor('green')"> </td>
+</tr></table>
+
+<form>
+<input id="x" type="button" value="请把鼠标移动到颜色上面">
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_form_color_checkbox" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function changeColor(color)
+{
+document.getElementById('x').style.background=color
+}
+</script>
+</head>
+
+<body>
+
+<p>本例演示如何改变复选按钮的背景颜色。</p>
+<p>请把鼠标移动到下面的三个表格单元上，背景颜色将会改变：</p>
+
+<table width="100%"><tr>
+<td bgcolor="red" onmouseover="changeColor('red')"> </td>
+<td bgcolor="blue" onmouseover="changeColor('blue')"> </td>
+<td bgcolor="green" onmouseover="changeColor('green')"> </td>
+</tr></table>
+
+<form>
+请把鼠标移动到颜色上面
+<input id="x" checked type="checkbox" value="ON">
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_form_color_radio" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function changeColor(color)
+{
+document.getElementById('x').style.background=color
+}
+</script>
+</head>
+
+<body>
+
+<p>本例演示如何改变单选按钮的背景颜色。</p>
+<p>请把鼠标移动到下面的三个表格单元上，背景颜色将会改变：</p>
+
+<table width="100%"><tr>
+<td bgcolor="red" onmouseover="changeColor('red')"> </td>
+<td bgcolor="blue" onmouseover="changeColor('blue')"> </td>
+<td bgcolor="green" onmouseover="changeColor('green')"> </td>
+</tr>
+</table>
+
+<form>
+请把鼠标移动到颜色上面
+<input id="x" checked type="radio">
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_form_color_select" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function changeColor(color)
+{
+myForm.elements[0].style.background=color
+}
+</script>
+</head>
+<body>
+
+<p>本例演示如何改变选项列表的背景颜色。</p>
+<p>请把鼠标移动到下面的三个表格单元上，背景颜色将会改变：</p>
+
+<table width="100%"><tr>
+<td bgcolor="red" onmouseover="changeColor('red')"> </td>
+<td bgcolor="blue" onmouseover="changeColor('blue')"> </td>
+<td bgcolor="green" onmouseover="changeColor('green')"> </td>
+</tr></table>
+
+<form name="myForm">
+<select>
+<option>请把鼠标移动到颜色上面</option>
+<option>请把鼠标移动到颜色上面</option>
+<option>请把鼠标移动到颜色上面</option>
+<option>请把鼠标移动到颜色上面</option>
+</select>
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_form_color_select2" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function changeColor(color)
+{
+myForm.elements[0].style.color=color
+}
+</script>
+</head>
+<body>
+
+<p>本例演示如何改变选项列表的文本颜色。</p>
+<p>请把鼠标移动到下面的三个表格单元上，文本颜色将会改变：</p>
+
+<table width="100%"><tr>
+<td bgcolor="red" onmouseover="changeColor('red')"> </td>
+<td bgcolor="blue" onmouseover="changeColor('blue')"> </td>
+<td bgcolor="green" onmouseover="changeColor('green')"> </td>
+</tr></table>
+
+<form name="myForm">
+<select>
+<option>请把鼠标移动到颜色上面</option>
+<option>请把鼠标移动到颜色上面</option>
+<option>请把鼠标移动到颜色上面</option>
+<option>请把鼠标移动到颜色上面</option>
+</select>
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_form_color_textarea" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function newColor(color)
+{
+document.getElementById('x').style.background=color
+}
+</script>
+</head>
+<body>
+
+<p>本例演示如何改变 textarea 的背景颜色。</p>
+<p>请把鼠标移动到下面的三个表格单元上，背景颜色将会改变：</p>
+
+<table width="100%"><tr>
+<td bgcolor="red" onmouseover="newColor('red')">&nbsp;</td>
+<td bgcolor="blue" onmouseover="newColor('blue')">&nbsp;</td>
+<td bgcolor="green" onmouseover="newColor('green')">&nbsp;</td>
+</tr></table>
+
+<form>
+<textarea id="x" rows="5" cols="20">
+This example can not be edited
+because our editor uses a textarea
+for input,
+and your browser does not allow
+a textarea inside a textarea.
+</textarea>
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_form_color_textarea2" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function newColor(color)
+{
+document.getElementById('x').style.color=color
+}
+</script>
+</head>
+<body>
+
+<p>本例演示如何改变 textarea 的文本颜色。</p>
+<p>请把鼠标移动到下面的三个表格单元上，文本颜色将会改变：</p>
+
+<table width="100%"><tr>
+<td bgcolor="red" onmouseover="newColor('red')">&nbsp;</td>
+<td bgcolor="blue" onmouseover="newColor('blue')">&nbsp;</td>
+<td bgcolor="green" onmouseover="newColor('green')">&nbsp;</td>
+</tr></table>
+
+<form>
+<textarea id="x" rows="5" cols="20">
+This example can not be edited
+because our editor uses a textarea
+for input,
+and your browser does not allow
+a textarea inside a textarea.
+</textarea>
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_form_identical" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function sameInfo()
+{
+for (i=0; i<document.myForm1.option.length; i++)
+	{
+	document.myForm2.option[i].value=document.myForm1.option[i].value
+	}
+}
+</script>
+</head>
+<body>
+
+<form name="myForm1">
+名：<input type="text" name="option"><br />
+姓：<input type="text" name="option"><br />
+地址：<input type="text" name="option"><br />
+电邮：<input type="text" name="option"><br />
+<br />
+<input type="button" onclick="sameInfo()" value="与上面的信息相同"><br />
+</form>
+
+<form name="myForm2">
+名：<input type="text" name="option"><br />
+姓：<input type="text" name="option"><br />
+地址：<input type="text" name="option"><br />
+电邮：<input type="text" name="option"><br />
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_form_identical2" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function sameInfo()
+{
+for (i=0; i<document.myForm1.option.length; i++)
+	{
+	document.myForm2.option[i].value=document.myForm1.option[i].value
+	}
+}
+</script>
+</head>
+<body>
+
+<form name="myForm1">
+名：<input onkeyup="sameInfo()" type="text" name="option"><br />
+姓：<input onkeyup="sameInfo()" type="text" name="option"><br />
+地址：<input onkeyup="sameInfo()" type="text" name="option"><br />
+电邮：<input onkeyup="sameInfo()" type="text" name="option"><br />
+</form>
+
+<form name="myForm2">
+名：<input type="text" name="option"><br />
+姓：<input type="text" name="option"><br />
+地址：<input type="text" name="option"><br />
+电邮：<input type="text" name="option"><br />
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_form_selectall" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function makeCheck(thisForm)
+{
+for (i = 0; i < thisForm.option.length; i++)
+	{
+	thisForm.option[i].checked=true
+	}
+}
+
+function makeUncheck(thisForm)
+{
+for (i = 0; i < thisForm.option.length; i++)
+	{
+	thisForm.option[i].checked=false
+	}
+}
+</script>
+</head>
+<body>
+
+<form name="myForm">
+<input type="button" value="选取" onclick="makeCheck(this.form)">
+<input type="button" value="取消" onclick="makeUncheck(this.form)">
+<br />
+<input type="checkbox" name="option">苹果<br />
+<input type="checkbox" name="option">桔子<br />
+<input type="checkbox" name="option">香蕉<br />
+<input type="checkbox" name="option">西瓜
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_glow" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+h1
+{
+width:400;
+}
+</style>
+
+<script type="text/javascript">
+var i
+function glow()
+{
+i=0
+interval=setInterval("makeglow()",10)
+}
+
+function back()
+{
+clearInterval(interval)
+document.getElementById('myHeader').style.filter=false
+}
+
+function makeglow()
+{
+i++
+if (i<5)
+	{
+	document.getElementById('myHeader').style.filter="glow(strength=" + i + ")"
+	}
+else if (window.interval)
+	{
+	clearInterval(interval)
+	}
+}
+
+</script>
+</head>
+
+<body>
+<h1 id="myHeader" onmouseover="glow()" onmouseout="back()">请把鼠标移动到这个标题上</h1>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_glowlink" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+a
+{
+color:black;
+width:150;
+font:bold;
+}
+</style>
+<script type="text/javascript">
+var i
+function glow()
+{
+i=0
+interval=setInterval("makeglow(myLink)",10)
+}
+
+function back()
+{
+clearInterval(interval)
+document.getElementById('myLink').style.filter=false
+}
+
+function makeglow()
+{
+i++
+if (i<5)
+	{
+	document.getElementById('myLink').style.filter="glow(color=#FF00FF,strength=" + i + ")"
+	}
+else if (window.interval)
+	{
+	clearInterval(interval)
+	}
+}
+</script>
+</head>
+
+<body>
+<a href="../index.html" id="myLink" onmouseover="glow()" onmouseout="back()">请把鼠标移动到链接上</a>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_gray" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+img
+{
+filter:gray()
+}
+</style>
+<script type="text/javascript">
+function color()
+{
+document.getElementById('myImage').style.filter=false
+}
+function gray()
+{
+document.getElementById('myImage').style.filter="gray()"
+}
+</script>
+</head>
+
+<body>
+<b>Mouse over the image</b><br />
+<img id="myImage" src="../i/eg_landscape.jpg" onmouseover="color()" onmouseout="gray()" />
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_graylink" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+img
+{
+filter:gray()
+}
+</style>
+<script type="text/javascript">
+function color()
+{
+document.getElementById('myImage').style.filter=false
+}
+function gray()
+{
+document.getElementById('myImage').style.filter="gray()"
+}
+</script>
+</head>
+
+<body>
+<b>请把鼠标移动到图像链接上</b><br />
+<a href="../index.html" >
+<img id="myImage" border="0" src="../i/eg_smile.gif" onmouseover="color()" onmouseout="gray()" />
+</a>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_image" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+div
+{
+width:160px;
+height:120px;
+}
+</style>
+</head>
+<body>
+
+Alpha: 
+<div style="filter:alpha(Opacity=20)">
+<img src="../i/eg_landscape.jpg" width="160" height="120" />
+</div>
+
+Gray: 
+<div style="filter:gray()">
+<img src="../i/eg_landscape.jpg" width="160" height="120" />
+</div>
+
+Invert: 
+<div style="filter:invert()">
+<img src="../i/eg_landscape.jpg" width="160" height="120" />
+</div>
+
+Xray: 
+<div style="filter:xray()">
+<img src="../i/eg_landscape.jpg" width="160" height="120" />
+</div>
+
+Mask: 
+<div style="position:absolute;left:10;top:610;">
+<img src="../i/eg_landscape.jpg" width="160" height="120" />
+</div>
+
+<div style="position: absolute; left: 10; top: 610; filter: mask(color=#ffffff); width: 160; height: 120">
+<h2>The mask value makes the text transparent</h2>
+</div>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_imagemove" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+var i=1
+function starttimer()
+{
+document.getElementById('myimage').style.position="relative"
+document.getElementById('myimage').style.left=+i
+i++
+timer=setTimeout("starttimer()",10)
+}
+function stoptimer()
+{
+clearTimeout(timer)
+}
+</script>
+</head>
+
+<body onload="starttimer()" onunload="stoptimer()">
+<img id="myimage" src="../i/eg_smile.gif" />
+</body>
+</html>
+
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_imagesize" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function moveover()
+{
+document.getElementById('image').width="200"
+document.getElementById('image').height="360"
+}
+function moveback()
+{
+document.getElementById('image').width="100"
+document.getElementById('image').height="180"
+}
+</script>
+</head>
+
+<body>
+
+<b>请把鼠标移动到图像上：</b><br />
+<img id="image" src="../i/eg_bulbon.gif" onmouseover="moveover()"
+onmouseout="moveback()"
+width="100" height="180" />
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_imagesize_source" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function moveover()
+{
+document.getElementById('image').src="../i/eg_bulbon.gif"/*tpa=http://w3school.com.cn/i/eg_bulbon.gif*/
+document.getElementById('image').width="100"
+document.getElementById('image').height="180"
+}
+function moveback()
+{
+document.getElementById('image').src="../i/eg_landscape.jpg"/*tpa=http://w3school.com.cn/i/eg_landscape.jpg*/
+document.getElementById('image').width="160"
+document.getElementById('image').height="120"
+}
+</script>
+</head>
+
+<body>
+
+<b>请把鼠标移动到图像上：</b><br />
+<img id="image" src="../i/eg_landscape.jpg" onmouseover="moveover()"
+onmouseout="moveback()" width="160" height="120" />
+
+</body>
+</html>
+
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_imagesource" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function moveover()
+{
+document.getElementById('image').src="../i/eg_bulbon.gif"/*tpa=http://w3school.com.cn/i/eg_bulbon.gif*/
+}
+function moveback()
+{
+document.getElementById('image').src="../i/eg_bulboff.gif"/*tpa=http://w3school.com.cn/i/eg_bulboff.gif*/
+}
+</script>
+</head>
+
+<body>
+
+<b>请把鼠标移动到图像上：</b><br />
+<img id="image" src="../i/eg_bulboff.gif" onmouseover="moveover()"
+onmouseout="moveback()" />
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_image_bg" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function bgChange(bg)
+{
+document.body.background=bg
+}
+</script>
+</head>
+
+<body>
+
+<b>请把鼠标移动到这些图片上，背景会发生变化：</b>
+<table width="300" height="100">
+ <tr>
+  <td onmouseover="bgChange('/i/eg_bg_03.gif')" 
+      background="../i/eg_bg_03.gif" >
+  </td>
+  <td onmouseover="bgChange('/i/eg_bg_04.gif')" 
+      background="../i/eg_bg_04.gif" >
+  </td>
+  <td onmouseover="bgChange('/i/eg_bg_06.gif')" 
+      background="../i/eg_bg_06.gif" >
+  </td>
+</tr>
+</table>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_image_preload" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+img2=new Image()
+img2.src="../i/eg_landscape3.jpg"/*tpa=http://w3school.com.cn/i/eg_landscape3.jpg*/ 
+function changeImage()
+{
+document.getElementById('myImage').src=img2.src
+}
+</script>
+</head>
+
+<body>
+
+<p>当您把鼠标移动到图片上时，会出现一幅新的图像。</p>
+<img id="myImage" onmouseover="changeImage()" border="0" src="../i/eg_landscape2.jpg" >
+<p>新图像会立即出现，这是因为您的浏览器已经加载了这幅图像。</p>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_img_shake" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function shakeleft()
+{
+document.getElementById('image').style.position="relative"
+document.getElementById('image').style.left="3"
+timer=setTimeout("shakeright()",10)
+}
+
+function shakeright()
+{
+document.getElementById('image').style.left="0"
+timer=setTimeout("shakeleft()",10)
+}
+
+function stoptimer()
+{
+clearTimeout(timer)
+}
+</script>
+</head>
+
+<body>
+<b>请把鼠标移动到图像上，会看到它在摇动：）</b><br />
+<img id="image" src="../i/eg_smile.gif" onmouseover="shakeleft()"
+onmouseout="stoptimer()" />
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_invert" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+img
+{
+filter:invert()
+}
+</style>
+<script type="text/javascript">
+function getFilter()
+{
+document.getElementById('myImage').style.filter="invert()"
+}
+
+function noFilter()
+{
+document.getElementById('myImage').style.filter=false
+}
+</script>
+</head>
+
+<body>
+<p>本例演示如何动态地插入反转滤镜。</p>
+<b>请把鼠标移动到图像上：</b><br />
+<img id="myImage" src="../i/eg_landscape.jpg" onmouseover="noFilter()" onmouseout="getFilter()" />
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_link_shake" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function shakeleft()
+{
+document.getElementById('myLink').style.position="relative"
+document.getElementById('myLink').style.left="3"
+timer=setTimeout("shakeright()",10)
+}
+function shakeright()
+{
+document.getElementById('myLink').style.left="0"
+timer=setTimeout("shakeleft()",10)
+}
+function stoptimer()
+{
+clearTimeout(timer)
+}
+</script>
+</head>
+
+<body>
+<a id="myLink" href="javascript:if(confirm('/chrX/nofile/123  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='/chrX/nofile/123'" onmouseover="shakeleft()" onmouseout="stoptimer()">请把鼠标移动到链接上</a>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_mask" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+div
+{
+position:absolute;
+left:10px;
+top:100px;
+width:160px;
+height:120px;
+}
+</style>
+<script type="text/javascript">
+function getFilter()
+{
+document.getElementById('myDiv').style.filter="mask(color=#ffffff)"
+}
+function noFilter()
+{
+document.getElementById('myDiv').style.filter=false
+}
+</script>
+</head>
+
+<body>
+<p>本例演示如何动态地插入遮罩滤镜。</p>
+<p>请把鼠标移动到图像上：</p>
+<div><img src="../i/eg_landscape.jpg" /></div>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_menu1" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+span
+{
+border:groove 2px;
+padding:3px;
+font-family:arial;
+font-size:12px;
+width:100px;
+height:70px;
+background-color:#c0c0c0;
+position:relative;
+top:-80px;
+left:-10px;
+}
+</style>
+<script type="text/javascript">
+function showmenu(elmnt)
+{
+elmnt.style.top="-15px"
+}
+function hidemenu(elmnt)
+{
+elmnt.style.top="-80px"
+}
+</script>
+</head>
+<body>
+
+<span onmouseover="showmenu(this)" onmouseout="hidemenu(this)">
+<a href="../index.html" >首页</a><br />
+<a href="../js/index.asp.htm" >JavaScript</a><br /><br /><hr />
+W3School<br />
+</span>
+<span onmouseover="showmenu(this)" onmouseout="hidemenu(this)">
+<p></p>
+<p></p>
+<p>
+<a href="javascript:if(confirm('http://www.microsoft.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://www.microsoft.com/'" >Explorer</a><br />
+<a href="javascript:if(confirm('http://my.netscape.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://my.netscape.com/'" >Navigator</a><br /><br /></p>
+<hr />
+浏览器<br />
+</span>
+<span onmouseover="showmenu(this)" onmouseout="hidemenu(this)">
+<p></p>
+<p></p>
+<p>
+<a href="javascript:if(confirm('http://www.altavista.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://www.altavista.com/'" >Alta Vista</a><br />
+<a href="javascript:if(confirm('http://www.yahoo.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://www.yahoo.com/'" >Yahoo!</a><br /><br /></p>
+<hr />
+搜索<br />
+</span>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_menu10" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+body{font-family:arial;}
+table{font-size:80%;background:black}
+a{color:black;text-decoration:none;font:bold}
+a:hover{color:#606060}
+td.menu{background:lightblue}
+table.menu
+{
+font-size:100%;
+position:absolute;
+visibility:hidden;
+}
+</style>
+<script type="text/javascript">
+function showmenu(elmnt)
+{
+document.getElementById(elmnt).style.visibility="visible"
+}
+function hidemenu(elmnt)
+{
+document.getElementById(elmnt).style.visibility="hidden"
+}
+</script>
+</head>
+
+<body>
+<h3>下拉菜单</h3>
+<table width="100%">
+ <tr bgcolor="#FF8080">
+  <td onmouseover="showmenu('tutorials')" onmouseout="hidemenu('tutorials')">
+   <a href="../i/eg_landscape.jpg" >教程</a><br />
+   <table class="menu" id="tutorials" width="120">
+   <tr><td class="menu"><a href="../html/index.asp.htm" >HTML</a></td></tr>
+   <tr><td class="menu"><a href="../xhtml/index.asp.htm" >XHTML</a></td></tr>
+   <tr><td class="menu"><a href="../css/index.asp.htm" >CSS</a></td></tr>
+   <tr><td class="menu"><a href="../xml/index.asp.htm" >XML</a></td></tr>
+   <tr><td class="menu"><a href="../xsl/index.asp.htm" >XSL</a></td></tr>
+   </table>
+  </td>
+  <td onmouseover="showmenu('scripting')" onmouseout="hidemenu('scripting')">
+   <a href="../i/eg_landscape.jpg" >脚本</a><br />
+   <table class="menu" id="scripting" width="120">
+   <tr><td class="menu"><a href="../js/index.asp.htm" >JavaScript</a></td></tr>
+   <tr><td class="menu"><a href="../vbscript/index.asp.htm" >VBScript</a></td></tr>
+   <tr><td class="menu"><a href="../dhtml/index.asp.htm" >DHTML</a></td></tr>
+   <tr><td class="menu"><a href="../asp/index.asp.htm" >ASP</a></td></tr>
+   <tr><td class="menu"><a href="../ado/index.asp.htm" >ADO</a></td></tr>
+   </table>
+  </td>
+  <td onmouseover="showmenu('validation')" onmouseout="hidemenu('validation')">
+   <a href="../site/site_validate.asp.htm" >验证</a><br />
+   <table class="menu" id="validation" width="120">
+   <tr><td class="menu"><a href="../site/site_validate.asp.htm" >验证 HTML</a></td></tr>
+   <tr><td class="menu"><a href="../site/site_validate.asp.htm" >验证 XHTML</a></td></tr>
+   <tr><td class="menu"><a href="../site/site_validate.asp.htm" >验证 CSS</a></td></tr>
+   <tr><td class="menu"><a href="../site/site_validate.asp.htm" >验证 XML</a></td></tr>
+   <tr><td class="menu"><a href="../site/site_validate.asp.htm" >验证 WML</a></td></tr>
+   </table>
+  </td>
+ </tr>
+</table>
+<p>把鼠标移动到不同的选项上，就可以看到下拉菜单。</p>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_menu2" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+table
+{
+font-size:12;
+background-color:#c0c0c0;
+}
+span
+{
+border:groove 2px;
+padding:3;
+font-family:arial;
+font-size:12;
+width:90;
+height:40;
+background-color:#c0c0c0;
+position:relative;
+top:-15;
+left:-80;
+}
+</style>
+<script type="text/javascript">
+function showmenu(elmnt)
+{
+elmnt.style.left="-10"
+}
+
+function hidemenu(elmnt)
+{
+elmnt.style.left="-80"
+}
+</script>
+</head>
+<body>
+
+<span onmouseover="showmenu(this)" onmouseout="hidemenu(this)">
+<table border="0" width="100%">
+<tr>
+<td width="90%"><a href="../index.html" >HOME</a></td>
+<td rowspan="2">A</td>
+</tr><tr>
+<td><a href="../js/index.asp.htm" >JavaScript</a></td>
+</tr>
+</table>
+</span>
+
+<br />
+
+<span onmouseover="showmenu(this)" onmouseout="hidemenu(this)">
+<table width="100%">
+<tr>
+<td width="90%"><a href="javascript:if(confirm('http://www.microsoft.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://www.microsoft.com/'" >Explorer</a></td>
+<td rowspan="2">B</td>
+</tr><tr>
+<td><a href="javascript:if(confirm('http://my.netscape.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://my.netscape.com/'" >Navigator</a></td>
+</tr>
+</table>
+</span>
+
+<br />
+
+<span onmouseover="showmenu(this)" onmouseout="hidemenu(this)">
+<table width="100%">
+<tr>
+<td width="90%"><a href="javascript:if(confirm('http://www.altavista.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://www.altavista.com/'" >AltaVista</a></td>
+<td rowspan="2">C</td>
+</tr><tr>
+<td><a href="javascript:if(confirm('http://www.yahoo.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://www.yahoo.com/'" >Yahoo!</a></td>
+</tr>
+</table>
+</span>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_menu3" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+
+<script type="text/javascript">
+
+function go()
+{
+location=document.forms[0].gowhere.value
+}
+
+</script>
+
+</head>
+<body>
+
+<form>
+<select id="gowhere" onchange="go()">
+<option>-Select location-</option>
+<option value="/asp/index.asp">ASP 教程</option>
+<option value="/html/index.asp">HTML 教程</option>
+<option value="/js/index.asp">JavaScripts 教程</option>
+</select>
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_menu4" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+var timer
+function scrolltop()
+{
+document.getElementById('scrollmenu').style.top=document.body.scrollTop
+timer=setTimeout("scrolltop()",1)
+}
+function stoptimer()
+{
+clearTimeout(timer)
+}
+</script>
+</head>
+
+<body onload="scrolltop()" onunload="stoptimer()">
+<span id="scrollmenu" style="position:absolute">
+<b>菜单</b><br />
+<a href="javascript:if(confirm('/chrX/nofile/123  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='/chrX/nofile/123'" >W3School</a><br />
+<a href="javascript:if(confirm('http://www.microsoft.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://www.microsoft.com/'" >Microsoft</a><br />
+<a href="javascript:if(confirm('http://www.altavista.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://www.altavista.com/'" >Altavista</a><br />
+</span>
+
+<table border="0" width="100%">
+<tr>
+<td width="100"> </td>
+<td>滚动页面，就可以看到“置顶”的菜单。
+<br /><br /><br /><br /><br />
+滚动页面，就可以看到“置顶”的菜单。
+<br /><br /><br /><br /><br />
+滚动页面，就可以看到“置顶”的菜单。
+<br /><br /><br /><br /><br />
+滚动页面，就可以看到“置顶”的菜单。
+<br /><br /><br /><br /><br />
+滚动页面，就可以看到“置顶”的菜单。
+<br /><br /><br /><br /><br />
+滚动页面，就可以看到“置顶”的菜单。
+<br /><br /><br /><br /><br />
+滚动页面，就可以看到“置顶”的菜单。
+<br /><br /><br /><br /><br />
+滚动页面，就可以看到“置顶”的菜单。
+<br /><br /><br /><br /><br />
+滚动页面，就可以看到“置顶”的菜单。
+<br /><br /><br /><br /><br />
+滚动页面，就可以看到“置顶”的菜单。
+<br /><br /><br /><br /><br />
+滚动页面，就可以看到“置顶”的菜单。
+<br /><br /><br /><br /><br />
+滚动页面，就可以看到“置顶”的菜单。
+<br /><br /><br /><br /><br />
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_menu5" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+
+<script type="text/javascript">
+function inset(elmnt)
+{
+elmnt.style.border="inset 2"
+}
+
+function outset(elmnt)
+{
+elmnt.style.border="outset 2"
+}
+</script>
+
+<style>
+td
+{
+background:C0C0C0;
+border:2px outset;
+}
+
+</style>
+</head>
+<body>
+
+<table width="80">
+<tr><td onmouseover="inset(this)" onmouseout="outset(this)"><a href="../index.html" >HOME</a></td></tr>
+<tr><td onmouseover="inset(this)" onmouseout="outset(this)"><a href="../js/index.asp.htm" >JavaScript</a></td></tr>
+<tr><td onmouseover="inset(this)" onmouseout="outset(this)"><a href="javascript:if(confirm('http://www.microsoft.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://www.microsoft.com/'" >Explorer</a></td></tr>
+<tr><td onmouseover="inset(this)" onmouseout="outset(this)"><a href="javascript:if(confirm('http://my.netscape.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://my.netscape.com/'" >Navigator</a></td></tr>
+<tr><td onmouseover="inset(this)" onmouseout="outset(this)"><a href="javascript:if(confirm('http://www.altavista.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://www.altavista.com/'" >AltaVista</a></td></tr>
+<tr><td onmouseover="inset(this)" onmouseout="outset(this)"><a href="javascript:if(confirm('http://www.yahoo.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://www.yahoo.com/'" >Yahoo!</a></td></tr>
+</table>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_menu_cursor" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+body
+{
+background:#000000;
+color:#00FF00;
+font-weight:bold;
+}
+a{color:#CCCCCC;}
+</style>
+
+<script type="text/javascript">
+function cursor(text)
+{
+trail.innerHTML=text
+trail.style.visibility="visible"
+trail.style.position="absolute"
+trail.style.left=event.clientX+10
+trail.style.top=event.clientY
+}
+
+function hidecursor()
+{
+trail.style.visibility="hidden"
+}
+</script>
+
+</head>
+<body>
+
+<h1>请把鼠标移动到链接上：</h1>
+
+<a href="../index.html" onmousemove="cursor('访问 W3School.com.cn')" onmouseout="hidecursor()">W3School.com.cn</a><br />
+<a href="javascript:if(confirm('http://www.altavista.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://www.altavista.com/'" onmousemove="cursor('转到 AltaVista')" onmouseout="hidecursor()">AltaVista</a><br />
+<a href="javascript:if(confirm('http://www.yahoo.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://www.yahoo.com/'" onmousemove="cursor('使用 Yahoo 进行搜索!')" onmouseout="hidecursor()">Yahoo!</a><br />
+
+<span id="trail" style="visibility:hidden">Hello</span>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_menu_cursorimage" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function cursor(image)
+{
+trail.innerHTML="<img src='" + image + "' />"
+trail.style.visibility="visible"
+trail.style.position="absolute"
+trail.style.left=event.clientX+10
+trail.style.top=event.clientY
+}
+
+function hidecursor()
+{
+trail.style.visibility="hidden"
+}
+</script>
+
+</head>
+<body>
+
+<h1>请把鼠标移动到链接上：</h1>
+
+<a href="../index.html" onmousemove="cursor('/i/w3school_logo_white.gif')" onmouseout="hidecursor()">W3School.com.cn</a><br />
+<a href="javascript:if(confirm('http://www.altavista.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://www.altavista.com/'" onmousemove="cursor('/i/eg_altavistalink.gif')" onmouseout="hidecursor()">AltaVista</a><br />
+<a href="javascript:if(confirm('http://www.yahoo.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://www.yahoo.com/'" onmousemove="cursor('/i/eg_yahoo.gif')" onmouseout="hidecursor()">Yahoo!</a><br />
+
+<span id="trail" style="visibility:hidden">Hello</span>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_menu_descrimage" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+table
+{
+background:black;
+}
+a
+{
+text-decoration:none;
+color:#000000;
+}
+th
+{
+width:200px;
+background:#FF8080;
+}
+td
+{
+font:bold;
+background:#ADD8E6;
+}
+</style>
+<script type="text/javascript">
+function gettip(image)
+{
+document.getElementById('tip').innerHTML="<img src='" + image + "' />"
+}
+function reset()
+{
+document.getElementById('tip').innerHTML=" "
+}
+</script>
+</head>
+
+<body>
+<b>请把鼠标移动到链接上，就可以看到它们的 logo：</b><br />
+<table width="400px">
+<tr>
+<th>
+<a href="../index.html" 
+onmouseover="gettip('/i/w3school_logo_black.gif')"
+onmouseout="reset()">W3School.com.cn</a>
+</th>
+<td rowspan="3" id="tip" align="center" valign="center"> </td>
+</tr>
+<tr>
+<th>
+<a href="javascript:if(confirm('http://www.microsoft.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://www.microsoft.com/'" onmouseover="gettip('/i/eg_logo_microsoft.gif')"
+onmouseout="reset()">Internet Explorer</a>
+</th>
+</tr>
+</tr>
+<tr>
+<th>
+<a href="javascript:if(confirm('http://my.netscape.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://my.netscape.com/'" onmouseover="gettip('/i/eg_logo_netscape.gif')"
+onmouseout="reset()">Netscape Navigator</a>
+</th>
+</tr>
+</table>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_menu_description" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+table
+{
+background:black;
+}
+a
+{
+text-decoration:none;
+color:#000000;
+}
+th
+{
+width:180px;
+background:#FF8080;
+}
+td
+{
+font:bold;
+background:#ADD8E6;
+}
+</style>
+<script type="text/javascript">
+function gettip(txt)
+{
+document.getElementById('tip').innerHTML=txt
+}
+function reset()
+{
+document.getElementById('tip').innerHTML=" "
+}
+</script>
+</head>
+
+<body>
+<b>请把鼠标移动到链接上，就可以看到关于它们的描述：</b><br />
+<table width="400px">
+<tr>
+<th>
+<a href="javascript:if(confirm('/chrX/nofile/123  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='/chrX/nofile/123'" 
+onmouseover="gettip('W3School is the best Web Developers resource on the Web')"
+onmouseout="reset()">W3School.com.cn</a>
+</th>
+<td rowspan="3" id="tip"> </td>
+</tr>
+<tr>
+<th>
+<a href="javascript:if(confirm('http://www.microsoft.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://www.microsoft.com/'" onmouseover="gettip('Internet Explorer is winning the browser war')"
+onmouseout="reset()">Internet Explorer</a>
+</th>
+</tr>
+<tr>
+<th>
+<a href="javascript:if(confirm('http://my.netscape.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://my.netscape.com/'" onmouseover="gettip('The Navigator is Netscapes browser tribute to web surfers')"
+onmouseout="reset()">Netscape Navigator</a>
+</th>
+</tr>
+</table>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_menu_image" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+img
+{
+filter:gray()
+}
+</style>
+
+<script type="text/javascript">
+function color(elmnt)
+{
+elmnt.style.filter=false
+}
+
+function gray(elmnt)
+{
+elmnt.style.filter="gray()"
+}
+</script>
+
+</head>
+<body>
+
+请把鼠标移动到图像链接上：
+<p>
+<a href="../i/eg_landscape.jpg" >
+<img border="0" onmouseover="color(this)" onmouseout="gray(this)" src="../i/eg_w3school.gif" /><br /></a>
+
+<a href="javascript:if(confirm('http://www.altavista.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://www.altavista.com/'" >
+<img border="0" onmouseover="color(this)" onmouseout="gray(this)" src="../i/eg_altavista.gif" /><br /></a>
+
+<a href="javascript:if(confirm('http://www.yahoo.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://www.yahoo.com/'" >
+<img border="0" onmouseover="color(this)" onmouseout="gray(this)" src="../i/eg_yahoo.gif" /></a>
+</p>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_menu_slide" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+body{font-family:arial;}
+table{background:black;position:absolute;}
+a{color:black;text-decoration:none;font:bold}
+a:hover{color:#606060}
+td.menu{background:lightblue}
+
+table.topnav
+{
+font-size:80%;
+top:0;
+left:0;
+}
+
+table.menu
+{
+font-size:100%;
+bottom:0;
+z-index:-1;
+
+}
+</style>
+<script type="text/javascript">
+var i=0
+var intHide
+
+function show()
+{
+if (i>-100)
+	{
+	i=i-1
+	document.all("menu").style.bottom=i
+	}
+}
+
+function showmenu()
+{
+clearInterval(intHide)
+intShow=setInterval("show()",10)
+}
+
+function hide()
+{
+if (i<0)
+	{
+	i=i+1
+	document.all("menu").style.bottom=i
+	}
+}
+
+function hidemenu()
+{
+clearInterval(intShow)
+intHide=setInterval("hide()",10)
+}
+</script>
+</head>
+<body>
+
+<table class="topnav" width="150">
+ <tr bgcolor="#FF8080">
+  <td onmouseover="showmenu()" onmouseout="hidemenu()">
+   <a href="../i/eg_landscape.jpg" > MENU</a><br />
+   <table class="menu" id="menu" width="100%">
+   <tr><td class="menu"><a href="../html/index.asp.htm" >HTML</a></td></tr>
+   <tr><td class="menu"><a href="../xhtml/index.asp.htm" >XHTML</a></td></tr>
+   <tr><td class="menu"><a href="../css/index.asp.htm" >CSS</a></td></tr>
+   <tr><td class="menu"><a href="../xml/index.asp.htm" >XML</a></td></tr>
+   <tr><td class="menu"><a href="../xsl/index.asp.htm" >XSL</a></td></tr>
+   </table>
+  </td>
+ </tr>
+</table>
+
+<br />
+<p>请把鼠标移动到 MENU 上，就可以看到菜单的选项。</p>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_menu_slide2" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+body{font-family:arial;}
+table{background:black;position:absolute;}
+a{color:black;text-decoration:none;font:bold}
+a:hover{color:#606060}
+td.menu{background:lightgreen}
+table.topnav{font-size:80%;top:0;left:0}
+table.menu{font-size:100%;bottom:0;z-index:-1}
+</style>
+<script type="text/javascript">
+var i=0
+var c=0
+var intHide
+function show_hide_menu()
+{
+if (c==0)
+	{
+	clearInterval(intHide)
+	intShow=setInterval("show()",10)
+	c=1
+	}
+else
+	{
+	clearInterval(intShow)
+	intHide=setInterval("hide()",10)
+	c=0
+	}
+}
+function show()
+{
+if (i>-100)
+	{
+	i=i-1
+	document.all("menu").style.bottom=i
+	}
+}
+function hide()
+{
+if (i<0)
+	{
+	i=i+1
+	document.all("menu").style.bottom=i
+	}
+}
+</script>
+
+</head>
+<body>
+
+<table class="topnav" width="150">
+<tr>
+<td bgcolor="#FF0000" onclick="show_hide_menu()">
+<b>MENU</b><br />
+<table class="menu" id="menu" width="100%">
+<tr><td class="menu"><a href="../html/index.asp.htm" >HTML</a></td></tr>
+<tr><td class="menu"><a href="../xhtml/index.asp.htm" >XHTML</a></td></tr>
+<tr><td class="menu"><a href="../css/index.asp.htm" >CSS</a></td></tr>
+<tr><td class="menu"><a href="../xml/index.asp.htm" >XML</a></td></tr>
+<tr><td class="menu"><a href="../xsl/index.asp.htm" >XSL</a></td></tr>
+</table>
+</td>
+</tr>
+</table>
+
+<p>请点击 MENU，您会看到菜单的选项。</p>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_menu_slidehorizontal" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+body{font-family:arial;}
+a{color:black;text-decoration:none;font:bold}
+a:hover{color:#606060}
+td.menu{background:lightblue}
+
+table.nav
+{
+background:black;
+position:relative;
+font: bold 80% arial;
+top:0px;
+left:-135px;
+}
+</style>
+<script type="text/javascript">
+var i=-135
+var intHide
+var speed=3
+function showmenu()
+{
+clearInterval(intHide)
+intShow=setInterval("show()",10)
+}
+function hidemenu()
+{
+clearInterval(intShow)
+intHide=setInterval("hide()",10)
+}
+function show()
+{
+if (i<-12)
+	{
+	i=i+speed
+	document.getElementById('myMenu').style.left=i
+	}
+}
+function hide()
+{
+if (i>-135)
+	{
+	i=i-speed
+	document.getElementById('myMenu').style.left=i
+	}
+}
+</script>
+</head>
+
+<body>
+<table id="myMenu" class="nav" width="150" onmouseover="showmenu()" onmouseout="hidemenu()">
+<tr><td class="menu"><a href="../index.html" >HOME</a></td>
+<td rowspan="5" align="center" bgcolor="#FF8080">M<br />E<br />N<br />U</td></tr>
+<tr><td class="menu"><a href="../asp/index.asp.htm" >ASP</a></td></tr>
+<tr><td class="menu"><a href="../js/index.asp.htm" >JavaScript</a></td></tr>
+<tr><td class="menu"><a href="../dhtml/index.asp.htm" >DHTML</a></td></tr>
+<tr><td class="menu"><a href="../vbscript/index.asp.htm" >VBScript</a></td></tr>
+</table>
+
+<p>请把鼠标移动到 MENU，可以显示这个菜单。</p>
+<p>可以尝试修改脚本中的 "speed" 变量，来改变菜单的滑动速度。</p>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_menu_slidehorizontal2" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+body{font-family:arial;}
+a{color:black;text-decoration:none;font:bold}
+a:hover{color:#606060}
+td.menu{background:lightblue}
+
+table.nav
+{
+background:black;
+position:relative;
+font: bold 80% arial;
+top:0px;
+left:-135px;
+margin-left:3px;
+}
+</style>
+<script type="text/javascript">
+var i=-135
+var c=0
+var intHide
+var speed=3
+function show_hide_menu()
+{
+if (c==0)
+	{
+	c=1
+	clearInterval(intHide)
+	intShow=setInterval("show()",10)
+	}
+else
+	{
+	c=0
+	clearInterval(intShow)
+	intHide=setInterval("hide()",10)
+	}
+}
+function show()
+{
+if (i<-12)
+	{
+	i=i+speed
+	document.getElementById('myMenu').style.left=i
+	}
+}
+function hide()
+{
+if (i>-135)
+	{
+	i=i-speed
+	document.getElementById('myMenu').style.left=i
+	}
+}
+</script>
+</head>
+
+<body>
+<table id="myMenu" class="nav" width="150" onclick="show_hide_menu()">
+<tr><td class="menu"><a href="../index.html" >HOME</a></td>
+<td rowspan="5" align="center" bgcolor="#FF8080">M<br />E<br />N<br />U</td></tr>
+<tr><td class="menu"><a href="../asp/index.asp.htm" >ASP</a></td></tr>
+<tr><td class="menu"><a href="../js/index.asp.htm" >JavaScript</a></td></tr>
+<tr><td class="menu"><a href="../dhtml/index.asp.htm" >DHTML</a></td></tr>
+<tr><td class="menu"><a href="../vbscript/index.asp.htm" >VBScript</a></td></tr>
+</table>
+
+<p>请点击 MENU，来显示这个菜单。</p>
+<p>可以尝试修改脚本中的 "speed" 变量，来改变菜单的滑动速度。</p>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_move" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+img
+{
+position:relative;
+}
+</style>
+<script type="text/javascript">
+mouseover=true
+function coordinates()
+{
+if (!moveMe)
+	{
+	return
+	}
+if (event.srcElement.id=="moveMe")
+	{
+	mouseover=true
+	pleft=document.getElementById('moveMe').style.pixelLeft
+	ptop=document.getElementById('moveMe').style.pixelTop
+	xcoor=event.clientX
+	ycoor=event.clientY
+	document.onmousemove=moveImage
+	}
+}
+
+function moveImage()
+{
+if (mouseover&&event.button==1)
+	{
+	document.getElementById('moveMe').style.pixelLeft=pleft+event.clientX-xcoor
+	document.getElementById('moveMe').style.pixelTop=ptop+event.clientY-ycoor
+	return false
+	}
+}
+
+function mouseup()
+{
+mouseover=false
+}
+document.onmousedown=coordinates
+document.onmouseup=mouseup
+</script>
+</head>
+<body>
+<img id="moveMe" src="../i/eg_smile.gif" /><br />
+<b>请拖动这幅图像。</b>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_noright" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function disable()
+{
+if (event.button == 2)
+{
+alert("对不起，不允许在页面上使用右键。\n现在您无法查看源代码，\n也不能盗取图像。")
+}
+}
+
+</script>
+</head>
+<body onmousedown="disable()">
+<p>在页面点击鼠标右键可以触发该事件。</p>
+<p>请注意，这个事件无法保证别人不会查看页面源代码或者盗取图片。</p>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter4" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter4.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter4.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter400" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter400.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter400.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter401" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter401.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter401.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter402" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter402.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter402.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter403" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter403.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter403.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter404" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter404.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter404.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter405" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter405.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter405.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter406" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter406.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter406.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter407" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter407.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter407.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter408" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter408.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter408.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter409" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter409.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter409.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter410" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter410.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter410.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter411" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter411.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter411.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter412" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter412.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter412.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter413" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter413.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter413.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter414" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter414.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter414.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter415" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter415.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter415.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter416" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter416.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter416.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter417" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter417.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter417.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter418" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter418.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter418.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter419" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter419.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter419.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter420" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter420.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter420.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter421" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter421.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter421.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter422" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter422.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter422.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_pageenter423" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function page_enter()
+{
+window.location="../example/dhtm/demo_pageenter423.html"/*tpa=http://w3school.com.cn/example/dhtm/demo_pageenter423.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="page_enter()" value="Show Page Enter Effect">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_position_absolute" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+h1.x
+{
+position:absolute;
+left:100px;
+top:150px;
+}
+</style>
+</head>
+
+<body>
+
+<h1 class="x">这是一个标题</h1>
+
+<p>通过绝对定位，可以把元素放置页面的任何位置。</p>
+
+<p>这个标题的 LEFT 位置距离页面左侧 100 像素。TOP 位置距离页面顶端 150 个像素。</p>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_position_relative" style="visibility:hidden">
+<textarea name="c">
+<html>
+
+<head>
+<style>
+h1.ex1
+{
+position:relative;
+left:20px;
+}
+h1.ex2
+{
+position:relative;
+left:-20px;
+}
+</style>
+</head>
+
+<body>
+<h1>Normal Heading</h1>
+<h1 class="ex1">Heading +20</h1>
+<h1 class="ex2">Heading -20</h1>
+
+<p>相对定位相对于元素的正常位置对其进行移动。</p>
+<p>"left:20" 给元素的 LEFT 位置增加 20 像素。</p>
+<p>"left:-20" 从元素的 LEFT 位置减去 20 像素。</p>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_position_relativeall" style="visibility:hidden">
+<textarea name="c">
+<html>
+
+<head>
+<style>
+h1
+{
+position:relative;
+left:40px;
+}
+</style>
+</head>
+
+<body>
+<h1>标题 A</h1>
+<p>这是段落。这是段落。这是段落。这是段落。这是段落。</p>
+<h1>标题 B</h1>
+<p>这是段落。这是段落。这是段落。这是段落。这是段落。</p>
+<h1>标题 C</h1>
+<p>这是段落。这是段落。这是段落。这是段落。这是段落。</p>
+<h1>标题 D</h1>
+<p>这是段落。这是段落。这是段落。这是段落。这是段落。</p>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_randombanner" style="visibility:hidden">
+<textarea name="c">
+<html>
+<body>
+
+<script type="text/javascript">
+image0="/i/eg_banner_w3school.gif"
+href0="/index.html"
+alt0="W3School.com.cn"
+
+image1="/i/eg_banner_htmlref.gif"
+href1="/chrX/nofile/123tags/index.asp"
+alt1="HTML 4.01 / XHTML 1.0 参考手册"
+
+image2="/i/eg_banner_jsref.gif"
+href2="/chrX/nofile/123js//js/js_reference.asp"
+alt2="JavaScript 参考手册"
+
+len=3
+
+now=new Date()
+now=now.getSeconds()
+rnd=now%len
+
+image=eval("image"+rnd)
+href=eval("href"+rnd)
+alt=eval("alt"+rnd)
+
+document.write("<a href='" + href + "'>")
+document.write("<img src='" + image + "' alt='" + alt + "'></a>")
+</script>
+
+<h3>请刷新该页面，您会看到广告条的变化。</h3>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_scrolltext" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+span
+{
+font:12px arial;
+background:#CCCCCC;
+position:absolute;
+width:100;
+height:500;
+top:100;
+clip:rect(0 100 100 0);
+}
+</style>
+<script type="text/javascript">
+var interval
+startPosition=0
+topPosition=100
+endPosition=100
+speed=50
+
+function scrollit()
+{
+if (startPosition!=200)
+	{
+	startPosition=startPosition+1
+	topPosition=topPosition-1
+	document.getElementById('display').style.clip="rect(" + (startPosition + 1) + " 100 " + (startPosition + endPosition) + " 0)"
+	document.getElementById('display').style.top=topPosition
+	interval=setTimeout("scrollit()",speed)
+	}
+else
+	{
+	startPosition=0
+	topPosition=100
+	endPosition=100
+	interval=setTimeout("scrollit()",speed)
+	}
+}
+
+function stopinterval()
+{
+clearTimeout(interval)
+}
+</script>
+</head>
+
+<body onload="scrollit()" onunload="stopinterval()">
+<span id="display"><br /><br /><br /><br /><br /><br /><br />
+开发者们，你们好。这段脚本制作了一个滚动文本。请访问： W3School.com.cn
+</span>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_shadowlink" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+a
+{
+color:black;
+height:25px;
+font:bold;
+text-decoration:none;
+}
+</style>
+<script type="text/javascript">
+function dropshadow()
+{
+document.getElementById('myLink').style.filter="shadow()"
+}
+function back()
+{
+document.getElementById('myLink').style.filter=false
+}
+</script>
+</head>
+
+<body>
+<a href="../index.html" id="myLink" onmouseover="dropshadow()" onmouseout="back()">请把鼠标移动到链接上</h1>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_spacing" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+a:hover
+{
+letter-spacing: 2;
+}
+</style>
+</head>
+
+<body>
+<a href="../index.html" >Mouse over this link</a> 
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_textsize" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+
+<script type="text/javascript">
+txtsize=0
+maxsize=100
+
+function writemsg()
+{
+if (txtsize<maxsize)
+	{
+	document.getElementById('msg').style.fontSize=txtsize
+	txtsize++
+	timer=setTimeout("writemsg()",10)
+	}
+}
+
+function stoptimer()
+{
+clearTimeout(timer)
+}
+</script>
+</head>
+<body onload="writemsg()" onunload="stoptimer()">
+<p id="msg">W3School.com.cn!</p>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_timeimage" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function getDigits()
+{
+num=new Array("/i/eg_0fdr.gif","/i/eg_1fdr.gif","/i/eg_2fdr.gif","/i/eg_3fdr.gif","/i/eg_4fdr.gif","/i/eg_5fdr.gif","/i/eg_6fdr.gif","/i/eg_7fdr.gif","/i/eg_8fdr.gif","/i/eg_9fdr.gif")
+time=new Date()
+hour=time.getHours()
+if (hour<10)
+	{
+	document.getElementById('hour1').src=num[0]
+	h2="'" + hour + "'"
+	h2=h2.charAt(1)
+	document.getElementById('hour2').src=num[h2]
+	}
+else
+	{
+	h1="'" + hour + "'"
+	h1=h1.charAt(1)
+	document.getElementById('hour1').src=num[h1]
+	h2="'" + hour + "'"
+	h2=h2.charAt(2)
+	document.getElementById('hour2').src=num[h2]
+	}
+minute=time.getMinutes()
+if (minute<10)
+	{
+	document.getElementById('minute1').src=num[0]
+	m2="'" + minute + "'"
+	m2=m2.charAt(1)
+	document.getElementById('minute2').src=num[m2]
+	}
+else
+	{
+	m1="'" + minute + "'"
+	m1=m1.charAt(1)
+	document.getElementById('minute1').src=num[m1]
+	m2="'" + minute + "'"
+	m2=m2.charAt(2)
+	document.getElementById('minute2').src=num[m2]
+	}
+second=time.getSeconds()
+if (second<10)
+	{
+	document.getElementById('second1').src=num[0]
+	s2="'" + second + "'"
+	s2=s2.charAt(1)
+	document.getElementById('second2').src=num[s2]
+	}
+else
+	{
+	s1="'" + second + "'"
+	s1=s1.charAt(1)
+	document.getElementById('second1').src=num[s1]
+	s2="'" + second + "'"
+	s2=s2.charAt(2)
+	document.getElementById('second2').src=num[s2]
+	}
+}
+function showTime()
+{
+timer=setTimeout("getDigits()",10)
+interval=setInterval("getDigits()",1000)
+}
+function stopInterval()
+{
+clearTimeout(timer)
+clearInterval(interval)
+}
+</script>
+</head>
+
+<body onload="showTime()" onunload="stopInterval()" bgcolor="#000000">
+<img id="hour1" />
+<img id="hour2" />
+<img id="minute1" />
+<img id="minute2" />
+<img id="second1" />
+<img id="second2" />
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_typewriter" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+
+<script type="text/javascript">
+message="最好的学习方法，是学习实例。-www.W3School.com.cn"
+pos=0
+maxlength=message.length+1
+
+function writemsg()
+{
+if (pos<maxlength)
+	{
+	txt=message.substring(pos,0)
+	document.forms[0].msgfield.value=txt
+	pos++ 
+	timer=setTimeout("writemsg()", 50)
+	}
+}
+function stoptimer()
+{
+clearTimeout(timer)
+}
+</script>
+</head>
+
+<body onload="writemsg()" onunload="stoptimer()">
+<form>
+<input id="msgfield" size="65">
+</form>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_ucase" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+a:hover
+{
+text-transform:uppercase;
+}
+</style>
+</head>
+
+<body>
+<a href="../index.html" >Mouse over this link</a> 
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_visibility" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+h1.one
+{
+visibility:visible;
+}
+h1.two
+{
+visibility:hidden;
+}
+</style>
+</head>
+<body>
+
+<h1 class="one">标题 一</h1>
+<h1 class="two">标题 二</h1>
+
+<p>标题二在哪儿？</p>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_wavelink" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+a
+{
+color:black;
+width:170;
+font:bold;
+text-decoration:none;
+}
+</style>
+<script type="text/javascript">
+var i
+function wave()
+{
+i=0
+interval=setInterval("makewave(myLink)",10)
+}
+
+function back()
+{
+clearInterval(interval)
+document.getElementById('myLink').style.filter=false
+}
+
+function makewave()
+{
+i++
+if (i<5)
+	{
+	document.getElementById('myLink').style.filter="wave(add=true, freq=1, lightstrength=3, phase=0, strength=" + i + ")"
+	}
+	
+else if (window.interval)
+	{
+	clearInterval(interval)
+	}
+}
+</script>
+</head>
+
+<body>
+<a href="../index.html" id="myLink" onmouseover="wave()" onmouseout="back()">请把鼠标移动到链接上</a>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_xray" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<style>
+img
+{
+filter:xray()
+}
+</style>
+<script type="text/javascript">
+function getFilter()
+{
+document.getElementById('myImage').style.filter="xray()"
+}
+function noFilter()
+{
+document.getElementById('myImage').style.filter=false
+}
+</script>
+</head>
+
+<body>
+<p>本例演示 xray 滤镜：</p>
+<p>请把图像移动到下面的图像上：</p>
+<img id="myImage" src="../i/eg_landscape.jpg" onmouseover="noFilter()" onmouseout="getFilter()" />
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_xycursor" style="visibility:hidden">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function show_coords(event)
+{
+x=event.clientX
+y=event.clientY
+alert("X 坐标: " + x + ", Y 坐标: " + y)
+}
+</script>
+</head>
+
+<body onmousedown="show_coords(event)">
+<p>请在文档中点击。提示框会显示出指针的 x 和 y 坐标。</p>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_zindex1" style="visibility:hidden">
+<textarea name="c">
+<html>
+
+<head>
+<style>
+img.x
+{
+position:absolute;
+left:0px;
+top:0px;
+z-index:1;
+}
+</style>
+</head>
+
+<body>
+
+<h1>这是一个标题</h1>
+<img class="x" src="../i/eg_bulbon.gif" /> 
+
+<p>默认 z-index 是 0。Z-index 1 有更高的优先级。</p>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_dhtm_zindex2" style="visibility:hidden">
+<textarea name="c">
+<html>
+
+<head>
+<style>
+img.x
+{
+position:absolute;
+left:0px;
+top:0px;
+z-index:-1;
+}
+</style>
+</head>
+
+<body>
+
+<h1>这是一个标题</h1>
+<img class="x" src="../i/eg_bulbon.gif" /> 
+
+<p>默认 z-index 是 0。Z-index -1 有更低的优先级。</p>
+
+</body>
+</html>
+</textarea>
+</iframe>
+

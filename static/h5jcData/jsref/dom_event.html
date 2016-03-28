@@ -1,0 +1,277 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML DOM Event 对象</h1>
+
+<h2>Event 对象</h2>
+<p>Event 对象代表事件的状态，比如事件在其中发生的元素、键盘按键的状态、鼠标的位置、鼠标按钮的状态。</p>
+<p>事件通常与函数结合使用，函数不会在事件发生前被执行！</p>
+
+<h2>事件句柄　(Event Handlers)</h2>
+<p>下面是一个属性列表，可将之插入 HTML 标签以定义事件的行为。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:30%">属性</th>
+    <th>此事件发生在何时...</th>
+  </tr>
+
+  <tr>
+	<td><a target="_top" href="event_onabort.htm" >onabort</a></td>
+	<td>图像的加载被中断。</td>
+  </tr>
+
+  <tr>
+	<td><a target="_top" href="event_onblur.htm" >onblur</a></td>
+	<td>元素失去焦点。</td>
+  </tr>
+
+  <tr>
+	<td><a target="_top" href="event_onchange.htm" >onchange</a></td>
+	<td>域的内容被改变。</td>
+  </tr>
+
+  <tr>
+	<td><a target="_top" href="event_onclick.htm" >onclick</a></td>
+	<td>当用户点击某个对象时调用的事件句柄。</td>
+  </tr>
+
+  <tr>
+	<td><a target="_top" href="event_ondblclick.htm" >ondblclick</a></td>
+	<td>当用户双击某个对象时调用的事件句柄。</td>
+  </tr>
+
+  <tr>
+	<td><a target="_top" href="event_onerror.htm" >onerror</a></td>
+	<td>在加载文档或图像时发生错误。</td>
+  </tr>
+
+  <tr>
+	<td><a target="_top" href="event_onfocus.htm" >onfocus</a></td>
+	<td>元素获得焦点。</td>
+  </tr>
+
+  <tr>
+	<td><a target="_top" href="event_onkeydown.htm" >onkeydown</a></td>
+	<td>某个键盘按键被按下。</td>
+  </tr>
+
+  <tr>
+	<td><a target="_top" href="event_onkeypress.htm" >onkeypress</a></td>
+	<td>某个键盘按键被按下并松开。</td>
+  </tr>
+
+  <tr>
+	<td><a target="_top" href="event_onkeyup.htm" >onkeyup</a></td>
+	<td>某个键盘按键被松开。</td>
+  </tr>
+
+  <tr>
+	<td><a target="_top" href="event_onload.htm" >onload</a></td>
+	<td>一张页面或一幅图像完成加载。</td>
+  </tr>
+
+  <tr>
+	<td><a target="_top" href="event_onmousedown.htm" >onmousedown</a></td>
+	<td>鼠标按钮被按下。</td>
+  </tr>
+
+  <tr>
+	<td><a href="event_onmousemove.htm" >onmousemove</a></td>
+	<td>鼠标被移动。</td>
+  </tr>
+
+  <tr>
+	<td><a target="_top" href="event_onmouseout.htm" >onmouseout</a></td>
+	<td>鼠标从某元素移开。</td>
+  </tr>
+
+  <tr>
+	<td><a target="_top" href="event_onmouseover.htm" >onmouseover</a></td>
+	<td>鼠标移到某元素之上。</td>
+  </tr>
+
+  <tr>
+	<td><a target="_top" href="event_onmouseup.htm" >onmouseup</a></td>
+	<td>鼠标按键被松开。</td>
+  </tr>
+
+  <tr>
+	<td><a target="_top" href="event_onreset.htm" >onreset</a></td>
+	<td>重置按钮被点击。</td>
+  </tr>
+
+  <tr>
+	<td><a target="_top" href="event_onresize.htm" >onresize</a></td>
+	<td>窗口或框架被重新调整大小。</td>
+  </tr>
+
+  <tr>
+	<td><a target="_top" href="event_onselect.htm" >onselect</a></td>
+	<td>文本被选中。</td>
+  </tr>
+
+  <tr>
+	<td><a target="_top" href="event_onsubmit.htm" >onsubmit</a></td>
+	<td>确认按钮被点击。</td>
+  </tr>
+
+  <tr>
+	<td><a target="_top" href="event_onunload.htm" >onunload</a></td>
+	<td>用户退出页面。</td>
+  </tr>
+</table>
+
+<h2>鼠标 / 键盘属性</h2>
+<table class="dataintable">
+  <tr>
+    <th style="width:30%">属性</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td><a href="event_altkey.htm" >altKey</a></td>
+    <td>返回当事件被触发时，&quot;ALT&quot; 是否被按下。</td>
+  </tr>
+  <tr>
+    <td><a href="event_button.htm" >button</a></td>
+    <td>返回当事件被触发时，哪个鼠标按钮被点击。</td>
+  </tr>
+  <tr>
+    <td><a href="event_clientx.htm" >clientX</a></td>
+    <td>返回当事件被触发时，鼠标指针的水平坐标。</td>
+  </tr>
+  <tr>
+    <td><a href="event_clienty.htm" >clientY</a></td>
+    <td>返回当事件被触发时，鼠标指针的垂直坐标。</td>
+  </tr>
+  <tr>
+    <td><a href="event_ctrlkey.htm" >ctrlKey</a></td>
+    <td>返回当事件被触发时，&quot;CTRL&quot; 键是否被按下。</td>
+  </tr>
+  <tr>
+    <td><a href="event_metakey.htm" >metaKey</a></td>
+    <td>返回当事件被触发时，&quot;meta&quot; 键是否被按下。</td>
+  </tr>
+  <tr>
+    <td><a href="event_relatedtarget.htm" >relatedTarget</a></td>
+    <td>返回与事件的目标节点相关的节点。</td>
+  </tr>
+  <tr>
+    <td><a href="event_screenx.htm" >screenX</a></td>
+    <td>返回当某个事件被触发时，鼠标指针的水平坐标。</td>
+  </tr>
+  <tr>
+    <td><a href="event_screeny.htm" >screenY</a></td>
+    <td>返回当某个事件被触发时，鼠标指针的垂直坐标。</td>
+  </tr>
+  <tr>
+    <td><a href="event_shiftkey.htm" >shiftKey</a></td>
+    <td>返回当事件被触发时，&quot;SHIFT&quot; 键是否被按下。</td>
+  </tr>
+</table>
+
+<h2>IE 属性</h2>
+<p>除了上面的鼠标/事件属性，IE 浏览器还支持下面的属性：</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:30%">属性</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+		<td>cancelBubble</td>
+		<td>如果事件句柄想阻止事件传播到包容对象，必须把该属性设为 true。</td>
+  </tr>
+  <tr>
+		<td>fromElement</td>
+		<td>对于 mouseover 和 mouseout 事件，fromElement 引用移出鼠标的元素。</td>
+  </tr>
+  <tr>
+		<td>keyCode</td>
+		<td>对于 keypress 事件，该属性声明了被敲击的键生成的 Unicode 字符码。对于 keydown 和 keyup 事件，它指定了被敲击的键的虚拟键盘码。虚拟键盘码可能和使用的键盘的布局相关。</td>
+  </tr>
+  <tr>
+		<td>offsetX,offsetY</td>
+		<td>发生事件的地点在事件源元素的坐标系统中的 x 坐标和 y 坐标。</td>
+  </tr>
+  <tr>
+		<td>returnValue</td>
+		<td>如果设置了该属性，它的值比事件句柄的返回值优先级高。把这个属性设置为 fasle，可以取消发生事件的源元素的默认动作。</td>
+  </tr>
+  <tr>
+		<td>srcElement</td>
+		<td>对于生成事件的 Window 对象、Document 对象或 Element 对象的引用。</td>
+  </tr>
+  <tr>
+		<td>toElement</td>
+		<td>对于 mouseover 和 mouseout 事件，该属性引用移入鼠标的元素。</td>
+  </tr>
+  <tr>
+		<td>x,y</td>
+		<td>事件发生的位置的 x 坐标和 y 坐标，它们相对于用CSS动态定位的最内层包容元素。</td>
+  </tr>
+</table>
+
+<h2>标准 Event 属性</h2>
+<p>下面列出了 2 级 DOM 事件标准定义的属性。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:30%">属性</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td><a href="event_bubbles.htm" >bubbles</a></td>
+    <td>返回布尔值，指示事件是否是起泡事件类型。</td>
+  </tr>
+  <tr>
+    <td><a href="event_cancelable.htm" >cancelable</a></td>
+    <td>返回布尔值，指示事件是否可拥可取消的默认动作。</td>
+  </tr>
+  <tr>
+    <td><a href="event_currenttarget.htm" >currentTarget</a></td>
+    <td>返回其事件监听器触发该事件的元素。</td>
+  </tr>
+  <tr>
+    <td><a href="event_eventphase.htm" >eventPhase</a></td>
+    <td>返回事件传播的当前阶段。</td>
+  </tr>
+  <tr>
+    <td><a href="event_target.htm" >target</a></td>
+    <td>返回触发此事件的元素（事件的目标节点）。</td>
+  </tr>
+  <tr>
+    <td><a href="event_timestamp.htm" >timeStamp</a></td>
+    <td>返回事件生成的日期和时间。</td>
+  </tr>
+  <tr>
+    <td><a href="event_type.htm" >type</a></td>
+    <td>返回当前 Event 对象表示的事件的名称。</td>
+  </tr>
+</table>
+
+<h2>标准 Event 方法</h2>
+<p>下面列出了 2 级 DOM 事件标准定义的方法。IE 的事件模型不支持这些方法：</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:30%">方法</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td><a href="event_initevent.htm" >initEvent()</a></td>
+    <td>初始化新创建的 Event 对象的属性。</td>
+  </tr>
+  <tr>
+    <td><a href="event_preventdefault.htm" >preventDefault()</a></td>
+    <td>通知浏览器不要执行与事件关联的默认动作。</td>
+  </tr>
+  <tr>
+    <td class="no_wrap"><a href="event_stoppropagation.htm" >stopPropagation()</a></td>
+    <td>不再派发事件。</td>
+  </tr>
+</table>
+
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,80 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;table&gt; 标签的 rules 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_table.htm" >HTML &lt;table&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>下面的例子规定只有行之间的边框是可见的：</p>
+
+<pre>
+&lt;table <code>rules=&quot;rows&quot;</code>&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Month&lt;/th&gt;
+    &lt;th&gt;Savings&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;January&lt;/td&gt;
+    &lt;td&gt;$100&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_table_rules')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>rules 属性规定内侧边框的哪个部分是可见的。</p>
+<p>从实用角度出发，最好不要规定 rules，而是使用 CSS 来添加<a href="../css/css_border_outline.htm"  title="CSS 边框">边框样式</a>。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;body rules=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable"> 
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>none</td>
+    <td>没有线条。</td>
+  </tr>
+  <tr>
+    <td>groups</td>
+    <td>位于行组和列组之间的线条。</td>
+  </tr>
+	<tr>
+    <td>rows</td>
+    <td>位于行之间的线条。</td>
+  </tr>
+	<tr>
+    <td>cols</td>
+    <td>位于列之间的线条。</td>
+  </tr>
+  <tr>
+    <td>all</td>
+    <td>位于行和列之间的线条。</td>
+  </tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_table.htm" >HTML &lt;table&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

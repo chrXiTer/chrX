@@ -1,0 +1,76 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript toString() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_number.htm"  title="JavaScript Number 对象">JavaScript Number 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>toString() 方法可把一个 Number 对象转换为一个字符串，并返回结果。</p>
+
+<h3>语法</h3>
+<pre>NumberObject.toString(radix)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>radix</td>
+    <td>可选。规定表示数字的基数，使 2 ~ 36 之间的整数。若省略该参数，则使用基数 10。但是要注意，如果该参数是 10 以外的其他值，则 ECMAScript 标准允许实现返回任意值。</td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+<p>数字的字符串表示。例如，当 radix 为 2 时，NumberObject 会被转换为二进制值表示的字符串。</p>
+
+<h3>抛出</h3>
+<p>当调用该方法的对象不是 Number 时抛出 TypeError 异常。</p>
+</div>
+	
+<div>
+<h2>实例</h2>
+<p>在本例中，我们将把一个数字转换为字符串：</p>
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+
+var number = new Number(1337);
+document.write (number.toString())
+
+&lt;/script&gt;</pre>
+<p>输出：</p>
+<pre>1337</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+<dl>
+<dt><a href="javascript:tiy.run('jseg_tostring_number')" >toString()</a></dt>
+<dd>如何使用 toString() 来把数字转换为字符串。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_number.htm"  title="JavaScript Number 对象">JavaScript Number 对象</a></p>
+</div>
+
+<div id="toc">
+<h2>课外书</h2>
+
+<p>如需更多有关类型转换的知识，请阅读 JavaScript 高级教程中的相关内容：</p>
+
+<dl>
+<dt><a href="../js/pro_js_typeconversion.htm"  title="ECMAScript 类型转换">ECMAScript 类型转换</a></dt>
+<dd>本节讲解了 ECMAScript 提供的类型转换方法，以及如何进行强制类型转换。</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

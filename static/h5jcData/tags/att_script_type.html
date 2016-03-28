@@ -1,0 +1,83 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;script&gt; 标签的 type 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_script.htm" >HTML &lt;script&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在 HTML 页面中插入一段 JavaScript：</p>
+
+<pre>
+&lt;script <code>type=&quot;text/javascript&quot;</code>&gt;
+document.write(&quot;Hello World!&quot;)
+&lt;/script&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_script')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>必需的 type 属性规定脚本的 MIME 类型。</p>
+<p>type 属性标识 &lt;script&gt; 和 &lt;/script&gt; 标签之间的内容。</p>
+<p>MIME 类型由两部分组成：媒介类型和子类型。对于 JavaScript，其 MIME 类型是 &quot;text/javascript&quot;。</p>
+</div>
+
+<div>
+<h2 id="type_language">type 和 language 属性</h2>
+
+<p>type 和 language 属性都可用来指定 &lt;script&gt; 标签中的脚本的类型。</p>
+<p>language 属性在 HTML 和 XHTML 标准中受到了非议，这两个标准提倡使用 type 属性。遗憾的是，这两个属性的值是不一样的。</p>
+<p>如果您在使用 JavaScript，可以使用下面两种属性：</p>
+<pre>language = &quot;JavaScript&quot;</pre>
+<p>或者：</p>
+<pre>type = &quot;text/javascript&quot;
+</pre>
+<p>您可能偶尔会看见 language 的值为 VBScript（对 type 而言是 text/vbscript），表示包含的脚本代码是用 Microsoft 的 Visual Basic Script 编写的。</p>
+<p>利用 JavaScript，您还可以使用 language 的值 &quot;JavaScript 1.1&quot;，表示包含的脚本语句只能被 Netscape 3.0 或更新的版本处理。Netscape 2.0 只支持 JavaScript 1.0，而无法处理标记为 &quot;JavaScript 1.1&quot; 的脚本。</p>
+<p class="tip"><span>提示：</span>如果您希望学习有关 JavaScript 和 VBScript 的知识，请访问我们的 <a href="../js/index.htm" >JavaScript 教程</a>和 <a href="../vbscript/index.htm" >VBScript 教程</a>。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;script type=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td><i>MIME_type</i></td>
+    <td>
+	<p>MIME 类型。其中一些值：</p>
+	<ul class="listintable">
+		<li>text/javascript</li>
+		<li>text/ecmascript</li>
+		<li>application/ecmascript</li>
+		<li>application/javascript</li>
+		<li>text/vbscript</li>
+	</ul>
+	</td>
+  </tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_script.htm" >HTML &lt;script&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

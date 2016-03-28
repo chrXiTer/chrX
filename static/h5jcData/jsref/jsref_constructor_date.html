@@ -1,0 +1,73 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript constructor 属性</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>constructor 属性返回对创建此对象的 Date 函数的引用。</p>
+
+<h3>语法</h3>
+
+<pre>object.constructor</pre>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在本例中，我们将展示如何使用 constructor 属性：</p>
+
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+
+var test=new Date();
+
+if (<code>test.constructor==Array</code>)
+{
+document.write(&quot;This is an Array&quot;);
+}
+if (<code>test.constructor==Boolean</code>)
+{
+document.write(&quot;This is a Boolean&quot;);
+}
+if (<code>test.constructor==Date</code>)
+{
+document.write(&quot;This is a Date&quot;);
+}
+if (<code>test.constructor==String</code>)
+{
+document.write(&quot;This is a String&quot;);
+}
+
+&lt;/script&gt;</pre>
+
+<p>输出：</p>
+
+<pre>This is a Date</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('jseg_constructor_date')" >TIY</a></p>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_constructor_date')" >constructor</a></dt>
+<dd>在本例中，我们将展示如何使用 constructor 属性。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

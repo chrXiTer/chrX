@@ -1,0 +1,234 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;img&gt; 标签</h1>
+
+<div>
+<h2>实例</h2>
+
+<p>在下面的例子中，我们在页面中插入一幅 W3School 的工程师在上海鲜花港拍摄的郁金香照片：</p>
+<pre>&lt;img <code>src=&quot;/i/eg_tulip.jpg&quot;</code>  alt=&quot;上海鲜花港 - 郁金香&quot; /&gt;</pre>
+
+<p>以上代码的效果：</p>
+<img src="../i/eg_tulip.jpg"  alt="上海鲜花港 - 郁金香" />
+
+<p class="tiy"><a href="javascript:tiy.run('html_image_test')" >亲自试一试</a></p>
+
+<p>（您可以在页面底部找到更多实例）</p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>img 元素向网页中嵌入一幅图像。</p>
+
+<p>请注意，从技术上讲，&lt;img&gt; 标签并不会在网页中插入图像，而是从网页上链接图像。&lt;img&gt; 标签创建的是被引用图像的占位空间。</p>
+
+<p>&lt;img&gt; 标签有两个必需的属性：<a href="att_img_src.htm" >src 属性</a> 和 <a href="att_img_alt.htm" >alt 属性</a>。</p>
+
+<p class="note"><span>延伸阅读：</span><a href="#how-to-use-image">如何正确地使用图像</a></p>
+</div>
+
+<div>
+<h2>HTML 与 XHTML 之间的差异</h2>
+
+<p>在 HTML 中，&lt;img&gt; 标签没有结束标签。</p>
+
+<p>在 XHTML 中，&lt;img&gt; 标签必须被正确地关闭。</p>
+
+<p>在 HTML 4.01 中，不推荐使用 image 元素的 &quot;align&quot;、&quot;border&quot;、&quot;hspace&quot; 以及 &quot;vspace&quot; 属性。</p>
+
+<p>在 XHTML 1.0 Strict DTD 中，不支持 image 元素的 &quot;align&quot;、&quot;border&quot;、&quot;hspace&quot; 以及 &quot;vspace&quot; 属性。</p>
+</div>
+
+<div>
+<h2>必需的属性</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:20%;">属性</th>
+<th style="width:20%;">值</th>
+<th style="width:60%;">描述</th>
+</tr>
+
+<tr>
+<td><a href="att_img_alt.htm"  title="HTML &lt;img&gt; 标签的 alt 属性">alt</a></td>
+<td><i>text</i></td>
+<td>规定图像的替代文本。</td>
+</tr>
+
+<tr>
+<td><a href="att_img_src.htm"  title="HTML &lt;img&gt; 标签的 src 属性">src</a></td>
+<td><i>URL</i></td>
+<td>规定显示图像的 URL。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>可选的属性</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:20%;">属性</th>
+<th style="width:20%;">值</th>
+<th style="width:60%;">描述</th>
+</tr>
+
+<tr>
+<td><a href="att_img_align.htm"  title="HTML &lt;img&gt; 标签的 align 属性">align</a></td>
+<td>
+<ul>
+<li>top</li>
+<li>bottom</li>
+<li>middle</li>
+<li>left</li>
+<li>right</li>
+</ul>
+</td>
+<td><span class="deprecated">不推荐使用。</span>规定如何根据周围的文本来排列图像。</td>
+</tr>
+
+<tr>
+<td><a href="att_img_border.htm"  title="HTML &lt;img&gt; 标签的 border 属性">border</a></td>
+<td><i>pixels</i></td>
+<td><span class="deprecated">不推荐使用。</span>定义图像周围的边框。</td>
+</tr>
+
+<tr>
+<td><a href="att_img_height-width.htm"  title="HTML &lt;img&gt; 标签的 height 和 width 属性">height</a></td>
+<td>
+<ul>
+<li><i>pixels</i></li>
+<li><i>%</i></li>
+</ul>
+</td>
+<td>定义图像的高度。</td>
+</tr>
+
+<tr>
+<td><a href="att_img_hspace_vspace.htm"  title="HTML &lt;img&gt; 标签的 hspace 和 vspace 属性">hspace</a></td>
+<td><i>pixels</i></td>
+<td><span class="deprecated">不推荐使用。</span>定义图像左侧和右侧的空白。</td>
+</tr>
+
+<tr>
+<td><a href="att_img_ismap.htm"  title="HTML &lt;img&gt; 标签的 ismap 属性">ismap</a></td>
+<td><i>URL</i></td>
+<td>将图像定义为服务器端图像映射。</td>
+</tr>
+
+<tr>
+<td><a href="att_img_longdesc.htm"  title="HTML &lt;img&gt; 标签的 longdesc 属性">longdesc</a></td>
+<td><i>URL</i></td>
+<td>指向包含长的图像描述文档的 URL。</td>
+</tr>
+
+<tr>
+<td><a href="att_img_usemap.htm"  title="HTML &lt;img&gt; 标签的 usemap 属性">usemap</a></td>
+<td><i>URL</i></td>
+<td>将图像定义为客户器端图像映射。</td>
+</tr>
+
+<tr>
+<td><a href="att_img_hspace_vspace.htm"  title="HTML &lt;img&gt; 标签的 hspace 和 vspace 属性">vspace</a></td>
+<td><i>pixels</i></td>
+<td><span class="deprecated">不推荐使用。</span>定义图像顶部和底部的空白。</td>
+</tr>
+
+<tr>
+<td><a href="att_img_height-width.htm"  title="HTML &lt;img&gt; 标签的 height 和 width 属性">width</a></td>
+<td>
+<ul>
+<li><i>pixels</i></li>
+<li><i>%</i></li>
+</ul>
+</td>
+<td>设置图像的宽度。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>全局属性</h2>
+
+<p>&lt;img&gt; 标签支持 <a href="html_ref_standardattributes.htm" >HTML 中的全局属性</a>。</p>
+</div>
+
+<div>
+<h2>事件属性</h2>
+
+<p>&lt;img&gt; 标签支持 <a href="html_ref_eventattributes.htm" >HTML 中的事件属性</a>。</p>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('html_image')" >插入图像</a></dt>
+<dd>本例演示如何在网页中显示图像。</dd>
+
+<dt><a href="javascript:tiy.run('html_image2')" >从不同的位置插入图片</a></dt>
+<dd>本例演示如何将其他文件夹或服务器的图片显示到网页中。</dd>
+
+<dt><a href="javascript:tiy.run('html_backgroundimage')" >背景图片</a></dt>
+<dd>本例演示如何添加背景图片到HTML页面。</dd>
+
+<dt><a href="javascript:tiy.run('html_image_align')" >排列图片</a></dt>
+<dd>本例演示如何在文字中排列图像。</dd>
+
+<dt><a href="javascript:tiy.run('html_image_float')" >浮动图像</a></dt>
+<dd>本例演示如何使图片浮动至段落的左边或右边。</dd>
+
+<dt><a href="javascript:tiy.run('html_image_size')" >调整图像尺寸</a></dt>
+<dd>本例演示如何将图片调整到不同的尺寸。</dd>
+
+<dt><a href="javascript:tiy.run('html_image_alt')" >为图片显示替换文本</a></dt>
+<dd>本例演示如何为图片显示替换文本。在浏览器无法载入图像时，替换文本属性告诉读者她们失去的信息。为页面上的图像都加上替换文本属性是个好习惯。</dd>
+
+<dt><a href="javascript:tiy.run('html_image_link')" >制作图像链接</a></dt>
+<dd>本例演示如何将图像作为一个链接使用。</dd>
+
+<dt><a href="javascript:tiy.run('html_areamap')" >创建图像地图</a></dt>
+<dd>本例显示如何创建带有可供点击区域的图像地图。其中的每个区域都是一个超级链接。</dd></dl>
+</div>
+
+<div id="how-to-use-image">
+<h2>延伸阅读 - 如何正确地使用图像</h2>
+
+<p>HTML 和 XHTML 最引人注目的特征之一，就是能够在文档的文本中包括图像，既可以把图像作为文档的内在对象（内联图像），也可以将其作为一个可通过超链接下载的单独文档，或者作为文档的背景。</p>
+
+<p>合理地在文档内容中加入图像（静态的或者具有动画效果的图标、照片、说明、绘画，等等）时，会使文档变得更加生动活泼，更加引人入胜，而且看上去更加专业，更具信息性并易于浏览。还可以专门使一个图像成为超链接的可视引导图。</p>
+
+<p>然而，如果过度使用图像，文档就会变得支离破碎，混乱不堪，而且无法阅读，用户在下载和查看该页面时，更会增加很多不必要的等待时间。</p>
+
+<p>请阅读下面的文章，学习 Web 上的两种主要图像格式：GIF 和 JPEG，以及如何正确地使用图像：</p>
+
+<ul>
+<li><a href="../media/media_gif.htm"  title="多媒体教程 - GIF 图像">GIF 图像</a></li>
+<li><a href="../media/media_jpeg.htm"  title="多媒体教程 - JPEG 图像">JPEG 图像</a></li>
+<li><a href="../media/media_browserimages.htm"  title="多媒体教程 - 在 Web 上使用图像">在 Web 上使用图像</a></li>
+</ul>
+</div>
+
+<div>
+<h2>参阅</h2>
+
+<ul>
+<li><a href="../html/html_images.htm"  title="HTML 图像">教程：HTML 图像</a></li>
+<li><a href="tag_img.htm"  title="HTML 5 &lt;img&gt; 标签">参考手册：HTML 5 &lt;img&gt; 标签</a></li>
+</ul>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>HTML DOM 参考手册：<a href="../jsref/dom_obj_image.htm"  title="HTML DOM Image 对象">Image 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

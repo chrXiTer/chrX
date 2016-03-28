@@ -1,0 +1,139 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS position 属性</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>position 属性规定元素的定位类型。</p>
+<h3>说明</h3>
+<p>这个属性定义建立元素布局所用的定位机制。任何元素都可以定位，不过绝对或固定元素会生成一个块级框，而不论该元素本身是什么类型。相对定位元素会相对于它在正常流中的默认位置偏移。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;">static</td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>no</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS2</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.position=&quot;absolute&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+<p>定位 h2 元素：</p>
+<pre>
+h2
+  {
+  <code>position:absolute;</code>
+  left:100px;
+  top:150px;
+  }
+</pre>
+<p><a href="../tiy/t.asp-f=csse_position_absolute.htm" >TIY</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有主流浏览器都支持 position 属性。</p>
+<p class="note"><span>注释：</span>任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 &quot;inherit&quot;。</p>
+</div>
+
+<div>
+<h2>可能的值</h2>
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>absolute</td>
+<td>
+<p>生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。</p>
+<p>元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。</p>
+</td>
+</tr>
+
+<tr>
+<td>fixed</td>
+<td>
+<p>生成绝对定位的元素，相对于浏览器窗口进行定位。</p>
+<p>元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。</p>
+</td>
+</tr>
+
+<tr>
+<td>relative</td>
+<td>
+<p>生成相对定位的元素，相对于其正常位置进行定位。</p>
+<p>因此，"left:20" 会向元素的 LEFT 位置添加 20 像素。</p>
+</td>
+</tr>
+
+<tr>
+<td>static</td>
+<td>默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。</td>
+</tr>
+
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 position 属性的值。</td>
+</tr>
+</table>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="../tiy/t.asp-f=csse_position_relative.htm" >定位：相对定位</a></dt>
+<dd>本例演示如何相对于一个元素的正常位置来对其定位。</dd>
+
+<dt><a href="../tiy/t.asp-f=csse_position_absolute.htm" >定位：绝对定位</a></dt>
+<dd>本例演示如何使用绝对值来对元素进行定位。</dd>
+
+<dt><a href="../tiy/t.asp-f=csse_position_fixed.htm" >定位：固定定位</a></dt>
+<dd>本例演示如何相对于浏览器窗口来对元素进行定位。</dd>
+
+<dt><a href="../tiy/t.asp-f=csse_clip.htm" >设置元素的形状</a></dt>
+<dd>本例演示如何设置元素的形状。此元素被剪裁到这个形状内，并显示出来。</dd>
+
+<dt><a href="../tiy/t.asp-f=csse_zindex2.htm" >Z-index</a></dt>
+<dd>Z-index可被用于将在一个元素放置于另一元素之后。</dd>
+
+<dt><a href="../tiy/t.asp-f=csse_zindex1.htm" >Z-index</a></dt>
+<dd>上面的例子中的元素已经更改了Z-index。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+<p>CSS 教程：<a href="css_positioning.htm" title="CSS 定位 (Positioning)">CSS 定位</a></p>
+<p>HTML DOM 参考手册：<a href="../htmldom/prop_style_position.htm" title="HTML DOM position 属性">position 属性</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

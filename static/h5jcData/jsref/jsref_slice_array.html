@@ -1,0 +1,106 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript slice() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_array.htm"  title="JavaScript Array 对象">JavaScript Array 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>slice() 方法可从已有的数组中返回选定的元素。</p>
+
+<h3>语法</h3>
+<pre>arrayObject.slice(start,end)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th class="no_wrap">参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>start</td>
+    <td>必需。规定从何处开始选取。如果是负数，那么它规定从数组尾部开始算起的位置。也就是说，-1 指最后一个元素，-2 指倒数第二个元素，以此类推。</td>
+  </tr>
+  <tr>
+    <td>end</td>
+    <td>可选。规定从何处结束选取。该参数是数组片断结束处的数组下标。如果没有指定该参数，那么切分的数组包含从 start 到数组结束的所有元素。如果这个参数是负数，那么它规定的是从数组尾部开始算起的元素。</td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+<p>返回一个新的数组，包含从 start 到 end （不包括该元素）的 arrayObject 中的元素。</p>
+
+<h3>说明</h3>
+<p>请注意，该方法并不会修改数组，而是返回一个子数组。如果想删除数组中的一段元素，应该使用方法 Array.splice()。</p>
+</div>
+
+<div>
+<h2>提示和注释</h2>
+<p class="note"><span>注释：</span>您可使用负值从数组的尾部选取元素。</p>
+<p class="note"><span>注释：</span>如果 end 未被规定，那么 slice() 方法会选取从 start 到数组结尾的所有元素。</p>
+</div>
+	
+<div>
+<h2>实例</h2>
+<h3>例子 1</h3>
+<p>在本例中，我们将创建一个新数组，然后显示从其中选取的元素：</p>
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+
+var arr = new Array(3)
+arr[0] = &quot;George&quot;
+arr[1] = &quot;John&quot;
+arr[2] = &quot;Thomas&quot;
+
+document.write(arr + &quot;&lt;br /&gt;&quot;)
+document.write(<code>arr.slice(1)</code> + &quot;&lt;br /&gt;&quot;)
+document.write(arr)
+
+&lt;/script&gt;</pre>
+<p>输出：</p>
+<pre>George,John,Thomas
+John,Thomas
+George,John,Thomas</pre>
+
+<h3>例子 2</h3>
+<p>在本例中，我们将创建一个新数组，然后显示从其中选取的元素：</p>
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+
+var arr = new Array(6)
+arr[0] = &quot;George&quot;
+arr[1] = &quot;John&quot;
+arr[2] = &quot;Thomas&quot;
+arr[3] = &quot;James&quot;
+arr[4] = &quot;Adrew&quot;
+arr[5] = &quot;Martin&quot;
+
+document.write(arr + &quot;&lt;br /&gt;&quot;)
+document.write(<code>arr.slice(2,4)</code> + &quot;&lt;br /&gt;&quot;)
+document.write(arr)
+
+&lt;/script&gt;</pre>
+<p>输出：</p>
+<pre>George,John,Thomas,James,Adrew,Martin
+Thomas,James
+George,John,Thomas,James,Adrew,Martin</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+<dl>
+<dt><a href="javascript:tiy.run('jseg_slice_array')" >slice()</a></dt>
+<dd>如何使用 slice() 从已有的数组显示选取的元素。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_array.htm"  title="JavaScript Array 对象">JavaScript Array 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

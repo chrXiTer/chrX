@@ -1,0 +1,58 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript RegExp \W 元字符</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_regexp.htm"  title="JavaScript RegExp 对象">JavaScript RegExp 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>\W 元字符用于查找非单词字符。</p>
+
+<p>单词字符包括：a-z、A-Z、0-9，以及下划线。</p>
+
+<h3>语法</h3>
+
+<pre>new RegExp(&quot;\W&quot;)</pre>
+
+<p>直接量语法：</p>
+
+<pre>/\W/</pre>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+
+<p>所有主流浏览器都支持 \W 元字符。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>对字符串中的非单词字符进行全局搜索：</p>
+
+<pre>
+var str=&quot;Give 100%!&quot;;
+var patt1=<code>/\W/g</code>;
+</pre>
+
+<p>下面被标记的文本显示了表达式获得匹配的位置：</p>
+
+<pre>Give 100<span class="marked">%!</span></pre>
+
+<p class="tiy"><a href="javascript:tiy.run('jseg_regexp_nonwordchar')" >TIY</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_regexp.htm"  title="JavaScript RegExp 对象">JavaScript RegExp 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

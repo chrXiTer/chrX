@@ -1,0 +1,90 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL LAST() 函数</h1>
+
+<div>
+<h2>LAST() 函数</h2>
+
+<p>LAST() 函数返回指定的字段中最后一个记录的值。</p>
+
+<p class="tip"><span>提示：</span>可使用 ORDER BY 语句对记录进行排序。</p>
+
+<h3>SQL LAST() 语法</h3>
+<pre>SELECT LAST(column_name) FROM table_name</pre>
+</div>
+
+<div>
+<h2>SQL LAST() 实例</h2>
+
+<p>我们拥有下面这个 &quot;Orders&quot; 表：</p>
+
+<table class="dataintable">
+  <tr>
+    <th>O_Id</th>
+    <th>OrderDate</th>
+    <th>OrderPrice</th>
+    <th>Customer</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>2008/12/29</td>
+    <td>1000</td>
+    <td>Bush</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>2008/11/23</td>
+    <td>1600</td>
+    <td>Carter</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>2008/10/05</td>
+    <td>700</td>
+    <td>Bush</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>2008/09/28</td>
+    <td>300</td>
+    <td>Bush</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>2008/08/06</td>
+    <td>2000</td>
+    <td>Adams</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>2008/07/21</td>
+    <td>100</td>
+    <td>Carter</td>
+  </tr>
+</table>
+
+<p>现在，我们希望查找 &quot;OrderPrice&quot; 列的最后一个值。</p>
+
+<p>我们使用如下 SQL 语句：</p>
+
+<pre>SELECT LAST(OrderPrice) AS LastOrderPrice FROM Orders</pre>
+
+<p>结果集类似这样：</p>
+
+<table class="dataintable" style="width:30%">
+  <tr>
+    <th>LastOrderPrice</th>
+  </tr>
+  <tr>
+    <td>100</td>
+  </tr>
+</table>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

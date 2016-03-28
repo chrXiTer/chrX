@@ -1,0 +1,54 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML DOM status 属性</h1>
+
+<div class="backtoreference">
+<p><a href="dom_obj_window.htm" >HTML DOM Window 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>status 属性可设置或返回窗口状态栏中的文本。</p>
+	
+<h3>语法</h3>
+<pre>window.status=sometext</pre>
+
+<h3>说明</h3>
+<p>status 属性是一个可读可写的字符串，声明了要在窗口状态栏中显示的一条消息。通常显示这条消息的时间是有限的，直到其他的消息将它覆盖，或者用户把鼠标移动到窗口的其他区域为止。当擦除了 status 声明的消息时，状态栏要么恢复为它默认的空白状态，要么是再次显示出属性 defaultStatus 声明的默认消息。</p>
+
+<p>据我们所知，不少浏览器已经关闭了脚本化它们的状态栏的功能。这是一项安全措施，防止隐藏了超链接真正目的的钓鱼攻击。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+<p>下面的例子讲在状态栏设置文本：</p>
+
+<pre>&lt;html&gt;
+&lt;body&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+window.status=&quot;Some text in the status bar!!&quot;
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+<dl>
+<dt><a href="javascript:tiy.run('hdom_statusbar')" >在窗口的状态栏设置文本</a></dt>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="dom_obj_window.htm" >HTML DOM Window 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

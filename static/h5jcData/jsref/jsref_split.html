@@ -1,0 +1,100 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript split() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_string.htm"  title="JavaScript String 对象">JavaScript String 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>split() 方法用于把一个字符串分割成字符串数组。</p>
+
+<h3>语法</h3>
+<pre>stringObject.split(<i>separator</i>,<i>howmany</i>)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>separator</td>
+    <td>必需。字符串或正则表达式，从该参数指定的地方分割 stringObject。</td>
+  </tr>
+  <tr>
+    <td>howmany</td>
+    <td>可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。</td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+<p>一个字符串数组。该数组是通过在 <i>separator</i> 指定的边界处将字符串 stringObject 分割成子串创建的。返回的数组中的字串不包括 <i>separator</i> 自身。</p>
+<p>但是，如果 <i>separator</i> 是包含子表达式的正则表达式，那么返回的数组中包括与这些子表达式匹配的字串（但不包括与整个正则表达式匹配的文本）。</p>
+</div>
+
+<div>
+<h2>提示和注释</h2>
+<p class="note"><span>注释：</span>如果把空字符串 (&quot;&quot;) 用作 <i>separator</i>，那么 stringObject 中的每个字符之间都会被分割。</p>
+<p class="note"><span>注释：</span>String.split() 执行的操作与 <a href="jsref_join.htm"  title="JavaScript join() 方法">Array.join</a> 执行的操作是相反的。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<h3>例子 1</h3>
+<p>在本例中，我们将按照不同的方式来分割字符串：</p>
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+
+var str=&quot;How are you doing today?&quot;
+
+document.write(str.split(&quot; &quot;) + &quot;&lt;br /&gt;&quot;)
+document.write(str.split(&quot;&quot;) + &quot;&lt;br /&gt;&quot;)
+document.write(str.split(&quot; &quot;,3))
+
+&lt;/script&gt;</pre>
+<p>输出：</p>
+<pre>How,are,you,doing,today?
+H,o,w, ,a,r,e, ,y,o,u, ,d,o,i,n,g, ,t,o,d,a,y,?
+How,are,you</pre>
+
+<h3>例子 2</h3>
+<p>在本例中，我们将分割结构更为复杂的字符串：</p>
+<pre>&quot;2:3:4:5&quot;.split(&quot;:&quot;)	//将返回[&quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;]
+&quot;|a|b|c&quot;.split(&quot;|&quot;)	//将返回[&quot;&quot;, &quot;a&quot;, &quot;b&quot;, &quot;c&quot;]
+</pre>
+
+<h3>例子 3</h3>
+<p>使用下面的代码，可以把句子分割成单词：</p>
+<pre>var words = sentence.split(' ')</pre>
+
+<p>或者使用正则表达式作为 separator：</p>
+<pre>var words = sentence.split(/\s+/)</pre>
+
+<h3>例子 4</h3>
+<p>如果您希望把单词分割为字母，或者把字符串分割为字符，可使用下面的代码：</p>
+<pre>&quot;hello&quot;.split(&quot;&quot;)	//可返回 [&quot;h&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;]</pre>
+
+<p>若只需要返回一部分字符，请使用 howmany 参数：</p>
+<pre>&quot;hello&quot;.split(&quot;&quot;, 3)	//可返回 [&quot;h&quot;, &quot;e&quot;, &quot;l&quot;]</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+<dl>
+<dt><a href="javascript:tiy.run('jseg_split_1')" >split()</a></dt>
+<dd>如何使用 split() 来分割字符串。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_string.htm"  title="JavaScript String 对象">JavaScript String 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

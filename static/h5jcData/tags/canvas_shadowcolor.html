@@ -1,0 +1,93 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 canvas shadowColor 属性</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>绘制一个带有黑色阴影的蓝色矩形：</p>
+
+<canvas id="myCanvas" class="canvas_example">
+Your browser does not support the canvas tag.
+</canvas>
+
+<script type="text/javascript">
+var c=document.getElementById("myCanvas");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+	var ctx=c.getContext("2d");
+    ctx.shadowBlur=20;
+    ctx.shadowColor="black";
+    ctx.fillStyle="blue";
+    ctx.fillRect(20,20,100,80);
+	}
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.shadowBlur=20;
+<code>ctx.shadowColor="black";</code>
+ctx.fillStyle="blue";
+ctx.fillRect(20,20,100,80);
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_shadowcolor')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>shadowColor 属性设置或返回用于阴影的颜色。</p>
+
+<p class="note"><span>注释：</span>请将 shadowColor 属性与 <a href="canvas_shadowblur.htm"  title="HTML5 canvas shadowBlur 属性">shadowBlur</a> 属性一起使用，来创建阴影。</p>
+
+<p class="tip"><span>提示：</span>请通过使用 <a href="canvas_shadowoffsetx.htm"  title="HTML5 canvas shadowOffsetX 属性">shadowOffsetX</a> 和 <a href="canvas_shadowoffsety.htm"  title="HTML5 canvas shadowOffsetY 属性">shadowOffsetY</a> 属性来调节阴影效果。</p>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">默认值：</th>
+<td>#000000</td>
+</tr>
+
+<tr>
+<th>JavaScript 语法：</th>
+<td>context.shadowColor=<i>color</i>;</td>
+</tr>
+</table>
+
+<h3>属性值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>color</i></td>
+<td>用于阴影的 <a href="/chrX/nofile/123cssref/css_colors_legal.asp" vvll="my"  title="CSS 合法颜色值">CSS 颜色值</a>。默认值是 #000000。</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

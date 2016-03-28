@@ -1,0 +1,83 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 &lt;button&gt; formmethod 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_button.htm" >HTML &lt;button&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>覆盖表单 HTTP 方法的按钮：</p>
+
+<pre>
+&lt;form action=&quot;demo_form.asp&quot; method=&quot;get&quot;&gt;
+  First name: &lt;input type=&quot;text&quot; name=&quot;fname&quot; /&gt;
+  Last name: &lt;input type=&quot;text&quot; name=&quot;lname&quot; /&gt;
+&lt;button type=&quot;submit&quot; &gt;提交&lt;/button&gt;
+&lt;button type=&quot;submit&quot; <code>formmethod=&quot;post&quot;</code> formaction=&quot;demo_post.asp&quot;&gt;
+使用 POST 来提交&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_button_formmethod')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>formmethod 属性覆盖 form 元素的 <a href="att_form_method.htm"  title="HTML 5 &lt;form&gt; method 属性">method</a> 属性。</p>
+
+<p>可以通过以下方式发送 form-data ：</p>
+
+<ul>
+<li>以 URL 变量 (使用 method=&quot;get&quot;) 的形式来发送</li>
+<li>以 HTTP post (使用 method=&quot;post&quot;) 的形式来发送</li>
+</ul>
+
+<p>该属性与 type=&quot;submit&quot; 配合使用。</p>
+</div>
+
+<div>
+<h2>HTML 4.01 与 HTML 5 之间的差异</h2>
+
+<p>formmethod 属性是 HTML 5 中的新属性。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;button formmethod=&quot;get|post&quot;&gt;</pre>
+
+<h3>属性值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:20%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>get</td>
+<td>向 URL 追加表单数据（form-data）：<i>URL</i>?<i>name</i>=<i>value</i>&amp;<i>name</i>=<i>value</i></td>
+</tr>
+
+<tr>
+<td>post</td>
+<td>以 HTTP post 事务的形式发送表单数据（form-data）</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_button.htm" >HTML &lt;button&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

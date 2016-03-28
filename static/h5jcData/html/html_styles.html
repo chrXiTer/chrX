@@ -1,0 +1,167 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 样式</h1>
+
+<div>
+<p>style 属性用于改变 HTML 元素的样式。</p>
+
+<pre>
+<span style="font-family:verdana;color:red">This text is in Verdana and red</span>
+
+<span style="font-family:times;color:blue">This text is in Times and blue</span>
+
+<span style="font-size:30px">This text is 30 pixels high</span>
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_styles')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>HTML 的 style 属性</h2>
+
+<p>style 属性的作用：</p>
+
+<p><strong>提供了一种改变所有 HTML 元素的样式的通用方法。</strong></p>
+
+<p>样式是 HTML 4 引入的，它是一种新的首选的改变 HTML 元素样式的方式。通过 HTML 样式，能够通过使用 style 属性直接将样式添加到 HTML 元素，或者间接地在独立的样式表中（CSS 文件）进行定义。</p>
+
+<p>您可以在我们的 <a href="../css/index.htm" >CSS 教程</a>中学习关于样式和 CSS 的所有知识。</p>
+
+<p>在我们的 HTML 教程中，我们将使用 style 属性向您讲解 HTML 样式。</p>
+</div>
+
+<div>
+<h2>不赞成使用的标签和属性</h2>
+
+<p>在 HTML 4 中，有若干的标签和属性是被废弃的。被废弃（Deprecated）的意思是在未来版本的 HTML 和 XHTML 中将不支持这些标签和属性。</p>
+
+<p>这里传达的信息很明确：请避免使用这些被废弃的标签和属性！</p>
+
+<h3>应该避免使用下面这些标签和属性：</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:40%;">标签</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>&lt;center&gt;</td>
+<td>定义居中的内容。</td>
+</tr>
+
+<tr>
+<td>&lt;font&gt; 和 &lt;basefont&gt;</td>
+<td>定义 HTML 字体。</td>
+</tr>
+
+<tr>
+<td>&lt;s&gt; 和 &lt;strike&gt;</td>
+<td>定义删除线文本</td>
+</tr>
+
+<tr>
+<td>&lt;u&gt;</td>
+<td>定义下划线文本</td>
+</tr>
+
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>align</td>
+<td>定义文本的对齐方式</td>
+</tr>
+
+<tr>
+<td>bgcolor</td>
+<td>定义背景颜色</td>
+</tr>
+
+<tr>
+<td>color</td>
+<td>定义文本颜色</td>
+</tr>
+</table>
+
+<p>对于以上这些标签和属性：请使用样式代替！</p>
+</div>
+
+<div>
+<h2>HTML 样式实例 - 背景颜色</h2>
+
+<p>background-color 属性为元素定义了背景颜色：</p>
+
+<pre>
+&lt;html&gt;
+
+&lt;body style=&quot;background-color:yellow&quot;&gt;
+&lt;h2 style=&quot;background-color:red&quot;&gt;This is a heading&lt;/h2&gt;
+&lt;p style=&quot;background-color:green&quot;&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_bodybgstyle')" >亲自试一试</a></p>
+
+<p>style 属性淘汰了“旧的” bgcolor 属性。</p>
+
+<p class="tiy"><a href="javascript:tiy.run('html_bodybgcol')" >亲自试一试：设置背景颜色的旧方法</a></p>
+</div>
+
+<div>
+<h2>HTML 样式实例 - 字体、颜色和尺寸</h2>
+
+<p>font-family、color 以及 font-size 属性分别定义元素中文本的字体系列、颜色和字体尺寸：</p>
+
+<pre>
+&lt;html&gt;
+
+&lt;body&gt;
+&lt;h1 style=&quot;font-family:verdana&quot;&gt;A heading&lt;/h1&gt;
+&lt;p style=&quot;font-family:arial;color:red;font-size:20px;&quot;&gt;A paragraph.&lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_newfont')" >亲自试一试</a></p>
+
+<p>style 属性淘汰了旧的 &lt;font&gt; 标签。</p>
+
+<p class="tiy"><a href="javascript:tiy.run('html_font')" >亲自试一试：设置字体的旧方法</a></p>
+</div>
+
+<div>
+<h2>HTML 样式实例 - 文本对齐</h2>
+
+<p>text-align 属性规定了元素中文本的水平对齐方式：</p>
+
+<pre>
+&lt;html&gt;
+
+&lt;body&gt;
+&lt;h1 style=&quot;text-align:center&quot;&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;The heading above is aligned to the center of this page.&lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_headeralign')" >亲自试一试</a></p>
+
+<p>style 属性淘汰了旧的 &quot;align&quot; 属性。</p>
+
+<p class="tiy"><a href="javascript:tiy.run('html_header')" >亲自试一试：设置居中对齐的旧方法</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

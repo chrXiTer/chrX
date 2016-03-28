@@ -1,0 +1,58 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML DOM blur() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="dom_obj_window.htm" >HTML DOM Window 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>blur() 方法可把键盘焦点从顶层窗口移开。</p>
+	
+<h3>语法</h3>
+<pre>window.blur()</pre>
+
+<h3>说明</h3>
+<p>方法 blur() 可把键盘焦点从顶层浏览器窗口移走，整个窗口由 Window 对象指定。哪个窗口最终获得键盘焦点并没有指定。</p>
+</div>
+
+<div>
+<h2>提示和注释</h2>
+<p class="note"><span>注释：</span>在某些浏览器上，该方法可能无效。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+<pre>&lt;html&gt;
+&lt;body&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+myWindow=window.open('','','width=200,height=100')
+myWindow.document.write(&quot;This is 'myWindow'&quot;)
+myWindow.blur()
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+<dl>
+<dt><a href="javascript:tiy.run('hdom_win_focus')" >把焦点移到新窗口</a></dt>
+<dt><a href="javascript:tiy.run('hdom_win_blur')" >从新窗口移开焦点</a></dt>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="dom_obj_window.htm" >HTML DOM Window 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

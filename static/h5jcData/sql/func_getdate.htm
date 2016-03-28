@@ -1,0 +1,82 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL Server GETDATE() 函数</h1>
+
+<div class="backtoreference">
+<p><a href="sql_dates.htm"  title="SQL Server Date 函数">SQL Server Date 函数</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>GETDATE() 函数从 SQL Server 返回当前的时间和日期。</p>
+
+<h3>语法</h3>
+<pre>GETDATE()</pre>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<h3>例子 1</h3>
+
+<p>使用下面的 SELECT 语句：</p>
+
+<pre>SELECT GETDATE() AS CurrentDateTime</pre>
+
+<p>结果：</p>
+
+<table class="dataintable">
+<tr><th>CurrentDateTime</th></tr>
+<tr><td>2008-12-29 16:25:46.635</td></tr>
+</table>
+
+<p class="note"><span>注释：</span>上面的时间部分精确到毫秒。</p>
+
+<h3>例子 2</h3>
+
+<p>下面的 SQL 创建带有日期时间列 (OrderDate) 的 &quot;Orders&quot; 表：</p>
+
+<pre>
+CREATE TABLE Orders 
+(
+OrderId int NOT NULL PRIMARY KEY,
+ProductName varchar(50) NOT NULL,
+OrderDate datetime NOT NULL DEFAULT GETDATE()
+)
+</pre>
+
+<p>请注意，OrderDate 把 GETDATE() 规定为默认值。结果是，当您在表中插入新行时，当前日期和时间自动插入列中。</p>
+
+<p>现在，我们希望在 &quot;Orders&quot; 表中插入一条记录：</p>
+
+<pre>INSERT INTO Orders (ProductName) VALUES ('Computer')</pre>
+
+<p>&quot;Orders&quot; 表将成为这样：</p>
+
+<table class="dataintable">
+<tr>
+<th>OrderId</th>
+<th>ProductName</th>
+<th>OrderDate</th>
+</tr>
+<tr>
+<td>1</td>
+<td>'Computer'</td>
+<td>2008-12-29 16:25:46.635</td>
+</tr>
+</table>
+
+</div>
+
+<div class="backtoreference">
+<p><a href="sql_dates.htm"  title="SQL Server Date 函数">SQL Server Date 函数</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

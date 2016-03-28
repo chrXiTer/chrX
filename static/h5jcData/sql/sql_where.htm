@@ -1,0 +1,169 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL WHERE 子句</h1>
+
+<div id="intro">
+<p><strong>WHERE 子句用于规定选择的标准。</strong></p>
+</div>
+
+<div>
+<h2>WHERE 子句</h2>
+<p>如需有条件地从表中选取数据，可将 WHERE 子句添加到 SELECT 语句。</p>
+
+<h3>语法</h3>
+<pre>SELECT 列名称 FROM 表名称 WHERE 列 运算符 值</pre>
+<p>下面的运算符可在 WHERE 子句中使用：</p>
+<table class="dataintable">
+<tr>
+<th>操作符</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>=</td>
+<td>等于</td>
+</tr>
+
+<tr>
+<td>&lt;&gt;</td>
+<td>不等于</td>
+</tr>
+
+<tr>
+<td>&gt;</td>
+<td>大于</td>
+</tr>
+
+<tr>
+<td>&lt;</td>
+<td>小于</td>
+</tr>
+
+<tr>
+<td>&gt;=</td>
+<td>大于等于</td>
+</tr>
+
+<tr>
+<td>&lt;=</td>
+<td>小于等于</td>
+</tr>
+
+<tr>
+<td>BETWEEN</td>
+<td>在某个范围内</td>
+</tr>
+
+<tr>
+<td>LIKE</td>
+<td>搜索某种模式</td>
+</tr>
+</table>
+<p class="note"><span>注释：</span>在某些版本的 SQL 中，操作符 &lt;&gt; 可以写为 !=。</p>
+</div>
+
+<div>
+<h2>使用 WHERE 子句</h2>
+
+<p>如果只希望选取居住在城市 &quot;Beijing&quot; 中的人，我们需要向 SELECT 语句添加 WHERE 子句：</p>
+<pre>SELECT * FROM Persons <code>WHERE City='Beijing'</code></pre>
+
+<h3>&quot;Persons&quot; 表</h3>
+
+<table class="dataintable">
+  <tr>
+    <th>LastName</th>
+    <th>FirstName</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>Year</th>
+  </tr>
+  <tr>
+    <td>Adams</td>
+    <td>John</td>
+    <td>Oxford Street</td>
+    <td>London</td>
+    <td>1970</td>
+  </tr>
+  <tr>
+    <td>Bush</td>
+    <td>George</td>
+    <td>Fifth Avenue</td>
+    <td>New York </td>
+    <td>1975</td>
+  </tr>
+  <tr>
+    <td>Carter</td>
+    <td>Thomas</td>
+    <td>Changan Street</td>
+    <td>Beijing</td>
+    <td>1980</td>
+  </tr>
+  <tr>
+    <td>Gates</td>
+    <td>Bill</td>
+    <td>Xuanwumen 10</td>
+    <td>Beijing</td>
+    <td>1985</td>
+  </tr>
+</table>
+
+<h3>结果：</h3>
+<table class="dataintable">
+  <tr>
+    <th>LastName</th>
+    <th>FirstName</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>Year</th>
+  </tr>
+  <tr>
+    <td>Carter</td>
+    <td>Thomas</td>
+    <td>Changan Street</td>
+    <td>Beijing</td>
+    <td>1980</td>
+  </tr>
+  <tr>
+    <td>Gates</td>
+    <td>Bill</td>
+    <td>Xuanwumen 10</td>
+    <td>Beijing</td>
+    <td>1985</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>引号的使用</h2>
+
+<p>请注意，我们在例子中的条件值周围使用的是单引号。</p>
+
+<p>SQL 使用单引号来环绕<em>文本值</em>（大部分数据库系统也接受双引号）。如果是<em>数值</em>，请不要使用引号。</p>
+
+<h3>文本值：</h3>
+<pre>
+这是正确的：
+SELECT * FROM Persons WHERE <code>FirstName='Bush'</code>
+
+这是错误的：
+SELECT * FROM Persons WHERE <code style="color:red;">FirstName=Bush</code>
+</pre>
+
+<h3>数值：</h3>
+<pre>
+这是正确的：
+SELECT * FROM Persons WHERE <code>Year&gt;1965</code>
+
+这是错误的：
+SELECT * FROM Persons WHERE <code style="color:red;">Year&gt;'1965'</code>
+</pre>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,188 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL ALTER TABLE 语句</h1>
+
+<div>
+<h2>ALTER TABLE 语句</h2>
+
+<p>ALTER TABLE 语句用于在已有的表中添加、修改或删除列。</p>
+
+<h3>SQL ALTER TABLE 语法</h3>
+
+<p>如需在表中添加列，请使用下列语法:</p>
+
+<pre>
+ALTER TABLE table_name
+ADD column_name datatype
+</pre>
+
+<p>要删除表中的列，请使用下列语法：</p>
+
+<pre>
+ALTER TABLE table_name 
+DROP COLUMN column_name
+</pre>
+
+<p class="note"><span>注释：</span>某些数据库系统不允许这种在数据库表中删除列的方式 (DROP COLUMN column_name)。</p>
+
+<p>要改变表中列的数据类型，请使用下列语法：</p>
+
+<pre>
+ALTER TABLE table_name
+ALTER COLUMN column_name datatype
+</pre>
+</div>
+
+<div>
+<h2>原始的表 (用在例子中的)：</h2>
+
+<p>Persons 表:</p>
+
+<table class="dataintable">
+  <tr>
+    <th>Id</th>
+	<th>LastName</th>
+	<th>FirstName</th>
+	<th>Address</th>
+	<th>City</th>
+  </tr>
+  <tr>
+	<td>1</td>
+	<td>Adams</td>
+	<td>John</td>
+	<td>Oxford Street</td>
+	<td>London</td>
+  </tr>
+  <tr>
+	<td>2</td>
+	<td>Bush</td>
+	<td>George</td>
+	<td>Fifth Avenue</td>
+	<td>New York</td>
+  </tr>
+  <tr>
+	<td>3</td>
+	<td>Carter</td>
+	<td>Thomas</td>
+	<td>Changan Street</td>
+	<td>Beijing</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>SQL ALTER TABLE 实例</h2>
+
+<p>现在，我们希望在表 &quot;Persons&quot; 中添加一个名为 &quot;Birthday&quot; 的新列。</p>
+
+<p>我们使用下列 SQL 语句：</p>
+
+<pre>
+ALTER TABLE Persons
+ADD Birthday date
+</pre>
+
+<p>请注意，新列 &quot;Birthday&quot; 的类型是 date，可以存放日期。数据类型规定列中可以存放的数据的类型。</p>
+
+<p>新的 &quot;Persons&quot; 表类似这样：</p>
+
+<table class="dataintable">
+  <tr>
+    <th>Id</th>
+	<th>LastName</th>
+	<th>FirstName</th>
+	<th>Address</th>
+	<th>City</th>
+	<th>Birthday</th>
+  </tr>
+  <tr>
+	<td>1</td>
+	<td>Adams</td>
+	<td>John</td>
+	<td>Oxford Street</td>
+	<td>London</td>
+	<td>&nbsp;</td>
+  </tr>
+  <tr>
+	<td>2</td>
+	<td>Bush</td>
+	<td>George</td>
+	<td>Fifth Avenue</td>
+	<td>New York</td>
+	<td>&nbsp;</td>
+  </tr>
+  <tr>
+	<td>3</td>
+	<td>Carter</td>
+	<td>Thomas</td>
+	<td>Changan Street</td>
+	<td>Beijing</td>
+	<td>&nbsp;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>改变数据类型实例</h2>
+
+<p>现在我们希望改变 &quot;Persons&quot; 表中 &quot;Birthday&quot; 列的数据类型。</p>
+
+<p>我们使用下列 SQL 语句：</p>
+
+<pre>
+ALTER TABLE Persons
+ALTER COLUMN Birthday year
+</pre>
+
+<p>请注意，&quot;Birthday&quot; 列的数据类型是 year，可以存放 2 位或 4 位格式的年份。</p>
+</div>
+
+<div>
+<h2>DROP COLUMN 实例</h2>
+
+<p>接下来，我们删除 &quot;Person&quot; 表中的 &quot;Birthday&quot; 列：</p>
+
+<pre>ALTER TABLE Person
+DROP COLUMN Birthday</pre>
+
+<p>Persons 表会成为这样:</p>
+
+<table class="dataintable">
+  <tr>
+    <th>Id</th>
+	<th>LastName</th>
+	<th>FirstName</th>
+	<th>Address</th>
+	<th>City</th>
+  </tr>
+  <tr>
+	<td>1</td>
+	<td>Adams</td>
+	<td>John</td>
+	<td>Oxford Street</td>
+	<td>London</td>
+  </tr>
+  <tr>
+	<td>2</td>
+	<td>Bush</td>
+	<td>George</td>
+	<td>Fifth Avenue</td>
+	<td>New York</td>
+  </tr>
+  <tr>
+	<td>3</td>
+	<td>Carter</td>
+	<td>Thomas</td>
+	<td>Changan Street</td>
+	<td>Beijing</td>
+  </tr>
+</table>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,78 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;keygen&gt; keytype 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_keygen.htm" >HTML &lt;keygen&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>用 RSA 算法生成密钥的表单：</p>
+
+<pre>
+&lt;form action=&quot;demo_keygen.asp&quot; method=&quot;get&quot;&gt;
+Username: &lt;input type=&quot;text&quot; name=&quot;usr_name&quot; /&gt;
+Encryption: &lt;keygen name=&quot;security&quot; <code>keytype=&quot;rsa&quot;</code> /&gt;
+&lt;input type=&quot;submit&quot; /&gt;
+&lt;/form&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_keygen_keytype')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>keytype 属性规定应该使用哪种密钥生成算法。</p>
+
+<p>不同的浏览器对密钥生成算法的支持会有所变化。</p>
+</div>
+
+<div>
+<h2>HTML 4.01 与 HTML 5 之间的差异</h2>
+
+<p>keytype 属性是 &lt;keygen&gt; 标签在 HTML5 中的新属性。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;keygen keytype=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>rsa</td>
+<td>规定 RSA 安全算法（如支持，则是默认值）。</td>
+</tr>
+
+<tr>
+<td>其他</td>
+<td>
+  <p>规定一个安全算法。</p>
+  <p>不同的浏览器支持不同的密钥类型。</p>
+</td>
+</tr>
+</table>
+
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_keygen.htm" >HTML &lt;keygen&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

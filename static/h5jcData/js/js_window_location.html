@@ -1,0 +1,69 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript Window Location</h1>
+
+
+<p>location 对象用于获得当前页面的地址 (URL)，并把浏览器重定向到新的页面。</p>
+<p>location 对象存储在 window 对象的 location 属性中，表示该窗口中当前显示文档的 Web 地址。href 属性存放着文档的完整 URL，其它属性则分别描述了 URL 的各个部分。这些属性与 Anchor 对象（或 Area 对象）的 URL 属性非常相似。当一个 location 对象被转换成字符串，href 属性的值被返回。所以，也可以使用表达式 location 来替代 location.href。另外location对象还能控制浏览器显示的文档的位置。如果把一个 URL 字符串赋予 Location 对象或它的 href 属性，浏览器就会把新的 URL 所指的文档装载进来，并显示出来。</p>
+<p>除了设置 location 或 location.href 用完整的 URL 替换当前的 URL 之外，还可以修改部分 URL，只需要给 Location 对象的其他属性赋值即可。这样做就会创建新的 URL，其中的一部分与原来的 URL 不同，浏览器会将它装载并显示出来。例如，假设设置了Location对象的 <a href="prop_loc_hash.htm" >hash 属性</a>，那么浏览器就会转移到当前文档中的一个指定的位置。同样，如果设置了 <a href="prop_loc_search.htm" >search 属性</a>，那么浏览器就会重新装载附加了新的查询字符串的 URL。</p>
+<p>除了 URL 属性外，Location 对象的 <a href="met_loc_reload.htm" >reload() 方法</a>可以重新装载当前文档，<a href="met_loc_replace.htm" >replace()</a> 可以装载一个新文档而无须为它创建一个新的历史记录，也就是说，在浏览器的历史列表中，新文档将替换当前文档。</p>
+
+<p class="tiy"><a href="javascript:tiy.run('hdom_location')" >试一试：把用户带到一个新的地址</a></p>
+
+<p><em>window.location</em> 对象在编写时可不使用 window 这个前缀。</p>
+<p>一些例子：</p>
+
+<ul>
+<li>location.href 返回当前页面的 URL</li>
+<li>location.hostname 返回 web 主机的域名</li>
+<li>location.pathname 返回当前页面的路径和文件名</li>
+<li>location.port 返回 web 主机的端口 （80 或 443）</li>
+<li>location.protocol 返回所使用的 web 协议（http:// 或 https://）</li>
+<li>location.assign() 方法加载新的文档。</li>
+</ul>
+
+<p>返回当前页面的URL：</p>
+<pre>
+&lt;script&gt;
+document.write(<code>location.href</code>);
+&lt;/script&gt;
+</pre>
+<p>以上代码输出为：</p>
+<pre><script>document.write(location.href);</script></pre>
+
+<p>返回当前 URL 的路径名：</p>
+<pre>
+&lt;script&gt;
+document.write(<code>location.pathname</code>);
+&lt;/script&gt;
+</pre>
+<p>以上代码输出为：</p>
+<pre><script>document.write(location.pathname);</script></pre>
+
+<p>加载一个新的文档：</p>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+function newDoc(){
+  <code>window.location.assign(&quot;http://www.w3school.com.cn&quot;)</code>
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;input type=&quot;button&quot; value=&quot;加载新文档&quot; onclick=&quot;newDoc()&quot;&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('js_location_assign')" >试一试</a></p>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,77 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;form&gt; accept-charset 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_form.htm" >HTML &lt;form&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>在表单中使用 accept-charset 属性：</p>
+
+<pre>
+&lt;form action=&quot;demo_form.asp&quot; <code>accept-charset=&quot;ISO-8859-1&quot;</code>&gt;
+  First name: &lt;input type=&quot;text&quot; name=&quot;fname&quot; /&gt;&lt;br /&gt;
+  Last name: &lt;input type=&quot;text&quot; name=&quot;lname&quot; /&gt;&lt;br /&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+&lt;/form&gt;
+</pre>
+
+<p><a href="javascript:tiy.run('html5_form_accept-charset')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>accept-charset 属性规定服务器用哪种字符集处理表单数据。</p>
+
+</div>
+
+<div>
+<h2>HTML 4.01 与 HTML 5 之间的差异</h2>
+
+<p>无差别。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;form accept-charset=&quot;value&quot;&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td><i>character_set</i></td>
+    <td>
+		<p>服务器可处理的一个或多个字符集。如需规定一个以上的字符集，请使用逗号来分隔各字符集。</p>
+		<p>常用值：</p>
+		<ul class="listintable">
+			<li>UTF-8 - Unicode 字符编码</li>
+			<li>ISO-8859-1 - 拉丁字母表的字符编码</li>
+			<li>gb2312 - 简体中文字符集</li>
+		</ul>
+		<p>理论上讲，可使用任何字符编码，但没有浏览器可以理解所有的编码。字符编码使用得越广泛，浏览器对其支持越好。</p>
+		<p>如需查看所有可用的字符集，请访问我们的 <a href="html_ref_charactersets.htm" >字符编码参考</a>。</p>
+	</td>
+  </tr>
+</table>
+
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_form.htm" >HTML &lt;form&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

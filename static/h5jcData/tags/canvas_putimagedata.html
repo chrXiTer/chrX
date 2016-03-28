@@ -1,0 +1,98 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML5 canvas putImageData() ����</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas �ο��ֲ�</a></p>
+</div>
+
+<div>
+<h2>ʵ��</h2>
+
+<p>�����Ĵ���ͨ�� getImageData() ���ƻ�����ָ�����ε��������ݣ�Ȼ��ͨ�� putImageData() ��ͼ�����ݷŻػ�����</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+ctx.fillStyle=&quot;green&quot;;
+ctx.fillRect(10,10,50,50);
+
+function copy()
+{
+var imgData=ctx.getImageData(10,10,50,50);
+<code>ctx.putImageData(imgData,10,70);</code>
+}
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_getimagedata')" >������һ��</a></p>
+</div>
+
+<div>
+<h2>�������÷�</h2>
+
+<p>putImageData() ������ͼ�����ݣ���ָ���� ImageData ���󣩷Żػ����ϡ�</p>
+
+<p class="tip"><span>��ʾ��</span>������ <a href="canvas_getimagedata.htm"  title="HTML canvas getImageData() ����">getImageData()</a> ���������ɸ��ƻ�����ָ���ľ��ε��������ݡ�</p>
+
+<p class="tip"><span>��ʾ��</span>������ <a href="canvas_createimagedata.htm"  title="HTML canvas createImageData() ����">createImageData()</a> ���������ɴ����µĿհ� ImageData ������</p>
+
+<h3>JavaScript �﷨��</h3>
+
+<pre><i>context</i>.putImageData(<i>imgData</i>,<i>x</i>,<i>y</i>,<i>dirtyX</i>,<i>dirtyY</i>,<i>dirtyWidth</i>,<i>dirtyHeight</i>);</pre>
+
+<h3>����ֵ</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">����</th>
+<th>����</th>
+</tr>
+
+<tr>
+<td><i>imgData</i></td>
+<td>�涨Ҫ�Żػ����� ImageData ������</td>
+</tr>
+
+<tr>
+<td><i>x</i></td>
+<td>ImageData �������Ͻǵ� x ���꣬�����ؼơ�</td>
+</tr>
+
+<tr>
+<td><i>y</i></td>
+<td>ImageData �������Ͻǵ� y ���꣬�����ؼơ�</td>
+</tr>
+
+<tr>
+<td><i>dirtyX</i></td>
+<td>��ѡ��ˮƽֵ��x���������ؼƣ��ڻ����Ϸ���ͼ����λ�á�</td>
+</tr>
+
+<tr>
+<td><i>dirtyY</i></td>
+<td>��ѡ��ˮƽֵ��y���������ؼƣ��ڻ����Ϸ���ͼ����λ�á�</td>
+</tr>
+
+<tr>
+<td><i>dirtyWidth</i></td>
+<td>��ѡ���ڻ����ϻ���ͼ����ʹ�õĿ��ȡ�</td>
+</tr>
+
+<tr>
+<td><i>dirtyHeight</i></td>
+<td>��ѡ���ڻ����ϻ���ͼ����ʹ�õĸ߶ȡ�</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas �ο��ֲ�</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

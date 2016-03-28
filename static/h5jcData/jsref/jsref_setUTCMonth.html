@@ -1,0 +1,120 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript setUTCMonth() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>setUTCMonth() 方法用于根据世界时 (UTC) 来设置月份。</p>
+
+<h3>语法</h3>
+
+<pre>dateObject.setUTCMonth(month,day)</pre>
+
+<table class="dataintable"> 
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td>month</td>
+    <td>
+	<p>必需。要给 dateObject 设置的月份字段的值，用世界时表示。</p>
+	<p>该参数是 0（一月） ~ 11（十二月） 之间的整数。</p>
+	</td>
+  </tr>
+  <tr>
+    <td>day</td>
+    <td>可选。在 1 ~ 31 之间的整数，用作 dateObject 的天字段，用世界时表示。</td>
+  </tr>
+</table>
+
+<h3>返回值</h3>
+
+<p>调整过的日期的毫秒表示。</p>
+</div>
+
+<div>
+<h2>提示和注释：</h2>
+
+<p class="note"><span>注释：</span>该方法总是结合一个 Date 对象来使用。</p>
+
+<p class="tip"><span>提示：</span>有关通用协调时间 (UTC) 的更多资料，请参阅<a href="http://baike.baidu.com/view/1187856.htm" vvll="my"  title="协调世界时_百度百科">百度百科</a>。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<h3>例子 1</h3>
+
+<p>在本例中，我们将通过 setUTCMonth() 方法把月字段设置为 0 （一月）：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var d=new Date()
+d.setUTCMonth(0)
+document.write(d)
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>
+<script type="text/javascript">
+	var d=new Date()
+	d.setUTCMonth(0)
+	document.write(d)
+</script>
+</pre>
+
+<h3>例子 2</h3>
+
+<p>在本例中，我们将通过 setUTCMonth() 把月份设置为 0 （一月），把天字段设置为 20：</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var d=new Date()
+d.setUTCMonth(0,20)
+document.write(d)
+
+&lt;/script&gt;
+</pre>
+
+<p>输出：</p>
+
+<pre>
+<script type="text/javascript">
+	var d=new Date()
+	d.setUTCMonth(0,20)
+	document.write(d)
+</script>
+</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('jseg_setutcmonth')" >setUTCMonth()</a></dt>
+<dd>如何使用 setUTCMonth() 来设置月份。</dd>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_date.htm"  title="JavaScript Date 对象">JavaScript Date 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

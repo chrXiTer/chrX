@@ -1,0 +1,65 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript RegExp \B 元字符</h1>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_regexp.htm"  title="JavaScript RegExp 对象">JavaScript RegExp 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>\B 元字符匹配非单词边界。匹配位置的上一个和下一个字符的类型是相同的：即必须同时是单词，或必须同时是非单词字符。字符串的开头和结尾处被视为非单词字符。</p>
+
+<p>如果未找到匹配，则返回 null。</p>
+
+<p class="tip"><span>提示：</span>\B 元字符通常用于查找不处在单词的开头或结尾的匹配。</p>
+
+<p>例如：/\B../ 匹配 &quot;noonday&quot; 中的 'oo'，而 /y\B./ 匹配 &quot;possibly yesterday.&quot; 中的 'ye'。</p>
+
+<p class="tiy"><a href="javascript:tiy.run('jseg_regexp_nonboundary2')" >亲自试一试</a></p>
+
+<h3>语法</h3>
+
+<pre>new RegExp(&quot;\B<i>regexp</i>&quot;)</pre>
+
+<p>直接量语法：</p>
+
+<pre>/\B<i>regexp</i>/</pre>
+
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+
+<p>所有主流浏览器都支持 \B 元字符。</p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>对字符串中不位于单词开头或结尾的 &quot;School&quot; 进行全局搜索：</p>
+
+<pre>
+var str=&quot;Visit W3School&quot;;
+var patt1=<code>/\BSchool/g</code>;
+</pre>
+
+<p>下面被标记的文本显示了表达式获得匹配的位置：</p>
+
+<pre>Visit W3<span class="marked">School</span></pre>
+
+<p class="tiy"><a href="javascript:tiy.run('jseg_regexp_nonboundary')" >亲自试一试</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href="jsref_obj_regexp.htm"  title="JavaScript RegExp 对象">JavaScript RegExp 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

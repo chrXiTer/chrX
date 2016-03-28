@@ -1,0 +1,180 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;tr&gt; 标签</h1>
+
+<div>
+<h2>实例</h2>
+
+<p>一个简单的 HTML 表格，包含两行两列：</p>
+
+<pre>
+&lt;table border=&quot;1&quot;&gt;
+  <code>&lt;tr&gt;</code>
+    &lt;th&gt;Month&lt;/th&gt;
+    &lt;th&gt;Savings&lt;/th&gt;
+  <code>&lt;/tr&gt;</code>
+  <code>&lt;tr&gt;</code>
+    &lt;td&gt;January&lt;/td&gt;
+    &lt;td&gt;$100&lt;/td&gt;
+  <code>&lt;/tr&gt;</code>
+&lt;/table&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_table_test')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>&lt;tr&gt; 标签定义 HTML 表格中的行。</p>
+
+<p>tr 元素包含一个或多个 <a href="tag_th.htm"  title="HTML &lt;th&gt; 标签">th</a> 或 <a href="tag_td.htm"  title="HTML &lt;td&gt; 标签">td</a> 元素。</p>
+</div>
+
+<div>
+<h2>HTML 与 XHTML 之间的差异</h2>
+
+<p>在 HTML 4.01 中，tr 元素的 &quot;bgcolor&quot; 是不被赞成使用的。</p>
+
+<p>在 XHTML 1.0 Strict DTD 中，tr 元素的 &quot;bgcolor&quot; 是不被支持的。</p>
+</div>
+
+<div>
+<h2>可选的属性</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:20%;">属性</th>
+<th style="width:20%;">值</th>
+<th style="width:60%;">描述</th>
+</tr>
+
+<tr>
+<td><a href="att_tr_align.htm"  title="HTML &lt;tr&gt; 标签的 align 属性">align</a></td>
+<td>
+	<ul>
+	<li>right</li>
+	<li>left</li>
+	<li>center</li>
+	<li>justify</li>
+	<li>char</li>
+	</ul>
+</td>
+<td>定义表格行的内容对齐方式。</td>
+</tr>
+
+<tr>
+<td><a href="att_tr_bgcolor.htm"  title="HTML &lt;tr&gt; 标签的 bgcolor 属性">bgcolor</a></td>
+<td>
+	<ul>
+	<li><i>rgb(x,x,x)</i></li>
+	<li><i>#xxxxxx</i></li>
+	<li><i>colorname</i></li>
+	</ul>
+</td>
+<td>
+	<p><span class="deprecated">不赞成使用。</span>请使用样式取而代之。</p>
+	<p>规定表格行的背景颜色。</p>
+</td>
+</tr>
+
+<tr>
+<td><a href="att_tr_char.htm"  title="HTML &lt;tr&gt; 标签的 char 属性">char</a></td>
+<td><i>character</i></td>
+<td>规定根据哪个字符来进行文本对齐。</td>
+</tr>
+
+<tr>
+<td><a href="att_tr_charoff.htm"  title="HTML &lt;tr&gt; 标签的 charoff 属性">charoff</a></td>
+<td><i>number</i></td>
+<td>规定第一个对齐字符的偏移量。</td>
+</tr>
+
+<tr>
+<td><a href="att_tr_valign.htm"  title="HTML &lt;tr&gt; 标签的 valign 属性">valign</a></td>
+<td>
+	<ul>
+	<li>top</li>
+	<li>middle</li>
+	<li>bottom</li>
+	<li>baseline</li>
+	</ul>
+</td>
+<td>规定表格行中内容的垂直对齐方式。</td>
+</tr>
+</table>
+</div>
+
+<div>
+<h2>全局属性</h2>
+
+<p>&lt;tr&gt; 标签支持 <a href="html_ref_standardattributes.htm" >HTML 中的全局属性</a>。</p>
+</div>
+
+<div>
+<h2>事件属性</h2>
+
+<p>&lt;tr&gt; 标签支持 <a href="html_ref_eventattributes.htm" >HTML 中的事件属性</a>。</p>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+
+<dl>
+<dt><a href="javascript:tiy.run('html_tables')" >表格</a></dt>
+<dd>这个例子演示如何在 HTML 文档中创建表格。</dd>
+
+<dt><a href="javascript:tiy.run('html_table_borders')" >表格边框</a></dt>
+<dd>本例演示各种类型的表格边框。</dd>
+
+<dt><a href="javascript:tiy.run('html_tables2')" >没有边框的表格</a></dt>
+<dd>本例演示一个没有边框的表格。</dd>
+
+<dt><a href="javascript:tiy.run('html_table_headers')" >表格中的标题(Headings)</a></dt>
+<dd>本例演示如何显示表格标题。</dd>
+
+<dt><a href="javascript:tiy.run('html_table_nbsp')" >空单元格</a></dt>
+<dd>本例展示如何使用&quot;&amp;nbsp;&quot;处理没有内容的单元格。</dd>
+
+<dt><a href="javascript:tiy.run('html_tables3')" >带有标题的表格</a></dt>
+<dd>本例演示一个带标题(caption)的表格</dd>
+
+<dt><a href="javascript:tiy.run('html_table_span')" >跨行或跨列的表格单元格</a></dt>
+<dd>本例演示如何定义跨行或跨列的表格单元格。</dd>
+
+<dt><a href="javascript:tiy.run('html_table_elements')" >表格内的标签</a></dt>
+<dd>本例演示如何显示在不同的元素内显示元素。</dd>
+
+<dt><a href="javascript:tiy.run('html_table_cellpadding')" >单元格填充(Cell padding)</a></dt>
+<dd>本例演示如何使用单元格填充来创建单元格内容与其边框之间的空白。</dd>
+
+<dt><a href="javascript:tiy.run('html_table_cellspacing')" >单元格间距(Cell spacing)</a></dt>
+<dd>本例演示如何使用单元格间距增加单元格之间的距离。</dd>
+
+<dt><a href="javascript:tiy.run('html_table_background')" >向表格添加背景颜色或背景图像</a></dt>
+<dd>本例演示如何向表格添加背景</dd>
+
+<dt><a href="javascript:tiy.run('html_table_cellbackground')" >向表格单元添加背景颜色或者背景图像</a></dt>
+<dd>本例演示如何向一个或者更多表格单元添加背景</dd>
+
+<dt><a href="javascript:tiy.run('html_table_align')" >在表格单元中排列内容</a></dt>
+<dd>本例演示如何使用 &quot;align&quot; 属性排列单元格内容,以便创建一个美观的表格。</dd>
+
+<dt><a href="javascript:tiy.run('html_table_frame')" >框架(frame)属性</a></dt>
+<dd>本例演示如何使用 &quot;frame&quot; 属性来控制围绕表格的边框。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>HTML DOM 参考手册：<a href="../jsref/dom_obj_tablerow.htm"  title="HTML DOM TableRow 对象">TableRow 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

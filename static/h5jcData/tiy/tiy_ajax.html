@@ -1,0 +1,949 @@
+﻿<script>
+var f = function(){
+	var href = location.href;
+	var index = href.indexOf("#")
+	if(index == -1) return;
+	var varg = href.substring(index + 1)
+	var strid = "tiyiframe_" + varg
+	var iframeSource = document.getElementById(strid)
+	var iframeTarget = document.getElementById("tiyiframe_iframe")
+	var textareaE = document.getElementById('tiyiframe_textarea')
+	if(!iframeSource){
+		textareaE.innerText("示例代码不存在")
+		return
+	}
+		
+	var htmlStr = iframeSource.textContent;
+	var newDoc=iframeTarget.contentDocument.open("text/html","replace");
+	newDoc.write(htmlStr)
+	newDoc.close()
+	
+	textareaE.innerText = htmlStr
+	
+	var buttonE = document.getElementById("tiyiframe_button")
+	buttonE.onclick = function(){
+			var textareaE = document.getElementById('tiyiframe_textarea')
+			var eIframe = document.getElementById('tiyiframe_iframe')
+			var newDoc=eIframe.contentDocument.open("text/html","replace")
+			newDoc.write(textareaE.value)
+			newDoc.close()
+	}
+}
+window.onload = f;
+window.onresize = f;
+
+</script>
+
+<div style="width:100%; height:13px; background-color:yellow">实验<span style="float:right; background-color:red">X</span></div>
+<iframe id="tiyiframe_iframe" style="width:100%;height:40%;background-color:#ffffff">
+</iframe>
+<p style="height:8%;margin:0px; padding:0px">编辑代码：
+    <input id="tiyiframe_button" type="button" value="查看效果" style="float:right; margin-right:20px"></input>
+</p>
+<textarea id="tiyiframe_textarea" style="width:90%; height:35%;"></textarea>
+</br>
+
+<div style="visibility:hidden;display:none">
+<iframe id="tiyiframe_ajax_async_false">
+
+<html>
+<head>
+<script type="text/javascript">
+function loadXMLDoc()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("GET","/ajax/test1.txt",false);
+xmlhttp.send();
+document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+}
+</script>
+</head>
+<body>
+
+<div id="myDiv"><h2>Let AJAX change this text</h2></div>
+<button type="button" onclick="loadXMLDoc()">通过 AJAX 改变内容</button>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_ajax_async_true">
+
+<html>
+<head>
+<script type="text/javascript">
+function loadXMLDoc()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","/ajax/test1.txt",true);
+xmlhttp.send();
+}
+</script>
+</head>
+<body>
+
+<div id="myDiv"><h2>Let AJAX change this text</h2></div>
+<button type="button" onclick="loadXMLDoc()">通过 AJAX 改变内容</button>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_ajax_callback">
+
+<html>
+<head>
+<script type="text/javascript">
+var xmlhttp;
+function loadXMLDoc(url,cfunc)
+{
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=cfunc;
+xmlhttp.open("GET",url,true);
+xmlhttp.send();
+}
+function myFunction()
+{
+loadXMLDoc("/ajax/test1.txt",function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    }
+  });
+}
+</script>
+</head>
+<body>
+
+<div id="myDiv"><h2>Let AJAX change this text</h2></div>
+<button type="button" onclick="myFunction()">通过 AJAX 改变内容</button>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_ajax_database">
+
+<html>
+<head>
+<script type="text/javascript">
+function showCustomer(str)
+{
+var xmlhttp;    
+if (str=="")
+  {
+  document.getElementById("txtHint").innerHTML="";
+  return;
+  }
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","/ajax/getcustomer.asp?q="+str,true);
+xmlhttp.send();
+}
+</script>
+</head>
+<body>
+
+<form action="" style="margin-top:15px;"> 
+<label>请选择一位客户：
+<select name="customers" onchange="showCustomer(this.value)" style="font-family:Verdana, Arial, Helvetica, sans-serif;">
+<option value="APPLE">Apple Computer, Inc.</option>
+<option value="BAIDU ">BAIDU, Inc</option>
+<option value="Canon">Canon USA, Inc.</option>
+<option value="Google">Google, Inc.</option>
+<option value="Nokia">Nokia Corporation</option>
+<option value="SONY">Sony Corporation of America</option>
+</select>
+</label>
+</form>
+<br />
+<div id="txtHint">客户信息将在此处列出 ...</div>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_ajax_get">
+
+<html>
+<head>
+<script type="text/javascript">
+function loadXMLDoc()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","/ajax/demo_get.asp",true);
+xmlhttp.send();
+}
+</script>
+</head>
+<body>
+
+<h2>AJAX</h2>
+<button type="button" onclick="loadXMLDoc()">请求数据</button>
+<div id="myDiv"></div>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_ajax_get2">
+
+<html>
+<head>
+<script type="text/javascript">
+function loadXMLDoc()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","/ajax/demo_get2.asp?fname=Bill&lname=Gates",true);
+xmlhttp.send();
+}
+</script>
+</head>
+<body>
+
+<h2>AJAX</h2>
+<button type="button" onclick="loadXMLDoc()">请求数据</button>
+<div id="myDiv"></div>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_ajax_get_unique">
+
+<html>
+<head>
+<script type="text/javascript">
+function loadXMLDoc()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","/ajax/demo_get.asp?t=" + Math.random(),true);
+xmlhttp.send();
+}
+</script>
+</head>
+<body>
+
+<h2>AJAX</h2>
+<button type="button" onclick="loadXMLDoc()">请求数据</button>
+<div id="myDiv"></div>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_ajax_httprequest_js">
+
+<html>
+<head>
+<script type="text/javascript">
+var xmlhttp;
+function loadXMLDoc(url)
+{
+xmlhttp=null;
+if (window.XMLHttpRequest)
+  {// code for IE7, Firefox, Opera, etc.
+  xmlhttp=new XMLHttpRequest();
+  }
+else if (window.ActiveXObject)
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+if (xmlhttp!=null)
+  {
+  xmlhttp.onreadystatechange=state_Change;
+  xmlhttp.open("GET",url,true);
+  xmlhttp.send(null);
+  }
+else
+  {
+  alert("Your browser does not support XMLHTTP.");
+  }
+}
+
+function state_Change()
+{
+if (xmlhttp.readyState==4)
+  {// 4 = "loaded"
+  if (xmlhttp.status==200)
+    {// 200 = "OK"
+    document.getElementById('A1').innerHTML=xmlhttp.status;
+    document.getElementById('A2').innerHTML=xmlhttp.statusText;
+    document.getElementById('A3').innerHTML=xmlhttp.responseText;
+    }
+  else
+    {
+    alert("Problem retrieving XML data:" + xmlhttp.statusText);
+    }
+  }
+}
+</script>
+</head>
+
+<body>
+<h2>Using the HttpRequest Object</h2>
+
+<p><b>Status:</b>
+<span id="A1"></span>
+</p>
+
+<p><b>Status text:</b>
+<span id="A2"></span>
+</p>
+
+<p><b>Response:</b>
+<br /><span id="A3"></span>
+</p>
+
+<button onclick="loadXMLDoc('/example/xmle/note.xml')">Get XML</button>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_ajax_httprequest_js_1">
+
+<html>
+<head>
+<script type="text/javascript">
+var xmlhttp;
+function loadXMLDoc(url)
+{
+xmlhttp=null;
+if (window.XMLHttpRequest)
+  {// code for Firefox, Opera, IE7, etc.
+  xmlhttp=new XMLHttpRequest();
+  }
+else if (window.ActiveXObject)
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+if (xmlhttp!=null)
+  {
+  xmlhttp.onreadystatechange=state_Change;
+  xmlhttp.open("GET",url,true);
+  xmlhttp.send(null);
+  }
+else
+  {
+  alert("Your browser does not support XMLHTTP.");
+  }
+}
+
+function state_Change()
+{
+if (xmlhttp.readyState==4)
+  {// 4 = "loaded"
+  if (xmlhttp.status==200)
+    {// 200 = "OK"
+    document.getElementById('T1').innerHTML=xmlhttp.responseText;
+    }
+  else
+    {
+    alert("Problem retrieving data:" + xmlhttp.statusText);
+    }
+  }
+}
+</script>
+</head>
+
+<body onload="loadXMLDoc('/example/ajax/test_xmlhttp.txt')">
+<div id="T1" style="border:1px solid black;height:40;width:300;padding:5"></div><br />
+<button onclick="loadXMLDoc('/example/ajax/test_xmlhttp2.txt')">Click</button>
+</body>
+
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_ajax_httprequest_js_2">
+
+<html>
+<head>
+<script type="text/javascript">
+var xmlhttp;
+function loadXMLDoc(url)
+{
+xmlhttp=null;
+if (window.XMLHttpRequest)
+  {// code for Firefox, Mozilla, IE7, etc.
+  xmlhttp=new XMLHttpRequest();
+  }
+else if (window.ActiveXObject)
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+if (xmlhttp!=null)
+  {
+  xmlhttp.onreadystatechange=state_Change;
+  xmlhttp.open("GET",url,true);
+  xmlhttp.send(null);
+  }
+else
+  {
+  alert("Your browser does not support XMLHTTP.");
+  }
+}
+
+function state_Change()
+{
+if (xmlhttp.readyState==4)
+  {// 4 = "loaded"
+  if (xmlhttp.status==200)
+    {// 200 = "OK"
+    document.getElementById('p1').innerHTML=xmlhttp.getAllResponseHeaders();
+    }
+  else
+    {
+    alert("Problem retrieving data:" + xmlhttp.statusText);
+    }
+  }
+}
+</script>
+</head>
+<body>
+
+<p id="p1">
+The getAllResponseHeaders() function returns the headers of a resource.
+The headers contain file information like length,
+server-type, content-type, date-modified, etc.</p>
+
+<button onclick="loadXMLDoc('/example/ajax/test_xmlhttp.txt')">Get Headers</button>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_ajax_httprequest_js_3">
+
+<html>
+<head>
+<script type="text/javascript">
+var xmlhttp;
+function loadXMLDoc(url)
+{
+xmlhttp=null;
+if (window.XMLHttpRequest)
+  {// all modern browsers
+  xmlhttp=new XMLHttpRequest();
+  }
+else if (window.ActiveXObject)
+  {// for IE5, IE6
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+if (xmlhttp!=null)
+  {
+  xmlhttp.onreadystatechange=state_Change;
+  xmlhttp.open("GET",url,true);
+  xmlhttp.send(null);
+  }
+else
+  {
+  alert("Your browser does not support XMLHTTP.");
+  }
+}
+
+function state_Change()
+{
+if (xmlhttp.readyState==4)
+  {// 4 = "loaded"
+  if (xmlhttp.status==200)
+    {// 200 = "OK"
+    document.getElementById('p1').innerHTML="This file was last modified on: " + xmlhttp.getResponseHeader('Last-Modified');
+    }
+  else
+    {
+    alert("Problem retrieving data:" + xmlhttp.statusText);
+    }
+  }
+}
+</script>
+</head>
+<body>
+
+<p id="p1">
+The getResponseHeader() function returns a header from a resource.
+Headers contain file information like length,
+server-type, content-type, date-modified, etc.</p>
+
+<button onclick="loadXMLDoc('/example/ajax/test_xmlhttp.txt')">Get "Last-Modified"</button>
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_ajax_httprequest_js_4">
+
+<html>
+<head>
+<script type="text/javascript">
+var xmlhttp;
+
+function loadXMLDoc(url)
+{
+xmlhttp=null;
+if (window.XMLHttpRequest)
+  {// code for IE7, Firefox, Mozilla, etc.
+  xmlhttp=new XMLHttpRequest();
+  }
+else if (window.ActiveXObject)
+  {// code for IE5, IE6
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+if (xmlhttp!=null)
+  {
+  xmlhttp.onreadystatechange=onResponse;
+  xmlhttp.open("GET",url,true);
+  xmlhttp.send(null);
+  }
+else
+  {
+  alert("Your browser does not support XMLHTTP.");
+  }
+}
+
+function onResponse()
+{
+if(xmlhttp.readyState!=4) return;
+if(xmlhttp.status!=200)
+  {
+  alert("Problem retrieving XML data");
+  return;
+  }
+
+txt="<table border='1'>";
+x=xmlhttp.responseXML.documentElement.getElementsByTagName("CD");
+for (i=0;i<x.length;i++)
+  {
+  txt=txt + "<tr>";
+  xx=x[i].getElementsByTagName("TITLE");
+    {
+    try
+      {
+      txt=txt + "<td>" + xx[0].firstChild.nodeValue + "</td>";
+      }
+    catch (er)
+      {
+      txt=txt + "<td> </td>";
+      }
+    }
+  xx=x[i].getElementsByTagName("ARTIST");
+    {
+    try
+      {
+      txt=txt + "<td>" + xx[0].firstChild.nodeValue + "</td>";
+      }
+    catch (er)
+      {
+      txt=txt + "<td> </td>";
+      }
+    }
+  txt=txt + "</tr>";
+  }
+txt=txt + "</table>";
+document.getElementById('copy').innerHTML=txt;
+}
+
+</script>
+</head>
+
+<body>
+<div id="copy">
+<button onclick="loadXMLDoc('/example/xmle/cd_catalog.xml')">Get CD info</button>
+</div>
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_ajax_httpsuggest">
+
+<html>
+<head>
+<script type="text/javascript">
+
+var xmlHttp=null;
+
+function showHint(str)
+{
+if (str.length==0)
+  { 
+  document.getElementById("txtHint").innerHTML="";
+  return;
+  }
+try
+  {// Firefox, Opera 8.0+, Safari, IE7
+  xmlHttp=new XMLHttpRequest();
+  }
+catch(e)
+  {// Old IE
+  try
+    {
+    xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+  catch(e)
+    {
+    alert ("Your browser does not support XMLHTTP!");
+    return;  
+    }
+  }
+var url="/ajax/gethint.asp?q=" + str;
+url=url+"&sid="+Math.random();
+xmlHttp.open("GET",url,false);
+xmlHttp.send(null);
+document.getElementById("txtHint").innerHTML=xmlHttp.responseText;
+}
+</script> 
+</head>
+<body><form> 
+First Name:
+<input type="text" id="txt1"
+onkeyup="showHint(this.value)">
+</form><p>Suggestions: <span id="txtHint"></span></p> </body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_ajax_post">
+
+<html>
+<head>
+<script type="text/javascript">
+function loadXMLDoc()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("POST","/ajax/demo_post.asp",true);
+xmlhttp.send();
+}
+</script>
+</head>
+<body>
+
+<h2>AJAX</h2>
+<button type="button" onclick="loadXMLDoc()">请求数据</button>
+<div id="myDiv"></div>
+ 
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_ajax_post2">
+
+<html>
+<head>
+<script type="text/javascript">
+function loadXMLDoc()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("POST","/ajax/demo_post2.asp",true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xmlhttp.send("fname=Bill&lname=Gates");
+}
+</script>
+</head>
+<body>
+
+<h2>AJAX</h2>
+<button type="button" onclick="loadXMLDoc()">请求数据</button>
+<div id="myDiv"></div>
+ 
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_ajax_responsexml">
+
+<html>
+<head>
+<script type="text/javascript">
+function loadXMLDoc()
+{
+var xmlhttp;
+var txt,x,i;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    xmlDoc=xmlhttp.responseXML;
+    txt="";
+    x=xmlDoc.getElementsByTagName("title");
+    for (i=0;i<x.length;i++)
+      {
+      txt=txt + x[i].childNodes[0].nodeValue + "<br />";
+      }
+    document.getElementById("myDiv").innerHTML=txt;
+    }
+  }
+xmlhttp.open("GET","/example/xmle/books.xml",true);
+xmlhttp.send();
+}
+</script>
+</head>
+
+<body>
+
+<h2>My Book Collection:</h2>
+<div id="myDiv"></div>
+<button type="button" onclick="loadXMLDoc()">获得我的图书收藏列表</button>
+ 
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_ajax_suggest">
+
+<html>
+<head>
+<script type="text/javascript">
+function showHint(str)
+{
+var xmlhttp;
+if (str.length==0)
+  { 
+  document.getElementById("txtHint").innerHTML="";
+  return;
+  }
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","/ajax/gethint.asp?q="+str,true);
+xmlhttp.send();
+}
+</script>
+</head>
+<body>
+
+<h3>请在下面的输入框中键入字母（A - Z）：</h3>
+<form action=""> 
+姓氏：<input type="text" id="txt1" onkeyup="showHint(this.value)" />
+</form>
+<p>建议：<span id="txtHint"></span></p> 
+
+</body>
+</html>
+
+</iframe>
+
+<iframe id="tiyiframe_ajax_xml">
+
+<html>
+<head>
+<script type="text/javascript">
+function loadXMLDoc(url)
+{
+var xmlhttp;
+var txt,x,xx,i;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    txt="<table border='1'><tr><th>Title</th><th>Artist</th></tr>";
+    x=xmlhttp.responseXML.documentElement.getElementsByTagName("CD");
+    for (i=0;i<x.length;i++)
+      {
+      txt=txt + "<tr>";
+      xx=x[i].getElementsByTagName("TITLE");
+        {
+        try
+          {
+          txt=txt + "<td>" + xx[0].firstChild.nodeValue + "</td>";
+          }
+        catch (er)
+          {
+          txt=txt + "<td> </td>";
+          }
+        }
+      xx=x[i].getElementsByTagName("ARTIST");
+        {
+        try
+          {
+          txt=txt + "<td>" + xx[0].firstChild.nodeValue + "</td>";
+          }
+        catch (er)
+          {
+          txt=txt + "<td> </td>";
+          }
+        }
+      txt=txt + "</tr>";
+      }
+    txt=txt + "</table>";
+    document.getElementById('txtCDInfo').innerHTML=txt;
+    }
+  }
+xmlhttp.open("GET",url,true);
+xmlhttp.send();
+}
+</script>
+</head>
+<body>
+
+<div id="txtCDInfo">
+<button onclick="loadXMLDoc('/example/xmle/cd_catalog.xml')">获得 CD 信息</button>
+</div>
+
+</body>
+</html>
+
+</iframe>
+</div>
+

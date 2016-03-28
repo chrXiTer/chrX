@@ -1,0 +1,110 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 Audio/Video DOM canPlayType() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>检测您的浏览器是否能播放不同类型的视频：</p>
+
+<pre>
+myVid=document.createElement('video');
+isSupp=<code>myVid.canPlayType(vidType+';codecs=&quot;'+codType+'&quot;')</code>;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_av_met_canplaytype')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>canPlayType() 方法浏览器是否能播放指定的音频/视频类型。</p>
+
+<p>canPlayType() 方法可返回下列值之一：</p>
+
+<ul>
+<li>&quot;probably&quot; - 浏览器最可能支持该音频/视频类型</li>
+<li>&quot;maybe&quot; - 浏览器也许支持该音频/视频类型</li>
+<li>&quot;&quot; - （空字符串）浏览器不支持该音频/视频类型</li>
+</ul>
+</div>
+
+<div>
+<h2>语法</h2>
+<pre>audio|video.canPlayType(<i>type</i>))</pre>
+
+<h3>参数</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>type</i></td>
+<td>
+<p>规定要检测的音频/视频类型。</p>
+
+<p>常用值：</p>
+<ul class="listintable">
+<li>video/ogg</li>
+<li>video/mp4</li>
+<li>video/webm</li>
+<li>audio/mpeg</li>
+<li>audio/ogg</li>
+<li>audio/mp4</li>
+</ul>
+
+<p>常用值，包括编解码器：</p>
+<ul class="listintable">
+<li>video/ogg; codecs=&quot;theora, vorbis&quot;</li>
+<li>video/mp4; codecs=&quot;avc1.4D401E, mp4a.40.2&quot;</li>
+<li>video/webm; codecs=&quot;vp8.0, vorbis&quot;</li>
+<li>audio/ogg; codecs=&quot;vorbis&quot;</li>
+<li>audio/mp4; codecs=&quot;mp4a.40.5&quot;</li>
+</ul>
+
+<p class="note"><span>注释：</span>如果包含编解码器，则只能返回 &quot;probably&quot;。</p>
+</td>
+</tr>
+</table>
+
+<h3>返回值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">类型</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>String</td>
+<td>
+<p>表示支持的级别。可能的值：</p>
+
+<ul class="listintable">
+<li>&quot;probably&quot; - 最有可能支持</li>
+<li>&quot;maybe&quot; - 可能支持</li>
+<li>&quot;&quot; - （空字符串）不支持</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

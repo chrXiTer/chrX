@@ -1,0 +1,66 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML DOM top 属性</h1>
+
+<div class="backtoreference">
+<p><a href="dom_obj_window.htm" >HTML DOM Window 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>top 属性返回最顶层的先辈窗口。</p>
+<p>该属性返回对一个顶级窗口的只读引用。如果窗口本身就是一个顶级窗口，top 属性存放对窗口自身的引用。如果窗口是一个框架，那么 top 属性引用包含框架的顶层窗口。</p>
+
+<h3>语法</h3>
+<pre>window.top</pre>
+</div>
+
+<div>
+<h2>实例</h2>
+<p>下面的例子窗口是否在一个框架中，如果是，则跳出框架：</p>
+
+<pre>&lt;html&gt;
+&lt;head&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+function breakout()
+{
+if (<code>window.top</code>!=window.self) 
+{
+window.top.location=&quot;tryjs_breakout.htm&quot;
+}
+}
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;form&gt;
+Click the button to break out of the frame:
+&lt;input type=&quot;button&quot; onclick=&quot;breakout()&quot; value=&quot;Break out!&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('hdom_breakout')" >亲自试一试</a></p>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+<dl>
+<dt><a href="javascript:tiy.run('hdom_breakout')" >跳出框架</a></dt>
+<dt><a href="javascript:tiy.run('hdom_window_resizeby')" >调整窗口的尺寸</a></dt>
+<dt><a href="javascript:tiy.run('hdom_window_resizeto')" >把窗口调整为指定的尺寸</a></dt>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="dom_obj_window.htm" >HTML DOM Window 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

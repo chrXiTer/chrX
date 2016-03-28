@@ -1,0 +1,63 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML DOM name 属性</h1>
+
+<div class="backtoreference">
+<p><a href="dom_obj_window.htm" >HTML DOM Window 对象</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>name 属性可设置或返回存放窗口的名称的一个字符串。</p>
+<p>该名称是在 open() 方法创建窗口时指定的或者使用一个 &lt;frame&gt; 标记的 name 属性指定的。</p>
+<p>窗口的名称可以用作一个 &lt;a&gt; 或者 &lt;form&gt; 标记的 target 属性的值。以这种方式使用 target 属性声明了超链接文档或表单提交结果应该显示于指定的窗口或框架中。</p>
+	
+<h3>语法</h3>
+<pre>window.name=<span>name</span></pre>
+</div>
+
+<div>
+<h2>实例</h2>
+<p>下面的例子可返回新窗口的名称：</p>
+
+<pre>&lt;html&gt;
+&lt;head&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+function checkWin()
+  {
+  document.write(myWindow.name)
+  }
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+myWindow=window.open('','MyName','width=200,height=100')
+myWindow.document.write(&quot;This is 'myWindow'&quot;)
+&lt;/script&gt;
+
+&lt;input type=&quot;button&quot; value=&quot;What's the name of 'myWindow'?&quot;
+onclick=&quot;checkWin()&quot;&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+
+<div class="example">
+<h2>TIY</h2>
+<dl>
+<dt><a href="javascript:tiy.run('hdom_win_name')" >返回新窗口的名称</a></dt>
+</dl>
+</div>
+
+<div class="backtoreference">
+<p><a href="dom_obj_window.htm" >HTML DOM Window 对象</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

@@ -1,0 +1,76 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML5 canvas clip() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>从画布中剪切 200*120 像素的矩形区域。然后，绘制绿色矩形。只有被剪切区域内的绿色矩形部分是可见的：</p>
+
+<canvas id="myCanvas" class="canvas_example">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+var c=document.getElementById("myCanvas");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+    var c=document.getElementById("myCanvas");
+    var ctx=c.getContext("2d");
+    // 剪切矩形区域
+    ctx.rect(50,20,200,120);
+    ctx.stroke();
+    ctx.clip();
+    // 在 clip() 之后绘制绿色矩形
+   ctx.fillStyle="green";
+   ctx.fillRect(0,0,150,100);
+	}
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+<span class="code_comment">// 剪切矩形区域</span>
+ctx.rect(50,20,200,120);
+ctx.stroke();
+ctx.clip();
+<span class="code_comment">// 在 clip() 之后绘制绿色矩形</span>
+ctx.fillStyle=&quot;green&quot;;
+ctx.fillRect(0,0,150,100);
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_clip')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>clip() 方法从原始画布中剪切任意形状和尺寸。</p>
+
+<p class="tip"><span>提示：</span>一旦剪切了某个区域，则所有之后的绘图都会被限制在被剪切的区域内（不能访问画布上的其他区域）。您也可以在使用 clip() 方法前通过使用 save() 方法对当前画布区域进行保存，并在以后的任意时间对其进行恢复（通过 restore() 方法）。</p>
+
+<h3>JavaScript 语法：</h3>
+
+<pre>context.clip();</pre>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

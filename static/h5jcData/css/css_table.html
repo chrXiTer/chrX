@@ -1,0 +1,134 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS 表格</h1> 
+
+<div id="intro">
+<p><strong>CSS 表格属性可以帮助您极大地改善表格的外观。</strong></p>
+</div>
+
+<div>
+<h2>表格边框</h2>
+
+<p>如需在 CSS 中设置表格边框，请使用 border 属性。</p>
+<p>下面的例子为 table、th 以及 td 设置了蓝色边框：</p>
+<pre>
+table, th, td
+  {
+  border: 1px solid blue;
+  }
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_table_border')">试一试</a></p>
+<p>请注意，上例中的表格具有双线条边框。这是由于 table、th 以及 td 元素都有独立的边框。</p>
+<p>如果需要把表格显示为单线条边框，请使用 border-collapse 属性。</p>
+</div>
+
+<div>
+<h2>折叠边框</h2>
+
+<p>border-collapse 属性设置是否将表格边框折叠为单一边框：</p>
+<pre>
+table
+  {
+  border-collapse:collapse;
+  }
+
+table,th, td
+  {
+  border: 1px solid black;
+  }
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_table_border-collapse')">试一试</a></p>
+</div>
+
+<div>
+<h2>表格宽度和高度</h2>
+
+<p>通过 width 和 height 属性定义表格的宽度和高度。</p>
+<p>下面的例子将表格宽度设置为 100%，同时将 th 元素的高度设置为 50px：</p>
+<pre>
+table
+  {
+  width:100%;
+  }
+
+th
+  {
+  height:50px;
+  }
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_table_width')">试一试</a></p>
+</div>
+
+<div>
+<h2>表格文本对齐</h2>
+
+<p>text-align 和 vertical-align 属性设置表格中文本的对齐方式。</p>
+<p>text-align 属性设置水平对齐方式，比如左对齐、右对齐或者居中：</p>
+<pre>
+td
+  {
+  text-align:right;
+  }
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_table_align')">试一试</a></p>
+<p>vertical-align 属性设置垂直对齐方式，比如顶部对齐、底部对齐或居中对齐：</p>
+<pre>
+td
+  {
+  height:50px;
+  vertical-align:bottom;
+  }
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_table_vertical-align')">试一试</a></p>
+</div>
+
+<div>
+<h2>表格内边距</h2>
+
+<p>如需控制表格中内容与边框的距离，请为 td 和 th 元素设置 padding 属性：</p>
+<pre>
+td
+  {
+  padding:15px;
+  }
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_table_padding')">试一试</a></p>
+</div>
+
+<div>
+<h2>表格颜色</h2>
+
+<p>下面的例子设置边框的颜色，以及 th 元素的文本和背景颜色：</p>
+<pre>
+table, td, th
+  {
+  border:1px solid green;
+  }
+
+th
+  {
+  background-color:green;
+  color:white;
+  }
+</pre>
+
+<p class="tiyClassInP"><a href="javascript:tiy.run('css_table_color')">试一试</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+
+

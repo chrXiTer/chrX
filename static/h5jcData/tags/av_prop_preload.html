@@ -1,0 +1,86 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML 5 Audio/Video DOM preload 属性</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>页面一旦加载，就开始加载视频：</p>
+
+<pre>
+myVid=document.getElementById(&quot;video1&quot;);
+<code>myVid.preload=&quot;auto&quot;</code>;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_av_prop_preload')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>preload 属性设置或返回是否在页面加载后立即加载音频/视频。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<p>设置 preload 属性：</p>
+<pre><i>audio</i>|<i>video</i>.preload=&quot;auto|metadata|none&quot;</pre>
+
+<p>返回 preload 属性：</p>
+<pre><i>audio</i>|<i>video</i>.preload</pre>
+
+<h3>属性值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>auto</td>
+<td>指示一旦页面加载，则开始加载音频/视频。</td>
+</tr>
+
+<tr>
+<td>metadata</td>
+<td>指示当页面加载后仅加载音频/视频的元数据。</td>
+</tr>
+
+<tr>
+<td>none</td>
+<td>指示页面加载后不应加载音频/视频。</td>
+</tr>
+</table>
+
+<h3>返回值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">类型</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>字符串值</td>
+<td>auto|metadata|none</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_audio_video_dom.htm" >HTML 5 Audio/Video DOM 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

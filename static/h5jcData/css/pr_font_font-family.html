@@ -1,0 +1,119 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<div id="wrapper">
+
+<div id="maincontent">
+
+<h1>CSS font-family 属性</h1>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>font-family 规定元素的字体系列。</p>
+<p>font-family 可以把多个字体名称作为一个“回退”系统来保存。如果浏览器不支持第一个字体，则会尝试下一个。也就是说，font-family 属性的值是用于某个元素的字体族名称或/及类族名称的一个优先表。浏览器会使用它可识别的第一个值。</p>
+
+<p>有两种类型的字体系列名称：</p>
+<ul>
+<li>指定的系列名称：具体字体的名称，比如：&quot;times&quot;、&quot;courier&quot;、&quot;arial&quot;。</li>
+<li>通常字体系列名称：比如：&quot;serif&quot;、&quot;sans-serif&quot;、&quot;cursive&quot;、&quot;fantasy&quot;、&quot;monospace&quot;</li>
+</ul>
+
+<p class="tip"><span>提示：</span>使用逗号分割每个值，并始终提供一个类族名称作为最后的选择。</p>
+<p class="important"><span>注意：</span>使用某种特定的字体系列（Geneva）完全取决于用户机器上该字体系列是否可用；这个属性没有指示任何字体下载。因此，强烈推荐使用一个通用字体系列名作为后路。</p>
+<table class="dataintable">
+  <tr>
+    <th style="width:25%;">默认值：</th>
+    <td style="width:75%;"><i>not specified</i></td>
+  </tr>
+  <tr>
+    <th>继承性：</th>
+    <td>yes</td>
+  </tr>
+  <tr>
+    <th>版本：</th>
+    <td>CSS1</td>
+  </tr>
+  <tr>
+    <th>JavaScript 语法：</th>
+    <td><i>object</i>.style.fontFamily=&quot;arial,sans-serif&quot;</td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>为段落设置字体：</p>
+<pre>
+p
+  {
+  <code>font-family:"Times New Roman",Georgia,Serif;</code>
+  }
+</pre>
+
+<p><a href="../tiy/t.asp-f=csse_font-family.htm" >TIY</a></p>
+</div>
+
+<div>
+<h2>浏览器支持</h2>
+<p>所有主流浏览器都支持 font-family 属性。</p>
+<p class="note"><span>注释：</span>任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 &quot;inherit&quot;。</p>
+</div>
+
+<div>
+<h2>可能的值</h2>
+<table class="dataintable">
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>
+	<ul>
+	<li><i>family-name</i></li>
+	<li><i>generic-family</i></li>
+	</ul>
+</td>
+<td>
+	<p>用于某个元素的字体族名称或/及类族名称的一个优先表。</p>
+	<p>默认值：取决于浏览器。</p>
+</td>
+</tr>
+
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承字体系列。</td>
+</tr>
+</table>
+</div>
+
+<div class="example">
+<h2>TIY 实例</h2>
+<dl>
+<dt><a href="../tiy/t.asp-f=csse_font-family.htm" >设置文本的字体</a></dt>
+<dd>本例演示如何设置文本字体。</dd>
+</dl>
+</div>
+
+<div>
+<h2>相关页面</h2>
+
+<p>CSS 教程：<a href="css_font.htm" title="CSS 字体">CSS 字体</a></p>
+<p>CSS 参考手册：<a href="pr_font_font.htm" title="CSS font 属性">CSS font 属性</a></p>
+<p>HTML DOM 参考手册：<a href="../htmldom/prop_style_font.htm" title="HTML DOM font 属性">font 属性</a></p>
+</div>
+
+<div class="backtoreference">
+<p><a href=".htm" title="CSS 参考手册">CSS 参考手册</a></p>
+</div>
+
+</div>
+
+</div>
+<script src="../chrX.js"></script>
+

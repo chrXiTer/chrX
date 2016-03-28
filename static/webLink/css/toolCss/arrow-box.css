@@ -1,0 +1,32 @@
+.arrow-box {
+    background: #bbb9b9;
+    border: 2px solid #d4d3d3;
+    padding: 1px;
+    color: #fff;
+    border-radius: 1px;
+}
+
+    .arrow-box:after, .arrow-box:before {
+        left: 100%;
+        top: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .arrow-box:after {
+        border-color: rgba(136,183,213,0);
+        border-left-color: #bbb9b9;
+        border-width: 6px;
+        margin-top: -6px;
+    }
+
+    .arrow-box:before {
+        border-color: rgba(194,225,245,0);
+        border-left-color: #d4d3d3;
+        border-width: 8px;
+        margin-top: -8px;
+    }

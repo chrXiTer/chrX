@@ -1,0 +1,114 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML5 canvas fillText() 方法</h1>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>使用 fillText()，在画布上写文本 &quot;Hello world!&quot; 和 &quot;w3school.com.cn&quot;：</p>
+
+<canvas id="myCanvas" class="canvas_example">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+var c=document.getElementById("myCanvas");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+var ctx=c.getContext("2d");
+ctx.font="20px Georgia";
+ctx.fillText("Hello World!",10,50);
+ctx.font="30px Verdana";
+// 创建渐变
+var gradient=ctx.createLinearGradient(0,0,c.width,0);
+gradient.addColorStop("0","magenta");
+gradient.addColorStop("0.5","blue");
+gradient.addColorStop("1.0","red");
+// 用渐变填色
+ctx.fillStyle=gradient;
+ctx.fillText("w3school.com.cn.htm",10,90);
+	}
+</script>
+
+<p>JavaScript:</p>
+
+<pre>
+var c=document.getElementById(&quot;myCanvas&quot;);
+var ctx=c.getContext(&quot;2d&quot;);
+
+ctx.font=&quot;20px Georgia&quot;;
+<code>ctx.fillText(&quot;Hello World!&quot;,10,50);</code>
+
+ctx.font=&quot;30px Verdana&quot;;
+<span class="code_comment">// 创建渐变</span>
+var gradient=ctx.createLinearGradient(0,0,c.width,0);
+gradient.addColorStop(&quot;0&quot;,&quot;magenta&quot;);
+gradient.addColorStop(&quot;0.5&quot;,&quot;blue&quot;);
+gradient.addColorStop(&quot;1.0&quot;,&quot;red&quot;);
+<span class="code_comment">// 用渐变填色</span>
+ctx.fillStyle=gradient;
+<code>ctx.fillText(&quot;w3school.com.cn&quot;,10,90);</code>
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html5_canvas_filltext')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+
+<p>fillText() 方法在画布上绘制填色的文本。文本的默认颜色是黑色。</p>
+
+<p class="tip"><span>提示：</span>请使用 <a href="canvas_font.htm"  title="HTML 5 canvas font 属性">font</a> 属性来定义字体和字号，并使用 <a href="canvas_fillstyle.htm"  title="HTML 5 canvas fillStyle 属性">fillStyle</a> 属性以另一种颜色/渐变来渲染文本。</p>
+
+<h3>JavaScript 语法：</h3>
+
+<pre>context.fillText(<i>text</i>,<i>x</i>,<i>y</i>,<i>maxWidth</i>);</pre>
+
+<h3>参数值</h3>
+
+<table class="dataintable">
+<tr>
+<th style="width:25%;">参数</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><i>text</i></td>
+<td>规定在画布上输出的文本。</td>
+</tr>
+
+<tr>
+<td><i>x</i></td>
+<td>开始绘制文本的 x 坐标位置（相对于画布）。</td>
+</tr>
+
+<tr>
+<td><i>y</i></td>
+<td>开始绘制文本的 y 坐标位置（相对于画布）。</td>
+</tr>
+
+<tr>
+<td><i>maxWidth</i></td>
+<td>可选。允许的最大文本宽度，以像素计。</td>
+</tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="html_ref_canvas.htm" >HTML5 Canvas 参考手册</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

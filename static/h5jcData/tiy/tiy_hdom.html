@@ -1,0 +1,2818 @@
+﻿
+
+<iframe id="tiyiframe_hdom_accesskey_anchor">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function accesskey()
+{
+document.getElementById('w3').accessKey="w"
+document.getElementById('w3dom').accessKey="d"
+}
+</script>
+</head>
+
+<body onload="accesskey()">
+
+<p><a id="w3" href="javascript:" >W3School.com.cn</a> （请使用 Alt + w 给该链接赋予焦点）</p>
+<p><a id="w3dom" href="javascript:" >HTML DOM</a> （请使用 Alt + d 为该链接赋予焦点）</p>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_accesskey_form">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function access()
+{
+document.getElementById('myName').accessKey="n"
+document.getElementById('myPwd').accessKey="p"
+document.getElementById('ie').accessKey="i"
+document.getElementById('fx').accessKey="f"
+document.getElementById('myButton').accessKey="b"
+}
+</script>
+</head>
+
+<body onload="access()">
+<form>
+姓名：<input id="myName" type="text" />
+<br />
+密码：<input id="myPwd" type="password" />
+<br /><br />
+选择您喜欢的浏览器：
+<br />
+<input type="radio" name="browser" id="ie" value="Internet Explorer">Internet Explorer<br />
+<input type="radio" name="browser" id="fx" value="Firefox">Firefox
+<br /><br />
+<input type="button" value="点击我！" id="myButton" />
+</form>
+
+<p>（请使用 Alt + <i>accesskey</i> 为不同的表单字段赋予焦点。）
+</p>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_alert">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function disp_alert()
+{
+alert("我是一个消息框！")
+}
+</script>
+</head>
+<body>
+
+<input type="button" onclick="disp_alert()" value="显示消息框" />
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_alert2">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function disp_alert()
+{
+alert("再打个招呼。这里演示了" + "\n" + "如何在消息框中添加折行。")
+}
+</script>
+</head>
+<body>
+
+<input type="button" onclick="disp_alert()" value="显示消息框" />
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_anchor1">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function linkTo(y)
+{
+var x=window.open("../example/hdom/anchors.htm"/*tpa=http://w3school.com.cn/example/hdom/anchors.htm*/,"","scrollbars=yes,width=250,height=200")
+x.location.hash=y
+}
+</script>
+</head>
+
+<body>
+<h3>Links and Anchors</h3>
+<p>点击一个按钮，来显示第二个窗口中的锚。</p>
+<input type="button" value="0" onclick="linkTo(0)">
+<input type="button" value="1" onclick="linkTo(1)">
+<input type="button" value="2" onclick="linkTo(2)">
+<input type="button" value="3" onclick="linkTo(3)">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_anchor_focus_blur">
+<textarea name="c">
+<html>
+<head>
+<style type="text/css">
+a:active {color:green}
+</style>
+
+<script type="text/javascript">
+function getfocus()
+{document.getElementById('myAnchor').focus()}
+
+function losefocus()
+{document.getElementById('myAnchor').blur()}
+</script>
+</head>
+
+<body>
+<a id="myAnchor" href="javascript:if(confirm('/chrX/nofile/123  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='/chrX/nofile/123'" >访问 W3School.com.cn</a>
+<br /><br/>
+<input type="button" onclick="getfocus()" value="获得焦点">
+<input type="button" onclick="losefocus()" value="失去焦点">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_anchor_href">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function changeLink()
+{
+document.getElementById('myAnchor').innerHTML="访问 W3School"
+document.getElementById('myAnchor').href="/chrX/nofile/123"
+document.getElementById('myAnchor').target="_blank"
+}
+</script>
+</head>
+
+<body>
+<a id="myAnchor" href="javascript:if(confirm('http://www.microsoft.com/  \n\n文件并未加载在此文档，因为 它的域或路径超过开始网址中设置的范围。  \n\n你要从服务器上打开它吗？'))window.location='http://www.microsoft.com/'" >访问 Microsoft</a>
+<input type="button" onclick="changeLink()" value="改变链接">
+<p>在本例中，我们改变超链接的文本和 URL。我们也改变 target 属性。target 属性的默认设置是 "_self"，这意味着会在相同的窗口中打开链接。通过把 target 属性设置为 "_blank"，链接将在新窗口中打开。</p>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_autonext">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function checkLen(x,y)
+{
+if (y.length==x.maxLength)
+	{
+	var next=x.tabIndex
+	if (next<document.getElementById("myForm").length)
+		{
+		document.getElementById("myForm").elements[next].focus()
+		}
+	}
+}
+</script>
+</head>
+
+<body>
+<p>这段脚本在达到文本框的最大长度时跳到下一个文本框：</p>
+
+<form id="myForm">
+<input size="3" tabindex="1" maxlength="3" onkeyup="checkLen(this,this.value)">
+<input size="2" tabindex="2" maxlength="2" onkeyup="checkLen(this,this.value)">
+<input size="3" tabindex="3" maxlength="3" onkeyup="checkLen(this,this.value)">
+</form>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_breakout">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function breakout()
+  {
+  if (window.top!=window.self) 
+    {
+    window.top.location="../example/hdom/tryjs_breakout.htm"/*tpa=http://w3school.com.cn/example/hdom/tryjs_breakout.htm*/
+    }
+  }
+</script>
+</head>
+<body>
+
+<input type="button" onclick="breakout()" value="跳出框架！">
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_browser">
+<textarea name="c">
+<html>
+<body>
+<script type="text/javascript">
+var browser=navigator.appName
+var b_version=navigator.appVersion
+var version=parseFloat(b_version)
+document.write("浏览器名称："+ browser)
+document.write("<br />")
+document.write("浏览器版本："+ version)
+</script>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_browser2">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function detectBrowser()
+{
+var browser=navigator.appName
+var b_version=navigator.appVersion
+var version=parseFloat(b_version)
+if ((browser=="Netscape"||browser=="Microsoft Internet Explorer") && (version>=4))
+  {alert("您的浏览器已经很棒了！")}
+else
+  {alert("您的浏览器需要升级了！")}
+}
+</script>
+</head>
+
+<body onload="detectBrowser()">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_browserdetails">
+<textarea name="c">
+<html>
+<body>
+<script type="text/javascript">
+document.write("<p>浏览器：")
+document.write(navigator.appName + "</p>")
+
+document.write("<p>浏览器版本：")
+document.write(navigator.appVersion + "</p>")
+
+document.write("<p>代码：")
+document.write(navigator.appCodeName + "</p>")
+
+document.write("<p>平台：")
+document.write(navigator.platform + "</p>")
+
+document.write("<p>Cookies 启用：")
+document.write(navigator.cookieEnabled + "</p>")
+
+document.write("<p>浏览器的用户代理报头：")
+document.write(navigator.userAgent + "</p>")
+</script>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_browsermonitor">
+<textarea name="c">
+<html>
+<body>
+<script type="text/javascript">
+document.write("Screen resolution: ")
+document.write(screen.width + "*" + screen.height)
+document.write("<br />")
+document.write("Available view area: ")
+document.write(screen.availWidth + "*" + screen.availHeight)
+document.write("<br />")
+document.write("Color depth: ")
+document.write(screen.colorDepth)
+document.write("<br />")
+document.write("Buffer depth: ")
+document.write(screen.bufferDepth)
+document.write("<br />")
+document.write("DeviceXDPI: ")
+document.write(screen.deviceXDPI)
+document.write("<br />")
+document.write("DeviceYDPI: ")
+document.write(screen.deviceYDPI)
+document.write("<br />")
+document.write("LogicalXDPI: ")
+document.write(screen.logicalXDPI)
+document.write("<br />")
+document.write("LogicalYDPI: ")
+document.write(screen.logicalYDPI)
+document.write("<br />")
+document.write("FontSmoothingEnabled: ")
+document.write(screen.fontSmoothingEnabled)
+document.write("<br />")
+document.write("PixelDepth: ")
+document.write(screen.pixelDepth)
+document.write("<br />")
+document.write("UpdateInterval: ")
+document.write(screen.updateInterval)
+document.write("<br />")
+</script>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_change_color">
+<textarea name="c">
+<html>
+
+<head>
+<script type="text/javascript">
+function ChangeColor()
+{
+document.body.bgColor="yellow";
+}
+</script>
+</head>
+
+<body onclick="ChangeColor()">
+Click on this document!
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_checkbox">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function convertToUcase()
+{
+document.getElementById("fname").value=document.getElementById("fname").value.toUpperCase()
+document.getElementById("lname").value=document.getElementById("lname").value.toUpperCase()
+}
+</script>
+</head>
+
+<body>
+<form name="form1">
+名：<input type="text" id="fname" size="20" />
+<br /><br />
+姓：<input type="text" id="lname" size="20" />
+<br /><br />
+转换为大写
+<input type="checkBox" onclick="if (this.checked) {convertToUcase()}">
+</form>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_collection_imglength">
+<textarea name="c">
+<html>
+<body>
+<img border="0" src="../i/eg_smile.gif" />
+<br />
+<img border="0" src="../i/eg_mouse.jpg" />
+<br /><br />
+
+<script type="text/javascript">
+document.write("本文档包含：" + document.images.length + " 幅图像。")
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_collection_item">
+<textarea name="c">
+<html>
+<body>
+<form id="Form1" name="Form1">
+您的姓名：<input type="text">
+</form>
+<form id="Form2" name="Form2">
+您的汽车：<input type="text">
+</form>
+
+<p>
+要访问集合中的项目，你既可以使用项目编号，也可以使用项目名称：
+</p>
+
+<script type="text/javascript">
+document.write("<p>第一个表单名称是：" + document.forms[0].name + "</p>")
+document.write("<p>第一个表单名称是：" + document.getElementById("Form1").name + "</p>")
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_collection_length">
+<textarea name="c">
+<html>
+<body>
+
+<form name="Form1"></form>
+<form name="Form2"></form>
+<form name="Form3"></form>
+
+<script type="text/javascript">
+document.write("文档包含： " + document.forms.length + " 个表单。")
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_confirm">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function show_confirm()
+{
+var r=confirm("Press a button!");
+if (r==true)
+  {
+  alert("You pressed OK!");
+  }
+else
+  {
+  alert("You pressed Cancel!");
+  }
+}
+</script>
+</head>
+<body>
+
+<input type="button" onclick="show_confirm()" value="Show a confirm box" />
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_document_anchors">
+<textarea name="c">
+<html>
+<body>
+
+<a name="first">第一个锚</a><br />
+<a name="second">第二个锚</a><br />
+<a name="third">第三个锚</a><br />
+<br />
+
+文档中锚的数目：
+<script type="text/javascript">
+document.write(document.anchors.length)
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_document_anchors2">
+<textarea name="c">
+<html>
+<body>
+
+<a name="first">第一个锚</a><br />
+<a name="second">第二个锚</a><br />
+<a name="third">第三个锚</a><br />
+<br />
+
+本文档中第一个锚的 InnerHTML 是：
+<script type="text/javascript">
+document.write(document.anchors[0].innerHTML)
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_document_domain">
+<textarea name="c">
+<html>
+<body>
+
+本文档的域名是：
+<script type="text/javascript">
+document.write(document.domain)
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_document_getbyid">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function getValue()
+{
+var x=document.getElementById("myHeader")
+alert(x.innerHTML)
+}
+</script>
+</head>
+<body>
+
+<h1 id="myHeader" onclick="getValue()">这是标题</h1>
+<p>点击标题，会提示出它的值。</p>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_document_getbyname">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function getElements()
+  {
+  var x=document.getElementsByName("myInput");
+  alert(x.length);
+  }
+</script>
+</head>
+
+<body>
+<input name="myInput" type="text" size="20" /><br />
+<input name="myInput" type="text" size="20" /><br />
+<input name="myInput" type="text" size="20" /><br />
+<br />
+<input type="button" onclick="getElements()" value="名为 'myInput' 的元素有多少个？" />
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_document_open">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function createNewDoc()
+  {
+  var newDoc=document.open("text/html","replace");
+  var txt="<html><body>学习 DOM 非常有趣！</body></html>";
+  newDoc.write(txt);
+  newDoc.close();
+  }
+</script>
+</head>
+
+<body>
+<input type="button" value="打开并写入一个新文档" onclick="createNewDoc()">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_document_referrer">
+<textarea name="c">
+<html>
+<body>
+
+<p>referrer 属性返回加载本文档的文档的 URL。</p>
+
+本文档的 referrer 是：
+<script type="text/javascript">
+document.write(document.referrer)
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_document_title">
+<textarea name="c">
+<html>
+<head>
+<title>My title</title>
+</head>
+
+<body>
+该文档的标题是：
+<script type="text/javascript">
+document.write(document.title)
+</script>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_document_url">
+<textarea name="c">
+<html>
+
+<body>
+该文档的 URL 是：
+<script type="text/javascript">
+document.write(document.URL)
+</script>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_event_button">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function whichButton(event)
+{
+var btnNum = event.button;
+if (btnNum==2)
+  {
+  alert("您点击了鼠标右键！")
+  }
+else if(btnNum==0)
+  {
+  alert("您点击了鼠标左键！")
+  }
+else if(btnNum==1)
+  {
+  alert("您点击了鼠标中键！");
+  }
+else
+  {
+  alert("您点击了" + btnNum+ "号键，我不能确定它的名称。");
+  }
+}
+</script>
+</head>
+
+<body onmousedown="whichButton(event)">
+<p>请在文档中点击鼠标。一个消息框会提示出您点击了哪个鼠标按键。</p>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_event_clientx">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function show_coords(event)
+{
+x=event.clientX
+y=event.clientY
+alert("X 坐标: " + x + ", Y 坐标: " + y)
+}
+</script>
+</head>
+
+<body onmousedown="show_coords(event)">
+
+<p>请在文档中点击。一个消息框会提示出鼠标指针的 x 和 y 坐标。</p>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_event_keycode">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function whichButton(event)
+{
+alert(event.keyCode)
+}
+
+</script>
+</head>
+
+<body onkeyup="whichButton(event)">
+<p><b>注释：</b>在测试这个例子时，要确保右侧的框架获得了焦点。</p>
+<p>在键盘上按一个键。消息框会提示出该按键的 unicode。</p>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_event_screenxy">
+<textarea name="c">
+<html>
+<head>
+
+<script type="text/javascript">
+function coordinates(event)
+{
+x=event.screenX
+y=event.screenY
+alert("X=" + x + " Y=" + y)
+}
+
+</script>
+</head>
+<body onmousedown="coordinates(event)">
+
+<p>
+在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。
+</p>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_event_shiftkey">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function isKeyPressed(event)
+{
+  if (event.shiftKey==1)
+    {
+    alert("The shift key was pressed!")
+    }
+  else
+    {
+    alert("The shift key was NOT pressed!")
+    }
+  }
+</script>
+</head>
+
+<body onmousedown="isKeyPressed(event)">
+
+<p>在文档中点击某个位置。消息框会告诉你是否按下了 shift 键。</p>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_event_srcelement">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function whichElement(e)
+{
+var targ
+if (!e) var e = window.event
+if (e.target) targ = e.target
+else if (e.srcElement) targ = e.srcElement
+if (targ.nodeType == 3) // defeat Safari bug
+   targ = targ.parentNode
+var tname
+tname=targ.tagName
+alert("You clicked on a " + tname + " element.")
+}
+</script>
+</head>
+
+<body onmousedown="whichElement(event)">
+<p>在文档中点击某个位置。消息框会提示出您所点击的标签的名称。</p>
+
+<h3>这是标题</h3>
+<p>这是段落。</p>
+<img src="../i/eg_mouse2.jpg" />
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_event_type">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function getEventType(event)
+  { 
+  alert(event.type);
+  }
+</script>
+</head>
+
+<body onmousedown="getEventType(event)">
+
+<p>在文档中点击某个位置。消息框会提示出被触发的事件的类型。</p>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_formattext">
+<textarea name="c">
+<html>
+<body>
+
+<script type="text/javascript">
+document.write("<h1>Hello World!</h1>")
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_formvalidate">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function validate()
+{
+var at=document.getElementById("email").value.indexOf("@")
+var age=document.getElementById("age").value
+var fname=document.getElementById("fname").value
+submitOK="true"
+
+if (fname.length>10)
+ {
+ alert("名字必须小于 10 个字符。")
+ submitOK="false"
+ }
+if (isNaN(age)||age<1||age>100)
+ {
+ alert("年龄必须是 1 与 100 之间的数字。")
+ submitOK="false"
+ }
+if (at==-1) 
+ {
+ alert("不是有效的电子邮件地址。")
+ submitOK="false"
+ }
+if (submitOK=="false")
+ {
+ return false
+ }
+}
+</script>
+</head>
+
+<body>
+<form action="http://w3school.com.cn/example/hdom/hdom_submitpage.html" onsubmit="return validate()">
+名字（最多 10 个字符）：<input type="text" id="fname" size="20"><br />
+年龄（从 1 到 100）：<input type="text" id="age" size="20"><br />
+电子邮件：<input type="text" id="email" size="20"><br />
+<br />
+<input type="submit" value="提交"> 
+</form>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_form_action">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function changeAction()
+{
+var x=document.getElementById("myForm")
+alert("Original action: " + x.action)
+x.action="/htmldom/index.asp"
+alert("New action: " + x.action)
+x.submit()
+}
+</script>
+</head>
+<body>
+
+<form id="myForm" action="http://w3school.com.cn/i/eg_smile.gif">
+名称：<input type="text" value="米老鼠" />
+<input type="button" onclick="changeAction()"
+value="改变 action 属性并提交表单" />
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_form_checkbox">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function createOrder()
+{
+coffee=document.forms[0].coffee
+txt=""
+for (i=0;i<coffee.length;++ i)
+{
+if (coffee[i].checked)
+{
+txt=txt + coffee[i].value + " "
+}
+}
+document.getElementById("order").value="您订购的咖啡带有： " + txt
+}
+</script>
+</head>
+
+<body>
+<p>你喜欢怎么喝咖啡？</p>
+<form>
+<input type="checkbox" name="coffee" value="奶油">加奶油<br />
+<input type="checkbox" name="coffee" value="糖块">加糖块<br />
+<br />
+<input type="button" onclick="createOrder()" value="发送订单">
+<br /><br />
+<input type="text" id="order" size="50">
+</form>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_form_method">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function showMethod()
+  {
+  var x=document.getElementById("myForm")
+  alert(x.method)
+  }
+</script>
+</head>
+<body>
+
+<form id="myForm" method="post">
+名称：<input type="text" value="米老鼠" />
+<input type="button" onclick="showMethod()" value="显示 method" />
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_form_radio">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function check(browser)
+  {
+  document.getElementById("answer").value=browser
+  }
+</script>
+</head>
+<body>
+
+<p>您喜欢哪款浏览器？</p>
+
+<form>
+<input type="radio" name="browser" onclick="check(this.value)" value="Internet Explorer">Internet Explorer<br />
+<input type="radio" name="browser" onclick="check(this.value)" value="Firefox">Firefox<br />
+<input type="radio" name="browser" onclick="check(this.value)" value="Netscape">Netscape<br />
+<input type="radio" name="browser" onclick="check(this.value)" value="Opera">Opera<br />
+<br />
+您喜欢的浏览器是：<input type="text" id="answer" size="20">
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_form_reset">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function formReset()
+{
+document.getElementById("myForm").reset()
+}
+</script>
+</head>
+
+<body>
+<p>在下面的文本框中输入一些文本，然后点击重置按钮就可以重置表单。</p>
+
+<form id="myForm">
+姓名：<input type="text" size="20"><br />
+年龄：<input type="text" size="20"><br />
+<br />
+<input type="button" onclick="formReset()" value="重置">
+</form>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_form_submit">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function formSubmit()
+{
+document.getElementById("myForm").submit()
+}
+</script>
+</head>
+
+<body>
+<p>在下面的文本框中输入一些文本，然后点击提交按钮就可以提交表单。</p>
+
+<form id="myForm" action="http://w3school.com.cn/i/eg_smile.gif" method="get">
+名：<input type="text" name="firstname" size="20"><br />
+姓：<input type="text" name="lastname" size="20"><br />
+<br />
+<input type="button" onclick="formSubmit()" value="提交">
+</form>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_frame_noresize">
+<textarea name="c">
+<html>
+<frameset cols="50%,50%">
+  <frame id="leftFrame" src="../example/hdom/frame_noresize.html" >
+  <frame id="rightFrame" src="../example/hdom/frame_a.html" >
+</frameset>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_frame_scrolling">
+<textarea name="c">
+<html>
+<frameset cols="50%,50%">
+  <frame id="leftFrame" src="../example/hdom/frame_scroll.html" >
+  <frame id="rightFrame" src="../example/hdom/frame_a.html" >
+</frameset>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_frame_src">
+<textarea name="c">
+<html>
+<frameset id="myFrameset" cols="50%,50%">
+  <frame id="leftFrame" src="../example/hdom/frame_src.html" >
+  <frame id="rightFrame" src="../example/hdom/frame_a.html" >
+</frameset>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_image_height">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function changeSize()
+{
+document.getElementById("compman").height="270"
+document.getElementById("compman").width="164"
+}
+</script>
+</head>
+
+<body>
+<img id="compman" src="../i/eg_bulbon.gif" />
+<br /><br />
+<input type="button" onclick="changeSize()" value="改变图像的高度和宽度">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_image_src">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function changeSrc()
+  {
+  document.getElementById("myImage").src="../i/eg_smile.gif"/*tpa=http://w3school.com.cn/i/eg_smile.gif*/
+  }
+</script>
+</head>
+
+<body>
+<img id="myImage" src="../i/eg_bulbon.gif" />
+<br /><br />
+<input type="button" onclick="changeSrc()" value="改变图像">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_input_checked">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function check()
+{
+document.getElementById("myCheck").checked=true
+}
+
+function uncheck()
+{
+document.getElementById("myCheck").checked=false
+}
+</script>
+</head>
+
+<body>
+<form>
+<input type="checkbox" id="myCheck" />
+<input type="button" onclick="check()" value="选定复选框" />
+<input type="button" onclick="uncheck()" value="取消选定复选框" />
+</form>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_location">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function currLocation()
+{
+alert(window.location)
+}
+function newLocation()
+{
+window.location="../index.html"/*tpa=http://w3school.com.cn/index.html*/
+}
+</script>
+</head>
+
+<body>
+<input type="button" onclick="currLocation()" value="显示当前的 URL">
+<input type="button" onclick="newLocation()" value="改变 URL">
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_multiwindows">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function open_win() 
+{
+window.open("http://www.microsoft.com/")
+window.open("/chrX/nofile/123")
+}
+</script>
+</head>
+
+<body>
+<form>
+<input type=button value="打开窗口" onclick="open_win()">
+</form>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_navigator">
+<textarea name="c">
+<html>
+<body>
+
+<script type="text/javascript">
+var x = navigator;
+document.write("CodeName=" + x.appCodeName);
+document.write("<br />");
+document.write("MinorVersion=" + x.appMinorVersion);
+document.write("<br />");
+document.write("Name=" + x.appName);
+document.write("<br />");
+document.write("Version=" + x.appVersion);
+document.write("<br />");
+document.write("CookieEnabled=" + x.cookieEnabled);
+document.write("<br />");
+document.write("CPUClass=" + x.cpuClass);
+document.write("<br />");
+document.write("OnLine=" + x.onLine);
+document.write("<br />");
+document.write("Platform=" + x.platform);
+document.write("<br />");
+document.write("UA=" + x.userAgent);
+document.write("<br />");
+document.write("BrowserLanguage=" + x.browserLanguage);
+document.write("<br />");
+document.write("SystemLanguage=" + x.systemLanguage);
+document.write("<br />");
+document.write("UserLanguage=" + x.userLanguage);
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_openallwindow">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function open_win()
+{
+window.open("/chrX/nofile/123","_blank","toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=400, height=400")
+}
+</script>
+</head>
+
+<body>
+<form>
+<input type="button" value="打开窗口" onclick="open_win()">
+</form>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_openwindow">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function open_win() 
+{
+window.open("/chrX/nofile/123")
+}
+</script>
+</head>
+
+<body>
+<form>
+<input type=button value="打开窗口" onclick="open_win()">
+</form>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_option_index1">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function alertIndex()
+  {
+  var x=document.getElementById("mySelect").selectedIndex;
+  var y=document.getElementsByTagName("option");
+  alert(y[x].text + " has the index of: " + y[x].index);
+  }
+</script>
+</head>
+<body>
+
+<form>
+请选择您喜欢的水果：
+<select id="mySelect">
+  <option>苹果</option>
+  <option>桃子</option>
+  <option>香蕉</option>
+  <option>桔子</option>
+</select>
+<br />
+<br />
+<input type="button" onclick="alertIndex()" value="显示被选水果的 index">
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_option_selected">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function selectOrange()
+  {
+  document.getElementById("orange").selected=true;
+  }
+</script>
+</head>
+
+<body>
+<form>
+请选择您喜欢的水果：
+<select>
+  <option id="apple">苹果</option>
+  <option id="orange">桔子</option>
+  <option id="pineapple" selected="selected">菠萝</option>
+  <option id="banana">香蕉</option>
+</select>
+<br /><br />
+<input type="button" onclick="selectOrange()" value="选择桔子">
+</form>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_print">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function printpage()
+  {
+  window.print()
+  }
+</script>
+</head>
+<body>
+
+<input type="button" value="打印本页" onclick="printpage()" />
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_prompt">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function disp_prompt()
+  {
+  var name=prompt("请输入您的名字","Bill Gates")
+  if (name!=null && name!="")
+    {
+    document.write("你好，" + name + "！今天过得好吗？")
+    }
+  }
+</script>
+</head>
+<body>
+
+<input type="button" onclick="disp_prompt()" value="显示一个提示框" />
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_pushbutton">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function alertId()
+{
+var txt="Id: " + document.getElementById("myButton").id
+txt=txt + ", type: " + document.getElementById("myButton").type
+alert(txt)
+document.getElementById("myButton").disabled=true
+}
+</script>
+</head>
+
+<body>
+<form>
+<button id="myButton" onClick="alertId()">请点击我！</button>
+</form>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_putdropdown">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function favBrowser()
+{
+var mylist=document.getElementById("myList")
+document.getElementById("favorite").value=mylist.options[mylist.selectedIndex].text
+}
+</script>
+</head>
+
+<body>
+<form>
+请选择您喜欢的浏览器：
+<select id="myList" onchange="favBrowser()">
+  <option>Internet Explorer</option>
+  <option>Netscape</option>
+  <option>Opera</option>
+</select>
+<p>您喜欢的浏览器是：<input type="text" id="favorite" size="20"></p>
+</form>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_putmore">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function moveNumbers()
+{
+var no=document.getElementById("no")
+var option=no.options[no.selectedIndex].text
+var txt=document.getElementById("result").value
+txt=txt + option
+document.getElementById("result").value=txt
+}
+</script>
+</head>
+
+<body>
+<form>
+请选择数字：<br />
+<select id="no">
+	<option>0</option>
+	<option>1</option>
+	<option>2</option>
+	<option>3</option>
+	<option>4</option>
+	<option>5</option>
+	<option>6</option>
+	<option>7</option>
+	<option>8</option>
+	<option>9</option>
+</select>
+<input type="button" onclick="moveNumbers()" value="-->"> 
+<input type="text" id="result" size="20">
+</form>
+</body>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_reload">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function reloadPage()
+{
+window.location.reload();
+}
+</script>
+</head>
+<body>
+
+<input type="button" value="重新加载页面" onclick="reloadPage()" />
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_select2">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function selText()
+{
+document.getElementById("myText").select()
+}
+</script>
+</head>
+
+<body>
+<form>
+<input size="25" type="text" id="myText" value="选定我吧！">
+<input type="button" value="选择文本" onclick="selText()"> 
+</form>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_select_disabled">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function disable()
+  {
+  document.getElementById("mySelect").disabled=true
+  }
+function enable()
+  {
+  document.getElementById("mySelect").disabled=false
+  }
+</script>
+</head>
+<body>
+
+<form>
+<select id="mySelect">
+  <option>苹果</option>
+  <option>桃子</option>
+  <option>香蕉</option>
+  <option>桔子</option>
+</select>
+<br /><br />
+<input type="button" onclick="disable()" value="禁用列表">
+<input type="button" onclick="enable()" value="启用列表">
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_select_form">
+<textarea name="c">
+<html>
+<body>
+
+<form id="myForm">
+<select id="mySelect">
+  <option>苹果</option>
+  <option>桃子</option>
+  <option>香蕉</option>
+  <option>桔子</option>
+</select>
+</form>
+
+<p>该表单的 id 是：
+<script type="text/javascript">
+document.write(document.getElementById("mySelect").form.id)
+</script>
+</p>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_select_length">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function getLength()
+  {
+  alert(document.getElementById("mySelect").length)
+  }
+</script>
+</head>
+<body>
+
+<form>
+<select id="mySelect">
+  <option>苹果</option>
+  <option>桃子</option>
+  <option>香蕉</option>
+  <option>桔子</option>
+</select>
+<input type="button" onclick="getLength()" value="在这个列表中，有多少选项？">
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_select_multiple">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function selectMultiple()
+  {
+  document.getElementById("mySelect").multiple=true
+  }
+</script>
+</head>
+<body>
+
+<form>
+<select id="mySelect" size="4">
+  <option>苹果</option>
+  <option>桃子</option>
+  <option>香蕉</option>
+  <option>桔子</option>
+</select>
+<input type="button" onclick="selectMultiple()" value="选择多个">
+</form>
+<p>在您点击 “选择多个” 按钮之前，请尝试同时选取多个选项。在点击 “选择多个” 按钮之后，请再试一次。</p>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_select_options">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function getOptions()
+  {
+  var x=document.getElementById("mySelect");
+  var y="";
+  for (i=0;i<x.length;i++)
+    {
+    y+=x.options[i].text;
+    y+="<br />";
+    }
+  document.write(y);
+  }
+</script>
+</head>
+
+<body>
+
+<form>
+请选择您喜欢的水果：
+<select id="mySelect">
+  <option>苹果</option>
+  <option>桃子</option>
+  <option>香蕉</option>
+  <option>桔子</option>
+</select>
+<br /><br />
+<input type="button" onclick="getOptions()" value="输出所有选项">
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_select_remove">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function removeOption()
+  {
+  var x=document.getElementById("mySelect")
+  x.remove(x.selectedIndex)
+  }
+</script>
+</head>
+<body>
+
+<form>
+<select id="mySelect">
+  <option>苹果</option>
+  <option>桃子</option>
+  <option>香蕉</option>
+  <option>桔子</option>
+</select>
+<input type="button" onclick="removeOption()" value="删除被选的选项">
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_select_size">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function changeSize()
+  {
+  document.getElementById("mySelect").size=4
+  }
+</script>
+</head>
+<body>
+
+<form>
+<select id="mySelect">
+  <option>苹果</option>
+  <option>桃子</option>
+  <option>香蕉</option>
+  <option>桔子</option>
+</select>
+<input type="button" onclick="changeSize()" value="改变大小">
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_statusbar">
+<textarea name="c">
+<html>
+<body>
+
+<script type="text/javascript">
+window.status="Some text in the status bar!!"
+</script>
+
+<p>请看状态栏中的文本。</p>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_tablecell_align">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function alignCell()
+{
+document.getElementById('td1').align="right"
+}
+</script>
+</head>
+<body>
+
+<table border="1">
+<tr>
+<th>-----名-----</th>
+<th>-----姓-----</th>
+</tr>
+<tr>
+<td id="td1">John</td>
+<td>Adams</td>
+</tr>
+</table>
+
+<form>
+<input type="button" onclick="alignCell()" 
+value="对齐 'John' 单元格" />
+</form>
+
+</body>
+</html>
+
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_tablecell_colspan">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function changeColSpan()
+  {
+  document.getElementById("td1").colSpan="2";
+  }
+</script>
+</head>
+<body>
+
+<table border="1">
+<tr>
+<th>名</th>
+<th>姓</th>
+</tr>
+<tr>
+<td id="td1">John</td>
+<td id="td2">Adams</td>
+</tr>
+</table>
+<br />
+<input type="button" onclick=changeColSpan() value="改变 colspan" />
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_tablecell_valign">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function topAlign()
+  {
+  document.getElementById('td1').vAlign="top";
+  document.getElementById('td2').vAlign="top";
+  document.getElementById('td3').vAlign="top";
+  }
+</script>
+</head>
+<body>
+
+<table width="50%" border="1">
+<tr>
+<th>名</th>
+<th>姓</th>
+<th>文本</th>
+</tr>
+<tr>
+<td id="td1">John</td>
+<td id="td2">Adams</td>
+<td id="td3">你们好。我是名字是 John Adams。
+在本例中，我需要一段长的文本。
+在本例中，我需要一段长的文本。
+在本例中，我需要一段长的文本。</td>
+</tr>
+</table>
+<br />
+<input type="button" onclick="topAlign()" value="上对齐表格单元" />
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_tablerow_align">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function leftAlign()
+  {
+  document.getElementById('header').align="left";
+  }
+</script>
+</head>
+<body>
+
+<table width="100%" border="1">
+<tr id="header">
+<th>名</th>
+<th>姓</th>
+</tr>
+<tr>
+<td>John</td>
+<td>Adams</td>
+</tr>
+</table>
+<br />
+<input type="button" onclick="leftAlign()" value="左对齐表格行" />
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_tablerow_cells">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function changeContent()
+{
+var x=document.getElementById('myTable').rows[0].cells
+x[0].innerHTML="新的内容"
+}
+</script>
+</head>
+
+<body>
+<table id="myTable" border="1">
+<tr>
+<td>Row1 cell1</td>
+<td>Row1 cell2</td>
+</tr>
+<tr>
+<td>Row2 cell1</td>
+<td>Row2 cell2</td>
+</tr>
+<tr>
+<td>Row3 cell1</td>
+<td>Row3 cell2</td>
+</tr>
+</table>
+<form>
+<input type="button" onclick="changeContent()" value="改变内容">
+</form>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_tablerow_insertcell">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function insCell()
+  {
+  var x=document.getElementById('tr2').insertCell(0)
+  x.innerHTML="John"
+  }
+</script>
+</head>
+<body>
+
+<table border="1">
+<tr id="tr1">
+<th>Firstname</th>
+<th>Lastname</th>
+</tr>
+<tr id="tr2">
+<td>Peter</td>
+<td>Griffin</td>
+</tr>
+</table>
+<br />
+<input type="button" onclick="insCell()" value="插入单元">
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_tablerow_valign">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function topAlign()
+  {
+  document.getElementById('tr2').vAlign="top";
+  }
+</script>
+</head>
+<body>
+
+<table width="50%" border="1">
+<tr id="tr1">
+<th>名</th>
+<th>姓</th>
+<th>文本</th>
+</tr>
+<tr id="tr2">
+<td>John</td>
+<td>Adams</td>
+<td>你们好。我是名字是 John Adams。
+在本例中，我需要一段长的文本。
+在本例中，我需要一段长的文本。
+在本例中，我需要一段长的文本。</td>
+</tr>
+</table>
+<br />
+<input type="button" onclick="topAlign()" value="上对齐表格行" />
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_table_border">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function changeBorder()
+  {
+  document.getElementById('myTable').border="10"
+  }
+</script>
+</head>
+<body>
+
+<table border="1" id="myTable">
+<tr>
+<td>100</td>
+<td>200</td>
+</tr>
+<tr>
+<td>300</td>
+<td>400</td>
+</tr>
+</table>
+<br />
+<input type="button" onclick="changeBorder()" value="改变边框">
+
+</body>
+</html>
+
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_table_cells">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function cell()
+  {
+  var x=document.getElementById('myTable').rows[0].cells;
+  alert(x[0].innerHTML);
+  }
+</script>
+</head>
+<body>
+
+<table id="myTable" border="1">
+<tr>
+<td>cell 1</td>
+<td>cell 2</td>
+</tr>
+<tr>
+<td>cell 3</td>
+<td>cell 4</td>
+</tr>
+</table>
+<br />
+<input type="button" onclick="cell()" value="显示第一个单元">
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_table_createcaption">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function createCaption()
+  {
+  var x=document.getElementById('myTable').createCaption()
+  x.innerHTML="我的表格标题"
+  }
+</script>
+</head>
+<body>
+
+<table id="myTable" border="1">
+<tr>
+<td>Row1 cell1</td>
+<td>Row1 cell2</td>
+</tr>
+<tr>
+<td>Row2 cell1</td>
+<td>Row2 cell2</td>
+</tr>
+</table>
+<br />
+<input type="button" onclick="createCaption()" value="创建标题">
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_table_deleterow">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function deleteRow(r)
+  {
+  var i=r.parentNode.parentNode.rowIndex
+  document.getElementById('myTable').deleteRow(i)
+  }
+</script>
+</head>
+<body>
+
+<table id="myTable" border="1">
+<tr>
+  <td>Row 1</td>
+  <td><input type="button" value="删除" onclick="deleteRow(this)"></td>
+</tr>
+<tr>
+  <td>Row 2</td>
+  <td><input type="button" value="删除" onclick="deleteRow(this)"></td>
+</tr>
+<tr>
+  <td>Row 3</td>
+  <td><input type="button" value="删除" onclick="deleteRow(this)"></td>
+</tr>
+</table>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_table_frame">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function aboveFrames()
+  {
+  document.getElementById('myTable').frame="above"
+  }
+function belowFrames()
+  {
+  document.getElementById('myTable').frame="below"
+  }
+</script>
+</head>
+<body>
+
+<table id="myTable">
+<tr>
+<td>100</td>
+<td>200</td>
+</tr>
+<tr>
+<td>300</td>
+<td>400</td>
+</tr>
+</table>
+<br />
+<input type="button" onclick="aboveFrames()" value="显示上边框">
+<input type="button" onclick="belowFrames()" value="显示下边框">
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_table_insertrow">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function insRow()
+  {
+  var x=document.getElementById('myTable').insertRow(0)
+  var y=x.insertCell(0)
+  var z=x.insertCell(1)
+  y.innerHTML="NEW CELL1"
+  z.innerHTML="NEW CELL2"
+  }
+</script>
+</head>
+
+<body>
+<table id="myTable" border="1">
+<tr>
+<td>Row1 cell1</td>
+<td>Row1 cell2</td>
+</tr>
+<tr>
+<td>Row2 cell1</td>
+<td>Row2 cell2</td>
+</tr>
+<tr>
+<td>Row3 cell1</td>
+<td>Row3 cell2</td>
+</tr>
+</table>
+<br />
+<input type="button" onclick="insRow()" value="插入行">
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_table_paddspac">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function padding()
+  {
+  document.getElementById('myTable').cellPadding="15"
+  }
+function spacing()
+  {
+  document.getElementById('myTable').cellSpacing="15"
+  }
+</script>
+</head>
+<body>
+
+<table id="myTable" border="1">
+<tr>
+<td>100</td>
+<td>200</td>
+</tr>
+<tr>
+<td>300</td>
+<td>400</td>
+</tr>
+</table>
+<br />
+<input type="button" onclick="padding()" value="改变 Cellpadding">
+<input type="button" onclick="spacing()" value="改变 Cellspacing">
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_table_rows">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function showRow()
+  {
+  alert(document.getElementById('myTable').rows[0].innerHTML)
+  }
+</script>
+</head>
+<body>
+
+<table id="myTable" border="1">
+<tr>
+<td>Row1 cell1</td>
+<td>Row1 cell2</td>
+</tr>
+<tr>
+<td>Row2 cell1</td>
+<td>Row2 cell2</td>
+</tr>
+<tr>
+<td>Row3 cell1</td>
+<td>Row3 cell2</td>
+</tr>
+</table>
+<br />
+<input type="button" onclick="showRow()" value="显示第一行的 innerHTML">
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_table_rules">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function rowRules()
+  {
+  document.getElementById('myTable').rules="rows"
+  }
+function colRules()
+  {
+document.getElementById('myTable').rules="cols"
+  }
+</script>
+</head>
+
+<body>
+<table id="myTable" border="1">
+<tr>
+<td>Row1 cell1</td>
+<td>Row1 cell2</td>
+</tr>
+<tr>
+<td>Row2 cell1</td>
+<td>Row2 cell2</td>
+</tr>
+<tr>
+<td>Row3 cell1</td>
+<td>Row3 cell2</td>
+</tr>
+</table>
+<br />
+<input type="button" onclick="rowRules()" value="仅显示行边框">
+<input type="button" onclick="colRules()" value="仅显示列边框">
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_text">
+<textarea name="c">
+<html>
+<body>
+
+<script type="text/javascript">
+document.write("Hello World!")
+</script>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_text_focus_blur">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function setFocus()
+  {
+  document.getElementById('text1').focus()
+  }
+function loseFocus()
+  {
+  document.getElementById('text1').blur()
+  }
+</script>
+</head>
+<body>
+
+<form>
+<input type="text" id="text1" />
+<br />
+<input type="button" onclick="setFocus()" value="设置焦点" />
+<input type="button" onclick="loseFocus()" value="失去焦点" />
+</form>
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_timing1">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function timedMsg()
+{
+var t=setTimeout("alert('5 seconds!')",5000)
+}
+</script>
+</head>
+
+<body>
+<form>
+<input type="button" value="显示计时的消息框！" onClick = "timedMsg()">
+</form>
+<p>点击上面的按钮。5 秒后会显示一个消息框。</p>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_timing2">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function timedText()
+{
+var t1=setTimeout("document.getElementById('txt').value='2 seconds!'",2000)
+var t2=setTimeout("document.getElementById('txt').value='4 seconds!'",4000)
+var t3=setTimeout("document.getElementById('txt').value='6 seconds!'",6000)
+}
+</script>
+</head>
+
+<body>
+<form>
+<input type="button" value="显示计时的文本！" onClick="timedText()">
+<input type="text" id="txt">
+</form>
+<p>在按钮上面点击。输入框会显示出已经流逝的 2、4、6 秒钟。</p>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_timing_clock">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function startTime()
+{
+var today=new Date()
+var h=today.getHours()
+var m=today.getMinutes()
+var s=today.getSeconds()
+// add a zero in front of numbers<10
+m=checkTime(m)
+s=checkTime(s)
+document.getElementById('txt').innerHTML=h+":"+m+":"+s
+t=setTimeout('startTime()',500)
+}
+
+function checkTime(i)
+{
+if (i<10) 
+  {i="0" + i}
+  return i
+}
+</script>
+</head>
+
+<body onload="startTime()">
+<div id="txt"></div>
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_timing_infinite">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+var c=0
+var t
+function timedCount()
+{
+document.getElementById('txt').value=c
+c=c+1
+t=setTimeout("timedCount()",1000)
+}
+</script>
+</head>
+
+<body>
+<form>
+<input type="button" value="开始计时！" onClick="timedCount()">
+<input type="text" id="txt">
+</form>
+<p>请点击上面的按钮。输入框会从 0 开始一直进行计时。</p>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_timing_stop">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+var c=0
+var t
+function timedCount()
+{
+document.getElementById('txt').value=c
+c=c+1
+t=setTimeout("timedCount()",1000)
+}
+
+function stopCount()
+{
+clearTimeout(t)
+}
+</script>
+</head>
+
+<body>
+<form>
+<input type="button" value="开始计时！" onClick="timedCount()">
+<input type="text" id="txt">
+<input type="button" value="停止计时！" onClick="stopCount()">
+</form>
+
+<p>
+请点击上面的“开始计时”按钮。输入框会从 0 开始一直进行计时。点击“停止计时”可停止计时。
+</p>
+
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_two_iframes">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function changeSource()
+{
+document.getElementById("frame1").src="../example/hdom/frame_c.html"/*tpa=http://w3school.com.cn/example/hdom/frame_c.html*/
+document.getElementById("frame2").src="../example/hdom/frame_d.html"/*tpa=http://w3school.com.cn/example/hdom/frame_d.html*/
+}
+</script>
+</head>
+
+<body>
+<iframe src="../example/hdom/frame_a.html" id="frame1"></iframe>
+<iframe src="../example/hdom/frame_b.html" id="frame2"></iframe>
+<br /><br />
+<input type="button" onclick="changeSource()" value="改变两个框架的 source">
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_window_popup">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function show_popup()
+{
+var p=window.createPopup()
+var pbody=p.document.body
+pbody.style.backgroundColor="red"
+pbody.style.border="solid black 1px"
+pbody.innerHTML="这是一个 pop-up！在 pop-up 外面点击，即可关闭它！"
+p.show(150,150,200,50,document.body)
+}
+</script>
+</head>
+
+<body>
+<button onclick="show_popup()">显示 pop-up！</button>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_window_resizeby">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function resizeWindow()
+{
+top.resizeBy(-100,-100)
+}
+</script>
+</head>
+
+<body>
+<form>
+<input type="button" onclick="resizeWindow()" value="调整窗口大小">
+</form>
+<p><b>注释：</b>我们使用的是 <b>top</b> 元素而不是 <b>window</b> 元素来表示顶级框架。如果您没有使用框架，请使用 <b>window</b> 元素。</p>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_window_resizeto">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function resizeWindow()
+{
+top.resizeTo(500,300)
+}
+</script>
+</head>
+
+<body>
+<form>
+<input type="button" onclick="resizeWindow()" value="调整窗口大小">
+</form>
+<p><b>注释：</b>我们使用的是 <b>top</b> 元素而不是 <b>window</b> 元素来表示顶级框架。如果您没有使用框架，请使用 <b>window</b> 元素。</p>
+</body>
+
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_window_scrollby">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function scrollWindow()
+{
+window.scrollBy(100,100);
+}
+</script>
+</head>
+<body>
+
+<input type="button" onclick="scrollWindow()" value="滚动" />
+<p>文本文本文本文本文本文本文本文本文本文本文本文本文本</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>文本文本文本文本文本文本文本文本文本文本文本文本文本</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>文本文本文本文本文本文本文本文本文本文本文本文本文本</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>文本文本文本文本文本文本文本文本文本文本文本文本文本</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>文本文本文本文本文本文本文本文本文本文本文本文本文本</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>文本文本文本文本文本文本文本文本文本文本文本文本文本</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>文本文本文本文本文本文本文本文本文本文本文本文本文本</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>文本文本文本文本文本文本文本文本文本文本文本文本文本</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+</body>
+</html>
+</textarea>
+</iframe>
+
+<iframe id="tiyiframe_hdom_window_scrollto">
+<textarea name="c">
+<html>
+<head>
+<script type="text/javascript">
+function scrollWindow()
+  {
+  window.scrollTo(100,500)
+  }
+</script>
+</head>
+<body>
+
+<input type="button" onclick="scrollWindow()" value="滚动" />
+<p>文本文本文本文本文本文本文本文本文本文本文本文本文本</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>文本文本文本文本文本文本文本文本文本文本文本文本文本</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>文本文本文本文本文本文本文本文本文本文本文本文本文本</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>文本文本文本文本文本文本文本文本文本文本文本文本文本</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>文本文本文本文本文本文本文本文本文本文本文本文本文本</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>文本文本文本文本文本文本文本文本文本文本文本文本文本</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>文本文本文本文本文本文本文本文本文本文本文本文本文本</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>文本文本文本文本文本文本文本文本文本文本文本文本文本</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+</body>
+</html>
+</textarea>
+</iframe>
+

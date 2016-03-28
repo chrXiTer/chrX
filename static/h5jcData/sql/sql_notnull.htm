@@ -1,0 +1,32 @@
+<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+<body class="html">
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>SQL NOT NULL 约束</h1>
+
+<div>
+<h2>SQL NOT NULL 约束</h2>
+
+<p>NOT NULL 约束强制列不接受 NULL 值。</p>
+
+<p>NOT NULL 约束强制字段始终包含值。这意味着，如果不向字段添加值，就无法插入新记录或者更新记录。</p>
+
+<p>下面的 SQL 语句强制 &quot;Id_P&quot; 列和 &quot;LastName&quot; 列不接受 NULL 值：</p>
+
+<pre>
+CREATE TABLE Persons
+(
+Id_P int <code>NOT NULL</code>,
+LastName varchar(255) <code>NOT NULL</code>,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255)
+)
+</pre>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

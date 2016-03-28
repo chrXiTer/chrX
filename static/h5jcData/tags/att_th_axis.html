@@ -1,0 +1,72 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>HTML &lt;th&gt; 标签的 axis 属性</h1>
+
+<div class="backtoreference">
+<p><a href="tag_th.htm" >HTML &lt;th&gt; 标签</a></p>
+</div>
+
+<div>
+<h2>实例</h2>
+
+<p>带有分类表头单元格的表格：</p>
+
+<pre>
+&lt;table border=&quot;1&quot; width=&quot;100%&quot;&gt;
+  &lt;tr&gt;
+    &lt;th <code>axis=&quot;name&quot;</code>&gt;Company&lt;/td&gt;
+    &lt;th <code>axis=&quot;contact&quot;</code>&gt;Email&lt;/td&gt;
+    &lt;th <code>axis=&quot;contact&quot;</code>&gt;Phone&lt;/td&gt;
+    &lt;th <code>axis=&quot;contact&quot;</code>&gt;Address&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Apple, Inc.&lt;/td&gt;
+    &lt;td&gt;someone@example.com&lt;/td&gt;
+    &lt;td&gt;+12345678&lt;/td&gt;
+    &lt;td&gt;1 Infinite Loop Cupertino, CA 95014&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('html_th_axis')" >亲自试一试</a></p>
+</div>
+
+<div>
+<h2>定义和用法</h2>
+<p>axis 属性用于对表头单元格进行分类。</p>
+<p>axis 属性可用于对相关的信息列进行组合。</p>
+
+<h3>详细解释</h3>
+<p>表格里通常塞满了数据，用来向读者提问。例如，一个费用报告表格通常会询问这样的问题：“一个月在吃饭上花多少钱？”或是“我的花费一共是多少？”。在将来，浏览器在 axis 属性的帮助下，就有可能支持这些询问了。</p>
+<p>这个属性的数值是引号包括的一列类型的名称，这些名称可以用来形成一个查询。举个例子，如果你在一个食物购物的单元格中使用 axis=meals，浏览器能够找到那些单元格，获取它的值，并且计算出总数。</p>
+</div>
+
+<div>
+<h2>语法</h2>
+
+<pre>&lt;th axis=&quot;<i>value</i>&quot;&gt;</pre>
+
+<h3>属性值</h3>
+<table class="dataintable">
+  <tr>
+    <th>值</th>
+    <th>描述</th>
+  </tr>  
+  <tr>
+    <td><i>category_name</i></td>
+    <td>规定类别的名称。</td>
+  </tr>
+</table>
+</div>
+
+<div class="backtoreference">
+<p><a href="tag_th.htm" >HTML &lt;th&gt; 标签</a></p>
+</div>
+
+</div>
+</div>
+<script src="../chrX.js"></script>

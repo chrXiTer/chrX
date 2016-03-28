@@ -1,0 +1,89 @@
+﻿<link rel="stylesheet" type="text/css" href="../c3.css" />
+
+
+<div id="wrapper">
+<div id="maincontent">
+
+<h1>JavaScript 输出</h1>
+<p><strong>JavaScript 通常用于操作 HTML 元素。</strong></p>
+
+<h2>操作 HTML 元素</h2>
+<p>如需从 JavaScript 访问某个 HTML 元素，您可以使用 document.getElementById(<i>id</i>) 方法。</p>
+<p>请使用 &quot;id&quot; 属性来标识 HTML 元素：</p>
+
+<h3>例子</h3>
+
+<p>通过指定的 id 来访问 HTML 元素，并改变其内容：</p>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My First Web Page&lt;/h1&gt;
+
+&lt;p <span class="marked">id=&quot;demo&quot;</span>&gt;My First Paragraph&lt;/p&gt;
+
+&lt;script&gt;
+<code>document.getElementById(&quot;demo&quot;).innerHTML=&quot;My First JavaScript&quot;;</code>
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('js_dom')" >亲自试一试</a></p>
+<p>JavaScript 由 web 浏览器来执行。在这种情况下，浏览器将访问 id=&quot;demo&quot; 的 HTML 元素，并把它的内容（innerHTML）替换为 &quot;My First JavaScript&quot;。</p>
+
+<h2>写到文档输出</h2>
+<p>下面的例子直接把 &lt;p&gt; 元素写到 HTML 文档输出中：</p>
+
+<h3>实例</h3>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My First Web Page&lt;/h1&gt;
+
+&lt;script&gt;
+<code>document.write(&quot;&lt;p&gt;My First JavaScript&lt;/p&gt;&quot;);</code>
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('js_write')" >亲自试一试</a></p>
+
+<h2>警告</h2>
+<p>请使用 document.write() 仅仅向文档输出写内容。</p>
+<p>如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖：</p>
+
+<h3>实例</h3>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My First Web Page&lt;/h1&gt;
+
+&lt;p&gt;My First Paragraph.&lt;/p&gt;
+
+&lt;button onclick=&quot;myFunction()&quot;&gt;点击这里&lt;/button&gt;
+
+&lt;script&gt;
+function myFunction()
+{
+document.write(&quot;糟糕！文档消失了。&quot;);
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p class="tiy"><a href="javascript:tiy.run('js_write_over')" >亲自试一试</a></p>
+
+</div>
+</div>
+<script src="../chrX.js"></script>
